@@ -11,24 +11,21 @@ namespace Collision {
         NoContactResponse = 2,
     }
 
-    public class ProjectionPoint {
-        public CollisionObject collisionObject;
-        public bool isStartPoint;
-        public float value;
-    }
-
     public class CollisionObject {
+        private static int publicId = 1;
+
         public int id;
         public CollisionShape shape;
         public CollisionFlags flags = CollisionFlags.Default;
-        public Object battleObject;
+        public Object contextObject;
         public Vector3 position;
         public Vector3 rotation;
         public Vector3 scale;
 
-        public CollisionObject(CollisionShape shape, Object battleObject) {
+        public CollisionObject(CollisionShape shape, Object contextObject) {
+            this.id = publicId++;
             this.shape = shape;
-            this.battleObject = battleObject;
+            this.contextObject = contextObject;
         }
 
         public static bool IsSameCollisionObject(CollisionObject obj1, CollisionObject obj2) {
@@ -36,13 +33,7 @@ namespace Collision {
         }
 
         public void InitCollisionObject() {
-            GetAABB(out Vector3 lowerBound, out Vector3 upperBound);
-            shape.InitShape(lowerBound, upperBound);
-        }
-
-        public virtual void GetAABB(out Vector3 lowerBound, out Vector3 upperBound) {
-            lowerBound = Vector3.zero;
-            upperBound = Vector3.zero;
+            shape.InitShape(this);
         }
     }
 }
