@@ -1,9 +1,9 @@
 ﻿using System;
-using Collision.Shape;
+using Physics.Collision.Shape;
 using UnityEngine;
 using Object = System.Object;
 
-namespace Collision {
+namespace Physics.Collision {
     [Flags]
     public enum CollisionFlags {
         Default = 0,
