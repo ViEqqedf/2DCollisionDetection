@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Collision.Shape {
+namespace Physics.Collision.Shape {
     public class Rect : CollisionShape {
         public Rect(ShapeType shapeType) : base(shapeType) {
         }
