@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Physics.Collision;
 using Physics.Collision.Shape;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Physics {
     public interface IPhysicsWorld {
@@ -49,16 +50,16 @@ namespace Physics {
             broadphasePair.Clear();
 
             SweepAndPrune();
-            DynamicBVH();
+            // DynamicBVH();
         }
 
         private void SweepAndPrune() {
-            // Update Projection
+            // 更新投影
             for (int i = 0, count = collisionList.Count; i < count; i++) {
                 collisionList[i].shape.aabb.UpdateAllProjectionPoint();
             }
 
-            // Ascending Order Sort
+            // 升序排序
             if (horAABBProjList.Count >= 2) {
                 for (int i = 1, count = horAABBProjList.Count; i < count; i++) {
                     var key = horAABBProjList[i];
@@ -75,7 +76,7 @@ namespace Physics {
             // (collisionId, ProjectionPoint)
             Dictionary<int, ProjectionPoint> startPoints = new Dictionary<int, ProjectionPoint>();
 
-            // Scan on horizontal
+            // 在水平方向上检查
             scanList.Add(horAABBProjList[0]);
             startPoints.Add(horAABBProjList[0].collisionObject.id, horAABBProjList[0]);
             for (int i = 1, count = horAABBProjList.Count; i < count; i++) {
@@ -94,7 +95,7 @@ namespace Physics {
                 }
             }
 
-            // Scan on vertical, only check determined horizontal pair
+            // 在竖直方向上检查已确定的对
             for (int i = broadphasePair.Count - 1; i >= 0; i--) {
                 CollisionPair pair = broadphasePair[i];
                 AABB first = pair.first.shape.aabb;
@@ -105,7 +106,7 @@ namespace Physics {
                 float sndEnd = second.GetProjectionPoint(AABBProjectionType.VerticalEnd).value;
                 if (fstStart <= sndStart && fstEnd >= sndEnd ||
                     fstStart >= sndEnd && fstEnd <= sndEnd) {
-                    // overlap on vertical
+                    // 在垂直方向上重叠
                     continue;
                 } else {
                     broadphasePair.Remove(pair);
@@ -175,14 +176,13 @@ namespace Physics {
         }
 
         private void NarrowPhase() {
-            // GJK
             for (int i = broadphasePair.Count - 1; i >= 0; i--) {
                 CollisionPair pair = broadphasePair[i];
                 CollisionObject fst = pair.first;
                 CollisionObject snd = pair.second;
 
                 if (GJK(fst, snd, out List<Vector3> simplex)) {
-
+                    EPA(fst, snd, simplex);
                 } else {
                     broadphasePair.Remove(pair);
                 }
@@ -197,14 +197,14 @@ namespace Physics {
             while (true) {
                 Vector3 supPoint = Support(supDir, fst, snd);
 
-                // The last vertex added to the simplex is collinear with the search direction,
-                // no new simplex can be found, end
+                // 找不到新的单纯形，结束
                 if (Vector3.Dot(supPoint, supDir) < 0) {
                     return false;
                 }
 
                 simplex.Add(supPoint);
-                if (PhysicsTool.IsPointInTriangle(simplex[0], simplex[1], simplex[2], Vector3.zero)) {
+                if (simplex.Count == 3 && PhysicsTool.IsPointInTriangle(
+                        simplex[0], simplex[1], simplex[2], Vector3.zero)) {
                     return true;
                 }
 
@@ -212,16 +212,47 @@ namespace Physics {
             }
         }
 
+        private Vector3 EPA(CollisionObject fst, CollisionObject snd, List<Vector3> simplex) {
+            // 1. 建立多边形
+
+            // 2. 开始迭代
+            while (true) {
+                int vertexIndex = 0;
+                Vector3 edgeNormal = Vector3.zero;
+                float minDis = float.MaxValue;
+                // 3. 找到一条离原点最近的边
+                for (int i = 0, count = simplex.Count; i < count; i++) {
+                    Vector3 lineTo = i != count - 1 ? simplex[i + 1] : simplex[0];
+                    Vector3 verticalLine = PhysicsTool.GetPerpendicularToOrigin(simplex[i], lineTo);
+                    float magnitude = verticalLine.magnitude;
+                    if (magnitude < minDis) {
+                        vertexIndex = i != count - 1 ? i + 1 : 0;
+                        edgeNormal = -verticalLine;
+                        minDis = magnitude;
+                    }
+                }
+                // 4. 使用该边的原理原点的垂线作为新的迭代方向，寻找一个新的单纯形点
+                Vector3 supPoint = Support(edgeNormal, fst, snd);
+                if (PhysicsTool.IsPointInPolygon(simplex, supPoint)) {
+                    // 5. 如果该点已经包含于单纯形中，返回该向量作为穿透向量
+                    return edgeNormal;
+                } else {
+                    // 6. 否则使用该点扩展单纯形
+                    simplex.Insert(vertexIndex, supPoint);
+                }
+            }
+        }
+
         private Vector3 FindNextSupDir(List<Vector3> simplex) {
             if (simplex.Count == 2) {
                 Vector3 crossPoint = PhysicsTool.GetPerpendicularToOrigin(simplex[0], simplex[1]);
-                // Take the vector that's near the origin
+                // 取靠近原点的方向
                 return Vector3.zero - crossPoint;
             } else if (simplex.Count == 3) {
                 Vector3 cross20 = PhysicsTool.GetPerpendicularToOrigin(simplex[2], simplex[0]);
                 Vector3 cross21 = PhysicsTool.GetPerpendicularToOrigin(simplex[2], simplex[1]);
 
-                // Take the vector that's near the origin, remove the far one
+                // 取靠近原点的方向，然后取其朝向原点的向量作为下一迭代方向
                 if (cross20.sqrMagnitude < cross21.sqrMagnitude) {
                     // TODO:[ViE] memory sort consume
                     simplex.RemoveAt(1);

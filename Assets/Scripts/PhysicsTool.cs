@@ -4,6 +4,14 @@ using UnityEngine;
 
 namespace Physics {
     public static class PhysicsTool {
+        /// <summary>
+        /// 检查点是否在三角形内
+        /// </summary>
+        /// <param name="fst">三角形点1</param>
+        /// <param name="snd">三角形点2</param>
+        /// <param name="trd">三角形点3</param>
+        /// <param name="point">要检查的点</param>
+        /// <returns></returns>
         public static bool IsPointInTriangle(Vector3 fst, Vector3 snd, Vector3 trd, Vector3 point) {
             Vector3 v0 = trd - fst;
             Vector3 v1 = snd - fst;
@@ -26,6 +34,46 @@ namespace Physics {
                 return false;
             }
             return u + v <= 1;
+        }
+
+        /// <summary>
+        /// 检查点是否在一个多边形中
+        /// </summary>
+        /// <param name="vertices">点集，顺序要求能够从头到尾连接闭环</param>
+        /// <param name="point">要检查的点</param>
+        /// <returns></returns>
+        public static bool IsPointInPolygon(List<Vector3> vertices, Vector3 point) {
+            // PNPoly, 射线法
+            bool flag = false;
+            Vector3 edgeFrom = Vector3.zero;
+            Vector3 edgeTo = Vector3.zero;
+            for (int i = 0, count = vertices.Count, j = count - 1; i < count; j = i++) {
+                edgeFrom = vertices[i];
+                edgeTo = vertices[j];
+                if (IsPointOnSegment(edgeFrom, edgeTo, point)) {
+                    return true;
+                }
+
+                // 等价于min(edgeFrom.y, edgeTo.y) < point.y <= max(edgeFrom.y, edgeTo.y)
+                // 排除了不会相交的边，同时排除了edgeFrom.y == edgeTo.y的情况
+                bool verticalInRange = edgeFrom.y > point.y != edgeTo.y > point.y;
+                // 第二个比较表达式合并后形式如下，即斜率比较
+                // (p.y - eF.y / p.x - eF.x) > (eF.y - eT.y / eF.x - eT.x)
+                // 通过该比较可得出被测点是否在测试边的左侧（假想中的射线向右发射）
+                if (verticalInRange &&
+                    point.x - (point.y - edgeFrom.y) * (edgeFrom.x - edgeTo.x) /
+                    (edgeFrom.y - edgeTo.y) - edgeFrom.x < 0) {
+                    flag = !flag;
+                }
+            }
+
+            return flag;
+        }
+
+        public static bool IsPointOnSegment(Vector3 lineP1, Vector3 lineP2, Vector3 point) {
+            // collinear && in range
+            return Vector3.Cross(lineP1 - point, lineP2 - point) == Vector3.zero &&
+                   Vector3.Dot(lineP1 - point, lineP1 - point) <= 0;
         }
 
         public static Vector3 GetPerpendicularToOrigin(Vector3 a, Vector3 b)

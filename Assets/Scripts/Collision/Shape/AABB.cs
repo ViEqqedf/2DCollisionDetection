@@ -52,7 +52,7 @@ namespace Physics.Collision.Shape {
         }
 
         /// <summary>
-        /// NOTE: Only using in AABB Tree build
+        /// NOTE: 仅用于AABB树的构建
         /// </summary>
         public AABB(Vector3 lowerBound, Vector3 upperBound) {
             this.lowerBound = new Vector3();
