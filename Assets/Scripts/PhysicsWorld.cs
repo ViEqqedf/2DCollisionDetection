@@ -221,12 +221,12 @@ namespace Physics {
                 Vector3 edgeNormal = Vector3.zero;
                 float minDis = float.MaxValue;
                 // 3. 找到一条离原点最近的边
-                for (int i = 0, count = simplex.Count; i < count; i++) {
-                    Vector3 lineTo = i != count - 1 ? simplex[i + 1] : simplex[0];
+                for (int i = 0, count = simplex.Count, j = count - 1; i < count; j = i++) {
+                    Vector3 lineTo = simplex[j];
                     Vector3 verticalLine = PhysicsTool.GetPerpendicularToOrigin(simplex[i], lineTo);
                     float magnitude = verticalLine.magnitude;
                     if (magnitude < minDis) {
-                        vertexIndex = i != count - 1 ? i + 1 : 0;
+                        vertexIndex = j;
                         edgeNormal = -verticalLine;
                         minDis = magnitude;
                     }
