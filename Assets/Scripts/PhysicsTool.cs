@@ -45,11 +45,10 @@ namespace Physics {
         public static bool IsPointInPolygon(List<Vector3> vertices, Vector3 point) {
             // PNPoly, 射线法
             bool flag = false;
-            Vector3 edgeFrom = Vector3.zero;
-            Vector3 edgeTo = Vector3.zero;
             for (int i = 0, count = vertices.Count, j = count - 1; i < count; j = i++) {
-                edgeFrom = vertices[i];
-                edgeTo = vertices[j];
+                Vector3 edgeFrom = vertices[i];
+                Vector3 edgeTo = vertices[j];
+                // 被测点是否在边上
                 if (IsPointOnSegment(edgeFrom, edgeTo, point)) {
                     return true;
                 }
@@ -57,13 +56,14 @@ namespace Physics {
                 // 等价于min(edgeFrom.y, edgeTo.y) < point.y <= max(edgeFrom.y, edgeTo.y)
                 // 排除了不会相交的边，同时排除了edgeFrom.y == edgeTo.y的情况
                 bool verticalInRange = edgeFrom.y > point.y != edgeTo.y > point.y;
-                // 第二个比较表达式合并后形式如下，即斜率比较
-                // (p.y - eF.y / p.x - eF.x) > (eF.y - eT.y / eF.x - eT.x)
-                // 通过该比较可得出被测点是否在测试边的左侧（假想中的射线向右发射）
-                if (verticalInRange &&
-                    point.x - (point.y - edgeFrom.y) * (edgeFrom.x - edgeTo.x) /
-                    (edgeFrom.y - edgeTo.y) - edgeFrom.x < 0) {
-                    flag = !flag;
+                if (verticalInRange) {
+                    float edgeSlope = edgeFrom.x - edgeTo.x / edgeFrom.y - edgeTo.y;
+                    float xOfPointOnEdge = edgeFrom.x + edgeSlope * (point.y - edgeFrom.y);
+                    bool isPointLeftToEdge = point.x - xOfPointOnEdge < 0;
+                    // 被测点是否在测试边的左侧（假想中的射线向右发射）
+                    if(isPointLeftToEdge) {
+                        flag = !flag;
+                    }
                 }
             }
 
