@@ -2,7 +2,7 @@
 
 namespace Physics.Collision.Shape {
     public class Circle : CollisionShape {
-        public Circle(ShapeType shapeType) : base(shapeType) {
+        public Circle(float radius) : base(ShapeType.Circle) {
         }
 
         protected override void GetBound(out Vector3 lowerBound, out Vector3 upperBound) {

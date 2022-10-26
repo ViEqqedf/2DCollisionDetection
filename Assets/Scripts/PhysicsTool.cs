@@ -73,7 +73,7 @@ namespace Physics {
         public static bool IsPointOnSegment(Vector3 lineP1, Vector3 lineP2, Vector3 point) {
             // collinear && in range
             return Vector3.Cross(lineP1 - point, lineP2 - point) == Vector3.zero &&
-                   Vector3.Dot(lineP1 - point, lineP1 - point) <= 0;
+                   Vector3.Dot(lineP1 - point, lineP2 - point) <= 0;
         }
 
         public static Vector3 GetPerpendicularToOrigin(Vector3 a, Vector3 b)
@@ -81,8 +81,8 @@ namespace Physics {
             Vector3 ab = b - a;
             Vector3 ao = Vector3.zero - a;
 
-            float projection = Vector3.Dot(ab, ao) / ab.sqrMagnitude;
-            return a + ab * projection;
+            float projection = Vector3.Dot(ab, ao) / ab.magnitude;
+            return a + ab.normalized * projection;
         }
 
         public static Vector3 GetFarthestPointInDir(CollisionObject collisionObject, Vector3 dir) {
