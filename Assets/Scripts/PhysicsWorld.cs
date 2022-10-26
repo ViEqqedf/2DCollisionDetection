@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Physics.Collision;
 using Physics.Collision.Shape;
 using UnityEngine;
+using UnityEngine.Profiling;
 using Random = UnityEngine.Random;
 
 namespace Physics {
@@ -13,26 +14,50 @@ namespace Physics {
     }
 
     public class PhysicsWorld : MonoBehaviour, IPhysicsWorld {
+        public static int tickFrame = 0;
         public List<CollisionObject> collisionList;
         private List<ProjectionPoint> horAABBProjList;
-        private List<ProjectionPoint> verAABBProjList;
+        // private List<ProjectionPoint> verAABBProjList;
         private List<CollisionPair> broadphasePair;
-        private int collisionId;
 
         void Start() {
+            Application.targetFrameRate = 60;
             collisionList = new List<CollisionObject>();
             horAABBProjList = new List<ProjectionPoint>();
-            verAABBProjList = new List<ProjectionPoint>();
+            // verAABBProjList = new List<ProjectionPoint>();
             broadphasePair = new List<CollisionPair>();
-            collisionId = 0;
+
+            // int range = 50;
+            // for (int i = 0; i < range; i++) {
+                // CreateATestCollision(new Vector3(
+                    // Random.Range(-range / 2f, range / 2f), 0, Random.Range(-range / 2f, range / 2f)));
+                // CreateATestCollision(new Vector3(
+                    // Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
+            // }
+
+            CreateATestCollision(new Vector3(1.5f, 0, 0.5f));
+            CreateATestCollision(new Vector3(2, 0, 1));
+        }
+
+        public void CreateATestCollision(Vector3 pos) {
+            CollisionShape shape = new Physics.Collision.Shape.Rect(1, 1);
+            CollisionObject co = new CollisionObject(shape, null, pos);
+            GameObject go = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            go.GetComponent<BoxCollider>().enabled = false;
+            go.AddComponent<CollisionObjectProxy>().target = co;
+            AddCollisionObject(co);
         }
 
         void Update()
         {
+            Profiler.BeginSample("[ViE]");
             Tick(0.033f);
+            Profiler.EndSample();
         }
 
         private void Tick(float timeSpan) {
+            tickFrame++;
+
             CollisionDetection(timeSpan);
             ApplyForces(timeSpan);
             Resolve(timeSpan);
@@ -54,21 +79,18 @@ namespace Physics {
         }
 
         private void SweepAndPrune() {
-            // 更新投影
-            for (int i = 0, count = collisionList.Count; i < count; i++) {
-                collisionList[i].shape.aabb.UpdateAllProjectionPoint();
-            }
-
             // 升序排序
             if (horAABBProjList.Count >= 2) {
                 for (int i = 1, count = horAABBProjList.Count; i < count; i++) {
-                    var key = horAABBProjList[i];
-                    int j = i - 1;
-                    while (j >= 0 && key.value < horAABBProjList[j].value) {
-                        horAABBProjList[j + 1] = horAABBProjList[j];
-                        j--;
+                    var temp = horAABBProjList[i];
+                    for (int j = i - 1; j >= 0; j--) {
+                        if (horAABBProjList[j].value > temp.value) {
+                            horAABBProjList[j + 1] = horAABBProjList[j];
+                            horAABBProjList[j] = temp;
+                        } else {
+                            break;
+                        }
                     }
-                    horAABBProjList[j + 1] = key;
                 }
             }
 
@@ -87,92 +109,40 @@ namespace Physics {
                 } else if (horAABBProjList[i].projectionType == AABBProjectionType.HorizontalStart) {
                     for (int j = 0, scanCount = scanList.Count; j < scanCount; j++) {
                         broadphasePair.Add(new CollisionPair() {
-                        first = scanList[j].collisionObject,
-                        second = horAABBProjList[i].collisionObject,
-                        });
-                    }
-                    scanList.Add(horAABBProjList[i]);
-                }
-            }
-
-            // 在竖直方向上检查已确定的对
-            for (int i = broadphasePair.Count - 1; i >= 0; i--) {
-                CollisionPair pair = broadphasePair[i];
-                AABB first = pair.first.shape.aabb;
-                AABB second = pair.second.shape.aabb;
-                float fstStart = first.GetProjectionPoint(AABBProjectionType.VerticalStart).value;
-                float fstEnd = first.GetProjectionPoint(AABBProjectionType.VerticalEnd).value;
-                float sndStart = second.GetProjectionPoint(AABBProjectionType.VerticalStart).value;
-                float sndEnd = second.GetProjectionPoint(AABBProjectionType.VerticalEnd).value;
-                if (fstStart <= sndStart && fstEnd >= sndEnd ||
-                    fstStart >= sndEnd && fstEnd <= sndEnd) {
-                    // 在垂直方向上重叠
-                    continue;
-                } else {
-                    broadphasePair.Remove(pair);
-                }
-            }
-        }
-
-        private void DynamicBVH() {
-            if (horAABBProjList.Count >= 2)
-            {
-                for (int i = 1, count = horAABBProjList.Count; i < count; i++)
-                {
-                    var key = horAABBProjList[i];
-                    int j = i - 1;
-                    while (j >= 0 && key.value < horAABBProjList[j].value)
-                    {
-                        horAABBProjList[j + 1] = horAABBProjList[j];
-                        j--;
-                    }
-                    horAABBProjList[j + 1] = key;
-                }
-            }
-
-            for (int i = broadphasePair.Count - 1; i >= 0; i--) {
-                CollisionPair pair = broadphasePair[i];
-                AABB first = pair.first.shape.aabb;
-                AABB second = pair.second.shape.aabb;
-                float fstStart = first.GetProjectionPoint(AABBProjectionType.VerticalStart).value;
-                float fstEnd = first.GetProjectionPoint(AABBProjectionType.VerticalEnd).value;
-                float sndStart = second.GetProjectionPoint(AABBProjectionType.VerticalStart).value;
-                float sndEnd = second.GetProjectionPoint(AABBProjectionType.VerticalEnd).value;
-                if (fstStart <= sndStart && fstEnd >= sndEnd ||
-                    fstStart >= sndEnd && fstEnd <= sndEnd) {
-                    // overlap on vertical
-                    continue;
-                } else {
-                    broadphasePair.Remove(pair);
-                }
-            }
-
-            for (int i = 0, count = collisionList.Count; i < count; i++) {
-                collisionList[i].shape.aabb.UpdateAllProjectionPoint();
-            }
-
-
-            List<ProjectionPoint> scanList = new List<ProjectionPoint>();
-            // (collisionId, ProjectionPoint)
-            Dictionary<int, ProjectionPoint> startPoints = new Dictionary<int, ProjectionPoint>();
-
-            scanList.Add(horAABBProjList[0]);
-            startPoints.Add(horAABBProjList[0].collisionObject.id, horAABBProjList[0]);
-            for (int i = 1, count = horAABBProjList.Count; i < count; i++) {
-                if (horAABBProjList[i].projectionType == AABBProjectionType.HorizontalEnd) {
-                    ProjectionPoint startPoint = startPoints[horAABBProjList[i].collisionObject.id];
-                    startPoints.Remove(horAABBProjList[i].collisionObject.id);
-                    scanList.Remove(startPoint);
-                } else if (horAABBProjList[i].projectionType == AABBProjectionType.HorizontalStart) {
-                    for (int j = 0, scanCount = scanList.Count; j < scanCount; j++) {
-                        broadphasePair.Add(new CollisionPair() {
                             first = scanList[j].collisionObject,
                             second = horAABBProjList[i].collisionObject,
                         });
                     }
                     scanList.Add(horAABBProjList[i]);
+                    startPoints.Add(horAABBProjList[i].collisionObject.id, horAABBProjList[i]);
                 }
             }
+
+            //// 在竖直方向上检查已确定的对
+            // for (int i = broadphasePair.Count - 1; i >= 0; i--) {
+            //     CollisionPair pair = broadphasePair[i];
+            //     AABB first = pair.first.shape.aabb;
+            //     AABB second = pair.second.shape.aabb;
+            //     float fstStart = first.GetProjectionPoint(AABBProjectionType.VerticalStart).value;
+            //     float fstEnd = first.GetProjectionPoint(AABBProjectionType.VerticalEnd).value;
+            //     float sndStart = second.GetProjectionPoint(AABBProjectionType.VerticalStart).value;
+            //     float sndEnd = second.GetProjectionPoint(AABBProjectionType.VerticalEnd).value;
+            //     if (fstStart <= sndStart && fstEnd >= sndEnd ||
+            //         fstStart >= sndEnd && fstEnd <= sndEnd) {
+            //         // 在垂直方向上重叠
+            //         continue;
+            //     } else {
+            //         broadphasePair.Remove(pair);
+            //     }
+            // }
+
+            for (int i = 0, count = broadphasePair.Count; i < count; i++) {
+                CollisionPair pair = broadphasePair[i];
+                Debug.Log($"{tickFrame} {pair.first.id}与{pair.second.id}粗检测碰撞");
+            }
+        }
+
+        private void DynamicBVH() {
         }
 
         private void NarrowPhase() {
@@ -182,7 +152,8 @@ namespace Physics {
                 CollisionObject snd = pair.second;
 
                 if (GJK(fst, snd, out List<Vector3> simplex)) {
-                    EPA(fst, snd, simplex);
+                    pair.penetrateVec = EPA(fst, snd, simplex);
+                    Debug.Log($"{tickFrame} {fst.id}与{snd.id}窄检测碰撞，穿透向量为{pair.penetrateVec}");
                 } else {
                     broadphasePair.Remove(pair);
                 }
@@ -203,8 +174,13 @@ namespace Physics {
                 }
 
                 simplex.Add(supPoint);
-                if (simplex.Count == 3 && PhysicsTool.IsPointInTriangle(
+                int vertexCount = simplex.Count;
+                if (vertexCount == 3 && PhysicsTool.IsPointInTriangle(
                         simplex[0], simplex[1], simplex[2], Vector3.zero)) {
+                    return true;
+                }
+                if (vertexCount == 2 && PhysicsTool.IsPointOnSegment(
+                        simplex[0], simplex[1], Vector3.zero)) {
                     return true;
                 }
 
@@ -213,31 +189,37 @@ namespace Physics {
         }
 
         private Vector3 EPA(CollisionObject fst, CollisionObject snd, List<Vector3> simplex) {
-            // 1. 建立多边形
+            if (simplex.Count > 2) {
+                FindNextSupDir(simplex);
+            }
 
-            // 2. 开始迭代
+            // 1. 开始迭代
             while (true) {
-                int vertexIndex = 0;
                 Vector3 edgeNormal = Vector3.zero;
                 float minDis = float.MaxValue;
-                // 3. 找到一条离原点最近的边
+                int vertexIndex = 0;
+                Vector3 minLineFrom = Vector3.zero;
+                Vector3 minLineTo = Vector3.zero;
+                // 2. 找到一条离原点最近的边
                 for (int i = 0, count = simplex.Count, j = count - 1; i < count; j = i++) {
                     Vector3 lineTo = simplex[j];
                     Vector3 verticalLine = PhysicsTool.GetPerpendicularToOrigin(simplex[i], lineTo);
                     float magnitude = verticalLine.magnitude;
                     if (magnitude < minDis) {
-                        vertexIndex = j;
                         edgeNormal = -verticalLine;
                         minDis = magnitude;
+                        vertexIndex = j;
+                        minLineFrom = simplex[i];
+                        minLineTo = lineTo;
                     }
                 }
-                // 4. 使用该边的原理原点的垂线作为新的迭代方向，寻找一个新的单纯形点
+                // 3. 使用该边的远离原点的垂线作为新的迭代方向，寻找一个新的单纯形点
                 Vector3 supPoint = Support(edgeNormal, fst, snd);
                 if (PhysicsTool.IsPointInPolygon(simplex, supPoint)) {
-                    // 5. 如果该点已经包含于单纯形中，返回该向量作为穿透向量
+                    // 4. 如果该点已经包含于单纯形中，返回该向量作为穿透向量
                     return edgeNormal;
                 } else {
-                    // 6. 否则使用该点扩展单纯形
+                    // 5. 否则使用该点扩展单纯形
                     simplex.Insert(vertexIndex, supPoint);
                 }
             }
@@ -247,7 +229,7 @@ namespace Physics {
             if (simplex.Count == 2) {
                 Vector3 crossPoint = PhysicsTool.GetPerpendicularToOrigin(simplex[0], simplex[1]);
                 // 取靠近原点的方向
-                return Vector3.zero - crossPoint;
+                return -crossPoint;
             } else if (simplex.Count == 3) {
                 Vector3 cross20 = PhysicsTool.GetPerpendicularToOrigin(simplex[2], simplex[0]);
                 Vector3 cross21 = PhysicsTool.GetPerpendicularToOrigin(simplex[2], simplex[1]);
@@ -256,11 +238,11 @@ namespace Physics {
                 if (cross20.sqrMagnitude < cross21.sqrMagnitude) {
                     // TODO:[ViE] memory sort consume
                     simplex.RemoveAt(1);
-                    return Vector3.zero - cross20;
+                    return -cross20;
                 } else {
                     // TODO:[ViE] memory sort consume
                     simplex.RemoveAt(0);
-                    return Vector3.zero - cross21;
+                    return -cross21;
                 }
             } else {
                 // Meaningless
@@ -287,7 +269,16 @@ namespace Physics {
         }
 
         private void ApplyVelocity(float timeSpan) {
+            for (int i = 0, count = broadphasePair.Count; i < count; i++) {
+                CollisionPair pair = broadphasePair[i];
+                pair.first.Translate(pair.penetrateVec / 2);
+                pair.second.Translate(-pair.penetrateVec / 2);
+            }
 
+            // 最后一步
+            for (int i = 0, count = collisionList.Count; i < count; i++) {
+                collisionList[i].Tick();
+            }
         }
 
         #region Interface
@@ -296,14 +287,14 @@ namespace Physics {
             collisionObject.InitCollisionObject();
             collisionList.Add(collisionObject);
 
-            horAABBProjList.Add(collisionObject.shape.aabb.GetProjectionPoint(
-                AABBProjectionType.HorizontalStart));
-            horAABBProjList.Add(collisionObject.shape.aabb.GetProjectionPoint(
-                AABBProjectionType.HorizontalEnd));
-            verAABBProjList.Add(collisionObject.shape.aabb.GetProjectionPoint(
-                AABBProjectionType.VerticalStart));
-            verAABBProjList.Add(collisionObject.shape.aabb.GetProjectionPoint(
-                AABBProjectionType.VerticalEnd));
+            horAABBProjList.Add(
+                collisionObject.GetProjectionPoint(AABBProjectionType.HorizontalStart));
+            horAABBProjList.Add(
+                collisionObject.GetProjectionPoint(AABBProjectionType.HorizontalEnd));
+            // verAABBProjList.Add(
+                // collisionObject.GetProjectionPoint(AABBProjectionType.VerticalStart));
+            // verAABBProjList.Add(
+                // collisionObject.GetProjectionPoint(AABBProjectionType.VerticalEnd));
             return true;
         }
 
