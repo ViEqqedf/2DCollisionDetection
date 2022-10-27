@@ -70,21 +70,73 @@ namespace Physics {
             return flag;
         }
 
-        public static bool IsPointOnSegment(Vector3 lineP1, Vector3 lineP2, Vector3 point) {
+        /// <summary>
+        /// 点是否在线段上
+        /// </summary>
+        /// <param name="lineStart">线段起点</param>
+        /// <param name="lineEnd">线段终点</param>
+        /// <param name="point">检查点</param>
+        /// <returns></returns>
+        public static bool IsPointOnSegment(Vector3 lineStart, Vector3 lineEnd, Vector3 point) {
             // collinear && in range
-            return Vector3.Cross(lineP1 - point, lineP2 - point) == Vector3.zero &&
-                   Vector3.Dot(lineP1 - point, lineP2 - point) <= 0;
+            return Vector3.Cross(lineStart - point, lineEnd - point).magnitude < float.Epsilon &&
+                   Vector3.Dot(lineStart - point, lineEnd - point) <= 0;
         }
 
-        public static Vector3 GetPerpendicularToOrigin(Vector3 a, Vector3 b)
+        public static Vector3 GetClosestPointToOrigin(Vector3 lineStart, Vector3 lineEnd)
         {
-            Vector3 ab = b - a;
-            Vector3 ao = Vector3.zero - a;
+            Vector3 lineVec = lineEnd - lineStart;
+            Vector3 startToOriginVec = -lineStart;
+            float sqrLength = lineVec.sqrMagnitude;
 
-            float projection = Vector3.Dot(ab, ao) / ab.magnitude;
-            return a + ab.normalized * projection;
+            // 重合
+            if(sqrLength < float.Epsilon) {
+                return lineStart;
+            }
+
+            float projection = Vector3.Dot(lineVec, startToOriginVec) / sqrLength;
+            if (projection < 0) {
+                return lineStart;
+            } else if (projection > 1.0f) {
+                return lineEnd;
+            } else {
+                return lineStart + lineVec * projection;
+            }
         }
 
+        /// <summary>
+        /// 获得原点到线段垂线
+        /// </summary>
+        /// <param name="lineStart">线段起点</param>
+        /// <param name="lineEnd">线段终点</param>
+        /// <returns>原点到线段垂直向量</returns>
+        public static Vector3 GetPerpendicularToOrigin(Vector3 lineStart, Vector3 lineEnd)
+        {
+            Vector3 lineVec = lineEnd - lineStart;
+            Vector3 startToOriVec = Vector3.zero - lineStart;
+
+            float projection = Vector3.Dot(lineVec, startToOriVec) / lineVec.magnitude;
+            return lineStart + lineVec.normalized * projection;
+        }
+
+        /// <summary>
+        /// 获得线段的一个正交向量，不保证几何相交
+        /// </summary>
+        /// <param name="lineStart">线段起点</param>
+        /// <param name="lineEnd">线段终点</param>
+        /// <returns></returns>
+        public static Vector3 GetPerpendicularVector(Vector3 lineStart, Vector3 lineEnd) {
+            float zDiff = lineStart.z - lineEnd.z;
+            return zDiff == 0 ? Vector3.forward :
+                new Vector3(1, 0, -1 * (lineStart.x - lineEnd.x) / zDiff);
+        }
+
+        /// <summary>
+        /// 获得碰撞体在某方向上值最大的点
+        /// </summary>
+        /// <param name="collisionObject">碰撞体</param>
+        /// <param name="dir">方向</param>
+        /// <returns></returns>
         public static Vector3 GetFarthestPointInDir(CollisionObject collisionObject, Vector3 dir) {
             List<Vector3> vertices = collisionObject.shape.vertices;
             float maxDis = float.MinValue;

@@ -15,6 +15,7 @@ namespace Physics.Collision {
         public void InitCollisionObject();
         public ProjectionPoint GetProjectionPoint(AABBProjectionType projectionType);
         public void Translate(Vector3 diff);
+        public void AddVelocity(Vector3 diff);
     }
 
     public class CollisionObject : ICollisionObject{
@@ -27,6 +28,10 @@ namespace Physics.Collision {
         public Vector3 nextPosition;
         public Vector3 rotation;
         public Vector3 scale;
+
+        public Vector3 velocity;
+        public Vector3 resolveVelocity;
+
         // TODO: 添加一个脏标记
 
         public CollisionObject(CollisionShape shape, Object contextObject, Vector3 startPos) {
@@ -41,7 +46,7 @@ namespace Physics.Collision {
             return obj1.id == obj2.id;
         }
 
-        public void Tick() {
+        public void ApplyPosition() {
             position = nextPosition;
             shape.ApplyWorldVertices(position);
         }
@@ -57,6 +62,22 @@ namespace Physics.Collision {
 
         public void Translate(Vector3 diff) {
             nextPosition += diff;
+        }
+
+        public void AddVelocity(Vector3 diff) {
+            this.velocity += diff;
+        }
+
+        public void SetVelocity(Vector3 finalVelocity) {
+            this.velocity = finalVelocity;
+        }
+
+        public void AddResolveVelocity(Vector3 diff) {
+            this.resolveVelocity += diff;
+        }
+
+        public void CleanResolveVelocity() {
+            this.resolveVelocity = Vector3.zero;
         }
     }
 }

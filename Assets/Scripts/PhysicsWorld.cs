@@ -27,19 +27,21 @@ namespace Physics {
             // verAABBProjList = new List<ProjectionPoint>();
             broadphasePair = new List<CollisionPair>();
 
-            // int range = 50;
-            // for (int i = 0; i < range; i++) {
-                // CreateATestCollision(new Vector3(
+            int range = 2;
+            for (int i = 0; i < range; i++) {
+                // CreateATestRect(new Vector3(
                     // Random.Range(-range / 2f, range / 2f), 0, Random.Range(-range / 2f, range / 2f)));
-                // CreateATestCollision(new Vector3(
+                // CreateATestRect(new Vector3(
                     // Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
-            // }
+                CreateATestCircle(new Vector3(
+                    Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
+            }
 
-            CreateATestCollision(new Vector3(1.5f, 0, 0.5f));
-            CreateATestCollision(new Vector3(2, 0, 1));
+            // CreateATestCollision(new Vector3(1.5f, 0, 0.5f));
+            // CreateATestCollision(new Vector3(2, 0, 1));
         }
 
-        public void CreateATestCollision(Vector3 pos) {
+        public void CreateATestRect(Vector3 pos) {
             CollisionShape shape = new Physics.Collision.Shape.Rect(1, 1);
             CollisionObject co = new CollisionObject(shape, null, pos);
             GameObject go = GameObject.CreatePrimitive(PrimitiveType.Cube);
@@ -48,10 +50,19 @@ namespace Physics {
             AddCollisionObject(co);
         }
 
+        public void CreateATestCircle(Vector3 pos) {
+            CollisionShape shape = new Physics.Collision.Shape.Circle(1);
+            CollisionObject co = new CollisionObject(shape, null, pos);
+            GameObject go = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            go.GetComponent<SphereCollider>().enabled = false;
+            go.AddComponent<CollisionObjectProxy>().target = co;
+            AddCollisionObject(co);
+        }
+
         void Update()
         {
             Profiler.BeginSample("[ViE]");
-            Tick(0.033f);
+            Tick(Time.deltaTime);
             Profiler.EndSample();
         }
 
@@ -118,22 +129,22 @@ namespace Physics {
                 }
             }
 
-            //// 在竖直方向上检查已确定的对
+            // 在竖直方向上检查已确定的对
             // for (int i = broadphasePair.Count - 1; i >= 0; i--) {
-            //     CollisionPair pair = broadphasePair[i];
-            //     AABB first = pair.first.shape.aabb;
-            //     AABB second = pair.second.shape.aabb;
-            //     float fstStart = first.GetProjectionPoint(AABBProjectionType.VerticalStart).value;
-            //     float fstEnd = first.GetProjectionPoint(AABBProjectionType.VerticalEnd).value;
-            //     float sndStart = second.GetProjectionPoint(AABBProjectionType.VerticalStart).value;
-            //     float sndEnd = second.GetProjectionPoint(AABBProjectionType.VerticalEnd).value;
-            //     if (fstStart <= sndStart && fstEnd >= sndEnd ||
-            //         fstStart >= sndEnd && fstEnd <= sndEnd) {
-            //         // 在垂直方向上重叠
-            //         continue;
-            //     } else {
-            //         broadphasePair.Remove(pair);
-            //     }
+                // CollisionPair pair = broadphasePair[i];
+                // CollisionObject first = pair.first;
+                // CollisionObject second = pair.second;
+                // float fstStart = first.GetProjectionPoint(AABBProjectionType.VerticalStart).value;
+                // float fstEnd = first.GetProjectionPoint(AABBProjectionType.VerticalEnd).value;
+                // float sndStart = second.GetProjectionPoint(AABBProjectionType.VerticalStart).value;
+                // float sndEnd = second.GetProjectionPoint(AABBProjectionType.VerticalEnd).value;
+                // if (fstStart <= sndStart && sndStart <= fstEnd ||
+                    // sndStart <= fstStart && fstStart <= sndEnd) {
+                    //// 在垂直方向上重叠
+                    // continue;
+                // } else {
+                    // broadphasePair.Remove(pair);
+                // }
             // }
 
             for (int i = 0, count = broadphasePair.Count; i < count; i++) {
@@ -161,11 +172,14 @@ namespace Physics {
         }
 
         private bool GJK(CollisionObject fst, CollisionObject snd, out List<Vector3> simplex) {
+            int iterCount = 0;
+
             simplex = new List<Vector3>();
             Vector3 supDir = (snd.position - fst.position).normalized;
             simplex.Add(Support(supDir, fst, snd));
             supDir = -supDir;
             while (true) {
+                iterCount++;
                 Vector3 supPoint = Support(supDir, fst, snd);
 
                 // 找不到新的单纯形，结束
@@ -179,9 +193,10 @@ namespace Physics {
                         simplex[0], simplex[1], simplex[2], Vector3.zero)) {
                     return true;
                 }
-                if (vertexCount == 2 && PhysicsTool.IsPointOnSegment(
-                        simplex[0], simplex[1], Vector3.zero)) {
-                    return true;
+
+                if (iterCount > 10) {
+                    Debug.LogWarning("[ViE] 窄检测计算超时！");
+                    return false;
                 }
 
                 supDir = FindNextSupDir(simplex);
@@ -190,17 +205,17 @@ namespace Physics {
 
         private Vector3 EPA(CollisionObject fst, CollisionObject snd, List<Vector3> simplex) {
             if (simplex.Count > 2) {
+                // 此处的目的是去掉可能的经过原点的边，让下方穿透向量的计算不会出现异常的0最短距离
                 FindNextSupDir(simplex);
             }
 
-            // 1. 开始迭代
             while (true) {
                 Vector3 edgeNormal = Vector3.zero;
                 float minDis = float.MaxValue;
                 int vertexIndex = 0;
                 Vector3 minLineFrom = Vector3.zero;
                 Vector3 minLineTo = Vector3.zero;
-                // 2. 找到一条离原点最近的边
+                // 找到一条离原点最近的边
                 for (int i = 0, count = simplex.Count, j = count - 1; i < count; j = i++) {
                     Vector3 lineTo = simplex[j];
                     Vector3 verticalLine = PhysicsTool.GetPerpendicularToOrigin(simplex[i], lineTo);
@@ -213,13 +228,13 @@ namespace Physics {
                         minLineTo = lineTo;
                     }
                 }
-                // 3. 使用该边的远离原点的垂线作为新的迭代方向，寻找一个新的单纯形点
+                // 使用该边的远离原点的垂线作为新的迭代方向，寻找一个新的单纯形点
                 Vector3 supPoint = Support(edgeNormal, fst, snd);
                 if (PhysicsTool.IsPointInPolygon(simplex, supPoint)) {
-                    // 4. 如果该点已经包含于单纯形中，返回该向量作为穿透向量
+                    // 如果该点已经包含于单纯形中，返回该向量作为穿透向量
                     return edgeNormal;
                 } else {
-                    // 5. 否则使用该点扩展单纯形
+                    // 否则使用该点扩展单纯形
                     simplex.Insert(vertexIndex, supPoint);
                 }
             }
@@ -228,6 +243,11 @@ namespace Physics {
         private Vector3 FindNextSupDir(List<Vector3> simplex) {
             if (simplex.Count == 2) {
                 Vector3 crossPoint = PhysicsTool.GetPerpendicularToOrigin(simplex[0], simplex[1]);
+
+                if (crossPoint.magnitude < float.Epsilon) {
+                    // 当单纯形的边经过原点时，上方的计算将失效，因此手动给出一个正交向量
+                    crossPoint = PhysicsTool.GetPerpendicularVector(simplex[0], simplex[1]);
+                }
                 // 取靠近原点的方向
                 return -crossPoint;
             } else if (simplex.Count == 3) {
@@ -265,19 +285,24 @@ namespace Physics {
         }
 
         private void Resolve(float timeSpan) {
-
+            for (int i = 0, count = broadphasePair.Count; i < count; i++) {
+                CollisionPair pair = broadphasePair[i];
+                pair.first.AddResolveVelocity(pair.penetrateVec / 2);
+                pair.second.AddResolveVelocity(-pair.penetrateVec / 2);
+            }
         }
 
         private void ApplyVelocity(float timeSpan) {
-            for (int i = 0, count = broadphasePair.Count; i < count; i++) {
-                CollisionPair pair = broadphasePair[i];
-                pair.first.Translate(pair.penetrateVec / 2);
-                pair.second.Translate(-pair.penetrateVec / 2);
-            }
-
             // 最后一步
             for (int i = 0, count = collisionList.Count; i < count; i++) {
-                collisionList[i].Tick();
+                CollisionObject co = collisionList[i];
+
+                Vector3 resultantVelocity = co.velocity * timeSpan + co.resolveVelocity;
+                co.Translate(resultantVelocity);
+
+                co.ApplyPosition();
+
+                co.CleanResolveVelocity();
             }
         }
 
