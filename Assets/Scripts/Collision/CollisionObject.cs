@@ -28,6 +28,7 @@ namespace Physics.Collision {
         public Vector3 nextPosition;
         public Vector3 rotation;
         public Vector3 scale;
+        public int level = 0;
 
         public Vector3 velocity;
         public Vector3 resolveVelocity;
@@ -40,6 +41,16 @@ namespace Physics.Collision {
             this.position = startPos;
             this.nextPosition = startPos;
             this.contextObject = contextObject;
+        }
+
+        public CollisionObject(CollisionShape shape, Object contextObject,
+            Vector3 startPos, int level) {
+            this.id = publicId++;
+            this.shape = shape;
+            this.position = startPos;
+            this.nextPosition = startPos;
+            this.contextObject = contextObject;
+            this.level = level;
         }
 
         public static bool IsSameCollisionObject(CollisionObject obj1, CollisionObject obj2) {

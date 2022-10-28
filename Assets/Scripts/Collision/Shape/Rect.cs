@@ -13,8 +13,8 @@ namespace Physics.Collision.Shape {
             localVertices = new List<Vector3>() {
                 new Vector3(-horizontalWidth / 2, 0, -verticalWidth / 2),
                 new Vector3(-horizontalWidth / 2, 0, verticalWidth / 2),
-                new Vector3(horizontalWidth / 2, 0, -verticalWidth / 2),
                 new Vector3(horizontalWidth / 2, 0, verticalWidth / 2),
+                new Vector3(horizontalWidth / 2, 0, -verticalWidth / 2),
             };
             vertices = new List<Vector3>(
                 new Vector3[] {Vector3.zero, Vector3.zero, Vector3.zero, Vector3.zero,});

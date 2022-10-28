@@ -57,7 +57,7 @@ namespace Physics {
                 // 排除了不会相交的边，同时排除了edgeFrom.y == edgeTo.y的情况
                 bool verticalInRange = edgeFrom.y > point.y != edgeTo.y > point.y;
                 if (verticalInRange) {
-                    float edgeSlope = edgeFrom.x - edgeTo.x / edgeFrom.y - edgeTo.y;
+                    float edgeSlope = (edgeTo.x - edgeFrom.x) / (edgeTo.y - edgeFrom.y);
                     float xOfPointOnEdge = edgeFrom.x + edgeSlope * (point.y - edgeFrom.y);
                     bool isPointLeftToEdge = point.x - xOfPointOnEdge < 0;
                     // 被测点是否在测试边的左侧（假想中的射线向右发射）
@@ -127,7 +127,7 @@ namespace Physics {
         /// <returns></returns>
         public static Vector3 GetPerpendicularVector(Vector3 lineStart, Vector3 lineEnd) {
             float zDiff = lineStart.z - lineEnd.z;
-            return zDiff == 0 ? Vector3.forward :
+            return zDiff < float.Epsilon ? Vector3.forward :
                 new Vector3(1, 0, -1 * (lineStart.x - lineEnd.x) / zDiff);
         }
 
