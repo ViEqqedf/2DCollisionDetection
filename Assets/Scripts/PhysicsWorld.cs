@@ -41,8 +41,8 @@ namespace Physics {
             //     CreateATestRect(new Vector3(Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
             // }
 
-            CreateATestRect(new Vector3(Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
-            CreateATestRect(new Vector3(Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
+            CreateATestRect(Vector3.zero);
+            CreateATestRect(new Vector3(0.25f, 0, 0.25f));
         }
 
         private void Test1() {
@@ -145,7 +145,7 @@ namespace Physics {
 
             CollisionDetection(timeSpan);
             ApplyForces(timeSpan);
-            Resolve(timeSpan);
+            // Resolve(timeSpan);
             ApplyVelocity(timeSpan);
         }
 
@@ -328,6 +328,7 @@ namespace Physics {
                 Vector3 supPoint = Support(edgeNormal, fst, snd);
                 if (PhysicsTool.IsPointInPolygon(simplex, supPoint)) {
                     // 如果该点已经包含于单纯形中，返回该向量作为穿透向量
+                    Debug.Log($"{tickFrame}  此次EPA最短垂线为{edgeNormal}，距离{minDis}");
                     return edgeNormal;
                 } else {
                     // 否则使用该点扩展单纯形
