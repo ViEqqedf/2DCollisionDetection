@@ -27,37 +27,111 @@ namespace Physics {
             // verAABBProjList = new List<ProjectionPoint>();
             broadphasePair = new List<CollisionPair>();
 
+            Test0();
+            // Test1();
+            // Test2();
+            // Test3();
+        }
+
+        #region Test
+
+        private void Test0() {
+            // int range = 50;
+            // for (int i = 0; i < range; i++) {
+            //     CreateATestRect(new Vector3(Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
+            // }
+
+            CreateATestRect(new Vector3(Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
+            CreateATestRect(new Vector3(Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
+        }
+
+        private void Test1() {
+            int range = 1;
+            for (int i = 0; i < range; i++) {
+                Vector3 spawnPos = new Vector3(
+                    Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
+
+                CreateATestRect(new Vector3(
+                    Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
+                CreateACustomShape(new Vector3[] {
+                    new Vector3(-2, 0, 0), new Vector3(0, 0, 1),
+                    new Vector3(2, 0, 0), new Vector3(0, 0, -1)}, spawnPos, i);
+            }
+        }
+
+        private void Test2() {
             int range = 2;
             for (int i = 0; i < range; i++) {
-                // CreateATestRect(new Vector3(
-                    // Random.Range(-range / 2f, range / 2f), 0, Random.Range(-range / 2f, range / 2f)));
-                // CreateATestRect(new Vector3(
-                    // Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
-                CreateATestCircle(new Vector3(
-                    Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
-            }
+                Vector3 spawnPos = new Vector3(
+                    Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
 
-            // CreateATestCollision(new Vector3(1.5f, 0, 0.5f));
-            // CreateATestCollision(new Vector3(2, 0, 1));
+                CreateATestCircle(spawnPos);
+            }
+        }
+
+        private void Test3() {
+            int range = 1;
+            for (int i = 0; i < range; i++) {
+                Vector3 spawnPos = new Vector3(
+                    Random.Range(-0.5f, 0.5f), 0, Random.Range(-0.5f, 0.5f));
+
+                CreateACustomShape(new Vector3[] {
+                    new Vector3(-2, 0, 0), new Vector3(0, 0, 1),
+                    new Vector3(2, 0, 0), new Vector3(0, 0, -1)}, spawnPos, 0);
+
+                spawnPos = new Vector3(
+                    Random.Range(-0.5f, 0.5f), 0, Random.Range(-0.5f, 0.5f));
+                CreateACustomShape(new Vector3[] {
+                    new Vector3(-2, 0, 0), new Vector3(0, 0, 1), new Vector3(1, 0, 1),
+                    new Vector3(2, 0, 0), new Vector3(2, 0, -2), new Vector3(-2, 0, -3),
+                    new Vector3(-2, 0, 0)}, spawnPos, 1);
+            }
+        }
+
+        public void CreateACustomShape(Vector3[] vertices, Vector3 pos, int level) {
+            CollisionShape shape = new Physics.Collision.Shape.CustomShape(vertices);
+            CollisionObject co = new CollisionObject(shape, null, pos, level);
+            AddCollisionObject(co);
+            GameObject go = CreateMesh(co);
+        }
+
+        public GameObject CreateMesh(CollisionObject co) {
+            GameObject go = new GameObject(co.shape.shapeType.ToString());
+            Mesh m;
+            go.AddComponent<MeshFilter>().mesh = m = new Mesh();
+            m.name = Guid.NewGuid().ToString();
+            m.vertices = co.shape.vertices.ToArray();
+
+            int vertexCount = co.shape.vertices.Count;
+            int triCount = vertexCount - 2;
+            int[] triangles = new int[3 * triCount];
+            for (int i = 0, triIndex = 0; i < triCount; triIndex = 3 * ++i) {
+                triangles[triIndex] = 0;
+                triangles[triIndex + 1] = (i + 1) % vertexCount;
+                triangles[triIndex + 2] = (i + 2) % vertexCount;
+            }
+            m.triangles = triangles;
+            go.AddComponent<MeshRenderer>();
+            go.AddComponent<CollisionObjectProxy>().target = co;
+
+            return go;
         }
 
         public void CreateATestRect(Vector3 pos) {
             CollisionShape shape = new Physics.Collision.Shape.Rect(1, 1);
             CollisionObject co = new CollisionObject(shape, null, pos);
-            GameObject go = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            go.GetComponent<BoxCollider>().enabled = false;
-            go.AddComponent<CollisionObjectProxy>().target = co;
             AddCollisionObject(co);
+            GameObject go = CreateMesh(co);
         }
 
         public void CreateATestCircle(Vector3 pos) {
             CollisionShape shape = new Physics.Collision.Shape.Circle(1);
             CollisionObject co = new CollisionObject(shape, null, pos);
-            GameObject go = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            go.GetComponent<SphereCollider>().enabled = false;
-            go.AddComponent<CollisionObjectProxy>().target = co;
             AddCollisionObject(co);
+            GameObject go = CreateMesh(co);
         }
+
+        #endregion
 
         void Update()
         {
@@ -90,9 +164,14 @@ namespace Physics {
         }
 
         private void SweepAndPrune() {
+            int projCount = horAABBProjList.Count;
+            if (projCount <= 0) {
+                return;
+            }
+
             // 升序排序
-            if (horAABBProjList.Count >= 2) {
-                for (int i = 1, count = horAABBProjList.Count; i < count; i++) {
+            if (projCount >= 2) {
+                for (int i = 1; i < projCount; i++) {
                     var temp = horAABBProjList[i];
                     for (int j = i - 1; j >= 0; j--) {
                         if (horAABBProjList[j].value > temp.value) {
@@ -113,19 +192,36 @@ namespace Physics {
             scanList.Add(horAABBProjList[0]);
             startPoints.Add(horAABBProjList[0].collisionObject.id, horAABBProjList[0]);
             for (int i = 1, count = horAABBProjList.Count; i < count; i++) {
+                CollisionObject horProjObj = horAABBProjList[i].collisionObject;
+
                 if (horAABBProjList[i].projectionType == AABBProjectionType.HorizontalEnd) {
-                    ProjectionPoint startPoint = startPoints[horAABBProjList[i].collisionObject.id];
-                    startPoints.Remove(horAABBProjList[i].collisionObject.id);
+                    ProjectionPoint startPoint = startPoints[horProjObj.id];
+                    startPoints.Remove(horProjObj.id);
                     scanList.Remove(startPoint);
                 } else if (horAABBProjList[i].projectionType == AABBProjectionType.HorizontalStart) {
                     for (int j = 0, scanCount = scanList.Count; j < scanCount; j++) {
-                        broadphasePair.Add(new CollisionPair() {
-                            first = scanList[j].collisionObject,
-                            second = horAABBProjList[i].collisionObject,
-                        });
+                        CollisionObject scanObj = scanList[j].collisionObject;
+
+                        CollisionPair pair = new CollisionPair();
+                        int jLevel = scanObj.level;
+                        int iLevel = horProjObj.level;
+
+                        // 让碰撞对内碰撞体的顺序规律一致
+                        if (jLevel == iLevel) {
+                            int iIndex = collisionList.IndexOf(horProjObj);
+                            int jIndex = collisionList.IndexOf(scanObj);
+                            pair.first = iIndex < jIndex ? horProjObj : scanObj;
+                            pair.second = iIndex > jIndex ? horProjObj : scanObj;
+                        } else {
+                            pair.first = jLevel > iLevel ? horProjObj : scanObj;
+                            pair.second = jLevel < iLevel ? horProjObj : scanObj;
+                        }
+
+                        broadphasePair.Add(pair);
                     }
+
                     scanList.Add(horAABBProjList[i]);
-                    startPoints.Add(horAABBProjList[i].collisionObject.id, horAABBProjList[i]);
+                    startPoints.Add(horProjObj.id, horAABBProjList[i]);
                 }
             }
 
@@ -244,7 +340,7 @@ namespace Physics {
             if (simplex.Count == 2) {
                 Vector3 crossPoint = PhysicsTool.GetPerpendicularToOrigin(simplex[0], simplex[1]);
 
-                if (crossPoint.magnitude < float.Epsilon) {
+                if (crossPoint.magnitude < 0.01f) {
                     // 当单纯形的边经过原点时，上方的计算将失效，因此手动给出一个正交向量
                     crossPoint = PhysicsTool.GetPerpendicularVector(simplex[0], simplex[1]);
                 }
@@ -287,8 +383,16 @@ namespace Physics {
         private void Resolve(float timeSpan) {
             for (int i = 0, count = broadphasePair.Count; i < count; i++) {
                 CollisionPair pair = broadphasePair[i];
-                pair.first.AddResolveVelocity(pair.penetrateVec / 2);
-                pair.second.AddResolveVelocity(-pair.penetrateVec / 2);
+                if (pair.first.level == pair.second.level) {
+                    pair.first.AddResolveVelocity(pair.penetrateVec / 2);
+                    pair.second.AddResolveVelocity(-pair.penetrateVec / 2);
+                } else {
+                    if (pair.first.level > pair.second.level) {
+                        pair.second.AddResolveVelocity(pair.penetrateVec);
+                    } else {
+                        pair.first.AddResolveVelocity(pair.penetrateVec);
+                    }
+                }
             }
         }
 

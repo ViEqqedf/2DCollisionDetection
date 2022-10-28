@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Physics.Collision.Shape {
     public class Circle : CollisionShape {
+        private int resolution = 2;
         private float radius;
 
         public Circle(float radius) : base(ShapeType.Circle) {
@@ -10,36 +11,27 @@ namespace Physics.Collision.Shape {
 
             localVertices = new List<Vector3>();
             vertices = new List<Vector3>();
-            for (int i = -2; i < 0; i++) {
-                for (int j = 0; j < 2; j++) {
-                    localVertices.Add(CreateCirclePoint(i, j));
-                    vertices.Add(Vector3.zero);
-                }
+            for (int i = -resolution; i < resolution; i++) {
+                localVertices.Add(CreateCirclePoint(i, resolution));
+                vertices.Add(Vector3.zero);
             }
-            for (int i = 0; i < 2; i++) {
-                for (int j = 2; j > 0; j--) {
-                    localVertices.Add(CreateCirclePoint(i, j));
-                    vertices.Add(Vector3.zero);
-                }
+            for (int i = resolution; i > -resolution; i--) {
+                localVertices.Add(CreateCirclePoint(resolution, i));
+                vertices.Add(Vector3.zero);
             }
-            for (int i = 2; i > 0; i--) {
-                for (int j = 0; j > -2; j--) {
-                    localVertices.Add(CreateCirclePoint(i, j));
-                    vertices.Add(Vector3.zero);
-                }
+            for (int i = resolution; i > -resolution; i--) {
+                localVertices.Add(CreateCirclePoint(i, -resolution));
+                vertices.Add(Vector3.zero);
             }
-            for (int i = 0; i > -2; i--) {
-                for (int j = -2; j < 0; j++) {
-                    localVertices.Add(CreateCirclePoint(i, j));
-                    vertices.Add(Vector3.zero);
-                }
+            for (int i = -resolution; i < resolution; i++) {
+                localVertices.Add(CreateCirclePoint(-resolution, i));
+                vertices.Add(Vector3.zero);
             }
         }
 
         private Vector3 CreateCirclePoint(int i, int j) {
-            Vector3 squarePoint = new Vector3((i - 2) * 0.25f, 0, (j - 2) * 0.25f);
-            float squareX = squarePoint.x * radius;
-            float squareZ = squarePoint.z * radius;
+            float squareX = i * radius / 2;
+            float squareZ = j * radius / 2;
 
             return new Vector3(
                 squareX * Mathf.Sqrt(1 - squareZ * squareZ * 0.5f), 0,

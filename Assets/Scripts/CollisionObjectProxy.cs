@@ -1,15 +1,18 @@
 ﻿using System;
 using Physics.Collision;
+using Physics.Collision.Shape;
 using UnityEngine;
 
 namespace Physics {
     public class CollisionObjectProxy : MonoBehaviour {
         public CollisionObject target;
+        public ShapeType shape;
         public bool IsInControl = false;
         public int velocity = 7;
 
         private void Update() {
             transform.position = target.position;
+            shape = target.shape.shapeType;
 
             if (IsInControl) {
                 if (Input.GetKeyDown(KeyCode.A)) {
