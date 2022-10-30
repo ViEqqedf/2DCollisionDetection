@@ -43,6 +43,10 @@ namespace Physics {
         /// <param name="point">要检查的点</param>
         /// <returns></returns>
         public static bool IsPointInPolygon(List<Vector3> vertices, Vector3 point) {
+            if (vertices.Count <= 2) {
+                return false;
+            }
+
             // PNPoly, 射线法
             bool flag = false;
             for (int i = 0, count = vertices.Count, j = count - 1; i < count; j = i++) {
@@ -79,7 +83,7 @@ namespace Physics {
         /// <returns></returns>
         public static bool IsPointOnSegment(Vector3 lineStart, Vector3 lineEnd, Vector3 point) {
             // collinear && in range
-            return Vector3.Cross(lineStart - point, lineEnd - point).magnitude < float.Epsilon &&
+            return Vector3.Cross(lineStart - point, lineEnd - point) == Vector3.zero &&
                    Vector3.Dot(lineStart - point, lineEnd - point) <= 0;
         }
 
@@ -90,7 +94,7 @@ namespace Physics {
             float sqrLength = lineVec.sqrMagnitude;
 
             // 重合
-            if(sqrLength < float.Epsilon) {
+            if(sqrLength <= 0) {
                 return lineStart;
             }
 
@@ -127,7 +131,7 @@ namespace Physics {
         /// <returns></returns>
         public static Vector3 GetPerpendicularVector(Vector3 lineStart, Vector3 lineEnd) {
             float zDiff = lineStart.z - lineEnd.z;
-            return zDiff < float.Epsilon ? Vector3.forward :
+            return zDiff < 0.00001f ? Vector3.forward :
                 new Vector3(1, 0, -1 * (lineStart.x - lineEnd.x) / zDiff);
         }
 
