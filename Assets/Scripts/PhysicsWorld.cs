@@ -27,10 +27,10 @@ namespace Physics {
             // verAABBProjList = new List<ProjectionPoint>();
             broadphasePair = new List<CollisionPair>();
 
-            Test0();
+            // Test0();
             // Test1();
             // Test2();
-            // Test3();
+            Test3();
         }
 
         #region Test
@@ -42,7 +42,7 @@ namespace Physics {
             // }
 
             CreateATestRect(Vector3.zero);
-            CreateATestRect(new Vector3(0.25f, 0, 0.25f));
+            CreateATestRect(new Vector3(0.5f, 0, 0.5f));
         }
 
         private void Test1() {
@@ -100,7 +100,7 @@ namespace Physics {
             Mesh m;
             go.AddComponent<MeshFilter>().mesh = m = new Mesh();
             m.name = Guid.NewGuid().ToString();
-            m.vertices = co.shape.vertices.ToArray();
+            m.vertices = co.shape.localVertices.ToArray();
 
             int vertexCount = co.shape.vertices.Count;
             int triCount = vertexCount - 2;
@@ -260,7 +260,7 @@ namespace Physics {
 
                 if (GJK(fst, snd, out List<Vector3> simplex)) {
                     pair.penetrateVec = EPA(fst, snd, simplex);
-                    Debug.Log($"{tickFrame} {fst.id}与{snd.id}窄检测碰撞，穿透向量为{pair.penetrateVec}");
+                    Debug.Log($"{tickFrame} {fst.id}与{snd.id}窄检测碰撞，穿透向量为{pair.penetrateVec}，长度为{pair.penetrateVec.magnitude}");
                 } else {
                     broadphasePair.Remove(pair);
                 }
@@ -291,7 +291,7 @@ namespace Physics {
                 }
 
                 if (iterCount > 10) {
-                    Debug.LogWarning("[ViE] 窄检测计算超时！");
+                    Debug.LogWarning("[ViE] GJK超时！");
                     return false;
                 }
 
@@ -305,7 +305,13 @@ namespace Physics {
                 FindNextSupDir(simplex);
             }
 
+            int iterCount = 0;
             while (true) {
+                if (++iterCount > 10) {
+                    Debug.LogWarning("[ViE] EPA超时");
+                    return Vector3.zero;
+                }
+
                 Vector3 edgeNormal = Vector3.zero;
                 float minDis = float.MaxValue;
                 int vertexIndex = 0;
@@ -341,7 +347,7 @@ namespace Physics {
             if (simplex.Count == 2) {
                 Vector3 crossPoint = PhysicsTool.GetPerpendicularToOrigin(simplex[0], simplex[1]);
 
-                if (crossPoint.magnitude < 0.01f) {
+                if (crossPoint.magnitude < 0.00001f) {
                     // 当单纯形的边经过原点时，上方的计算将失效，因此手动给出一个正交向量
                     crossPoint = PhysicsTool.GetPerpendicularVector(simplex[0], simplex[1]);
                 }
