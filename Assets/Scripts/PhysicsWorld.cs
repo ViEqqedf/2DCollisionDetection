@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Physics.Collision;
+using Physics.Collision.Model;
 using Physics.Collision.Shape;
 using UnityEngine;
 using UnityEngine.Profiling;
@@ -15,6 +16,8 @@ namespace Physics {
 
     public class PhysicsWorld : MonoBehaviour, IPhysicsWorld {
         public static int tickFrame = 0;
+        public float epsilon = 0.0001f;
+        public int maxIterCount = 10;
         public List<CollisionObject> collisionList;
         private List<ProjectionPoint> horAABBProjList;
         // private List<ProjectionPoint> verAABBProjList;
@@ -30,8 +33,8 @@ namespace Physics {
             // Test0();
             // Test1();
             // Test2();
-            // Test3();
-            Test4();
+            Test3();
+            // Test4();
         }
 
         #region Test
@@ -39,7 +42,7 @@ namespace Physics {
         private void Test0() {
             // int range = 50;
             // for (int i = 0; i < range; i++) {
-            //     CreateATestRect(new Vector3(Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
+                // CreateATestRect(new Vector3(Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
             // }
 
             CreateATestRect(Vector3.zero);
@@ -74,18 +77,23 @@ namespace Physics {
             int range = 1;
             for (int i = 0; i < range; i++) {
                 Vector3 spawnPos = new Vector3(
-                    Random.Range(-0.5f, 0.5f), 0, Random.Range(-0.5f, 0.5f));
+                    Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
 
-                CreateACustomShape(new Vector3[] {
-                    new Vector3(-2, 0, 0), new Vector3(0, 0, 1),
-                    new Vector3(2, 0, 0), new Vector3(0, 0, -1)}, spawnPos, 0);
+                CreateATestRect(Vector3.zero);
+                // CreateACustomShape(new Vector3[] {
+                    // new Vector3(-2, 0, 0), new Vector3(0, 0, 1),
+                    // new Vector3(2, 0, 0), new Vector3(0, 0, -1)}, spawnPos, 0);
 
                 spawnPos = new Vector3(
-                    Random.Range(-0.5f, 0.5f), 0, Random.Range(-0.5f, 0.5f));
+                    Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
                 CreateACustomShape(new Vector3[] {
                     new Vector3(-2, 0, 0), new Vector3(0, 0, 1), new Vector3(1, 0, 1),
                     new Vector3(2, 0, 0), new Vector3(2, 0, -2), new Vector3(-2, 0, -3),
-                    new Vector3(-2, 0, 0)}, spawnPos, 1);
+                    new Vector3(-2, 0, 0)}, spawnPos, 0);
+                CreateACustomShape(new Vector3[] {
+                    new Vector3(-2, 0, 0), new Vector3(0, 0, 1), new Vector3(1, 0, 1),
+                    new Vector3(2, 0, 0), new Vector3(2, 0, -2), new Vector3(-2, 0, -3),
+                    new Vector3(-2, 0, 0)}, spawnPos, 0);
             }
         }
 
@@ -96,7 +104,7 @@ namespace Physics {
 
             CreateACustomShape(new Vector3[] {Vector3.zero, new Vector3(-1.54f, 0, 4.75f),
                 new Vector3(2.5f, 0, 7.69f), new Vector3(6.54f, 0, 4.75f), new Vector3(5, 0, 0),},
-                Vector3.forward, 0);
+                Vector3.zero, 0);
         }
 
         public void CreateACustomShape(Vector3[] vertices, Vector3 pos, int level) {
@@ -136,7 +144,7 @@ namespace Physics {
         }
 
         public void CreateATestCircle(Vector3 pos) {
-            CollisionShape shape = new Physics.Collision.Shape.Circle(1);
+            CollisionShape shape = new Physics.Collision.Shape.Circle(2);
             CollisionObject co = new CollisionObject(shape, null, pos);
             AddCollisionObject(co);
             GameObject go = CreateMesh(co);
@@ -155,7 +163,7 @@ namespace Physics {
             tickFrame++;
 
             CollisionDetection(timeSpan);
-            ApplyForces(timeSpan);
+            ApplyAcceleration(timeSpan);
             Resolve(timeSpan);
             ApplyVelocity(timeSpan);
         }
@@ -254,10 +262,10 @@ namespace Physics {
                 // }
             // }
 
-            for (int i = 0, count = broadphasePair.Count; i < count; i++) {
-                CollisionPair pair = broadphasePair[i];
-                Debug.Log($"{tickFrame} {pair.first.id}与{pair.second.id}粗检测碰撞");
-            }
+            // for (int i = 0, count = broadphasePair.Count; i < count; i++) {
+                // CollisionPair pair = broadphasePair[i];
+                // Debug.Log($"{tickFrame} {pair.first.id}与{pair.second.id}粗检测碰撞");
+            // }
         }
 
         private void DynamicBVH() {
@@ -269,132 +277,127 @@ namespace Physics {
                 CollisionObject fst = pair.first;
                 CollisionObject snd = pair.second;
 
-                if (GJK(fst, snd, out List<Vector3> simplex)) {
+                if (GJK(fst, snd, out Simplex simplex)) {
+                    Profiler.BeginSample("[ViE] EPA");
                     pair.penetrateVec = EPA(fst, snd, simplex);
-                    Debug.Log($"{tickFrame} {fst.id}与{snd.id}窄检测碰撞，穿透向量为{pair.penetrateVec}，长度为{pair.penetrateVec.magnitude}");
+                    Profiler.EndSample();
+                    // Debug.Log($"{tickFrame} {fst.id}与{snd.id}窄检测碰撞，穿透向量为{pair.penetrateVec}，长度为{pair.penetrateVec.magnitude}");
                 } else {
                     broadphasePair.Remove(pair);
                 }
             }
         }
 
-        private bool GJK(CollisionObject fst, CollisionObject snd, out List<Vector3> simplex) {
-            int iterCount = 0;
+        private bool GJK(CollisionObject fst, CollisionObject snd, out Simplex simplex) {
+            Profiler.BeginSample("[ViE] GJK");
+            simplex = new Simplex();
+            bool isCollision = false;
+            Vector3 supDir = Vector3.zero;
 
-            simplex = new List<Vector3>();
-            Vector3 supDir = (snd.position - fst.position).normalized;
+            supDir = FindFirstDirection(fst, snd);
             simplex.Add(Support(supDir, fst, snd));
-            supDir = -supDir;
-            while (true) {
-                iterCount++;
-                Vector3 supPoint = Support(supDir, fst, snd);
+            simplex.Add(Support(-supDir, fst, snd));
 
-                // 找不到新的单纯形，结束
-                if (Vector3.Dot(supPoint, supDir) < 0) {
-                    return false;
+            supDir = -PhysicsTool.GetClosestPointToOrigin(simplex.GetVertex(0), simplex.GetVertex(1));
+            for (int i = 0; i < maxIterCount; ++i) {
+                if (supDir.sqrMagnitude < float.Epsilon) {
+                    isCollision = true;
+                    break;
                 }
 
-                simplex.Add(supPoint);
-                int vertexCount = simplex.Count;
-                if (vertexCount == 3 && PhysicsTool.IsPointInTriangle(
-                        simplex[0], simplex[1], simplex[2], Vector3.zero)) {
-                    return true;
+                SupportPoint p = Support(supDir, fst, snd);
+                if (Vector3.SqrMagnitude(p.point - simplex.GetVertex(0)) < epsilon ||
+                    Vector3.SqrMagnitude(p.point - simplex.GetVertex(1)) < epsilon) {
+                    isCollision = false;
+                    break;
                 }
 
-                if (iterCount > 10) {
-                    Debug.LogWarning("[ViE] GJK超时！");
-                    return false;
+                simplex.Add(p);
+
+                if (simplex.Contains(Vector3.zero)) {
+                    isCollision = true;
+                    break;
                 }
 
-                supDir = FindNextSupDir(simplex);
+                supDir = FindNextDirection(simplex);
             }
+
+            Profiler.EndSample();
+            return isCollision;
         }
 
-        private Vector3 EPA(CollisionObject fst, CollisionObject snd, List<Vector3> simplex) {
-            if (simplex.Count > 2) {
-                // 此处的目的是去掉可能的经过原点的边，让下方穿透向量的计算不会出现异常的0最短距离
-                FindNextSupDir(simplex);
+        private Vector3 EPA(CollisionObject fst, CollisionObject snd, Simplex simplex) {
+            if (simplex.PointCount() > 2) {
+                FindNextDirection(simplex);
             }
 
-            int iterCount = 0;
-            while (true) {
-                if (++iterCount > 10) {
-                    Debug.LogWarning("[ViE] EPA超时");
-                    return Vector3.zero;
+            SimplexEdge simplexEdge = new SimplexEdge();
+            simplexEdge.InitEdges(simplex);
+            Edge currentEpaEdge = null;
+            float dis = 0;
+
+            for (int i = 0; i < maxIterCount; ++i) {
+                Edge e = simplexEdge.FindClosestEdge();
+                currentEpaEdge = e;
+
+                SupportPoint point = Support(e.normal, fst, snd);
+                float distance = Vector3.Dot(point.point, e.normal);
+                if (distance - e.distance < epsilon) {
+                    dis = distance;
+                    break;
                 }
 
-                Vector3 edgeNormal = Vector3.zero;
-                float minDis = float.MaxValue;
-                int vertexIndex = 0;
-                Vector3 minLineFrom = Vector3.zero;
-                Vector3 minLineTo = Vector3.zero;
-                // 找到一条离原点最近的边
-                for (int i = 0, count = simplex.Count, j = count - 1; i < count; j = i++) {
-                    Vector3 lineTo = simplex[j];
-                    Vector3 verticalLine = PhysicsTool.GetPerpendicularToOrigin(simplex[i], lineTo);
-                    float magnitude = verticalLine.magnitude;
-                    if (magnitude < minDis) {
-                        edgeNormal = -verticalLine;
-                        minDis = magnitude;
-                        vertexIndex = j;
-                        minLineFrom = simplex[i];
-                        minLineTo = lineTo;
-                    }
-                }
-                // 使用该边的远离原点的垂线作为新的迭代方向，寻找一个新的单纯形点
-                Vector3 supPoint = Support(edgeNormal, fst, snd);
-                if (PhysicsTool.IsPointInPolygon(simplex, supPoint)) {
-                    // 如果该点已经包含于单纯形中，返回该向量作为穿透向量
-                    Debug.Log($"{tickFrame}  此次EPA最短垂线为{edgeNormal}，距离{minDis}");
-                    return edgeNormal;
-                } else {
-                    // 否则使用该点扩展单纯形
-                    simplex.Insert(vertexIndex, supPoint);
-                }
+                simplexEdge.InsertEdgePoint(e, point);
             }
+
+            return dis * currentEpaEdge.normal;
         }
 
-        private Vector3 FindNextSupDir(List<Vector3> simplex) {
-            if (simplex.Count == 2) {
-                Vector3 crossPoint = PhysicsTool.GetPerpendicularToOrigin(simplex[0], simplex[1]);
+        public Vector3 FindFirstDirection(CollisionObject a, CollisionObject b) {
+            Vector3 dir = a.shape.vertices[0] - b.shape.vertices[0];
+            if (dir.sqrMagnitude < epsilon) {
+                dir = a.shape.vertices[1] - b.shape.vertices[0];
+            }
+            return dir;
+        }
 
-                if (crossPoint.magnitude < 0.00001f) {
-                    // 当单纯形的边经过原点时，上方的计算将失效，因此手动给出一个正交向量
-                    crossPoint = PhysicsTool.GetPerpendicularVector(simplex[0], simplex[1]);
-                }
-                // 取靠近原点的方向
-                return -crossPoint;
-            } else if (simplex.Count == 3) {
-                Vector3 cross20 = PhysicsTool.GetPerpendicularToOrigin(simplex[2], simplex[0]);
-                Vector3 cross21 = PhysicsTool.GetPerpendicularToOrigin(simplex[2], simplex[1]);
+        private Vector3 FindNextDirection(Simplex simplex) {
+            if (simplex.PointCount() == 2) {
+                Vector3 crossPoint = PhysicsTool.GetClosestPointToOrigin(
+                    simplex.GetVertex(0), simplex.GetVertex(1));
+                return Vector3.zero - crossPoint;
+            } else if (simplex.PointCount() == 3) {
+                Vector3 crossOnCA = PhysicsTool.GetClosestPointToOrigin(
+                    simplex.GetVertex(2), simplex.GetVertex(0));
+                Vector3 crossOnCB = PhysicsTool.GetClosestPointToOrigin(
+                    simplex.GetVertex(2), simplex.GetVertex(1));
 
-                // 取靠近原点的方向，然后取其朝向原点的向量作为下一迭代方向
-                if (cross20.sqrMagnitude < cross21.sqrMagnitude) {
-                    // TODO:[ViE] memory sort consume
-                    simplex.RemoveAt(1);
-                    return -cross20;
+                if (crossOnCA.sqrMagnitude < crossOnCB.sqrMagnitude) {
+                    simplex.Remove(1);
+                    return Vector3.zero - crossOnCA;
                 } else {
-                    // TODO:[ViE] memory sort consume
-                    simplex.RemoveAt(0);
-                    return -cross21;
+                    simplex.Remove(0);
+                    return Vector3.zero - crossOnCB;
                 }
             } else {
-                // Meaningless
-                throw new Exception("单纯形的点数量错误");
+                Debug.Log("[ViE] 单纯形有错误的边数");
+                return Vector3.zero;
             }
         }
 
-        private Vector3 Support(Vector3 iterDir, CollisionObject collA, CollisionObject collB) {
-            iterDir = iterDir.normalized;
-            Vector3 fst = PhysicsTool.GetFarthestPointInDir(collA, iterDir);
-            Vector3 snd = PhysicsTool.GetFarthestPointInDir(collB, -iterDir);
-
-            return fst - snd;
+        private SupportPoint Support(Vector3 dir, CollisionObject fst, CollisionObject snd) {
+            Vector3 a = fst.GetFarthestPointInDir(dir);
+            Vector3 b = snd.GetFarthestPointInDir(-dir);
+            return new SupportPoint() {
+                point = a - b,
+                fromA = a,
+                fromB = b,
+            };
         }
 
         #endregion
 
-        private void ApplyForces(float timeSpan) {
+        private void ApplyAcceleration(float timeSpan) {
             for (int i = 0, count = collisionList.Count; i < count; i++) {
                 collisionList[i].velocity += collisionList[i].acceleration * timeSpan;
             }
@@ -404,13 +407,13 @@ namespace Physics {
             for (int i = 0, count = broadphasePair.Count; i < count; i++) {
                 CollisionPair pair = broadphasePair[i];
                 if (pair.first.level == pair.second.level) {
-                    pair.first.AddResolveVelocity(pair.penetrateVec / 2);
-                    pair.second.AddResolveVelocity(-pair.penetrateVec / 2);
+                    pair.first.AddResolveVelocity(-pair.penetrateVec / 2);
+                    pair.second.AddResolveVelocity(pair.penetrateVec / 2);
                 } else {
                     if (pair.first.level > pair.second.level) {
                         pair.second.AddResolveVelocity(pair.penetrateVec);
                     } else {
-                        pair.first.AddResolveVelocity(pair.penetrateVec);
+                        pair.first.AddResolveVelocity(-pair.penetrateVec);
                     }
                 }
             }

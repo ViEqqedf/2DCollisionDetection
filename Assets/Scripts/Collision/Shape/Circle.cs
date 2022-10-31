@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Physics.Collision.Shape {
     public class Circle : CollisionShape {
-        private int resolution = 2;
+        private int resolution = 1;
         private float radius;
 
         public Circle(float radius) : base(ShapeType.Circle) {
@@ -30,12 +30,12 @@ namespace Physics.Collision.Shape {
         }
 
         private Vector3 CreateCirclePoint(int i, int j) {
-            float squareX = i * radius / 2;
-            float squareZ = j * radius / 2;
+            float squareX = i * 1.0f / resolution;
+            float squareZ = j * 1.0f / resolution;
 
             return new Vector3(
-                squareX * Mathf.Sqrt(1 - squareZ * squareZ * 0.5f), 0,
-                squareZ * Mathf.Sqrt(1 - squareX * squareX * 0.5f));
+                radius * squareX * Mathf.Sqrt(1 - squareZ * squareZ * 0.5f), 0,
+                radius * squareZ * Mathf.Sqrt(1 - squareX * squareX * 0.5f));
         }
 
         protected override void GetBound(out Vector3 lowerBound, out Vector3 upperBound) {
