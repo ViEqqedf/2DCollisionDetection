@@ -10,13 +10,13 @@ namespace Physics.Collision.Model {
             PhysicsCachePool.RecycleEdge(edges);
         }
 
-        public void InitEdges(Simplex simplex) {
-            if (simplex.PointCount() != 2) {
+        public void InitEdges(List<Vector3> simplex) {
+            if (simplex.Count != 2) {
                 throw new Exception("边的数量错误");
             }
 
-            edges.Add(CreateInitEdge(simplex.GetSupportPoint(0), simplex.GetSupportPoint(1)));
-            edges.Add(CreateInitEdge(simplex.GetSupportPoint(1), simplex.GetSupportPoint(0)));
+            edges.Add(CreateInitEdge(simplex[0], simplex[1]));
+            edges.Add(CreateInitEdge(simplex[1], simplex[0]));
 
             UpdateEdgeIndex();
         }
