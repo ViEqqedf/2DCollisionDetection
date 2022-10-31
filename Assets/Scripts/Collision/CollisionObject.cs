@@ -16,6 +16,7 @@ namespace Physics.Collision {
         public ProjectionPoint GetProjectionPoint(AABBProjectionType projectionType);
         public void Translate(Vector3 diff);
         public void AddVelocity(Vector3 diff);
+        public void AddAcceleration(Vector3 diff);
     }
 
     public class CollisionObject : ICollisionObject{
@@ -30,6 +31,7 @@ namespace Physics.Collision {
         public Vector3 scale;
         public int level = 0;
 
+        public Vector3 acceleration;
         public Vector3 velocity;
         public Vector3 resolveVelocity;
 
@@ -77,6 +79,10 @@ namespace Physics.Collision {
 
         public void AddVelocity(Vector3 diff) {
             this.velocity += diff;
+        }
+
+        public void AddAcceleration(Vector3 diff) {
+            this.acceleration += diff;
         }
 
         public void SetVelocity(Vector3 finalVelocity) {

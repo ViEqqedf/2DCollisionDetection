@@ -30,7 +30,8 @@ namespace Physics {
             // Test0();
             // Test1();
             // Test2();
-            Test3();
+            // Test3();
+            Test4();
         }
 
         #region Test
@@ -86,6 +87,16 @@ namespace Physics {
                     new Vector3(2, 0, 0), new Vector3(2, 0, -2), new Vector3(-2, 0, -3),
                     new Vector3(-2, 0, 0)}, spawnPos, 1);
             }
+        }
+
+        private void Test4() {
+            CreateACustomShape(new Vector3[] {Vector3.zero, new Vector3(-1.54f, 0, 4.75f),
+                new Vector3(2.5f, 0, 7.69f), new Vector3(6.54f, 0, 4.75f), new Vector3(5, 0, 0),},
+                Vector3.zero, 0);
+
+            CreateACustomShape(new Vector3[] {Vector3.zero, new Vector3(-1.54f, 0, 4.75f),
+                new Vector3(2.5f, 0, 7.69f), new Vector3(6.54f, 0, 4.75f), new Vector3(5, 0, 0),},
+                Vector3.forward, 0);
         }
 
         public void CreateACustomShape(Vector3[] vertices, Vector3 pos, int level) {
@@ -145,7 +156,7 @@ namespace Physics {
 
             CollisionDetection(timeSpan);
             ApplyForces(timeSpan);
-            // Resolve(timeSpan);
+            Resolve(timeSpan);
             ApplyVelocity(timeSpan);
         }
 
@@ -384,7 +395,9 @@ namespace Physics {
         #endregion
 
         private void ApplyForces(float timeSpan) {
-
+            for (int i = 0, count = collisionList.Count; i < count; i++) {
+                collisionList[i].velocity += collisionList[i].acceleration * timeSpan;
+            }
         }
 
         private void Resolve(float timeSpan) {
