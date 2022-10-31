@@ -22,12 +22,12 @@ namespace Physics.Collision.Model {
         }
 
         public SupportPoint GetSupportPoint(int i) {
-            return new SupportPoint
-            {
-                point = points[i],
-                fromA = fromA[i],
-                fromB = fromB[i],
-            };
+            SupportPoint point = PhysicsCachePool.GetSupPointFromPool();
+            point.point = points[i];
+            point.fromA = fromA[i];
+            point.fromB = fromB[i];
+
+            return point;
         }
 
         public void Add(SupportPoint point) {

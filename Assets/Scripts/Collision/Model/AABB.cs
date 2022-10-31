@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Physics.Collision.Shape {
+namespace Physics.Collision.Model {
     public enum AABBProjectionType {
         HorizontalStart,
         HorizontalEnd,
