@@ -34,7 +34,7 @@ namespace Physics.Collision.Model {
             return ret;
         }
 
-        public void InsertEdgePoint(Edge e, SupportPoint point) {
+        public void InsertEdgePoint(Edge e, Vector3 point) {
             Edge e1 = CreateEdge(e.a, point);
             edges[e.index] = e1;
 
@@ -50,12 +50,12 @@ namespace Physics.Collision.Model {
             }
         }
 
-        public Edge CreateEdge(SupportPoint a, SupportPoint b) {
+        public Edge CreateEdge(Vector3 a, Vector3 b) {
             Edge e = PhysicsCachePool.GetEdgeFromPool();
             e.a = a;
             e.b = b;
 
-            e.normal = PhysicsTool.GetPerpendicularToOrigin(a.point, b.point);
+            e.normal = PhysicsTool.GetPerpendicularToOrigin(a, b);
             float lengthSq = e.normal.sqrMagnitude;
             // 单位化边
             if (lengthSq > float.Epsilon) {
@@ -64,24 +64,24 @@ namespace Physics.Collision.Model {
             }
             else {
                 // 向量垂直定则
-                Vector3 v = a.point - b.point;
+                Vector3 v = a - b;
                 v.Normalize();
                 e.normal = new Vector3(v.z, 0, -v.x);
             }
             return e;
         }
 
-        private Edge CreateInitEdge(SupportPoint a, SupportPoint b) {
+        private Edge CreateInitEdge(Vector3 a, Vector3 b) {
             Edge e = PhysicsCachePool.GetEdgeFromPool();
             e.a = a;
             e.b = b;
             e.distance = 0;
 
-            Vector3 perp = PhysicsTool.GetPerpendicularToOrigin(a.point, b.point);
+            Vector3 perp = PhysicsTool.GetPerpendicularToOrigin(a, b);
             e.distance = perp.magnitude;
 
             // 向量垂直定则
-            Vector3 v = a.point - b.point;
+            Vector3 v = a - b;
             v.Normalize();
             e.normal = new Vector3(v.z, 0, -v.x);
 

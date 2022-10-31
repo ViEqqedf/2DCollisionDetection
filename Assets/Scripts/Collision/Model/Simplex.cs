@@ -4,13 +4,9 @@ using UnityEngine;
 namespace Physics.Collision.Model {
     public class Simplex {
         public List<Vector3> points = new List<Vector3>();
-        public List<Vector3> fromA = new List<Vector3>();
-        public List<Vector3> fromB = new List<Vector3>();
 
         public void Clear() {
             points.Clear();
-            fromA.Clear();
-            fromB.Clear();
         }
 
         public int PointCount() {
@@ -21,25 +17,18 @@ namespace Physics.Collision.Model {
             return points[index];
         }
 
-        public SupportPoint GetSupportPoint(int i) {
-            SupportPoint point = PhysicsCachePool.GetSupPointFromPool();
-            point.point = points[i];
-            point.fromA = fromA[i];
-            point.fromB = fromB[i];
+        public Vector3 GetSupportPoint(int i) {
+            Vector3 point = points[i];
 
             return point;
         }
 
-        public void Add(SupportPoint point) {
-            this.points.Add(point.point);
-            fromA.Add(point.fromA);
-            fromB.Add(point.fromB);
+        public void Add(Vector3 point) {
+            this.points.Add(point);
         }
 
         public void Remove(int index) {
             points.RemoveAt(index);
-            fromA.RemoveAt(index);
-            fromB.RemoveAt(index);
         }
 
         public Vector3 GetLastPoint() {

@@ -5,28 +5,9 @@ using Physics.Collision.Model;
 namespace Physics {
     public static class PhysicsCachePool {
         public static Stack<CollisionPair> collisionPairPool = new Stack<CollisionPair>();
-        public static Stack<SupportPoint> supPointPool = new Stack<SupportPoint>();
         public static Stack<Simplex> simplexPool = new Stack<Simplex>();
         public static Stack<SimplexEdge> simplexEdgePool = new Stack<SimplexEdge>();
         public static Stack<Edge> edgePool = new Stack<Edge>();
-
-        #region SupPoint
-
-        public static SupportPoint GetSupPointFromPool() {
-            if (supPointPool.Count > 0) {
-                return supPointPool.Pop();
-            } else {
-                return new SupportPoint();
-            }
-        }
-
-        public static void RecycleSupPoint(SupportPoint point) {
-            if (point != null) {
-                supPointPool.Push(point);
-            }
-        }
-
-        #endregion
 
         #region CollisionPair
 
@@ -102,10 +83,6 @@ namespace Physics {
             if (edges != null) {
                 for (int i = 0, count = edges.Count; i < count; i++) {
                     Edge edge = edges[i];
-                    RecycleSupPoint(edge.a);
-                    RecycleSupPoint(edge.b);
-                    edge.a = null;
-                    edge.b = null;
                     edgePool.Push(edge);
                 }
 
