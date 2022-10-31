@@ -49,13 +49,20 @@ namespace Physics {
         #region Test
 
         private void Test0() {
-            int range = 50;
-            for (int i = 0; i < range; i++) {
-                CreateATestRect(new Vector3(Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
-            }
+            // int range = 50;
+            // for (int i = 0; i < range; i++) {
+                // CreateATestRect(new Vector3(Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
+            // }
 
-            // CreateATestRect(Vector3.zero);
-            // CreateATestRect(new Vector3(0.5f, 0, 0.5f));
+            CreateATestRect(Vector3.zero);
+            CreateATestRect(new Vector3(0.1f, 0, 0.1f));
+            CreateATestRect(new Vector3(0.1f, 0, -0.1f));
+            CreateATestRect(new Vector3(-0.1f, 0, 0.1f));
+            CreateATestRect(new Vector3(-0.1f, 0, -0.1f));
+            CreateATestRect(new Vector3(0.2f, 0, 0.3f));
+            CreateATestRect(new Vector3(0.3f, 0, -0.2f));
+            CreateATestRect(new Vector3(-0.2f, 0, 0.3f));
+            CreateATestRect(new Vector3(-0.3f, 0, -0.2f));
         }
 
         private void Test1() {
@@ -98,11 +105,11 @@ namespace Physics {
                 CreateACustomShape(new Vector3[] {
                     new Vector3(-2, 0, 0), new Vector3(0, 0, 1), new Vector3(1, 0, 1),
                     new Vector3(2, 0, 0), new Vector3(2, 0, -2), new Vector3(-2, 0, -3),
-                    new Vector3(-2, 0, 0)}, spawnPos, 0);
+                    new Vector3(-2, 0, 0)}, spawnPos, 1);
                 CreateACustomShape(new Vector3[] {
                     new Vector3(-2, 0, 0), new Vector3(0, 0, 1), new Vector3(1, 0, 1),
                     new Vector3(2, 0, 0), new Vector3(2, 0, -2), new Vector3(-2, 0, -3),
-                    new Vector3(-2, 0, 0)}, spawnPos, 0);
+                    new Vector3(-2, 0, 0)}, spawnPos, 1);
             }
         }
 
@@ -173,7 +180,7 @@ namespace Physics {
 
             CollisionDetection(timeSpan);
             ApplyAcceleration(timeSpan);
-            // Resolve(timeSpan);
+            Resolve(timeSpan);
             ApplyVelocity(timeSpan);
         }
 
@@ -417,14 +424,21 @@ namespace Physics {
         private void Resolve(float timeSpan) {
             for (int i = 0, count = collisionPairs.Count; i < count; i++) {
                 CollisionPair pair = collisionPairs[i];
+
+                float depth = pair.penetrateVec.magnitude;
+                float coefficient = 0.5f;
+                float tolerance = 0.01f;
+                float rate = coefficient * Mathf.Max(0, depth - tolerance);
+                Vector3 resolveVec = rate * pair.penetrateVec.normalized;
+
                 if (pair.first.level == pair.second.level) {
-                    pair.first.AddResolveVelocity(-pair.penetrateVec / 2);
-                    pair.second.AddResolveVelocity(pair.penetrateVec / 2);
+                    pair.first.AddResolveVelocity(-resolveVec / 2);
+                    pair.second.AddResolveVelocity(resolveVec / 2);
                 } else {
                     if (pair.first.level > pair.second.level) {
-                        pair.second.AddResolveVelocity(pair.penetrateVec);
+                        pair.second.AddResolveVelocity(resolveVec);
                     } else {
-                        pair.first.AddResolveVelocity(-pair.penetrateVec);
+                        pair.first.AddResolveVelocity(-resolveVec);
                     }
                 }
             }
