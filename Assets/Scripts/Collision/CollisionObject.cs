@@ -96,5 +96,18 @@ namespace Physics.Collision {
         public void CleanResolveVelocity() {
             this.resolveVelocity = Vector3.zero;
         }
+
+        public Vector3 GetFarthestPointInDir(Vector3 dir) {
+            float maxDis = float.MinValue;
+            int index = 0;
+            for (int i = 0, count = shape.vertices.Count; i < count; ++i) {
+                float dis = Vector3.Dot(shape.vertices[i], dir);
+                if (dis > maxDis) {
+                    maxDis = dis;
+                    index = i;
+                }
+            }
+            return shape.vertices[index];
+        }
     }
 }
