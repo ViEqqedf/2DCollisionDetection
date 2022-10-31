@@ -55,14 +55,14 @@ namespace Physics {
             // }
 
             CreateATestRect(Vector3.zero);
-            CreateATestRect(new Vector3(0.1f, 0, 0.1f));
-            CreateATestRect(new Vector3(0.1f, 0, -0.1f));
-            CreateATestRect(new Vector3(-0.1f, 0, 0.1f));
-            CreateATestRect(new Vector3(-0.1f, 0, -0.1f));
-            CreateATestRect(new Vector3(0.2f, 0, 0.3f));
-            CreateATestRect(new Vector3(0.3f, 0, -0.2f));
-            CreateATestRect(new Vector3(-0.2f, 0, 0.3f));
-            CreateATestRect(new Vector3(-0.3f, 0, -0.2f));
+            CreateATestRect(new Vector3(1f, 0, 0f), 1);
+            CreateATestRect(new Vector3(-1f, 0, 0f), 1);
+            CreateATestRect(new Vector3(0f, 0, 1f), 1);
+            CreateATestRect(new Vector3(0f, 0, -1f), 1);
+            // CreateATestRect(new Vector3(0.2f, 0, 0.3f));
+            // CreateATestRect(new Vector3(0.3f, 0, -0.2f));
+            // CreateATestRect(new Vector3(-0.2f, 0, 0.3f));
+            // CreateATestRect(new Vector3(-0.3f, 0, -0.2f));
         }
 
         private void Test1() {
@@ -152,9 +152,9 @@ namespace Physics {
             return go;
         }
 
-        public void CreateATestRect(Vector3 pos) {
+        public void CreateATestRect(Vector3 pos, int level = 0) {
             CollisionShape shape = new Physics.Collision.Shape.Rect(1, 1);
-            CollisionObject co = new CollisionObject(shape, null, pos);
+            CollisionObject co = new CollisionObject(shape, null, pos, level);
             AddCollisionObject(co);
             GameObject go = CreateMesh(co);
         }
@@ -427,19 +427,14 @@ namespace Physics {
 
                 float depth = pair.penetrateVec.magnitude;
                 float coefficient = 0.5f;
-                float tolerance = 0.01f;
+                float tolerance = 0f;
                 float rate = coefficient * Mathf.Max(0, depth - tolerance);
                 Vector3 resolveVec = rate * pair.penetrateVec.normalized;
 
-                if (pair.first.level == pair.second.level) {
-                    pair.first.AddResolveVelocity(-resolveVec / 2);
-                    pair.second.AddResolveVelocity(resolveVec / 2);
+                if (pair.first.level > pair.second.level) {
+                    pair.second.AddResolveVelocity(resolveVec);
                 } else {
-                    if (pair.first.level > pair.second.level) {
-                        pair.second.AddResolveVelocity(resolveVec);
-                    } else {
-                        pair.first.AddResolveVelocity(-resolveVec);
-                    }
+                    pair.first.AddResolveVelocity(-resolveVec);
                 }
             }
         }
