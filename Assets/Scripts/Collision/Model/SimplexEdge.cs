@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Physics.Collision.Model {
@@ -6,14 +7,14 @@ namespace Physics.Collision.Model {
         public List<Edge> edges = new List<Edge>();
 
         public void Clear() {
-            edges.Clear();
+            PhysicsCachePool.RecycleEdge(edges);
         }
 
         public void InitEdges(Simplex simplex) {
             edges.Clear();
 
             if (simplex.PointCount() != 2) {
-                throw new System.Exception("simplex point count must be 2!");
+                throw new Exception("边的数量错误");
             }
 
             edges.Add(CreateInitEdge(simplex.GetSupportPoint(0), simplex.GetSupportPoint(1)));
@@ -25,7 +26,8 @@ namespace Physics.Collision.Model {
         public Edge FindClosestEdge() {
             float minDistance = float.MaxValue;
             Edge ret = null;
-            foreach (var e in edges) {
+            for (int i = 0, count = edges.Count; i < count; i++) {
+                Edge e = edges[i];
                 if (e.distance < minDistance) {
                     ret = e;
                     minDistance = e.distance;
@@ -45,7 +47,7 @@ namespace Physics.Collision.Model {
         }
 
         public void UpdateEdgeIndex() {
-            for (int i = 0; i < edges.Count; ++i) {
+            for (int i = 0, count = edges.Count; i < count; ++i) {
                 edges[i].index = i;
             }
         }
@@ -72,11 +74,10 @@ namespace Physics.Collision.Model {
         }
 
         private Edge CreateInitEdge(SupportPoint a, SupportPoint b) {
-            Edge e = new Edge {
-                a = a,
-                b = b,
-                distance = 0,
-            };
+            Edge e = PhysicsCachePool.GetEdgeFromPool();
+            e.a = a;
+            e.b = b;
+            e.distance = 0;
 
             Vector3 perp = PhysicsTool.GetPerpendicularToOrigin(a.point, b.point);
             e.distance = perp.magnitude;

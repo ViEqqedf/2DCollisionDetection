@@ -1,4 +1,5 @@
 ﻿using System;
+using Physics.Collision.Model;
 using Physics.Collision.Shape;
 
 namespace Physics.Collision {

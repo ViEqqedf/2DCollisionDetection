@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Physics.Collision.Model;
 using UnityEngine;
 
 namespace Physics.Collision.Shape {
