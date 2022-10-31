@@ -171,7 +171,7 @@ namespace Physics {
 
             CollisionDetection(timeSpan);
             ApplyAcceleration(timeSpan);
-            // Resolve(timeSpan);
+            Resolve(timeSpan);
             ApplyVelocity(timeSpan);
         }
 
@@ -285,9 +285,7 @@ namespace Physics {
                 CollisionObject snd = pair.second;
 
                 if (GJK(fst, snd, out Simplex simplex)) {
-                    Profiler.BeginSample("[ViE] EPA");
                     pair.penetrateVec = EPA(fst, snd, simplex);
-                    Profiler.EndSample();
                     // Debug.Log($"{tickFrame} {fst.id}与{snd.id}窄检测碰撞，穿透向量为{pair.penetrateVec}，长度为{pair.penetrateVec.magnitude}");
                 } else {
                     collisionPairs.Remove(pair);
@@ -296,7 +294,6 @@ namespace Physics {
         }
 
         private bool GJK(CollisionObject fst, CollisionObject snd, out Simplex simplex) {
-            Profiler.BeginSample("[ViE] GJK");
             simplex = PhysicsCachePool.GetSimplexFromPool();
             bool isCollision = false;
             Vector3 supDir = Vector3.zero;
@@ -315,9 +312,9 @@ namespace Physics {
                     break;
                 }
 
-                SupportPoint p = Support(supDir, fst, snd);
-                if (Vector3.SqrMagnitude(p.point - fstVertex) < epsilon ||
-                    Vector3.SqrMagnitude(p.point - sndVertex) < epsilon) {
+                Vector3 p = Support(supDir, fst, snd);
+                if (Vector3.SqrMagnitude(p - fstVertex) < epsilon ||
+                    Vector3.SqrMagnitude(p - sndVertex) < epsilon) {
                     isCollision = false;
                     break;
                 }
@@ -332,7 +329,6 @@ namespace Physics {
                 supDir = FindNextDirection(simplex);
             }
 
-            Profiler.EndSample();
             return isCollision;
         }
 
@@ -350,8 +346,8 @@ namespace Physics {
                 Edge e = simplexEdge.FindClosestEdge();
                 curEpaEdge = e;
 
-                SupportPoint point = Support(e.normal, fst, snd);
-                float distance = Vector3.Dot(point.point, e.normal);
+                Vector3 point = Support(e.normal, fst, snd);
+                float distance = Vector3.Dot(point, e.normal);
                 if (distance - e.distance < epsilon) {
                     dis = distance;
                     break;
@@ -400,14 +396,11 @@ namespace Physics {
             }
         }
 
-        private SupportPoint Support(Vector3 dir, CollisionObject fst, CollisionObject snd) {
+        private Vector3 Support(Vector3 dir, CollisionObject fst, CollisionObject snd) {
             Vector3 a = fst.GetFarthestPointInDir(dir);
             Vector3 b = snd.GetFarthestPointInDir(-dir);
 
-            SupportPoint supPoint = PhysicsCachePool.GetSupPointFromPool();
-            supPoint.point = a - b;
-            supPoint.fromA = a;
-            supPoint.fromB = b;
+            Vector3 supPoint = a - b;
 
             return supPoint;
         }
