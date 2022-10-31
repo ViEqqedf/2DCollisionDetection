@@ -11,8 +11,6 @@ namespace Physics.Collision.Model {
         }
 
         public void InitEdges(Simplex simplex) {
-            edges.Clear();
-
             if (simplex.PointCount() != 2) {
                 throw new Exception("边的数量错误");
             }
@@ -53,7 +51,7 @@ namespace Physics.Collision.Model {
         }
 
         public Edge CreateEdge(SupportPoint a, SupportPoint b) {
-            Edge e = new Edge();
+            Edge e = PhysicsCachePool.GetEdgeFromPool();
             e.a = a;
             e.b = b;
 

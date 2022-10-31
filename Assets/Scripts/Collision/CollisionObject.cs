@@ -100,15 +100,16 @@ namespace Physics.Collision {
 
         public Vector3 GetFarthestPointInDir(Vector3 dir) {
             float maxDis = float.MinValue;
-            int index = 0;
+            Vector3 farthestPoint = Vector3.zero;
             for (int i = 0, count = shape.vertices.Count; i < count; ++i) {
-                float dis = Vector3.Dot(shape.vertices[i], dir);
+                Vector3 curPoint = shape.vertices[i];
+                float dis = Vector3.Dot(curPoint, dir);
                 if (dis > maxDis) {
                     maxDis = dis;
-                    index = i;
+                    farthestPoint = curPoint;
                 }
             }
-            return shape.vertices[index];
+            return farthestPoint;
         }
     }
 }

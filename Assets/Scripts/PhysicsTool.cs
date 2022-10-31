@@ -154,7 +154,7 @@ namespace Physics {
 
         public static Vector3 GetPerpendicularToOrigin(Vector3 a, Vector3 b) {
             Vector3 ab = b - a;
-            Vector3 ao = Vector3.zero - a;
+            Vector3 ao = -a;
 
             float sqrLength = ab.sqrMagnitude;
             if (sqrLength < float.Epsilon) {
@@ -174,7 +174,7 @@ namespace Physics {
 
         public static Vector3 GetClosestPointToOrigin(Vector3 a, Vector3 b) {
             Vector3 ab = b - a;
-            Vector3 ao = Vector3.zero - a;
+            Vector3 ao = -a;
 
             float sqrLength = ab.sqrMagnitude;
 

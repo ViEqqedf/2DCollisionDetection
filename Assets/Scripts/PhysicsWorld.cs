@@ -305,7 +305,10 @@ namespace Physics {
             simplex.Add(Support(supDir, fst, snd));
             simplex.Add(Support(-supDir, fst, snd));
 
-            supDir = -PhysicsTool.GetClosestPointToOrigin(simplex.GetVertex(0), simplex.GetVertex(1));
+            Vector3 fstVertex = simplex.GetVertex(0);
+            Vector3 sndVertex = simplex.GetVertex(1);
+
+            supDir = -PhysicsTool.GetClosestPointToOrigin(fstVertex, sndVertex);
             for (int i = 0; i < maxIterCount; ++i) {
                 if (supDir.sqrMagnitude < float.Epsilon) {
                     isCollision = true;
@@ -313,8 +316,8 @@ namespace Physics {
                 }
 
                 SupportPoint p = Support(supDir, fst, snd);
-                if (Vector3.SqrMagnitude(p.point - simplex.GetVertex(0)) < epsilon ||
-                    Vector3.SqrMagnitude(p.point - simplex.GetVertex(1)) < epsilon) {
+                if (Vector3.SqrMagnitude(p.point - fstVertex) < epsilon ||
+                    Vector3.SqrMagnitude(p.point - sndVertex) < epsilon) {
                     isCollision = false;
                     break;
                 }
@@ -377,7 +380,7 @@ namespace Physics {
             if (pointCount == 2) {
                 Vector3 crossPoint = PhysicsTool.GetClosestPointToOrigin(
                     simplex.GetVertex(0), simplex.GetVertex(1));
-                return Vector3.zero - crossPoint;
+                return -crossPoint;
             } else if (pointCount == 3) {
                 Vector3 crossOnCA = PhysicsTool.GetClosestPointToOrigin(
                     simplex.GetVertex(2), simplex.GetVertex(0));
@@ -386,10 +389,10 @@ namespace Physics {
 
                 if (crossOnCA.sqrMagnitude < crossOnCB.sqrMagnitude) {
                     simplex.Remove(1);
-                    return Vector3.zero - crossOnCA;
+                    return -crossOnCA;
                 } else {
                     simplex.Remove(0);
-                    return Vector3.zero - crossOnCB;
+                    return -crossOnCB;
                 }
             } else {
                 Debug.Log("[ViE] 单纯形有错误的边数");
@@ -400,11 +403,13 @@ namespace Physics {
         private SupportPoint Support(Vector3 dir, CollisionObject fst, CollisionObject snd) {
             Vector3 a = fst.GetFarthestPointInDir(dir);
             Vector3 b = snd.GetFarthestPointInDir(-dir);
-            return new SupportPoint() {
-                point = a - b,
-                fromA = a,
-                fromB = b,
-            };
+
+            SupportPoint supPoint = PhysicsCachePool.GetSupPointFromPool();
+            supPoint.point = a - b;
+            supPoint.fromA = a;
+            supPoint.fromB = b;
+
+            return supPoint;
         }
 
         #endregion
