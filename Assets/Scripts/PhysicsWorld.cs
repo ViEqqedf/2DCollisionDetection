@@ -171,7 +171,7 @@ namespace Physics {
 
             CollisionDetection(timeSpan);
             ApplyAcceleration(timeSpan);
-            Resolve(timeSpan);
+            // Resolve(timeSpan);
             ApplyVelocity(timeSpan);
         }
 
@@ -278,13 +278,15 @@ namespace Physics {
         private void DynamicBVH() {
         }
 
+        private List<Vector3> simplex = new List<Vector3>();
         private void NarrowPhase() {
             for (int i = collisionPairs.Count - 1; i >= 0; i--) {
                 CollisionPair pair = collisionPairs[i];
                 CollisionObject fst = pair.first;
                 CollisionObject snd = pair.second;
 
-                if (GJK(fst, snd, out Simplex simplex)) {
+                simplex.Clear();
+                if (GJK(fst, snd, simplex)) {
                     pair.penetrateVec = EPA(fst, snd, simplex);
                     // Debug.Log($"{tickFrame} {fst.id}与{snd.id}窄检测碰撞，穿透向量为{pair.penetrateVec}，长度为{pair.penetrateVec.magnitude}");
                 } else {
@@ -293,8 +295,7 @@ namespace Physics {
             }
         }
 
-        private bool GJK(CollisionObject fst, CollisionObject snd, out Simplex simplex) {
-            simplex = PhysicsCachePool.GetSimplexFromPool();
+        private bool GJK(CollisionObject fst, CollisionObject snd, List<Vector3> simplex) {
             bool isCollision = false;
             Vector3 supDir = Vector3.zero;
 
@@ -302,8 +303,8 @@ namespace Physics {
             simplex.Add(Support(supDir, fst, snd));
             simplex.Add(Support(-supDir, fst, snd));
 
-            Vector3 fstVertex = simplex.GetVertex(0);
-            Vector3 sndVertex = simplex.GetVertex(1);
+            Vector3 fstVertex = simplex[0];
+            Vector3 sndVertex = simplex[1];
 
             supDir = -PhysicsTool.GetClosestPointToOrigin(fstVertex, sndVertex);
             for (int i = 0; i < maxIterCount; ++i) {
@@ -321,7 +322,7 @@ namespace Physics {
 
                 simplex.Add(p);
 
-                if (simplex.Contains(Vector3.zero)) {
+                if (PhysicsTool.Contains(simplex, Vector3.zero)) {
                     isCollision = true;
                     break;
                 }
@@ -332,8 +333,8 @@ namespace Physics {
             return isCollision;
         }
 
-        private Vector3 EPA(CollisionObject fst, CollisionObject snd, Simplex simplex) {
-            if (simplex.PointCount() > 2) {
+        private Vector3 EPA(CollisionObject fst, CollisionObject snd, List<Vector3> simplex) {
+            if (simplex.Count > 2) {
                 FindNextDirection(simplex);
             }
 
@@ -356,7 +357,6 @@ namespace Physics {
                 simplexEdge.InsertEdgePoint(e, point);
             }
 
-            PhysicsCachePool.RecycleSimplex(simplex);
             PhysicsCachePool.RecycleSimplexEdge(simplexEdge);
 
             return dis * curEpaEdge.normal;
@@ -370,24 +370,24 @@ namespace Physics {
             return dir;
         }
 
-        private Vector3 FindNextDirection(Simplex simplex) {
-            int pointCount = simplex.PointCount();
+        private Vector3 FindNextDirection(List<Vector3> simplex) {
+            int pointCount = simplex.Count;
 
             if (pointCount == 2) {
                 Vector3 crossPoint = PhysicsTool.GetClosestPointToOrigin(
-                    simplex.GetVertex(0), simplex.GetVertex(1));
+                    simplex[0], simplex[1]);
                 return -crossPoint;
             } else if (pointCount == 3) {
                 Vector3 crossOnCA = PhysicsTool.GetClosestPointToOrigin(
-                    simplex.GetVertex(2), simplex.GetVertex(0));
+                    simplex[2], simplex[0]);
                 Vector3 crossOnCB = PhysicsTool.GetClosestPointToOrigin(
-                    simplex.GetVertex(2), simplex.GetVertex(1));
+                    simplex[2], simplex[1]);
 
                 if (crossOnCA.sqrMagnitude < crossOnCB.sqrMagnitude) {
-                    simplex.Remove(1);
+                    simplex.RemoveAt(1);
                     return -crossOnCA;
                 } else {
-                    simplex.Remove(0);
+                    simplex.RemoveAt(0);
                     return -crossOnCB;
                 }
             } else {

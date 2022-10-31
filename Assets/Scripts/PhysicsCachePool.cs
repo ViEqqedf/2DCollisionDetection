@@ -5,7 +5,6 @@ using Physics.Collision.Model;
 namespace Physics {
     public static class PhysicsCachePool {
         public static Stack<CollisionPair> collisionPairPool = new Stack<CollisionPair>();
-        public static Stack<Simplex> simplexPool = new Stack<Simplex>();
         public static Stack<SimplexEdge> simplexEdgePool = new Stack<SimplexEdge>();
         public static Stack<Edge> edgePool = new Stack<Edge>();
 
@@ -26,25 +25,6 @@ namespace Physics {
                 }
 
                 pairs.Clear();
-            }
-        }
-
-        #endregion
-
-        #region Simplex
-
-        public static Simplex GetSimplexFromPool() {
-            if (simplexPool.Count > 0) {
-                return simplexPool.Pop();
-            } else {
-                return new Simplex();
-            }
-        }
-
-        public static void RecycleSimplex(Simplex simplex) {
-            if (simplex != null) {
-                simplex.Clear();
-                simplexPool.Push(simplex);
             }
         }
 
