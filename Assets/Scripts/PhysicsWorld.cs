@@ -19,13 +19,15 @@ namespace Physics {
         public float epsilon = 0.0001f;
         public int maxIterCount = 10;
         public List<CollisionObject> collisionList;
+        private List<CollisionPair> collisionPairs;
 
         private List<ProjectionPoint> broadScanList;
         private Dictionary<int, ProjectionPoint> broadStartPoints;
         private List<ProjectionPoint> horAABBProjList;
         // private List<ProjectionPoint> verAABBProjList;
+        private List<Vector3> simplexList = new List<Vector3>();
 
-        private List<CollisionPair> collisionPairs;
+
 
         void Start() {
             Application.targetFrameRate = 60;
@@ -278,16 +280,15 @@ namespace Physics {
         private void DynamicBVH() {
         }
 
-        private List<Vector3> simplex = new List<Vector3>();
         private void NarrowPhase() {
             for (int i = collisionPairs.Count - 1; i >= 0; i--) {
                 CollisionPair pair = collisionPairs[i];
                 CollisionObject fst = pair.first;
                 CollisionObject snd = pair.second;
 
-                simplex.Clear();
-                if (GJK(fst, snd, simplex)) {
-                    pair.penetrateVec = EPA(fst, snd, simplex);
+                simplexList.Clear();
+                if (GJK(fst, snd, simplexList)) {
+                    pair.penetrateVec = EPA(fst, snd, simplexList);
                     // Debug.Log($"{tickFrame} {fst.id}与{snd.id}窄检测碰撞，穿透向量为{pair.penetrateVec}，长度为{pair.penetrateVec.magnitude}");
                 } else {
                     collisionPairs.Remove(pair);

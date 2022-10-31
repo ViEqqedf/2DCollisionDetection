@@ -22,16 +22,16 @@ namespace Physics.Collision.Model {
         }
 
         public Edge FindClosestEdge() {
-            float minDistance = float.MaxValue;
-            Edge ret = null;
+            float minDis = float.MaxValue;
+            Edge result = null;
             for (int i = 0, count = edges.Count; i < count; i++) {
                 Edge e = edges[i];
-                if (e.distance < minDistance) {
-                    ret = e;
-                    minDistance = e.distance;
+                if (e.distance < minDis) {
+                    result = e;
+                    minDis = e.distance;
                 }
             }
-            return ret;
+            return result;
         }
 
         public void InsertEdgePoint(Edge e, Vector3 point) {
