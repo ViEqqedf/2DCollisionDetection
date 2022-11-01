@@ -55,10 +55,10 @@ namespace Physics {
             // }
 
             CreateATestRect(Vector3.zero);
-            CreateATestRect(new Vector3(1f, 0, 0f), 1);
-            CreateATestRect(new Vector3(-1f, 0, 0f), 1);
-            CreateATestRect(new Vector3(0f, 0, 1f), 1);
-            CreateATestRect(new Vector3(0f, 0, -1f), 1);
+            CreateATestRect(new Vector3(1f, 0, 0f), 0);
+            // CreateATestRect(new Vector3(-1f, 0, 0f), 1);
+            // CreateATestRect(new Vector3(0f, 0, 1f), 1);
+            // CreateATestRect(new Vector3(0f, 0, -1f), 1);
             // CreateATestRect(new Vector3(0.2f, 0, 0.3f));
             // CreateATestRect(new Vector3(0.3f, 0, -0.2f));
             // CreateATestRect(new Vector3(-0.2f, 0, 0.3f));
@@ -427,14 +427,38 @@ namespace Physics {
 
                 float depth = pair.penetrateVec.magnitude;
                 float coefficient = 0.5f;
-                float tolerance = 0f;
+                float tolerance = 0.01f;
                 float rate = coefficient * Mathf.Max(0, depth - tolerance);
-                Vector3 resolveVec = rate * pair.penetrateVec.normalized;
+                Vector3 penetrateDir = pair.penetrateVec.normalized;
+                Vector3 resolveVec = rate * penetrateDir;
 
-                if (pair.first.level > pair.second.level) {
+                if (pair.first.level >= pair.second.level) {
                     pair.second.AddResolveVelocity(resolveVec);
-                } else {
+                    float externalRate = Vector3.Dot(pair.second.velocity, -penetrateDir) * timeSpan;
+                    float resolveRate = Vector3.Dot(pair.second.resolveVelocity, penetrateDir);
+                    if (externalRate > resolveRate) {
+                        pair.second.AddResolveVelocity((externalRate - resolveRate) * penetrateDir);
+                    }
+
+                    if (pair.second.resolveVelocity.magnitude > epsilon) {
+                        Debug.Log($"[ViE] 当前2的速度约束为{pair.second.resolveVelocity}");
+                    } else {
+                        Debug.Log("0");
+                    }
+                }
+                if(pair.first.level <= pair.second.level) {
                     pair.first.AddResolveVelocity(-resolveVec);
+                    float externalRate = Vector3.Dot(pair.first.velocity, penetrateDir) * timeSpan;
+                    float resolveRate = Vector3.Dot(pair.first.resolveVelocity, -penetrateDir);
+                    if (externalRate > resolveRate) {
+                        pair.first.AddResolveVelocity(-(externalRate - resolveRate) * penetrateDir);
+                    }
+
+                    if (pair.first.resolveVelocity.magnitude > epsilon) {
+                        Debug.Log($"[ViE] 当前1的速度约束为{pair.first.resolveVelocity}");
+                    } else {
+                        Debug.Log("0");
+                    }
                 }
             }
         }
