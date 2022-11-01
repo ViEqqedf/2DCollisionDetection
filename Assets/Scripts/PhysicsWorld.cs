@@ -39,10 +39,10 @@ namespace Physics {
             horAABBProjList = new List<ProjectionPoint>();
             // verAABBProjList = new List<ProjectionPoint>();
 
-            Test0();
+            // Test0();
             // Test1();
             // Test2();
-            // Test3();
+            Test3();
             // Test4();
         }
 
@@ -55,7 +55,7 @@ namespace Physics {
             // }
 
             CreateATestRect(Vector3.zero);
-            CreateATestRect(new Vector3(1f, 0, 0f), 0);
+            CreateATestRect(new Vector3(1f, 0, 0f), 2);
             // CreateATestRect(new Vector3(-1f, 0, 0f), 1);
             // CreateATestRect(new Vector3(0f, 0, 1f), 1);
             // CreateATestRect(new Vector3(0f, 0, -1f), 1);
@@ -96,16 +96,12 @@ namespace Physics {
                     Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
 
                 CreateATestRect(Vector3.zero);
-                // CreateACustomShape(new Vector3[] {
-                    // new Vector3(-2, 0, 0), new Vector3(0, 0, 1),
-                    // new Vector3(2, 0, 0), new Vector3(0, 0, -1)}, spawnPos, 0);
-
-                spawnPos = new Vector3(
-                    Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
                 CreateACustomShape(new Vector3[] {
                     new Vector3(-2, 0, 0), new Vector3(0, 0, 1), new Vector3(1, 0, 1),
-                    new Vector3(2, 0, 0), new Vector3(2, 0, -2), new Vector3(-2, 0, -3),
-                    new Vector3(-2, 0, 0)}, spawnPos, 1);
+                    new Vector3(2, 0, 0), new Vector3(2, 0, -2), new Vector3(-2, 0, -3)},
+                    Vector3.zero, 1);
+                spawnPos = new Vector3(
+                    Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
                 CreateACustomShape(new Vector3[] {
                     new Vector3(-2, 0, 0), new Vector3(0, 0, 1), new Vector3(1, 0, 1),
                     new Vector3(2, 0, 0), new Vector3(2, 0, -2), new Vector3(-2, 0, -3),
@@ -125,7 +121,7 @@ namespace Physics {
 
         public void CreateACustomShape(Vector3[] vertices, Vector3 pos, int level) {
             CollisionShape shape = new Physics.Collision.Shape.CustomShape(vertices);
-            CollisionObject co = new CollisionObject(shape, null, pos, level);
+            CollisionObject co = new CollisionObject(shape, null, pos, 0, level);
             AddCollisionObject(co);
             GameObject go = CreateMesh(co);
         }
@@ -154,7 +150,7 @@ namespace Physics {
 
         public void CreateATestRect(Vector3 pos, int level = 0) {
             CollisionShape shape = new Physics.Collision.Shape.Rect(1, 1);
-            CollisionObject co = new CollisionObject(shape, null, pos, level);
+            CollisionObject co = new CollisionObject(shape, null, pos, 0, level);
             AddCollisionObject(co);
             GameObject go = CreateMesh(co);
         }
@@ -278,10 +274,10 @@ namespace Physics {
                 // }
             // }
 
-            // for (int i = 0, count = broadphasePair.Count; i < count; i++) {
-                // CollisionPair pair = broadphasePair[i];
-                // Debug.Log($"{tickFrame} {pair.first.id}与{pair.second.id}粗检测碰撞");
-            // }
+            for (int i = 0, count = collisionPairs.Count; i < count; i++) {
+                CollisionPair pair = collisionPairs[i];
+                Debug.Log($"{tickFrame} {pair.first.id}与{pair.second.id}粗检测碰撞");
+            }
         }
 
         private void DynamicBVH() {
@@ -296,7 +292,7 @@ namespace Physics {
                 simplexList.Clear();
                 if (GJK(fst, snd, simplexList)) {
                     pair.penetrateVec = EPA(fst, snd, simplexList);
-                    // Debug.Log($"{tickFrame} {fst.id}与{snd.id}窄检测碰撞，穿透向量为{pair.penetrateVec}，长度为{pair.penetrateVec.magnitude}");
+                    Debug.Log($"{tickFrame} {fst.id}与{snd.id}窄检测碰撞，穿透向量为{pair.penetrateVec}，长度为{pair.penetrateVec.magnitude}");
                 } else {
                     collisionPairs.Remove(pair);
                 }
@@ -330,7 +326,7 @@ namespace Physics {
 
                 simplex.Add(p);
 
-                if (PhysicsTool.Contains(simplex, Vector3.zero)) {
+                if (PhysicsTool.IsPointInTriangle(simplex, Vector3.zero)) {
                     isCollision = true;
                     break;
                 }
@@ -439,12 +435,6 @@ namespace Physics {
                     if (externalRate > resolveRate) {
                         pair.second.AddResolveVelocity((externalRate - resolveRate) * penetrateDir);
                     }
-
-                    if (pair.second.resolveVelocity.magnitude > epsilon) {
-                        Debug.Log($"[ViE] 当前2的速度约束为{pair.second.resolveVelocity}");
-                    } else {
-                        Debug.Log("0");
-                    }
                 }
                 if(pair.first.level <= pair.second.level) {
                     pair.first.AddResolveVelocity(-resolveVec);
@@ -452,12 +442,6 @@ namespace Physics {
                     float resolveRate = Vector3.Dot(pair.first.resolveVelocity, -penetrateDir);
                     if (externalRate > resolveRate) {
                         pair.first.AddResolveVelocity(-(externalRate - resolveRate) * penetrateDir);
-                    }
-
-                    if (pair.first.resolveVelocity.magnitude > epsilon) {
-                        Debug.Log($"[ViE] 当前1的速度约束为{pair.first.resolveVelocity}");
-                    } else {
-                        Debug.Log("0");
                     }
                 }
             }

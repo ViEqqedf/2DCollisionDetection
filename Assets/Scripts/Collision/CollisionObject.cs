@@ -16,6 +16,10 @@ namespace Physics.Collision {
         public void InitCollisionObject();
         public ProjectionPoint GetProjectionPoint(AABBProjectionType projectionType);
         public void Translate(Vector3 diff);
+        public void Rotate(Vector3 diff);
+        public void RotateTo(Vector3 value);
+        public void Scale(Vector3 diff);
+        public void ScaleTo(Vector3 value);
         public void AddVelocity(Vector3 diff);
         public void AddAcceleration(Vector3 diff);
     }
@@ -29,7 +33,7 @@ namespace Physics.Collision {
         public Vector3 position;
         public Vector3 nextPosition;
         public Vector3 rotation;
-        public Vector3 scale;
+        public Vector3 scale = Vector3.one;
         public int level = 0;
 
         public Vector3 acceleration;
@@ -38,20 +42,13 @@ namespace Physics.Collision {
 
         // TODO: 添加一个脏标记
 
-        public CollisionObject(CollisionShape shape, Object contextObject, Vector3 startPos) {
-            this.id = publicId++;
-            this.shape = shape;
-            this.position = startPos;
-            this.nextPosition = startPos;
-            this.contextObject = contextObject;
-        }
-
         public CollisionObject(CollisionShape shape, Object contextObject,
-            Vector3 startPos, int level) {
+            Vector3 startPos, float startRotation = 0, int level = 0) {
             this.id = publicId++;
             this.shape = shape;
             this.position = startPos;
             this.nextPosition = startPos;
+            this.rotation = new Vector3(0, startRotation, 0);
             this.contextObject = contextObject;
             this.level = level;
         }
@@ -62,12 +59,37 @@ namespace Physics.Collision {
 
         public void ApplyPosition() {
             position = nextPosition;
-            shape.ApplyWorldVertices(position);
+            shape.ApplyWorldVertices(position, rotation, scale);
+        }
+
+        public void ApplyRotation(Vector3 newRotation) {
+            this.rotation = newRotation;
+        }
+
+        public void ApplyScale(Vector3 newScale) {
+            this.scale = newScale;
         }
 
         public void InitCollisionObject() {
-            shape.InitShape();
-            shape.ApplyWorldVertices(position);
+            shape.UpdateShape();
+
+            // float totalX = 0;
+            // float totalZ = 0;
+            int count = shape.localVertices.Count;
+            // for (int i = 0; i < count; i++) {
+            //     totalX += shape.localVertices[i].x;
+            //     totalZ += shape.localVertices[i].z;
+            // }
+            // Vector3 center = new Vector3(totalX / count, 0, totalZ / count);
+
+            Vector3 origin = (shape.aabb.upperBound + shape.aabb.lowerBound) / 2;
+            for (int i = 0; i < count; i++) {
+                // shape.localVertices[i] += center;
+                shape.localVertices[i] -= origin;
+            }
+
+            shape.UpdateShape();
+            shape.ApplyWorldVertices(position, rotation, scale);
         }
 
         public ProjectionPoint GetProjectionPoint(AABBProjectionType projectionType) {
@@ -76,6 +98,22 @@ namespace Physics.Collision {
 
         public void Translate(Vector3 diff) {
             nextPosition += diff;
+        }
+
+        public void Rotate(Vector3 diff) {
+            ApplyRotation(rotation + diff);
+        }
+
+        public void RotateTo(Vector3 value) {
+            ApplyRotation(rotation);
+        }
+
+        public void Scale(Vector3 diff) {
+            ApplyScale(scale + diff);
+        }
+
+        public void ScaleTo(Vector3 value) {
+            ApplyScale(value);
         }
 
         public void AddVelocity(Vector3 diff) {

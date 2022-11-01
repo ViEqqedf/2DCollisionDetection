@@ -12,18 +12,18 @@ namespace Physics.Collision.Shape {
             float maxX = float.MinValue;
             float maxZ = float.MinValue;
 
-            for (int i = 0, count = localVertices.Count; i < count; i++) {
-                if (localVertices[i].x < minX) {
-                    minX = localVertices[i].x;
+            for (int i = 0, count = vertices.Count; i < count; i++) {
+                if (vertices[i].x < minX) {
+                    minX = vertices[i].x;
                 }
-                if (localVertices[i].y < minZ) {
-                    minZ = localVertices[i].y;
+                if (vertices[i].z < minZ) {
+                    minZ = vertices[i].z;
                 }
-                if (localVertices[i].x > maxX) {
-                    maxX = localVertices[i].x;
+                if (vertices[i].x > maxX) {
+                    maxX = vertices[i].x;
                 }
-                if (localVertices[i].y > maxZ) {
-                    maxZ = localVertices[i].y;
+                if (vertices[i].z > maxZ) {
+                    maxZ = vertices[i].z;
                 }
             }
 

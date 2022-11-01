@@ -39,8 +39,10 @@ namespace Physics.Collision.Shape {
         }
 
         protected override void GetBound(out Vector3 lowerBound, out Vector3 upperBound) {
-            lowerBound = new Vector3(-radius, 0, -radius);
-            upperBound = new Vector3(radius, 0, radius);
+            float realR = localVertices[resolution].magnitude;
+
+            lowerBound = new Vector3(-realR, 0, -realR);
+            upperBound = new Vector3(realR, 0, realR);
         }
     }
 }
