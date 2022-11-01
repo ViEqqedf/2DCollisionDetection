@@ -7,38 +7,6 @@ namespace Physics {
         #region Old
 
         /// <summary>
-        /// 检查点是否在三角形内
-        /// </summary>
-        /// <param name="fst">三角形点1</param>
-        /// <param name="snd">三角形点2</param>
-        /// <param name="trd">三角形点3</param>
-        /// <param name="point">要检查的点</param>
-        /// <returns></returns>
-        public static bool IsPointInTriangle(Vector3 fst, Vector3 snd, Vector3 trd, Vector3 point) {
-            Vector3 v0 = trd - fst;
-            Vector3 v1 = snd - fst;
-            Vector3 v2 = point - fst;
-
-            float dot00 = Vector3.Dot(v0, v0);
-            float dot01 = Vector3.Dot(v0, v1);
-            float dot02 = Vector3.Dot(v0, v2);
-            float dot11 = Vector3.Dot(v1, v1);
-            float dot12 = Vector3.Dot(v1, v2);
-            float denominator = 1 / (dot00 * dot11 - dot01 * dot01);
-
-            // condition: u >= 0 && v >= 0 && u + v <= 1
-            float u = (dot11 * dot02 - dot01 * dot12) * denominator;
-            if (u < 0 || u > 1) {
-                return false;
-            }
-            float v = (dot00 * dot12 - dot01 * dot02) * denominator;
-            if (v < 0 || v > 1) {
-                return false;
-            }
-            return u + v <= 1;
-        }
-
-        /// <summary>
         /// 检查点是否在一个多边形中
         /// </summary>
         /// <param name="vertices">点集，顺序要求能够从头到尾连接闭环</param>
@@ -89,67 +57,36 @@ namespace Physics {
                    Vector3.Dot(lineStart - point, lineEnd - point) <= 0;
         }
 
-        /// <summary>
-        /// 获得线段的一个正交向量，不保证几何相交
-        /// </summary>
-        /// <param name="lineStart">线段起点</param>
-        /// <param name="lineEnd">线段终点</param>
-        /// <returns></returns>
-        public static Vector3 GetPerpendicularVector(Vector3 lineStart, Vector3 lineEnd) {
-            float zDiff = lineStart.z - lineEnd.z;
-            return zDiff < 0.00001f ? Vector3.forward :
-                new Vector3(1, 0, -1 * (lineStart.x - lineEnd.x) / zDiff);
-        }
-
-        /// <summary>
-        /// 获得碰撞体在某方向上值最大的点
-        /// </summary>
-        /// <param name="collisionObject">碰撞体</param>
-        /// <param name="dir">方向</param>
-        /// <returns></returns>
-        public static Vector3 GetFarthestPointInDir(CollisionObject collisionObject, Vector3 dir) {
-            List<Vector3> vertices = collisionObject.shape.vertices;
-            float maxDis = float.MinValue;
-            Vector3 extremePoint = Vector3.zero;
-            for (int i = 0, count = vertices.Count; i < count; i++) {
-                float dis = Vector3.Dot(vertices[i], dir);
-                if (dis > maxDis) {
-                    maxDis = dis;
-                    extremePoint = vertices[i];
-                }
-            }
-
-            return extremePoint;
-        }
-
         #endregion
 
-        public static bool Contains(List<Vector3> points, Vector3 point) {
-            int n = points.Count;
-            if (n < 3) {
+        /// <summary>
+        /// 检查点是否在三角形内
+        /// </summary>
+        /// <param name="points">点集</param>
+        /// <param name="point">要检查的点</param>
+        /// <returns></returns>
+        public static bool IsPointInTriangle(List<Vector3> points, Vector3 point) {
+            Vector3 v0 = points[2] - points[0];
+            Vector3 v1 = points[1] - points[0];
+            Vector3 v2 = point - points[0];
+
+            float dot00 = Vector3.Dot(v0, v0);
+            float dot01 = Vector3.Dot(v0, v1);
+            float dot02 = Vector3.Dot(v0, v2);
+            float dot11 = Vector3.Dot(v1, v1);
+            float dot12 = Vector3.Dot(v1, v2);
+            float denominator = 1 / (dot00 * dot11 - dot01 * dot01);
+
+            // condition: u >= 0 && v >= 0 && u + v <= 1
+            float u = (dot11 * dot02 - dot01 * dot12) * denominator;
+            if (u < 0 || u > 1) {
                 return false;
             }
-
-            // 先计算出内部的方向
-            int innerSide = WhichSide(points[0], points[1], points[2]);
-
-            // 通过判断点是否均在三条边的内侧，来判定单形体是否包含点
-            for (int i = 0; i < n; ++i) {
-                int iNext = (i + 1) % n;
-                int side = WhichSide(points[i], points[iNext], point);
-
-                if (side == 0) {
-                    // 在边界上
-                    return true;
-                }
-
-                if (side != innerSide) {
-                    // 在外部
-                    return false;
-                }
+            float v = (dot00 * dot12 - dot01 * dot02) * denominator;
+            if (v < 0 || v > 1) {
+                return false;
             }
-
-            return true;
+            return u + v <= 1;
         }
 
         public static Vector3 GetPerpendicularToOrigin(Vector3 a, Vector3 b) {
@@ -163,13 +100,6 @@ namespace Physics {
 
             float projection = Vector3.Dot(ab, ao) / sqrLength;
             return a + ab * projection;
-        }
-
-        public static int WhichSide(Vector3 a, Vector3 b, Vector3 c) {
-            Vector3 ab = b - a;
-            Vector3 ac = c - a;
-            float cross = ab.x * ac.z - ab.z * ac.x;
-            return cross > 0 ? 1 : (cross < 0 ? -1 : 0);
         }
 
         public static Vector3 GetClosestPointToOrigin(Vector3 a, Vector3 b) {

@@ -13,6 +13,8 @@ namespace Physics {
 
         private void Update() {
             transform.position = target.position;
+            transform.rotation = Quaternion.Euler(target.rotation);
+            transform.localScale = target.scale;
             shape = target.shape.shapeType;
 
             if (isInControl) {
@@ -28,6 +30,18 @@ namespace Physics {
                     }
                     if (Input.GetKeyDown(KeyCode.S)) {
                         target.AddVelocity(velocity * Vector3.back);
+                    }
+                    if (Input.GetKey(KeyCode.G)) {
+                        target.Rotate(new Vector3(0, -1, 0));
+                    }
+                    if (Input.GetKey(KeyCode.H)) {
+                        target.Rotate(new Vector3(0, 1, 0));
+                    }
+                    if (Input.GetKeyDown(KeyCode.B)) {
+                        target.Scale(Vector3.one);
+                    }
+                    if (Input.GetKeyDown(KeyCode.N)) {
+                        target.Scale(-Vector3.one);
                     }
 
                     if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) ||
