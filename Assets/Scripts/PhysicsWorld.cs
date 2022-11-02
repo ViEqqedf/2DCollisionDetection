@@ -16,7 +16,7 @@ namespace Physics {
     }
 
     public class PhysicsWorld : MonoBehaviour, IPhysicsWorld {
-        public static int tickFrame = 0;
+        public int tickFrame = 0;
         public int borderRadius = 15;
         public float epsilon = 0.0001f;
         public int maxIterCount = 10;
@@ -84,9 +84,10 @@ namespace Physics {
         private void Test2() {
             int range = 30;
             for (int i = 0; i < range; i++) {
-                Vector3 spawnPos = new Vector3(
-                    Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
-                CreateATestCircle(1, spawnPos);
+                // Vector3 spawnPos = new Vector3(
+                    // Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
+                // CreateATestCircle(1, spawnPos);
+                CreateATestCircle(1, Vector3.zero);
             }
 
             // CreateATestCircle(1, Vector3.zero);
@@ -180,7 +181,7 @@ namespace Physics {
             CollisionDetection(timeSpan);
             Profiler.EndSample();
             ApplyAcceleration(timeSpan);
-            // Resolve(timeSpan);
+            Resolve(timeSpan);
             ApplyVelocity(timeSpan);
         }
 
@@ -305,13 +306,19 @@ namespace Physics {
 
                 if (isAllCircle) {
                     // 圆碰撞对的计算简单且常用，单独处理以加速
-                    float radiusDis = ((Circle)fst.shape).radius * fst.scale +
-                                      ((Circle)snd.shape).radius * snd.scale;
+                    float fstRadius = ((Circle) fst.shape).radius * fst.scale;
+                    float sndRadius = ((Circle) snd.shape).radius * snd.scale;
+                    float radiusDis = fstRadius + sndRadius;
                     isCollided = Vector3.Distance(fst.position, snd.position) - radiusDis <= 0;
                     if (isCollided) {
                         Vector3 oriVec = snd.position - fst.position;
                         float oriDis = oriVec.magnitude;
-                        oriVec = oriVec.normalized;
+                        if (oriDis < epsilon) {
+                            float separation = Mathf.Max(fstRadius, sndRadius);
+                            oriVec = separation * new Vector3((this.tickFrame % 7), 0, (this.tickFrame % 17)).normalized;
+                        } else {
+                            oriVec = oriVec.normalized;
+                        }
                         pair.penetrateVec = (radiusDis - oriDis) * oriVec;
                     }
                 } else {
