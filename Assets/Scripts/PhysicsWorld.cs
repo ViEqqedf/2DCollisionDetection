@@ -39,9 +39,9 @@ namespace Physics {
             horAABBProjList = new List<ProjectionPoint>();
             // verAABBProjList = new List<ProjectionPoint>();
 
-            Test0();
+            // Test0();
             // Test1();
-            // Test2();
+            Test2();
             // Test3();
             // Test4();
         }
@@ -80,13 +80,15 @@ namespace Physics {
         }
 
         private void Test2() {
-            int range = 2;
-            for (int i = 0; i < range; i++) {
-                Vector3 spawnPos = new Vector3(
-                    Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
+            // int range = 30;
+            // for (int i = 0; i < range; i++) {
+                // Vector3 spawnPos = new Vector3(
+                    // Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
+                // CreateATestCircle(1, spawnPos);
+            // }
 
-                CreateATestCircle(spawnPos);
-            }
+            CreateATestCircle(1, Vector3.zero);
+            CreateATestCircle(1, Vector3.right);
         }
 
         private void Test3() {
@@ -155,8 +157,8 @@ namespace Physics {
             GameObject go = CreateMesh(co);
         }
 
-        public void CreateATestCircle(Vector3 pos) {
-            CollisionShape shape = new Physics.Collision.Shape.Circle(2);
+        public void CreateATestCircle(float radius, Vector3 pos) {
+            CollisionShape shape = new Physics.Collision.Shape.Circle(radius);
             CollisionObject co = new CollisionObject(shape, null, pos);
             AddCollisionObject(co);
             GameObject go = CreateMesh(co);
@@ -274,10 +276,10 @@ namespace Physics {
                 // }
             // }
 
-            for (int i = 0, count = collisionPairs.Count; i < count; i++) {
-                CollisionPair pair = collisionPairs[i];
-                Debug.Log($"{tickFrame} {pair.first.id}与{pair.second.id}粗检测碰撞");
-            }
+            // for (int i = 0, count = collisionPairs.Count; i < count; i++) {
+                // CollisionPair pair = collisionPairs[i];
+                // Debug.Log($"{tickFrame} {pair.first.id}与{pair.second.id}粗检测碰撞");
+            // }
         }
 
         private void DynamicBVH() {
@@ -290,11 +292,33 @@ namespace Physics {
                 CollisionObject snd = pair.second;
 
                 simplexList.Clear();
-                if (GJK(fst, snd, simplexList)) {
-                    pair.penetrateVec = EPA(fst, snd, simplexList);
-                    Debug.Log($"{tickFrame} {fst.id}与{snd.id}窄检测碰撞，穿透向量为{pair.penetrateVec}，长度为{pair.penetrateVec.magnitude}");
+
+                bool isCollided = false;
+                bool isAllCircle = fst.shape.shapeType == ShapeType.Circle &&
+                        snd.shape.shapeType == ShapeType.Circle;
+
+                if (isAllCircle) {
+                    // 圆碰撞对的计算简单且常用，单独处理以加速
+                    float radiusDis = ((Circle)fst.shape).radius * fst.scale +
+                                      ((Circle)snd.shape).radius * snd.scale;
+                    isCollided = Vector3.Distance(fst.position, snd.position) - radiusDis <= 0;
+                    if (isCollided) {
+                        Vector3 oriVec = snd.position - fst.position;
+                        float oriDis = oriVec.magnitude;
+                        oriVec = oriVec.normalized;
+                        pair.penetrateVec = (radiusDis - oriDis) * oriVec;
+                    }
                 } else {
+                    isCollided = GJK(fst, snd, simplexList);
+                    if (isCollided) {
+                        pair.penetrateVec = EPA(fst, snd, simplexList);
+                    }
+                }
+
+                if(!isCollided){
                     collisionPairs.Remove(pair);
+                } else {
+                    // Debug.Log($"{tickFrame} {fst.id}与{snd.id}窄检测碰撞，穿透向量为{pair.penetrateVec}，长度为{pair.penetrateVec.magnitude}");
                 }
             }
         }
@@ -463,8 +487,8 @@ namespace Physics {
                         pair.first.AddResolveVelocity(-resolveVec);
                         pair.second.AddResolveVelocity(resolveVec);
 
-                        if (Vector3.Dot(pair.first.velocity, penetrateDir) >= 0 &&
-                            Vector3.Dot(pair.second.velocity, -penetrateDir) >= 0) {
+                        if (Vector3.Dot(pair.first.velocity, penetrateDir) > 0 &&
+                            Vector3.Dot(pair.second.velocity, -penetrateDir) > 0) {
                             pair.first.AddResolveVelocity(-(fstExternalRate - fstResolveRate) * penetrateDir);
                             pair.second.AddResolveVelocity((sndExternalRate - sndResolveRate) * penetrateDir);
                         }

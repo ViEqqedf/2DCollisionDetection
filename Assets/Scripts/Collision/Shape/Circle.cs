@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace Physics.Collision.Shape {
     public class Circle : CollisionShape {
-        private int resolution = 1;
-        private float radius;
+        private int resolution = 2;
+        public readonly float radius;
 
         public Circle(float radius) : base(ShapeType.Circle) {
             this.radius = radius;
@@ -39,7 +39,7 @@ namespace Physics.Collision.Shape {
         }
 
         protected override void GetBound(out Vector3 lowerBound, out Vector3 upperBound) {
-            float realR = localVertices[resolution].magnitude;
+            float realR = vertices[resolution].magnitude;
 
             lowerBound = new Vector3(-realR, 0, -realR);
             upperBound = new Vector3(realR, 0, realR);

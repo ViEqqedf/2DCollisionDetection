@@ -37,10 +37,9 @@ namespace Physics.Collision.Shape {
             this.aabb = new AABB(lowerBound, upperBound);
         }
 
-        public void ApplyWorldVertices(Vector3 origin, Vector3 rotate, Vector3 scale) {
+        public void ApplyWorldVertices(Vector3 origin, Vector3 rotate, float scale) {
             for (int i = 0, count = this.vertices.Count; i < count; i++) {
-                Vector3 localPoint = new Vector3(scale.x * localVertices[i].x,
-                    scale.y * localVertices[i].y, scale.z * localVertices[i].z);
+                Vector3 localPoint = scale * localVertices[i];
                 Vector3 rotateVec = Quaternion.Euler(rotate) * localPoint;
                 vertices[i] = new Vector3(rotateVec.x + origin.x,
                     rotateVec.y + origin.y, rotateVec.z + origin.z);

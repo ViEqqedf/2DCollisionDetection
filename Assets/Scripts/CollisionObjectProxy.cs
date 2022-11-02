@@ -9,12 +9,12 @@ namespace Physics {
         public ShapeType shape;
         public bool isInControl = false;
         public int nP = 1;
-        public int velocity = 7;
+        public float velocity = 7;
 
         private void Update() {
             transform.position = target.position;
             transform.rotation = Quaternion.Euler(target.rotation);
-            transform.localScale = target.scale;
+            transform.localScale = target.scale * Vector3.one;
             shape = target.shape.shapeType;
 
             if (isInControl) {
@@ -38,10 +38,10 @@ namespace Physics {
                         target.Rotate(new Vector3(0, 1, 0));
                     }
                     if (Input.GetKeyDown(KeyCode.B)) {
-                        target.Scale(Vector3.one);
+                        target.Scale(1);
                     }
                     if (Input.GetKeyDown(KeyCode.N)) {
-                        target.Scale(-Vector3.one);
+                        target.Scale(-1);
                     }
 
                     if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) ||
