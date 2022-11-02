@@ -36,7 +36,9 @@ namespace Physics.Collision.Model {
 
         public void InsertEdgePoint(Edge e, Vector3 point) {
             Edge e1 = CreateEdge(e.a, point);
+            Edge oldEdge = edges[e.index];
             edges[e.index] = e1;
+            PhysicsCachePool.RecycleEdge(oldEdge);
 
             Edge e2 = CreateEdge(point, e.b);
             edges.Insert(e.index + 1, e2);

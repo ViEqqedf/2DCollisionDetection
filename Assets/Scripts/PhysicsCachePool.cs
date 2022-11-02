@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Physics.Collision;
 using Physics.Collision.Model;
+using UnityEngine;
 
 namespace Physics {
     public static class PhysicsCachePool {
@@ -8,10 +9,15 @@ namespace Physics {
         public static Stack<SimplexEdge> simplexEdgePool = new Stack<SimplexEdge>();
         public static Stack<Edge> edgePool = new Stack<Edge>();
 
+        private static int collisionPairCacheCount = 0;
+        private static int simplexEdgeCount = 0;
+        private static int edgeCount = 0;
+
         #region CollisionPair
 
         public static CollisionPair GetCollisionPairFromPool() {
-            if (collisionPairPool.Count > 0) {
+            if (collisionPairCacheCount > 0) {
+                collisionPairCacheCount--;
                 return collisionPairPool.Pop();
             } else {
                 return new CollisionPair();
@@ -22,6 +28,7 @@ namespace Physics {
             if (pairs != null) {
                 for (int i = 0, count = pairs.Count; i < count; i++) {
                     collisionPairPool.Push(pairs[i]);
+                    collisionPairCacheCount++;
                 }
 
                 pairs.Clear();
@@ -33,7 +40,8 @@ namespace Physics {
         #region SimplexEdge
 
         public static SimplexEdge GetSimplexEdgeFromPool() {
-            if (simplexEdgePool.Count > 0) {
+            if (simplexEdgeCount > 0) {
+                simplexEdgeCount--;
                 return simplexEdgePool.Pop();
             } else {
                 return new SimplexEdge();
@@ -44,6 +52,7 @@ namespace Physics {
             if (simplexEdge != null) {
                 simplexEdge.Clear();
                 simplexEdgePool.Push(simplexEdge);
+                simplexEdgeCount++;
             }
         }
 
@@ -52,10 +61,18 @@ namespace Physics {
         #region Edge
 
         public static Edge GetEdgeFromPool() {
-            if (edgePool.Count > 0) {
+            if (edgeCount > 0) {
+                edgeCount--;
                 return edgePool.Pop();
             } else {
                 return new Edge();
+            }
+        }
+
+        public static void RecycleEdge(Edge edge) {
+            if (edge != null) {
+                edgePool.Push(edge);
+                edgeCount++;
             }
         }
 
@@ -64,6 +81,7 @@ namespace Physics {
                 for (int i = 0, count = edges.Count; i < count; i++) {
                     Edge edge = edges[i];
                     edgePool.Push(edge);
+                    edgeCount++;
                 }
 
                 edges.Clear();

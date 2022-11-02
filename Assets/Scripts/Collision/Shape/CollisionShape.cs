@@ -21,6 +21,7 @@ namespace Physics.Collision.Shape {
             this.shapeType = shapeType;
             this.localVertices = new List<Vector3>();
             this.vertices = new List<Vector3>();
+            this.aabb = new AABB(Vector3.zero, Vector3.zero);
         }
 
         public CollisionShape(ShapeType shapeType, Vector3[] localVertices) {
@@ -30,11 +31,12 @@ namespace Physics.Collision.Shape {
             this.shapeType = shapeType;
             this.localVertices = new List<Vector3>(localVertices);
             this.vertices = new List<Vector3>(localVertices);
+            this.aabb = new AABB(Vector3.zero, Vector3.zero);
         }
 
         public virtual void UpdateShape() {
             GetBound(out Vector3 lowerBound, out Vector3 upperBound);
-            this.aabb = new AABB(lowerBound, upperBound);
+            this.aabb.Apply(lowerBound, upperBound);
         }
 
         public void ApplyWorldVertices(Vector3 origin, Vector3 rotate, float scale) {
