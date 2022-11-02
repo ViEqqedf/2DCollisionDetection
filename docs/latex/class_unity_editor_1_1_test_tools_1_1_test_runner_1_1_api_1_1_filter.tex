@@ -1,0 +1,36 @@
+\hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter}{}\doxysection{Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+Filter Class Reference}
+\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter}\index{UnityEditor.TestTools.TestRunner.Api.Filter@{UnityEditor.TestTools.TestRunner.Api.Filter}}
+
+
+The filter class provides the \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api}{Test\+Runner\+Api}} with a specification of what tests to run when \href{https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/extension-run-tests.html}{\texttt{ running tests programmatically}}.  
+
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a25e1162d8bfd582b0eebf8b838c1e8c4}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a25e1162d8bfd582b0eebf8b838c1e8c4}} 
+\mbox{\hyperlink{namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_af169988e2317e7edb0f1b09d920412e9}{Test\+Mode}} {\bfseries test\+Mode}
+\begin{DoxyCompactList}\small\item\em An enum flag that specifies if Edit Mode or Play Mode tests should run. /summary\texorpdfstring{$>$}{>} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_aff544949b5efbf2290c49de2c4338a67}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_aff544949b5efbf2290c49de2c4338a67}} 
+string\mbox{[}$\,$\mbox{]} {\bfseries test\+Names}
+\begin{DoxyCompactList}\small\item\em The full name of the tests to match the filter. This is usually in the format Fixture\+Name.\+Test\+Name. If the test has test arguments, then include them in parenthesis. E.\+g. My\+Test\+Class2.\+My\+Test\+With\+Multiple\+Values(1). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a35db71bcd0a304693fb54a6535b29219}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a35db71bcd0a304693fb54a6535b29219}} 
+string\mbox{[}$\,$\mbox{]} {\bfseries group\+Names}
+\begin{DoxyCompactList}\small\item\em The same as test\+Names, except that it allows for Regex. This is useful for running specific fixtures or namespaces. E.\+g. \char`\"{}$^\wedge$\+My\+Namespace\textbackslash{}\textbackslash{}.\char`\"{} Runs any tests where the top namespace is My\+Namespace. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a5797772bb8f0645efb331fba178b3721}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a5797772bb8f0645efb331fba178b3721}} 
+string\mbox{[}$\,$\mbox{]} {\bfseries category\+Names}
+\begin{DoxyCompactList}\small\item\em The name of a \href{https://nunit.org/docs/2.2.7/category.html}{\texttt{ Category}} to include in the run. Any test or fixtures runs that have a Category matching the string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_aa013f38c00335342fc96dc6f5259ba73}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_aa013f38c00335342fc96dc6f5259ba73}} 
+string\mbox{[}$\,$\mbox{]} {\bfseries assembly\+Names}
+\begin{DoxyCompactList}\small\item\em The name of assemblies included in the run. That is the assembly name, without the .dll file extension. E.\+g., My\+Test\+Assembly \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a62552ef77c3eee948b69048b3ee06961}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a62552ef77c3eee948b69048b3ee06961}} 
+Build\+Target? {\bfseries target\+Platform}
+\begin{DoxyCompactList}\small\item\em The Build\+Target platform to run the test on. If set to null, then the Editor is the target for the tests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The filter class provides the \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api}{Test\+Runner\+Api}} with a specification of what tests to run when \href{https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/extension-run-tests.html}{\texttt{ running tests programmatically}}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Editor.\+Test\+Runner/\+Api/Filter.\+cs\end{DoxyCompactItemize}

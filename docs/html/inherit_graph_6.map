@@ -1,0 +1,6 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="node1" href="$class_physics_1_1_collision_1_1_shape_1_1_collision_shape.html" title=" " alt="" coords="5,71,173,112"/>
+<area shape="rect" id="node2" href="$class_physics_1_1_collision_1_1_shape_1_1_circle.html" title=" " alt="" coords="235,5,403,47"/>
+<area shape="rect" id="node3" href="$class_physics_1_1_collision_1_1_shape_1_1_custom_shape.html" title=" " alt="" coords="235,71,403,112"/>
+<area shape="rect" id="node4" href="$class_physics_1_1_collision_1_1_shape_1_1_rect.html" title=" " alt="" coords="221,137,417,163"/>
+</map>

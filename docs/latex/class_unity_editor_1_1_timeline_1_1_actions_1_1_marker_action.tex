@@ -1,0 +1,84 @@
+\hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_marker_action}{}\doxysection{Unity\+Editor.\+Timeline.\+Actions.\+Marker\+Action Class Reference}
+\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_marker_action}\index{UnityEditor.Timeline.Actions.MarkerAction@{UnityEditor.Timeline.Actions.MarkerAction}}
+
+
+Base class for a marker action. Inherit from this class to make an action that would react on selected markers after a menu click and/or a key shortcut.  
+
+
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Actions.\+Marker\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.421320cm]{class_unity_editor_1_1_timeline_1_1_actions_1_1_marker_action}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_marker_action_ab74a10d2bcb5a92555339f0c3d2a363c}{Execute}} (IEnumerable$<$ \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} $>$ markers)
+\begin{DoxyCompactList}\small\item\em Execute the action. \end{DoxyCompactList}\item 
+abstract \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Action\+Validity}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_marker_action_a6ac0805b0d37d8a60f4ad08e8c33e94a}{Validate}} (IEnumerable$<$ \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} $>$ markers)
+\begin{DoxyCompactList}\small\item\em Defines the validity of an Action for a given set of markers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for a marker action. Inherit from this class to make an action that would react on selected markers after a menu click and/or a key shortcut. 
+
+Simple track Action example (with context menu and shortcut support).  
+
+To add an action as a menu item in the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} context menu, add \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_menu_entry_attribute}{Menu\+Entry\+Attribute}} on the action class. To make an action to react to a shortcut, use the Shortcut Manager API with \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_shortcut_attribute}{Timeline\+Shortcut\+Attribute}}. \begin{DoxySeeAlso}{See also}
+Unity\+Editor.\+Shortcut\+Management.\+Shortcut\+Attribute
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_marker_action_ab74a10d2bcb5a92555339f0c3d2a363c}\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_marker_action_ab74a10d2bcb5a92555339f0c3d2a363c}} 
+\index{UnityEditor.Timeline.Actions.MarkerAction@{UnityEditor.Timeline.Actions.MarkerAction}!Execute@{Execute}}
+\index{Execute@{Execute}!UnityEditor.Timeline.Actions.MarkerAction@{UnityEditor.Timeline.Actions.MarkerAction}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily abstract bool Unity\+Editor.\+Timeline.\+Actions.\+Marker\+Action.\+Execute (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} $>$}]{markers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Execute the action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em markers} & Markers that will be used for the action. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the action has been executed. false otherwise
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doc_code_examples_1_1_action_examples___hide_a_p_i_1_1_sample_marker_action_a3f2930bd6d722cb30d87e758ee87b8ea}{Doc\+Code\+Examples.\+Action\+Examples\+\_\+\+Hide\+API.\+Sample\+Marker\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_copy_markers_to_clipboard_a5594a08d7c66dd1614e6d3dba7c9b946}{Unity\+Editor.\+Timeline.\+Copy\+Markers\+To\+Clipboard}}, and \mbox{\hyperlink{class_timeline_1_1_samples_1_1_replace_annotation_description_action_ac9f773848e64356804201d31f4bb5268}{Timeline.\+Samples.\+Replace\+Annotation\+Description\+Action}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_marker_action_a6ac0805b0d37d8a60f4ad08e8c33e94a}\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_marker_action_a6ac0805b0d37d8a60f4ad08e8c33e94a}} 
+\index{UnityEditor.Timeline.Actions.MarkerAction@{UnityEditor.Timeline.Actions.MarkerAction}!Validate@{Validate}}
+\index{Validate@{Validate}!UnityEditor.Timeline.Actions.MarkerAction@{UnityEditor.Timeline.Actions.MarkerAction}}
+\doxysubsubsection{\texorpdfstring{Validate()}{Validate()}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Action\+Validity}} Unity\+Editor.\+Timeline.\+Actions.\+Marker\+Action.\+Validate (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} $>$}]{markers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Defines the validity of an Action for a given set of markers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em markers} & Markers that will be used for the action. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The validity of the set of markers.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doc_code_examples_1_1_action_examples___hide_a_p_i_1_1_sample_marker_action_a3a2ecc60a5f7eb9e3c6e3349f8b67b7d}{Doc\+Code\+Examples.\+Action\+Examples\+\_\+\+Hide\+API.\+Sample\+Marker\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_copy_markers_to_clipboard_a8a148a38a68f22f2e1702eb2fdd6b670}{Unity\+Editor.\+Timeline.\+Copy\+Markers\+To\+Clipboard}}, and \mbox{\hyperlink{class_timeline_1_1_samples_1_1_replace_annotation_description_action_a79cc3f12cec0a3aee3543bdbe297a6a9}{Timeline.\+Samples.\+Replace\+Annotation\+Description\+Action}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Editor/\+Actions/Marker\+Action.\+cs\end{DoxyCompactItemize}

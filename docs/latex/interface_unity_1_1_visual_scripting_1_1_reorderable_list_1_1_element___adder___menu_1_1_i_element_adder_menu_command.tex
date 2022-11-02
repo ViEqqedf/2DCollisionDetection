@@ -1,0 +1,71 @@
+\hypertarget{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_command}{}\doxysection{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Element\+\_\+\+Adder\+\_\+\+Menu.\+IElement\+Adder\+Menu\+Command\texorpdfstring{$<$}{<} TContext \texorpdfstring{$>$}{>} Interface Template Reference}
+\label{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_command}\index{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuCommand$<$ TContext $>$@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuCommand$<$ TContext $>$}}
+
+
+Interface for a menu command that can be included in an \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu}{IElement\+Adder\+Menu}} either by annotating an implementation of the IElement\+Adder\+Menu\+Command$<$\+TContext$>$ interface with \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_element_adder_menu_command_attribute}{Element\+Adder\+Menu\+Command\+Attribute}} or directly by calling \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_a78d8ee10d3c2b8ac6daa410a7ddeb26d}{IElement\+Adder\+Menu\+Builder$<$\+TContext$>$.\+Add\+Custom\+Command}}.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_command_ab720b6e285ff2e9a9119fdce55c0bdfd}{Can\+Execute}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder}{IElement\+Adder}}$<$ TContext $>$ element\+Adder)
+\begin{DoxyCompactList}\small\item\em Determines whether the command can be executed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_command_a723b952b2ec8a9e0bedb7be9b9e4ac48}{Execute}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder}{IElement\+Adder}}$<$ TContext $>$ element\+Adder)
+\begin{DoxyCompactList}\small\item\em Executes the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_command_ab2824108f4d5eeba5c524ecc43bd730d}\label{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_command_ab2824108f4d5eeba5c524ecc43bd730d}} 
+GUIContent {\bfseries Content}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the content of the menu command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for a menu command that can be included in an \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu}{IElement\+Adder\+Menu}} either by annotating an implementation of the IElement\+Adder\+Menu\+Command$<$\+TContext$>$ interface with \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_element_adder_menu_command_attribute}{Element\+Adder\+Menu\+Command\+Attribute}} or directly by calling \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_a78d8ee10d3c2b8ac6daa410a7ddeb26d}{IElement\+Adder\+Menu\+Builder$<$\+TContext$>$.\+Add\+Custom\+Command}}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TContext} & Type of the context object that elements can be added to.\\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_command_ab720b6e285ff2e9a9119fdce55c0bdfd}\label{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_command_ab720b6e285ff2e9a9119fdce55c0bdfd}} 
+\index{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuCommand$<$ TContext $>$@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuCommand$<$ TContext $>$}!CanExecute@{CanExecute}}
+\index{CanExecute@{CanExecute}!Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuCommand$<$ TContext $>$@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuCommand$<$ TContext $>$}}
+\doxysubsubsection{\texorpdfstring{CanExecute()}{CanExecute()}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_command}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Element\+\_\+\+Adder\+\_\+\+Menu.\+IElement\+Adder\+Menu\+Command}}$<$ TContext $>$.Can\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder}{IElement\+Adder}}$<$ TContext $>$}]{element\+Adder }\end{DoxyParamCaption})}
+
+
+
+Determines whether the command can be executed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element\+Adder} & The associated element adder provides access to the {\itshape TContext}  instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value of {\ttfamily true} if the command can execute; otherwise, {\ttfamily false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_command_a723b952b2ec8a9e0bedb7be9b9e4ac48}\label{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_command_a723b952b2ec8a9e0bedb7be9b9e4ac48}} 
+\index{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuCommand$<$ TContext $>$@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuCommand$<$ TContext $>$}!Execute@{Execute}}
+\index{Execute@{Execute}!Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuCommand$<$ TContext $>$@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuCommand$<$ TContext $>$}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_command}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Element\+\_\+\+Adder\+\_\+\+Menu.\+IElement\+Adder\+Menu\+Command}}$<$ TContext $>$.Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder}{IElement\+Adder}}$<$ TContext $>$}]{element\+Adder }\end{DoxyParamCaption})}
+
+
+
+Executes the command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element\+Adder} & The associated element adder provides access to the {\itshape TContext}  instance. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Editor/\+Visual\+Scripting.\+Core/\+Dependencies/\+Reorderable\+List/\+Element\+Adder\+Menu/IElement\+Adder\+Menu\+Command.\+cs\end{DoxyCompactItemize}

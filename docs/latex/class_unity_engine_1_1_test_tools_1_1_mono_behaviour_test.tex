@@ -1,0 +1,92 @@
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_mono_behaviour_test}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+Mono\+Behaviour\+Test\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_unity_engine_1_1_test_tools_1_1_mono_behaviour_test}\index{UnityEngine.TestTools.MonoBehaviourTest$<$ T $>$@{UnityEngine.TestTools.MonoBehaviourTest$<$ T $>$}}
+
+
+This is a wrapper that allows running tests on Mono\+Behaviour scripts. Inherits from Custom\+Yield\+Instruction.  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Tools.\+Mono\+Behaviour\+Test\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_test_tools_1_1_mono_behaviour_test}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_mono_behaviour_test_a196f9108d7132321706933ea2e0de159}{Mono\+Behaviour\+Test}} (bool dont\+Destroy\+On\+Load=true)
+\begin{DoxyCompactList}\small\item\em {\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_mono_behaviour_test}{Mono\+Behaviour\+Test}}} is a \href{https://docs.unity3d.com/ScriptReference/Coroutine.html}{\texttt{ coroutine}} and a helper for writing Mono\+Behaviour tests. Yield a {\ttfamily Mono\+Behaviour}Test when using the {\ttfamily Unity\+Test} attribute to instantiate the {\ttfamily Mono\+Behaviour} you wish to test and wait for it to finish running. Implement the {\ttfamily \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_mono_behaviour_test}{IMono\+Behaviour\+Test}}} interface on the {\ttfamily Mono\+Behaviour} to state when the test completes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_mono_behaviour_test_a245114ed4836ad2ff05f12c80a6a7fd7}\label{class_unity_engine_1_1_test_tools_1_1_mono_behaviour_test_a245114ed4836ad2ff05f12c80a6a7fd7}} 
+T {\bfseries component}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A Mono\+Behaviour component created for the test and attached to the tests \href{https://docs.unity3d.com/ScriptReference/GameObject.html}{\texttt{ Game\+Object}}.\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_mono_behaviour_test_a719a3dc8f740eb6db745f3b73367d9ba}\label{class_unity_engine_1_1_test_tools_1_1_mono_behaviour_test_a719a3dc8f740eb6db745f3b73367d9ba}} 
+Game\+Object {\bfseries game\+Object}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A {\ttfamily Game\+Object} created as a container for the test component. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_mono_behaviour_test_a3babd7ab6d0e28cb15ee5ebe95f09a52}\label{class_unity_engine_1_1_test_tools_1_1_mono_behaviour_test_a3babd7ab6d0e28cb15ee5ebe95f09a52}} 
+override bool {\bfseries keep\+Waiting}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em (Inherited) Returns {\ttfamily true}\`{} if the test is not finished yet, which keeps the coroutine suspended \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is a wrapper that allows running tests on Mono\+Behaviour scripts. Inherits from Custom\+Yield\+Instruction. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & A Mono\+Behaviour component created for the test and attached to the tests \href{https://docs.unity3d.com/ScriptReference/GameObject.html}{\texttt{ Game\+Object}}.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em Mono\+Behaviour}]\item[{\em T} : {\em \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_mono_behaviour_test}{IMono\+Behaviour\+Test}}}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_mono_behaviour_test_a196f9108d7132321706933ea2e0de159}\label{class_unity_engine_1_1_test_tools_1_1_mono_behaviour_test_a196f9108d7132321706933ea2e0de159}} 
+\index{UnityEngine.TestTools.MonoBehaviourTest$<$ T $>$@{UnityEngine.TestTools.MonoBehaviourTest$<$ T $>$}!MonoBehaviourTest@{MonoBehaviourTest}}
+\index{MonoBehaviourTest@{MonoBehaviourTest}!UnityEngine.TestTools.MonoBehaviourTest$<$ T $>$@{UnityEngine.TestTools.MonoBehaviourTest$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{MonoBehaviourTest()}{MonoBehaviourTest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_mono_behaviour_test}{Unity\+Engine.\+Test\+Tools.\+Mono\+Behaviour\+Test}}$<$ T $>$.\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_mono_behaviour_test}{Mono\+Behaviour\+Test}} (\begin{DoxyParamCaption}\item[{bool}]{dont\+Destroy\+On\+Load = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+{\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_mono_behaviour_test}{Mono\+Behaviour\+Test}}} is a \href{https://docs.unity3d.com/ScriptReference/Coroutine.html}{\texttt{ coroutine}} and a helper for writing Mono\+Behaviour tests. Yield a {\ttfamily Mono\+Behaviour}Test when using the {\ttfamily Unity\+Test} attribute to instantiate the {\ttfamily Mono\+Behaviour} you wish to test and wait for it to finish running. Implement the {\ttfamily \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_mono_behaviour_test}{IMono\+Behaviour\+Test}}} interface on the {\ttfamily Mono\+Behaviour} to state when the test completes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dont\+Destroy\+On\+Load} & \\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[UnityTest]}
+\DoxyCodeLine{\textcolor{keyword}{public} IEnumerator MonoBehaviourTest\_Works()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} MonoBehaviourTest<MyMonoBehaviourTest>();}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }MyMonoBehaviourTest : MonoBehaviour, IMonoBehaviourTest}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keywordtype}{int} frameCount;}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{bool} IsTestFinished}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keyword}{get} \{ \textcolor{keywordflow}{return} frameCount > 10; \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} Update()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        frameCount++;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Engine.\+Test\+Runner/\+Utils/\+Mono\+Behaviour\+Test/Mono\+Behaviour\+Test.\+cs\end{DoxyCompactItemize}

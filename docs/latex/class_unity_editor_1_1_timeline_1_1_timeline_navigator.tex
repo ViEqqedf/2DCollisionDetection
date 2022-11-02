@@ -1,0 +1,178 @@
+\hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_navigator}{}\doxysection{Unity\+Editor.\+Timeline.\+Timeline\+Navigator Class Reference}
+\label{class_unity_editor_1_1_timeline_1_1_timeline_navigator}\index{UnityEditor.Timeline.TimelineNavigator@{UnityEditor.Timeline.TimelineNavigator}}
+
+
+Interface to navigate through Timelines and Sub\+Timelines for the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} window.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_navigator_a791062ec4b50ca693af86793098657f6}{Get\+Current\+Context}} ()
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} associated with the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} currently shown in the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_navigator_a78e942d563c59362c68fb44e088b5d86}{Get\+Parent\+Context}} ()
+\begin{DoxyCompactList}\small\item\em Gets the parent \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} for the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} currently shown in the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_navigator_af1d81bac893d58910831836a19dc3333}{Get\+Root\+Context}} ()
+\begin{DoxyCompactList}\small\item\em Gets the first \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} in the breadcrumbs. \end{DoxyCompactList}\item 
+IEnumerable$<$ \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} $>$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_navigator_a171fbd8abd8043131584af94606707b4}{Get\+Child\+Contexts}} ()
+\begin{DoxyCompactList}\small\item\em Gets the collection of child contexts that can be navigated to from the current context. \end{DoxyCompactList}\item 
+IEnumerable$<$ \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} $>$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_navigator_af545860b658aefb17d95d4881d6c3345}{Get\+Breadcrumbs}} ()
+\begin{DoxyCompactList}\small\item\em Gets the collection of Sequence\+Contexts associated with the breadcrumbs shown in the \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_editor_window}{Timeline\+Editor\+Window}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_navigator_a8cf677c8823978e9c6cc5dce27a4e29d}{Navigate\+To}} (\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Navigates to a new \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface to navigate through Timelines and Sub\+Timelines for the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} window. 
+
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_navigator}{Timeline\+Navigator}} gives you access to the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} window breadcrumbs functionality. Use it to programmatically dig into Sub\+Timelines, navigate to parent Timelines or navigate \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} Window breadcrumbs. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_navigator_af545860b658aefb17d95d4881d6c3345}\label{class_unity_editor_1_1_timeline_1_1_timeline_navigator_af545860b658aefb17d95d4881d6c3345}} 
+\index{UnityEditor.Timeline.TimelineNavigator@{UnityEditor.Timeline.TimelineNavigator}!GetBreadcrumbs@{GetBreadcrumbs}}
+\index{GetBreadcrumbs@{GetBreadcrumbs}!UnityEditor.Timeline.TimelineNavigator@{UnityEditor.Timeline.TimelineNavigator}}
+\doxysubsubsection{\texorpdfstring{GetBreadcrumbs()}{GetBreadcrumbs()}}
+{\footnotesize\ttfamily IEnumerable$<$ \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} $>$ Unity\+Editor.\+Timeline.\+Timeline\+Navigator.\+Get\+Breadcrumbs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the collection of Sequence\+Contexts associated with the breadcrumbs shown in the \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_editor_window}{Timeline\+Editor\+Window}}. 
+
+This operation can be expensive. Consider caching the results instead of calling the method multiple times.
+
+\begin{DoxyReturn}{Returns}
+The collection of Sequence\+Contexts associated with the breadcrumbs shown in the \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_editor_window}{Timeline\+Editor\+Window}}, from the root context to the current context.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em System.\+Invalid\+Operation\+Exception} & The Window associated to this instance has been destroyed.\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_navigator_a171fbd8abd8043131584af94606707b4}\label{class_unity_editor_1_1_timeline_1_1_timeline_navigator_a171fbd8abd8043131584af94606707b4}} 
+\index{UnityEditor.Timeline.TimelineNavigator@{UnityEditor.Timeline.TimelineNavigator}!GetChildContexts@{GetChildContexts}}
+\index{GetChildContexts@{GetChildContexts}!UnityEditor.Timeline.TimelineNavigator@{UnityEditor.Timeline.TimelineNavigator}}
+\doxysubsubsection{\texorpdfstring{GetChildContexts()}{GetChildContexts()}}
+{\footnotesize\ttfamily IEnumerable$<$ \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} $>$ Unity\+Editor.\+Timeline.\+Timeline\+Navigator.\+Get\+Child\+Contexts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the collection of child contexts that can be navigated to from the current context. 
+
+\begin{DoxyReturn}{Returns}
+The collection of child contexts that can be navigated to from the current context.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em System.\+Invalid\+Operation\+Exception} & The Window associated to this instance has been destroyed.\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_navigator_a791062ec4b50ca693af86793098657f6}\label{class_unity_editor_1_1_timeline_1_1_timeline_navigator_a791062ec4b50ca693af86793098657f6}} 
+\index{UnityEditor.Timeline.TimelineNavigator@{UnityEditor.Timeline.TimelineNavigator}!GetCurrentContext@{GetCurrentContext}}
+\index{GetCurrentContext@{GetCurrentContext}!UnityEditor.Timeline.TimelineNavigator@{UnityEditor.Timeline.TimelineNavigator}}
+\doxysubsubsection{\texorpdfstring{GetCurrentContext()}{GetCurrentContext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} Unity\+Editor.\+Timeline.\+Timeline\+Navigator.\+Get\+Current\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} associated with the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} currently shown in the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} window. 
+
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} associated with the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} currently shown in the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} window.
+\end{DoxyReturn}
+
+
+Equivalent to {\ttfamily Timeline\+Navigator.\+Get\+Bread\+Crumbs().Last()}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em System.\+Invalid\+Operation\+Exception} & The Window associated to this instance has been destroyed.\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_navigator_a78e942d563c59362c68fb44e088b5d86}\label{class_unity_editor_1_1_timeline_1_1_timeline_navigator_a78e942d563c59362c68fb44e088b5d86}} 
+\index{UnityEditor.Timeline.TimelineNavigator@{UnityEditor.Timeline.TimelineNavigator}!GetParentContext@{GetParentContext}}
+\index{GetParentContext@{GetParentContext}!UnityEditor.Timeline.TimelineNavigator@{UnityEditor.Timeline.TimelineNavigator}}
+\doxysubsubsection{\texorpdfstring{GetParentContext()}{GetParentContext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} Unity\+Editor.\+Timeline.\+Timeline\+Navigator.\+Get\+Parent\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the parent \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} for the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} currently shown in the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} window. 
+
+\begin{DoxyReturn}{Returns}
+The parent \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} for the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} currently shown in the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} window if there is one; an invalid \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} otherwise. \begin{DoxySeeAlso}{See also}
+Sequence\+Context.\+Invalid
+
+
+\end{DoxySeeAlso}
+
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em System.\+Invalid\+Operation\+Exception} & The Window associated to this instance has been destroyed.\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_navigator_af1d81bac893d58910831836a19dc3333}\label{class_unity_editor_1_1_timeline_1_1_timeline_navigator_af1d81bac893d58910831836a19dc3333}} 
+\index{UnityEditor.Timeline.TimelineNavigator@{UnityEditor.Timeline.TimelineNavigator}!GetRootContext@{GetRootContext}}
+\index{GetRootContext@{GetRootContext}!UnityEditor.Timeline.TimelineNavigator@{UnityEditor.Timeline.TimelineNavigator}}
+\doxysubsubsection{\texorpdfstring{GetRootContext()}{GetRootContext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} Unity\+Editor.\+Timeline.\+Timeline\+Navigator.\+Get\+Root\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the first \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} in the breadcrumbs. 
+
+\begin{DoxyReturn}{Returns}
+The first \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} in the breadcrumbs.
+\end{DoxyReturn}
+
+
+Equivalent to {\ttfamily Timeline\+Navigator.\+Get\+Bread\+Crumbs().First()}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em System.\+Invalid\+Operation\+Exception} & The Window associated to this instance has been destroyed.\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_navigator_a8cf677c8823978e9c6cc5dce27a4e29d}\label{class_unity_editor_1_1_timeline_1_1_timeline_navigator_a8cf677c8823978e9c6cc5dce27a4e29d}} 
+\index{UnityEditor.Timeline.TimelineNavigator@{UnityEditor.Timeline.TimelineNavigator}!NavigateTo@{NavigateTo}}
+\index{NavigateTo@{NavigateTo}!UnityEditor.Timeline.TimelineNavigator@{UnityEditor.Timeline.TimelineNavigator}}
+\doxysubsubsection{\texorpdfstring{NavigateTo()}{NavigateTo()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Timeline\+Navigator.\+Navigate\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}}}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Navigates to a new \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The context to navigate to.\\
+\hline
+\end{DoxyParams}
+
+
+The \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} provided must be a valid navigation destination.
+
+Valid navigation destinations\+:
+\begin{DoxyItemize}
+\item The parent context returned by \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_navigator_a78e942d563c59362c68fb44e088b5d86}{Get\+Parent\+Context}}.
+\item The root context returned by \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_navigator_af1d81bac893d58910831836a19dc3333}{Get\+Root\+Context}}.
+\item Any \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} returned by \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_navigator_a171fbd8abd8043131584af94606707b4}{Get\+Child\+Contexts}}.
+\item Any \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} returned by \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_navigator_af545860b658aefb17d95d4881d6c3345}{Get\+Breadcrumbs}}.
+\end{DoxyItemize}
+
+Note\+: This method cannot be used to change the root \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}}. To change the root \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}}, use \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_editor_window_af9b4bf500aad9178bfe1e7bd7f273b44}{Timeline\+Editor\+Window.\+Set\+Timeline}}.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em System.\+Invalid\+Operation\+Exception} & The Window associated to this instance has been destroyed.\\
+\hline
+{\em System.\+Argument\+Exception} & The context is not valid.\\
+\hline
+{\em System.\+Invalid\+Operation\+Exception} & The context is not a valid navigation destination.\\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Editor/\+Window/Timeline\+Navigator.\+cs\end{DoxyCompactItemize}

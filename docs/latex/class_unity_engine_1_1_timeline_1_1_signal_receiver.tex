@@ -1,0 +1,277 @@
+\hypertarget{class_unity_engine_1_1_timeline_1_1_signal_receiver}{}\doxysection{Unity\+Engine.\+Timeline.\+Signal\+Receiver Class Reference}
+\label{class_unity_engine_1_1_timeline_1_1_signal_receiver}\index{UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}}
+
+
+Listens for emitted signals and reacts depending on its defined reactions.  
+
+
+Inheritance diagram for Unity\+Engine.\+Timeline.\+Signal\+Receiver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_timeline_1_1_signal_receiver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_receiver_a7b8381c9439b508dff0586415d6c004e}{On\+Notify}} (Playable origin, INotification notification, object context)
+\begin{DoxyCompactList}\small\item\em Called when a notification is sent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_receiver_a1f0b3b2c98cb3becc376295c07659854}{Add\+Reaction}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} asset, Unity\+Event reaction)
+\begin{DoxyCompactList}\small\item\em Defines a new reaction for a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_receiver_abb432062d379652308282ce4bdb85458}{Add\+Empty\+Reaction}} (Unity\+Event reaction)
+\begin{DoxyCompactList}\small\item\em Appends a null \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} with a reaction specified by the Unity\+Event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_receiver_a84832683010fb04c26c135048dc21daa}{Remove}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} asset)
+\begin{DoxyCompactList}\small\item\em Removes the first occurrence of a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}}. \end{DoxyCompactList}\item 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_receiver_a0857932b43db229a24ab47288e1a910e}{Get\+Registered\+Signals}} ()
+\begin{DoxyCompactList}\small\item\em Gets a list of all registered Signal\+Assets. \end{DoxyCompactList}\item 
+Unity\+Event \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_receiver_ae501e66f27c9e350ac35f3cad74b832e}{Get\+Reaction}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} key)
+\begin{DoxyCompactList}\small\item\em Gets the first Unity\+Event associated with a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_receiver_a79817b6d3f540cb844e5d1db9fef4790}{Count}} ()
+\begin{DoxyCompactList}\small\item\em Returns the count of registered Signal\+Assets. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_receiver_af04471e99839bcede561f7815fc27663}{Change\+Signal\+At\+Index}} (int idx, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} new\+Key)
+\begin{DoxyCompactList}\small\item\em Replaces the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} associated with a reaction at a specific index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_receiver_a40ca90a94b66965764392b45fd9db7d7}{Remove\+At\+Index}} (int idx)
+\begin{DoxyCompactList}\small\item\em Removes the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} and reaction at a specific index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_receiver_a08e172fa44bc569e32c3ee6a412a7736}{Change\+Reaction\+At\+Index}} (int idx, Unity\+Event reaction)
+\begin{DoxyCompactList}\small\item\em Replaces the reaction at a specific index with a new Unity\+Event. \end{DoxyCompactList}\item 
+Unity\+Event \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_receiver_a3f0730b5db89374b10ee44be07f44a02}{Get\+Reaction\+At\+Index}} (int idx)
+\begin{DoxyCompactList}\small\item\em Gets the reaction at a specific index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_receiver_acf0c474d241e6fcd7aa3941c72cafd80}{Get\+Signal\+Asset\+At\+Index}} (int idx)
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} at a specific index \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Listens for emitted signals and reacts depending on its defined reactions. 
+
+A \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_receiver}{Signal\+Receiver}} contains a list of reactions. Each reaction is bound to a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}}. When a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_emitter}{Signal\+Emitter}} emits a signal, the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_receiver}{Signal\+Receiver}} invokes the corresponding reaction. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_emitter}{Unity\+Engine.\+Timeline.\+Signal\+Emitter}}, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Unity\+Engine.\+Timeline.\+Signal\+Asset}}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_signal_receiver_abb432062d379652308282ce4bdb85458}\label{class_unity_engine_1_1_timeline_1_1_signal_receiver_abb432062d379652308282ce4bdb85458}} 
+\index{UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}!AddEmptyReaction@{AddEmptyReaction}}
+\index{AddEmptyReaction@{AddEmptyReaction}!UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}}
+\doxysubsubsection{\texorpdfstring{AddEmptyReaction()}{AddEmptyReaction()}}
+{\footnotesize\ttfamily int Unity\+Engine.\+Timeline.\+Signal\+Receiver.\+Add\+Empty\+Reaction (\begin{DoxyParamCaption}\item[{Unity\+Event}]{reaction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Appends a null \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} with a reaction specified by the Unity\+Event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reaction} & The new reaction to be appended.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the appended reaction.
+\end{DoxyReturn}
+
+
+Multiple null assets are valid.\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_signal_receiver_a1f0b3b2c98cb3becc376295c07659854}\label{class_unity_engine_1_1_timeline_1_1_signal_receiver_a1f0b3b2c98cb3becc376295c07659854}} 
+\index{UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}!AddReaction@{AddReaction}}
+\index{AddReaction@{AddReaction}!UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}}
+\doxysubsubsection{\texorpdfstring{AddReaction()}{AddReaction()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Timeline.\+Signal\+Receiver.\+Add\+Reaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}}}]{asset,  }\item[{Unity\+Event}]{reaction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Defines a new reaction for a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset} & The \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} for which the reaction is being defined.\\
+\hline
+{\em reaction} & The Unity\+Event that describes the reaction.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the asset is null.\\
+\hline
+{\em Argument\+Exception} & Thrown when the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} is already registered with this receiver.\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_signal_receiver_a08e172fa44bc569e32c3ee6a412a7736}\label{class_unity_engine_1_1_timeline_1_1_signal_receiver_a08e172fa44bc569e32c3ee6a412a7736}} 
+\index{UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}!ChangeReactionAtIndex@{ChangeReactionAtIndex}}
+\index{ChangeReactionAtIndex@{ChangeReactionAtIndex}!UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}}
+\doxysubsubsection{\texorpdfstring{ChangeReactionAtIndex()}{ChangeReactionAtIndex()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Timeline.\+Signal\+Receiver.\+Change\+Reaction\+At\+Index (\begin{DoxyParamCaption}\item[{int}]{idx,  }\item[{Unity\+Event}]{reaction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Replaces the reaction at a specific index with a new Unity\+Event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & The index of the reaction to be replaced.\\
+\hline
+{\em reaction} & The replacement reaction.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the replacement reaction is null.\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_signal_receiver_af04471e99839bcede561f7815fc27663}\label{class_unity_engine_1_1_timeline_1_1_signal_receiver_af04471e99839bcede561f7815fc27663}} 
+\index{UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}!ChangeSignalAtIndex@{ChangeSignalAtIndex}}
+\index{ChangeSignalAtIndex@{ChangeSignalAtIndex}!UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}}
+\doxysubsubsection{\texorpdfstring{ChangeSignalAtIndex()}{ChangeSignalAtIndex()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Timeline.\+Signal\+Receiver.\+Change\+Signal\+At\+Index (\begin{DoxyParamCaption}\item[{int}]{idx,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}}}]{new\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Replaces the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} associated with a reaction at a specific index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & The index of the reaction.\\
+\hline
+{\em new\+Key} & The replacement \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & Thrown when the replacement \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} is already registered to this \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_receiver}{Signal\+Receiver}}.\\
+\hline
+\end{DoxyExceptions}
+
+
+The new \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} can be null.\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_signal_receiver_a79817b6d3f540cb844e5d1db9fef4790}\label{class_unity_engine_1_1_timeline_1_1_signal_receiver_a79817b6d3f540cb844e5d1db9fef4790}} 
+\index{UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}!Count@{Count}}
+\index{Count@{Count}!UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}}
+\doxysubsubsection{\texorpdfstring{Count()}{Count()}}
+{\footnotesize\ttfamily int Unity\+Engine.\+Timeline.\+Signal\+Receiver.\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the count of registered Signal\+Assets. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_signal_receiver_ae501e66f27c9e350ac35f3cad74b832e}\label{class_unity_engine_1_1_timeline_1_1_signal_receiver_ae501e66f27c9e350ac35f3cad74b832e}} 
+\index{UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}!GetReaction@{GetReaction}}
+\index{GetReaction@{GetReaction}!UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}}
+\doxysubsubsection{\texorpdfstring{GetReaction()}{GetReaction()}}
+{\footnotesize\ttfamily Unity\+Event Unity\+Engine.\+Timeline.\+Signal\+Receiver.\+Get\+Reaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the first Unity\+Event associated with a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & A \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} defining the signal.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the reaction associated with a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}}. Returns null if the signal asset does not exist.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_signal_receiver_a3f0730b5db89374b10ee44be07f44a02}\label{class_unity_engine_1_1_timeline_1_1_signal_receiver_a3f0730b5db89374b10ee44be07f44a02}} 
+\index{UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}!GetReactionAtIndex@{GetReactionAtIndex}}
+\index{GetReactionAtIndex@{GetReactionAtIndex}!UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}}
+\doxysubsubsection{\texorpdfstring{GetReactionAtIndex()}{GetReactionAtIndex()}}
+{\footnotesize\ttfamily Unity\+Event Unity\+Engine.\+Timeline.\+Signal\+Receiver.\+Get\+Reaction\+At\+Index (\begin{DoxyParamCaption}\item[{int}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the reaction at a specific index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & The index of the reaction.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a reaction.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_signal_receiver_a0857932b43db229a24ab47288e1a910e}\label{class_unity_engine_1_1_timeline_1_1_signal_receiver_a0857932b43db229a24ab47288e1a910e}} 
+\index{UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}!GetRegisteredSignals@{GetRegisteredSignals}}
+\index{GetRegisteredSignals@{GetRegisteredSignals}!UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}}
+\doxysubsubsection{\texorpdfstring{GetRegisteredSignals()}{GetRegisteredSignals()}}
+{\footnotesize\ttfamily IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} $>$ Unity\+Engine.\+Timeline.\+Signal\+Receiver.\+Get\+Registered\+Signals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a list of all registered Signal\+Assets. 
+
+\begin{DoxyReturn}{Returns}
+Returns a list of Signal\+Assets.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_signal_receiver_acf0c474d241e6fcd7aa3941c72cafd80}\label{class_unity_engine_1_1_timeline_1_1_signal_receiver_acf0c474d241e6fcd7aa3941c72cafd80}} 
+\index{UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}!GetSignalAssetAtIndex@{GetSignalAssetAtIndex}}
+\index{GetSignalAssetAtIndex@{GetSignalAssetAtIndex}!UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}}
+\doxysubsubsection{\texorpdfstring{GetSignalAssetAtIndex()}{GetSignalAssetAtIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} Unity\+Engine.\+Timeline.\+Signal\+Receiver.\+Get\+Signal\+Asset\+At\+Index (\begin{DoxyParamCaption}\item[{int}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} at a specific index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & The index of the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}}.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_signal_receiver_a7b8381c9439b508dff0586415d6c004e}\label{class_unity_engine_1_1_timeline_1_1_signal_receiver_a7b8381c9439b508dff0586415d6c004e}} 
+\index{UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}!OnNotify@{OnNotify}}
+\index{OnNotify@{OnNotify}!UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}}
+\doxysubsubsection{\texorpdfstring{OnNotify()}{OnNotify()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Timeline.\+Signal\+Receiver.\+On\+Notify (\begin{DoxyParamCaption}\item[{Playable}]{origin,  }\item[{INotification}]{notification,  }\item[{object}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Called when a notification is sent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & The playable that sent the notification.\\
+\hline
+{\em notification} & The received notification. Only notifications of type \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_emitter}{Signal\+Emitter}} will be processed.\\
+\hline
+{\em context} & User defined data that depends on the type of notification. Uses this to pass necessary information that can change with each invocation.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_signal_receiver_a84832683010fb04c26c135048dc21daa}\label{class_unity_engine_1_1_timeline_1_1_signal_receiver_a84832683010fb04c26c135048dc21daa}} 
+\index{UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}!Remove@{Remove}}
+\index{Remove@{Remove}!UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Timeline.\+Signal\+Receiver.\+Remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}}}]{asset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the first occurrence of a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset} & The \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} to be removed.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_signal_receiver_a40ca90a94b66965764392b45fd9db7d7}\label{class_unity_engine_1_1_timeline_1_1_signal_receiver_a40ca90a94b66965764392b45fd9db7d7}} 
+\index{UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}!RemoveAtIndex@{RemoveAtIndex}}
+\index{RemoveAtIndex@{RemoveAtIndex}!UnityEngine.Timeline.SignalReceiver@{UnityEngine.Timeline.SignalReceiver}}
+\doxysubsubsection{\texorpdfstring{RemoveAtIndex()}{RemoveAtIndex()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Timeline.\+Signal\+Receiver.\+Remove\+At\+Index (\begin{DoxyParamCaption}\item[{int}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} and reaction at a specific index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & The index of the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} to be removed.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Events/\+Signals/Signal\+Receiver.\+cs\end{DoxyCompactItemize}

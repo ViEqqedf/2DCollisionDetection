@@ -1,0 +1,90 @@
+.TH "Physics.Collision.ICollisionObject" 3 "2022年 十一月 2日 星期三" "PhysicsWorld" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Physics.Collision.ICollisionObject
+.SH SYNOPSIS
+.br
+.PP
+.PP
+被 \fBPhysics\&.Collision\&.CollisionObject\fP 继承\&.
+.SS "Public 成员函数"
+
+.in +1c
+.ti -1c
+.RI "void \fBInitCollisionObject\fP ()"
+.br
+.ti -1c
+.RI "\fBProjectionPoint\fP \fBGetProjectionPoint\fP (\fBAABBProjectionType\fP projectionType)"
+.br
+.ti -1c
+.RI "void \fBTranslate\fP (Vector3 diff)"
+.br
+.ti -1c
+.RI "void \fBTranslateTo\fP (Vector3 value)"
+.br
+.ti -1c
+.RI "void \fBRotate\fP (Vector3 diff)"
+.br
+.ti -1c
+.RI "void \fBRotateTo\fP (Vector3 value)"
+.br
+.ti -1c
+.RI "void \fBScale\fP (float diff)"
+.br
+.ti -1c
+.RI "void \fBScaleTo\fP (float value)"
+.br
+.ti -1c
+.RI "void \fBAddVelocity\fP (Vector3 diff)"
+.br
+.ti -1c
+.RI "void \fBAddAcceleration\fP (Vector3 diff)"
+.br
+.in -1c
+.SH "成员函数说明"
+.PP 
+.SS "void Physics\&.Collision\&.ICollisionObject\&.AddAcceleration (Vector3 diff)"
+
+.PP
+在 \fBPhysics\&.Collision\&.CollisionObject\fP 内被实现\&.
+.SS "void Physics\&.Collision\&.ICollisionObject\&.AddVelocity (Vector3 diff)"
+
+.PP
+在 \fBPhysics\&.Collision\&.CollisionObject\fP 内被实现\&.
+.SS "\fBProjectionPoint\fP Physics\&.Collision\&.ICollisionObject\&.GetProjectionPoint (\fBAABBProjectionType\fP projectionType)"
+
+.PP
+在 \fBPhysics\&.Collision\&.CollisionObject\fP 内被实现\&.
+.SS "void Physics\&.Collision\&.ICollisionObject\&.InitCollisionObject ()"
+
+.PP
+在 \fBPhysics\&.Collision\&.CollisionObject\fP 内被实现\&.
+.SS "void Physics\&.Collision\&.ICollisionObject\&.Rotate (Vector3 diff)"
+
+.PP
+在 \fBPhysics\&.Collision\&.CollisionObject\fP 内被实现\&.
+.SS "void Physics\&.Collision\&.ICollisionObject\&.RotateTo (Vector3 value)"
+
+.PP
+在 \fBPhysics\&.Collision\&.CollisionObject\fP 内被实现\&.
+.SS "void Physics\&.Collision\&.ICollisionObject\&.Scale (float diff)"
+
+.PP
+在 \fBPhysics\&.Collision\&.CollisionObject\fP 内被实现\&.
+.SS "void Physics\&.Collision\&.ICollisionObject\&.ScaleTo (float value)"
+
+.PP
+在 \fBPhysics\&.Collision\&.CollisionObject\fP 内被实现\&.
+.SS "void Physics\&.Collision\&.ICollisionObject\&.Translate (Vector3 diff)"
+
+.PP
+在 \fBPhysics\&.Collision\&.CollisionObject\fP 内被实现\&.
+.SS "void Physics\&.Collision\&.ICollisionObject\&.TranslateTo (Vector3 value)"
+
+.PP
+在 \fBPhysics\&.Collision\&.CollisionObject\fP 内被实现\&.
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 PhysicsWorld 的 源代码自动生成\&.

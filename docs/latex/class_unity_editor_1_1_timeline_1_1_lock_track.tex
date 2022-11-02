@@ -1,0 +1,91 @@
+\hypertarget{class_unity_editor_1_1_timeline_1_1_lock_track}{}\doxysection{Unity\+Editor.\+Timeline.\+Lock\+Track Class Reference}
+\label{class_unity_editor_1_1_timeline_1_1_lock_track}\index{UnityEditor.Timeline.LockTrack@{UnityEditor.Timeline.LockTrack}}
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Lock\+Track\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_editor_1_1_timeline_1_1_lock_track}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_lock_track_aca0f50811973b4c4abb1dc81bab99d09}{Execute}} (IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} $>$ tracks)
+\begin{DoxyCompactList}\small\item\em Execute the action. \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Action\+Validity}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_lock_track_ad5049e9da178657abf8660ce09593287}{Validate}} (IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} $>$ tracks)
+\begin{DoxyCompactList}\small\item\em Defines the validity of an Action for a given set of tracks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_lock_track_a2866dda6058ae5a3173797dc6f1a8b56}\label{class_unity_editor_1_1_timeline_1_1_lock_track_a2866dda6058ae5a3173797dc6f1a8b56}} 
+static void {\bfseries Set\+Lock\+State} (IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} $>$ tracks, bool should\+Lock)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_lock_track_a6dd64b3136892aa07304fa40573a4b28}{menu\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_lock_track_aca0f50811973b4c4abb1dc81bab99d09}\label{class_unity_editor_1_1_timeline_1_1_lock_track_aca0f50811973b4c4abb1dc81bab99d09}} 
+\index{UnityEditor.Timeline.LockTrack@{UnityEditor.Timeline.LockTrack}!Execute@{Execute}}
+\index{Execute@{Execute}!UnityEditor.Timeline.LockTrack@{UnityEditor.Timeline.LockTrack}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily override bool Unity\+Editor.\+Timeline.\+Lock\+Track.\+Execute (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} $>$}]{tracks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Execute the action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tracks} & Tracks that will be used for the action. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the action has been executed. false otherwise
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_track_action_a85f4ad78e24320f13f28e01f2956efae}{Unity\+Editor.\+Timeline.\+Actions.\+Track\+Action}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_lock_track_ad5049e9da178657abf8660ce09593287}\label{class_unity_editor_1_1_timeline_1_1_lock_track_ad5049e9da178657abf8660ce09593287}} 
+\index{UnityEditor.Timeline.LockTrack@{UnityEditor.Timeline.LockTrack}!Validate@{Validate}}
+\index{Validate@{Validate}!UnityEditor.Timeline.LockTrack@{UnityEditor.Timeline.LockTrack}}
+\doxysubsubsection{\texorpdfstring{Validate()}{Validate()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Action\+Validity}} Unity\+Editor.\+Timeline.\+Lock\+Track.\+Validate (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} $>$}]{tracks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Defines the validity of an Action for a given set of tracks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tracks} & tracks that the action would act on.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The validity of the set of tracks.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_track_action_a5936acb8c39ead842695ef6c48cd44fc}{Unity\+Editor.\+Timeline.\+Actions.\+Track\+Action}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_lock_track_a6dd64b3136892aa07304fa40573a4b28}\label{class_unity_editor_1_1_timeline_1_1_lock_track_a6dd64b3136892aa07304fa40573a4b28}} 
+\index{UnityEditor.Timeline.LockTrack@{UnityEditor.Timeline.LockTrack}!menuName@{menuName}}
+\index{menuName@{menuName}!UnityEditor.Timeline.LockTrack@{UnityEditor.Timeline.LockTrack}}
+\doxysubsubsection{\texorpdfstring{menuName}{menuName}}
+{\footnotesize\ttfamily string Unity\+Editor.\+Timeline.\+Lock\+Track.\+menu\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_menu_name}{Unity\+Editor.\+Timeline.\+IMenu\+Name}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Editor/\+Actions/Track\+Actions.\+cs\end{DoxyCompactItemize}

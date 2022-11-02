@@ -1,0 +1,181 @@
+\hypertarget{class_physics_1_1_collision_1_1_model_1_1_simplex_edge}{}\doxysection{Physics.\+Collision.\+Model.\+Simplex\+Edge类 参考}
+\label{class_physics_1_1_collision_1_1_model_1_1_simplex_edge}\index{Physics.Collision.Model.SimplexEdge@{Physics.Collision.Model.SimplexEdge}}
+
+
+Physics.\+Collision.\+Model.\+Simplex\+Edge 的协作图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{class_physics_1_1_collision_1_1_model_1_1_simplex_edge__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_a422d4d80fc2c4205af1f96abcec05a67}{Clear}} ()
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_ac435eb94635850bd1dbf75897fee68b7}{Init\+Edges}} (List$<$ Vector3 $>$ simplex)
+\item 
+\mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_edge}{Edge}} \mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_a816ccd6c203d0952fdcf318cbf628be2}{Find\+Closest\+Edge}} ()
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_ae349a32da5778aa885c6f5b1e7153350}{Insert\+Edge\+Point}} (\mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_edge}{Edge}} e, Vector3 point)
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_a536f768434ce96fc78fe67adf4e0c9ed}{Update\+Edge\+Index}} ()
+\item 
+\mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_edge}{Edge}} \mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_a46b8494a6a6088235c2b1bb272cdb8ba}{Create\+Edge}} (Vector3 a, Vector3 b)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_edge}{Edge}} $>$ \mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_ab9a1415620c95ba6a416c3146c796a1d}{edges}} = new List$<$\mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_edge}{Edge}}$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_edge}{Edge}} \mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_aa9b0228aaaf6885ee72668b11e1b22da}{Create\+Init\+Edge}} (Vector3 a, Vector3 b)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_a422d4d80fc2c4205af1f96abcec05a67}\label{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_a422d4d80fc2c4205af1f96abcec05a67}} 
+\index{Physics.Collision.Model.SimplexEdge@{Physics.Collision.Model.SimplexEdge}!Clear@{Clear}}
+\index{Clear@{Clear}!Physics.Collision.Model.SimplexEdge@{Physics.Collision.Model.SimplexEdge}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Model.\+Simplex\+Edge.\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_a422d4d80fc2c4205af1f96abcec05a67_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_a422d4d80fc2c4205af1f96abcec05a67_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_a46b8494a6a6088235c2b1bb272cdb8ba}\label{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_a46b8494a6a6088235c2b1bb272cdb8ba}} 
+\index{Physics.Collision.Model.SimplexEdge@{Physics.Collision.Model.SimplexEdge}!CreateEdge@{CreateEdge}}
+\index{CreateEdge@{CreateEdge}!Physics.Collision.Model.SimplexEdge@{Physics.Collision.Model.SimplexEdge}}
+\doxysubsubsection{\texorpdfstring{CreateEdge()}{CreateEdge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_edge}{Edge}} Physics.\+Collision.\+Model.\+Simplex\+Edge.\+Create\+Edge (\begin{DoxyParamCaption}\item[{Vector3}]{a,  }\item[{Vector3}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_a46b8494a6a6088235c2b1bb272cdb8ba_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_a46b8494a6a6088235c2b1bb272cdb8ba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_aa9b0228aaaf6885ee72668b11e1b22da}\label{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_aa9b0228aaaf6885ee72668b11e1b22da}} 
+\index{Physics.Collision.Model.SimplexEdge@{Physics.Collision.Model.SimplexEdge}!CreateInitEdge@{CreateInitEdge}}
+\index{CreateInitEdge@{CreateInitEdge}!Physics.Collision.Model.SimplexEdge@{Physics.Collision.Model.SimplexEdge}}
+\doxysubsubsection{\texorpdfstring{CreateInitEdge()}{CreateInitEdge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_edge}{Edge}} Physics.\+Collision.\+Model.\+Simplex\+Edge.\+Create\+Init\+Edge (\begin{DoxyParamCaption}\item[{Vector3}]{a,  }\item[{Vector3}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_aa9b0228aaaf6885ee72668b11e1b22da_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_aa9b0228aaaf6885ee72668b11e1b22da_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_a816ccd6c203d0952fdcf318cbf628be2}\label{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_a816ccd6c203d0952fdcf318cbf628be2}} 
+\index{Physics.Collision.Model.SimplexEdge@{Physics.Collision.Model.SimplexEdge}!FindClosestEdge@{FindClosestEdge}}
+\index{FindClosestEdge@{FindClosestEdge}!Physics.Collision.Model.SimplexEdge@{Physics.Collision.Model.SimplexEdge}}
+\doxysubsubsection{\texorpdfstring{FindClosestEdge()}{FindClosestEdge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_edge}{Edge}} Physics.\+Collision.\+Model.\+Simplex\+Edge.\+Find\+Closest\+Edge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_a816ccd6c203d0952fdcf318cbf628be2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_ac435eb94635850bd1dbf75897fee68b7}\label{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_ac435eb94635850bd1dbf75897fee68b7}} 
+\index{Physics.Collision.Model.SimplexEdge@{Physics.Collision.Model.SimplexEdge}!InitEdges@{InitEdges}}
+\index{InitEdges@{InitEdges}!Physics.Collision.Model.SimplexEdge@{Physics.Collision.Model.SimplexEdge}}
+\doxysubsubsection{\texorpdfstring{InitEdges()}{InitEdges()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Model.\+Simplex\+Edge.\+Init\+Edges (\begin{DoxyParamCaption}\item[{List$<$ Vector3 $>$}]{simplex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_ac435eb94635850bd1dbf75897fee68b7_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_ac435eb94635850bd1dbf75897fee68b7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_ae349a32da5778aa885c6f5b1e7153350}\label{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_ae349a32da5778aa885c6f5b1e7153350}} 
+\index{Physics.Collision.Model.SimplexEdge@{Physics.Collision.Model.SimplexEdge}!InsertEdgePoint@{InsertEdgePoint}}
+\index{InsertEdgePoint@{InsertEdgePoint}!Physics.Collision.Model.SimplexEdge@{Physics.Collision.Model.SimplexEdge}}
+\doxysubsubsection{\texorpdfstring{InsertEdgePoint()}{InsertEdgePoint()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Model.\+Simplex\+Edge.\+Insert\+Edge\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_edge}{Edge}}}]{e,  }\item[{Vector3}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_ae349a32da5778aa885c6f5b1e7153350_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_ae349a32da5778aa885c6f5b1e7153350_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_a536f768434ce96fc78fe67adf4e0c9ed}\label{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_a536f768434ce96fc78fe67adf4e0c9ed}} 
+\index{Physics.Collision.Model.SimplexEdge@{Physics.Collision.Model.SimplexEdge}!UpdateEdgeIndex@{UpdateEdgeIndex}}
+\index{UpdateEdgeIndex@{UpdateEdgeIndex}!Physics.Collision.Model.SimplexEdge@{Physics.Collision.Model.SimplexEdge}}
+\doxysubsubsection{\texorpdfstring{UpdateEdgeIndex()}{UpdateEdgeIndex()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Model.\+Simplex\+Edge.\+Update\+Edge\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_a536f768434ce96fc78fe67adf4e0c9ed_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_ab9a1415620c95ba6a416c3146c796a1d}\label{class_physics_1_1_collision_1_1_model_1_1_simplex_edge_ab9a1415620c95ba6a416c3146c796a1d}} 
+\index{Physics.Collision.Model.SimplexEdge@{Physics.Collision.Model.SimplexEdge}!edges@{edges}}
+\index{edges@{edges}!Physics.Collision.Model.SimplexEdge@{Physics.Collision.Model.SimplexEdge}}
+\doxysubsubsection{\texorpdfstring{edges}{edges}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_edge}{Edge}}$>$ Physics.\+Collision.\+Model.\+Simplex\+Edge.\+edges = new List$<$\mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_edge}{Edge}}$>$()}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Assets/\+Scripts/\+Collision/\+Model/\mbox{\hyperlink{_simplex_edge_8cs}{Simplex\+Edge.\+cs}}\end{DoxyCompactItemize}

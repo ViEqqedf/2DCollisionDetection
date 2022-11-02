@@ -1,0 +1,155 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}{}\doxysection{Unity\+Engine.\+UI.\+Rect\+Mask2D Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}\index{UnityEngine.UI.RectMask2D@{UnityEngine.UI.RectMask2D}}
+
+
+A 2D rectangular mask that allows for clipping / masking of areas outside the mask.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Rect\+Mask2D\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.314050cm]{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_a2f993ceb67823b863426ce66922c93b9}\label{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_a2f993ceb67823b863426ce66922c93b9}} 
+virtual bool {\bfseries Is\+Raycast\+Location\+Valid} (Vector2 sp, Camera event\+Camera)
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_adbb2c797676f41e6d85e8a25d6435268}{Perform\+Clipping}} ()
+\begin{DoxyCompactList}\small\item\em Function to to cull / clip children elements. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_ad76517411981a517e154eefca42501a8}\label{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_ad76517411981a517e154eefca42501a8}} 
+virtual void {\bfseries Update\+Clip\+Softness} ()
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_a2e45325023af059c7b8a5fda8d3ceead}{Add\+Clippable}} (\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}} clippable)
+\begin{DoxyCompactList}\small\item\em Add a \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}} to be tracked by the mask. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_aa1f79d34bba0cdd326708d4f47fc9af3}{Remove\+Clippable}} (\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}} clippable)
+\begin{DoxyCompactList}\small\item\em Remove an \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}} from being tracked by the mask. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_a16459346f5f89922c17e4e4cb1021fcd}{On\+Enable}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_af0b9ccb6781e088497c1799d04809d40}{On\+Disable}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_a2c719d64da9ecb031c9cf8479e6530b3}{On\+Transform\+Parent\+Changed}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_ade2d8acc495971e2aebca0eda359fa20}{On\+Canvas\+Hierarchy\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Called when the state of the parent Canvas is changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_a59435f6cad136e8a8f8047adf7cd99fd}\label{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_a59435f6cad136e8a8f8047adf7cd99fd}} 
+Vector4 {\bfseries padding}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Padding to be applied to the masking X = Left Y = Bottom Z = Right W = Top \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_ad6061b91e6619a9a4e808b2d4c0e8088}\label{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_ad6061b91e6619a9a4e808b2d4c0e8088}} 
+Vector2\+Int {\bfseries softness}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The softness to apply to the horizontal and vertical axis. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_aeebc3bdcaeb6290958a4695384d76c9f}\label{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_aeebc3bdcaeb6290958a4695384d76c9f}} 
+Rect {\bfseries canvas\+Rect}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the Rect for the mask in canvas space. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_acfd27a59b7c59da8064402102787ab49}\label{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_acfd27a59b7c59da8064402102787ab49}} 
+Rect\+Transform {\bfseries rect\+Transform}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Helper function to get the Rect\+Transform for the mask. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A 2D rectangular mask that allows for clipping / masking of areas outside the mask. 
+
+The \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}{Rect\+Mask2D}} behaves in a similar way to a standard \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_mask}{Mask}} component. It differs though in some of the restrictions that it has. A \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}{Rect\+Mask2D}}\+: $\ast$\+Only works in the 2D plane $\ast$\+Requires elements on the mask to be coplanar. $\ast$\+Does not require stencil buffer / extra draw calls $\ast$\+Requires fewer draw calls $\ast$\+Culls elements that are outside the mask area. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_a2e45325023af059c7b8a5fda8d3ceead}\label{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_a2e45325023af059c7b8a5fda8d3ceead}} 
+\index{UnityEngine.UI.RectMask2D@{UnityEngine.UI.RectMask2D}!AddClippable@{AddClippable}}
+\index{AddClippable@{AddClippable}!UnityEngine.UI.RectMask2D@{UnityEngine.UI.RectMask2D}}
+\doxysubsubsection{\texorpdfstring{AddClippable()}{AddClippable()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Rect\+Mask2\+D.\+Add\+Clippable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}}}]{clippable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}} to be tracked by the mask. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clippable} & Add the clippable object for this mask\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_ade2d8acc495971e2aebca0eda359fa20}\label{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_ade2d8acc495971e2aebca0eda359fa20}} 
+\index{UnityEngine.UI.RectMask2D@{UnityEngine.UI.RectMask2D}!OnCanvasHierarchyChanged@{OnCanvasHierarchyChanged}}
+\index{OnCanvasHierarchyChanged@{OnCanvasHierarchyChanged}!UnityEngine.UI.RectMask2D@{UnityEngine.UI.RectMask2D}}
+\doxysubsubsection{\texorpdfstring{OnCanvasHierarchyChanged()}{OnCanvasHierarchyChanged()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Rect\+Mask2\+D.\+On\+Canvas\+Hierarchy\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called when the state of the parent Canvas is changed. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a73f180fef8560a44a756525ecfe3092f}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_af0b9ccb6781e088497c1799d04809d40}\label{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_af0b9ccb6781e088497c1799d04809d40}} 
+\index{UnityEngine.UI.RectMask2D@{UnityEngine.UI.RectMask2D}!OnDisable@{OnDisable}}
+\index{OnDisable@{OnDisable}!UnityEngine.UI.RectMask2D@{UnityEngine.UI.RectMask2D}}
+\doxysubsubsection{\texorpdfstring{OnDisable()}{OnDisable()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Rect\+Mask2\+D.\+On\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_a16459346f5f89922c17e4e4cb1021fcd}\label{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_a16459346f5f89922c17e4e4cb1021fcd}} 
+\index{UnityEngine.UI.RectMask2D@{UnityEngine.UI.RectMask2D}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!UnityEngine.UI.RectMask2D@{UnityEngine.UI.RectMask2D}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Rect\+Mask2\+D.\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_a2c719d64da9ecb031c9cf8479e6530b3}\label{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_a2c719d64da9ecb031c9cf8479e6530b3}} 
+\index{UnityEngine.UI.RectMask2D@{UnityEngine.UI.RectMask2D}!OnTransformParentChanged@{OnTransformParentChanged}}
+\index{OnTransformParentChanged@{OnTransformParentChanged}!UnityEngine.UI.RectMask2D@{UnityEngine.UI.RectMask2D}}
+\doxysubsubsection{\texorpdfstring{OnTransformParentChanged()}{OnTransformParentChanged()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Rect\+Mask2\+D.\+On\+Transform\+Parent\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_adbb2c797676f41e6d85e8a25d6435268}\label{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_adbb2c797676f41e6d85e8a25d6435268}} 
+\index{UnityEngine.UI.RectMask2D@{UnityEngine.UI.RectMask2D}!PerformClipping@{PerformClipping}}
+\index{PerformClipping@{PerformClipping}!UnityEngine.UI.RectMask2D@{UnityEngine.UI.RectMask2D}}
+\doxysubsubsection{\texorpdfstring{PerformClipping()}{PerformClipping()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+UI.\+Rect\+Mask2\+D.\+Perform\+Clipping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Function to to cull / clip children elements. 
+
+Called after layout and before Graphic update of the Canvas update loop. 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clipper_a646c86ae932ad0efd75ca37994783b6f}{Unity\+Engine.\+UI.\+IClipper}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_aa1f79d34bba0cdd326708d4f47fc9af3}\label{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_aa1f79d34bba0cdd326708d4f47fc9af3}} 
+\index{UnityEngine.UI.RectMask2D@{UnityEngine.UI.RectMask2D}!RemoveClippable@{RemoveClippable}}
+\index{RemoveClippable@{RemoveClippable}!UnityEngine.UI.RectMask2D@{UnityEngine.UI.RectMask2D}}
+\doxysubsubsection{\texorpdfstring{RemoveClippable()}{RemoveClippable()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Rect\+Mask2\+D.\+Remove\+Clippable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}}}]{clippable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove an \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}} from being tracked by the mask. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clippable} & Remove the clippable object from this mask\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/Rect\+Mask2\+D.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,105 @@
+\hypertarget{class_grid_layout_group_tests}{}\doxysection{Grid\+Layout\+Group\+Tests Class Reference}
+\label{class_grid_layout_group_tests}\index{GridLayoutGroupTests@{GridLayoutGroupTests}}
+Inheritance diagram for Grid\+Layout\+Group\+Tests\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_grid_layout_group_tests}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_grid_layout_group_tests_a6392f951eb4f82c80d387105871c0ec3}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Implement this method to call actions automatically before the build process. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_grid_layout_group_tests_aeb870b0d3bcb1175beb16e1bc1aa820b}\label{class_grid_layout_group_tests_aeb870b0d3bcb1175beb16e1bc1aa820b}} 
+void {\bfseries Test\+Setup} ()
+\item 
+\mbox{\Hypertarget{class_grid_layout_group_tests_aefbc56fedec702e8c021bc204860a2e8}\label{class_grid_layout_group_tests_aefbc56fedec702e8c021bc204860a2e8}} 
+void {\bfseries Tear\+Down} ()
+\item 
+\mbox{\Hypertarget{class_grid_layout_group_tests_a6d931b7fc3ae8eb72801daed284c0a59}\label{class_grid_layout_group_tests_a6d931b7fc3ae8eb72801daed284c0a59}} 
+void {\bfseries One\+Time\+Tear\+Down} ()
+\item 
+\mbox{\Hypertarget{class_grid_layout_group_tests_aebacc984a104aaa16e55f323333e4828}\label{class_grid_layout_group_tests_aebacc984a104aaa16e55f323333e4828}} 
+void {\bfseries Test\+Flexible\+Calculate\+Layout} ()
+\item 
+\mbox{\Hypertarget{class_grid_layout_group_tests_af9d12866d022b24f1e2704fb822f7943}\label{class_grid_layout_group_tests_af9d12866d022b24f1e2704fb822f7943}} 
+void {\bfseries Test\+Horizontally\+Contrained\+Calculate\+Layout\+Horizontal} ()
+\item 
+\mbox{\Hypertarget{class_grid_layout_group_tests_a4058a1f6f9b64af29740c9927a72ed55}\label{class_grid_layout_group_tests_a4058a1f6f9b64af29740c9927a72ed55}} 
+void {\bfseries Test\+Vertically\+Contrained\+Calculate\+Layout\+Horizontal} ()
+\item 
+\mbox{\Hypertarget{class_grid_layout_group_tests_addace05c858f4ab4ba65ce614fe892ee}\label{class_grid_layout_group_tests_addace05c858f4ab4ba65ce614fe892ee}} 
+void {\bfseries Test\+Horizontally\+Contrained\+Calculate\+Layout\+Vertical} ()
+\item 
+\mbox{\Hypertarget{class_grid_layout_group_tests_aa36b4ad52caf1ae695c0340060616d31}\label{class_grid_layout_group_tests_aa36b4ad52caf1ae695c0340060616d31}} 
+void {\bfseries Test\+Vertically\+Contrained\+Calculate\+Layout\+Vertical} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_grid_layout_group_tests_a6392f951eb4f82c80d387105871c0ec3}\label{class_grid_layout_group_tests_a6392f951eb4f82c80d387105871c0ec3}} 
+\index{GridLayoutGroupTests@{GridLayoutGroupTests}!Setup@{Setup}}
+\index{Setup@{Setup}!GridLayoutGroupTests@{GridLayoutGroupTests}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily void Grid\+Layout\+Group\+Tests.\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implement this method to call actions automatically before the build process. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }CreateSpriteTest : IPrebuildSetup}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    Texture2D m\_Texture;}
+\DoxyCodeLine{    Sprite m\_Sprite;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_grid_layout_group_tests_a6392f951eb4f82c80d387105871c0ec3}{Setup}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#if UNITY\_EDITOR}}
+\DoxyCodeLine{        var spritePath = \textcolor{stringliteral}{"{}Assets/Resources/Circle.png"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{        var ti = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.AssetImporter.GetAtPath(spritePath) as \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporter;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.textureCompression = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporterCompression.Uncompressed;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.SaveAndReimport();}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [SetUp]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} SetUpTest()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        m\_Texture = Resources.Load<Texture2D>(\textcolor{stringliteral}{"{}Circle"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [Test]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} WhenNullTextureIsPassed\_CreateShouldReturnNullSprite()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with Valid Texture.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        LogAssert.Expect(LogType.Log, \textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Sprite.Create(m\_Texture, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Debug.Log(\textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with NULL Texture. Should return NULL Sprite.}}
+\DoxyCodeLine{        m\_Sprite = Sprite.Create(\textcolor{keyword}{null}, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Assert.That(m\_Sprite, Is.Null, \textcolor{stringliteral}{"{}Sprite created with null texture should be null"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup_a9a9eaa928efe50645e61412528e84309}{Unity\+Engine.\+Test\+Tools.\+IPrebuild\+Setup}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Tests/\+Runtime/\+Layout/Grid\+Layout\+Group\+Tests.\+cs\end{DoxyCompactItemize}

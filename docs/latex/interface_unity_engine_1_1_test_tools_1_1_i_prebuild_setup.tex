@@ -1,0 +1,89 @@
+\hypertarget{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+IPrebuild\+Setup Interface Reference}
+\label{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup}\index{UnityEngine.TestTools.IPrebuildSetup@{UnityEngine.TestTools.IPrebuildSetup}}
+
+
+Implement this interface if you want to define a set of actions to run as a pre-\/build step.  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Tools.\+IPrebuild\+Setup\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup_a9a9eaa928efe50645e61412528e84309}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Implement this method to call actions automatically before the build process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implement this interface if you want to define a set of actions to run as a pre-\/build step. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup_a9a9eaa928efe50645e61412528e84309}\label{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup_a9a9eaa928efe50645e61412528e84309}} 
+\index{UnityEngine.TestTools.IPrebuildSetup@{UnityEngine.TestTools.IPrebuildSetup}!Setup@{Setup}}
+\index{Setup@{Setup}!UnityEngine.TestTools.IPrebuildSetup@{UnityEngine.TestTools.IPrebuildSetup}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Test\+Tools.\+IPrebuild\+Setup.\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implement this method to call actions automatically before the build process. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }CreateSpriteTest : IPrebuildSetup}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    Texture2D m\_Texture;}
+\DoxyCodeLine{    Sprite m\_Sprite;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup_a9a9eaa928efe50645e61412528e84309}{Setup}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#if UNITY\_EDITOR}}
+\DoxyCodeLine{        var spritePath = \textcolor{stringliteral}{"{}Assets/Resources/Circle.png"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{        var ti = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.AssetImporter.GetAtPath(spritePath) as \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporter;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.textureCompression = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporterCompression.Uncompressed;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.SaveAndReimport();}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [SetUp]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} SetUpTest()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        m\_Texture = Resources.Load<Texture2D>(\textcolor{stringliteral}{"{}Circle"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [Test]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} WhenNullTextureIsPassed\_CreateShouldReturnNullSprite()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with Valid Texture.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        LogAssert.Expect(LogType.Log, \textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Sprite.Create(m\_Texture, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Debug.Log(\textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with NULL Texture. Should return NULL Sprite.}}
+\DoxyCodeLine{        m\_Sprite = Sprite.Create(\textcolor{keyword}{null}, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Assert.That(m\_Sprite, Is.Null, \textcolor{stringliteral}{"{}Sprite created with null texture should be null"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_settings_management_1_1_editor_tests_1_1_settings_tests_a52474e0302c4c5c6a60c76b0a98792d3}{Unity\+Engine.\+Settings\+Management.\+Editor\+Tests.\+Settings\+Tests}}, \mbox{\hyperlink{class_button_tests_a8a0d7765676c12ebf0bfd7b87c53838e}{Button\+Tests}}, \mbox{\hyperlink{class_canvas_size_correct_in_awake_and_start_a829cdf86cdca546f0d95391cdb631a98}{Canvas\+Size\+Correct\+In\+Awake\+And\+Start}}, \mbox{\hyperlink{class_nested_canvas_a28ff7d962e6dafc1f0014b032e48b39f}{Nested\+Canvas}}, \mbox{\hyperlink{class_nested_canvas_maintains_correct_size_a61bf96acde2255f171635020ccc19799}{Nested\+Canvas\+Maintains\+Correct\+Size}}, \mbox{\hyperlink{class_no_active_camera_in_scene_does_not_crash_editor_a09daf897a77762b21c4c4f51d25a45cd}{No\+Active\+Camera\+In\+Scene\+Does\+Not\+Crash\+Editor}}, \mbox{\hyperlink{class_rect_transform_valid_after_enable_a175209085e639a709e37e2da569c7198}{Rect\+Transform\+Valid\+After\+Enable}}, \mbox{\hyperlink{class_dropdown_tests_a5f0c9cedd528726de6d3a68efa462274}{Dropdown\+Tests}}, \mbox{\hyperlink{class_raycast_sorting_tests_a650f6ec384849470c9346ff1da1ceb72}{Raycast\+Sorting\+Tests}}, \mbox{\hyperlink{class_graphics_1_1_graphic_tests_ac947f896ce708dcdeecab60df861f28e}{Graphics.\+Graphic\+Tests}}, \mbox{\hyperlink{class_graphics_1_1_mask_tests_ae3259531e8bc89ee00c50acafff80504}{Graphics.\+Mask\+Tests}}, \mbox{\hyperlink{class_graphics_1_1_raw_image_test_a28679f70bd5381f185d6a5a4f5851b94}{Graphics.\+Raw\+Image\+Test}}, \mbox{\hyperlink{class_inputfield_tests_1_1_desktop_input_field_tests_a7d7c66a2f5ceff82f093377fb44ed2c2}{Inputfield\+Tests.\+Desktop\+Input\+Field\+Tests}}, \mbox{\hyperlink{class_inputfield_tests_1_1_generic_input_field_tests_a57b9847964b3001e934d14cd7f0e4660}{Inputfield\+Tests.\+Generic\+Input\+Field\+Tests}}, \mbox{\hyperlink{class_inputfield_tests_1_1_touch_input_field_tests_ae4aa059755d95df92ff477fec46e5b20}{Inputfield\+Tests.\+Touch\+Input\+Field\+Tests}}, \mbox{\hyperlink{class_layout_tests_1_1_aspect_ratio_fitter_tests_ad1538d330c29353187f4166a7c0cdaf9}{Layout\+Tests.\+Aspect\+Ratio\+Fitter\+Tests}}, \mbox{\hyperlink{class_layout_tests_1_1_content_size_fitter_tests_af84f30a2358f09650e9f0b9f8366d8a8}{Layout\+Tests.\+Content\+Size\+Fitter\+Tests}}, \mbox{\hyperlink{class_grid_layout_group_tests_a6392f951eb4f82c80d387105871c0ec3}{Grid\+Layout\+Group\+Tests}}, \mbox{\hyperlink{class_layout_tests_1_1_horizontal_layout_group_tests_a27a54a1a9558e92688113585eee92f7b}{Layout\+Tests.\+Horizontal\+Layout\+Group\+Tests}}, \mbox{\hyperlink{class_layout_tests_1_1_layout_group_scaling_a252907a3b1333ddc4286bb18e3b3b87c}{Layout\+Tests.\+Layout\+Group\+Scaling}}, \mbox{\hyperlink{class_layout_tests_1_1_vertical_layout_group_tests_a3058f59169948b09167d269d3c2c799e}{Layout\+Tests.\+Vertical\+Layout\+Group\+Tests}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_tests_1_1_rect_mask2_d_clipping_a9bebc3303a81ad3ef202b7b3ddccb48b}{Unity\+Engine.\+UI.\+Tests.\+Rect\+Mask2\+DClipping}}, \mbox{\hyperlink{class_scene_with_nested_layout_elements_load_a61ca85d7b8f9595f568bc39bd193be62}{Scene\+With\+Nested\+Layout\+Elements\+Load}}, \mbox{\hyperlink{class_scroll_bar_clamp_a1e7362a3797fc9e75e76e7c01cef0f40}{Scroll\+Bar\+Clamp}}, \mbox{\hyperlink{class_scroll_bar_tests_a18c8241c6a34b2aaaf898c74e7e9f615}{Scroll\+Bar\+Tests}}, \mbox{\hyperlink{class_scroll_rect_scale_a7dc098a679c0ba85ed4ea71b554f6a42}{Scroll\+Rect\+Scale}}, \mbox{\hyperlink{class_scroll_rect_stable_layout_a3ab22c2b2c59660de35d44105fb0fbb6}{Scroll\+Rect\+Stable\+Layout}}, \mbox{\hyperlink{class_scroll_rect_tests_a0215da4a8c00d4d0b81aa41367174d12}{Scroll\+Rect\+Tests}}, \mbox{\hyperlink{class_toggle_test_1_1_toggle_group_tests_aabf7fc21a69ffec8d80f3c1fe0efa8ee}{Toggle\+Test.\+Toggle\+Group\+Tests}}, and \mbox{\hyperlink{class_toggle_test_1_1_toggle_tests_af2e59be04dd7fa9713b3664773208b11}{Toggle\+Test.\+Toggle\+Tests}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Engine.\+Test\+Runner/\+Utils/IPrebuild\+Scene\+Setup.\+cs\end{DoxyCompactItemize}

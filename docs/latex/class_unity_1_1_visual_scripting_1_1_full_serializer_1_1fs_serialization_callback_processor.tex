@@ -1,0 +1,141 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serialization_callback_processor}{}\doxysection{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Serialization\+Callback\+Processor Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serialization_callback_processor}\index{Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor@{Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Serialization\+Callback\+Processor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serialization_callback_processor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serialization_callback_processor_a9d12d1ec388bd5b56efe38aac065f126}{Can\+Process}} (Type type)
+\begin{DoxyCompactList}\small\item\em Is the processor interested in objects of the given type? \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serialization_callback_processor_a8c7351f1a81ac89f4596a369f84c81e6}{On\+Before\+Serialize}} (Type storage\+Type, object instance)
+\begin{DoxyCompactList}\small\item\em Called before serialization. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serialization_callback_processor_ac578189423c487527657e5d87af13d35}{On\+After\+Serialize}} (Type storage\+Type, object instance, ref \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} data)
+\begin{DoxyCompactList}\small\item\em Called after serialization. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serialization_callback_processor_a64c6cda841d236ccedc7ccda4ce1c594}{On\+Before\+Deserialize\+After\+Instance\+Creation}} (Type storage\+Type, object instance, ref \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} data)
+\begin{DoxyCompactList}\small\item\em Called before deserialization has begun but {\itshape after} the object instance has been created. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} will get invoked even if the user passed in an existing instance. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serialization_callback_processor_aebd2d6d8b8b08de492b9ae5c023d1609}{On\+After\+Deserialize}} (Type storage\+Type, object instance)
+\begin{DoxyCompactList}\small\item\em Called after deserialization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serialization_callback_processor_a9d12d1ec388bd5b56efe38aac065f126}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serialization_callback_processor_a9d12d1ec388bd5b56efe38aac065f126}} 
+\index{Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor@{Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor}!CanProcess@{CanProcess}}
+\index{CanProcess@{CanProcess}!Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor@{Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor}}
+\doxysubsubsection{\texorpdfstring{CanProcess()}{CanProcess()}}
+{\footnotesize\ttfamily override bool Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Serialization\+Callback\+Processor.\+Can\+Process (\begin{DoxyParamCaption}\item[{Type}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Is the processor interested in objects of the given type? 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The given type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the processor should be applied, false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_processor_acf4b2bfb4defc95e736859cf41b8a6c6}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Object\+Processor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serialization_callback_processor_aebd2d6d8b8b08de492b9ae5c023d1609}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serialization_callback_processor_aebd2d6d8b8b08de492b9ae5c023d1609}} 
+\index{Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor@{Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor}!OnAfterDeserialize@{OnAfterDeserialize}}
+\index{OnAfterDeserialize@{OnAfterDeserialize}!Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor@{Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor}}
+\doxysubsubsection{\texorpdfstring{OnAfterDeserialize()}{OnAfterDeserialize()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Serialization\+Callback\+Processor.\+On\+After\+Deserialize (\begin{DoxyParamCaption}\item[{Type}]{storage\+Type,  }\item[{object}]{instance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called after deserialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em storage\+Type} & The field/property type that is storing the instance. \\
+\hline
+{\em instance} & The type of the instance.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_processor_a4e32ba0d872f4efbad12da5f750012c6}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Object\+Processor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serialization_callback_processor_ac578189423c487527657e5d87af13d35}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serialization_callback_processor_ac578189423c487527657e5d87af13d35}} 
+\index{Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor@{Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor}!OnAfterSerialize@{OnAfterSerialize}}
+\index{OnAfterSerialize@{OnAfterSerialize}!Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor@{Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor}}
+\doxysubsubsection{\texorpdfstring{OnAfterSerialize()}{OnAfterSerialize()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Serialization\+Callback\+Processor.\+On\+After\+Serialize (\begin{DoxyParamCaption}\item[{Type}]{storage\+Type,  }\item[{object}]{instance,  }\item[{ref \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called after serialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em storage\+Type} & The field/property type that is storing the instance. \\
+\hline
+{\em instance} & The type of the instance.\\
+\hline
+{\em data} & The data that was serialized.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_processor_aaf628a653965571e5d418229c9cc4cd4}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Object\+Processor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serialization_callback_processor_a64c6cda841d236ccedc7ccda4ce1c594}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serialization_callback_processor_a64c6cda841d236ccedc7ccda4ce1c594}} 
+\index{Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor@{Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor}!OnBeforeDeserializeAfterInstanceCreation@{OnBeforeDeserializeAfterInstanceCreation}}
+\index{OnBeforeDeserializeAfterInstanceCreation@{OnBeforeDeserializeAfterInstanceCreation}!Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor@{Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor}}
+\doxysubsubsection{\texorpdfstring{OnBeforeDeserializeAfterInstanceCreation()}{OnBeforeDeserializeAfterInstanceCreation()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Serialization\+Callback\+Processor.\+On\+Before\+Deserialize\+After\+Instance\+Creation (\begin{DoxyParamCaption}\item[{Type}]{storage\+Type,  }\item[{object}]{instance,  }\item[{ref \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called before deserialization has begun but {\itshape after} the object instance has been created. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} will get invoked even if the user passed in an existing instance. 
+
+{\bfseries{IMPORTANT}}\+: The actual instance that gets passed here is {\itshape not} guaranteed to be an a subtype of storage\+Type, since the value for instance is whatever the active converter returned for Create\+Instance() -\/ ie, some converters will return dummy types in Create\+Instance() if instance creation cannot be separated from deserialization (ie, Key\+Value\+Pair). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em storage\+Type} & The field/property type that is storing the instance. \\
+\hline
+{\em instance} & The created object instance. No deserialization has been applied to it. \\
+\hline
+{\em data} & The data that will be used for deserialization. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_processor_a91f22cc314e494f564ba034ea7815c5e}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Object\+Processor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serialization_callback_processor_a8c7351f1a81ac89f4596a369f84c81e6}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serialization_callback_processor_a8c7351f1a81ac89f4596a369f84c81e6}} 
+\index{Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor@{Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor}!OnBeforeSerialize@{OnBeforeSerialize}}
+\index{OnBeforeSerialize@{OnBeforeSerialize}!Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor@{Unity.VisualScripting.FullSerializer.fsSerializationCallbackProcessor}}
+\doxysubsubsection{\texorpdfstring{OnBeforeSerialize()}{OnBeforeSerialize()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Serialization\+Callback\+Processor.\+On\+Before\+Serialize (\begin{DoxyParamCaption}\item[{Type}]{storage\+Type,  }\item[{object}]{instance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called before serialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em storage\+Type} & The field/property type that is storing the instance. \\
+\hline
+{\em instance} & The type of the instance.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_processor_af3eaf82c82ba112b1c20f2e6d6205861}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Object\+Processor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Core/\+Dependencies/\+Full\+Serializer/fs\+ISerialization\+Callbacks.\+cs\end{DoxyCompactItemize}

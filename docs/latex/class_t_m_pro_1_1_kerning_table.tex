@@ -1,0 +1,81 @@
+\hypertarget{class_t_m_pro_1_1_kerning_table}{}\doxysection{TMPro.\+Kerning\+Table Class Reference}
+\label{class_t_m_pro_1_1_kerning_table}\index{TMPro.KerningTable@{TMPro.KerningTable}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_kerning_table_a3cfe2b9dd2b7135e385b740f4c708e99}\label{class_t_m_pro_1_1_kerning_table_a3cfe2b9dd2b7135e385b740f4c708e99}} 
+void {\bfseries Add\+Kerning\+Pair} ()
+\item 
+int \mbox{\hyperlink{class_t_m_pro_1_1_kerning_table_ab052c4492d7d9ecf26f48d96d55068e2}{Add\+Kerning\+Pair}} (uint first, uint second, float offset)
+\begin{DoxyCompactList}\small\item\em Add Kerning Pair \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_t_m_pro_1_1_kerning_table_af132cb43291bb90871859b4b9d273d53}{Add\+Glyph\+Pair\+Adjustment\+Record}} (uint first, \mbox{\hyperlink{struct_t_m_pro_1_1_glyph_value_record___legacy}{Glyph\+Value\+Record\+\_\+\+Legacy}} first\+Adjustments, uint second, \mbox{\hyperlink{struct_t_m_pro_1_1_glyph_value_record___legacy}{Glyph\+Value\+Record\+\_\+\+Legacy}} second\+Adjustments)
+\begin{DoxyCompactList}\small\item\em Add Glyph pair adjustment record \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_kerning_table_ae91f18b46670bd6276f6173017fd4ad1}\label{class_t_m_pro_1_1_kerning_table_ae91f18b46670bd6276f6173017fd4ad1}} 
+void {\bfseries Remove\+Kerning\+Pair} (int left, int right)
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_kerning_table_ab76c9c7d1432c3be2b33abf59c34b078}\label{class_t_m_pro_1_1_kerning_table_ab76c9c7d1432c3be2b33abf59c34b078}} 
+void {\bfseries Remove\+Kerning\+Pair} (int index)
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_kerning_table_a0d83761d66f1df6a94704d50363347d5}\label{class_t_m_pro_1_1_kerning_table_a0d83761d66f1df6a94704d50363347d5}} 
+void {\bfseries Sort\+Kerning\+Pairs} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_kerning_table_a6f730e99745068724bd59af38b2a999c}\label{class_t_m_pro_1_1_kerning_table_a6f730e99745068724bd59af38b2a999c}} 
+List$<$ \mbox{\hyperlink{class_t_m_pro_1_1_kerning_pair}{Kerning\+Pair}} $>$ {\bfseries kerning\+Pairs}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_m_pro_1_1_kerning_table_af132cb43291bb90871859b4b9d273d53}\label{class_t_m_pro_1_1_kerning_table_af132cb43291bb90871859b4b9d273d53}} 
+\index{TMPro.KerningTable@{TMPro.KerningTable}!AddGlyphPairAdjustmentRecord@{AddGlyphPairAdjustmentRecord}}
+\index{AddGlyphPairAdjustmentRecord@{AddGlyphPairAdjustmentRecord}!TMPro.KerningTable@{TMPro.KerningTable}}
+\doxysubsubsection{\texorpdfstring{AddGlyphPairAdjustmentRecord()}{AddGlyphPairAdjustmentRecord()}}
+{\footnotesize\ttfamily int TMPro.\+Kerning\+Table.\+Add\+Glyph\+Pair\+Adjustment\+Record (\begin{DoxyParamCaption}\item[{uint}]{first,  }\item[{\mbox{\hyperlink{struct_t_m_pro_1_1_glyph_value_record___legacy}{Glyph\+Value\+Record\+\_\+\+Legacy}}}]{first\+Adjustments,  }\item[{uint}]{second,  }\item[{\mbox{\hyperlink{struct_t_m_pro_1_1_glyph_value_record___legacy}{Glyph\+Value\+Record\+\_\+\+Legacy}}}]{second\+Adjustments }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add Glyph pair adjustment record 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+Glyph} & The first glyph\\
+\hline
+{\em first\+Glyph\+Adjustments} & Adjustment record for the first glyph\\
+\hline
+{\em second\+Glyph} & The second glyph\\
+\hline
+{\em second\+Glyph\+Adjustments} & Adjustment record for the second glyph\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_m_pro_1_1_kerning_table_ab052c4492d7d9ecf26f48d96d55068e2}\label{class_t_m_pro_1_1_kerning_table_ab052c4492d7d9ecf26f48d96d55068e2}} 
+\index{TMPro.KerningTable@{TMPro.KerningTable}!AddKerningPair@{AddKerningPair}}
+\index{AddKerningPair@{AddKerningPair}!TMPro.KerningTable@{TMPro.KerningTable}}
+\doxysubsubsection{\texorpdfstring{AddKerningPair()}{AddKerningPair()}}
+{\footnotesize\ttfamily int TMPro.\+Kerning\+Table.\+Add\+Kerning\+Pair (\begin{DoxyParamCaption}\item[{uint}]{first,  }\item[{uint}]{second,  }\item[{float}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add Kerning Pair 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & First glyph\\
+\hline
+{\em second} & Second glyph\\
+\hline
+{\em offset} & x\+Advance value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+textmeshpro@3.\+0.\+6/\+Scripts/\+Runtime/TMP\+\_\+\+Font\+Asset\+Common.\+cs\end{DoxyCompactItemize}

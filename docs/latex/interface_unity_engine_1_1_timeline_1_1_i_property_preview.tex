@@ -1,0 +1,50 @@
+\hypertarget{interface_unity_engine_1_1_timeline_1_1_i_property_preview}{}\doxysection{Unity\+Engine.\+Timeline.\+IProperty\+Preview Interface Reference}
+\label{interface_unity_engine_1_1_timeline_1_1_i_property_preview}\index{UnityEngine.Timeline.IPropertyPreview@{UnityEngine.Timeline.IPropertyPreview}}
+
+
+Implement this interface in a Playable\+Asset to specify which properties will be modified when \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} is in preview mode.  
+
+
+Inheritance diagram for Unity\+Engine.\+Timeline.\+IProperty\+Preview\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.031709cm]{interface_unity_engine_1_1_timeline_1_1_i_property_preview}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_property_preview_a7b234535daf06a0dd380c4994e1f2c63}{Gather\+Properties}} (Playable\+Director director, \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_property_collector}{IProperty\+Collector}} driver)
+\begin{DoxyCompactList}\small\item\em Called by the \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} Editor to gather properties requiring preview. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implement this interface in a Playable\+Asset to specify which properties will be modified when \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} is in preview mode. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_unity_engine_1_1_timeline_1_1_i_property_preview_a7b234535daf06a0dd380c4994e1f2c63}\label{interface_unity_engine_1_1_timeline_1_1_i_property_preview_a7b234535daf06a0dd380c4994e1f2c63}} 
+\index{UnityEngine.Timeline.IPropertyPreview@{UnityEngine.Timeline.IPropertyPreview}!GatherProperties@{GatherProperties}}
+\index{GatherProperties@{GatherProperties}!UnityEngine.Timeline.IPropertyPreview@{UnityEngine.Timeline.IPropertyPreview}}
+\doxysubsubsection{\texorpdfstring{GatherProperties()}{GatherProperties()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Timeline.\+IProperty\+Preview.\+Gather\+Properties (\begin{DoxyParamCaption}\item[{Playable\+Director}]{director,  }\item[{\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_property_collector}{IProperty\+Collector}}}]{driver }\end{DoxyParamCaption})}
+
+
+
+Called by the \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} Editor to gather properties requiring preview. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em director} & The Playable\+Director invoking the preview\\
+\hline
+{\em driver} & Property\+Collector used to gather previewable properties\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_track_af4cf30aaabb54e30d80694a248dd32ff}{Unity\+Engine.\+Timeline.\+Activation\+Track}}, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a67b7157e3342cac77daaf3961b7d875d}{Unity\+Engine.\+Timeline.\+Animation\+Playable\+Asset}}, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_track_af5d148f0deb6794f31b1079582446c09}{Unity\+Engine.\+Timeline.\+Animation\+Track}}, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a56ee156f040a4606f873e2580b305512}{Unity\+Engine.\+Timeline.\+Control\+Playable\+Asset}}, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset_aba7594fee65685d13b4743c542340e29}{Unity\+Engine.\+Timeline.\+Timeline\+Asset}}, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset_a6a160f0771a5271317c914e98ff63c62}{Unity\+Engine.\+Timeline.\+Track\+Asset}}, and \mbox{\hyperlink{class_timeline_1_1_samples_1_1_tween_clip_ac660975224d75fe3bb02bd31ee2db9e1}{Timeline.\+Samples.\+Tween\+Clip}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Utilities/IProperty\+Preview.\+cs\end{DoxyCompactItemize}

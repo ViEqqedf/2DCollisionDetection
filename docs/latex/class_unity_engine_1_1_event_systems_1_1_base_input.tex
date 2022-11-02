@@ -1,0 +1,174 @@
+\hypertarget{class_unity_engine_1_1_event_systems_1_1_base_input}{}\doxysection{Unity\+Engine.\+Event\+Systems.\+Base\+Input Class Reference}
+\label{class_unity_engine_1_1_event_systems_1_1_base_input}\index{UnityEngine.EventSystems.BaseInput@{UnityEngine.EventSystems.BaseInput}}
+
+
+Interface to the Input system used by the Base\+Input\+Module. With this it is possible to bypass the Input system with your own but still use the same Input\+Module. For example this can be used to feed fake input into the \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} or interface with a different input system.  
+
+
+Inheritance diagram for Unity\+Engine.\+Event\+Systems.\+Base\+Input\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_unity_engine_1_1_event_systems_1_1_base_input}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_input_aa721e2a7deca1a617b48b9068aa539cb}{Get\+Mouse\+Button\+Down}} (int button)
+\begin{DoxyCompactList}\small\item\em Interface to Input.\+Get\+Mouse\+Button\+Down. Can be overridden to provide custom input instead of using the Input class. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_input_a22ad96712f327c17f5fa49ab19055148}{Get\+Mouse\+Button\+Up}} (int button)
+\begin{DoxyCompactList}\small\item\em Interface to Input.\+Get\+Mouse\+Button\+Up. Can be overridden to provide custom input instead of using the Input class. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_input_a8d7613c2e6d0640a62e31d81e2d3fb77}{Get\+Mouse\+Button}} (int button)
+\begin{DoxyCompactList}\small\item\em Interface to Input.\+Get\+Mouse\+Button. Can be overridden to provide custom input instead of using the Input class. \end{DoxyCompactList}\item 
+virtual Touch \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_input_a40e60776751fd582553350a8f5b9caa2}{Get\+Touch}} (int index)
+\begin{DoxyCompactList}\small\item\em Interface to Input.\+Get\+Touch. Can be overridden to provide custom input instead of using the Input class. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_input_ac44309681e10580ea0c971e66cc4bb2e}{Get\+Axis\+Raw}} (string axis\+Name)
+\begin{DoxyCompactList}\small\item\em Interface to Input.\+Get\+Axis\+Raw. Can be overridden to provide custom input instead of using the Input class. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_input_a3286456d5564d507ab4f6225d7e573dc}{Get\+Button\+Down}} (string button\+Name)
+\begin{DoxyCompactList}\small\item\em Interface to Input.\+Get\+Button\+Down. Can be overridden to provide custom input instead of using the Input class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_input_a6ecff3cfb103937ec46bfc2b3baf2ff3}\label{class_unity_engine_1_1_event_systems_1_1_base_input_a6ecff3cfb103937ec46bfc2b3baf2ff3}} 
+virtual string {\bfseries composition\+String}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Interface to Input.\+composition\+String. Can be overridden to provide custom input instead of using the Input class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_input_a48dd7b41a7c3039bd52886d0815f2520}\label{class_unity_engine_1_1_event_systems_1_1_base_input_a48dd7b41a7c3039bd52886d0815f2520}} 
+virtual IMEComposition\+Mode {\bfseries ime\+Composition\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Interface to Input.\+ime\+Composition\+Mode. Can be overridden to provide custom input instead of using the Input class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_input_aec98f214961bf3d0fdc8bb1bb2880543}\label{class_unity_engine_1_1_event_systems_1_1_base_input_aec98f214961bf3d0fdc8bb1bb2880543}} 
+virtual Vector2 {\bfseries composition\+Cursor\+Pos}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Interface to Input.\+composition\+Cursor\+Pos. Can be overridden to provide custom input instead of using the Input class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_input_a6dda61865d62f0ea773a4632dfaca7ee}\label{class_unity_engine_1_1_event_systems_1_1_base_input_a6dda61865d62f0ea773a4632dfaca7ee}} 
+virtual bool {\bfseries mouse\+Present}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Interface to Input.\+mouse\+Present. Can be overridden to provide custom input instead of using the Input class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_input_a06cc42c973def5640e8804a16efe80ac}\label{class_unity_engine_1_1_event_systems_1_1_base_input_a06cc42c973def5640e8804a16efe80ac}} 
+virtual Vector2 {\bfseries mouse\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Interface to Input.\+mouse\+Position. Can be overridden to provide custom input instead of using the Input class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_input_a7f9059f58a1645991d8f81e99a9cb1e4}\label{class_unity_engine_1_1_event_systems_1_1_base_input_a7f9059f58a1645991d8f81e99a9cb1e4}} 
+virtual Vector2 {\bfseries mouse\+Scroll\+Delta}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Interface to Input.\+mouse\+Scroll\+Delta. Can be overridden to provide custom input instead of using the Input class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_input_acec77135a7af340cfc1d00a651bf0cdf}\label{class_unity_engine_1_1_event_systems_1_1_base_input_acec77135a7af340cfc1d00a651bf0cdf}} 
+virtual bool {\bfseries touch\+Supported}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Interface to Input.\+touch\+Supported. Can be overridden to provide custom input instead of using the Input class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_input_a5c6eac5a3f125d4650f0520dd0333c11}\label{class_unity_engine_1_1_event_systems_1_1_base_input_a5c6eac5a3f125d4650f0520dd0333c11}} 
+virtual int {\bfseries touch\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Interface to Input.\+touch\+Count. Can be overridden to provide custom input instead of using the Input class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Interface to the Input system used by the Base\+Input\+Module. With this it is possible to bypass the Input system with your own but still use the same Input\+Module. For example this can be used to feed fake input into the \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} or interface with a different input system. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_input_ac44309681e10580ea0c971e66cc4bb2e}\label{class_unity_engine_1_1_event_systems_1_1_base_input_ac44309681e10580ea0c971e66cc4bb2e}} 
+\index{UnityEngine.EventSystems.BaseInput@{UnityEngine.EventSystems.BaseInput}!GetAxisRaw@{GetAxisRaw}}
+\index{GetAxisRaw@{GetAxisRaw}!UnityEngine.EventSystems.BaseInput@{UnityEngine.EventSystems.BaseInput}}
+\doxysubsubsection{\texorpdfstring{GetAxisRaw()}{GetAxisRaw()}}
+{\footnotesize\ttfamily virtual float Unity\+Engine.\+Event\+Systems.\+Base\+Input.\+Get\+Axis\+Raw (\begin{DoxyParamCaption}\item[{string}]{axis\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Interface to Input.\+Get\+Axis\+Raw. Can be overridden to provide custom input instead of using the Input class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis\+Name} & Axis name to check\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_fake_base_input_aae49306bbdaeea88e20a211479aad05f}{Fake\+Base\+Input}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_input_a3286456d5564d507ab4f6225d7e573dc}\label{class_unity_engine_1_1_event_systems_1_1_base_input_a3286456d5564d507ab4f6225d7e573dc}} 
+\index{UnityEngine.EventSystems.BaseInput@{UnityEngine.EventSystems.BaseInput}!GetButtonDown@{GetButtonDown}}
+\index{GetButtonDown@{GetButtonDown}!UnityEngine.EventSystems.BaseInput@{UnityEngine.EventSystems.BaseInput}}
+\doxysubsubsection{\texorpdfstring{GetButtonDown()}{GetButtonDown()}}
+{\footnotesize\ttfamily virtual bool Unity\+Engine.\+Event\+Systems.\+Base\+Input.\+Get\+Button\+Down (\begin{DoxyParamCaption}\item[{string}]{button\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Interface to Input.\+Get\+Button\+Down. Can be overridden to provide custom input instead of using the Input class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button\+Name} & Button name to get\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_fake_base_input_a916f60124dcc81fe8e67707566cbb901}{Fake\+Base\+Input}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_input_a8d7613c2e6d0640a62e31d81e2d3fb77}\label{class_unity_engine_1_1_event_systems_1_1_base_input_a8d7613c2e6d0640a62e31d81e2d3fb77}} 
+\index{UnityEngine.EventSystems.BaseInput@{UnityEngine.EventSystems.BaseInput}!GetMouseButton@{GetMouseButton}}
+\index{GetMouseButton@{GetMouseButton}!UnityEngine.EventSystems.BaseInput@{UnityEngine.EventSystems.BaseInput}}
+\doxysubsubsection{\texorpdfstring{GetMouseButton()}{GetMouseButton()}}
+{\footnotesize\ttfamily virtual bool Unity\+Engine.\+Event\+Systems.\+Base\+Input.\+Get\+Mouse\+Button (\begin{DoxyParamCaption}\item[{int}]{button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Interface to Input.\+Get\+Mouse\+Button. Can be overridden to provide custom input instead of using the Input class. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_fake_base_input_a24e3a0a20df6a0acea2322666c235a42}{Fake\+Base\+Input}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_input_aa721e2a7deca1a617b48b9068aa539cb}\label{class_unity_engine_1_1_event_systems_1_1_base_input_aa721e2a7deca1a617b48b9068aa539cb}} 
+\index{UnityEngine.EventSystems.BaseInput@{UnityEngine.EventSystems.BaseInput}!GetMouseButtonDown@{GetMouseButtonDown}}
+\index{GetMouseButtonDown@{GetMouseButtonDown}!UnityEngine.EventSystems.BaseInput@{UnityEngine.EventSystems.BaseInput}}
+\doxysubsubsection{\texorpdfstring{GetMouseButtonDown()}{GetMouseButtonDown()}}
+{\footnotesize\ttfamily virtual bool Unity\+Engine.\+Event\+Systems.\+Base\+Input.\+Get\+Mouse\+Button\+Down (\begin{DoxyParamCaption}\item[{int}]{button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Interface to Input.\+Get\+Mouse\+Button\+Down. Can be overridden to provide custom input instead of using the Input class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_fake_base_input_ad13e22119d9c19324adb82e35f7e179d}{Fake\+Base\+Input}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_input_a22ad96712f327c17f5fa49ab19055148}\label{class_unity_engine_1_1_event_systems_1_1_base_input_a22ad96712f327c17f5fa49ab19055148}} 
+\index{UnityEngine.EventSystems.BaseInput@{UnityEngine.EventSystems.BaseInput}!GetMouseButtonUp@{GetMouseButtonUp}}
+\index{GetMouseButtonUp@{GetMouseButtonUp}!UnityEngine.EventSystems.BaseInput@{UnityEngine.EventSystems.BaseInput}}
+\doxysubsubsection{\texorpdfstring{GetMouseButtonUp()}{GetMouseButtonUp()}}
+{\footnotesize\ttfamily virtual bool Unity\+Engine.\+Event\+Systems.\+Base\+Input.\+Get\+Mouse\+Button\+Up (\begin{DoxyParamCaption}\item[{int}]{button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Interface to Input.\+Get\+Mouse\+Button\+Up. Can be overridden to provide custom input instead of using the Input class. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_fake_base_input_ac8618ddce1ba93446539c2ca3d8f85df}{Fake\+Base\+Input}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_input_a40e60776751fd582553350a8f5b9caa2}\label{class_unity_engine_1_1_event_systems_1_1_base_input_a40e60776751fd582553350a8f5b9caa2}} 
+\index{UnityEngine.EventSystems.BaseInput@{UnityEngine.EventSystems.BaseInput}!GetTouch@{GetTouch}}
+\index{GetTouch@{GetTouch}!UnityEngine.EventSystems.BaseInput@{UnityEngine.EventSystems.BaseInput}}
+\doxysubsubsection{\texorpdfstring{GetTouch()}{GetTouch()}}
+{\footnotesize\ttfamily virtual Touch Unity\+Engine.\+Event\+Systems.\+Base\+Input.\+Get\+Touch (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Interface to Input.\+Get\+Touch. Can be overridden to provide custom input instead of using the Input class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Touch index to get\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_fake_base_input_afce09d3df85aabf6b4897693694d9ff0}{Fake\+Base\+Input}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+Event\+System/\+Input\+Modules/Base\+Input.\+cs\end{DoxyCompactItemize}

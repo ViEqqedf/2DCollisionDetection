@@ -1,0 +1,75 @@
+\hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_registry}{}\doxysection{Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Registry Class Reference}
+\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_registry}\index{Unity.Services.Core.Editor.EditorGameServiceRegistry@{Unity.Services.Core.Editor.EditorGameServiceRegistry}}
+
+
+Base implementation of the \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_registry}{IEditor\+Game\+Service\+Registry}}  
+
+
+Inheritance diagram for Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Registry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_registry}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service}{IEditor\+Game\+Service}} \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_registry_aff17816679476bb439723faf0f1b2aa9}{Get\+Editor\+Game\+Service$<$ TIdentifier $>$}} ()
+\begin{DoxyCompactList}\small\item\em Get the instance of a \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service}{IEditor\+Game\+Service}} type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_registry}{Editor\+Game\+Service\+Registry}} \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_registry_adc523704f6e5aa326a784cfcb02c2968}{Instance}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Access to the editor game service registry \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base implementation of the \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_registry}{IEditor\+Game\+Service\+Registry}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_registry_aff17816679476bb439723faf0f1b2aa9}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_registry_aff17816679476bb439723faf0f1b2aa9}} 
+\index{Unity.Services.Core.Editor.EditorGameServiceRegistry@{Unity.Services.Core.Editor.EditorGameServiceRegistry}!GetEditorGameService$<$ TIdentifier $>$@{GetEditorGameService$<$ TIdentifier $>$}}
+\index{GetEditorGameService$<$ TIdentifier $>$@{GetEditorGameService$<$ TIdentifier $>$}!Unity.Services.Core.Editor.EditorGameServiceRegistry@{Unity.Services.Core.Editor.EditorGameServiceRegistry}}
+\doxysubsubsection{\texorpdfstring{GetEditorGameService$<$ TIdentifier $>$()}{GetEditorGameService< TIdentifier >()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service}{IEditor\+Game\+Service}} Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Registry.\+Get\+Editor\+Game\+Service$<$ TIdentifier $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the instance of a \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service}{IEditor\+Game\+Service}} type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service\+Identifier} & The identifier for a service\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the instance of the given \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service}{IEditor\+Game\+Service}} type if it has been registered.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TIdentifier} : {\em struct}]\item[{\em TIdentifier} : {\em IEditor\+Game\+Service\+Identifier}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_registry_adc523704f6e5aa326a784cfcb02c2968}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_registry_adc523704f6e5aa326a784cfcb02c2968}} 
+\index{Unity.Services.Core.Editor.EditorGameServiceRegistry@{Unity.Services.Core.Editor.EditorGameServiceRegistry}!Instance@{Instance}}
+\index{Instance@{Instance}!Unity.Services.Core.Editor.EditorGameServiceRegistry@{Unity.Services.Core.Editor.EditorGameServiceRegistry}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_registry}{Editor\+Game\+Service\+Registry}} Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Registry.\+Instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{keyword}{new} EditorGameServiceRegistry(}
+\DoxyCodeLine{            \textcolor{keyword}{new} ProjectStateRequest(), \textcolor{keyword}{new} ProjectStateHelper(), \textcolor{keyword}{new} ServiceFlagRequest(), \textcolor{keyword}{new} UserRoleHandler())}
+
+\end{DoxyCode}
+
+
+Access to the editor game service registry 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+services.\+core@1.\+0.\+1/\+Editor/\+Core/\+Editor\+Game\+Service/Editor\+Game\+Service\+Registry.\+cs\end{DoxyCompactItemize}

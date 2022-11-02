@@ -1,0 +1,45 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_attribute}{}\doxysection{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Object\+Attribute Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_attribute}\index{Unity.VisualScripting.FullSerializer.fsObjectAttribute@{Unity.VisualScripting.FullSerializer.fsObjectAttribute}}
+
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} attribute controls some serialization behavior for a type. See the comments on each of the fields for more information.  
+
+
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Object\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_attribute}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_attribute_a6c2445bff4e107210d35a760bc26d594}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_attribute_a6c2445bff4e107210d35a760bc26d594}} 
+{\bfseries fs\+Object\+Attribute} (string version\+String, params Type\mbox{[}$\,$\mbox{]} previous\+Models)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_attribute_a4bad7d21cd16e767384562707582adec}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_attribute_a4bad7d21cd16e767384562707582adec}} 
+Type\mbox{[}$\,$\mbox{]} {\bfseries Previous\+Models}
+\begin{DoxyCompactList}\small\item\em The previous model that should be used if an old version of this object is encountered. Using this attribute also requires that the type have a public constructor that takes only one parameter, an object instance of the given type. Use of this parameter {\itshape requires} that the Version\+String parameter is also set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_attribute_a01089568ebddd2f2e777a914c8c5aae4}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_attribute_a01089568ebddd2f2e777a914c8c5aae4}} 
+string {\bfseries Version\+String}
+\begin{DoxyCompactList}\small\item\em The version string to use for this model. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} should be unique among all prior versions of this model that is supported for importation. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} Previous\+Model is set, then this attribute must also be set. A good valid example for this is \char`\"{}v1\char`\"{}, \char`\"{}v2\char`\"{}, \char`\"{}v3\char`\"{}, ... \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_attribute_a38ab5616c133358f4f84b3740630b4be}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_attribute_a38ab5616c133358f4f84b3740630b4be}} 
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_full_serializer_aa8bf2158000e71fcb861adb89c5eb7cc}{fs\+Member\+Serialization}} {\bfseries Member\+Serialization} = \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_full_serializer_aa8bf2158000e71fcb861adb89c5eb7cca7a1920d61156abc05a60135aefe8bc67}{fs\+Member\+Serialization.\+Default}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} controls the behavior for member serialization. The default behavior is \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_full_serializer_aa8bf2158000e71fcb861adb89c5eb7cca7a1920d61156abc05a60135aefe8bc67}{fs\+Member\+Serialization.\+Default}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_attribute_abf65f884152a3e755c75cf09ced1bfe0}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_attribute_abf65f884152a3e755c75cf09ced1bfe0}} 
+Type {\bfseries Converter}
+\begin{DoxyCompactList}\small\item\em Specify a custom converter to use for serialization. The converter type needs to derive from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter}{fs\+Base\+Converter}}. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} defaults to null. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_attribute_a2248330a772dfe053361d2060954e7b8}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_attribute_a2248330a772dfe053361d2060954e7b8}} 
+Type {\bfseries Processor}
+\begin{DoxyCompactList}\small\item\em Specify a custom processor to use during serialization. The processor type needs to derive from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_processor}{fs\+Object\+Processor}} and the call to Can\+Process is not invoked. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} defaults to null. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} attribute controls some serialization behavior for a type. See the comments on each of the fields for more information. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Core/\+Dependencies/\+Full\+Serializer/fs\+Object\+Attribute.\+cs\end{DoxyCompactItemize}

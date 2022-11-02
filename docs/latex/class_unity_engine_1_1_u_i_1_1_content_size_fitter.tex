@@ -1,0 +1,134 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_content_size_fitter}{}\doxysection{Unity\+Engine.\+UI.\+Content\+Size\+Fitter Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_content_size_fitter}\index{UnityEngine.UI.ContentSizeFitter@{UnityEngine.UI.ContentSizeFitter}}
+
+
+Resizes a Rect\+Transform to fit the size of its content.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Content\+Size\+Fitter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_engine_1_1_u_i_1_1_content_size_fitter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a98d42f121140dd07a3044ce688859038}{Fit\+Mode}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a98d42f121140dd07a3044ce688859038a2770fb7b80f3c459d058bd4ca341a42b}{Unconstrained}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a98d42f121140dd07a3044ce688859038a4ec7376ba0b26f029ef85de800c42c43}{Min\+Size}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a98d42f121140dd07a3044ce688859038ab6355f6e4d16f426ee8bc511fdd775d5}{Preferred\+Size}}
+ \}
+\begin{DoxyCompactList}\small\item\em The size fit modes avaliable to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_content_size_fitter_aeaa5fda5b63e1a763983025fb58a9241}\label{class_unity_engine_1_1_u_i_1_1_content_size_fitter_aeaa5fda5b63e1a763983025fb58a9241}} 
+virtual void {\bfseries Set\+Layout\+Horizontal} ()
+\begin{DoxyCompactList}\small\item\em Calculate and apply the horizontal component of the size to the Rect\+Transform \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a858ffadfed1b9372b6a9729bfb262927}\label{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a858ffadfed1b9372b6a9729bfb262927}} 
+virtual void {\bfseries Set\+Layout\+Vertical} ()
+\begin{DoxyCompactList}\small\item\em Calculate and apply the vertical component of the size to the Rect\+Transform \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a39d8bb6bb2e4361fc60ea8e1cdd432e6}{On\+Enable}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_content_size_fitter_ac1925f3b94b23665cf9995ef36eade13}{On\+Disable}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a8eac45ba52858a4335aa500377793d4c}{On\+Rect\+Transform\+Dimensions\+Change}} ()
+\begin{DoxyCompactList}\small\item\em This callback is called when the dimensions of an associated Rect\+Transform change. It is always called before Awake, On\+Enable, or Start. The call is also made to all child Rect\+Transforms, regardless of whether their dimensions change (which depends on how they are anchored). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_content_size_fitter_ae6bc9bb45395fea0eade722d54e4d7e2}\label{class_unity_engine_1_1_u_i_1_1_content_size_fitter_ae6bc9bb45395fea0eade722d54e4d7e2}} 
+void {\bfseries Set\+Dirty} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a7490fd641ddd35571ff45505abcbaa20}\label{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a7490fd641ddd35571ff45505abcbaa20}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a98d42f121140dd07a3044ce688859038}{Fit\+Mode}} {\bfseries m\+\_\+\+Horizontal\+Fit} = \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a98d42f121140dd07a3044ce688859038a2770fb7b80f3c459d058bd4ca341a42b}{Fit\+Mode.\+Unconstrained}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a780b57c662492f824158fc8def329618}\label{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a780b57c662492f824158fc8def329618}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a98d42f121140dd07a3044ce688859038}{Fit\+Mode}} {\bfseries m\+\_\+\+Vertical\+Fit} = \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a98d42f121140dd07a3044ce688859038a2770fb7b80f3c459d058bd4ca341a42b}{Fit\+Mode.\+Unconstrained}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_content_size_fitter_ad3895e6b239d405fe1b014f78e30edeb}\label{class_unity_engine_1_1_u_i_1_1_content_size_fitter_ad3895e6b239d405fe1b014f78e30edeb}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a98d42f121140dd07a3044ce688859038}{Fit\+Mode}} {\bfseries horizontal\+Fit}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The fit mode to use to determine the width. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_content_size_fitter_ae7a413e80f87e71a617190489ceb36a2}\label{class_unity_engine_1_1_u_i_1_1_content_size_fitter_ae7a413e80f87e71a617190489ceb36a2}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a98d42f121140dd07a3044ce688859038}{Fit\+Mode}} {\bfseries vertical\+Fit}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The fit mode to use to determine the height. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Resizes a Rect\+Transform to fit the size of its content. 
+
+The \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_content_size_fitter}{Content\+Size\+Fitter}} can be used on Game\+Objects that have one or more \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element}{ILayout\+Element}} components, such as \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_text}{Text}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_horizontal_layout_group}{Horizontal\+Layout\+Group}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_vertical_layout_group}{Vertical\+Layout\+Group}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group}{Grid\+Layout\+Group}}. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a98d42f121140dd07a3044ce688859038}\label{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a98d42f121140dd07a3044ce688859038}} 
+\index{UnityEngine.UI.ContentSizeFitter@{UnityEngine.UI.ContentSizeFitter}!FitMode@{FitMode}}
+\index{FitMode@{FitMode}!UnityEngine.UI.ContentSizeFitter@{UnityEngine.UI.ContentSizeFitter}}
+\doxysubsubsection{\texorpdfstring{FitMode}{FitMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a98d42f121140dd07a3044ce688859038}{Unity\+Engine.\+UI.\+Content\+Size\+Fitter.\+Fit\+Mode}}}
+
+
+
+The size fit modes avaliable to use. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unconstrained@{Unconstrained}!UnityEngine.UI.ContentSizeFitter@{UnityEngine.UI.ContentSizeFitter}}\index{UnityEngine.UI.ContentSizeFitter@{UnityEngine.UI.ContentSizeFitter}!Unconstrained@{Unconstrained}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a98d42f121140dd07a3044ce688859038a2770fb7b80f3c459d058bd4ca341a42b}\label{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a98d42f121140dd07a3044ce688859038a2770fb7b80f3c459d058bd4ca341a42b}} 
+Unconstrained&Don\textquotesingle{}t perform any resizing. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MinSize@{MinSize}!UnityEngine.UI.ContentSizeFitter@{UnityEngine.UI.ContentSizeFitter}}\index{UnityEngine.UI.ContentSizeFitter@{UnityEngine.UI.ContentSizeFitter}!MinSize@{MinSize}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a98d42f121140dd07a3044ce688859038a4ec7376ba0b26f029ef85de800c42c43}\label{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a98d42f121140dd07a3044ce688859038a4ec7376ba0b26f029ef85de800c42c43}} 
+Min\+Size&Resize to the minimum size of the content. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PreferredSize@{PreferredSize}!UnityEngine.UI.ContentSizeFitter@{UnityEngine.UI.ContentSizeFitter}}\index{UnityEngine.UI.ContentSizeFitter@{UnityEngine.UI.ContentSizeFitter}!PreferredSize@{PreferredSize}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a98d42f121140dd07a3044ce688859038ab6355f6e4d16f426ee8bc511fdd775d5}\label{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a98d42f121140dd07a3044ce688859038ab6355f6e4d16f426ee8bc511fdd775d5}} 
+Preferred\+Size&Resize to the preferred size of the content. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_content_size_fitter_ac1925f3b94b23665cf9995ef36eade13}\label{class_unity_engine_1_1_u_i_1_1_content_size_fitter_ac1925f3b94b23665cf9995ef36eade13}} 
+\index{UnityEngine.UI.ContentSizeFitter@{UnityEngine.UI.ContentSizeFitter}!OnDisable@{OnDisable}}
+\index{OnDisable@{OnDisable}!UnityEngine.UI.ContentSizeFitter@{UnityEngine.UI.ContentSizeFitter}}
+\doxysubsubsection{\texorpdfstring{OnDisable()}{OnDisable()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Content\+Size\+Fitter.\+On\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a39d8bb6bb2e4361fc60ea8e1cdd432e6}\label{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a39d8bb6bb2e4361fc60ea8e1cdd432e6}} 
+\index{UnityEngine.UI.ContentSizeFitter@{UnityEngine.UI.ContentSizeFitter}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!UnityEngine.UI.ContentSizeFitter@{UnityEngine.UI.ContentSizeFitter}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Content\+Size\+Fitter.\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a8eac45ba52858a4335aa500377793d4c}\label{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a8eac45ba52858a4335aa500377793d4c}} 
+\index{UnityEngine.UI.ContentSizeFitter@{UnityEngine.UI.ContentSizeFitter}!OnRectTransformDimensionsChange@{OnRectTransformDimensionsChange}}
+\index{OnRectTransformDimensionsChange@{OnRectTransformDimensionsChange}!UnityEngine.UI.ContentSizeFitter@{UnityEngine.UI.ContentSizeFitter}}
+\doxysubsubsection{\texorpdfstring{OnRectTransformDimensionsChange()}{OnRectTransformDimensionsChange()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Content\+Size\+Fitter.\+On\+Rect\+Transform\+Dimensions\+Change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+This callback is called when the dimensions of an associated Rect\+Transform change. It is always called before Awake, On\+Enable, or Start. The call is also made to all child Rect\+Transforms, regardless of whether their dimensions change (which depends on how they are anchored). 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_acfb0bcf126b8ea0953525ebb20a87985}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/\+Layout/Content\+Size\+Fitter.\+cs\end{DoxyCompactItemize}

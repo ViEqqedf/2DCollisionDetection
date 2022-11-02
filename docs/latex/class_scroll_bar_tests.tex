@@ -1,0 +1,90 @@
+\hypertarget{class_scroll_bar_tests}{}\doxysection{Scroll\+Bar\+Tests Class Reference}
+\label{class_scroll_bar_tests}\index{ScrollBarTests@{ScrollBarTests}}
+Inheritance diagram for Scroll\+Bar\+Tests\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scroll_bar_tests}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_scroll_bar_tests_a18c8241c6a34b2aaaf898c74e7e9f615}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Implement this method to call actions automatically before the build process. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scroll_bar_tests_a24a0ec93e0749d2bceb0e8e4b8b308ba}\label{class_scroll_bar_tests_a24a0ec93e0749d2bceb0e8e4b8b308ba}} 
+void {\bfseries Test\+Setup} ()
+\item 
+\mbox{\Hypertarget{class_scroll_bar_tests_a4e998a6b7cefa0c07a4f2e035e0ef5a9}\label{class_scroll_bar_tests_a4e998a6b7cefa0c07a4f2e035e0ef5a9}} 
+void {\bfseries Scroll\+Bar\+Set\+Value\+Without\+Notify\+Will\+Not\+Notify} ()
+\item 
+\mbox{\Hypertarget{class_scroll_bar_tests_a8864c62e2942136099a641b7c052ca51}\label{class_scroll_bar_tests_a8864c62e2942136099a641b7c052ca51}} 
+void {\bfseries Tear\+Down} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scroll_bar_tests_a18c8241c6a34b2aaaf898c74e7e9f615}\label{class_scroll_bar_tests_a18c8241c6a34b2aaaf898c74e7e9f615}} 
+\index{ScrollBarTests@{ScrollBarTests}!Setup@{Setup}}
+\index{Setup@{Setup}!ScrollBarTests@{ScrollBarTests}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily void Scroll\+Bar\+Tests.\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implement this method to call actions automatically before the build process. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }CreateSpriteTest : IPrebuildSetup}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    Texture2D m\_Texture;}
+\DoxyCodeLine{    Sprite m\_Sprite;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_scroll_bar_tests_a18c8241c6a34b2aaaf898c74e7e9f615}{Setup}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#if UNITY\_EDITOR}}
+\DoxyCodeLine{        var spritePath = \textcolor{stringliteral}{"{}Assets/Resources/Circle.png"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{        var ti = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.AssetImporter.GetAtPath(spritePath) as \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporter;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.textureCompression = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporterCompression.Uncompressed;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.SaveAndReimport();}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [SetUp]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} SetUpTest()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        m\_Texture = Resources.Load<Texture2D>(\textcolor{stringliteral}{"{}Circle"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [Test]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} WhenNullTextureIsPassed\_CreateShouldReturnNullSprite()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with Valid Texture.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        LogAssert.Expect(LogType.Log, \textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Sprite.Create(m\_Texture, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Debug.Log(\textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with NULL Texture. Should return NULL Sprite.}}
+\DoxyCodeLine{        m\_Sprite = Sprite.Create(\textcolor{keyword}{null}, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Assert.That(m\_Sprite, Is.Null, \textcolor{stringliteral}{"{}Sprite created with null texture should be null"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup_a9a9eaa928efe50645e61412528e84309}{Unity\+Engine.\+Test\+Tools.\+IPrebuild\+Setup}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Tests/\+Runtime/\+Scroll\+Bar/Scroll\+Bar\+Tests.\+cs\end{DoxyCompactItemize}

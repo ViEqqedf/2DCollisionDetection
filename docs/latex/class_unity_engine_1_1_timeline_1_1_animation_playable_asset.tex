@@ -1,0 +1,168 @@
+\hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset}{}\doxysection{Unity\+Engine.\+Timeline.\+Animation\+Playable\+Asset Class Reference}
+\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset}\index{UnityEngine.Timeline.AnimationPlayableAsset@{UnityEngine.Timeline.AnimationPlayableAsset}}
+
+
+A Playable Asset that represents a single Animation\+Clip clip.  
+
+
+Inheritance diagram for Unity\+Engine.\+Timeline.\+Animation\+Playable\+Asset\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.014493cm]{class_unity_engine_1_1_timeline_1_1_animation_playable_asset}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_aa01707fe3f113b2e01fc742ee390834e}{Loop\+Mode}} \{ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_aa01707fe3f113b2e01fc742ee390834ea88c32444db4793e34b96d69a0c635426}{Use\+Source\+Asset}} = 0
+, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_aa01707fe3f113b2e01fc742ee390834ea521c36a31c2762741cf0f8890cbe05e3}{On}} = 1
+, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_aa01707fe3f113b2e01fc742ee390834ead15305d7a4e34e02489c74a5ef542f36}{Off}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Whether the source Animation\+Clip loops during playback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override Playable \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a8a5b07dd9ee2448159dbf70462633384}{Create\+Playable}} (Playable\+Graph graph, Game\+Object go)
+\begin{DoxyCompactList}\small\item\em Creates the root of a Playable subgraph to play the animation clip. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a2f1e1f0051c7e2c8b244244db9763c01}\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a2f1e1f0051c7e2c8b244244db9763c01}} 
+void {\bfseries Reset\+Offsets} ()
+\begin{DoxyCompactList}\small\item\em Resets the offsets to default values \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a67b7157e3342cac77daaf3961b7d875d}{Gather\+Properties}} (Playable\+Director director, \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_property_collector}{IProperty\+Collector}} driver)
+\begin{DoxyCompactList}\small\item\em Called by the \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} Editor to gather properties requiring preview.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a4266085f501cf4ec14f26d125e4eca0c}\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a4266085f501cf4ec14f26d125e4eca0c}} 
+Vector3 {\bfseries position}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The translational offset of the clip \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a6a0a690a77bf10d7b41a96501ea9ff45}\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a6a0a690a77bf10d7b41a96501ea9ff45}} 
+Quaternion {\bfseries rotation}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The rotational offset of the clip, expressed as a Quaternion \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a6722e89de5d1c44207ea6ada9173018f}\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a6722e89de5d1c44207ea6ada9173018f}} 
+Vector3 {\bfseries euler\+Angles}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The rotational offset of the clip, expressed in Euler angles \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a177f00371a0c6833b1289a9a10e3c621}\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a177f00371a0c6833b1289a9a10e3c621}} 
+bool {\bfseries use\+Track\+Match\+Fields}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies whether to use offset matching options as defined by the track. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_abfbd816d3338ddede1812b29436425d0}\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_abfbd816d3338ddede1812b29436425d0}} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_timeline_ad421deff44f1eab281f5f2a41665e2b2}{Match\+Target\+Fields}} {\bfseries match\+Target\+Fields}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies which fields should be matched when aligning offsets. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_ad7db32c9655bc4bd6fe4c7e4e0e16ead}{remove\+Start\+Offset}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether to make the animation clip play relative to its first keyframe. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a4292da37606524c83a096036398fbd6a}\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a4292da37606524c83a096036398fbd6a}} 
+bool {\bfseries apply\+Foot\+IK}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enable to apply foot IK to the Animation\+Clip when the target is humanoid. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a79ded58282db04b07669d9bbf87b9580}\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a79ded58282db04b07669d9bbf87b9580}} 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_aa01707fe3f113b2e01fc742ee390834e}{Loop\+Mode}} {\bfseries loop}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the source Animation\+Clip loops during playback \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a8db52ada6e34ac04e62c415b0ec6deba}\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a8db52ada6e34ac04e62c415b0ec6deba}} 
+Animation\+Clip {\bfseries clip}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The source animation clip \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_aee549ced94599ed4ba926943601590dc}\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_aee549ced94599ed4ba926943601590dc}} 
+override double {\bfseries duration}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the duration required to play the animation clip exactly once \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a0ee6222c9c8ec35e897f2e990a2674d2}\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a0ee6222c9c8ec35e897f2e990a2674d2}} 
+override IEnumerable$<$ Playable\+Binding $>$ {\bfseries outputs}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns a description of the Playable\+Outputs that may be created for this asset. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_engine_1_1_timeline_af0b68b9529bda08f212a5aefa79e7e03}{Clip\+Caps}} \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_ae4a56f92bff6ef117d6af2b03b206fb8}{clip\+Caps}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the capabilities of Timeline\+Clips that contain a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_playable_asset}{Animation\+Playable\+Asset}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Playable Asset that represents a single Animation\+Clip clip. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_aa01707fe3f113b2e01fc742ee390834e}\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_aa01707fe3f113b2e01fc742ee390834e}} 
+\index{UnityEngine.Timeline.AnimationPlayableAsset@{UnityEngine.Timeline.AnimationPlayableAsset}!LoopMode@{LoopMode}}
+\index{LoopMode@{LoopMode}!UnityEngine.Timeline.AnimationPlayableAsset@{UnityEngine.Timeline.AnimationPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{LoopMode}{LoopMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_aa01707fe3f113b2e01fc742ee390834e}{Unity\+Engine.\+Timeline.\+Animation\+Playable\+Asset.\+Loop\+Mode}}}
+
+
+
+Whether the source Animation\+Clip loops during playback. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UseSourceAsset@{UseSourceAsset}!UnityEngine.Timeline.AnimationPlayableAsset@{UnityEngine.Timeline.AnimationPlayableAsset}}\index{UnityEngine.Timeline.AnimationPlayableAsset@{UnityEngine.Timeline.AnimationPlayableAsset}!UseSourceAsset@{UseSourceAsset}}}\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_aa01707fe3f113b2e01fc742ee390834ea88c32444db4793e34b96d69a0c635426}\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_aa01707fe3f113b2e01fc742ee390834ea88c32444db4793e34b96d69a0c635426}} 
+Use\+Source\+Asset&Use the loop time setting from the source Animation\+Clip. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{On@{On}!UnityEngine.Timeline.AnimationPlayableAsset@{UnityEngine.Timeline.AnimationPlayableAsset}}\index{UnityEngine.Timeline.AnimationPlayableAsset@{UnityEngine.Timeline.AnimationPlayableAsset}!On@{On}}}\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_aa01707fe3f113b2e01fc742ee390834ea521c36a31c2762741cf0f8890cbe05e3}\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_aa01707fe3f113b2e01fc742ee390834ea521c36a31c2762741cf0f8890cbe05e3}} 
+On&The source Animation\+Clip loops during playback. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Off@{Off}!UnityEngine.Timeline.AnimationPlayableAsset@{UnityEngine.Timeline.AnimationPlayableAsset}}\index{UnityEngine.Timeline.AnimationPlayableAsset@{UnityEngine.Timeline.AnimationPlayableAsset}!Off@{Off}}}\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_aa01707fe3f113b2e01fc742ee390834ead15305d7a4e34e02489c74a5ef542f36}\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_aa01707fe3f113b2e01fc742ee390834ead15305d7a4e34e02489c74a5ef542f36}} 
+Off&The source Animation\+Clip does not loop during playback. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a8a5b07dd9ee2448159dbf70462633384}\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a8a5b07dd9ee2448159dbf70462633384}} 
+\index{UnityEngine.Timeline.AnimationPlayableAsset@{UnityEngine.Timeline.AnimationPlayableAsset}!CreatePlayable@{CreatePlayable}}
+\index{CreatePlayable@{CreatePlayable}!UnityEngine.Timeline.AnimationPlayableAsset@{UnityEngine.Timeline.AnimationPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{CreatePlayable()}{CreatePlayable()}}
+{\footnotesize\ttfamily override Playable Unity\+Engine.\+Timeline.\+Animation\+Playable\+Asset.\+Create\+Playable (\begin{DoxyParamCaption}\item[{Playable\+Graph}]{graph,  }\item[{Game\+Object}]{go }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates the root of a Playable subgraph to play the animation clip. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & Playable\+Graph that will own the playable\\
+\hline
+{\em go} & The gameobject that triggered the graph build\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The root playable of the subgraph
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a67b7157e3342cac77daaf3961b7d875d}\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_a67b7157e3342cac77daaf3961b7d875d}} 
+\index{UnityEngine.Timeline.AnimationPlayableAsset@{UnityEngine.Timeline.AnimationPlayableAsset}!GatherProperties@{GatherProperties}}
+\index{GatherProperties@{GatherProperties}!UnityEngine.Timeline.AnimationPlayableAsset@{UnityEngine.Timeline.AnimationPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{GatherProperties()}{GatherProperties()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Timeline.\+Animation\+Playable\+Asset.\+Gather\+Properties (\begin{DoxyParamCaption}\item[{Playable\+Director}]{director,  }\item[{\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_property_collector}{IProperty\+Collector}}}]{driver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Called by the \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} Editor to gather properties requiring preview.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_property_preview_a7b234535daf06a0dd380c4994e1f2c63}{Unity\+Engine.\+Timeline.\+IProperty\+Preview}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_ae4a56f92bff6ef117d6af2b03b206fb8}\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_ae4a56f92bff6ef117d6af2b03b206fb8}} 
+\index{UnityEngine.Timeline.AnimationPlayableAsset@{UnityEngine.Timeline.AnimationPlayableAsset}!clipCaps@{clipCaps}}
+\index{clipCaps@{clipCaps}!UnityEngine.Timeline.AnimationPlayableAsset@{UnityEngine.Timeline.AnimationPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{clipCaps}{clipCaps}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_unity_engine_1_1_timeline_af0b68b9529bda08f212a5aefa79e7e03}{Clip\+Caps}} Unity\+Engine.\+Timeline.\+Animation\+Playable\+Asset.\+clip\+Caps\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the capabilities of Timeline\+Clips that contain a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_playable_asset}{Animation\+Playable\+Asset}} 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset_ad73af6af3aa5b1f06545740d9da4db2c}{Unity\+Engine.\+Timeline.\+ITimeline\+Clip\+Asset}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_ad7db32c9655bc4bd6fe4c7e4e0e16ead}\label{class_unity_engine_1_1_timeline_1_1_animation_playable_asset_ad7db32c9655bc4bd6fe4c7e4e0e16ead}} 
+\index{UnityEngine.Timeline.AnimationPlayableAsset@{UnityEngine.Timeline.AnimationPlayableAsset}!removeStartOffset@{removeStartOffset}}
+\index{removeStartOffset@{removeStartOffset}!UnityEngine.Timeline.AnimationPlayableAsset@{UnityEngine.Timeline.AnimationPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{removeStartOffset}{removeStartOffset}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Timeline.\+Animation\+Playable\+Asset.\+remove\+Start\+Offset\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether to make the animation clip play relative to its first keyframe. 
+
+This option only applies to animation clips that animate Transform components. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Animation/Animation\+Playable\+Asset.\+cs\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Asset\+Upgrade/Animation\+Playable\+Asset\+Upgrade.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\hypertarget{class_unity_engine_1_1_timeline_1_1_runtime_clip}{}\doxysection{Unity\+Engine.\+Timeline.\+Runtime\+Clip Class Reference}
+\label{class_unity_engine_1_1_timeline_1_1_runtime_clip}\index{UnityEngine.Timeline.RuntimeClip@{UnityEngine.Timeline.RuntimeClip}}
+
+
+Inherits Unity\+Engine.\+Timeline.\+Runtime\+Clip\+Base.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_runtime_clip_a7b4df6a9f9a8d80995885ed56e808768}\label{class_unity_engine_1_1_timeline_1_1_runtime_clip_a7b4df6a9f9a8d80995885ed56e808768}} 
+{\bfseries Runtime\+Clip} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} clip, Playable clip\+Playable, Playable parent\+Mixer)
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_runtime_clip_a83be86440f6899d1f846bcd80cfc6061}\label{class_unity_engine_1_1_timeline_1_1_runtime_clip_a83be86440f6899d1f846bcd80cfc6061}} 
+void {\bfseries Set\+Time} (double time)
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_runtime_clip_af1030424e6fceac564f3e33e735db5fd}\label{class_unity_engine_1_1_timeline_1_1_runtime_clip_af1030424e6fceac564f3e33e735db5fd}} 
+void {\bfseries Set\+Duration} (double duration)
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_runtime_clip_a7ea80d8e08fc1bb42e7bbc37945ce552}{Evaluate\+At}} (double local\+Time, Frame\+Data frame\+Data)
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_runtime_clip_a536ee42261fb3b9a61aceb19ba27845b}{Disable\+At}} (double local\+Time, double root\+Duration, Frame\+Data frame\+Data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_runtime_clip_a2dd5ff8b0bc78482f767f65f3c8c5e1a}\label{class_unity_engine_1_1_timeline_1_1_runtime_clip_a2dd5ff8b0bc78482f767f65f3c8c5e1a}} 
+override double {\bfseries start}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_runtime_clip_a09a20aac5204a2e89d0b763b7a7c5fa6}\label{class_unity_engine_1_1_timeline_1_1_runtime_clip_a09a20aac5204a2e89d0b763b7a7c5fa6}} 
+override double {\bfseries duration}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_runtime_clip_a633d034380072b2c60724691b4a5a8ee}\label{class_unity_engine_1_1_timeline_1_1_runtime_clip_a633d034380072b2c60724691b4a5a8ee}} 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} {\bfseries clip}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_runtime_clip_ac7cb8c6b8d270abc53b4c30df5a95549}\label{class_unity_engine_1_1_timeline_1_1_runtime_clip_ac7cb8c6b8d270abc53b4c30df5a95549}} 
+Playable {\bfseries mixer}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_runtime_clip_a58e51ab08048a2a16b81ff13e4b87d89}\label{class_unity_engine_1_1_timeline_1_1_runtime_clip_a58e51ab08048a2a16b81ff13e4b87d89}} 
+Playable {\bfseries playable}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_runtime_clip_a356c4a0b4349cdff062226e00e074258}\label{class_unity_engine_1_1_timeline_1_1_runtime_clip_a356c4a0b4349cdff062226e00e074258}} 
+override bool {\bfseries enable}\hspace{0.3cm}{\ttfamily  \mbox{[}set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_runtime_clip_a536ee42261fb3b9a61aceb19ba27845b}\label{class_unity_engine_1_1_timeline_1_1_runtime_clip_a536ee42261fb3b9a61aceb19ba27845b}} 
+\index{UnityEngine.Timeline.RuntimeClip@{UnityEngine.Timeline.RuntimeClip}!DisableAt@{DisableAt}}
+\index{DisableAt@{DisableAt}!UnityEngine.Timeline.RuntimeClip@{UnityEngine.Timeline.RuntimeClip}}
+\doxysubsubsection{\texorpdfstring{DisableAt()}{DisableAt()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Runtime\+Clip.\+Disable\+At (\begin{DoxyParamCaption}\item[{double}]{local\+Time,  }\item[{double}]{root\+Duration,  }\item[{Frame\+Data}]{frame\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_runtime_element}{Unity\+Engine.\+Timeline.\+Runtime\+Element}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_runtime_clip_a7ea80d8e08fc1bb42e7bbc37945ce552}\label{class_unity_engine_1_1_timeline_1_1_runtime_clip_a7ea80d8e08fc1bb42e7bbc37945ce552}} 
+\index{UnityEngine.Timeline.RuntimeClip@{UnityEngine.Timeline.RuntimeClip}!EvaluateAt@{EvaluateAt}}
+\index{EvaluateAt@{EvaluateAt}!UnityEngine.Timeline.RuntimeClip@{UnityEngine.Timeline.RuntimeClip}}
+\doxysubsubsection{\texorpdfstring{EvaluateAt()}{EvaluateAt()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Runtime\+Clip.\+Evaluate\+At (\begin{DoxyParamCaption}\item[{double}]{local\+Time,  }\item[{Frame\+Data}]{frame\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_runtime_element}{Unity\+Engine.\+Timeline.\+Runtime\+Element}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Evaluation/Runtime\+Clip.\+cs\end{DoxyCompactItemize}

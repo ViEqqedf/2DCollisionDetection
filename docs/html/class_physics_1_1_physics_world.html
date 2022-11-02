@@ -1,0 +1,1417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PhysicsWorld: Physics.PhysicsWorld类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PhysicsWorld
+   </div>
+   <div id="projectbrief">辅助阅读代码的文档</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_physics_1_1_physics_world.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_physics_1_1_physics_world-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Physics.PhysicsWorld类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 Physics.PhysicsWorld 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Physics.PhysicsWorld 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab363dd228dcc50002de2762e22918637"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#ab363dd228dcc50002de2762e22918637">CreateACustomShape</a> (Vector3[] vertices, Vector3 pos, int level)</td></tr>
+<tr class="separator:ab363dd228dcc50002de2762e22918637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22b65d699e874d3ec8651ad3cd675814"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a22b65d699e874d3ec8651ad3cd675814">CreateMesh</a> (<a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a> co)</td></tr>
+<tr class="separator:a22b65d699e874d3ec8651ad3cd675814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54d320d6dc2c69449f0d83f746382a21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a54d320d6dc2c69449f0d83f746382a21">CreateATestRect</a> (Vector3 pos, int level=0)</td></tr>
+<tr class="separator:a54d320d6dc2c69449f0d83f746382a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af93edd393b2391e14a2cfc4331ebf791"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#af93edd393b2391e14a2cfc4331ebf791">CreateATestCircle</a> (float radius, Vector3 pos)</td></tr>
+<tr class="separator:af93edd393b2391e14a2cfc4331ebf791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf7766abbfb94bb041d38b3d7209dcba"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#adf7766abbfb94bb041d38b3d7209dcba">FindFirstDirection</a> (<a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a> a, <a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a> b)</td></tr>
+<tr class="separator:adf7766abbfb94bb041d38b3d7209dcba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaea6390b0eebeeffb2136b97d9e9e9a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#aaea6390b0eebeeffb2136b97d9e9e9a9">AddCollisionObject</a> (<a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a> collisionObject)</td></tr>
+<tr class="separator:aaea6390b0eebeeffb2136b97d9e9e9a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a583f8d84729f24cd4881a25240ae4fcd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a583f8d84729f24cd4881a25240ae4fcd">RemoveCollisionObject</a> (<a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a> collisionObject)</td></tr>
+<tr class="separator:a583f8d84729f24cd4881a25240ae4fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f350fc5331b14dac969f58ddaeb7c10"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_physics_1_1_i_physics_world.html#a2f350fc5331b14dac969f58ddaeb7c10">AddCollisionObject</a> (<a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a> collisionObject)</td></tr>
+<tr class="separator:a2f350fc5331b14dac969f58ddaeb7c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19c350c5619baa3b325550fc20250f7f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_physics_1_1_i_physics_world.html#a19c350c5619baa3b325550fc20250f7f">RemoveCollisionObject</a> (<a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a> collisionObject)</td></tr>
+<tr class="separator:a19c350c5619baa3b325550fc20250f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a4ff760625979980505e432ad8acdc499"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a4ff760625979980505e432ad8acdc499">tickFrame</a> = 0</td></tr>
+<tr class="separator:a4ff760625979980505e432ad8acdc499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4753023fb0e94fab0ffc9fd96730463"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#ab4753023fb0e94fab0ffc9fd96730463">borderRadius</a> = 15</td></tr>
+<tr class="separator:ab4753023fb0e94fab0ffc9fd96730463"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab867c8bcfe9a9f359aac6f7fb70ffabb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#ab867c8bcfe9a9f359aac6f7fb70ffabb">epsilon</a> = 0.0001f</td></tr>
+<tr class="separator:ab867c8bcfe9a9f359aac6f7fb70ffabb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2661091d8cbac4f98bc8a69fab74d2ef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a2661091d8cbac4f98bc8a69fab74d2ef">maxIterCount</a> = 10</td></tr>
+<tr class="separator:a2661091d8cbac4f98bc8a69fab74d2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac105e4ff292de64393142193747a739b"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#ac105e4ff292de64393142193747a739b">collisionList</a></td></tr>
+<tr class="separator:ac105e4ff292de64393142193747a739b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a8604509cc962bc5d9c3f4089b06f94b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a8604509cc962bc5d9c3f4089b06f94b2">Start</a> ()</td></tr>
+<tr class="separator:a8604509cc962bc5d9c3f4089b06f94b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf5c68828b28299a9d85e6dd326a1653"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#adf5c68828b28299a9d85e6dd326a1653">Test0</a> ()</td></tr>
+<tr class="separator:adf5c68828b28299a9d85e6dd326a1653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00da1d0a80a537bf0f30ec9a1f00cbd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a00da1d0a80a537bf0f30ec9a1f00cbd6">Test1</a> ()</td></tr>
+<tr class="separator:a00da1d0a80a537bf0f30ec9a1f00cbd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e682ad39d73a462476dcc8cf707b4b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a3e682ad39d73a462476dcc8cf707b4b7">Test2</a> ()</td></tr>
+<tr class="separator:a3e682ad39d73a462476dcc8cf707b4b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23a499269c2dba922ca4a81579b244ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a23a499269c2dba922ca4a81579b244ae">Test3</a> ()</td></tr>
+<tr class="separator:a23a499269c2dba922ca4a81579b244ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93898e81cc80ba83e62de6af1cb9f2ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a93898e81cc80ba83e62de6af1cb9f2ab">Test4</a> ()</td></tr>
+<tr class="separator:a93898e81cc80ba83e62de6af1cb9f2ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21bcd3d27cec2fa8cf00d28be40ae413"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a21bcd3d27cec2fa8cf00d28be40ae413">Update</a> ()</td></tr>
+<tr class="separator:a21bcd3d27cec2fa8cf00d28be40ae413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc2e766cfd2414718237d76064130c7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#adc2e766cfd2414718237d76064130c7f">Tick</a> (float timeSpan)</td></tr>
+<tr class="separator:adc2e766cfd2414718237d76064130c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a516968c71000684ea688d080074d0ec8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a516968c71000684ea688d080074d0ec8">CollisionDetection</a> (float timeSpan)</td></tr>
+<tr class="separator:a516968c71000684ea688d080074d0ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fb900baebfc430f003c9810c5ffb676"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a9fb900baebfc430f003c9810c5ffb676">BroadPhase</a> ()</td></tr>
+<tr class="separator:a9fb900baebfc430f003c9810c5ffb676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2f42a51005358723ff89d9021d64d59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#ac2f42a51005358723ff89d9021d64d59">SweepAndPrune</a> ()</td></tr>
+<tr class="separator:ac2f42a51005358723ff89d9021d64d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf0d082420d51f408488d1a1fdc644bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#acf0d082420d51f408488d1a1fdc644bc">DynamicBVH</a> ()</td></tr>
+<tr class="separator:acf0d082420d51f408488d1a1fdc644bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab505479deb9b79c8d1c5edd3957c8e49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#ab505479deb9b79c8d1c5edd3957c8e49">NarrowPhase</a> ()</td></tr>
+<tr class="separator:ab505479deb9b79c8d1c5edd3957c8e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbda8b52c5f3c0cf86ac64fbc64fd69e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#abbda8b52c5f3c0cf86ac64fbc64fd69e">GJK</a> (<a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a> fst, <a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a> snd, List&lt; Vector3 &gt; simplex)</td></tr>
+<tr class="separator:abbda8b52c5f3c0cf86ac64fbc64fd69e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a981b90f47065fded56b0145083aac984"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a981b90f47065fded56b0145083aac984">EPA</a> (<a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a> fst, <a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a> snd, List&lt; Vector3 &gt; simplex)</td></tr>
+<tr class="separator:a981b90f47065fded56b0145083aac984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ea0895316da17449ff1352e2610ba59"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a5ea0895316da17449ff1352e2610ba59">FindNextDirection</a> (List&lt; Vector3 &gt; simplex)</td></tr>
+<tr class="separator:a5ea0895316da17449ff1352e2610ba59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1aadffc2ad0f1b13391fe5eb1f4e703"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#af1aadffc2ad0f1b13391fe5eb1f4e703">Support</a> (Vector3 dir, <a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a> fst, <a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a> snd)</td></tr>
+<tr class="separator:af1aadffc2ad0f1b13391fe5eb1f4e703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e0230662c23f57f5f94d9ee9e672487"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a9e0230662c23f57f5f94d9ee9e672487">ApplyAcceleration</a> (float timeSpan)</td></tr>
+<tr class="separator:a9e0230662c23f57f5f94d9ee9e672487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cb8b9d6d48d80e26976deb605e14295"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a9cb8b9d6d48d80e26976deb605e14295">Resolve</a> (float timeSpan)</td></tr>
+<tr class="separator:a9cb8b9d6d48d80e26976deb605e14295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2cb96f774604513627f530a712e9003"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#ab2cb96f774604513627f530a712e9003">ApplyVelocity</a> (float timeSpan)</td></tr>
+<tr class="separator:ab2cb96f774604513627f530a712e9003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a7ba329785d133103a5413fbe51252840"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_physics_1_1_collision_1_1_collision_pair.html">CollisionPair</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a7ba329785d133103a5413fbe51252840">collisionPairs</a></td></tr>
+<tr class="separator:a7ba329785d133103a5413fbe51252840"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a832131ca70d01cbcd70ac6c9df20ae23"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_physics_1_1_collision_1_1_projection_point.html">ProjectionPoint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a832131ca70d01cbcd70ac6c9df20ae23">broadScanList</a></td></tr>
+<tr class="separator:a832131ca70d01cbcd70ac6c9df20ae23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a218564a397a81e1d45c56fc006bc530a"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; int, <a class="el" href="class_physics_1_1_collision_1_1_projection_point.html">ProjectionPoint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a218564a397a81e1d45c56fc006bc530a">broadStartPoints</a></td></tr>
+<tr class="separator:a218564a397a81e1d45c56fc006bc530a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11a1ef8cca87da54b8ef6233fdadf60e"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_physics_1_1_collision_1_1_projection_point.html">ProjectionPoint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#a11a1ef8cca87da54b8ef6233fdadf60e">horAABBProjList</a></td></tr>
+<tr class="separator:a11a1ef8cca87da54b8ef6233fdadf60e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff0d4eaa68bab96dc8e9c2dd192c9563"><td class="memItemLeft" align="right" valign="top">List&lt; Vector3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics_1_1_physics_world.html#aff0d4eaa68bab96dc8e9c2dd192c9563">simplexList</a> = new List&lt;Vector3&gt;()</td></tr>
+<tr class="separator:aff0d4eaa68bab96dc8e9c2dd192c9563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aaea6390b0eebeeffb2136b97d9e9e9a9" name="aaea6390b0eebeeffb2136b97d9e9e9a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaea6390b0eebeeffb2136b97d9e9e9a9">&#9670;&nbsp;</a></span>AddCollisionObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Physics.PhysicsWorld.AddCollisionObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a>&#160;</td>
+          <td class="paramname"><em>collisionObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_physics_1_1_i_physics_world.html#a2f350fc5331b14dac969f58ddaeb7c10">Physics.IPhysicsWorld</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_aaea6390b0eebeeffb2136b97d9e9e9a9_cgraph.svg" width="100%" height="412"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_aaea6390b0eebeeffb2136b97d9e9e9a9_icgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a9e0230662c23f57f5f94d9ee9e672487" name="a9e0230662c23f57f5f94d9ee9e672487"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e0230662c23f57f5f94d9ee9e672487">&#9670;&nbsp;</a></span>ApplyAcceleration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.PhysicsWorld.ApplyAcceleration </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>timeSpan</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a9e0230662c23f57f5f94d9ee9e672487_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ab2cb96f774604513627f530a712e9003" name="ab2cb96f774604513627f530a712e9003"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2cb96f774604513627f530a712e9003">&#9670;&nbsp;</a></span>ApplyVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.PhysicsWorld.ApplyVelocity </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>timeSpan</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_ab2cb96f774604513627f530a712e9003_cgraph.svg" width="100%" height="462"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_ab2cb96f774604513627f530a712e9003_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a9fb900baebfc430f003c9810c5ffb676" name="a9fb900baebfc430f003c9810c5ffb676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fb900baebfc430f003c9810c5ffb676">&#9670;&nbsp;</a></span>BroadPhase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.PhysicsWorld.BroadPhase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a9fb900baebfc430f003c9810c5ffb676_cgraph.svg" width="100%" height="388"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a9fb900baebfc430f003c9810c5ffb676_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a516968c71000684ea688d080074d0ec8" name="a516968c71000684ea688d080074d0ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a516968c71000684ea688d080074d0ec8">&#9670;&nbsp;</a></span>CollisionDetection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.PhysicsWorld.CollisionDetection </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>timeSpan</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a516968c71000684ea688d080074d0ec8_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a516968c71000684ea688d080074d0ec8_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ab363dd228dcc50002de2762e22918637" name="ab363dd228dcc50002de2762e22918637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab363dd228dcc50002de2762e22918637">&#9670;&nbsp;</a></span>CreateACustomShape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.PhysicsWorld.CreateACustomShape </td>
+          <td>(</td>
+          <td class="paramtype">Vector3[]&#160;</td>
+          <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_ab363dd228dcc50002de2762e22918637_cgraph.svg" width="100%" height="412"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_ab363dd228dcc50002de2762e22918637_icgraph.svg" width="444" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="af93edd393b2391e14a2cfc4331ebf791" name="af93edd393b2391e14a2cfc4331ebf791"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af93edd393b2391e14a2cfc4331ebf791">&#9670;&nbsp;</a></span>CreateATestCircle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.PhysicsWorld.CreateATestCircle </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_af93edd393b2391e14a2cfc4331ebf791_cgraph.svg" width="100%" height="412"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_af93edd393b2391e14a2cfc4331ebf791_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a54d320d6dc2c69449f0d83f746382a21" name="a54d320d6dc2c69449f0d83f746382a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54d320d6dc2c69449f0d83f746382a21">&#9670;&nbsp;</a></span>CreateATestRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.PhysicsWorld.CreateATestRect </td>
+          <td>(</td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a54d320d6dc2c69449f0d83f746382a21_cgraph.svg" width="100%" height="412"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a54d320d6dc2c69449f0d83f746382a21_icgraph.svg" width="444" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a22b65d699e874d3ec8651ad3cd675814" name="a22b65d699e874d3ec8651ad3cd675814"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22b65d699e874d3ec8651ad3cd675814">&#9670;&nbsp;</a></span>CreateMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject Physics.PhysicsWorld.CreateMesh </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a>&#160;</td>
+          <td class="paramname"><em>co</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a22b65d699e874d3ec8651ad3cd675814_icgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="acf0d082420d51f408488d1a1fdc644bc" name="acf0d082420d51f408488d1a1fdc644bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf0d082420d51f408488d1a1fdc644bc">&#9670;&nbsp;</a></span>DynamicBVH()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.PhysicsWorld.DynamicBVH </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a981b90f47065fded56b0145083aac984" name="a981b90f47065fded56b0145083aac984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a981b90f47065fded56b0145083aac984">&#9670;&nbsp;</a></span>EPA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 Physics.PhysicsWorld.EPA </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a>&#160;</td>
+          <td class="paramname"><em>fst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a>&#160;</td>
+          <td class="paramname"><em>snd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Vector3 &gt;&#160;</td>
+          <td class="paramname"><em>simplex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a981b90f47065fded56b0145083aac984_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a981b90f47065fded56b0145083aac984_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="adf7766abbfb94bb041d38b3d7209dcba" name="adf7766abbfb94bb041d38b3d7209dcba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf7766abbfb94bb041d38b3d7209dcba">&#9670;&nbsp;</a></span>FindFirstDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 Physics.PhysicsWorld.FindFirstDirection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_adf7766abbfb94bb041d38b3d7209dcba_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a5ea0895316da17449ff1352e2610ba59" name="a5ea0895316da17449ff1352e2610ba59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ea0895316da17449ff1352e2610ba59">&#9670;&nbsp;</a></span>FindNextDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 Physics.PhysicsWorld.FindNextDirection </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; Vector3 &gt;&#160;</td>
+          <td class="paramname"><em>simplex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a5ea0895316da17449ff1352e2610ba59_cgraph.svg" width="456" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a5ea0895316da17449ff1352e2610ba59_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="abbda8b52c5f3c0cf86ac64fbc64fd69e" name="abbda8b52c5f3c0cf86ac64fbc64fd69e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbda8b52c5f3c0cf86ac64fbc64fd69e">&#9670;&nbsp;</a></span>GJK()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Physics.PhysicsWorld.GJK </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a>&#160;</td>
+          <td class="paramname"><em>fst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a>&#160;</td>
+          <td class="paramname"><em>snd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Vector3 &gt;&#160;</td>
+          <td class="paramname"><em>simplex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_abbda8b52c5f3c0cf86ac64fbc64fd69e_cgraph.svg" width="100%" height="520"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_abbda8b52c5f3c0cf86ac64fbc64fd69e_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ab505479deb9b79c8d1c5edd3957c8e49" name="ab505479deb9b79c8d1c5edd3957c8e49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab505479deb9b79c8d1c5edd3957c8e49">&#9670;&nbsp;</a></span>NarrowPhase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.PhysicsWorld.NarrowPhase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_ab505479deb9b79c8d1c5edd3957c8e49_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_ab505479deb9b79c8d1c5edd3957c8e49_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a583f8d84729f24cd4881a25240ae4fcd" name="a583f8d84729f24cd4881a25240ae4fcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a583f8d84729f24cd4881a25240ae4fcd">&#9670;&nbsp;</a></span>RemoveCollisionObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Physics.PhysicsWorld.RemoveCollisionObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a>&#160;</td>
+          <td class="paramname"><em>collisionObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_physics_1_1_i_physics_world.html#a19c350c5619baa3b325550fc20250f7f">Physics.IPhysicsWorld</a>.</p>
+
+</div>
+</div>
+<a id="a9cb8b9d6d48d80e26976deb605e14295" name="a9cb8b9d6d48d80e26976deb605e14295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cb8b9d6d48d80e26976deb605e14295">&#9670;&nbsp;</a></span>Resolve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.PhysicsWorld.Resolve </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>timeSpan</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a9cb8b9d6d48d80e26976deb605e14295_cgraph.svg" width="447" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a9cb8b9d6d48d80e26976deb605e14295_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a8604509cc962bc5d9c3f4089b06f94b2" name="a8604509cc962bc5d9c3f4089b06f94b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8604509cc962bc5d9c3f4089b06f94b2">&#9670;&nbsp;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.PhysicsWorld.Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a8604509cc962bc5d9c3f4089b06f94b2_cgraph.svg" width="100%" height="412"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af1aadffc2ad0f1b13391fe5eb1f4e703" name="af1aadffc2ad0f1b13391fe5eb1f4e703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1aadffc2ad0f1b13391fe5eb1f4e703">&#9670;&nbsp;</a></span>Support()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 Physics.PhysicsWorld.Support </td>
+          <td>(</td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a>&#160;</td>
+          <td class="paramname"><em>fst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a>&#160;</td>
+          <td class="paramname"><em>snd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_af1aadffc2ad0f1b13391fe5eb1f4e703_cgraph.svg" width="452" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_af1aadffc2ad0f1b13391fe5eb1f4e703_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ac2f42a51005358723ff89d9021d64d59" name="ac2f42a51005358723ff89d9021d64d59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2f42a51005358723ff89d9021d64d59">&#9670;&nbsp;</a></span>SweepAndPrune()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.PhysicsWorld.SweepAndPrune </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_ac2f42a51005358723ff89d9021d64d59_cgraph.svg" width="444" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_ac2f42a51005358723ff89d9021d64d59_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="adf5c68828b28299a9d85e6dd326a1653" name="adf5c68828b28299a9d85e6dd326a1653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf5c68828b28299a9d85e6dd326a1653">&#9670;&nbsp;</a></span>Test0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.PhysicsWorld.Test0 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_adf5c68828b28299a9d85e6dd326a1653_cgraph.svg" width="100%" height="412"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a00da1d0a80a537bf0f30ec9a1f00cbd6" name="a00da1d0a80a537bf0f30ec9a1f00cbd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00da1d0a80a537bf0f30ec9a1f00cbd6">&#9670;&nbsp;</a></span>Test1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.PhysicsWorld.Test1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a00da1d0a80a537bf0f30ec9a1f00cbd6_cgraph.svg" width="100%" height="412"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3e682ad39d73a462476dcc8cf707b4b7" name="a3e682ad39d73a462476dcc8cf707b4b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e682ad39d73a462476dcc8cf707b4b7">&#9670;&nbsp;</a></span>Test2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.PhysicsWorld.Test2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a3e682ad39d73a462476dcc8cf707b4b7_cgraph.svg" width="100%" height="412"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a3e682ad39d73a462476dcc8cf707b4b7_icgraph.svg" width="434" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a23a499269c2dba922ca4a81579b244ae" name="a23a499269c2dba922ca4a81579b244ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23a499269c2dba922ca4a81579b244ae">&#9670;&nbsp;</a></span>Test3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.PhysicsWorld.Test3 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a23a499269c2dba922ca4a81579b244ae_cgraph.svg" width="100%" height="412"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a93898e81cc80ba83e62de6af1cb9f2ab" name="a93898e81cc80ba83e62de6af1cb9f2ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93898e81cc80ba83e62de6af1cb9f2ab">&#9670;&nbsp;</a></span>Test4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.PhysicsWorld.Test4 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a93898e81cc80ba83e62de6af1cb9f2ab_cgraph.svg" width="100%" height="412"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adc2e766cfd2414718237d76064130c7f" name="adc2e766cfd2414718237d76064130c7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc2e766cfd2414718237d76064130c7f">&#9670;&nbsp;</a></span>Tick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.PhysicsWorld.Tick </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>timeSpan</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_adc2e766cfd2414718237d76064130c7f_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_adc2e766cfd2414718237d76064130c7f_icgraph.svg" width="440" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a21bcd3d27cec2fa8cf00d28be40ae413" name="a21bcd3d27cec2fa8cf00d28be40ae413"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21bcd3d27cec2fa8cf00d28be40ae413">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.PhysicsWorld.Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_physics_1_1_physics_world_a21bcd3d27cec2fa8cf00d28be40ae413_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ab4753023fb0e94fab0ffc9fd96730463" name="ab4753023fb0e94fab0ffc9fd96730463"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4753023fb0e94fab0ffc9fd96730463">&#9670;&nbsp;</a></span>borderRadius</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Physics.PhysicsWorld.borderRadius = 15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a832131ca70d01cbcd70ac6c9df20ae23" name="a832131ca70d01cbcd70ac6c9df20ae23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a832131ca70d01cbcd70ac6c9df20ae23">&#9670;&nbsp;</a></span>broadScanList</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_physics_1_1_collision_1_1_projection_point.html">ProjectionPoint</a>&gt; Physics.PhysicsWorld.broadScanList</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a218564a397a81e1d45c56fc006bc530a" name="a218564a397a81e1d45c56fc006bc530a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a218564a397a81e1d45c56fc006bc530a">&#9670;&nbsp;</a></span>broadStartPoints</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;int, <a class="el" href="class_physics_1_1_collision_1_1_projection_point.html">ProjectionPoint</a>&gt; Physics.PhysicsWorld.broadStartPoints</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac105e4ff292de64393142193747a739b" name="ac105e4ff292de64393142193747a739b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac105e4ff292de64393142193747a739b">&#9670;&nbsp;</a></span>collisionList</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_physics_1_1_collision_1_1_collision_object.html">CollisionObject</a>&gt; Physics.PhysicsWorld.collisionList</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ba329785d133103a5413fbe51252840" name="a7ba329785d133103a5413fbe51252840"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ba329785d133103a5413fbe51252840">&#9670;&nbsp;</a></span>collisionPairs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_physics_1_1_collision_1_1_collision_pair.html">CollisionPair</a>&gt; Physics.PhysicsWorld.collisionPairs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab867c8bcfe9a9f359aac6f7fb70ffabb" name="ab867c8bcfe9a9f359aac6f7fb70ffabb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab867c8bcfe9a9f359aac6f7fb70ffabb">&#9670;&nbsp;</a></span>epsilon</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Physics.PhysicsWorld.epsilon = 0.0001f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11a1ef8cca87da54b8ef6233fdadf60e" name="a11a1ef8cca87da54b8ef6233fdadf60e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11a1ef8cca87da54b8ef6233fdadf60e">&#9670;&nbsp;</a></span>horAABBProjList</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_physics_1_1_collision_1_1_projection_point.html">ProjectionPoint</a>&gt; Physics.PhysicsWorld.horAABBProjList</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2661091d8cbac4f98bc8a69fab74d2ef" name="a2661091d8cbac4f98bc8a69fab74d2ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2661091d8cbac4f98bc8a69fab74d2ef">&#9670;&nbsp;</a></span>maxIterCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Physics.PhysicsWorld.maxIterCount = 10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff0d4eaa68bab96dc8e9c2dd192c9563" name="aff0d4eaa68bab96dc8e9c2dd192c9563"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff0d4eaa68bab96dc8e9c2dd192c9563">&#9670;&nbsp;</a></span>simplexList</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Vector3&gt; Physics.PhysicsWorld.simplexList = new List&lt;Vector3&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ff760625979980505e432ad8acdc499" name="a4ff760625979980505e432ad8acdc499"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ff760625979980505e432ad8acdc499">&#9670;&nbsp;</a></span>tickFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Physics.PhysicsWorld.tickFrame = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>/Users/zhuangshaokun/Documents/git/campfire/2dcollisiondetection/Assets/Scripts/<a class="el" href="_physics_world_8cs.html">PhysicsWorld.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_physics.html">Physics</a></li><li class="navelem"><a class="el" href="class_physics_1_1_physics_world.html">PhysicsWorld</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

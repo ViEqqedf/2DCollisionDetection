@@ -1,0 +1,226 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree}{}\doxysection{Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree}\index{Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.382716cm]{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a2d267b7e48c7453ac0eae38a1835caaa}{Prewarm}} ()
+\item 
+virtual \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option}{IFuzzy\+Option}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a448d87a21a4f3d7820b5af951471cbc4}{Option}} (object item)
+\item 
+abstract IEnumerable$<$ object $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a97c42d299ba675ede5d101e8301b1f2f}{Root}} ()
+\item 
+abstract IEnumerable$<$ object $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_ac281332c589d996230a1038d756aa279}{Children}} (object parent)
+\item 
+virtual IEnumerable$<$ object $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_aa491341d3ba4f2c1fb734dd33c2eeb71}{Ordered\+Search\+Results}} (string query, Cancellation\+Token cancellation)
+\item 
+virtual IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_search_result}{ISearch\+Result}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a603790ead803e054da37d9c579a2c968}{Search\+Results}} (string query, Cancellation\+Token cancellation)
+\item 
+virtual string \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a485329da9274de9e4d8f1780b515a0e9}{Search\+Result\+Label}} (object item, string query)
+\item 
+virtual string \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_acab7d9548ed3298c9b180dd1f574e143}{Favorites\+Label}} (object item)
+\item 
+virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a9f9a4bc66c5cb2a92c58997dbdd107ea}{Can\+Favorite}} (object item)
+\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_afeb06a14bef797abfc93a924c8017269}{On\+Favorites\+Change}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a6c6f18b17ba13fc646c985d1a932fb52}\label{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a6c6f18b17ba13fc646c985d1a932fb52}} 
+{\bfseries Fuzzy\+Option\+Tree} (GUIContent header)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a87f21a5b11461ac5672ada58592017f4}\label{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a87f21a5b11461ac5672ada58592017f4}} 
+virtual \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option}{IFuzzy\+Option}} {\bfseries Get\+Null\+Option} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+GUIContent \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_acdad50d939c9287264b9e01bebb784fe}{header}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+ICollection$<$ object $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a7f6f076d2483a4d32986cbd15f939bdd}{selected}} = new Hash\+Set$<$object$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a7acc5d89c4389df82fa310b989846ad9}{show\+Background\+Worker\+Progress}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_acc0f57004c175691fa87f29cd8e69a84}{multithreaded}} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a7bade1ecc48fd492ac14f7c85300e498}{searchable}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual ICollection$<$ object $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a8c6d05ed2b44bebb8b12846ddb1aa03e}{favorites}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a9f9a4bc66c5cb2a92c58997dbdd107ea}\label{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a9f9a4bc66c5cb2a92c58997dbdd107ea}} 
+\index{Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}!CanFavorite@{CanFavorite}}
+\index{CanFavorite@{CanFavorite}!Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}}
+\doxysubsubsection{\texorpdfstring{CanFavorite()}{CanFavorite()}}
+{\footnotesize\ttfamily virtual bool Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree.\+Can\+Favorite (\begin{DoxyParamCaption}\item[{object}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+IFuzzy\+Option\+Tree}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_ac281332c589d996230a1038d756aa279}\label{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_ac281332c589d996230a1038d756aa279}} 
+\index{Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}!Children@{Children}}
+\index{Children@{Children}!Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}}
+\doxysubsubsection{\texorpdfstring{Children()}{Children()}}
+{\footnotesize\ttfamily abstract IEnumerable$<$ object $>$ Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree.\+Children (\begin{DoxyParamCaption}\item[{object}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+IFuzzy\+Option\+Tree}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_acab7d9548ed3298c9b180dd1f574e143}\label{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_acab7d9548ed3298c9b180dd1f574e143}} 
+\index{Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}!FavoritesLabel@{FavoritesLabel}}
+\index{FavoritesLabel@{FavoritesLabel}!Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}}
+\doxysubsubsection{\texorpdfstring{FavoritesLabel()}{FavoritesLabel()}}
+{\footnotesize\ttfamily virtual string Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree.\+Favorites\+Label (\begin{DoxyParamCaption}\item[{object}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+IFuzzy\+Option\+Tree}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_afeb06a14bef797abfc93a924c8017269}\label{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_afeb06a14bef797abfc93a924c8017269}} 
+\index{Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}!OnFavoritesChange@{OnFavoritesChange}}
+\index{OnFavoritesChange@{OnFavoritesChange}!Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}}
+\doxysubsubsection{\texorpdfstring{OnFavoritesChange()}{OnFavoritesChange()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree.\+On\+Favorites\+Change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+IFuzzy\+Option\+Tree}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a448d87a21a4f3d7820b5af951471cbc4}\label{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a448d87a21a4f3d7820b5af951471cbc4}} 
+\index{Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}!Option@{Option}}
+\index{Option@{Option}!Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}}
+\doxysubsubsection{\texorpdfstring{Option()}{Option()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option}{IFuzzy\+Option}} Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree.\+Option (\begin{DoxyParamCaption}\item[{object}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+IFuzzy\+Option\+Tree}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_aa491341d3ba4f2c1fb734dd33c2eeb71}\label{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_aa491341d3ba4f2c1fb734dd33c2eeb71}} 
+\index{Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}!OrderedSearchResults@{OrderedSearchResults}}
+\index{OrderedSearchResults@{OrderedSearchResults}!Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}}
+\doxysubsubsection{\texorpdfstring{OrderedSearchResults()}{OrderedSearchResults()}}
+{\footnotesize\ttfamily virtual IEnumerable$<$ object $>$ Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree.\+Ordered\+Search\+Results (\begin{DoxyParamCaption}\item[{string}]{query,  }\item[{Cancellation\+Token}]{cancellation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+IFuzzy\+Option\+Tree}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a2d267b7e48c7453ac0eae38a1835caaa}\label{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a2d267b7e48c7453ac0eae38a1835caaa}} 
+\index{Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}!Prewarm@{Prewarm}}
+\index{Prewarm@{Prewarm}!Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}}
+\doxysubsubsection{\texorpdfstring{Prewarm()}{Prewarm()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree.\+Prewarm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+IFuzzy\+Option\+Tree}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a97c42d299ba675ede5d101e8301b1f2f}\label{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a97c42d299ba675ede5d101e8301b1f2f}} 
+\index{Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}!Root@{Root}}
+\index{Root@{Root}!Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}}
+\doxysubsubsection{\texorpdfstring{Root()}{Root()}}
+{\footnotesize\ttfamily abstract IEnumerable$<$ object $>$ Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree.\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+IFuzzy\+Option\+Tree}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a485329da9274de9e4d8f1780b515a0e9}\label{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a485329da9274de9e4d8f1780b515a0e9}} 
+\index{Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}!SearchResultLabel@{SearchResultLabel}}
+\index{SearchResultLabel@{SearchResultLabel}!Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}}
+\doxysubsubsection{\texorpdfstring{SearchResultLabel()}{SearchResultLabel()}}
+{\footnotesize\ttfamily virtual string Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree.\+Search\+Result\+Label (\begin{DoxyParamCaption}\item[{object}]{item,  }\item[{string}]{query }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+IFuzzy\+Option\+Tree}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a603790ead803e054da37d9c579a2c968}\label{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a603790ead803e054da37d9c579a2c968}} 
+\index{Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}!SearchResults@{SearchResults}}
+\index{SearchResults@{SearchResults}!Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}}
+\doxysubsubsection{\texorpdfstring{SearchResults()}{SearchResults()}}
+{\footnotesize\ttfamily virtual IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_search_result}{ISearch\+Result}} $>$ Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree.\+Search\+Results (\begin{DoxyParamCaption}\item[{string}]{query,  }\item[{Cancellation\+Token}]{cancellation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+IFuzzy\+Option\+Tree}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a8c6d05ed2b44bebb8b12846ddb1aa03e}\label{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a8c6d05ed2b44bebb8b12846ddb1aa03e}} 
+\index{Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}!favorites@{favorites}}
+\index{favorites@{favorites}!Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}}
+\doxysubsubsection{\texorpdfstring{favorites}{favorites}}
+{\footnotesize\ttfamily virtual ICollection$<$object$>$ Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree.\+favorites\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+IFuzzy\+Option\+Tree}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_acdad50d939c9287264b9e01bebb784fe}\label{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_acdad50d939c9287264b9e01bebb784fe}} 
+\index{Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}!header@{header}}
+\index{header@{header}!Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}}
+\doxysubsubsection{\texorpdfstring{header}{header}}
+{\footnotesize\ttfamily GUIContent Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree.\+header\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+IFuzzy\+Option\+Tree}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_acc0f57004c175691fa87f29cd8e69a84}\label{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_acc0f57004c175691fa87f29cd8e69a84}} 
+\index{Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}!multithreaded@{multithreaded}}
+\index{multithreaded@{multithreaded}!Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}}
+\doxysubsubsection{\texorpdfstring{multithreaded}{multithreaded}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree.\+multithreaded = true\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+IFuzzy\+Option\+Tree}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a7bade1ecc48fd492ac14f7c85300e498}\label{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a7bade1ecc48fd492ac14f7c85300e498}} 
+\index{Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}!searchable@{searchable}}
+\index{searchable@{searchable}!Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}}
+\doxysubsubsection{\texorpdfstring{searchable}{searchable}}
+{\footnotesize\ttfamily virtual bool Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree.\+searchable = false\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+IFuzzy\+Option\+Tree}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a7f6f076d2483a4d32986cbd15f939bdd}\label{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a7f6f076d2483a4d32986cbd15f939bdd}} 
+\index{Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}!selected@{selected}}
+\index{selected@{selected}!Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}}
+\doxysubsubsection{\texorpdfstring{selected}{selected}}
+{\footnotesize\ttfamily ICollection$<$object$>$ Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree.\+selected = new Hash\+Set$<$object$>$()\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+IFuzzy\+Option\+Tree}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a7acc5d89c4389df82fa310b989846ad9}\label{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree_a7acc5d89c4389df82fa310b989846ad9}} 
+\index{Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}!showBackgroundWorkerProgress@{showBackgroundWorkerProgress}}
+\index{showBackgroundWorkerProgress@{showBackgroundWorkerProgress}!Unity.VisualScripting.FuzzyOptionTree@{Unity.VisualScripting.FuzzyOptionTree}}
+\doxysubsubsection{\texorpdfstring{showBackgroundWorkerProgress}{showBackgroundWorkerProgress}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree.\+show\+Background\+Worker\+Progress\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+IFuzzy\+Option\+Tree}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Editor/\+Visual\+Scripting.\+Core/\+Interface/\+Fuzzy/Fuzzy\+Option\+Tree.\+cs\end{DoxyCompactItemize}

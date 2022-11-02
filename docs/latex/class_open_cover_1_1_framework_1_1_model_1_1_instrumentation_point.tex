@@ -1,0 +1,110 @@
+\hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point}{}\doxysection{Open\+Cover.\+Framework.\+Model.\+Instrumentation\+Point Class Reference}
+\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point}\index{OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}}
+
+
+An instrumentable point  
+
+
+Inheritance diagram for Open\+Cover.\+Framework.\+Model.\+Instrumentation\+Point\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.818182cm]{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_abf1f5a759b83e6e53faf6df722638d2f}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_abf1f5a759b83e6e53faf6df722638d2f}} 
+{\bfseries Instrumentation\+Point} ()
+\begin{DoxyCompactList}\small\item\em Initialise \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a0309325ad6e8a6cca6e91be50a70e7f3}{Get\+Visit\+Count}} (uint spid)
+\begin{DoxyCompactList}\small\item\em Get the number of recorded visit points for this identifier \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_ae8579039c5c75e23d4474d62a2457f49}{Add\+Visit\+Count}} (uint spid, uint tracked\+Method\+Id, int amount)
+\begin{DoxyCompactList}\small\item\em Add a number of recorded visit ppints against this identifier \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a58da9ea8b8216c1f387828821a5a5e8d}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a58da9ea8b8216c1f387828821a5a5e8d}} 
+static int {\bfseries Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Return the number of visit points \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a8befcc5b4f17fa901cbbe057c771b410}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a8befcc5b4f17fa901cbbe057c771b410}} 
+int {\bfseries Visit\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Store the number of visits \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a43fa72171a5b99352c5af799a85595fe}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a43fa72171a5b99352c5af799a85595fe}} 
+UInt32 {\bfseries Unique\+Sequence\+Point}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A unique number \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a9b258958e63c3850857464195a8b9ba1}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a9b258958e63c3850857464195a8b9ba1}} 
+UInt32 {\bfseries Ordinal}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An order of the point within the method \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_adf03c9429e2cf5afcdaf68d2acdaee8a}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_adf03c9429e2cf5afcdaf68d2acdaee8a}} 
+int {\bfseries Offset}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The IL offset of the point \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_aa54aac19e730cb255497bcc43df833e9}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_aa54aac19e730cb255497bcc43df833e9}} 
+bool {\bfseries Is\+Skipped}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Used to hide an instrumentation point \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a8b2df392a97df855a87ae7ab3da51ef4}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a8b2df392a97df855a87ae7ab3da51ef4}} 
+\mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_tracked_method_ref}{Tracked\+Method\+Ref}}\mbox{[}$\,$\mbox{]} {\bfseries Tracked\+Method\+Refs}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of tracked methods \end{DoxyCompactList}\item 
+UInt32 \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_adcdd02513b3388e7a1e810345136c401}{Orig\+Sequence\+Point}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An instrumentable point 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_ae8579039c5c75e23d4474d62a2457f49}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_ae8579039c5c75e23d4474d62a2457f49}} 
+\index{OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}!AddVisitCount@{AddVisitCount}}
+\index{AddVisitCount@{AddVisitCount}!OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}}
+\doxysubsubsection{\texorpdfstring{AddVisitCount()}{AddVisitCount()}}
+{\footnotesize\ttfamily static bool Open\+Cover.\+Framework.\+Model.\+Instrumentation\+Point.\+Add\+Visit\+Count (\begin{DoxyParamCaption}\item[{uint}]{spid,  }\item[{uint}]{tracked\+Method\+Id,  }\item[{int}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Add a number of recorded visit ppints against this identifier 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spid} & the sequence point identifier -\/ NOTE 0 is not used\\
+\hline
+{\em tracked\+Method\+Id} & the id of a tracked method -\/ Note 0 means no method currently tracking\\
+\hline
+{\em amount} & the number of visit points to add\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a0309325ad6e8a6cca6e91be50a70e7f3}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a0309325ad6e8a6cca6e91be50a70e7f3}} 
+\index{OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}!GetVisitCount@{GetVisitCount}}
+\index{GetVisitCount@{GetVisitCount}!OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}}
+\doxysubsubsection{\texorpdfstring{GetVisitCount()}{GetVisitCount()}}
+{\footnotesize\ttfamily static int Open\+Cover.\+Framework.\+Model.\+Instrumentation\+Point.\+Get\+Visit\+Count (\begin{DoxyParamCaption}\item[{uint}]{spid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the number of recorded visit points for this identifier 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spid} & the sequence point identifier -\/ NOTE 0 is not used\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_adcdd02513b3388e7a1e810345136c401}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_adcdd02513b3388e7a1e810345136c401}} 
+\index{OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}!OrigSequencePoint@{OrigSequencePoint}}
+\index{OrigSequencePoint@{OrigSequencePoint}!OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}}
+\doxysubsubsection{\texorpdfstring{OrigSequencePoint}{OrigSequencePoint}}
+{\footnotesize\ttfamily UInt32 Open\+Cover.\+Framework.\+Model.\+Instrumentation\+Point.\+Orig\+Sequence\+Point\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+testtools.\+codecoverage@1.\+0.\+1/\+Editor/\+Coverage\+Formats/\+Open\+Cover/\+Model/Instrumentation\+Point.\+cs\end{DoxyCompactItemize}

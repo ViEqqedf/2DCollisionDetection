@@ -1,0 +1,128 @@
+\hypertarget{class_unity_engine_1_1_event_systems_1_1_base_raycaster}{}\doxysection{Unity\+Engine.\+Event\+Systems.\+Base\+Raycaster Class Reference}
+\label{class_unity_engine_1_1_event_systems_1_1_base_raycaster}\index{UnityEngine.EventSystems.BaseRaycaster@{UnityEngine.EventSystems.BaseRaycaster}}
+
+
+Base class for any Ray\+Caster.  
+
+
+Inheritance diagram for Unity\+Engine.\+Event\+Systems.\+Base\+Raycaster\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.827586cm]{class_unity_engine_1_1_event_systems_1_1_base_raycaster}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_raycaster_ac03b822ff3220ed496262a02ba2e36e8}{Raycast}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data, List$<$ \mbox{\hyperlink{struct_unity_engine_1_1_event_systems_1_1_raycast_result}{Raycast\+Result}} $>$ result\+Append\+List)
+\begin{DoxyCompactList}\small\item\em Raycast against the scene. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_raycaster_a68879ae0d437cf2ff1b2bfe5671fc682}\label{class_unity_engine_1_1_event_systems_1_1_base_raycaster_a68879ae0d437cf2ff1b2bfe5671fc682}} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_raycaster_a15d139b200fa1c6a1c6a2bf3ad7259bf}{On\+Enable}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_raycaster_a5eb6b54be7f3f21030d75f6acdcf281a}{On\+Disable}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_raycaster_a164c59b009794bd834c96e17acfa17c4}{On\+Canvas\+Hierarchy\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Called when the state of the parent Canvas is changed. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_raycaster_ae20244674ef36887fed21bb2b2c4b351}{On\+Transform\+Parent\+Changed}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_raycaster_a6ad3dd6d549deb71c261a78ff702341d}\label{class_unity_engine_1_1_event_systems_1_1_base_raycaster_a6ad3dd6d549deb71c261a78ff702341d}} 
+abstract Camera {\bfseries event\+Camera}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The camera that will generate rays for this raycaster. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_raycaster_aa9f368b4f177f6cead5f320d25dbe530}\label{class_unity_engine_1_1_event_systems_1_1_base_raycaster_aa9f368b4f177f6cead5f320d25dbe530}} 
+virtual int {\bfseries priority}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_raycaster_a4c1fad10a278b053a6959232d9af8506}\label{class_unity_engine_1_1_event_systems_1_1_base_raycaster_a4c1fad10a278b053a6959232d9af8506}} 
+virtual int {\bfseries sort\+Order\+Priority}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Priority of the raycaster based upon sort order. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_raycaster_a84b9bdb6a8270b551d5592786420ae75}\label{class_unity_engine_1_1_event_systems_1_1_base_raycaster_a84b9bdb6a8270b551d5592786420ae75}} 
+virtual int {\bfseries render\+Order\+Priority}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Priority of the raycaster based upon render order. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_raycaster_aa773b94a55a79e49641565f77e289cd3}\label{class_unity_engine_1_1_event_systems_1_1_base_raycaster_aa773b94a55a79e49641565f77e289cd3}} 
+\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_raycaster}{Base\+Raycaster}} {\bfseries root\+Raycaster}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Raycaster on root canvas \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for any Ray\+Caster. 
+
+A Raycaster is responsible for raycasting against scene elements to determine if the cursor is over them. Default Raycasters include \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_physics_raycaster}{Physics\+Raycaster}}, \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_physics2_d_raycaster}{Physics2\+DRaycaster}}, Graphic\+Raycaster. Custom raycasters can be added by extending this class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_raycaster_a164c59b009794bd834c96e17acfa17c4}\label{class_unity_engine_1_1_event_systems_1_1_base_raycaster_a164c59b009794bd834c96e17acfa17c4}} 
+\index{UnityEngine.EventSystems.BaseRaycaster@{UnityEngine.EventSystems.BaseRaycaster}!OnCanvasHierarchyChanged@{OnCanvasHierarchyChanged}}
+\index{OnCanvasHierarchyChanged@{OnCanvasHierarchyChanged}!UnityEngine.EventSystems.BaseRaycaster@{UnityEngine.EventSystems.BaseRaycaster}}
+\doxysubsubsection{\texorpdfstring{OnCanvasHierarchyChanged()}{OnCanvasHierarchyChanged()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Event\+Systems.\+Base\+Raycaster.\+On\+Canvas\+Hierarchy\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called when the state of the parent Canvas is changed. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a73f180fef8560a44a756525ecfe3092f}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_raycaster_a5eb6b54be7f3f21030d75f6acdcf281a}\label{class_unity_engine_1_1_event_systems_1_1_base_raycaster_a5eb6b54be7f3f21030d75f6acdcf281a}} 
+\index{UnityEngine.EventSystems.BaseRaycaster@{UnityEngine.EventSystems.BaseRaycaster}!OnDisable@{OnDisable}}
+\index{OnDisable@{OnDisable}!UnityEngine.EventSystems.BaseRaycaster@{UnityEngine.EventSystems.BaseRaycaster}}
+\doxysubsubsection{\texorpdfstring{OnDisable()}{OnDisable()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Event\+Systems.\+Base\+Raycaster.\+On\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_raycaster_a15d139b200fa1c6a1c6a2bf3ad7259bf}\label{class_unity_engine_1_1_event_systems_1_1_base_raycaster_a15d139b200fa1c6a1c6a2bf3ad7259bf}} 
+\index{UnityEngine.EventSystems.BaseRaycaster@{UnityEngine.EventSystems.BaseRaycaster}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!UnityEngine.EventSystems.BaseRaycaster@{UnityEngine.EventSystems.BaseRaycaster}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Event\+Systems.\+Base\+Raycaster.\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_raycaster_ae20244674ef36887fed21bb2b2c4b351}\label{class_unity_engine_1_1_event_systems_1_1_base_raycaster_ae20244674ef36887fed21bb2b2c4b351}} 
+\index{UnityEngine.EventSystems.BaseRaycaster@{UnityEngine.EventSystems.BaseRaycaster}!OnTransformParentChanged@{OnTransformParentChanged}}
+\index{OnTransformParentChanged@{OnTransformParentChanged}!UnityEngine.EventSystems.BaseRaycaster@{UnityEngine.EventSystems.BaseRaycaster}}
+\doxysubsubsection{\texorpdfstring{OnTransformParentChanged()}{OnTransformParentChanged()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Event\+Systems.\+Base\+Raycaster.\+On\+Transform\+Parent\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_base_raycaster_ac03b822ff3220ed496262a02ba2e36e8}\label{class_unity_engine_1_1_event_systems_1_1_base_raycaster_ac03b822ff3220ed496262a02ba2e36e8}} 
+\index{UnityEngine.EventSystems.BaseRaycaster@{UnityEngine.EventSystems.BaseRaycaster}!Raycast@{Raycast}}
+\index{Raycast@{Raycast}!UnityEngine.EventSystems.BaseRaycaster@{UnityEngine.EventSystems.BaseRaycaster}}
+\doxysubsubsection{\texorpdfstring{Raycast()}{Raycast()}}
+{\footnotesize\ttfamily abstract void Unity\+Engine.\+Event\+Systems.\+Base\+Raycaster.\+Raycast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}}}]{event\+Data,  }\item[{List$<$ \mbox{\hyperlink{struct_unity_engine_1_1_event_systems_1_1_raycast_result}{Raycast\+Result}} $>$}]{result\+Append\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Raycast against the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & Current event data.\\
+\hline
+{\em result\+Append\+List} & List of hit Objects.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_physics2_d_raycaster_a0532c4f35190f2829cc1c4774c004361}{Unity\+Engine.\+Event\+Systems.\+Physics2\+DRaycaster}}, \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a1a105b0170a7ef07583aac2839d7a9f2}{Unity\+Engine.\+Event\+Systems.\+Physics\+Raycaster}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_aeda417b94b26f589328f71b442e21fe4}{Unity\+Engine.\+UI.\+Graphic\+Raycaster}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+Event\+System/\+Raycasters/Base\+Raycaster.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,137 @@
+\hypertarget{class_unity_engine_1_1_timeline_1_1_prefab_control_playable}{}\doxysection{Unity\+Engine.\+Timeline.\+Prefab\+Control\+Playable Class Reference}
+\label{class_unity_engine_1_1_timeline_1_1_prefab_control_playable}\index{UnityEngine.Timeline.PrefabControlPlayable@{UnityEngine.Timeline.PrefabControlPlayable}}
+
+
+Playable that controls and instantiates a Prefab.  
+
+
+Inheritance diagram for Unity\+Engine.\+Timeline.\+Prefab\+Control\+Playable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_timeline_1_1_prefab_control_playable}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_prefab_control_playable_a9fa37b3952a52422fa60114a4618a892}{Initialize}} (Game\+Object prefab\+Game\+Object, Transform parent\+Transform)
+\begin{DoxyCompactList}\small\item\em Initializes the behaviour with a prefab and parent transform \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_prefab_control_playable_a0c789be19611f6d37c5682780ca88b20}{On\+Playable\+Destroy}} (Playable playable)
+\begin{DoxyCompactList}\small\item\em This function is called when the Playable that owns the Playable\+Behaviour is destroyed. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_prefab_control_playable_ab702e569512d6a3ac37502eab0fe9d96}{On\+Behaviour\+Play}} (Playable playable, Frame\+Data info)
+\begin{DoxyCompactList}\small\item\em This function is called when the Playable play state is changed to Playables.\+Play\+State.\+Playing. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_prefab_control_playable_a4a61392cd89539dcb86f511c1037b820}{On\+Behaviour\+Pause}} (Playable playable, Frame\+Data info)
+\begin{DoxyCompactList}\small\item\em This function is called when the Playable play state is changed to Play\+State.\+Paused. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Script\+Playable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_prefab_control_playable}{Prefab\+Control\+Playable}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_prefab_control_playable_af7e8c1a785cf9318b7dbd99b456008e1}{Create}} (Playable\+Graph graph, Game\+Object prefab\+Game\+Object, Transform parent\+Transform)
+\begin{DoxyCompactList}\small\item\em Creates a Playable with a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_prefab_control_playable}{Prefab\+Control\+Playable}} behaviour attached \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_prefab_control_playable_a95a13beb2036577c98f37a3c1010b75a}\label{class_unity_engine_1_1_timeline_1_1_prefab_control_playable_a95a13beb2036577c98f37a3c1010b75a}} 
+Game\+Object {\bfseries prefab\+Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The instance of the prefab created by this behaviour \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Playable that controls and instantiates a Prefab. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_prefab_control_playable_af7e8c1a785cf9318b7dbd99b456008e1}\label{class_unity_engine_1_1_timeline_1_1_prefab_control_playable_af7e8c1a785cf9318b7dbd99b456008e1}} 
+\index{UnityEngine.Timeline.PrefabControlPlayable@{UnityEngine.Timeline.PrefabControlPlayable}!Create@{Create}}
+\index{Create@{Create}!UnityEngine.Timeline.PrefabControlPlayable@{UnityEngine.Timeline.PrefabControlPlayable}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily static Script\+Playable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_prefab_control_playable}{Prefab\+Control\+Playable}} $>$ Unity\+Engine.\+Timeline.\+Prefab\+Control\+Playable.\+Create (\begin{DoxyParamCaption}\item[{Playable\+Graph}]{graph,  }\item[{Game\+Object}]{prefab\+Game\+Object,  }\item[{Transform}]{parent\+Transform }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Creates a Playable with a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_prefab_control_playable}{Prefab\+Control\+Playable}} behaviour attached 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & The Playable\+Graph to inject the Playable into.\\
+\hline
+{\em prefab\+Game\+Object} & The prefab to instantiate from\\
+\hline
+{\em parent\+Transform} & Transform to parent instance to. Can be null.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a Playabe with \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_prefab_control_playable}{Prefab\+Control\+Playable}} behaviour attached.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_prefab_control_playable_a9fa37b3952a52422fa60114a4618a892}\label{class_unity_engine_1_1_timeline_1_1_prefab_control_playable_a9fa37b3952a52422fa60114a4618a892}} 
+\index{UnityEngine.Timeline.PrefabControlPlayable@{UnityEngine.Timeline.PrefabControlPlayable}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!UnityEngine.Timeline.PrefabControlPlayable@{UnityEngine.Timeline.PrefabControlPlayable}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily Game\+Object Unity\+Engine.\+Timeline.\+Prefab\+Control\+Playable.\+Initialize (\begin{DoxyParamCaption}\item[{Game\+Object}]{prefab\+Game\+Object,  }\item[{Transform}]{parent\+Transform }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes the behaviour with a prefab and parent transform 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefab\+Game\+Object} & The prefab to instantiate from\\
+\hline
+{\em parent\+Transform} & Transform to parent instance to. Can be null.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created instance
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_prefab_control_playable_a4a61392cd89539dcb86f511c1037b820}\label{class_unity_engine_1_1_timeline_1_1_prefab_control_playable_a4a61392cd89539dcb86f511c1037b820}} 
+\index{UnityEngine.Timeline.PrefabControlPlayable@{UnityEngine.Timeline.PrefabControlPlayable}!OnBehaviourPause@{OnBehaviourPause}}
+\index{OnBehaviourPause@{OnBehaviourPause}!UnityEngine.Timeline.PrefabControlPlayable@{UnityEngine.Timeline.PrefabControlPlayable}}
+\doxysubsubsection{\texorpdfstring{OnBehaviourPause()}{OnBehaviourPause()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Prefab\+Control\+Playable.\+On\+Behaviour\+Pause (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called when the Playable play state is changed to Play\+State.\+Paused. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The playable this behaviour is attached to.\\
+\hline
+{\em info} & A Frame\+Data structure that contains information about the current frame context.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_prefab_control_playable_ab702e569512d6a3ac37502eab0fe9d96}\label{class_unity_engine_1_1_timeline_1_1_prefab_control_playable_ab702e569512d6a3ac37502eab0fe9d96}} 
+\index{UnityEngine.Timeline.PrefabControlPlayable@{UnityEngine.Timeline.PrefabControlPlayable}!OnBehaviourPlay@{OnBehaviourPlay}}
+\index{OnBehaviourPlay@{OnBehaviourPlay}!UnityEngine.Timeline.PrefabControlPlayable@{UnityEngine.Timeline.PrefabControlPlayable}}
+\doxysubsubsection{\texorpdfstring{OnBehaviourPlay()}{OnBehaviourPlay()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Prefab\+Control\+Playable.\+On\+Behaviour\+Play (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called when the Playable play state is changed to Playables.\+Play\+State.\+Playing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The Playable that owns the current Playable\+Behaviour.\\
+\hline
+{\em info} & A Frame\+Data structure that contains information about the current frame context.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_prefab_control_playable_a0c789be19611f6d37c5682780ca88b20}\label{class_unity_engine_1_1_timeline_1_1_prefab_control_playable_a0c789be19611f6d37c5682780ca88b20}} 
+\index{UnityEngine.Timeline.PrefabControlPlayable@{UnityEngine.Timeline.PrefabControlPlayable}!OnPlayableDestroy@{OnPlayableDestroy}}
+\index{OnPlayableDestroy@{OnPlayableDestroy}!UnityEngine.Timeline.PrefabControlPlayable@{UnityEngine.Timeline.PrefabControlPlayable}}
+\doxysubsubsection{\texorpdfstring{OnPlayableDestroy()}{OnPlayableDestroy()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Prefab\+Control\+Playable.\+On\+Playable\+Destroy (\begin{DoxyParamCaption}\item[{Playable}]{playable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called when the Playable that owns the Playable\+Behaviour is destroyed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The playable this behaviour is attached to.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Playables/Prefab\+Control\+Playable.\+cs\end{DoxyCompactItemize}

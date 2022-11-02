@@ -1,0 +1,164 @@
+\hypertarget{namespace_unity_engine_1_1_event_systems}{}\doxysection{Unity\+Engine.\+Event\+Systems Namespace Reference}
+\label{namespace_unity_engine_1_1_event_systems}\index{UnityEngine.EventSystems@{UnityEngine.EventSystems}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_abstract_event_data}{Abstract\+Event\+Data}}
+\begin{DoxyCompactList}\small\item\em A class that can be used for sending simple events via the event system. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_axis_event_data}{Axis\+Event\+Data}}
+\begin{DoxyCompactList}\small\item\em Event Data associated with Axis Events (Controller / Keyboard). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_event_data}{Base\+Event\+Data}}
+\begin{DoxyCompactList}\small\item\em A class that contains the base event data that is common to all event types in the new \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_event_system}{Event\+System}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_input}{Base\+Input}}
+\begin{DoxyCompactList}\small\item\em Interface to the Input system used by the Base\+Input\+Module. With this it is possible to bypass the Input system with your own but still use the same Input\+Module. For example this can be used to feed fake input into the \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} or interface with a different input system. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_raycaster}{Base\+Raycaster}}
+\begin{DoxyCompactList}\small\item\em Base class for any Ray\+Caster. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_event_system}{Event\+System}}
+\begin{DoxyCompactList}\small\item\em Handles input, raycasting, and sending events. \end{DoxyCompactList}\item 
+class {\bfseries Execute\+Events}
+\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_event_system_handler}{IEvent\+System\+Handler}}
+\begin{DoxyCompactList}\small\item\em Base class that all \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_event_system}{Event\+System}} events inherit from. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_down_handler}{IPointer\+Down\+Handler}}
+\begin{DoxyCompactList}\small\item\em Interface to implement if you wish to receive On\+Pointer\+Down callbacks. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_enter_handler}{IPointer\+Enter\+Handler}}
+\begin{DoxyCompactList}\small\item\em Interface to implement if you wish to receive On\+Pointer\+Enter callbacks. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_exit_handler}{IPointer\+Exit\+Handler}}
+\begin{DoxyCompactList}\small\item\em Interface to implement if you wish to receive On\+Pointer\+Exit callbacks. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_move_handler}{IPointer\+Move\+Handler}}
+\begin{DoxyCompactList}\small\item\em Interface to implement if you wish to receive On\+Pointer\+Move callbacks. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_up_handler}{IPointer\+Up\+Handler}}
+\begin{DoxyCompactList}\small\item\em Interface to implement if you wish to receive On\+Pointer\+Up callbacks. Note\+: In order to receive On\+Pointer\+Up callbacks, you must also implement the \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_down_handler}{Event\+Systems.\+IPointer\+Down\+Handler}}$\vert$\+IPointer\+Down\+Handler interface \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_physics2_d_raycaster}{Physics2\+DRaycaster}}
+\begin{DoxyCompactList}\small\item\em Simple event system using physics raycasts. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_physics_raycaster}{Physics\+Raycaster}}
+\begin{DoxyCompactList}\small\item\em Simple event system using physics raycasts. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}}
+\begin{DoxyCompactList}\small\item\em Each touch event creates one of these containing all the relevant information. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_input_module}{Pointer\+Input\+Module}}
+\begin{DoxyCompactList}\small\item\em A Base\+Input\+Module for pointer input. \end{DoxyCompactList}\item 
+class {\bfseries Raycaster\+Manager}
+\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_event_systems_1_1_raycast_result}{Raycast\+Result}}
+\begin{DoxyCompactList}\small\item\em A hit result from a \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_raycaster}{Base\+Raycaster}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_standalone_input_module}{Standalone\+Input\+Module}}
+\begin{DoxyCompactList}\small\item\em A Base\+Input\+Module designed for mouse / keyboard / controller input. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_touch_input_module}{Touch\+Input\+Module}}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{UIBehaviour}}
+\begin{DoxyCompactList}\small\item\em Base behaviour that has protected implementations of \mbox{\hyperlink{namespace_unity}{Unity}} lifecycle functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_unity_engine_1_1_event_systems_a828b34516cd471eebba1c98ca1af6d3f}\label{namespace_unity_engine_1_1_event_systems_a828b34516cd471eebba1c98ca1af6d3f}} 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_a828b34516cd471eebba1c98ca1af6d3f}{Event\+Handle}} \{ {\bfseries Unused} = 0
+, {\bfseries Used} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Enum that tracks event State. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542}{Event\+Trigger\+Type}} \{ \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a9cb2a82b6c6dbdf3f668d6621c234005}{Pointer\+Enter}} = 0
+, \mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542abd4eb1a55261236ae884ac568329e5ff}{Pointer\+Exit}} = 1
+, \mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a23cff65874a91ddb2b943e68293cc193}{Pointer\+Down}} = 2
+, \mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a28db0c6190eb451aa32f1f578ce0919d}{Pointer\+Up}} = 3
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a501297bf2c8133d363eeb6dc3f4ac6d8}{Pointer\+Click}} = 4
+, \mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542ab8a4d4c7e6bb7b5534b856ce7a9ccde0}{Drag}} = 5
+, \mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a3e679cff5b3a6f6f8f32aead541a0a12}{Drop}} = 6
+, \mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a105078d294d30c978ca2badf7f376934}{Scroll}} = 7
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a08f544b71ca48d2ad7a7910868fa8c1c}{Update\+Selected}} = 8
+, \mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542ae0626222614bdee31951d84c64e5e9ff}{Select}} = 9
+, \mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a94186070ef6773ba0f1721c19980e487}{Deselect}} = 10
+, \mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a6bc362dbf494c61ea117fe3c71ca48a5}{Move}} = 11
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a657517dd0928d744aa3070bf265fe877}{Initialize\+Potential\+Drag}} = 12
+, \mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a6d80db4d90c11c442157b6a7e89c4787}{Begin\+Drag}} = 13
+, \mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a19dd09e3cc15215a78c2ebd574e54aac}{End\+Drag}} = 14
+, \mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542aa4d3b161ce1309df1c4e25df28694b7b}{Submit}} = 15
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542aea4788705e6873b424c65e91c2846b19}{Cancel}} = 16
+ \}
+\begin{DoxyCompactList}\small\item\em This class is capable of triggering one or more remote functions from a specified event. Usage\+: Attach it to an object with a collider, or to a GUI Graphic of your choice. NOTE\+: Doing this will make this object intercept ALL events, and no event bubbling will occur from this object! \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542}\label{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542}} 
+\index{UnityEngine.EventSystems@{UnityEngine.EventSystems}!EventTriggerType@{EventTriggerType}}
+\index{EventTriggerType@{EventTriggerType}!UnityEngine.EventSystems@{UnityEngine.EventSystems}}
+\doxysubsubsection{\texorpdfstring{EventTriggerType}{EventTriggerType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542}{Unity\+Engine.\+Event\+Systems.\+Event\+Trigger\+Type}}}
+
+
+
+This class is capable of triggering one or more remote functions from a specified event. Usage\+: Attach it to an object with a collider, or to a GUI Graphic of your choice. NOTE\+: Doing this will make this object intercept ALL events, and no event bubbling will occur from this object! 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PointerEnter@{PointerEnter}!UnityEngine.EventSystems@{UnityEngine.EventSystems}}\index{UnityEngine.EventSystems@{UnityEngine.EventSystems}!PointerEnter@{PointerEnter}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a9cb2a82b6c6dbdf3f668d6621c234005}\label{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a9cb2a82b6c6dbdf3f668d6621c234005}} 
+Pointer\+Enter&Intercepts a \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_enter_handler_a1f1655afc025835108734c39c6fa4502}{IPointer\+Enter\+Handler.\+On\+Pointer\+Enter}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PointerExit@{PointerExit}!UnityEngine.EventSystems@{UnityEngine.EventSystems}}\index{UnityEngine.EventSystems@{UnityEngine.EventSystems}!PointerExit@{PointerExit}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542abd4eb1a55261236ae884ac568329e5ff}\label{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542abd4eb1a55261236ae884ac568329e5ff}} 
+Pointer\+Exit&Intercepts a \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_exit_handler_a18f1534d07ff8c1fcac3e358c07c19e2}{IPointer\+Exit\+Handler.\+On\+Pointer\+Exit}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PointerDown@{PointerDown}!UnityEngine.EventSystems@{UnityEngine.EventSystems}}\index{UnityEngine.EventSystems@{UnityEngine.EventSystems}!PointerDown@{PointerDown}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a23cff65874a91ddb2b943e68293cc193}\label{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a23cff65874a91ddb2b943e68293cc193}} 
+Pointer\+Down&Intercepts a \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_down_handler_a18d183648f495d70fdcf81467f0c3715}{IPointer\+Down\+Handler.\+On\+Pointer\+Down}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PointerUp@{PointerUp}!UnityEngine.EventSystems@{UnityEngine.EventSystems}}\index{UnityEngine.EventSystems@{UnityEngine.EventSystems}!PointerUp@{PointerUp}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a28db0c6190eb451aa32f1f578ce0919d}\label{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a28db0c6190eb451aa32f1f578ce0919d}} 
+Pointer\+Up&Intercepts a \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_up_handler_a7fec90b677f1ca9648351c0e226d2c05}{IPointer\+Up\+Handler.\+On\+Pointer\+Up}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PointerClick@{PointerClick}!UnityEngine.EventSystems@{UnityEngine.EventSystems}}\index{UnityEngine.EventSystems@{UnityEngine.EventSystems}!PointerClick@{PointerClick}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a501297bf2c8133d363eeb6dc3f4ac6d8}\label{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a501297bf2c8133d363eeb6dc3f4ac6d8}} 
+Pointer\+Click&Intercepts a IPointer\+Click\+Handler.\+On\+Pointer\+Click. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Drag@{Drag}!UnityEngine.EventSystems@{UnityEngine.EventSystems}}\index{UnityEngine.EventSystems@{UnityEngine.EventSystems}!Drag@{Drag}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542ab8a4d4c7e6bb7b5534b856ce7a9ccde0}\label{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542ab8a4d4c7e6bb7b5534b856ce7a9ccde0}} 
+Drag&Intercepts a IDrag\+Handler.\+On\+Drag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Drop@{Drop}!UnityEngine.EventSystems@{UnityEngine.EventSystems}}\index{UnityEngine.EventSystems@{UnityEngine.EventSystems}!Drop@{Drop}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a3e679cff5b3a6f6f8f32aead541a0a12}\label{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a3e679cff5b3a6f6f8f32aead541a0a12}} 
+Drop&Intercepts a IDrop\+Handler.\+On\+Drop. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Scroll@{Scroll}!UnityEngine.EventSystems@{UnityEngine.EventSystems}}\index{UnityEngine.EventSystems@{UnityEngine.EventSystems}!Scroll@{Scroll}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a105078d294d30c978ca2badf7f376934}\label{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a105078d294d30c978ca2badf7f376934}} 
+Scroll&Intercepts a IScroll\+Handler.\+On\+Scroll. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UpdateSelected@{UpdateSelected}!UnityEngine.EventSystems@{UnityEngine.EventSystems}}\index{UnityEngine.EventSystems@{UnityEngine.EventSystems}!UpdateSelected@{UpdateSelected}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a08f544b71ca48d2ad7a7910868fa8c1c}\label{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a08f544b71ca48d2ad7a7910868fa8c1c}} 
+Update\+Selected&Intercepts a IUpdate\+Selected\+Handler.\+On\+Update\+Selected. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Select@{Select}!UnityEngine.EventSystems@{UnityEngine.EventSystems}}\index{UnityEngine.EventSystems@{UnityEngine.EventSystems}!Select@{Select}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542ae0626222614bdee31951d84c64e5e9ff}\label{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542ae0626222614bdee31951d84c64e5e9ff}} 
+Select&Intercepts a ISelect\+Handler.\+On\+Select. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Deselect@{Deselect}!UnityEngine.EventSystems@{UnityEngine.EventSystems}}\index{UnityEngine.EventSystems@{UnityEngine.EventSystems}!Deselect@{Deselect}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a94186070ef6773ba0f1721c19980e487}\label{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a94186070ef6773ba0f1721c19980e487}} 
+Deselect&Intercepts a IDeselect\+Handler.\+On\+Deselect. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Move@{Move}!UnityEngine.EventSystems@{UnityEngine.EventSystems}}\index{UnityEngine.EventSystems@{UnityEngine.EventSystems}!Move@{Move}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a6bc362dbf494c61ea117fe3c71ca48a5}\label{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a6bc362dbf494c61ea117fe3c71ca48a5}} 
+Move&Intercepts a IMove\+Handler.\+On\+Move. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InitializePotentialDrag@{InitializePotentialDrag}!UnityEngine.EventSystems@{UnityEngine.EventSystems}}\index{UnityEngine.EventSystems@{UnityEngine.EventSystems}!InitializePotentialDrag@{InitializePotentialDrag}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a657517dd0928d744aa3070bf265fe877}\label{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a657517dd0928d744aa3070bf265fe877}} 
+Initialize\+Potential\+Drag&Intercepts IInitialize\+Potential\+Drag.\+Initialize\+Potential\+Drag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BeginDrag@{BeginDrag}!UnityEngine.EventSystems@{UnityEngine.EventSystems}}\index{UnityEngine.EventSystems@{UnityEngine.EventSystems}!BeginDrag@{BeginDrag}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a6d80db4d90c11c442157b6a7e89c4787}\label{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a6d80db4d90c11c442157b6a7e89c4787}} 
+Begin\+Drag&Intercepts IBegin\+Drag\+Handler.\+On\+Begin\+Drag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EndDrag@{EndDrag}!UnityEngine.EventSystems@{UnityEngine.EventSystems}}\index{UnityEngine.EventSystems@{UnityEngine.EventSystems}!EndDrag@{EndDrag}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a19dd09e3cc15215a78c2ebd574e54aac}\label{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542a19dd09e3cc15215a78c2ebd574e54aac}} 
+End\+Drag&Intercepts IEnd\+Drag\+Handler.\+On\+End\+Drag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Submit@{Submit}!UnityEngine.EventSystems@{UnityEngine.EventSystems}}\index{UnityEngine.EventSystems@{UnityEngine.EventSystems}!Submit@{Submit}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542aa4d3b161ce1309df1c4e25df28694b7b}\label{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542aa4d3b161ce1309df1c4e25df28694b7b}} 
+Submit&Intercepts ISubmit\+Handler.\+Submit. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cancel@{Cancel}!UnityEngine.EventSystems@{UnityEngine.EventSystems}}\index{UnityEngine.EventSystems@{UnityEngine.EventSystems}!Cancel@{Cancel}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542aea4788705e6873b424c65e91c2846b19}\label{namespace_unity_engine_1_1_event_systems_af45e2ec1e41b37e1dcffcfde552bd542aea4788705e6873b424c65e91c2846b19}} 
+Cancel&Intercepts ICancel\+Handler.\+On\+Cancel. \\
+\hline
+
+\end{DoxyEnumFields}

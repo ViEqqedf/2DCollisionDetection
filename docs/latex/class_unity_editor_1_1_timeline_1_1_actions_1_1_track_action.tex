@@ -1,0 +1,84 @@
+\hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_track_action}{}\doxysection{Unity\+Editor.\+Timeline.\+Actions.\+Track\+Action Class Reference}
+\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_track_action}\index{UnityEditor.Timeline.Actions.TrackAction@{UnityEditor.Timeline.Actions.TrackAction}}
+
+
+Base class for a track action. Inherit from this class to make an action that would react on selected tracks after a menu click and/or a key shortcut.  
+
+
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Actions.\+Track\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11.991435cm]{class_unity_editor_1_1_timeline_1_1_actions_1_1_track_action}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_track_action_a85f4ad78e24320f13f28e01f2956efae}{Execute}} (IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} $>$ tracks)
+\begin{DoxyCompactList}\small\item\em Execute the action. \end{DoxyCompactList}\item 
+abstract \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Action\+Validity}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_track_action_a5936acb8c39ead842695ef6c48cd44fc}{Validate}} (IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} $>$ tracks)
+\begin{DoxyCompactList}\small\item\em Defines the validity of an Action for a given set of tracks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for a track action. Inherit from this class to make an action that would react on selected tracks after a menu click and/or a key shortcut. 
+
+Simple track Action example (with context menu and shortcut support).  
+
+To add an action as a menu item in the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} context menu, add \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_menu_entry_attribute}{Menu\+Entry\+Attribute}} on the action class. To make an action to react to a shortcut, use the Shortcut Manager API with \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_shortcut_attribute}{Timeline\+Shortcut\+Attribute}}. \begin{DoxySeeAlso}{See also}
+Unity\+Editor.\+Shortcut\+Management.\+Shortcut\+Attribute
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_track_action_a85f4ad78e24320f13f28e01f2956efae}\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_track_action_a85f4ad78e24320f13f28e01f2956efae}} 
+\index{UnityEditor.Timeline.Actions.TrackAction@{UnityEditor.Timeline.Actions.TrackAction}!Execute@{Execute}}
+\index{Execute@{Execute}!UnityEditor.Timeline.Actions.TrackAction@{UnityEditor.Timeline.Actions.TrackAction}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily abstract bool Unity\+Editor.\+Timeline.\+Actions.\+Track\+Action.\+Execute (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} $>$}]{tracks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Execute the action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tracks} & Tracks that will be used for the action. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the action has been executed. false otherwise
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doc_code_examples_1_1_timeline_attributes_examples___hide_a_p_i_1_1_set_name_to_type_action_aa74968d62d9f774ed2fb610b01d73360}{Doc\+Code\+Examples.\+Timeline\+Attributes\+Examples\+\_\+\+Hide\+API.\+Set\+Name\+To\+Type\+Action}}, \mbox{\hyperlink{class_doc_code_examples_1_1_action_examples___hide_a_p_i_1_1_sample_track_action_aa7dfd5d8fd2142ad084d58a67b9e0967}{Doc\+Code\+Examples.\+Action\+Examples\+\_\+\+Hide\+API.\+Sample\+Track\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_edit_track_in_animation_window_aa3880686bdf37681d2aa165c0ea3c503}{Unity\+Editor.\+Timeline.\+Edit\+Track\+In\+Animation\+Window}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_lock_selected_track_acb3f7cd6a8488f15003b1ea43ba37dc0}{Unity\+Editor.\+Timeline.\+Lock\+Selected\+Track}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_lock_track_aca0f50811973b4c4abb1dc81bab99d09}{Unity\+Editor.\+Timeline.\+Lock\+Track}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_show_hide_markers_a3d47035f720acd7be5df85e3ebc5c1d7}{Unity\+Editor.\+Timeline.\+Show\+Hide\+Markers}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_mute_selected_track_a235bc7f42098bfd2cdaeb7fe699225b9}{Unity\+Editor.\+Timeline.\+Mute\+Selected\+Track}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_mute_track_aefb6f7e8d273267c697c55905338dc43}{Unity\+Editor.\+Timeline.\+Mute\+Track}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_delete_tracks_a5a3bc64d10ca7df9f1d13f4804f3a7db}{Unity\+Editor.\+Timeline.\+Delete\+Tracks}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_copy_tracks_to_clipboard_ae6f5b3b3491e0fab17ed6a0e45403d8d}{Unity\+Editor.\+Timeline.\+Copy\+Tracks\+To\+Clipboard}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_duplicate_tracks_a5ca8eedb067159ac44ccfe74dfac692c}{Unity\+Editor.\+Timeline.\+Duplicate\+Tracks}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_remove_invalid_markers_action_aebfd434d8ecf4ae1eda3452e1c617082}{Unity\+Editor.\+Timeline.\+Remove\+Invalid\+Markers\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_collapse_track_action_ad090cd812ffb8c58b10f00a492547f4e}{Unity\+Editor.\+Timeline.\+Collapse\+Track\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_expand_track_action_a41b2a617dba3438c3cf20750232e021a}{Unity\+Editor.\+Timeline.\+Expand\+Track\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_add_override_track_action_a130962dabe5d28cbe068e7e0af02306a}{Unity\+Editor.\+Timeline.\+Add\+Override\+Track\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_convert_to_clip_mode_action_a0c7b181374293df3ec7061dc6e3465a5}{Unity\+Editor.\+Timeline.\+Convert\+To\+Clip\+Mode\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_convert_from_clip_track_action_adc0085f2b63a92008dcc3ec66b2159fd}{Unity\+Editor.\+Timeline.\+Convert\+From\+Clip\+Track\+Action}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_offset_base_action_ad26235c4bb2f197bb3b9e33c7d098eb5}{Unity\+Editor.\+Timeline.\+Track\+Offset\+Base\+Action}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_track_action_a5936acb8c39ead842695ef6c48cd44fc}\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_track_action_a5936acb8c39ead842695ef6c48cd44fc}} 
+\index{UnityEditor.Timeline.Actions.TrackAction@{UnityEditor.Timeline.Actions.TrackAction}!Validate@{Validate}}
+\index{Validate@{Validate}!UnityEditor.Timeline.Actions.TrackAction@{UnityEditor.Timeline.Actions.TrackAction}}
+\doxysubsubsection{\texorpdfstring{Validate()}{Validate()}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Action\+Validity}} Unity\+Editor.\+Timeline.\+Actions.\+Track\+Action.\+Validate (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} $>$}]{tracks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Defines the validity of an Action for a given set of tracks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tracks} & tracks that the action would act on.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The validity of the set of tracks.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doc_code_examples_1_1_timeline_attributes_examples___hide_a_p_i_1_1_set_name_to_type_action_aec83304acc57534f3eba6c55b23a0cb2}{Doc\+Code\+Examples.\+Timeline\+Attributes\+Examples\+\_\+\+Hide\+API.\+Set\+Name\+To\+Type\+Action}}, \mbox{\hyperlink{class_doc_code_examples_1_1_action_examples___hide_a_p_i_1_1_sample_track_action_a565a6428dad057f461862d1a13b3afdf}{Doc\+Code\+Examples.\+Action\+Examples\+\_\+\+Hide\+API.\+Sample\+Track\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_edit_track_in_animation_window_a89744c0315354f89623767db9e587894}{Unity\+Editor.\+Timeline.\+Edit\+Track\+In\+Animation\+Window}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_lock_selected_track_a84ffbd5c9fde8eac9a404c452b1462e8}{Unity\+Editor.\+Timeline.\+Lock\+Selected\+Track}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_lock_track_ad5049e9da178657abf8660ce09593287}{Unity\+Editor.\+Timeline.\+Lock\+Track}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_show_hide_markers_a7c15e5634535593173fc1a75fbc8d5d4}{Unity\+Editor.\+Timeline.\+Show\+Hide\+Markers}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_mute_selected_track_a1c4db6037a3351635dc272775346413d}{Unity\+Editor.\+Timeline.\+Mute\+Selected\+Track}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_mute_track_a0f24f82f23c73eadd2de771bf1b0a6c5}{Unity\+Editor.\+Timeline.\+Mute\+Track}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_delete_tracks_a24bce7cdb3a94679c50ad5ecb0cc3060}{Unity\+Editor.\+Timeline.\+Delete\+Tracks}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_copy_tracks_to_clipboard_a2fe9b7ceef58ed91ca0cd1003a23df3b}{Unity\+Editor.\+Timeline.\+Copy\+Tracks\+To\+Clipboard}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_duplicate_tracks_a4bd54fa9177950089df37b3036aea5b3}{Unity\+Editor.\+Timeline.\+Duplicate\+Tracks}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_remove_invalid_markers_action_ae3503106526a16ad5e5e85680ceacd99}{Unity\+Editor.\+Timeline.\+Remove\+Invalid\+Markers\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_collapse_track_action_a830c4728e7cfd2aab9963d97cda2e244}{Unity\+Editor.\+Timeline.\+Collapse\+Track\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_expand_track_action_ae0914352304d1af739ed063da0214cb7}{Unity\+Editor.\+Timeline.\+Expand\+Track\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_add_override_track_action_abe6c6c45305dd6381bafe1971655849d}{Unity\+Editor.\+Timeline.\+Add\+Override\+Track\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_convert_to_clip_mode_action_a39a500bd659e88332e0a28fad4a9f209}{Unity\+Editor.\+Timeline.\+Convert\+To\+Clip\+Mode\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_convert_from_clip_track_action_a4f0feee85b6cd887d88559921ff8776c}{Unity\+Editor.\+Timeline.\+Convert\+From\+Clip\+Track\+Action}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_offset_base_action_a8f99969fcf1feab10aee8208d0452c00}{Unity\+Editor.\+Timeline.\+Track\+Offset\+Base\+Action}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Editor/\+Actions/Track\+Action.\+cs\end{DoxyCompactItemize}

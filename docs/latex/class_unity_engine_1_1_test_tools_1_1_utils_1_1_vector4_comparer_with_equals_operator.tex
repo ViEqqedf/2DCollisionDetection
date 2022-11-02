@@ -1,0 +1,93 @@
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector4_comparer_with_equals_operator}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+Utils.\+Vector4\+Comparer\+With\+Equals\+Operator Class Reference}
+\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector4_comparer_with_equals_operator}\index{UnityEngine.TestTools.Utils.Vector4ComparerWithEqualsOperator@{UnityEngine.TestTools.Utils.Vector4ComparerWithEqualsOperator}}
+
+
+Use these classes to compare two objects of the same type for equality within the range of a given tolerance using NUnit or custom constraints . Call Instance to apply the default calculation error value to the comparison.  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Tools.\+Utils.\+Vector4\+Comparer\+With\+Equals\+Operator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector4_comparer_with_equals_operator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector4_comparer_with_equals_operator_a24e14111cd501df56cbc2d21790aa0d6}{Equals}} (Vector4 expected, Vector4 actual)
+\begin{DoxyCompactList}\small\item\em Compares the actual and expected objects for equality using a custom comparison mechanism. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector4_comparer_with_equals_operator_a5c9c3552285277a54b6085d83738fb1b}{Get\+Hash\+Code}} (Vector4 vec4)
+\begin{DoxyCompactList}\small\item\em Serves as the default hash function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector4_comparer_with_equals_operator_a4b5921c2575085fc944b3418e22121b8}\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector4_comparer_with_equals_operator_a4b5921c2575085fc944b3418e22121b8}} 
+static \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector4_comparer_with_equals_operator}{Vector4\+Comparer\+With\+Equals\+Operator}} {\bfseries Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A singleton instance of the comparer with a predefined default error value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Use these classes to compare two objects of the same type for equality within the range of a given tolerance using NUnit or custom constraints . Call Instance to apply the default calculation error value to the comparison. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector4_comparer_with_equals_operator_a24e14111cd501df56cbc2d21790aa0d6}\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector4_comparer_with_equals_operator_a24e14111cd501df56cbc2d21790aa0d6}} 
+\index{UnityEngine.TestTools.Utils.Vector4ComparerWithEqualsOperator@{UnityEngine.TestTools.Utils.Vector4ComparerWithEqualsOperator}!Equals@{Equals}}
+\index{Equals@{Equals}!UnityEngine.TestTools.Utils.Vector4ComparerWithEqualsOperator@{UnityEngine.TestTools.Utils.Vector4ComparerWithEqualsOperator}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Utils.\+Vector4\+Comparer\+With\+Equals\+Operator.\+Equals (\begin{DoxyParamCaption}\item[{Vector4}]{expected,  }\item[{Vector4}]{actual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares the actual and expected objects for equality using a custom comparison mechanism. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected} & Expected Vector4 used to compare\\
+\hline
+{\em actual} & Actual Vector4 value to test.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if expected and actual objects are equal, otherwise it returns false.
+\end{DoxyReturn}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }Vector4Test}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    [Test]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} VerifyThat\_TwoVector4ObjectsAreEqual()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        var actual = \textcolor{keyword}{new} Vector4(10e-\/7f, 10e-\/7f, 10e-\/7f, 10e-\/7f);}
+\DoxyCodeLine{        var expected = \textcolor{keyword}{new} Vector4(0f, 0f, 0f, 0f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Assert.That(actual, Is.EqualTo(expected).Using(Vector4ComparerWithEqualsOperator.Instance));}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector4_comparer_with_equals_operator_a5c9c3552285277a54b6085d83738fb1b}\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector4_comparer_with_equals_operator_a5c9c3552285277a54b6085d83738fb1b}} 
+\index{UnityEngine.TestTools.Utils.Vector4ComparerWithEqualsOperator@{UnityEngine.TestTools.Utils.Vector4ComparerWithEqualsOperator}!GetHashCode@{GetHashCode}}
+\index{GetHashCode@{GetHashCode}!UnityEngine.TestTools.Utils.Vector4ComparerWithEqualsOperator@{UnityEngine.TestTools.Utils.Vector4ComparerWithEqualsOperator}}
+\doxysubsubsection{\texorpdfstring{GetHashCode()}{GetHashCode()}}
+{\footnotesize\ttfamily int Unity\+Engine.\+Test\+Tools.\+Utils.\+Vector4\+Comparer\+With\+Equals\+Operator.\+Get\+Hash\+Code (\begin{DoxyParamCaption}\item[{Vector4}]{vec4 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serves as the default hash function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec4} & A not null Vector4 object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Engine.\+Test\+Runner/\+Utils/Vector4\+Comparer\+With\+Equals\+Operator.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,145 @@
+\hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{}\doxysection{Unity\+Engine.\+Event\+Systems.\+Pointer\+Event\+Data Class Reference}
+\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}\index{UnityEngine.EventSystems.PointerEventData@{UnityEngine.EventSystems.PointerEventData}}
+
+
+Each touch event creates one of these containing all the relevant information.  
+
+
+Inheritance diagram for Unity\+Engine.\+Event\+Systems.\+Pointer\+Event\+Data\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a1710dc25f71b763de62dd216f30756f6}{Input\+Button}} \{ \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a1710dc25f71b763de62dd216f30756f6a945d5e233cf7d6240f6b783b36a374ff}{Left}} = 0
+, \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a1710dc25f71b763de62dd216f30756f6a92b09c7c48c520c3c55e497875da437c}{Right}} = 1
+, \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a1710dc25f71b763de62dd216f30756f6ab1ca34f82e83c52b010f86955f264e05}{Middle}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Input press tracking. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a3ab46f72d7d579d52715612ab3e73611}{Frame\+Press\+State}} \{ \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a3ab46f72d7d579d52715612ab3e73611ad78a68f6a85421ae121c2cb5b73a1040}{Pressed}}
+, \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a3ab46f72d7d579d52715612ab3e73611aea1e34304a5d8ffa7c9b0ed8ede4ef1a}{Released}}
+, \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a3ab46f72d7d579d52715612ab3e73611a71f71699aa28aba1603b44b1aed4742b}{Pressed\+And\+Released}}
+, \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a3ab46f72d7d579d52715612ab3e73611a7343ec3af49f9f16308bddef43f82bab}{Not\+Changed}}
+ \}
+\begin{DoxyCompactList}\small\item\em The state of a press for the given frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_ab3cbd677956990d4aedf1b3a3d934fa5}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_ab3cbd677956990d4aedf1b3a3d934fa5}} 
+List$<$ Game\+Object $>$ {\bfseries hovered} = new List$<$Game\+Object$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a779be0831641a829c0e8493bda678d09}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a779be0831641a829c0e8493bda678d09}} 
+Game\+Object {\bfseries pointer\+Enter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The object that received \textquotesingle{}On\+Pointer\+Enter\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a38baf879211b87529318bb7fc9d67019}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a38baf879211b87529318bb7fc9d67019}} 
+Game\+Object {\bfseries last\+Press}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The raw Game\+Object for the last press event. This means that it is the \textquotesingle{}pressed\textquotesingle{} Game\+Object even if it can not receive the press event itself. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_ac8f3a6465e7503e6711ba8cbf0fdd12f}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_ac8f3a6465e7503e6711ba8cbf0fdd12f}} 
+Game\+Object {\bfseries raw\+Pointer\+Press}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The object that the press happened on even if it can not handle the press event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a2653c8701531485ac6c447cd1e67a190}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a2653c8701531485ac6c447cd1e67a190}} 
+Game\+Object {\bfseries pointer\+Drag}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The object that is receiving \textquotesingle{}On\+Drag\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_aa0127ef3cf30d526fd389c123929b0de}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_aa0127ef3cf30d526fd389c123929b0de}} 
+Game\+Object {\bfseries pointer\+Click}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The object that should receive the \textquotesingle{}On\+Pointer\+Click\textquotesingle{} event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a245418fd9b47e176a7c4f141cf86c487}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a245418fd9b47e176a7c4f141cf86c487}} 
+\mbox{\hyperlink{struct_unity_engine_1_1_event_systems_1_1_raycast_result}{Raycast\+Result}} {\bfseries pointer\+Current\+Raycast}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_unity_engine_1_1_event_systems_1_1_raycast_result}{Raycast\+Result}} associated with the current event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_ab8f905049b92bc10d8fb4ee6fb8175c7}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_ab8f905049b92bc10d8fb4ee6fb8175c7}} 
+\mbox{\hyperlink{struct_unity_engine_1_1_event_systems_1_1_raycast_result}{Raycast\+Result}} {\bfseries pointer\+Press\+Raycast}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_unity_engine_1_1_event_systems_1_1_raycast_result}{Raycast\+Result}} associated with the pointer press. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_ac06f43d1f254e9a52a27005d7a5e652c}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_ac06f43d1f254e9a52a27005d7a5e652c}} 
+bool {\bfseries eligible\+For\+Click}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is it possible to click this frame \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a4bf0369e139e477bed7a122b9dd67d17}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a4bf0369e139e477bed7a122b9dd67d17}} 
+int {\bfseries pointer\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Id of the pointer (touch id). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_ae19f411647d838ebd6739072871c359e}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_ae19f411647d838ebd6739072871c359e}} 
+Vector2 {\bfseries position}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current pointer position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_aeb4cd6e777425cace9542c176bfa6a99}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_aeb4cd6e777425cace9542c176bfa6a99}} 
+Vector2 {\bfseries delta}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Pointer delta since last update. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a2086fc8f2e3c1f8a09ad03bc75c27852}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a2086fc8f2e3c1f8a09ad03bc75c27852}} 
+Vector2 {\bfseries press\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Position of the press. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a65f7e202c7865ac2af88f735bb78c8c2}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a65f7e202c7865ac2af88f735bb78c8c2}} 
+Vector3 {\bfseries world\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em World-\/space position where a ray cast into the screen hits something \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a35d38a7138e1595d69eaf4208da11a57}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a35d38a7138e1595d69eaf4208da11a57}} 
+Vector3 {\bfseries world\+Normal}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em World-\/space normal where a ray cast into the screen hits something \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a0d2b89e0479f08ace1e7557f4deb4579}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a0d2b89e0479f08ace1e7557f4deb4579}} 
+float {\bfseries click\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The last time a click event was sent. Used for double click \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Each touch event creates one of these containing all the relevant information. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a3ab46f72d7d579d52715612ab3e73611}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a3ab46f72d7d579d52715612ab3e73611}} 
+\index{UnityEngine.EventSystems.PointerEventData@{UnityEngine.EventSystems.PointerEventData}!FramePressState@{FramePressState}}
+\index{FramePressState@{FramePressState}!UnityEngine.EventSystems.PointerEventData@{UnityEngine.EventSystems.PointerEventData}}
+\doxysubsubsection{\texorpdfstring{FramePressState}{FramePressState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a3ab46f72d7d579d52715612ab3e73611}{Unity\+Engine.\+Event\+Systems.\+Pointer\+Event\+Data.\+Frame\+Press\+State}}}
+
+
+
+The state of a press for the given frame. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Pressed@{Pressed}!UnityEngine.EventSystems.PointerEventData@{UnityEngine.EventSystems.PointerEventData}}\index{UnityEngine.EventSystems.PointerEventData@{UnityEngine.EventSystems.PointerEventData}!Pressed@{Pressed}}}\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a3ab46f72d7d579d52715612ab3e73611ad78a68f6a85421ae121c2cb5b73a1040}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a3ab46f72d7d579d52715612ab3e73611ad78a68f6a85421ae121c2cb5b73a1040}} 
+Pressed&Button was pressed this frame. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Released@{Released}!UnityEngine.EventSystems.PointerEventData@{UnityEngine.EventSystems.PointerEventData}}\index{UnityEngine.EventSystems.PointerEventData@{UnityEngine.EventSystems.PointerEventData}!Released@{Released}}}\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a3ab46f72d7d579d52715612ab3e73611aea1e34304a5d8ffa7c9b0ed8ede4ef1a}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a3ab46f72d7d579d52715612ab3e73611aea1e34304a5d8ffa7c9b0ed8ede4ef1a}} 
+Released&Button was released this frame. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PressedAndReleased@{PressedAndReleased}!UnityEngine.EventSystems.PointerEventData@{UnityEngine.EventSystems.PointerEventData}}\index{UnityEngine.EventSystems.PointerEventData@{UnityEngine.EventSystems.PointerEventData}!PressedAndReleased@{PressedAndReleased}}}\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a3ab46f72d7d579d52715612ab3e73611a71f71699aa28aba1603b44b1aed4742b}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a3ab46f72d7d579d52715612ab3e73611a71f71699aa28aba1603b44b1aed4742b}} 
+Pressed\+And\+Released&Button was pressed and released this frame. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NotChanged@{NotChanged}!UnityEngine.EventSystems.PointerEventData@{UnityEngine.EventSystems.PointerEventData}}\index{UnityEngine.EventSystems.PointerEventData@{UnityEngine.EventSystems.PointerEventData}!NotChanged@{NotChanged}}}\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a3ab46f72d7d579d52715612ab3e73611a7343ec3af49f9f16308bddef43f82bab}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a3ab46f72d7d579d52715612ab3e73611a7343ec3af49f9f16308bddef43f82bab}} 
+Not\+Changed&Same as last frame. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a1710dc25f71b763de62dd216f30756f6}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a1710dc25f71b763de62dd216f30756f6}} 
+\index{UnityEngine.EventSystems.PointerEventData@{UnityEngine.EventSystems.PointerEventData}!InputButton@{InputButton}}
+\index{InputButton@{InputButton}!UnityEngine.EventSystems.PointerEventData@{UnityEngine.EventSystems.PointerEventData}}
+\doxysubsubsection{\texorpdfstring{InputButton}{InputButton}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a1710dc25f71b763de62dd216f30756f6}{Unity\+Engine.\+Event\+Systems.\+Pointer\+Event\+Data.\+Input\+Button}}}
+
+
+
+Input press tracking. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Left@{Left}!UnityEngine.EventSystems.PointerEventData@{UnityEngine.EventSystems.PointerEventData}}\index{UnityEngine.EventSystems.PointerEventData@{UnityEngine.EventSystems.PointerEventData}!Left@{Left}}}\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a1710dc25f71b763de62dd216f30756f6a945d5e233cf7d6240f6b783b36a374ff}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a1710dc25f71b763de62dd216f30756f6a945d5e233cf7d6240f6b783b36a374ff}} 
+Left&Left button \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Right@{Right}!UnityEngine.EventSystems.PointerEventData@{UnityEngine.EventSystems.PointerEventData}}\index{UnityEngine.EventSystems.PointerEventData@{UnityEngine.EventSystems.PointerEventData}!Right@{Right}}}\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a1710dc25f71b763de62dd216f30756f6a92b09c7c48c520c3c55e497875da437c}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a1710dc25f71b763de62dd216f30756f6a92b09c7c48c520c3c55e497875da437c}} 
+Right&Right button. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Middle@{Middle}!UnityEngine.EventSystems.PointerEventData@{UnityEngine.EventSystems.PointerEventData}}\index{UnityEngine.EventSystems.PointerEventData@{UnityEngine.EventSystems.PointerEventData}!Middle@{Middle}}}\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a1710dc25f71b763de62dd216f30756f6ab1ca34f82e83c52b010f86955f264e05}\label{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a1710dc25f71b763de62dd216f30756f6ab1ca34f82e83c52b010f86955f264e05}} 
+Middle&Middle button \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+Event\+System/\+Event\+Data/Pointer\+Event\+Data.\+cs\end{DoxyCompactItemize}

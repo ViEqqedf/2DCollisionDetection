@@ -1,0 +1,106 @@
+\hypertarget{class_unity_editor_1_1_timeline_1_1_marker_editor}{}\doxysection{Unity\+Editor.\+Timeline.\+Marker\+Editor Class Reference}
+\label{class_unity_editor_1_1_timeline_1_1_marker_editor}\index{UnityEditor.Timeline.MarkerEditor@{UnityEditor.Timeline.MarkerEditor}}
+
+
+Use this class to customize marker types in the Timeline\+Editor.  
+
+
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Marker\+Editor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.958042cm]{class_unity_editor_1_1_timeline_1_1_marker_editor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_editor_a7bdd39afc3101b41c90a9898b498d2df}\label{class_unity_editor_1_1_timeline_1_1_marker_editor_a7bdd39afc3101b41c90a9898b498d2df}} 
+{\bfseries Marker\+Editor} ()
+\begin{DoxyCompactList}\small\item\em Default constructor \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_marker_draw_options}{Marker\+Draw\+Options}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_marker_editor_ad9ca62cf989a9d817e343c6fbaa9a1e6}{Get\+Marker\+Options}} (\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} marker)
+\begin{DoxyCompactList}\small\item\em Implement this method to override the default options for drawing a marker. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_marker_editor_ab311e906d3a9f04aa55b10c35a53f834}{On\+Create}} (\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} marker, \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} cloned\+From)
+\begin{DoxyCompactList}\small\item\em Called when a marker is created. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_marker_editor_a7303ada120f031d2360054b7049bd280}{Draw\+Overlay}} (\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} marker, \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_aa1815b2a771f9839fb1df5fc94d1e41a}{Marker\+UIStates}} ui\+State, \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_marker_overlay_region}{Marker\+Overlay\+Region}} region)
+\begin{DoxyCompactList}\small\item\em Draws additional overlays for a marker. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Use this class to customize marker types in the Timeline\+Editor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_editor_a7303ada120f031d2360054b7049bd280}\label{class_unity_editor_1_1_timeline_1_1_marker_editor_a7303ada120f031d2360054b7049bd280}} 
+\index{UnityEditor.Timeline.MarkerEditor@{UnityEditor.Timeline.MarkerEditor}!DrawOverlay@{DrawOverlay}}
+\index{DrawOverlay@{DrawOverlay}!UnityEditor.Timeline.MarkerEditor@{UnityEditor.Timeline.MarkerEditor}}
+\doxysubsubsection{\texorpdfstring{DrawOverlay()}{DrawOverlay()}}
+{\footnotesize\ttfamily virtual void Unity\+Editor.\+Timeline.\+Marker\+Editor.\+Draw\+Overlay (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}}}]{marker,  }\item[{\mbox{\hyperlink{namespace_unity_editor_1_1_timeline_aa1815b2a771f9839fb1df5fc94d1e41a}{Marker\+UIStates}}}]{ui\+State,  }\item[{\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_marker_overlay_region}{Marker\+Overlay\+Region}}}]{region }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Draws additional overlays for a marker. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em marker} & The marker to draw.\\
+\hline
+{\em ui\+State} & The visual state of the marker.\\
+\hline
+{\em region} & The on-\/screen area where the marker is being drawn.\\
+\hline
+\end{DoxyParams}
+
+
+Notes\+:
+\begin{DoxyItemize}
+\item It is only called during \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_window}{Timeline\+Window}}\textquotesingle{}s Repaint step.
+\item If there are multiple markers on top of each other, only the topmost marker receives the Draw\+Overlay call. 
+\end{DoxyItemize}
+
+Reimplemented in \mbox{\hyperlink{class_timeline_1_1_samples_1_1_annotation_marker_editor_a573add77ac5c83d5be74da2cf1e1a0a5}{Timeline.\+Samples.\+Annotation\+Marker\+Editor}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_editor_ad9ca62cf989a9d817e343c6fbaa9a1e6}\label{class_unity_editor_1_1_timeline_1_1_marker_editor_ad9ca62cf989a9d817e343c6fbaa9a1e6}} 
+\index{UnityEditor.Timeline.MarkerEditor@{UnityEditor.Timeline.MarkerEditor}!GetMarkerOptions@{GetMarkerOptions}}
+\index{GetMarkerOptions@{GetMarkerOptions}!UnityEditor.Timeline.MarkerEditor@{UnityEditor.Timeline.MarkerEditor}}
+\doxysubsubsection{\texorpdfstring{GetMarkerOptions()}{GetMarkerOptions()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_marker_draw_options}{Marker\+Draw\+Options}} Unity\+Editor.\+Timeline.\+Marker\+Editor.\+Get\+Marker\+Options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}}}]{marker }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implement this method to override the default options for drawing a marker. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em marker} & The marker to draw.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_editor_aef9949489c99c7a3afd42ba535433b87}{Unity\+Editor.\+Timeline.\+Signals.\+Signal\+Emitter\+Editor}}, and \mbox{\hyperlink{class_timeline_1_1_samples_1_1_annotation_marker_editor_adc78cd0029ca1337da95d3c78f8c3b9d}{Timeline.\+Samples.\+Annotation\+Marker\+Editor}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_editor_ab311e906d3a9f04aa55b10c35a53f834}\label{class_unity_editor_1_1_timeline_1_1_marker_editor_ab311e906d3a9f04aa55b10c35a53f834}} 
+\index{UnityEditor.Timeline.MarkerEditor@{UnityEditor.Timeline.MarkerEditor}!OnCreate@{OnCreate}}
+\index{OnCreate@{OnCreate}!UnityEditor.Timeline.MarkerEditor@{UnityEditor.Timeline.MarkerEditor}}
+\doxysubsubsection{\texorpdfstring{OnCreate()}{OnCreate()}}
+{\footnotesize\ttfamily virtual void Unity\+Editor.\+Timeline.\+Marker\+Editor.\+On\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}}}]{marker,  }\item[{\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}}}]{cloned\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called when a marker is created. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em marker} & The marker that is created.\\
+\hline
+{\em cloned\+From} & TThe source that the marker was copied from. This can be set to null if the marker is not a copy.\\
+\hline
+\end{DoxyParams}
+
+
+The callback occurs before the marker is assigned to the track. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Editor/\+Custom\+Editors/Marker\+Editor.\+cs\end{DoxyCompactItemize}

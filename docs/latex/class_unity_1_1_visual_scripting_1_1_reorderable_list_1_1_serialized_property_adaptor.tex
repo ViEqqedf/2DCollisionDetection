@@ -1,0 +1,341 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor}{}\doxysection{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor}\index{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}}
+
+
+Reorderable list adaptor for serialized array property.  
+
+
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a8dc53ed5bdabbeb5483f21e852a5391f}{Serialized\+Property\+Adaptor}} (Serialized\+Property \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a0a40599679f18d03f0398675da8a2b0d}{array\+Property}}, float fixed\+Item\+Height)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor}{Serialized\+Property\+Adaptor}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_aa21066db570eef8aae06a35daff6ebcc}{Serialized\+Property\+Adaptor}} (Serialized\+Property \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a0a40599679f18d03f0398675da8a2b0d}{array\+Property}})
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor}{Serialized\+Property\+Adaptor}}. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a1e8123c6fef48a1d463963ffde899d48}{Can\+Drag}} (int index)
+\begin{DoxyCompactList}\small\item\em Determines whether an item can be reordered by dragging mouse.  \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_aa83936b944c437d78d4a66484b845586}{Can\+Remove}} (int index)
+\begin{DoxyCompactList}\small\item\em Determines whether an item can be removed from list.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a29467b5aaac4039ff4a350be39eba0ed}{Add}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_add}{Add}} new element at end of list.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a9d65102b0f831dfaee58499fbc68a90f}{Insert}} (int index)
+\begin{DoxyCompactList}\small\item\em Insert new element at specified index.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a0ff4d6b533da49bc70f5fd3f2571a258}{Duplicate}} (int index)
+\begin{DoxyCompactList}\small\item\em Duplicate existing element.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_ab3fcdd48fed11da8c2383837d5c589c6}{Remove}} (int index)
+\begin{DoxyCompactList}\small\item\em Remove element at specified index.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a0dde5970939d44e7fb0bdb67a9047817}{Move}} (int source\+Index, int dest\+Index)
+\begin{DoxyCompactList}\small\item\em Move element from source index to destination index.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a47f26af5b61f9776712244d1d6b44708}{Clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear all elements from list.  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a742cbfabf88c54727e3a47e5adcb2856}{Begin\+GUI}} ()
+\begin{DoxyCompactList}\small\item\em Occurs before any list items are drawn.  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a87b8dc71e484b365de93fc6797b9c662}{End\+GUI}} ()
+\begin{DoxyCompactList}\small\item\em Occurs after all list items have been drawn.  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a38d873c5811c152aa976680223e25e96}{Draw\+Item\+Background}} (Rect position, int index)
+\begin{DoxyCompactList}\small\item\em Draws background of a list item.  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_ac60aa6d01f8eebe4e963a385c6f8b071}{Draw\+Item}} (Rect position, int index)
+\begin{DoxyCompactList}\small\item\em Draws main interface for a list item.  \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a2a932bb338332e4ecb17689f0fa05336}{Get\+Item\+Height}} (int index)
+\begin{DoxyCompactList}\small\item\em Gets height of list item in pixels.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a2cf5c5ce7ddb5235cd6739698b6519e8}{Fixed\+Item\+Height}}
+\begin{DoxyCompactList}\small\item\em Fixed height of each list item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Serialized\+Property \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a8d9758bcc1c04031845955c666b3c053}{this\mbox{[}int index\mbox{]}}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets element from list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a0a40599679f18d03f0398675da8a2b0d}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a0a40599679f18d03f0398675da8a2b0d}} 
+Serialized\+Property {\bfseries array\+Property}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the underlying serialized array property. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a96ab2abd45d837d19626ef1324fd343f}{Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets count of elements in list.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Reorderable list adaptor for serialized array property. 
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} adaptor can be subclassed to add special logic to item height calculation. You may want to implement a custom adaptor class where specialised functionality is needed. 
+
+List elements are {\bfseries{not}} cloned using the System.\+ICloneable interface when using a Unity\+Editor.\+Serialized\+Property to manipulate lists. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a8dc53ed5bdabbeb5483f21e852a5391f}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a8dc53ed5bdabbeb5483f21e852a5391f}} 
+\index{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}!SerializedPropertyAdaptor@{SerializedPropertyAdaptor}}
+\index{SerializedPropertyAdaptor@{SerializedPropertyAdaptor}!Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}}
+\doxysubsubsection{\texorpdfstring{SerializedPropertyAdaptor()}{SerializedPropertyAdaptor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor.\+Serialized\+Property\+Adaptor (\begin{DoxyParamCaption}\item[{Serialized\+Property}]{array\+Property,  }\item[{float}]{fixed\+Item\+Height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor}{Serialized\+Property\+Adaptor}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array\+Property} & Serialized property for entire array.\\
+\hline
+{\em fixed\+Item\+Height} & Non-\/zero height overrides property drawer height calculation.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_aa21066db570eef8aae06a35daff6ebcc}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_aa21066db570eef8aae06a35daff6ebcc}} 
+\index{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}!SerializedPropertyAdaptor@{SerializedPropertyAdaptor}}
+\index{SerializedPropertyAdaptor@{SerializedPropertyAdaptor}!Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}}
+\doxysubsubsection{\texorpdfstring{SerializedPropertyAdaptor()}{SerializedPropertyAdaptor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor.\+Serialized\+Property\+Adaptor (\begin{DoxyParamCaption}\item[{Serialized\+Property}]{array\+Property }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor}{Serialized\+Property\+Adaptor}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array\+Property} & Serialized property for entire array.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a29467b5aaac4039ff4a350be39eba0ed}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a29467b5aaac4039ff4a350be39eba0ed}} 
+\index{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}!Add@{Add}}
+\index{Add@{Add}!Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor.\+Add (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_add}{Add}} new element at end of list.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a01062c6f0fe1a2613097183952ff0826}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a742cbfabf88c54727e3a47e5adcb2856}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a742cbfabf88c54727e3a47e5adcb2856}} 
+\index{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}!BeginGUI@{BeginGUI}}
+\index{BeginGUI@{BeginGUI}!Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}}
+\doxysubsubsection{\texorpdfstring{BeginGUI()}{BeginGUI()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor.\+Begin\+GUI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Occurs before any list items are drawn.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_ac4f826536c55e82eb385009e58cfab12}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a1e8123c6fef48a1d463963ffde899d48}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a1e8123c6fef48a1d463963ffde899d48}} 
+\index{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}!CanDrag@{CanDrag}}
+\index{CanDrag@{CanDrag}!Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}}
+\doxysubsubsection{\texorpdfstring{CanDrag()}{CanDrag()}}
+{\footnotesize\ttfamily virtual bool Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor.\+Can\+Drag (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Determines whether an item can be reordered by dragging mouse.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_aa7fbe9abc79c9aa671250ffc8bd548d3}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_aa83936b944c437d78d4a66484b845586}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_aa83936b944c437d78d4a66484b845586}} 
+\index{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}!CanRemove@{CanRemove}}
+\index{CanRemove@{CanRemove}!Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}}
+\doxysubsubsection{\texorpdfstring{CanRemove()}{CanRemove()}}
+{\footnotesize\ttfamily virtual bool Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor.\+Can\+Remove (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Determines whether an item can be removed from list.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a22124e5ae377b9e4a7d1295d12f727ee}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a47f26af5b61f9776712244d1d6b44708}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a47f26af5b61f9776712244d1d6b44708}} 
+\index{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}!Clear@{Clear}}
+\index{Clear@{Clear}!Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor.\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clear all elements from list.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_ad1ee0f340786030525d3b7452f86c386}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_ac60aa6d01f8eebe4e963a385c6f8b071}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_ac60aa6d01f8eebe4e963a385c6f8b071}} 
+\index{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}!DrawItem@{DrawItem}}
+\index{DrawItem@{DrawItem}!Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}}
+\doxysubsubsection{\texorpdfstring{DrawItem()}{DrawItem()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor.\+Draw\+Item (\begin{DoxyParamCaption}\item[{Rect}]{position,  }\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Draws main interface for a list item.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a6a4b8ea90f37a592df99b6268285433d}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a38d873c5811c152aa976680223e25e96}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a38d873c5811c152aa976680223e25e96}} 
+\index{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}!DrawItemBackground@{DrawItemBackground}}
+\index{DrawItemBackground@{DrawItemBackground}!Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}}
+\doxysubsubsection{\texorpdfstring{DrawItemBackground()}{DrawItemBackground()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor.\+Draw\+Item\+Background (\begin{DoxyParamCaption}\item[{Rect}]{position,  }\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Draws background of a list item.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a06e39a84d45e61934e4130130459442c}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a0ff4d6b533da49bc70f5fd3f2571a258}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a0ff4d6b533da49bc70f5fd3f2571a258}} 
+\index{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}!Duplicate@{Duplicate}}
+\index{Duplicate@{Duplicate}!Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}}
+\doxysubsubsection{\texorpdfstring{Duplicate()}{Duplicate()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor.\+Duplicate (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Duplicate existing element.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a08abb5bea8ee62ae89892b259a21be29}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a87b8dc71e484b365de93fc6797b9c662}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a87b8dc71e484b365de93fc6797b9c662}} 
+\index{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}!EndGUI@{EndGUI}}
+\index{EndGUI@{EndGUI}!Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}}
+\doxysubsubsection{\texorpdfstring{EndGUI()}{EndGUI()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor.\+End\+GUI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Occurs after all list items have been drawn.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a5040cb430c745b1d855b09fd673131be}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a2a932bb338332e4ecb17689f0fa05336}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a2a932bb338332e4ecb17689f0fa05336}} 
+\index{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}!GetItemHeight@{GetItemHeight}}
+\index{GetItemHeight@{GetItemHeight}!Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}}
+\doxysubsubsection{\texorpdfstring{GetItemHeight()}{GetItemHeight()}}
+{\footnotesize\ttfamily virtual float Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor.\+Get\+Item\+Height (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets height of list item in pixels.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_ad5942707f43e6001b07e2ea66b805715}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a9d65102b0f831dfaee58499fbc68a90f}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a9d65102b0f831dfaee58499fbc68a90f}} 
+\index{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}!Insert@{Insert}}
+\index{Insert@{Insert}!Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor.\+Insert (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Insert new element at specified index.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a2d87e92402db877d3fef15fe43210618}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a0dde5970939d44e7fb0bdb67a9047817}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a0dde5970939d44e7fb0bdb67a9047817}} 
+\index{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}!Move@{Move}}
+\index{Move@{Move}!Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor.\+Move (\begin{DoxyParamCaption}\item[{int}]{source\+Index,  }\item[{int}]{dest\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move element from source index to destination index.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a462d71b0324807c5e29e74b541584131}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_ab3fcdd48fed11da8c2383837d5c589c6}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_ab3fcdd48fed11da8c2383837d5c589c6}} 
+\index{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}!Remove@{Remove}}
+\index{Remove@{Remove}!Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor.\+Remove (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove element at specified index.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a06be726ab3faec949d507c1efe02c2cc}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a2cf5c5ce7ddb5235cd6739698b6519e8}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a2cf5c5ce7ddb5235cd6739698b6519e8}} 
+\index{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}!FixedItemHeight@{FixedItemHeight}}
+\index{FixedItemHeight@{FixedItemHeight}!Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}}
+\doxysubsubsection{\texorpdfstring{FixedItemHeight}{FixedItemHeight}}
+{\footnotesize\ttfamily float Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor.\+Fixed\+Item\+Height}
+
+
+
+Fixed height of each list item. 
+
+Non-\/zero value overrides property drawer height calculation which is more efficient. 
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a96ab2abd45d837d19626ef1324fd343f}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a96ab2abd45d837d19626ef1324fd343f}} 
+\index{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}!Count@{Count}}
+\index{Count@{Count}!Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}}
+\doxysubsubsection{\texorpdfstring{Count}{Count}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor.\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets count of elements in list.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a6c6a3651bc3d394c38927f54eb0ede9e}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a8d9758bcc1c04031845955c666b3c053}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_serialized_property_adaptor_a8d9758bcc1c04031845955c666b3c053}} 
+\index{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}!this\mbox{[}int index\mbox{]}@{this[int index]}}
+\index{this\mbox{[}int index\mbox{]}@{this[int index]}!Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor@{Unity.VisualScripting.ReorderableList.SerializedPropertyAdaptor}}
+\doxysubsubsection{\texorpdfstring{this[int index]}{this[int index]}}
+{\footnotesize\ttfamily Serialized\+Property Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Serialized\+Property\+Adaptor.\+this\mbox{[}int index\mbox{]}\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets element from list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Zero-\/based index of element.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Serialized property wrapper for array element. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Editor/\+Visual\+Scripting.\+Core/\+Dependencies/\+Reorderable\+List/Serialized\+Property\+Adaptor.\+cs\end{DoxyCompactItemize}

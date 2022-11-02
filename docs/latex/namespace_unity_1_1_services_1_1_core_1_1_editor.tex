@@ -1,0 +1,165 @@
+\hypertarget{namespace_unity_1_1_services_1_1_core_1_1_editor}{}\doxysection{Unity.\+Services.\+Core.\+Editor Namespace Reference}
+\label{namespace_unity_1_1_services_1_1_core_1_1_editor}\index{Unity.Services.Core.Editor@{Unity.Services.Core.Editor}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Access\+Token\+Error\+Ui\+Helper}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_async_operation}{Async\+Operation}}
+\begin{DoxyCompactList}\small\item\em Default implementation for \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}{IAsync\+Operation}}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_1_1_services_1_1_core_1_1_editor_1_1_async_operation_awaiter}{Async\+Operation\+Awaiter}}
+\begin{DoxyCompactList}\small\item\em Default implementation for \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_awaiter}{IAsync\+Operation\+Awaiter}}. \end{DoxyCompactList}\item 
+class {\bfseries Async\+Operation\+Extensions}
+\begin{DoxyCompactList}\small\item\em Set of utility functions added as extensions to \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}{IAsync\+Operation}} and \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}{IAsync\+Operation$<$\+T$>$}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_cdn_configured_endpoint}{Cdn\+Configured\+Endpoint}}
+\begin{DoxyCompactList}\small\item\em Helper class for managing CDN based endpoint configurations \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_default_cdn_configured_endpoint}{Default\+Cdn\+Configured\+Endpoint}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_default_cdn_endpoint_configuration}{Default\+Cdn\+Endpoint\+Configuration}}
+\item 
+class {\bfseries Editor\+Game\+Service\+Analytics\+Sender}
+\item 
+class {\bfseries Editor\+Game\+Service\+Dashboard\+Helper}
+\begin{DoxyCompactList}\small\item\em Used by \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service}{IEditor\+Game\+Service}} to simplify operations related to the dashboard \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler}{Editor\+Game\+Service\+Flag\+Enabler}}
+\begin{DoxyCompactList}\small\item\em Base class for services which require service flag handling when toggling. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_registry}{Editor\+Game\+Service\+Registry}}
+\begin{DoxyCompactList}\small\item\em Base implementation of the \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_registry}{IEditor\+Game\+Service\+Registry}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_remote_configuration}{Editor\+Game\+Service\+Remote\+Configuration}}
+\begin{DoxyCompactList}\small\item\em Fetches and parses JSON config object or returns a newly constructed object on failure. If the config is successfully loaded it will be cached in Session\+State \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider}{Editor\+Game\+Service\+Settings\+Provider}}
+\begin{DoxyCompactList}\small\item\em Base class to extend for an external service settings provider to become an editor game service settings provider \end{DoxyCompactList}\item 
+class {\bfseries Exception\+Helper}
+\item 
+struct \mbox{\hyperlink{struct_unity_1_1_services_1_1_core_1_1_editor_1_1_http_options}{Http\+Options}}
+\begin{DoxyCompactList}\small\item\em Contract for objects containing all settings to customize the behaviour of a HTTP request sending. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}}
+\begin{DoxyCompactList}\small\item\em Contain all data of an HTTP request. \end{DoxyCompactList}\item 
+class {\bfseries Http\+Request\+Extensions}
+\begin{DoxyCompactList}\small\item\em Utility extensions on \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_response}{Http\+Response}}
+\begin{DoxyCompactList}\small\item\em Contain all data from a server response to a \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_1_1_services_1_1_core_1_1_editor_1_1_http_service_config}{Http\+Service\+Config}}
+\item 
+interface \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}{IAsync\+Operation}}
+\begin{DoxyCompactList}\small\item\em Contract for an asynchronous operation with no result. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_awaiter}{IAsync\+Operation\+Awaiter}}
+\begin{DoxyCompactList}\small\item\em Contract for objects allowing to use the {\ttfamily await} keyword on an \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}{IAsync\+Operation}}. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service}{IEditor\+Game\+Service}}
+\begin{DoxyCompactList}\small\item\em Base contract for all editor game services defined by \mbox{\hyperlink{namespace_unity_1_1_services_1_1_core_1_1_editor}{Core.\+Editor}} package. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_enabler}{IEditor\+Game\+Service\+Enabler}}
+\begin{DoxyCompactList}\small\item\em An interface to allow you to control the enablement state of a service. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_identifier}{IEditor\+Game\+Service\+Identifier}}
+\begin{DoxyCompactList}\small\item\em Interface used to identify services \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_registry}{IEditor\+Game\+Service\+Registry}}
+\begin{DoxyCompactList}\small\item\em A container to store all available \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service}{IEditor\+Game\+Service}} \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_http_client}{IHttp\+Client}}
+\begin{DoxyCompactList}\small\item\em Contract for objects able to send an HTTP request. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_project_state_helper}{IProject\+State\+Helper}}
+\item 
+interface \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_project_state_request}{IProject\+State\+Request}}
+\item 
+interface \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_service_flag_request}{IService\+Flag\+Request}}
+\item 
+interface \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_service_flags}{IService\+Flags}}
+\item 
+interface \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_user_role_handler}{IUser\+Role\+Handler}}
+\item 
+interface \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_user_role_request}{IUser\+Role\+Request}}
+\item 
+class {\bfseries Json\+Helper}
+\item 
+class {\bfseries Logged\+Out\+Ui\+Helper}
+\item 
+class {\bfseries Mini\+Json}
+\begin{DoxyCompactList}\small\item\em This class encodes and decodes JSON strings. Spec. details, see \href{http://www.json.org/}{\texttt{ http\+://www.\+json.\+org/}} JSON uses Arrays and Objects. These correspond here to the data types IList and IDictionary. All numbers are parsed to doubles. \end{DoxyCompactList}\item 
+class {\bfseries Offline\+Ui\+Helper}
+\item 
+class {\bfseries Platform\+Support\+Ui\+Helper}
+\begin{DoxyCompactList}\small\item\em Utility class for platform support UI. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_1_1_services_1_1_core_1_1_editor_1_1_project_state}{Project\+State}}
+\begin{DoxyCompactList}\small\item\em Data container of the state of the project when events are forwarded to the \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service}{IEditor\+Game\+Service}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_project_state_helper}{Project\+State\+Helper}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_project_state_request}{Project\+State\+Request}}
+\item 
+struct \mbox{\hyperlink{struct_unity_1_1_services_1_1_core_1_1_editor_1_1_read_only_http_request}{Read\+Only\+Http\+Request}}
+\begin{DoxyCompactList}\small\item\em Read-\/only handle to a \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_1_1_services_1_1_core_1_1_editor_1_1_read_only_http_response}{Read\+Only\+Http\+Response}}
+\begin{DoxyCompactList}\small\item\em Read-\/only handle to a \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_response}{Http\+Response}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_service_flag_endpoint}{Service\+Flag\+Endpoint}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_service_flag_endpoint_configuration}{Service\+Flag\+Endpoint\+Configuration}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_service_flag_request}{Service\+Flag\+Request}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_service_flags}{Service\+Flags}}
+\item 
+class {\bfseries Settings\+Common\+Header\+Ui\+Helper}
+\item 
+class {\bfseries Slider\+Toggle\+Ui\+Helper}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_unity_web_request_client}{Unity\+Web\+Request\+Client}}
+\item 
+class {\bfseries Unity\+Web\+Request\+Helper}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_user_role_handler}{User\+Role\+Handler}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_user_role_request}{User\+Role\+Request}}
+\item 
+class {\bfseries Visual\+Element\+Helper}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23}{Async\+Operation\+Status}} \{ \newline
+\mbox{\hyperlink{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23a6adf97f83acf6453d4a6a4b1070f3754}{None}}
+, \mbox{\hyperlink{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23a12d868c18cb29bf58f02b504be9033fd}{In\+Progress}}
+, \mbox{\hyperlink{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23a66d02c2f8a582446f8dd8752366002b5}{Succeeded}}
+, \mbox{\hyperlink{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23ad7c8c85bf79bbe1b7188497c32c3b0ca}{Failed}}
+, \newline
+\mbox{\hyperlink{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23aa149e85a44aeec9140e92733d9ed694e}{Cancelled}}
+ \}
+\begin{DoxyCompactList}\small\item\em All supported status of an IAsync\+Operation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespace_unity_1_1_services_1_1_core_1_1_editor_a02bed32a325959f6a00ab7b8e7d5baa4}\label{namespace_unity_1_1_services_1_1_core_1_1_editor_a02bed32a325959f6a00ab7b8e7d5baa4}} 
+enum {\bfseries User\+Role} \{ {\bfseries Unknown}
+, {\bfseries User}
+, {\bfseries Manager}
+, {\bfseries Owner}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23}\label{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23}} 
+\index{Unity.Services.Core.Editor@{Unity.Services.Core.Editor}!AsyncOperationStatus@{AsyncOperationStatus}}
+\index{AsyncOperationStatus@{AsyncOperationStatus}!Unity.Services.Core.Editor@{Unity.Services.Core.Editor}}
+\doxysubsubsection{\texorpdfstring{AsyncOperationStatus}{AsyncOperationStatus}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23}{Unity.\+Services.\+Core.\+Editor.\+Async\+Operation\+Status}}}
+
+
+
+All supported status of an \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}{IAsync\+Operation}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!Unity.Services.Core.Editor@{Unity.Services.Core.Editor}}\index{Unity.Services.Core.Editor@{Unity.Services.Core.Editor}!None@{None}}}\mbox{\Hypertarget{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23a6adf97f83acf6453d4a6a4b1070f3754}\label{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23a6adf97f83acf6453d4a6a4b1070f3754}} 
+None&The operation status hasn\textquotesingle{}t been defined yet. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InProgress@{InProgress}!Unity.Services.Core.Editor@{Unity.Services.Core.Editor}}\index{Unity.Services.Core.Editor@{Unity.Services.Core.Editor}!InProgress@{InProgress}}}\mbox{\Hypertarget{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23a12d868c18cb29bf58f02b504be9033fd}\label{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23a12d868c18cb29bf58f02b504be9033fd}} 
+In\+Progress&The operation is running. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Succeeded@{Succeeded}!Unity.Services.Core.Editor@{Unity.Services.Core.Editor}}\index{Unity.Services.Core.Editor@{Unity.Services.Core.Editor}!Succeeded@{Succeeded}}}\mbox{\Hypertarget{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23a66d02c2f8a582446f8dd8752366002b5}\label{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23a66d02c2f8a582446f8dd8752366002b5}} 
+Succeeded&The operation is completed without any errors. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Failed@{Failed}!Unity.Services.Core.Editor@{Unity.Services.Core.Editor}}\index{Unity.Services.Core.Editor@{Unity.Services.Core.Editor}!Failed@{Failed}}}\mbox{\Hypertarget{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23ad7c8c85bf79bbe1b7188497c32c3b0ca}\label{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23ad7c8c85bf79bbe1b7188497c32c3b0ca}} 
+Failed&The operation is completed with errors. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cancelled@{Cancelled}!Unity.Services.Core.Editor@{Unity.Services.Core.Editor}}\index{Unity.Services.Core.Editor@{Unity.Services.Core.Editor}!Cancelled@{Cancelled}}}\mbox{\Hypertarget{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23aa149e85a44aeec9140e92733d9ed694e}\label{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23aa149e85a44aeec9140e92733d9ed694e}} 
+Cancelled&The operation has been canceled. \\
+\hline
+
+\end{DoxyEnumFields}

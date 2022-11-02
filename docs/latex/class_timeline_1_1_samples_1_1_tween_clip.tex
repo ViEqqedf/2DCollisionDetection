@@ -1,0 +1,85 @@
+\hypertarget{class_timeline_1_1_samples_1_1_tween_clip}{}\doxysection{Timeline.\+Samples.\+Tween\+Clip Class Reference}
+\label{class_timeline_1_1_samples_1_1_tween_clip}\index{Timeline.Samples.TweenClip@{Timeline.Samples.TweenClip}}
+Inheritance diagram for Timeline.\+Samples.\+Tween\+Clip\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.536351cm]{class_timeline_1_1_samples_1_1_tween_clip}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_timeline_1_1_samples_1_1_tween_clip_ade5eca4937ebe722559259cd1d1fc045}\label{class_timeline_1_1_samples_1_1_tween_clip_ade5eca4937ebe722559259cd1d1fc045}} 
+override Playable {\bfseries Create\+Playable} (Playable\+Graph graph, Game\+Object owner)
+\item 
+void \mbox{\hyperlink{class_timeline_1_1_samples_1_1_tween_clip_ac660975224d75fe3bb02bd31ee2db9e1}{Gather\+Properties}} (Playable\+Director director, \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_property_collector}{IProperty\+Collector}} driver)
+\begin{DoxyCompactList}\small\item\em Called by the \mbox{\hyperlink{namespace_timeline}{Timeline}} Editor to gather properties requiring preview. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_timeline_1_1_samples_1_1_tween_clip_a778d206c1fe1d7b12aa40df7abdea0e0}\label{class_timeline_1_1_samples_1_1_tween_clip_a778d206c1fe1d7b12aa40df7abdea0e0}} 
+Exposed\+Reference$<$ Transform $>$ {\bfseries start\+Location}
+\item 
+\mbox{\Hypertarget{class_timeline_1_1_samples_1_1_tween_clip_abfa03aa9ff9aafef6596de8f3e4de69e}\label{class_timeline_1_1_samples_1_1_tween_clip_abfa03aa9ff9aafef6596de8f3e4de69e}} 
+Exposed\+Reference$<$ Transform $>$ {\bfseries end\+Location}
+\item 
+\mbox{\Hypertarget{class_timeline_1_1_samples_1_1_tween_clip_a3312d385261ebe91271d058b2924efec}\label{class_timeline_1_1_samples_1_1_tween_clip_a3312d385261ebe91271d058b2924efec}} 
+bool {\bfseries should\+Tween\+Position} = true
+\item 
+\mbox{\Hypertarget{class_timeline_1_1_samples_1_1_tween_clip_a16c178f55371392faa82a5237e3b4927}\label{class_timeline_1_1_samples_1_1_tween_clip_a16c178f55371392faa82a5237e3b4927}} 
+bool {\bfseries should\+Tween\+Rotation} = true
+\item 
+\mbox{\Hypertarget{class_timeline_1_1_samples_1_1_tween_clip_a3d10a7f602dc7388f9fbf5178fe83248}\label{class_timeline_1_1_samples_1_1_tween_clip_a3d10a7f602dc7388f9fbf5178fe83248}} 
+Animation\+Curve {\bfseries curve} = Animation\+Curve.\+Ease\+In\+Out(0.\+0f, 0.\+0f, 1.\+0f, 1.\+0f)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_unity_engine_1_1_timeline_af0b68b9529bda08f212a5aefa79e7e03}{Clip\+Caps}} \mbox{\hyperlink{class_timeline_1_1_samples_1_1_tween_clip_a4004554a07ffe101257b00aa3d2d9b7a}{clip\+Caps}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns a description of the features supported by clips with Playable\+Assets implementing this interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_timeline_1_1_samples_1_1_tween_clip_ac660975224d75fe3bb02bd31ee2db9e1}\label{class_timeline_1_1_samples_1_1_tween_clip_ac660975224d75fe3bb02bd31ee2db9e1}} 
+\index{Timeline.Samples.TweenClip@{Timeline.Samples.TweenClip}!GatherProperties@{GatherProperties}}
+\index{GatherProperties@{GatherProperties}!Timeline.Samples.TweenClip@{Timeline.Samples.TweenClip}}
+\doxysubsubsection{\texorpdfstring{GatherProperties()}{GatherProperties()}}
+{\footnotesize\ttfamily void Timeline.\+Samples.\+Tween\+Clip.\+Gather\+Properties (\begin{DoxyParamCaption}\item[{Playable\+Director}]{director,  }\item[{\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_property_collector}{IProperty\+Collector}}}]{driver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Called by the \mbox{\hyperlink{namespace_timeline}{Timeline}} Editor to gather properties requiring preview. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em director} & The Playable\+Director invoking the preview\\
+\hline
+{\em driver} & Property\+Collector used to gather previewable properties\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_property_preview_a7b234535daf06a0dd380c4994e1f2c63}{Unity\+Engine.\+Timeline.\+IProperty\+Preview}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_timeline_1_1_samples_1_1_tween_clip_a4004554a07ffe101257b00aa3d2d9b7a}\label{class_timeline_1_1_samples_1_1_tween_clip_a4004554a07ffe101257b00aa3d2d9b7a}} 
+\index{Timeline.Samples.TweenClip@{Timeline.Samples.TweenClip}!clipCaps@{clipCaps}}
+\index{clipCaps@{clipCaps}!Timeline.Samples.TweenClip@{Timeline.Samples.TweenClip}}
+\doxysubsubsection{\texorpdfstring{clipCaps}{clipCaps}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_unity_engine_1_1_timeline_af0b68b9529bda08f212a5aefa79e7e03}{Clip\+Caps}} Timeline.\+Samples.\+Tween\+Clip.\+clip\+Caps\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns a description of the features supported by clips with Playable\+Assets implementing this interface. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset_ad73af6af3aa5b1f06545740d9da4db2c}{Unity\+Engine.\+Timeline.\+ITimeline\+Clip\+Asset}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Samples$\sim$/\+Customization/\+Tween/Tween\+Clip.\+cs\end{DoxyCompactItemize}

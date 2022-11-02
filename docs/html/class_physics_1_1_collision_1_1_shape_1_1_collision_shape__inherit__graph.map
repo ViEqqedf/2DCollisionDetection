@@ -1,0 +1,6 @@
+<map id="Physics.Collision.Shape.CollisionShape" name="Physics.Collision.Shape.CollisionShape">
+<area shape="rect" id="node1" title=" " alt="" coords="181,5,415,303"/>
+<area shape="rect" id="node2" href="$class_physics_1_1_collision_1_1_shape_1_1_circle.html" title=" " alt="" coords="5,351,188,531"/>
+<area shape="rect" id="node3" href="$class_physics_1_1_collision_1_1_shape_1_1_custom_shape.html" title=" " alt="" coords="213,365,383,516"/>
+<area shape="rect" id="node4" href="$class_physics_1_1_collision_1_1_shape_1_1_rect.html" title=" " alt="" coords="408,365,604,516"/>
+</map>

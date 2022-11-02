@@ -1,0 +1,127 @@
+\hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api}{}\doxysection{Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+Test\+Runner\+Api Class Reference}
+\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api}\index{UnityEditor.TestTools.TestRunner.Api.TestRunnerApi@{UnityEditor.TestTools.TestRunner.Api.TestRunnerApi}}
+
+
+The \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api}{Test\+Runner\+Api}} retrieves and runs tests programmatically from code inside the project, or inside other packages. \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api}{Test\+Runner\+Api}} is a \href{https://docs.unity3d.com/ScriptReference/ScriptableObject.html}{\texttt{ Scriptable\+Object}}. You can initialize the API like this\+:  
+
+
+Inheritance diagram for Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+Test\+Runner\+Api\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api_ac272fa6ddb7d2d0b391278244503ac64}{Execute}} (\mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings}{Execution\+Settings}} execution\+Settings)
+\begin{DoxyCompactList}\small\item\em Starts a test run with a given set of execution\+Settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api_a732aa79353e215da01add3102cbfea32}{Register\+Callbacks$<$ T $>$}} (T test\+Callbacks, int priority=0)
+\begin{DoxyCompactList}\small\item\em Sets up a given instance of \mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks}{ICallbacks}} to be invoked on test runs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api_a63ac7eee1dc79b88e869ee4077ed4170}{Unregister\+Callbacks$<$ T $>$}} (T test\+Callbacks)
+\begin{DoxyCompactList}\small\item\em Unregister an instance of \mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks}{ICallbacks}} to no longer receive callbacks from test runs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api_a20c7b5c5cb25ed2afe750e3f3952ffa4}{Retrieve\+Test\+List}} (\mbox{\hyperlink{namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_af169988e2317e7edb0f1b09d920412e9}{Test\+Mode}} test\+Mode, Action$<$ ITest\+Adaptor $>$ callback)
+\begin{DoxyCompactList}\small\item\em Retrieve the full test tree as ITest\+Adaptor for a given test mode. This is obsolete. Use Test\+Runner\+Api.\+Retrieve\+Test\+Tree instead. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api}{Test\+Runner\+Api}} retrieves and runs tests programmatically from code inside the project, or inside other packages. \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api}{Test\+Runner\+Api}} is a \href{https://docs.unity3d.com/ScriptReference/ScriptableObject.html}{\texttt{ Scriptable\+Object}}. You can initialize the API like this\+: 
+
+{\ttfamily  var test\+Runner\+Api = Scriptable\+Object.\+Create\+Instance\texorpdfstring{$<$}{<}\mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api}{Test\+Runner\+Api}}\texorpdfstring{$>$}{>}(); } Note\+: You can subscribe and receive test results in one instance of the API, even if the run starts from another instance. The \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api}{Test\+Runner\+Api}} supports the following workflows\+:
+\begin{DoxyItemize}
+\item \href{https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/extension-run-tests.html}{\texttt{ How to run tests programmatically}}
+\item \href{https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/extension-get-test-results.html}{\texttt{ How to get test results}}
+\item \href{https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/extension-retrieve-test-list.html}{\texttt{ How to retrieve the list of tests}} 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api_ac272fa6ddb7d2d0b391278244503ac64}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api_ac272fa6ddb7d2d0b391278244503ac64}} 
+\index{UnityEditor.TestTools.TestRunner.Api.TestRunnerApi@{UnityEditor.TestTools.TestRunner.Api.TestRunnerApi}!Execute@{Execute}}
+\index{Execute@{Execute}!UnityEditor.TestTools.TestRunner.Api.TestRunnerApi@{UnityEditor.TestTools.TestRunner.Api.TestRunnerApi}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily string Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+Test\+Runner\+Api.\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings}{Execution\+Settings}}}]{execution\+Settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Starts a test run with a given set of execution\+Settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em execution\+Settings} & Set of \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings}{Execution\+Settings}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A GUID that identifies the Test\+Job\+Data.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api_a732aa79353e215da01add3102cbfea32}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api_a732aa79353e215da01add3102cbfea32}} 
+\index{UnityEditor.TestTools.TestRunner.Api.TestRunnerApi@{UnityEditor.TestTools.TestRunner.Api.TestRunnerApi}!RegisterCallbacks$<$ T $>$@{RegisterCallbacks$<$ T $>$}}
+\index{RegisterCallbacks$<$ T $>$@{RegisterCallbacks$<$ T $>$}!UnityEditor.TestTools.TestRunner.Api.TestRunnerApi@{UnityEditor.TestTools.TestRunner.Api.TestRunnerApi}}
+\doxysubsubsection{\texorpdfstring{RegisterCallbacks$<$ T $>$()}{RegisterCallbacks< T >()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+Test\+Runner\+Api.\+Register\+Callbacks$<$ T $>$ (\begin{DoxyParamCaption}\item[{T}]{test\+Callbacks,  }\item[{int}]{priority = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets up a given instance of \mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks}{ICallbacks}} to be invoked on test runs. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Generic representing a type of callback. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em test\+Callbacks} & The test callbacks to be invoked. \\
+\hline
+{\em priority} & Sets the order in which the callbacks are invoked, starting with the highest value first. \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em ICallbacks}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api_a20c7b5c5cb25ed2afe750e3f3952ffa4}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api_a20c7b5c5cb25ed2afe750e3f3952ffa4}} 
+\index{UnityEditor.TestTools.TestRunner.Api.TestRunnerApi@{UnityEditor.TestTools.TestRunner.Api.TestRunnerApi}!RetrieveTestList@{RetrieveTestList}}
+\index{RetrieveTestList@{RetrieveTestList}!UnityEditor.TestTools.TestRunner.Api.TestRunnerApi@{UnityEditor.TestTools.TestRunner.Api.TestRunnerApi}}
+\doxysubsubsection{\texorpdfstring{RetrieveTestList()}{RetrieveTestList()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+Test\+Runner\+Api.\+Retrieve\+Test\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_af169988e2317e7edb0f1b09d920412e9}{Test\+Mode}}}]{test\+Mode,  }\item[{Action$<$ ITest\+Adaptor $>$}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the full test tree as ITest\+Adaptor for a given test mode. This is obsolete. Use Test\+Runner\+Api.\+Retrieve\+Test\+Tree instead. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em test\+Mode} & \\
+\hline
+{\em callback} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api_a63ac7eee1dc79b88e869ee4077ed4170}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api_a63ac7eee1dc79b88e869ee4077ed4170}} 
+\index{UnityEditor.TestTools.TestRunner.Api.TestRunnerApi@{UnityEditor.TestTools.TestRunner.Api.TestRunnerApi}!UnregisterCallbacks$<$ T $>$@{UnregisterCallbacks$<$ T $>$}}
+\index{UnregisterCallbacks$<$ T $>$@{UnregisterCallbacks$<$ T $>$}!UnityEditor.TestTools.TestRunner.Api.TestRunnerApi@{UnityEditor.TestTools.TestRunner.Api.TestRunnerApi}}
+\doxysubsubsection{\texorpdfstring{UnregisterCallbacks$<$ T $>$()}{UnregisterCallbacks< T >()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+Test\+Runner\+Api.\+Unregister\+Callbacks$<$ T $>$ (\begin{DoxyParamCaption}\item[{T}]{test\+Callbacks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Unregister an instance of \mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks}{ICallbacks}} to no longer receive callbacks from test runs. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Generic representing a type of callback. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em test\+Callbacks} & The test callbacks to unregister.\\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em ICallbacks}]\end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Editor.\+Test\+Runner/\+Api/Test\+Runner\+Api.\+cs\end{DoxyCompactItemize}

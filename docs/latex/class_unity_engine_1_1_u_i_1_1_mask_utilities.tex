@@ -1,0 +1,158 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_mask_utilities}{}\doxysection{Unity\+Engine.\+UI.\+Mask\+Utilities Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_mask_utilities}\index{UnityEngine.UI.MaskUtilities@{UnityEngine.UI.MaskUtilities}}
+
+
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_mask}{Mask}} related utility class. This class provides masking-\/specific utility functions.  
+
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_mask_utilities_a394e02beae27c2e3fc69d3a533ab7a35}{Notify2\+DMask\+State\+Changed}} (Component mask)
+\begin{DoxyCompactList}\small\item\em Notify all IClippables under the given component that they need to recalculate clipping. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_mask_utilities_af6b2ead32e74b28c4e5bcb80d3729421}{Notify\+Stencil\+State\+Changed}} (Component mask)
+\begin{DoxyCompactList}\small\item\em Notify all \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_maskable}{IMaskable}} under the given component that they need to recalculate masking. \end{DoxyCompactList}\item 
+static Transform \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_mask_utilities_a841cb449dbe16944f1e40e747aac153e}{Find\+Root\+Sort\+Override\+Canvas}} (Transform start)
+\begin{DoxyCompactList}\small\item\em Find a root Canvas. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_mask_utilities_a91c518e0d8a9ba77444e8b93da16cf6c}{Get\+Stencil\+Depth}} (Transform transform, Transform stop\+After)
+\begin{DoxyCompactList}\small\item\em Find the stencil depth for a given element. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_mask_utilities_a7eda5455d91260a6b7a69c48e365b3d3}{Is\+Descendant\+Or\+Self}} (Transform father, Transform child)
+\begin{DoxyCompactList}\small\item\em Helper function to determine if the child is a descendant of father or is father. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}{Rect\+Mask2D}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_mask_utilities_a3cfb7e121fc4a2099e9cd6ac27270fc4}{Get\+Rect\+Mask\+For\+Clippable}} (\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}} clippable)
+\begin{DoxyCompactList}\small\item\em Find the correct \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}{Rect\+Mask2D}} for a given \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}}. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_mask_utilities_a9f19d31d50561a4fb00bbdc03d630eaf}{Get\+Rect\+Masks\+For\+Clip}} (\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}{Rect\+Mask2D}} clipper, List$<$ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}{Rect\+Mask2D}} $>$ masks)
+\begin{DoxyCompactList}\small\item\em Search for all \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}{Rect\+Mask2D}} that apply to the given \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}{Rect\+Mask2D}} (includes self). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_mask}{Mask}} related utility class. This class provides masking-\/specific utility functions. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_mask_utilities_a841cb449dbe16944f1e40e747aac153e}\label{class_unity_engine_1_1_u_i_1_1_mask_utilities_a841cb449dbe16944f1e40e747aac153e}} 
+\index{UnityEngine.UI.MaskUtilities@{UnityEngine.UI.MaskUtilities}!FindRootSortOverrideCanvas@{FindRootSortOverrideCanvas}}
+\index{FindRootSortOverrideCanvas@{FindRootSortOverrideCanvas}!UnityEngine.UI.MaskUtilities@{UnityEngine.UI.MaskUtilities}}
+\doxysubsubsection{\texorpdfstring{FindRootSortOverrideCanvas()}{FindRootSortOverrideCanvas()}}
+{\footnotesize\ttfamily static Transform Unity\+Engine.\+UI.\+Mask\+Utilities.\+Find\+Root\+Sort\+Override\+Canvas (\begin{DoxyParamCaption}\item[{Transform}]{start }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Find a root Canvas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & Transform to start the search at going up the hierarchy.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Finds either the most root canvas, or the first canvas that overrides sorting.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_mask_utilities_a3cfb7e121fc4a2099e9cd6ac27270fc4}\label{class_unity_engine_1_1_u_i_1_1_mask_utilities_a3cfb7e121fc4a2099e9cd6ac27270fc4}} 
+\index{UnityEngine.UI.MaskUtilities@{UnityEngine.UI.MaskUtilities}!GetRectMaskForClippable@{GetRectMaskForClippable}}
+\index{GetRectMaskForClippable@{GetRectMaskForClippable}!UnityEngine.UI.MaskUtilities@{UnityEngine.UI.MaskUtilities}}
+\doxysubsubsection{\texorpdfstring{GetRectMaskForClippable()}{GetRectMaskForClippable()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}{Rect\+Mask2D}} Unity\+Engine.\+UI.\+Mask\+Utilities.\+Get\+Rect\+Mask\+For\+Clippable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}}}]{clippable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Find the correct \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}{Rect\+Mask2D}} for a given \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clippable} & Clippable to search from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Correct \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}{Rect\+Mask2D}}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_mask_utilities_a9f19d31d50561a4fb00bbdc03d630eaf}\label{class_unity_engine_1_1_u_i_1_1_mask_utilities_a9f19d31d50561a4fb00bbdc03d630eaf}} 
+\index{UnityEngine.UI.MaskUtilities@{UnityEngine.UI.MaskUtilities}!GetRectMasksForClip@{GetRectMasksForClip}}
+\index{GetRectMasksForClip@{GetRectMasksForClip}!UnityEngine.UI.MaskUtilities@{UnityEngine.UI.MaskUtilities}}
+\doxysubsubsection{\texorpdfstring{GetRectMasksForClip()}{GetRectMasksForClip()}}
+{\footnotesize\ttfamily static void Unity\+Engine.\+UI.\+Mask\+Utilities.\+Get\+Rect\+Masks\+For\+Clip (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}{Rect\+Mask2D}}}]{clipper,  }\item[{List$<$ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}{Rect\+Mask2D}} $>$}]{masks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Search for all \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}{Rect\+Mask2D}} that apply to the given \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}{Rect\+Mask2D}} (includes self). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clipper} & Starting clipping object.\\
+\hline
+{\em masks} & The list of Rect masks\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_mask_utilities_a91c518e0d8a9ba77444e8b93da16cf6c}\label{class_unity_engine_1_1_u_i_1_1_mask_utilities_a91c518e0d8a9ba77444e8b93da16cf6c}} 
+\index{UnityEngine.UI.MaskUtilities@{UnityEngine.UI.MaskUtilities}!GetStencilDepth@{GetStencilDepth}}
+\index{GetStencilDepth@{GetStencilDepth}!UnityEngine.UI.MaskUtilities@{UnityEngine.UI.MaskUtilities}}
+\doxysubsubsection{\texorpdfstring{GetStencilDepth()}{GetStencilDepth()}}
+{\footnotesize\ttfamily static int Unity\+Engine.\+UI.\+Mask\+Utilities.\+Get\+Stencil\+Depth (\begin{DoxyParamCaption}\item[{Transform}]{transform,  }\item[{Transform}]{stop\+After }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Find the stencil depth for a given element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transform} & The starting transform to search.\\
+\hline
+{\em stop\+After} & Where the search of parents should stop\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+What the proper stencil buffer index should be.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_mask_utilities_a7eda5455d91260a6b7a69c48e365b3d3}\label{class_unity_engine_1_1_u_i_1_1_mask_utilities_a7eda5455d91260a6b7a69c48e365b3d3}} 
+\index{UnityEngine.UI.MaskUtilities@{UnityEngine.UI.MaskUtilities}!IsDescendantOrSelf@{IsDescendantOrSelf}}
+\index{IsDescendantOrSelf@{IsDescendantOrSelf}!UnityEngine.UI.MaskUtilities@{UnityEngine.UI.MaskUtilities}}
+\doxysubsubsection{\texorpdfstring{IsDescendantOrSelf()}{IsDescendantOrSelf()}}
+{\footnotesize\ttfamily static bool Unity\+Engine.\+UI.\+Mask\+Utilities.\+Is\+Descendant\+Or\+Self (\begin{DoxyParamCaption}\item[{Transform}]{father,  }\item[{Transform}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Helper function to determine if the child is a descendant of father or is father. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em father} & The transform to compare against.\\
+\hline
+{\em child} & The starting transform to search up the hierarchy.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Is child equal to father or is a descendant.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_mask_utilities_a394e02beae27c2e3fc69d3a533ab7a35}\label{class_unity_engine_1_1_u_i_1_1_mask_utilities_a394e02beae27c2e3fc69d3a533ab7a35}} 
+\index{UnityEngine.UI.MaskUtilities@{UnityEngine.UI.MaskUtilities}!Notify2DMaskStateChanged@{Notify2DMaskStateChanged}}
+\index{Notify2DMaskStateChanged@{Notify2DMaskStateChanged}!UnityEngine.UI.MaskUtilities@{UnityEngine.UI.MaskUtilities}}
+\doxysubsubsection{\texorpdfstring{Notify2DMaskStateChanged()}{Notify2DMaskStateChanged()}}
+{\footnotesize\ttfamily static void Unity\+Engine.\+UI.\+Mask\+Utilities.\+Notify2\+DMask\+State\+Changed (\begin{DoxyParamCaption}\item[{Component}]{mask }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Notify all IClippables under the given component that they need to recalculate clipping. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mask} & The object thats changed for whose children should be notified.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_mask_utilities_af6b2ead32e74b28c4e5bcb80d3729421}\label{class_unity_engine_1_1_u_i_1_1_mask_utilities_af6b2ead32e74b28c4e5bcb80d3729421}} 
+\index{UnityEngine.UI.MaskUtilities@{UnityEngine.UI.MaskUtilities}!NotifyStencilStateChanged@{NotifyStencilStateChanged}}
+\index{NotifyStencilStateChanged@{NotifyStencilStateChanged}!UnityEngine.UI.MaskUtilities@{UnityEngine.UI.MaskUtilities}}
+\doxysubsubsection{\texorpdfstring{NotifyStencilStateChanged()}{NotifyStencilStateChanged()}}
+{\footnotesize\ttfamily static void Unity\+Engine.\+UI.\+Mask\+Utilities.\+Notify\+Stencil\+State\+Changed (\begin{DoxyParamCaption}\item[{Component}]{mask }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Notify all \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_maskable}{IMaskable}} under the given component that they need to recalculate masking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mask} & The object thats changed for whose children should be notified.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/Mask\+Utilities.\+cs\end{DoxyCompactItemize}

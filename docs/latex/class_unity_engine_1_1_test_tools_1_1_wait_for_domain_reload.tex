@@ -1,0 +1,104 @@
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+Wait\+For\+Domain\+Reload Class Reference}
+\label{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload}\index{UnityEngine.TestTools.WaitForDomainReload@{UnityEngine.TestTools.WaitForDomainReload}}
+
+
+\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload}{Wait\+For\+Domain\+Reload}} is an \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}{IEdit\+Mode\+Test\+Yield\+Instruction}} that you can yield in Edit Mode tests. It delays the execution of scripts until after an incoming domain reload. If the domain reload results in a script compilation failure, then it throws an exception.  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Tools.\+Wait\+For\+Domain\+Reload\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload_a3822d49f6208a7d69cfaa72d136ff111}{Wait\+For\+Domain\+Reload}} ()
+\begin{DoxyCompactList}\small\item\em Create a new instance of the {\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload}{Wait\+For\+Domain\+Reload}}} yield instruction. \end{DoxyCompactList}\item 
+IEnumerator \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload_a213d6092e4594430cd4790b7f0a85d7a}{Perform}} ()
+\begin{DoxyCompactList}\small\item\em Perform the multi step action of waiting for a domain reload. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload_a002df9c8547de10393b2682c9127373d}{Expect\+Domain\+Reload}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if the instruction expects a domain reload to occur. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload_a839d2cad3d38c2956f861447e61891b8}{Expected\+Playmode\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if the instruction expects the \mbox{\hyperlink{namespace_unity}{Unity}} Editor to be in {\bfseries{Play Mode}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload}{Wait\+For\+Domain\+Reload}} is an \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}{IEdit\+Mode\+Test\+Yield\+Instruction}} that you can yield in Edit Mode tests. It delays the execution of scripts until after an incoming domain reload. If the domain reload results in a script compilation failure, then it throws an exception. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload_a3822d49f6208a7d69cfaa72d136ff111}\label{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload_a3822d49f6208a7d69cfaa72d136ff111}} 
+\index{UnityEngine.TestTools.WaitForDomainReload@{UnityEngine.TestTools.WaitForDomainReload}!WaitForDomainReload@{WaitForDomainReload}}
+\index{WaitForDomainReload@{WaitForDomainReload}!UnityEngine.TestTools.WaitForDomainReload@{UnityEngine.TestTools.WaitForDomainReload}}
+\doxysubsubsection{\texorpdfstring{WaitForDomainReload()}{WaitForDomainReload()}}
+{\footnotesize\ttfamily Unity\+Engine.\+Test\+Tools.\+Wait\+For\+Domain\+Reload.\+Wait\+For\+Domain\+Reload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new instance of the {\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload}{Wait\+For\+Domain\+Reload}}} yield instruction. 
+
+{\ttfamily  \mbox{[}Unity\+Set\+Up\mbox{]} public IEnumerator Set\+Up() \{ File.\+Copy(\char`\"{}\+Resources/\+My\+Dll.\+dll\char`\"{}, "{}Assets/\+My\+Dll.\+dll"{}, true); // Trigger a domain reload. Asset\+Database.\+Refresh(); yield return new \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload_a3822d49f6208a7d69cfaa72d136ff111}{Wait\+For\+Domain\+Reload()}}; \} } 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload_a213d6092e4594430cd4790b7f0a85d7a}\label{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload_a213d6092e4594430cd4790b7f0a85d7a}} 
+\index{UnityEngine.TestTools.WaitForDomainReload@{UnityEngine.TestTools.WaitForDomainReload}!Perform@{Perform}}
+\index{Perform@{Perform}!UnityEngine.TestTools.WaitForDomainReload@{UnityEngine.TestTools.WaitForDomainReload}}
+\doxysubsubsection{\texorpdfstring{Perform()}{Perform()}}
+{\footnotesize\ttfamily IEnumerator Unity\+Engine.\+Test\+Tools.\+Wait\+For\+Domain\+Reload.\+Perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Perform the multi step action of waiting for a domain reload. 
+
+\begin{DoxyReturn}{Returns}
+An IEnumerator with steps.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Throws an exception if script compilation failed or if the expected domain reload did not occur.\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_a4f785da8cc50e662bf8e4da01004c7fe}{Unity\+Engine.\+Test\+Tools.\+IEdit\+Mode\+Test\+Yield\+Instruction}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload_a002df9c8547de10393b2682c9127373d}\label{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload_a002df9c8547de10393b2682c9127373d}} 
+\index{UnityEngine.TestTools.WaitForDomainReload@{UnityEngine.TestTools.WaitForDomainReload}!ExpectDomainReload@{ExpectDomainReload}}
+\index{ExpectDomainReload@{ExpectDomainReload}!UnityEngine.TestTools.WaitForDomainReload@{UnityEngine.TestTools.WaitForDomainReload}}
+\doxysubsubsection{\texorpdfstring{ExpectDomainReload}{ExpectDomainReload}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Wait\+For\+Domain\+Reload.\+Expect\+Domain\+Reload\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns true if the instruction expects a domain reload to occur. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_a3cf7b174d1ecc9cdd26d231adcd4f3a9}{Unity\+Engine.\+Test\+Tools.\+IEdit\+Mode\+Test\+Yield\+Instruction}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload_a839d2cad3d38c2956f861447e61891b8}\label{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload_a839d2cad3d38c2956f861447e61891b8}} 
+\index{UnityEngine.TestTools.WaitForDomainReload@{UnityEngine.TestTools.WaitForDomainReload}!ExpectedPlaymodeState@{ExpectedPlaymodeState}}
+\index{ExpectedPlaymodeState@{ExpectedPlaymodeState}!UnityEngine.TestTools.WaitForDomainReload@{UnityEngine.TestTools.WaitForDomainReload}}
+\doxysubsubsection{\texorpdfstring{ExpectedPlaymodeState}{ExpectedPlaymodeState}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Wait\+For\+Domain\+Reload.\+Expected\+Playmode\+State\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns true if the instruction expects the \mbox{\hyperlink{namespace_unity}{Unity}} Editor to be in {\bfseries{Play Mode}}. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_af28e01e066b7355ab048bcf78a24e9cd}{Unity\+Engine.\+Test\+Tools.\+IEdit\+Mode\+Test\+Yield\+Instruction}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Editor.\+Test\+Runner/\+Test\+Runner/\+Messages/Wait\+For\+Domain\+Reload.\+cs\end{DoxyCompactItemize}

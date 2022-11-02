@@ -1,0 +1,155 @@
+\hypertarget{class_unity_engine_1_1_timeline_1_1_director_control_playable}{}\doxysection{Unity\+Engine.\+Timeline.\+Director\+Control\+Playable Class Reference}
+\label{class_unity_engine_1_1_timeline_1_1_director_control_playable}\index{UnityEngine.Timeline.DirectorControlPlayable@{UnityEngine.Timeline.DirectorControlPlayable}}
+
+
+Playable Behaviour used to control a Playable\+Director.  
+
+
+Inheritance diagram for Unity\+Engine.\+Timeline.\+Director\+Control\+Playable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_timeline_1_1_director_control_playable}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_director_control_playable_a4230795b864759896533c148f55423b6}{On\+Playable\+Destroy}} (Playable playable)
+\begin{DoxyCompactList}\small\item\em This function is called when this Playable\+Behaviour is destroyed. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_director_control_playable_a2311b379f631c3f19d47bda8eb4d0e63}{Prepare\+Frame}} (Playable playable, Frame\+Data info)
+\begin{DoxyCompactList}\small\item\em This function is called during the Prepare\+Frame phase of the Playable\+Graph. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_director_control_playable_ada217b6a9f4c6312fc551b37d5f59fc9}{On\+Behaviour\+Play}} (Playable playable, Frame\+Data info)
+\begin{DoxyCompactList}\small\item\em This function is called when the Playable play state is changed to Playables.\+Play\+State.\+Playing. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_director_control_playable_af4f47841f65fd950f7edddf6dfb19a38}{On\+Behaviour\+Pause}} (Playable playable, Frame\+Data info)
+\begin{DoxyCompactList}\small\item\em This function is called when the Playable play state is changed to Play\+State.\+Paused. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_director_control_playable_a952cbdf72cbb2582d921c6c8316a972e}{Process\+Frame}} (Playable playable, Frame\+Data info, object player\+Data)
+\begin{DoxyCompactList}\small\item\em This function is called during the Process\+Frame phase of the Playable\+Graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Script\+Playable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_director_control_playable}{Director\+Control\+Playable}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_director_control_playable_a98e879a30fbfc39158ebbd2f1b15ca7f}{Create}} (Playable\+Graph graph, Playable\+Director \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_director_control_playable_a704dca1a2a54f5c3fb6f2d2502fb5de5}{director}})
+\begin{DoxyCompactList}\small\item\em Creates a Playable with a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_director_control_playable}{Director\+Control\+Playable}} attached \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_director_control_playable_a704dca1a2a54f5c3fb6f2d2502fb5de5}\label{class_unity_engine_1_1_timeline_1_1_director_control_playable_a704dca1a2a54f5c3fb6f2d2502fb5de5}} 
+Playable\+Director {\bfseries director}
+\begin{DoxyCompactList}\small\item\em The Playable\+Director being controlled by this Playable\+Behaviour \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Playable Behaviour used to control a Playable\+Director. 
+
+This playable is used to control other Playable\+Director components from a \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} sequence. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_director_control_playable_a98e879a30fbfc39158ebbd2f1b15ca7f}\label{class_unity_engine_1_1_timeline_1_1_director_control_playable_a98e879a30fbfc39158ebbd2f1b15ca7f}} 
+\index{UnityEngine.Timeline.DirectorControlPlayable@{UnityEngine.Timeline.DirectorControlPlayable}!Create@{Create}}
+\index{Create@{Create}!UnityEngine.Timeline.DirectorControlPlayable@{UnityEngine.Timeline.DirectorControlPlayable}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily static Script\+Playable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_director_control_playable}{Director\+Control\+Playable}} $>$ Unity\+Engine.\+Timeline.\+Director\+Control\+Playable.\+Create (\begin{DoxyParamCaption}\item[{Playable\+Graph}]{graph,  }\item[{Playable\+Director}]{director }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Creates a Playable with a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_director_control_playable}{Director\+Control\+Playable}} attached 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & The graph to inject the playable into\\
+\hline
+{\em director} & The director to control\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a Playable with a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_director_control_playable}{Director\+Control\+Playable}} attached
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_director_control_playable_af4f47841f65fd950f7edddf6dfb19a38}\label{class_unity_engine_1_1_timeline_1_1_director_control_playable_af4f47841f65fd950f7edddf6dfb19a38}} 
+\index{UnityEngine.Timeline.DirectorControlPlayable@{UnityEngine.Timeline.DirectorControlPlayable}!OnBehaviourPause@{OnBehaviourPause}}
+\index{OnBehaviourPause@{OnBehaviourPause}!UnityEngine.Timeline.DirectorControlPlayable@{UnityEngine.Timeline.DirectorControlPlayable}}
+\doxysubsubsection{\texorpdfstring{OnBehaviourPause()}{OnBehaviourPause()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Director\+Control\+Playable.\+On\+Behaviour\+Pause (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called when the Playable play state is changed to Play\+State.\+Paused. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The playable this behaviour is attached to.\\
+\hline
+{\em info} & A Frame\+Data structure that contains information about the current frame context.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_director_control_playable_ada217b6a9f4c6312fc551b37d5f59fc9}\label{class_unity_engine_1_1_timeline_1_1_director_control_playable_ada217b6a9f4c6312fc551b37d5f59fc9}} 
+\index{UnityEngine.Timeline.DirectorControlPlayable@{UnityEngine.Timeline.DirectorControlPlayable}!OnBehaviourPlay@{OnBehaviourPlay}}
+\index{OnBehaviourPlay@{OnBehaviourPlay}!UnityEngine.Timeline.DirectorControlPlayable@{UnityEngine.Timeline.DirectorControlPlayable}}
+\doxysubsubsection{\texorpdfstring{OnBehaviourPlay()}{OnBehaviourPlay()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Director\+Control\+Playable.\+On\+Behaviour\+Play (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called when the Playable play state is changed to Playables.\+Play\+State.\+Playing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The Playable that owns the current Playable\+Behaviour.\\
+\hline
+{\em info} & A Frame\+Data structure that contains information about the current frame context.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_director_control_playable_a4230795b864759896533c148f55423b6}\label{class_unity_engine_1_1_timeline_1_1_director_control_playable_a4230795b864759896533c148f55423b6}} 
+\index{UnityEngine.Timeline.DirectorControlPlayable@{UnityEngine.Timeline.DirectorControlPlayable}!OnPlayableDestroy@{OnPlayableDestroy}}
+\index{OnPlayableDestroy@{OnPlayableDestroy}!UnityEngine.Timeline.DirectorControlPlayable@{UnityEngine.Timeline.DirectorControlPlayable}}
+\doxysubsubsection{\texorpdfstring{OnPlayableDestroy()}{OnPlayableDestroy()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Director\+Control\+Playable.\+On\+Playable\+Destroy (\begin{DoxyParamCaption}\item[{Playable}]{playable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called when this Playable\+Behaviour is destroyed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The Playable that owns the current Playable\+Behaviour.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_director_control_playable_a2311b379f631c3f19d47bda8eb4d0e63}\label{class_unity_engine_1_1_timeline_1_1_director_control_playable_a2311b379f631c3f19d47bda8eb4d0e63}} 
+\index{UnityEngine.Timeline.DirectorControlPlayable@{UnityEngine.Timeline.DirectorControlPlayable}!PrepareFrame@{PrepareFrame}}
+\index{PrepareFrame@{PrepareFrame}!UnityEngine.Timeline.DirectorControlPlayable@{UnityEngine.Timeline.DirectorControlPlayable}}
+\doxysubsubsection{\texorpdfstring{PrepareFrame()}{PrepareFrame()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Director\+Control\+Playable.\+Prepare\+Frame (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called during the Prepare\+Frame phase of the Playable\+Graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The Playable that owns the current Playable\+Behaviour.\\
+\hline
+{\em info} & A Frame\+Data structure that contains information about the current frame context.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_director_control_playable_a952cbdf72cbb2582d921c6c8316a972e}\label{class_unity_engine_1_1_timeline_1_1_director_control_playable_a952cbdf72cbb2582d921c6c8316a972e}} 
+\index{UnityEngine.Timeline.DirectorControlPlayable@{UnityEngine.Timeline.DirectorControlPlayable}!ProcessFrame@{ProcessFrame}}
+\index{ProcessFrame@{ProcessFrame}!UnityEngine.Timeline.DirectorControlPlayable@{UnityEngine.Timeline.DirectorControlPlayable}}
+\doxysubsubsection{\texorpdfstring{ProcessFrame()}{ProcessFrame()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Director\+Control\+Playable.\+Process\+Frame (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info,  }\item[{object}]{player\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called during the Process\+Frame phase of the Playable\+Graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The playable this behaviour is attached to.\\
+\hline
+{\em info} & A Frame\+Data structure that contains information about the current frame context.\\
+\hline
+{\em player\+Data} & unused\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Playables/Director\+Control\+Playable.\+cs\end{DoxyCompactItemize}

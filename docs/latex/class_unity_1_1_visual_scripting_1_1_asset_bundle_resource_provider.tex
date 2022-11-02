@@ -1,0 +1,137 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider}{}\doxysection{Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider}\index{Unity.VisualScripting.AssetBundleResourceProvider@{Unity.VisualScripting.AssetBundleResourceProvider}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a08549917c42e4ecb763f29409db6b913}\label{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a08549917c42e4ecb763f29409db6b913}} 
+{\bfseries Asset\+Bundle\+Resource\+Provider} (Asset\+Bundle asset\+Bundle)
+\item 
+IEnumerable$<$ string $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a2a22d551a139ad68a053a5d6af4202ec}{Get\+All\+Files}} ()
+\item 
+IEnumerable$<$ string $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a68642bd7aa1ae6a5581362c244872dba}{Get\+Files}} (string path)
+\item 
+IEnumerable$<$ string $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a3a69561b7ac7536973d5050891ac089f}{Get\+Directories}} (string path)
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a2ec2d4f07d96e9172164ace1536ad4c9}{File\+Exists}} (string path)
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a27f69c179d45e90d357352d622c16acc}{Directory\+Exists}} (string path)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_aeff0889701e138a62f5f094dfff2e533}\label{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_aeff0889701e138a62f5f094dfff2e533}} 
+string {\bfseries Normalize\+Path} (string path)
+\item 
+string \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_aef538ce3dc9739cdc83da8f5f67237a3}{Debug\+Path}} (string path)
+\item 
+T \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a4dfb7afddbf51b513fecd1920d7d457a}{Load\+Asset$<$ T $>$}} (string path)
+\item 
+Texture2D \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_af337916b82237811a75ee7a8160f1a21}{Load\+Texture}} (string path, \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_create_texture_options}{Create\+Texture\+Options}} options)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a92843a1291449dfba35e492a362b5a4c}\label{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a92843a1291449dfba35e492a362b5a4c}} 
+const char {\bfseries Directory\+Separator\+Char} = \textquotesingle{}/\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a705273b654841c39d019b02a0a4b2aa2}\label{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a705273b654841c39d019b02a0a4b2aa2}} 
+Asset\+Bundle {\bfseries asset\+Bundle}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_aef538ce3dc9739cdc83da8f5f67237a3}\label{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_aef538ce3dc9739cdc83da8f5f67237a3}} 
+\index{Unity.VisualScripting.AssetBundleResourceProvider@{Unity.VisualScripting.AssetBundleResourceProvider}!DebugPath@{DebugPath}}
+\index{DebugPath@{DebugPath}!Unity.VisualScripting.AssetBundleResourceProvider@{Unity.VisualScripting.AssetBundleResourceProvider}}
+\doxysubsubsection{\texorpdfstring{DebugPath()}{DebugPath()}}
+{\footnotesize\ttfamily string Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider.\+Debug\+Path (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_resource_provider}{Unity.\+Visual\+Scripting.\+IResource\+Provider}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a27f69c179d45e90d357352d622c16acc}\label{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a27f69c179d45e90d357352d622c16acc}} 
+\index{Unity.VisualScripting.AssetBundleResourceProvider@{Unity.VisualScripting.AssetBundleResourceProvider}!DirectoryExists@{DirectoryExists}}
+\index{DirectoryExists@{DirectoryExists}!Unity.VisualScripting.AssetBundleResourceProvider@{Unity.VisualScripting.AssetBundleResourceProvider}}
+\doxysubsubsection{\texorpdfstring{DirectoryExists()}{DirectoryExists()}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider.\+Directory\+Exists (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_resource_provider}{Unity.\+Visual\+Scripting.\+IResource\+Provider}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a2ec2d4f07d96e9172164ace1536ad4c9}\label{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a2ec2d4f07d96e9172164ace1536ad4c9}} 
+\index{Unity.VisualScripting.AssetBundleResourceProvider@{Unity.VisualScripting.AssetBundleResourceProvider}!FileExists@{FileExists}}
+\index{FileExists@{FileExists}!Unity.VisualScripting.AssetBundleResourceProvider@{Unity.VisualScripting.AssetBundleResourceProvider}}
+\doxysubsubsection{\texorpdfstring{FileExists()}{FileExists()}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider.\+File\+Exists (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_resource_provider}{Unity.\+Visual\+Scripting.\+IResource\+Provider}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a2a22d551a139ad68a053a5d6af4202ec}\label{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a2a22d551a139ad68a053a5d6af4202ec}} 
+\index{Unity.VisualScripting.AssetBundleResourceProvider@{Unity.VisualScripting.AssetBundleResourceProvider}!GetAllFiles@{GetAllFiles}}
+\index{GetAllFiles@{GetAllFiles}!Unity.VisualScripting.AssetBundleResourceProvider@{Unity.VisualScripting.AssetBundleResourceProvider}}
+\doxysubsubsection{\texorpdfstring{GetAllFiles()}{GetAllFiles()}}
+{\footnotesize\ttfamily IEnumerable$<$ string $>$ Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider.\+Get\+All\+Files (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_resource_provider}{Unity.\+Visual\+Scripting.\+IResource\+Provider}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a3a69561b7ac7536973d5050891ac089f}\label{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a3a69561b7ac7536973d5050891ac089f}} 
+\index{Unity.VisualScripting.AssetBundleResourceProvider@{Unity.VisualScripting.AssetBundleResourceProvider}!GetDirectories@{GetDirectories}}
+\index{GetDirectories@{GetDirectories}!Unity.VisualScripting.AssetBundleResourceProvider@{Unity.VisualScripting.AssetBundleResourceProvider}}
+\doxysubsubsection{\texorpdfstring{GetDirectories()}{GetDirectories()}}
+{\footnotesize\ttfamily IEnumerable$<$ string $>$ Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider.\+Get\+Directories (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_resource_provider}{Unity.\+Visual\+Scripting.\+IResource\+Provider}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a68642bd7aa1ae6a5581362c244872dba}\label{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a68642bd7aa1ae6a5581362c244872dba}} 
+\index{Unity.VisualScripting.AssetBundleResourceProvider@{Unity.VisualScripting.AssetBundleResourceProvider}!GetFiles@{GetFiles}}
+\index{GetFiles@{GetFiles}!Unity.VisualScripting.AssetBundleResourceProvider@{Unity.VisualScripting.AssetBundleResourceProvider}}
+\doxysubsubsection{\texorpdfstring{GetFiles()}{GetFiles()}}
+{\footnotesize\ttfamily IEnumerable$<$ string $>$ Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider.\+Get\+Files (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_resource_provider}{Unity.\+Visual\+Scripting.\+IResource\+Provider}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a4dfb7afddbf51b513fecd1920d7d457a}\label{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a4dfb7afddbf51b513fecd1920d7d457a}} 
+\index{Unity.VisualScripting.AssetBundleResourceProvider@{Unity.VisualScripting.AssetBundleResourceProvider}!LoadAsset$<$ T $>$@{LoadAsset$<$ T $>$}}
+\index{LoadAsset$<$ T $>$@{LoadAsset$<$ T $>$}!Unity.VisualScripting.AssetBundleResourceProvider@{Unity.VisualScripting.AssetBundleResourceProvider}}
+\doxysubsubsection{\texorpdfstring{LoadAsset$<$ T $>$()}{LoadAsset< T >()}}
+{\footnotesize\ttfamily T Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider.\+Load\+Asset$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_resource_provider}{Unity.\+Visual\+Scripting.\+IResource\+Provider}}.
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em Unity\+Object}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_af337916b82237811a75ee7a8160f1a21}\label{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_af337916b82237811a75ee7a8160f1a21}} 
+\index{Unity.VisualScripting.AssetBundleResourceProvider@{Unity.VisualScripting.AssetBundleResourceProvider}!LoadTexture@{LoadTexture}}
+\index{LoadTexture@{LoadTexture}!Unity.VisualScripting.AssetBundleResourceProvider@{Unity.VisualScripting.AssetBundleResourceProvider}}
+\doxysubsubsection{\texorpdfstring{LoadTexture()}{LoadTexture()}}
+{\footnotesize\ttfamily Texture2D Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider.\+Load\+Texture (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_create_texture_options}{Create\+Texture\+Options}}}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_resource_provider}{Unity.\+Visual\+Scripting.\+IResource\+Provider}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Editor/\+Visual\+Scripting.\+Core/\+Resource\+Providers/Asset\+Bundle\+Resource\+Provider.\+cs\end{DoxyCompactItemize}

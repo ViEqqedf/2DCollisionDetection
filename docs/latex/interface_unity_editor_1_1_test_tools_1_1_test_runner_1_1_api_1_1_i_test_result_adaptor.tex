@@ -1,0 +1,156 @@
+\hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor}{}\doxysection{Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+ITest\+Result\+Adaptor Interface Reference}
+\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor}\index{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor@{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor}}
+
+
+The {\ttfamily \mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor}{ITest\+Result\+Adaptor}}} is the representation of the test results for a node in the test tree implemented as a wrapper around the \href{http://www.nunit.org/}{\texttt{ NUnit}} \href{https://github.com/nunit/nunit/blob/master/src/NUnitFramework/framework/Interfaces/ITestResults.cs}{\texttt{ ITest}} interface.  
+
+
+
+
+Inherited by Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+Test\+Result\+Adaptor.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+TNode \mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a584359e9543023c9545f15ea3949b70f}{To\+Xml}} ()
+\begin{DoxyCompactList}\small\item\em Use this to save the results to an XML file \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+ITest\+Adaptor \mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a2695e66bb8c746ae3830abff597ecf50}{Test}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The test details of the test result tree node as a Test\+Adaptor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_aaa3c843635b13ae191fdc3ba92caa5af}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_aaa3c843635b13ae191fdc3ba92caa5af}} 
+string {\bfseries Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string \mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_aaf0f79e9950113b27631d234cc6284b7}{Full\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the full name of the test result \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a7ac71c593606918424d6af2b23fa8010}{Result\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a69b35ebed07952b4e2d1a40cc9799a2c}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a69b35ebed07952b4e2d1a40cc9799a2c}} 
+\mbox{\hyperlink{namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_aaa9e778c850f68edefcbb4af5b1cd187}{Test\+Status}} {\bfseries Test\+Status}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+double \mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_aae4f4ff044ffb023d991b1755dd7b234}{Duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the elapsed time for running the test in seconds \end{DoxyCompactList}\item 
+Date\+Time \mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_af8f33d797beb3802cbd2045ec9875291}{Start\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the time the test started running. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a20ebfa5f6116645c65e89a1c85361f2c}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a20ebfa5f6116645c65e89a1c85361f2c}} 
+Date\+Time {\bfseries End\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a0a427fd49508b7d98654befb404f02c7}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a0a427fd49508b7d98654befb404f02c7}} 
+string {\bfseries Message}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The message associated with a test failure or with not running the test \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a6068fcc940b0c1c4b92935bc740fec9e}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a6068fcc940b0c1c4b92935bc740fec9e}} 
+string {\bfseries Stack\+Trace}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Any stacktrace associated with an error or failure. Not available in the Compact Framework 1.\+0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a951d6bf3b87cca131879feeec76cd258}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a951d6bf3b87cca131879feeec76cd258}} 
+int {\bfseries Assert\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of asserts executed when running the test and all its children. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_ad64ead81310a676dd4f441460d5fa647}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_ad64ead81310a676dd4f441460d5fa647}} 
+int {\bfseries Fail\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of test cases that failed when running the test and all its children. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a6a238957018bb6654e430d5cc7e1a1d1}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a6a238957018bb6654e430d5cc7e1a1d1}} 
+int {\bfseries Pass\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of test cases that passed when running the test and all its children. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a4a338ed2218b13fb03f67f48c7cca8eb}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a4a338ed2218b13fb03f67f48c7cca8eb}} 
+int {\bfseries Skip\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of test cases that were skipped when running the test and all its children. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a73caf92986892da4ab858c2eb4285513}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a73caf92986892da4ab858c2eb4285513}} 
+int {\bfseries Inconclusive\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of test cases that were inconclusive when running the test and all its children. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a71694e9055dd632bd2b780f2d5a3175e}{Has\+Children}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Accessing Has\+Children should not force creation of the Children collection in classes implementing this interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_abca720cd0da0200076c869696bcba4c2}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_abca720cd0da0200076c869696bcba4c2}} 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor}{ITest\+Result\+Adaptor}} $>$ {\bfseries Children}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the the collection of child results. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a5cb48ff1208889c40a6cda6a94c5fe17}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a5cb48ff1208889c40a6cda6a94c5fe17}} 
+string {\bfseries Output}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets any text output written to this result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The {\ttfamily \mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor}{ITest\+Result\+Adaptor}}} is the representation of the test results for a node in the test tree implemented as a wrapper around the \href{http://www.nunit.org/}{\texttt{ NUnit}} \href{https://github.com/nunit/nunit/blob/master/src/NUnitFramework/framework/Interfaces/ITestResults.cs}{\texttt{ ITest}} interface. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a584359e9543023c9545f15ea3949b70f}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a584359e9543023c9545f15ea3949b70f}} 
+\index{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor@{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor}!ToXml@{ToXml}}
+\index{ToXml@{ToXml}!UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor@{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor}}
+\doxysubsubsection{\texorpdfstring{ToXml()}{ToXml()}}
+{\footnotesize\ttfamily TNode Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+ITest\+Result\+Adaptor.\+To\+Xml (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Use this to save the results to an XML file 
+
+\begin{DoxyReturn}{Returns}
+The test results as an {\ttfamily NUnit} XML node. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_aae4f4ff044ffb023d991b1755dd7b234}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_aae4f4ff044ffb023d991b1755dd7b234}} 
+\index{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor@{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor}!Duration@{Duration}}
+\index{Duration@{Duration}!UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor@{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor}}
+\doxysubsubsection{\texorpdfstring{Duration}{Duration}}
+{\footnotesize\ttfamily double Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+ITest\+Result\+Adaptor.\+Duration\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the elapsed time for running the test in seconds 
+
+\begin{DoxyReturn}{Returns}
+Time in seconds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_aaf0f79e9950113b27631d234cc6284b7}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_aaf0f79e9950113b27631d234cc6284b7}} 
+\index{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor@{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor}!FullName@{FullName}}
+\index{FullName@{FullName}!UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor@{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor}}
+\doxysubsubsection{\texorpdfstring{FullName}{FullName}}
+{\footnotesize\ttfamily string Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+ITest\+Result\+Adaptor.\+Full\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the full name of the test result 
+
+returns\texorpdfstring{$>$}{>} The name of the test result. /returns\texorpdfstring{$>$}{>} summary\texorpdfstring{$>$}{>} Gets the state of the result as a string. /summary\texorpdfstring{$>$}{>} returns\texorpdfstring{$>$}{>} It returns one of these values\+: {\ttfamily Inconclusive}, {\ttfamily Skipped}, {\ttfamily Skipped\+:Ignored}, {\ttfamily Skipped\+:Explicit}, {\ttfamily Passed}, {\ttfamily Failed}, {\ttfamily Failed\+:Error}, {\ttfamily Failed\+:Cancelled}, {\ttfamily Failed\+:Invalid} /returns\texorpdfstring{$>$}{>} \mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a71694e9055dd632bd2b780f2d5a3175e}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a71694e9055dd632bd2b780f2d5a3175e}} 
+\index{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor@{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor}!HasChildren@{HasChildren}}
+\index{HasChildren@{HasChildren}!UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor@{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor}}
+\doxysubsubsection{\texorpdfstring{HasChildren}{HasChildren}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+ITest\+Result\+Adaptor.\+Has\+Children\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Accessing Has\+Children should not force creation of the Children collection in classes implementing this interface. 
+
+\begin{DoxyReturn}{Returns}
+True if this result has any child results.
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a7ac71c593606918424d6af2b23fa8010}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a7ac71c593606918424d6af2b23fa8010}} 
+\index{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor@{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor}!ResultState@{ResultState}}
+\index{ResultState@{ResultState}!UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor@{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor}}
+\doxysubsubsection{\texorpdfstring{ResultState}{ResultState}}
+{\footnotesize\ttfamily string Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+ITest\+Result\+Adaptor.\+Result\+State\hspace{0.3cm}{\ttfamily [get]}}
+
+summary\texorpdfstring{$>$}{>} Gets the status of the test as an enum. /summary\texorpdfstring{$>$}{>} returns\texorpdfstring{$>$}{>} It returns one of these values\+:{\ttfamily Inconclusive}, {\ttfamily Skipped}, {\ttfamily Passed}, or {\ttfamily Failed} /returns\texorpdfstring{$>$}{>} \mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_af8f33d797beb3802cbd2045ec9875291}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_af8f33d797beb3802cbd2045ec9875291}} 
+\index{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor@{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor}!StartTime@{StartTime}}
+\index{StartTime@{StartTime}!UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor@{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor}}
+\doxysubsubsection{\texorpdfstring{StartTime}{StartTime}}
+{\footnotesize\ttfamily Date\+Time Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+ITest\+Result\+Adaptor.\+Start\+Time\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets or sets the time the test started running. 
+
+returns\texorpdfstring{$>$}{>} A Data\+Time object. /returns\texorpdfstring{$>$}{>} summary\texorpdfstring{$>$}{>} Gets or sets the time the test finished running. /summary\texorpdfstring{$>$}{>} returns\texorpdfstring{$>$}{>} A Data\+Time object. /returns\texorpdfstring{$>$}{>} \mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a2695e66bb8c746ae3830abff597ecf50}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor_a2695e66bb8c746ae3830abff597ecf50}} 
+\index{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor@{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor}!Test@{Test}}
+\index{Test@{Test}!UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor@{UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor}}
+\doxysubsubsection{\texorpdfstring{Test}{Test}}
+{\footnotesize\ttfamily ITest\+Adaptor Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+ITest\+Result\+Adaptor.\+Test\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The test details of the test result tree node as a Test\+Adaptor 
+
+summary\texorpdfstring{$>$}{>} The name of the test node. /summary\texorpdfstring{$>$}{>} 
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Editor.\+Test\+Runner/\+Api/ITest\+Result\+Adaptor.\+cs\end{DoxyCompactItemize}

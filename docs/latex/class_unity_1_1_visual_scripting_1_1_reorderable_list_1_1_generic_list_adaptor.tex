@@ -1,0 +1,321 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}{}\doxysection{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Generic\+List\+Adaptor\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}\index{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}}
+
+
+Reorderable list adaptor for generic list.  
+
+
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Generic\+List\+Adaptor\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a6237b4daad3330605cc4b594b0006ebe}{Generic\+List\+Adaptor}} (IList$<$ T $>$ list, Reorderable\+List\+Control.\+Item\+Drawer$<$ T $>$ item\+Drawer, float item\+Height)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a6237b4daad3330605cc4b594b0006ebe}{Generic\+List\+Adaptor$<$\+T$>$}}. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a818d5683b1db5a7f71ca45d2172e6776}{Can\+Drag}} (int index)
+\begin{DoxyCompactList}\small\item\em Determines whether an item can be reordered by dragging mouse.  \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_af5a33fdd9c8f56fd6b7fd63588495369}{Can\+Remove}} (int index)
+\begin{DoxyCompactList}\small\item\em Determines whether an item can be removed from list.  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a94f5c630d02657728ef2392ccf6eb602}{Add}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_add}{Add}} new element at end of list.  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a6f422f5c5d77f12ee8bd7762f6384041}{Insert}} (int index)
+\begin{DoxyCompactList}\small\item\em Insert new element at specified index.  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a6353c4b9498bf6c08b693cf0f3a23667}{Duplicate}} (int index)
+\begin{DoxyCompactList}\small\item\em Duplicate existing element.  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a0df1d9d61ec066de94e18a3fc2dde248}{Remove}} (int index)
+\begin{DoxyCompactList}\small\item\em Remove element at specified index.  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a705b39c4b630b863bebd098967fbbc79}{Move}} (int source\+Index, int dest\+Index)
+\begin{DoxyCompactList}\small\item\em Move element from source index to destination index.  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a4bcfde385fceb776133e0af886b6608d}{Clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear all elements from list.  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a18f2b1ba1682eeac08f2067dedcac383}{Begin\+GUI}} ()
+\begin{DoxyCompactList}\small\item\em Occurs before any list items are drawn.  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a225aa103d80f2ddde67c0801467ed586}{End\+GUI}} ()
+\begin{DoxyCompactList}\small\item\em Occurs after all list items have been drawn.  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a0ccd9325419daffb5a0f69e5cb0fdbfe}{Draw\+Item\+Background}} (Rect position, int index)
+\begin{DoxyCompactList}\small\item\em Draws background of a list item.  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_abf756fe0e9a25d4de1a4746fda80fcec}{Draw\+Item}} (Rect position, int index)
+\begin{DoxyCompactList}\small\item\em Draws main interface for a list item.  \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_af4d2ffa24028500cf1f0a12e2aed63ee}{Get\+Item\+Height}} (int index)
+\begin{DoxyCompactList}\small\item\em Gets height of list item in pixels.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_af8b392ccbf5d3aea6baab615b42b7d7c}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_af8b392ccbf5d3aea6baab615b42b7d7c}} 
+float {\bfseries Fixed\+Item\+Height}
+\begin{DoxyCompactList}\small\item\em Fixed height of each list item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a07ec1926d2affbe99b6c8814739084c1}{this\mbox{[}int index\mbox{]}}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets element from list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a35f6170d71f9e8665c41caf6ae09bb44}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a35f6170d71f9e8665c41caf6ae09bb44}} 
+IList$<$ T $>$ {\bfseries List}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the underlying list data structure. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_abf640e30b31601ac6e7696ce6a0f0dca}{Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets count of elements in list.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Reorderable list adaptor for generic list. 
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} adaptor can be subclassed to add special logic to item height calculation. You may want to implement a custom adaptor class where specialised functionality is needed. 
+
+List elements which implement the System.\+ICloneable interface are cloned using that interface upon duplication; otherwise the item value or reference is simply copied. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of list element.\\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a6237b4daad3330605cc4b594b0006ebe}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a6237b4daad3330605cc4b594b0006ebe}} 
+\index{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}!GenericListAdaptor@{GenericListAdaptor}}
+\index{GenericListAdaptor@{GenericListAdaptor}!Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GenericListAdaptor()}{GenericListAdaptor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Generic\+List\+Adaptor}}$<$ T $>$.\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}{Generic\+List\+Adaptor}} (\begin{DoxyParamCaption}\item[{IList$<$ T $>$}]{list,  }\item[{Reorderable\+List\+Control.\+Item\+Drawer$<$ T $>$}]{item\+Drawer,  }\item[{float}]{item\+Height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a6237b4daad3330605cc4b594b0006ebe}{Generic\+List\+Adaptor$<$\+T$>$}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list which can be reordered.\\
+\hline
+{\em item\+Drawer} & Callback to draw list item.\\
+\hline
+{\em item\+Height} & Height of list item in pixels.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a94f5c630d02657728ef2392ccf6eb602}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a94f5c630d02657728ef2392ccf6eb602}} 
+\index{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Generic\+List\+Adaptor}}$<$ T $>$.\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_add}{Add}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_add}{Add}} new element at end of list.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a01062c6f0fe1a2613097183952ff0826}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a18f2b1ba1682eeac08f2067dedcac383}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a18f2b1ba1682eeac08f2067dedcac383}} 
+\index{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}!BeginGUI@{BeginGUI}}
+\index{BeginGUI@{BeginGUI}!Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{BeginGUI()}{BeginGUI()}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Generic\+List\+Adaptor}}$<$ T $>$.Begin\+GUI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Occurs before any list items are drawn.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_ac4f826536c55e82eb385009e58cfab12}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a818d5683b1db5a7f71ca45d2172e6776}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a818d5683b1db5a7f71ca45d2172e6776}} 
+\index{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}!CanDrag@{CanDrag}}
+\index{CanDrag@{CanDrag}!Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CanDrag()}{CanDrag()}}
+{\footnotesize\ttfamily virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Generic\+List\+Adaptor}}$<$ T $>$.Can\+Drag (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Determines whether an item can be reordered by dragging mouse.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_aa7fbe9abc79c9aa671250ffc8bd548d3}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_af5a33fdd9c8f56fd6b7fd63588495369}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_af5a33fdd9c8f56fd6b7fd63588495369}} 
+\index{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}!CanRemove@{CanRemove}}
+\index{CanRemove@{CanRemove}!Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CanRemove()}{CanRemove()}}
+{\footnotesize\ttfamily virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Generic\+List\+Adaptor}}$<$ T $>$.Can\+Remove (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Determines whether an item can be removed from list.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a22124e5ae377b9e4a7d1295d12f727ee}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a4bcfde385fceb776133e0af886b6608d}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a4bcfde385fceb776133e0af886b6608d}} 
+\index{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}!Clear@{Clear}}
+\index{Clear@{Clear}!Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Generic\+List\+Adaptor}}$<$ T $>$.Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Clear all elements from list.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_ad1ee0f340786030525d3b7452f86c386}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_abf756fe0e9a25d4de1a4746fda80fcec}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_abf756fe0e9a25d4de1a4746fda80fcec}} 
+\index{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}!DrawItem@{DrawItem}}
+\index{DrawItem@{DrawItem}!Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DrawItem()}{DrawItem()}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Generic\+List\+Adaptor}}$<$ T $>$.Draw\+Item (\begin{DoxyParamCaption}\item[{Rect}]{position,  }\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Draws main interface for a list item.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a6a4b8ea90f37a592df99b6268285433d}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a0ccd9325419daffb5a0f69e5cb0fdbfe}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a0ccd9325419daffb5a0f69e5cb0fdbfe}} 
+\index{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}!DrawItemBackground@{DrawItemBackground}}
+\index{DrawItemBackground@{DrawItemBackground}!Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DrawItemBackground()}{DrawItemBackground()}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Generic\+List\+Adaptor}}$<$ T $>$.Draw\+Item\+Background (\begin{DoxyParamCaption}\item[{Rect}]{position,  }\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Draws background of a list item.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a06e39a84d45e61934e4130130459442c}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a6353c4b9498bf6c08b693cf0f3a23667}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a6353c4b9498bf6c08b693cf0f3a23667}} 
+\index{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}!Duplicate@{Duplicate}}
+\index{Duplicate@{Duplicate}!Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Duplicate()}{Duplicate()}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Generic\+List\+Adaptor}}$<$ T $>$.Duplicate (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Duplicate existing element.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a08abb5bea8ee62ae89892b259a21be29}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a225aa103d80f2ddde67c0801467ed586}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a225aa103d80f2ddde67c0801467ed586}} 
+\index{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}!EndGUI@{EndGUI}}
+\index{EndGUI@{EndGUI}!Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{EndGUI()}{EndGUI()}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Generic\+List\+Adaptor}}$<$ T $>$.End\+GUI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Occurs after all list items have been drawn.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a5040cb430c745b1d855b09fd673131be}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_af4d2ffa24028500cf1f0a12e2aed63ee}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_af4d2ffa24028500cf1f0a12e2aed63ee}} 
+\index{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}!GetItemHeight@{GetItemHeight}}
+\index{GetItemHeight@{GetItemHeight}!Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetItemHeight()}{GetItemHeight()}}
+{\footnotesize\ttfamily virtual float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Generic\+List\+Adaptor}}$<$ T $>$.Get\+Item\+Height (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets height of list item in pixels.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_ad5942707f43e6001b07e2ea66b805715}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a6f422f5c5d77f12ee8bd7762f6384041}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a6f422f5c5d77f12ee8bd7762f6384041}} 
+\index{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}!Insert@{Insert}}
+\index{Insert@{Insert}!Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Generic\+List\+Adaptor}}$<$ T $>$.Insert (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Insert new element at specified index.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a2d87e92402db877d3fef15fe43210618}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a705b39c4b630b863bebd098967fbbc79}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a705b39c4b630b863bebd098967fbbc79}} 
+\index{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}!Move@{Move}}
+\index{Move@{Move}!Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Generic\+List\+Adaptor}}$<$ T $>$.Move (\begin{DoxyParamCaption}\item[{int}]{source\+Index,  }\item[{int}]{dest\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Move element from source index to destination index.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a462d71b0324807c5e29e74b541584131}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a0df1d9d61ec066de94e18a3fc2dde248}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a0df1d9d61ec066de94e18a3fc2dde248}} 
+\index{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Generic\+List\+Adaptor}}$<$ T $>$.Remove (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Remove element at specified index.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a06be726ab3faec949d507c1efe02c2cc}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_abf640e30b31601ac6e7696ce6a0f0dca}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_abf640e30b31601ac6e7696ce6a0f0dca}} 
+\index{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}!Count@{Count}}
+\index{Count@{Count}!Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Count}{Count}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Generic\+List\+Adaptor}}$<$ T $>$.Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets count of elements in list.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a6c6a3651bc3d394c38927f54eb0ede9e}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a07ec1926d2affbe99b6c8814739084c1}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor_a07ec1926d2affbe99b6c8814739084c1}} 
+\index{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}!this\mbox{[}int index\mbox{]}@{this[int index]}}
+\index{this\mbox{[}int index\mbox{]}@{this[int index]}!Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$@{Unity.VisualScripting.ReorderableList.GenericListAdaptor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{this[int index]}{this[int index]}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_generic_list_adaptor}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Generic\+List\+Adaptor}}$<$ T $>$.this\mbox{[}int index\mbox{]}\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets element from list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Zero-\/based index of element.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The element. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Editor/\+Visual\+Scripting.\+Core/\+Dependencies/\+Reorderable\+List/Generic\+List\+Adaptor.\+cs\end{DoxyCompactItemize}

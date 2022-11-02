@@ -1,0 +1,121 @@
+\hypertarget{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{}\doxysection{Unity\+Engine.\+UI.\+ICanvas\+Element Interface Reference}
+\label{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}\index{UnityEngine.UI.ICanvasElement@{UnityEngine.UI.ICanvasElement}}
+
+
+This is an element that can live on a Canvas.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+ICanvas\+Element\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.808081cm]{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a50a9583739ecd91674db5a81da1f0bd5}{Rebuild}} (\mbox{\hyperlink{namespace_unity_engine_1_1_u_i_a76b804cb1978e6dc1162615deaa710e9}{Canvas\+Update}} executing)
+\begin{DoxyCompactList}\small\item\em Rebuild the element for the given stage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a5f507a968983077ca1be60142513ab1e}{Layout\+Complete}} ()
+\begin{DoxyCompactList}\small\item\em Callback sent when this \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}} has completed layout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a6a89ea41d304c5a96c16c37decee168a}{Graphic\+Update\+Complete}} ()
+\begin{DoxyCompactList}\small\item\em Callback sent when this \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}} has completed Graphic rebuild. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_ace7615de0f5825f86400662d1d9ef8ac}{Is\+Destroyed}} ()
+\begin{DoxyCompactList}\small\item\em Used if the native representation has been destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Transform \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_afe4001ee5dddadf8b253270f5302d017}{transform}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the transform associated with the \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is an element that can live on a Canvas. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a6a89ea41d304c5a96c16c37decee168a}\label{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a6a89ea41d304c5a96c16c37decee168a}} 
+\index{UnityEngine.UI.ICanvasElement@{UnityEngine.UI.ICanvasElement}!GraphicUpdateComplete@{GraphicUpdateComplete}}
+\index{GraphicUpdateComplete@{GraphicUpdateComplete}!UnityEngine.UI.ICanvasElement@{UnityEngine.UI.ICanvasElement}}
+\doxysubsubsection{\texorpdfstring{GraphicUpdateComplete()}{GraphicUpdateComplete()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+ICanvas\+Element.\+Graphic\+Update\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Callback sent when this \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}} has completed Graphic rebuild. 
+
+
+
+Implemented in \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a89a96f3d5ff67619b0c24c9cec50859d}{TMPro.\+TMP\+\_\+\+Input\+Field}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a6fda2a62782c6505e59d83fb14d49521}{Unity\+Engine.\+UI.\+Layout\+Rebuilder}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a63478e617c459979852ac66012abb598}{Unity\+Engine.\+UI.\+Scrollbar}}.
+
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_ace7615de0f5825f86400662d1d9ef8ac}\label{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_ace7615de0f5825f86400662d1d9ef8ac}} 
+\index{UnityEngine.UI.ICanvasElement@{UnityEngine.UI.ICanvasElement}!IsDestroyed@{IsDestroyed}}
+\index{IsDestroyed@{IsDestroyed}!UnityEngine.UI.ICanvasElement@{UnityEngine.UI.ICanvasElement}}
+\doxysubsubsection{\texorpdfstring{IsDestroyed()}{IsDestroyed()}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+UI.\+ICanvas\+Element.\+Is\+Destroyed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used if the native representation has been destroyed. 
+
+\begin{DoxyReturn}{Returns}
+Return true if the element is considered destroyed.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_aa54afc1a4efec44cb124ca159b377309}{Unity\+Engine.\+UI.\+Layout\+Rebuilder}}.
+
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a5f507a968983077ca1be60142513ab1e}\label{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a5f507a968983077ca1be60142513ab1e}} 
+\index{UnityEngine.UI.ICanvasElement@{UnityEngine.UI.ICanvasElement}!LayoutComplete@{LayoutComplete}}
+\index{LayoutComplete@{LayoutComplete}!UnityEngine.UI.ICanvasElement@{UnityEngine.UI.ICanvasElement}}
+\doxysubsubsection{\texorpdfstring{LayoutComplete()}{LayoutComplete()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+ICanvas\+Element.\+Layout\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Callback sent when this \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}} has completed layout. 
+
+
+
+Implemented in \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a3828d087682e3659d369879a4bffac42}{TMPro.\+TMP\+\_\+\+Input\+Field}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a78327fa629776c991229e9f3182c2365}{Unity\+Engine.\+UI.\+Layout\+Rebuilder}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a4ff72e93363fceb7f6ccb82fe9b4d836}{Unity\+Engine.\+UI.\+Scrollbar}}.
+
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a50a9583739ecd91674db5a81da1f0bd5}\label{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a50a9583739ecd91674db5a81da1f0bd5}} 
+\index{UnityEngine.UI.ICanvasElement@{UnityEngine.UI.ICanvasElement}!Rebuild@{Rebuild}}
+\index{Rebuild@{Rebuild}!UnityEngine.UI.ICanvasElement@{UnityEngine.UI.ICanvasElement}}
+\doxysubsubsection{\texorpdfstring{Rebuild()}{Rebuild()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+ICanvas\+Element.\+Rebuild (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_u_i_a76b804cb1978e6dc1162615deaa710e9}{Canvas\+Update}}}]{executing }\end{DoxyParamCaption})}
+
+
+
+Rebuild the element for the given stage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em executing} & The current Canvas\+Update stage being rebuild.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_af2162431006d577f9641560c1df0ee06}{Unity\+Engine.\+UI.\+Layout\+Rebuilder}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_ac16edbc71aaeb9ed3a2cbf4ed1bb4454}{Unity\+Engine.\+UI.\+Scrollbar}}, and \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_acb2dc09ce7a2a0ccda89e917a23d35f3}{TMPro.\+TMP\+\_\+\+Input\+Field}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_afe4001ee5dddadf8b253270f5302d017}\label{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_afe4001ee5dddadf8b253270f5302d017}} 
+\index{UnityEngine.UI.ICanvasElement@{UnityEngine.UI.ICanvasElement}!transform@{transform}}
+\index{transform@{transform}!UnityEngine.UI.ICanvasElement@{UnityEngine.UI.ICanvasElement}}
+\doxysubsubsection{\texorpdfstring{transform}{transform}}
+{\footnotesize\ttfamily Transform Unity\+Engine.\+UI.\+ICanvas\+Element.\+transform\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Get the transform associated with the \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}}. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a420edc180b976f1aafbf45684e20cecc}{Unity\+Engine.\+UI.\+Layout\+Rebuilder}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/Canvas\+Update\+Registry.\+cs\end{DoxyCompactItemize}

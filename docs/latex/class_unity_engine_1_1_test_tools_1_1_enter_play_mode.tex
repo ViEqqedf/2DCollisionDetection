@@ -1,0 +1,109 @@
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_enter_play_mode}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+Enter\+Play\+Mode Class Reference}
+\label{class_unity_engine_1_1_test_tools_1_1_enter_play_mode}\index{UnityEngine.TestTools.EnterPlayMode@{UnityEngine.TestTools.EnterPlayMode}}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}{IEdit\+Mode\+Test\+Yield\+Instruction}}. Creates a yield instruction to enter Play Mode.  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Tools.\+Enter\+Play\+Mode\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_test_tools_1_1_enter_play_mode}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_enter_play_mode_a91defcd60ddca4d9cc33d65c0448a494}{Enter\+Play\+Mode}} (bool expect\+Domain\+Reload=true)
+\begin{DoxyCompactList}\small\item\em When creating an Editor test that uses the Unity\+Test attribute, use this to trigger the Editor to enter Play Mode. Throws an exception if the Editor is already in Play Mode or if there is a script compilation error. \end{DoxyCompactList}\item 
+IEnumerator \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_enter_play_mode_af34c05ff2b496e2709ad4335734827f6}{Perform}} ()
+\begin{DoxyCompactList}\small\item\em Performs the multi-\/step instructions of entering Play\+Mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_enter_play_mode_af2d3b05071110f0567f01eea020274c3}{Expect\+Domain\+Reload}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if the instruction expects a domain reload to occur. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_enter_play_mode_a1be4e0809bc62bee832caaa8ed7a5cfc}{Expected\+Playmode\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if the instruction expects the \mbox{\hyperlink{namespace_unity}{Unity}} Editor to be in {\bfseries{Play Mode}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}{IEdit\+Mode\+Test\+Yield\+Instruction}}. Creates a yield instruction to enter Play Mode. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_enter_play_mode_a91defcd60ddca4d9cc33d65c0448a494}\label{class_unity_engine_1_1_test_tools_1_1_enter_play_mode_a91defcd60ddca4d9cc33d65c0448a494}} 
+\index{UnityEngine.TestTools.EnterPlayMode@{UnityEngine.TestTools.EnterPlayMode}!EnterPlayMode@{EnterPlayMode}}
+\index{EnterPlayMode@{EnterPlayMode}!UnityEngine.TestTools.EnterPlayMode@{UnityEngine.TestTools.EnterPlayMode}}
+\doxysubsubsection{\texorpdfstring{EnterPlayMode()}{EnterPlayMode()}}
+{\footnotesize\ttfamily Unity\+Engine.\+Test\+Tools.\+Enter\+Play\+Mode.\+Enter\+Play\+Mode (\begin{DoxyParamCaption}\item[{bool}]{expect\+Domain\+Reload = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+When creating an Editor test that uses the Unity\+Test attribute, use this to trigger the Editor to enter Play Mode. Throws an exception if the Editor is already in Play Mode or if there is a script compilation error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expect\+Domain\+Reload} & A flag indication whether to expect a domain reload.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_enter_play_mode_af34c05ff2b496e2709ad4335734827f6}\label{class_unity_engine_1_1_test_tools_1_1_enter_play_mode_af34c05ff2b496e2709ad4335734827f6}} 
+\index{UnityEngine.TestTools.EnterPlayMode@{UnityEngine.TestTools.EnterPlayMode}!Perform@{Perform}}
+\index{Perform@{Perform}!UnityEngine.TestTools.EnterPlayMode@{UnityEngine.TestTools.EnterPlayMode}}
+\doxysubsubsection{\texorpdfstring{Perform()}{Perform()}}
+{\footnotesize\ttfamily IEnumerator Unity\+Engine.\+Test\+Tools.\+Enter\+Play\+Mode.\+Perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs the multi-\/step instructions of entering Play\+Mode. 
+
+\begin{DoxyReturn}{Returns}
+An IEnumerator with the async steps.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & An exception is thrown if the editor is already in Play\+Mode or if script compilation failed.\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_a4f785da8cc50e662bf8e4da01004c7fe}{Unity\+Engine.\+Test\+Tools.\+IEdit\+Mode\+Test\+Yield\+Instruction}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_enter_play_mode_af2d3b05071110f0567f01eea020274c3}\label{class_unity_engine_1_1_test_tools_1_1_enter_play_mode_af2d3b05071110f0567f01eea020274c3}} 
+\index{UnityEngine.TestTools.EnterPlayMode@{UnityEngine.TestTools.EnterPlayMode}!ExpectDomainReload@{ExpectDomainReload}}
+\index{ExpectDomainReload@{ExpectDomainReload}!UnityEngine.TestTools.EnterPlayMode@{UnityEngine.TestTools.EnterPlayMode}}
+\doxysubsubsection{\texorpdfstring{ExpectDomainReload}{ExpectDomainReload}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Enter\+Play\+Mode.\+Expect\+Domain\+Reload\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns true if the instruction expects a domain reload to occur. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_a3cf7b174d1ecc9cdd26d231adcd4f3a9}{Unity\+Engine.\+Test\+Tools.\+IEdit\+Mode\+Test\+Yield\+Instruction}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_enter_play_mode_a1be4e0809bc62bee832caaa8ed7a5cfc}\label{class_unity_engine_1_1_test_tools_1_1_enter_play_mode_a1be4e0809bc62bee832caaa8ed7a5cfc}} 
+\index{UnityEngine.TestTools.EnterPlayMode@{UnityEngine.TestTools.EnterPlayMode}!ExpectedPlaymodeState@{ExpectedPlaymodeState}}
+\index{ExpectedPlaymodeState@{ExpectedPlaymodeState}!UnityEngine.TestTools.EnterPlayMode@{UnityEngine.TestTools.EnterPlayMode}}
+\doxysubsubsection{\texorpdfstring{ExpectedPlaymodeState}{ExpectedPlaymodeState}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Enter\+Play\+Mode.\+Expected\+Playmode\+State\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns true if the instruction expects the \mbox{\hyperlink{namespace_unity}{Unity}} Editor to be in {\bfseries{Play Mode}}. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_af28e01e066b7355ab048bcf78a24e9cd}{Unity\+Engine.\+Test\+Tools.\+IEdit\+Mode\+Test\+Yield\+Instruction}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Editor.\+Test\+Runner/\+Test\+Runner/\+Messages/Enter\+Play\+Mode.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,24 @@
+\hypertarget{interface_unity_engine_1_1_u_i_1_1_i_mesh_modifier}{}\doxysection{Unity\+Engine.\+UI.\+IMesh\+Modifier Interface Reference}
+\label{interface_unity_engine_1_1_u_i_1_1_i_mesh_modifier}\index{UnityEngine.UI.IMeshModifier@{UnityEngine.UI.IMeshModifier}}
+
+
+Interface which allows for the modification of verticies in a Graphic before they are passed to the Canvas\+Renderer. When a Graphic generates a list of vertices they are passed (in order) to any components on the Game\+Object that implement \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_mesh_modifier}{IMesh\+Modifier}}. This component can modify the given Mesh.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_mesh_modifier_a28edbf975b3941c51c975c34a02cb51d}\label{interface_unity_engine_1_1_u_i_1_1_i_mesh_modifier_a28edbf975b3941c51c975c34a02cb51d}} 
+void {\bfseries Modify\+Mesh} (Mesh mesh)
+\item 
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_mesh_modifier_a4f352b3394907849dbe568b1aec9a380}\label{interface_unity_engine_1_1_u_i_1_1_i_mesh_modifier_a4f352b3394907849dbe568b1aec9a380}} 
+void {\bfseries Modify\+Mesh} (Vertex\+Helper verts)
+\begin{DoxyCompactList}\small\item\em Call used to modify mesh. Place any custom mesh processing in this function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface which allows for the modification of verticies in a Graphic before they are passed to the Canvas\+Renderer. When a Graphic generates a list of vertices they are passed (in order) to any components on the Game\+Object that implement \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_mesh_modifier}{IMesh\+Modifier}}. This component can modify the given Mesh. 
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/\+Vertex\+Modifiers/IMesh\+Modifier.\+cs\end{DoxyCompactItemize}

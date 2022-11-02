@@ -1,0 +1,23 @@
+\hypertarget{interface_unity_engine_1_1_u_i_1_1_default_controls_1_1_i_factory_controls}{}\doxysection{Unity\+Engine.\+UI.\+Default\+Controls.\+IFactory\+Controls Interface Reference}
+\label{interface_unity_engine_1_1_u_i_1_1_default_controls_1_1_i_factory_controls}\index{UnityEngine.UI.DefaultControls.IFactoryControls@{UnityEngine.UI.DefaultControls.IFactoryControls}}
+
+
+Factory interface to create a Game\+Object in this class. It is necessary to use this interface in the whole class so Menu\+Option and Editor can work using Object\+Factory and default Presets.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_default_controls_1_1_i_factory_controls_a985155ca8a93525fc3adf8f1881bb9dd}\label{interface_unity_engine_1_1_u_i_1_1_default_controls_1_1_i_factory_controls_a985155ca8a93525fc3adf8f1881bb9dd}} 
+Game\+Object {\bfseries Create\+Game\+Object} (string name, params Type\mbox{[}$\,$\mbox{]} components)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Factory interface to create a Game\+Object in this class. It is necessary to use this interface in the whole class so Menu\+Option and Editor can work using Object\+Factory and default Presets. 
+
+The only available method is Create\+Game\+Object. It needs to be called with every Components the created Object will need because of a bug with Undo and Rect\+Transform. Adding a \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} component on the created Game\+Object may crash if done after Undo.\+Set\+Transform\+Parent, So it\textquotesingle{}s better to prevent such behavior in this class by asking for full creation with all the components. 
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/Default\+Controls.\+cs\end{DoxyCompactItemize}

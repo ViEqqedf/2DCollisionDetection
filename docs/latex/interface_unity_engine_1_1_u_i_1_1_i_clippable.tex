@@ -1,0 +1,137 @@
+\hypertarget{interface_unity_engine_1_1_u_i_1_1_i_clippable}{}\doxysection{Unity\+Engine.\+UI.\+IClippable Interface Reference}
+\label{interface_unity_engine_1_1_u_i_1_1_i_clippable}\index{UnityEngine.UI.IClippable@{UnityEngine.UI.IClippable}}
+
+
+Interface for elements that can be clipped if they are under an \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clipper}{IClipper}}  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+IClippable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.214092cm]{interface_unity_engine_1_1_u_i_1_1_i_clippable}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable_a2885e0f0ea8e2ac2f6e02a940c29dcb5}{Recalculate\+Clipping}} ()
+\begin{DoxyCompactList}\small\item\em Will be called when the state of a parent \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}} changed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable_a641f087a965f5b9b9499c53a5eced712}{Cull}} (Rect clip\+Rect, bool valid\+Rect)
+\begin{DoxyCompactList}\small\item\em Clip and cull the \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}} given a specific clipping rect \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable_a25f8414c2b30a258594c13f208eca25e}{Set\+Clip\+Rect}} (Rect value, bool valid\+Rect)
+\begin{DoxyCompactList}\small\item\em Set the clip rect for the \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable_af62d9bcab5a1d207c6fd90089d39c0c5}{Set\+Clip\+Softness}} (Vector2 clip\+Softness)
+\begin{DoxyCompactList}\small\item\em Set the clip softness for the \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_clippable_a68c9fb9a9fcd380b8f14fc7f3fba5f6d}\label{interface_unity_engine_1_1_u_i_1_1_i_clippable_a68c9fb9a9fcd380b8f14fc7f3fba5f6d}} 
+Game\+Object {\bfseries game\+Object}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Game\+Object of the \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}} object \end{DoxyCompactList}\item 
+Rect\+Transform \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable_a77d35f9fab18c019194ae39aa9f0251c}{rect\+Transform}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Rect\+Transform of the clippable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for elements that can be clipped if they are under an \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clipper}{IClipper}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_clippable_a641f087a965f5b9b9499c53a5eced712}\label{interface_unity_engine_1_1_u_i_1_1_i_clippable_a641f087a965f5b9b9499c53a5eced712}} 
+\index{UnityEngine.UI.IClippable@{UnityEngine.UI.IClippable}!Cull@{Cull}}
+\index{Cull@{Cull}!UnityEngine.UI.IClippable@{UnityEngine.UI.IClippable}}
+\doxysubsubsection{\texorpdfstring{Cull()}{Cull()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+IClippable.\+Cull (\begin{DoxyParamCaption}\item[{Rect}]{clip\+Rect,  }\item[{bool}]{valid\+Rect }\end{DoxyParamCaption})}
+
+
+
+Clip and cull the \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}} given a specific clipping rect 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip\+Rect} & The Rectangle in which to clip against.\\
+\hline
+{\em valid\+Rect} & Is the Rect valid. If not then the rect has 0 size.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aa56357c3d3127f3a3662889ec65118f4}{TMPro.\+Text\+Mesh\+Pro\+UGUI}}, \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___selection_caret_af1c9301ab3bdef26d4d2fda8b3d77ab2}{TMPro.\+TMP\+\_\+\+Selection\+Caret}}, \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sub_mesh_u_i_ab4b2cf894e690a63576d8713a5729099}{TMPro.\+TMP\+\_\+\+Sub\+Mesh\+UI}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_adc5580730216425ec6da811c9dbca08e}{Unity\+Engine.\+UI.\+Maskable\+Graphic}}.
+
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_clippable_a2885e0f0ea8e2ac2f6e02a940c29dcb5}\label{interface_unity_engine_1_1_u_i_1_1_i_clippable_a2885e0f0ea8e2ac2f6e02a940c29dcb5}} 
+\index{UnityEngine.UI.IClippable@{UnityEngine.UI.IClippable}!RecalculateClipping@{RecalculateClipping}}
+\index{RecalculateClipping@{RecalculateClipping}!UnityEngine.UI.IClippable@{UnityEngine.UI.IClippable}}
+\doxysubsubsection{\texorpdfstring{RecalculateClipping()}{RecalculateClipping()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+IClippable.\+Recalculate\+Clipping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Will be called when the state of a parent \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}} changed. 
+
+
+
+Implemented in \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ada791339448a5b531f1bf276108b2b8c}{TMPro.\+Text\+Mesh\+Pro\+UGUI}}, \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sub_mesh_u_i_a6505e4b6f7c11eeb4ea155d7d6ef4248}{TMPro.\+TMP\+\_\+\+Sub\+Mesh\+UI}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a50a7c755855aaac608d6dd1f3b674f1d}{Unity\+Engine.\+UI.\+Maskable\+Graphic}}.
+
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_clippable_a25f8414c2b30a258594c13f208eca25e}\label{interface_unity_engine_1_1_u_i_1_1_i_clippable_a25f8414c2b30a258594c13f208eca25e}} 
+\index{UnityEngine.UI.IClippable@{UnityEngine.UI.IClippable}!SetClipRect@{SetClipRect}}
+\index{SetClipRect@{SetClipRect}!UnityEngine.UI.IClippable@{UnityEngine.UI.IClippable}}
+\doxysubsubsection{\texorpdfstring{SetClipRect()}{SetClipRect()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+IClippable.\+Set\+Clip\+Rect (\begin{DoxyParamCaption}\item[{Rect}]{value,  }\item[{bool}]{valid\+Rect }\end{DoxyParamCaption})}
+
+
+
+Set the clip rect for the \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The Rectangle for the clipping\\
+\hline
+{\em valid\+Rect} & Is the rect valid.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_ad434089f656a3d6944a6172391698e03}{Unity\+Engine.\+UI.\+Maskable\+Graphic}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_tests_1_1_image_hook_a45c2e0b44e00278d19c1d1616cc88e71}{Unity\+Engine.\+UI.\+Tests.\+Image\+Hook}}.
+
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_clippable_af62d9bcab5a1d207c6fd90089d39c0c5}\label{interface_unity_engine_1_1_u_i_1_1_i_clippable_af62d9bcab5a1d207c6fd90089d39c0c5}} 
+\index{UnityEngine.UI.IClippable@{UnityEngine.UI.IClippable}!SetClipSoftness@{SetClipSoftness}}
+\index{SetClipSoftness@{SetClipSoftness}!UnityEngine.UI.IClippable@{UnityEngine.UI.IClippable}}
+\doxysubsubsection{\texorpdfstring{SetClipSoftness()}{SetClipSoftness()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+IClippable.\+Set\+Clip\+Softness (\begin{DoxyParamCaption}\item[{Vector2}]{clip\+Softness }\end{DoxyParamCaption})}
+
+
+
+Set the clip softness for the \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}}. 
+
+The softness is a linear alpha falloff over clip\+Softness pixels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip\+Softness} & The number of pixels to apply the softness to \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a7d529345c46cba834558aeab469007ad}{Unity\+Engine.\+UI.\+Maskable\+Graphic}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_clippable_a77d35f9fab18c019194ae39aa9f0251c}\label{interface_unity_engine_1_1_u_i_1_1_i_clippable_a77d35f9fab18c019194ae39aa9f0251c}} 
+\index{UnityEngine.UI.IClippable@{UnityEngine.UI.IClippable}!rectTransform@{rectTransform}}
+\index{rectTransform@{rectTransform}!UnityEngine.UI.IClippable@{UnityEngine.UI.IClippable}}
+\doxysubsubsection{\texorpdfstring{rectTransform}{rectTransform}}
+{\footnotesize\ttfamily Rect\+Transform Unity\+Engine.\+UI.\+IClippable.\+rect\+Transform\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The Rect\+Transform of the clippable. 
+
+
+
+Implemented in \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_adf46752eab5ab6c5c0d0d7b58e3bf847}{TMPro.\+TMP\+\_\+\+Text}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/\+Culling/IClip\+Region.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,148 @@
+\hypertarget{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder}{}\doxysection{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Element\+\_\+\+Adder\+\_\+\+Menu.\+IElement\+Adder\+Menu\+Builder\texorpdfstring{$<$}{<} TContext \texorpdfstring{$>$}{>} Interface Template Reference}
+\label{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder}\index{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$}}
+
+
+Interface for building an \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu}{IElement\+Adder\+Menu}}.  
+
+
+
+
+Inherited by Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Element\+\_\+\+Adder\+\_\+\+Menu.\+Generic\+Element\+Adder\+Menu\+Builder$<$ TContext $>$.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_a8b8b9cbdebf590e3cbebb06ba8525c5e}{Set\+Contract\+Type}} (Type contract\+Type)
+\begin{DoxyCompactList}\small\item\em Sets contract type of the elements that can be included in the \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu}{IElement\+Adder\+Menu}}. Only non-\/abstract class types that are assignable from the {\itshape contract\+Type}  will be included in the built menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_aedf70c0deb292a57c52a5dbb3611429e}{Set\+Element\+Adder}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder}{IElement\+Adder}}$<$ TContext $>$ element\+Adder)
+\begin{DoxyCompactList}\small\item\em Set the IElement\+Adder$<$\+TContext$>$ implementation which is used when adding new elements to the context object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_a1fa44ebcbf3e2d17e363a784244b27fc}{Set\+Type\+Display\+Name\+Formatter}} (Func$<$ Type, string $>$ formatter)
+\begin{DoxyCompactList}\small\item\em Set the function that formats the display of type names in the user interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_af7f05e5ccf0e2e7ee65e6e3406b0f834}{Add\+Type\+Filter}} (Func$<$ Type, bool $>$ type\+Filter)
+\begin{DoxyCompactList}\small\item\em Adds a filter function which determines whether types can be included or whether they need to be excluded. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_a78d8ee10d3c2b8ac6daa410a7ddeb26d}{Add\+Custom\+Command}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_command}{IElement\+Adder\+Menu\+Command}}$<$ TContext $>$ command)
+\begin{DoxyCompactList}\small\item\em Adds a custom command to the menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu}{IElement\+Adder\+Menu}} \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_a30ffe23b7ff4527d569e9a1303442f4b}{Get\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Builds and returns a new \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu}{IElement\+Adder\+Menu}} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for building an \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu}{IElement\+Adder\+Menu}}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TContext} & Type of the context object that elements can be added to.\\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_a78d8ee10d3c2b8ac6daa410a7ddeb26d}\label{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_a78d8ee10d3c2b8ac6daa410a7ddeb26d}} 
+\index{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$}!AddCustomCommand@{AddCustomCommand}}
+\index{AddCustomCommand@{AddCustomCommand}!Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$}}
+\doxysubsubsection{\texorpdfstring{AddCustomCommand()}{AddCustomCommand()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Element\+\_\+\+Adder\+\_\+\+Menu.\+IElement\+Adder\+Menu\+Builder}}$<$ TContext $>$.Add\+Custom\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_command}{IElement\+Adder\+Menu\+Command}}$<$ TContext $>$}]{command }\end{DoxyParamCaption})}
+
+
+
+Adds a custom command to the menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The custom command.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em System.\+Argument\+Null\+Exception} & \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} {\itshape command}  is {\ttfamily null}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_af7f05e5ccf0e2e7ee65e6e3406b0f834}\label{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_af7f05e5ccf0e2e7ee65e6e3406b0f834}} 
+\index{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$}!AddTypeFilter@{AddTypeFilter}}
+\index{AddTypeFilter@{AddTypeFilter}!Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$}}
+\doxysubsubsection{\texorpdfstring{AddTypeFilter()}{AddTypeFilter()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Element\+\_\+\+Adder\+\_\+\+Menu.\+IElement\+Adder\+Menu\+Builder}}$<$ TContext $>$.Add\+Type\+Filter (\begin{DoxyParamCaption}\item[{Func$<$ Type, bool $>$}]{type\+Filter }\end{DoxyParamCaption})}
+
+
+
+Adds a filter function which determines whether types can be included or whether they need to be excluded. 
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} a filter function returns a value of {\ttfamily false} then that type will not be included in the menu interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type\+Filter} & Filter function.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em System.\+Argument\+Null\+Exception} & \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} {\itshape type\+Filter}  is {\ttfamily null}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_a30ffe23b7ff4527d569e9a1303442f4b}\label{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_a30ffe23b7ff4527d569e9a1303442f4b}} 
+\index{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$}!GetMenu@{GetMenu}}
+\index{GetMenu@{GetMenu}!Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$}}
+\doxysubsubsection{\texorpdfstring{GetMenu()}{GetMenu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu}{IElement\+Adder\+Menu}} \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Element\+\_\+\+Adder\+\_\+\+Menu.\+IElement\+Adder\+Menu\+Builder}}$<$ TContext $>$.Get\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Builds and returns a new \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu}{IElement\+Adder\+Menu}} instance. 
+
+\begin{DoxyReturn}{Returns}
+A new \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu}{IElement\+Adder\+Menu}} instance each time the method is invoked. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_a8b8b9cbdebf590e3cbebb06ba8525c5e}\label{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_a8b8b9cbdebf590e3cbebb06ba8525c5e}} 
+\index{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$}!SetContractType@{SetContractType}}
+\index{SetContractType@{SetContractType}!Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$}}
+\doxysubsubsection{\texorpdfstring{SetContractType()}{SetContractType()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Element\+\_\+\+Adder\+\_\+\+Menu.\+IElement\+Adder\+Menu\+Builder}}$<$ TContext $>$.Set\+Contract\+Type (\begin{DoxyParamCaption}\item[{Type}]{contract\+Type }\end{DoxyParamCaption})}
+
+
+
+Sets contract type of the elements that can be included in the \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu}{IElement\+Adder\+Menu}}. Only non-\/abstract class types that are assignable from the {\itshape contract\+Type}  will be included in the built menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contract\+Type} & Contract type of addable elements.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_aedf70c0deb292a57c52a5dbb3611429e}\label{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_aedf70c0deb292a57c52a5dbb3611429e}} 
+\index{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$}!SetElementAdder@{SetElementAdder}}
+\index{SetElementAdder@{SetElementAdder}!Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$}}
+\doxysubsubsection{\texorpdfstring{SetElementAdder()}{SetElementAdder()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Element\+\_\+\+Adder\+\_\+\+Menu.\+IElement\+Adder\+Menu\+Builder}}$<$ TContext $>$.Set\+Element\+Adder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder}{IElement\+Adder}}$<$ TContext $>$}]{element\+Adder }\end{DoxyParamCaption})}
+
+
+
+Set the IElement\+Adder$<$\+TContext$>$ implementation which is used when adding new elements to the context object. 
+
+Specify a value of {\ttfamily null} for {\itshape element\+Adder}  to prevent the selection of any types. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element\+Adder} & Element adder.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_a1fa44ebcbf3e2d17e363a784244b27fc}\label{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder_a1fa44ebcbf3e2d17e363a784244b27fc}} 
+\index{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$}!SetTypeDisplayNameFormatter@{SetTypeDisplayNameFormatter}}
+\index{SetTypeDisplayNameFormatter@{SetTypeDisplayNameFormatter}!Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.IElementAdderMenuBuilder$<$ TContext $>$}}
+\doxysubsubsection{\texorpdfstring{SetTypeDisplayNameFormatter()}{SetTypeDisplayNameFormatter()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_i_element_adder_menu_builder}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Element\+\_\+\+Adder\+\_\+\+Menu.\+IElement\+Adder\+Menu\+Builder}}$<$ TContext $>$.Set\+Type\+Display\+Name\+Formatter (\begin{DoxyParamCaption}\item[{Func$<$ Type, string $>$}]{formatter }\end{DoxyParamCaption})}
+
+
+
+Set the function that formats the display of type names in the user interface. 
+
+Specify a value of {\ttfamily null} for {\itshape formatter}  to assume the default formatting function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em formatter} & Function that formats display name of type; or {\ttfamily null}.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Editor/\+Visual\+Scripting.\+Core/\+Dependencies/\+Reorderable\+List/\+Element\+Adder\+Menu/IElement\+Adder\+Menu\+Builder.\+cs\end{DoxyCompactItemize}

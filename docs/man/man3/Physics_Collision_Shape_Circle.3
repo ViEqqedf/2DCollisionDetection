@@ -1,0 +1,68 @@
+.TH "Physics.Collision.Shape.Circle" 3 "2022年 十一月 2日 星期三" "PhysicsWorld" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Physics.Collision.Shape.Circle
+.SH SYNOPSIS
+.br
+.PP
+.PP
+继承自 \fBPhysics\&.Collision\&.Shape\&.CollisionShape\fP \&.
+.SS "Public 成员函数"
+
+.in +1c
+.ti -1c
+.RI "\fBCircle\fP (float \fBradius\fP)"
+.br
+.in -1c
+.SS "Public 属性"
+
+.in +1c
+.ti -1c
+.RI "readonly float \fBradius\fP"
+.br
+.in -1c
+.SS "Protected 成员函数"
+
+.in +1c
+.ti -1c
+.RI "override void \fBGetBound\fP (out Vector3 lowerBound, out Vector3 upperBound)"
+.br
+.in -1c
+.SS "Private 成员函数"
+
+.in +1c
+.ti -1c
+.RI "Vector3 \fBCreateCirclePoint\fP (int i, int j)"
+.br
+.in -1c
+.SS "Private 属性"
+
+.in +1c
+.ti -1c
+.RI "int \fBresolution\fP = 2"
+.br
+.in -1c
+.SS "额外继承的成员函数"
+.SH "构造及析构函数说明"
+.PP 
+.SS "Physics\&.Collision\&.Shape\&.Circle\&.Circle (float radius)\fC [inline]\fP"
+
+.SH "成员函数说明"
+.PP 
+.SS "Vector3 Physics\&.Collision\&.Shape\&.Circle\&.CreateCirclePoint (int i, int j)\fC [inline]\fP, \fC [private]\fP"
+
+.SS "override void Physics\&.Collision\&.Shape\&.Circle\&.GetBound (out Vector3 lowerBound, out Vector3 upperBound)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+实现了 \fBPhysics\&.Collision\&.Shape\&.CollisionShape\fP\&.
+.SH "类成员变量说明"
+.PP 
+.SS "readonly float Physics\&.Collision\&.Shape\&.Circle\&.radius"
+
+.SS "int Physics\&.Collision\&.Shape\&.Circle\&.resolution = 2\fC [private]\fP"
+
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 PhysicsWorld 的 源代码自动生成\&.

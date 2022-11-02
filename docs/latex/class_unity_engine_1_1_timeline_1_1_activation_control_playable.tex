@@ -1,0 +1,191 @@
+\hypertarget{class_unity_engine_1_1_timeline_1_1_activation_control_playable}{}\doxysection{Unity\+Engine.\+Timeline.\+Activation\+Control\+Playable Class Reference}
+\label{class_unity_engine_1_1_timeline_1_1_activation_control_playable}\index{UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}}
+
+
+Playable that controls the active state of a Game\+Object.  
+
+
+Inheritance diagram for Unity\+Engine.\+Timeline.\+Activation\+Control\+Playable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_timeline_1_1_activation_control_playable}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a228073fb9829bd4bc24a2a43978683b0}{Post\+Playback\+State}} \{ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a228073fb9829bd4bc24a2a43978683b0a4d3d769b812b6faa6b76e1a8abaece2d}{Active}}
+, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a228073fb9829bd4bc24a2a43978683b0a3cab03c00dbd11bc3569afa0748013f0}{Inactive}}
+, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a228073fb9829bd4bc24a2a43978683b0a5289bf157522a5cd34676f2777d27048}{Revert}}
+ \}
+\begin{DoxyCompactList}\small\item\em The state of a Game\+Object\textquotesingle{}s activeness when a Playable\+Graph stops. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable_aae53200c3e07ebd7ebba641e545a6e2d}{On\+Behaviour\+Play}} (Playable playable, Frame\+Data info)
+\begin{DoxyCompactList}\small\item\em This function is called when the Playable play state is changed to Playables.\+Play\+State.\+Playing. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable_abededec513d961d115c76df4293c9bc1}{On\+Behaviour\+Pause}} (Playable playable, Frame\+Data info)
+\begin{DoxyCompactList}\small\item\em This function is called when the Playable play state is changed to Play\+State.\+Paused. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a13961b1744389296983deea61380dbed}{Process\+Frame}} (Playable playable, Frame\+Data info, object user\+Data)
+\begin{DoxyCompactList}\small\item\em This function is called during the Process\+Frame phase of the Playable\+Graph. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable_acddce0025b859f40265d516ac9df8a15}{On\+Graph\+Start}} (Playable playable)
+\begin{DoxyCompactList}\small\item\em This function is called when the Playable\+Graph that owns this Playable\+Behaviour starts. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a2e6ee42b061f54e995a07c4edfd15125}{On\+Playable\+Destroy}} (Playable playable)
+\begin{DoxyCompactList}\small\item\em This function is called when the Playable that owns the Playable\+Behaviour is destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Script\+Playable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable}{Activation\+Control\+Playable}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable_ab42cb415da35865a01e87c3577b4c0d3}{Create}} (Playable\+Graph graph, Game\+Object \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a7c4a44700d0813c5086060405c689bd0}{game\+Object}}, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a228073fb9829bd4bc24a2a43978683b0}{Activation\+Control\+Playable.\+Post\+Playback\+State}} post\+Playback\+State)
+\begin{DoxyCompactList}\small\item\em Creates a Script\+Playable with an \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable}{Activation\+Control\+Playable}} behaviour attached \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a7c4a44700d0813c5086060405c689bd0}\label{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a7c4a44700d0813c5086060405c689bd0}} 
+Game\+Object {\bfseries game\+Object} = null
+\begin{DoxyCompactList}\small\item\em The Game\+Object to control. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_activation_control_playable_afb0bc61e572391fcba2a882278a98714}\label{class_unity_engine_1_1_timeline_1_1_activation_control_playable_afb0bc61e572391fcba2a882278a98714}} 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a228073fb9829bd4bc24a2a43978683b0}{Post\+Playback\+State}} {\bfseries post\+Playback} = \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a228073fb9829bd4bc24a2a43978683b0a5289bf157522a5cd34676f2777d27048}{Post\+Playback\+State.\+Revert}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Playable that controls the active state of a Game\+Object. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a228073fb9829bd4bc24a2a43978683b0}\label{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a228073fb9829bd4bc24a2a43978683b0}} 
+\index{UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}!PostPlaybackState@{PostPlaybackState}}
+\index{PostPlaybackState@{PostPlaybackState}!UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}}
+\doxysubsubsection{\texorpdfstring{PostPlaybackState}{PostPlaybackState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a228073fb9829bd4bc24a2a43978683b0}{Unity\+Engine.\+Timeline.\+Activation\+Control\+Playable.\+Post\+Playback\+State}}}
+
+
+
+The state of a Game\+Object\textquotesingle{}s activeness when a Playable\+Graph stops. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Active@{Active}!UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}}\index{UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}!Active@{Active}}}\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a228073fb9829bd4bc24a2a43978683b0a4d3d769b812b6faa6b76e1a8abaece2d}\label{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a228073fb9829bd4bc24a2a43978683b0a4d3d769b812b6faa6b76e1a8abaece2d}} 
+Active&Set the Game\+Object to active when the Playable\+Graph stops. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Inactive@{Inactive}!UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}}\index{UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}!Inactive@{Inactive}}}\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a228073fb9829bd4bc24a2a43978683b0a3cab03c00dbd11bc3569afa0748013f0}\label{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a228073fb9829bd4bc24a2a43978683b0a3cab03c00dbd11bc3569afa0748013f0}} 
+Inactive&Set the Game\+Object to inactive when the \mbox{[}\mbox{[}Playable\+Graph\mbox{]}\mbox{]} stops. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Revert@{Revert}!UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}}\index{UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}!Revert@{Revert}}}\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a228073fb9829bd4bc24a2a43978683b0a5289bf157522a5cd34676f2777d27048}\label{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a228073fb9829bd4bc24a2a43978683b0a5289bf157522a5cd34676f2777d27048}} 
+Revert&Revert the Game\+Object to the active state it was before the \mbox{[}\mbox{[}Playable\+Graph\mbox{]}\mbox{]} started. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_activation_control_playable_ab42cb415da35865a01e87c3577b4c0d3}\label{class_unity_engine_1_1_timeline_1_1_activation_control_playable_ab42cb415da35865a01e87c3577b4c0d3}} 
+\index{UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}!Create@{Create}}
+\index{Create@{Create}!UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily static Script\+Playable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable}{Activation\+Control\+Playable}} $>$ Unity\+Engine.\+Timeline.\+Activation\+Control\+Playable.\+Create (\begin{DoxyParamCaption}\item[{Playable\+Graph}]{graph,  }\item[{Game\+Object}]{game\+Object,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a228073fb9829bd4bc24a2a43978683b0}{Activation\+Control\+Playable.\+Post\+Playback\+State}}}]{post\+Playback\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Creates a Script\+Playable with an \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable}{Activation\+Control\+Playable}} behaviour attached 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & Playable\+Graph that will own the playable\\
+\hline
+{\em game\+Object} & The Game\+Object that triggered the graph build\\
+\hline
+{\em post\+Playback\+State} & The state to leave the game\+Object after the graph is stopped\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a playable that controls activation of a game object
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_activation_control_playable_abededec513d961d115c76df4293c9bc1}\label{class_unity_engine_1_1_timeline_1_1_activation_control_playable_abededec513d961d115c76df4293c9bc1}} 
+\index{UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}!OnBehaviourPause@{OnBehaviourPause}}
+\index{OnBehaviourPause@{OnBehaviourPause}!UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}}
+\doxysubsubsection{\texorpdfstring{OnBehaviourPause()}{OnBehaviourPause()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Activation\+Control\+Playable.\+On\+Behaviour\+Pause (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called when the Playable play state is changed to Play\+State.\+Paused. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The playable this behaviour is attached to.\\
+\hline
+{\em info} & The information about this frame\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_activation_control_playable_aae53200c3e07ebd7ebba641e545a6e2d}\label{class_unity_engine_1_1_timeline_1_1_activation_control_playable_aae53200c3e07ebd7ebba641e545a6e2d}} 
+\index{UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}!OnBehaviourPlay@{OnBehaviourPlay}}
+\index{OnBehaviourPlay@{OnBehaviourPlay}!UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}}
+\doxysubsubsection{\texorpdfstring{OnBehaviourPlay()}{OnBehaviourPlay()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Activation\+Control\+Playable.\+On\+Behaviour\+Play (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called when the Playable play state is changed to Playables.\+Play\+State.\+Playing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The playable this behaviour is attached to.\\
+\hline
+{\em info} & The information about this frame\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_activation_control_playable_acddce0025b859f40265d516ac9df8a15}\label{class_unity_engine_1_1_timeline_1_1_activation_control_playable_acddce0025b859f40265d516ac9df8a15}} 
+\index{UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}!OnGraphStart@{OnGraphStart}}
+\index{OnGraphStart@{OnGraphStart}!UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}}
+\doxysubsubsection{\texorpdfstring{OnGraphStart()}{OnGraphStart()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Activation\+Control\+Playable.\+On\+Graph\+Start (\begin{DoxyParamCaption}\item[{Playable}]{playable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called when the Playable\+Graph that owns this Playable\+Behaviour starts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The playable this behaviour is attached to.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a2e6ee42b061f54e995a07c4edfd15125}\label{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a2e6ee42b061f54e995a07c4edfd15125}} 
+\index{UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}!OnPlayableDestroy@{OnPlayableDestroy}}
+\index{OnPlayableDestroy@{OnPlayableDestroy}!UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}}
+\doxysubsubsection{\texorpdfstring{OnPlayableDestroy()}{OnPlayableDestroy()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Activation\+Control\+Playable.\+On\+Playable\+Destroy (\begin{DoxyParamCaption}\item[{Playable}]{playable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called when the Playable that owns the Playable\+Behaviour is destroyed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The playable this behaviour is attached to.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a13961b1744389296983deea61380dbed}\label{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a13961b1744389296983deea61380dbed}} 
+\index{UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}!ProcessFrame@{ProcessFrame}}
+\index{ProcessFrame@{ProcessFrame}!UnityEngine.Timeline.ActivationControlPlayable@{UnityEngine.Timeline.ActivationControlPlayable}}
+\doxysubsubsection{\texorpdfstring{ProcessFrame()}{ProcessFrame()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Activation\+Control\+Playable.\+Process\+Frame (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info,  }\item[{object}]{user\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called during the Process\+Frame phase of the Playable\+Graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The playable this behaviour is attached to.\\
+\hline
+{\em info} & A Frame\+Data structure that contains information about the current frame context.\\
+\hline
+{\em user\+Data} & unused\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Playables/Activation\+Control\+Playable.\+cs\end{DoxyCompactItemize}

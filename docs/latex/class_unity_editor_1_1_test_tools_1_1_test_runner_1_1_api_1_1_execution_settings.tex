@@ -1,0 +1,68 @@
+\hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings}{}\doxysection{Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+Execution\+Settings Class Reference}
+\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings}\index{UnityEditor.TestTools.TestRunner.Api.ExecutionSettings@{UnityEditor.TestTools.TestRunner.Api.ExecutionSettings}}
+
+
+A set of execution settings defining how to run tests, using the \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api}{Test\+Runner\+Api}}.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings_a73e7b8817654928889a1f4f9b5e46a9e}{Execution\+Settings}} (params \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter}{Filter}}\mbox{[}$\,$\mbox{]} filters\+To\+Execute)
+\begin{DoxyCompactList}\small\item\em Creates an instance with a given set of filters, if any. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings_a2d5807bbaf0f75c32bc5ba1f2ad0e077}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings_a2d5807bbaf0f75c32bc5ba1f2ad0e077}} 
+\mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_run_settings}{ITest\+Run\+Settings}} {\bfseries overload\+Test\+Run\+Settings}
+\begin{DoxyCompactList}\small\item\em An instance of \mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_run_settings}{ITest\+Run\+Settings}} to set up before running tests on a Player. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings_ae2c4c8caa5e71443b0d68fd8862c9dc0}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings_ae2c4c8caa5e71443b0d68fd8862c9dc0}} 
+\mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter}{Filter}}\mbox{[}$\,$\mbox{]} {\bfseries filters}
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings_a3e2ca6b0dec9a1f11904aedd73ef26a1}{run\+Synchronously}}
+\begin{DoxyCompactList}\small\item\em Note that this is only supported for Edit\+Mode tests, and that tests which take multiple frames (i.\+e. \mbox{[}Unity\+Test\mbox{]} tests, or tests with \mbox{[}Unity\+Set\+Up\mbox{]} or \mbox{[}Unity\+Tear\+Down\mbox{]} scaffolding) will be filtered out. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings_af500d8ffb2ef133644986c3b954689d0}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings_af500d8ffb2ef133644986c3b954689d0}} 
+int {\bfseries player\+Heartbeat\+Timeout} = 60$\ast$10
+\begin{DoxyCompactList}\small\item\em The time, in seconds, the editor should wait for heartbeats after starting a test run on a player. This defaults to 10 minutes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A set of execution settings defining how to run tests, using the \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api}{Test\+Runner\+Api}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings_a73e7b8817654928889a1f4f9b5e46a9e}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings_a73e7b8817654928889a1f4f9b5e46a9e}} 
+\index{UnityEditor.TestTools.TestRunner.Api.ExecutionSettings@{UnityEditor.TestTools.TestRunner.Api.ExecutionSettings}!ExecutionSettings@{ExecutionSettings}}
+\index{ExecutionSettings@{ExecutionSettings}!UnityEditor.TestTools.TestRunner.Api.ExecutionSettings@{UnityEditor.TestTools.TestRunner.Api.ExecutionSettings}}
+\doxysubsubsection{\texorpdfstring{ExecutionSettings()}{ExecutionSettings()}}
+{\footnotesize\ttfamily Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+Execution\+Settings.\+Execution\+Settings (\begin{DoxyParamCaption}\item[{params \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter}{Filter}}\mbox{[}$\,$\mbox{]}}]{filters\+To\+Execute }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an instance with a given set of filters, if any. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filters\+To\+Execute} & Set of filters\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings_a3e2ca6b0dec9a1f11904aedd73ef26a1}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings_a3e2ca6b0dec9a1f11904aedd73ef26a1}} 
+\index{UnityEditor.TestTools.TestRunner.Api.ExecutionSettings@{UnityEditor.TestTools.TestRunner.Api.ExecutionSettings}!runSynchronously@{runSynchronously}}
+\index{runSynchronously@{runSynchronously}!UnityEditor.TestTools.TestRunner.Api.ExecutionSettings@{UnityEditor.TestTools.TestRunner.Api.ExecutionSettings}}
+\doxysubsubsection{\texorpdfstring{runSynchronously}{runSynchronously}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+Execution\+Settings.\+run\+Synchronously}
+
+
+
+Note that this is only supported for Edit\+Mode tests, and that tests which take multiple frames (i.\+e. \mbox{[}Unity\+Test\mbox{]} tests, or tests with \mbox{[}Unity\+Set\+Up\mbox{]} or \mbox{[}Unity\+Tear\+Down\mbox{]} scaffolding) will be filtered out. 
+
+\begin{DoxyReturn}{Returns}
+If true, the call to Execute() will run tests synchronously, guaranteeing that all tests have finished running by the time the call returns.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Editor.\+Test\+Runner/\+Api/Execution\+Settings.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,176 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter}{}\doxysection{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Guid\+Converter Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter}\index{Unity.VisualScripting.FullSerializer.fsGuidConverter@{Unity.VisualScripting.FullSerializer.fsGuidConverter}}
+
+
+Serializes and deserializes guids.  
+
+
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Guid\+Converter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_ab368cdcb7bcf0c4d700b674d39ae7888}{Can\+Process}} (Type type)
+\begin{DoxyCompactList}\small\item\em Can this converter serialize and deserialize the given object type? \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_a119ffcbba5a9dc5540c2ef75f6c833a1}{Request\+Cycle\+Support}} (Type storage\+Type)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} true, then the serializer will support cyclic references with the given converted type. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_a5dbe0d98850d95977c3e454eb55da624}{Request\+Inheritance\+Support}} (Type storage\+Type)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} true, then the serializer will include inheritance data for the given converter. \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_a109c6da31adb6007bd3b4f5a5c632af7}{Try\+Serialize}} (object instance, out \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} serialized, Type storage\+Type)
+\begin{DoxyCompactList}\small\item\em Serialize the actual object into the given data storage. \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_aad8acbaabcae60625a1938f7ea7863ea}{Try\+Deserialize}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} data, ref object instance, Type storage\+Type)
+\begin{DoxyCompactList}\small\item\em Deserialize data into the object instance. \end{DoxyCompactList}\item 
+override object \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_aa11ace9c3faf9b76c5554480ce5559ee}{Create\+Instance}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} data, Type storage\+Type)
+\begin{DoxyCompactList}\small\item\em Construct an object instance that will be passed to Try\+Deserialize. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} should {\bfseries{not}} deserialize the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Serializes and deserializes guids. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_ab368cdcb7bcf0c4d700b674d39ae7888}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_ab368cdcb7bcf0c4d700b674d39ae7888}} 
+\index{Unity.VisualScripting.FullSerializer.fsGuidConverter@{Unity.VisualScripting.FullSerializer.fsGuidConverter}!CanProcess@{CanProcess}}
+\index{CanProcess@{CanProcess}!Unity.VisualScripting.FullSerializer.fsGuidConverter@{Unity.VisualScripting.FullSerializer.fsGuidConverter}}
+\doxysubsubsection{\texorpdfstring{CanProcess()}{CanProcess()}}
+{\footnotesize\ttfamily override bool Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Guid\+Converter.\+Can\+Process (\begin{DoxyParamCaption}\item[{Type}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Can this converter serialize and deserialize the given object type? 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The given object type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the converter can serialize it, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_converter_a28a6f11e6072d66b6cf528549eba3577}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Converter}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_aa11ace9c3faf9b76c5554480ce5559ee}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_aa11ace9c3faf9b76c5554480ce5559ee}} 
+\index{Unity.VisualScripting.FullSerializer.fsGuidConverter@{Unity.VisualScripting.FullSerializer.fsGuidConverter}!CreateInstance@{CreateInstance}}
+\index{CreateInstance@{CreateInstance}!Unity.VisualScripting.FullSerializer.fsGuidConverter@{Unity.VisualScripting.FullSerializer.fsGuidConverter}}
+\doxysubsubsection{\texorpdfstring{CreateInstance()}{CreateInstance()}}
+{\footnotesize\ttfamily override object Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Guid\+Converter.\+Create\+Instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}}}]{data,  }\item[{Type}]{storage\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Construct an object instance that will be passed to Try\+Deserialize. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} should {\bfseries{not}} deserialize the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data the object was serialized with.\\
+\hline
+{\em storage\+Type} & The field/property type that is storing the instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An object instance
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a5b8efae2c0e894b3256e9ca07dd55eb6}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Base\+Converter}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_a119ffcbba5a9dc5540c2ef75f6c833a1}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_a119ffcbba5a9dc5540c2ef75f6c833a1}} 
+\index{Unity.VisualScripting.FullSerializer.fsGuidConverter@{Unity.VisualScripting.FullSerializer.fsGuidConverter}!RequestCycleSupport@{RequestCycleSupport}}
+\index{RequestCycleSupport@{RequestCycleSupport}!Unity.VisualScripting.FullSerializer.fsGuidConverter@{Unity.VisualScripting.FullSerializer.fsGuidConverter}}
+\doxysubsubsection{\texorpdfstring{RequestCycleSupport()}{RequestCycleSupport()}}
+{\footnotesize\ttfamily override bool Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Guid\+Converter.\+Request\+Cycle\+Support (\begin{DoxyParamCaption}\item[{Type}]{storage\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} true, then the serializer will support cyclic references with the given converted type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em storage\+Type} & The field/property type that is currently storing the object that is being serialized. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a6a5daa6d9c428b4f82534c7ec6674511}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Base\+Converter}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_a5dbe0d98850d95977c3e454eb55da624}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_a5dbe0d98850d95977c3e454eb55da624}} 
+\index{Unity.VisualScripting.FullSerializer.fsGuidConverter@{Unity.VisualScripting.FullSerializer.fsGuidConverter}!RequestInheritanceSupport@{RequestInheritanceSupport}}
+\index{RequestInheritanceSupport@{RequestInheritanceSupport}!Unity.VisualScripting.FullSerializer.fsGuidConverter@{Unity.VisualScripting.FullSerializer.fsGuidConverter}}
+\doxysubsubsection{\texorpdfstring{RequestInheritanceSupport()}{RequestInheritanceSupport()}}
+{\footnotesize\ttfamily override bool Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Guid\+Converter.\+Request\+Inheritance\+Support (\begin{DoxyParamCaption}\item[{Type}]{storage\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} true, then the serializer will include inheritance data for the given converter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em storage\+Type} & The field/property type that is currently storing the object that is being serialized. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_addbae2b8a08e134923f1a5c9ed39d4df}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Base\+Converter}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_aad8acbaabcae60625a1938f7ea7863ea}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_aad8acbaabcae60625a1938f7ea7863ea}} 
+\index{Unity.VisualScripting.FullSerializer.fsGuidConverter@{Unity.VisualScripting.FullSerializer.fsGuidConverter}!TryDeserialize@{TryDeserialize}}
+\index{TryDeserialize@{TryDeserialize}!Unity.VisualScripting.FullSerializer.fsGuidConverter@{Unity.VisualScripting.FullSerializer.fsGuidConverter}}
+\doxysubsubsection{\texorpdfstring{TryDeserialize()}{TryDeserialize()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Guid\+Converter.\+Try\+Deserialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}}}]{data,  }\item[{ref object}]{instance,  }\item[{Type}]{storage\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Deserialize data into the object instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Serialization data to deserialize from.\\
+\hline
+{\em instance} & The object instance to deserialize into. \\
+\hline
+{\em storage\+Type} & The field/property type that is storing the instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if serialization was successful, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a7ad963c1c4c08809ed1b257fa2820704}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Base\+Converter}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_a109c6da31adb6007bd3b4f5a5c632af7}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_a109c6da31adb6007bd3b4f5a5c632af7}} 
+\index{Unity.VisualScripting.FullSerializer.fsGuidConverter@{Unity.VisualScripting.FullSerializer.fsGuidConverter}!TrySerialize@{TrySerialize}}
+\index{TrySerialize@{TrySerialize}!Unity.VisualScripting.FullSerializer.fsGuidConverter@{Unity.VisualScripting.FullSerializer.fsGuidConverter}}
+\doxysubsubsection{\texorpdfstring{TrySerialize()}{TrySerialize()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Guid\+Converter.\+Try\+Serialize (\begin{DoxyParamCaption}\item[{object}]{instance,  }\item[{out \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}}}]{serialized,  }\item[{Type}]{storage\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Serialize the actual object into the given data storage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & The object instance to serialize. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} will never be null. \\
+\hline
+{\em serialized} & The serialized state.\\
+\hline
+{\em storage\+Type} & The field/property type that is storing this instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} serialization was successful.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a887cf0fed399e9bbced3697579f0be38}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Base\+Converter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Core/\+Dependencies/\+Full\+Serializer/\+Converters/fs\+Guid\+Converter.\+cs\end{DoxyCompactItemize}

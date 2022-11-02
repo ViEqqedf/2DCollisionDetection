@@ -1,0 +1,145 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph}{}\doxysection{Unity.\+Visual\+Scripting.\+Flow\+Graph Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_flow_graph}\index{Unity.VisualScripting.FlowGraph@{Unity.VisualScripting.FlowGraph}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Flow\+Graph\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.643123cm]{class_unity_1_1_visual_scripting_1_1_flow_graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_graph_a0f742b2d04961333d05f6009926695a8}{Create\+Data}} ()
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_graph_ac51a082cb0542e33e6923f18c40e45a3}{Start\+Listening}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}} stack)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_graph_a3e5ad896f598015b56b83b87901c9dd3}{Stop\+Listening}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}} stack)
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_graph_a3509d616da6fd389db1c576f0bef1ad8}{Is\+Listening}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Graph\+Pointer}} pointer)
+\item 
+IEnumerable$<$ string $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_graph_a074c18ce91329ecc406108e023aadd26}{Get\+Dynamic\+Variable\+Names}} (\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_a84f7f8b69a898cf472e2c285c1b943b3}{Variable\+Kind}} kind, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} reference)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_a1d1091de39cc110c3bc0f2761f6b00f2}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_a1d1091de39cc110c3bc0f2761f6b00f2}} 
+void {\bfseries Port\+Definitions\+Changed} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_a68fb42a3e8bab647f547b72dc75d98e7}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_a68fb42a3e8bab647f547b72dc75d98e7}} 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_graph}{Flow\+Graph}} {\bfseries With\+Input\+Output} ()
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_a1a7d6de69545f9d1f9e3e396b35a0d4f}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_a1a7d6de69545f9d1f9e3e396b35a0d4f}} 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_graph}{Flow\+Graph}} {\bfseries With\+Start\+Update} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_variable_declarations}{Variable\+Declarations}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_graph_a997be1f5486db407a967e1f1414a9913}{variables}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_ac24235ecb60cf043c6b3c18d0c9ec8cf}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_ac24235ecb60cf043c6b3c18d0c9ec8cf}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_element_collection}{Graph\+Element\+Collection}}$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit}{IUnit}} $>$ {\bfseries units}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_a6cb149fba48b3bfeccb6df21c6b141e9}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_a6cb149fba48b3bfeccb6df21c6b141e9}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_connection_collection}{Graph\+Connection\+Collection}}$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_connection}{Control\+Connection}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{Control\+Output}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_input}{Control\+Input}} $>$ {\bfseries control\+Connections}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_aaaea19b5b5ef9038ce9fbb7451b4611a}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_aaaea19b5b5ef9038ce9fbb7451b4611a}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_connection_collection}{Graph\+Connection\+Collection}}$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_connection}{Value\+Connection}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_output}{Value\+Output}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{Value\+Input}} $>$ {\bfseries value\+Connections}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_a273bc8faa0f65898061295bfa78cbf29}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_a273bc8faa0f65898061295bfa78cbf29}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_connection_collection}{Graph\+Connection\+Collection}}$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_invalid_connection}{Invalid\+Connection}}, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_output_port}{IUnit\+Output\+Port}}, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_input_port}{IUnit\+Input\+Port}} $>$ {\bfseries invalid\+Connections}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_ada3d06a5c235ff4a1f9066c17e8a96f1}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_ada3d06a5c235ff4a1f9066c17e8a96f1}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_element_collection}{Graph\+Element\+Collection}}$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_group}{Graph\+Group}} $>$ {\bfseries groups}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_adc35bd547d3fd2ec314f0f60ac8eb433}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_adc35bd547d3fd2ec314f0f60ac8eb433}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_definition_collection}{Unit\+Port\+Definition\+Collection}}$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_input_definition}{Control\+Input\+Definition}} $>$ {\bfseries control\+Input\+Definitions}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_a1a5fe0551033917ac4427328e8c240ab}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_a1a5fe0551033917ac4427328e8c240ab}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_definition_collection}{Unit\+Port\+Definition\+Collection}}$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output_definition}{Control\+Output\+Definition}} $>$ {\bfseries control\+Output\+Definitions}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_ae2ec7ba8665f1e99abc68a481a3b1d86}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_ae2ec7ba8665f1e99abc68a481a3b1d86}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_definition_collection}{Unit\+Port\+Definition\+Collection}}$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input_definition}{Value\+Input\+Definition}} $>$ {\bfseries value\+Input\+Definitions}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_a8db40c715688c8b651471b4b99fb550e}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_a8db40c715688c8b651471b4b99fb550e}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_definition_collection}{Unit\+Port\+Definition\+Collection}}$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_output_definition}{Value\+Output\+Definition}} $>$ {\bfseries value\+Output\+Definitions}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_abc88b4b013cb09252a867f7c38a31259}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_abc88b4b013cb09252a867f7c38a31259}} 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port_definition}{IUnit\+Port\+Definition}} $>$ {\bfseries valid\+Port\+Definitions}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_acda7c6882d48d777a5c56189b4fb06df}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_acda7c6882d48d777a5c56189b4fb06df}} 
+Action {\bfseries on\+Port\+Definitions\+Changed}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_a0f742b2d04961333d05f6009926695a8}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_a0f742b2d04961333d05f6009926695a8}} 
+\index{Unity.VisualScripting.FlowGraph@{Unity.VisualScripting.FlowGraph}!CreateData@{CreateData}}
+\index{CreateData@{CreateData}!Unity.VisualScripting.FlowGraph@{Unity.VisualScripting.FlowGraph}}
+\doxysubsubsection{\texorpdfstring{CreateData()}{CreateData()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}} Unity.\+Visual\+Scripting.\+Flow\+Graph.\+Create\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph}{Unity.\+Visual\+Scripting.\+Graph}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_a074c18ce91329ecc406108e023aadd26}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_a074c18ce91329ecc406108e023aadd26}} 
+\index{Unity.VisualScripting.FlowGraph@{Unity.VisualScripting.FlowGraph}!GetDynamicVariableNames@{GetDynamicVariableNames}}
+\index{GetDynamicVariableNames@{GetDynamicVariableNames}!Unity.VisualScripting.FlowGraph@{Unity.VisualScripting.FlowGraph}}
+\doxysubsubsection{\texorpdfstring{GetDynamicVariableNames()}{GetDynamicVariableNames()}}
+{\footnotesize\ttfamily IEnumerable$<$ string $>$ Unity.\+Visual\+Scripting.\+Flow\+Graph.\+Get\+Dynamic\+Variable\+Names (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_a84f7f8b69a898cf472e2c285c1b943b3}{Variable\+Kind}}}]{kind,  }\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}}}]{reference }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_with_variables}{Unity.\+Visual\+Scripting.\+IGraph\+With\+Variables}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_a3509d616da6fd389db1c576f0bef1ad8}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_a3509d616da6fd389db1c576f0bef1ad8}} 
+\index{Unity.VisualScripting.FlowGraph@{Unity.VisualScripting.FlowGraph}!IsListening@{IsListening}}
+\index{IsListening@{IsListening}!Unity.VisualScripting.FlowGraph@{Unity.VisualScripting.FlowGraph}}
+\doxysubsubsection{\texorpdfstring{IsListening()}{IsListening()}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Flow\+Graph.\+Is\+Listening (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Graph\+Pointer}}}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_event_listener}{Unity.\+Visual\+Scripting.\+IGraph\+Event\+Listener}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_ac51a082cb0542e33e6923f18c40e45a3}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_ac51a082cb0542e33e6923f18c40e45a3}} 
+\index{Unity.VisualScripting.FlowGraph@{Unity.VisualScripting.FlowGraph}!StartListening@{StartListening}}
+\index{StartListening@{StartListening}!Unity.VisualScripting.FlowGraph@{Unity.VisualScripting.FlowGraph}}
+\doxysubsubsection{\texorpdfstring{StartListening()}{StartListening()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Flow\+Graph.\+Start\+Listening (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}}}]{stack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_event_listener}{Unity.\+Visual\+Scripting.\+IGraph\+Event\+Listener}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_a3e5ad896f598015b56b83b87901c9dd3}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_a3e5ad896f598015b56b83b87901c9dd3}} 
+\index{Unity.VisualScripting.FlowGraph@{Unity.VisualScripting.FlowGraph}!StopListening@{StopListening}}
+\index{StopListening@{StopListening}!Unity.VisualScripting.FlowGraph@{Unity.VisualScripting.FlowGraph}}
+\doxysubsubsection{\texorpdfstring{StopListening()}{StopListening()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Flow\+Graph.\+Stop\+Listening (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}}}]{stack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_event_listener}{Unity.\+Visual\+Scripting.\+IGraph\+Event\+Listener}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_graph_a997be1f5486db407a967e1f1414a9913}\label{class_unity_1_1_visual_scripting_1_1_flow_graph_a997be1f5486db407a967e1f1414a9913}} 
+\index{Unity.VisualScripting.FlowGraph@{Unity.VisualScripting.FlowGraph}!variables@{variables}}
+\index{variables@{variables}!Unity.VisualScripting.FlowGraph@{Unity.VisualScripting.FlowGraph}}
+\doxysubsubsection{\texorpdfstring{variables}{variables}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_variable_declarations}{Variable\+Declarations}} Unity.\+Visual\+Scripting.\+Flow\+Graph.\+variables\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_with_variables}{Unity.\+Visual\+Scripting.\+IGraph\+With\+Variables}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Flow/Flow\+Graph.\+cs\end{DoxyCompactItemize}

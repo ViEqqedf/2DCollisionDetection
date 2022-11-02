@@ -1,0 +1,95 @@
+\hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks}{}\doxysection{Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+ICallbacks Interface Reference}
+\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks}\index{UnityEditor.TestTools.TestRunner.Api.ICallbacks@{UnityEditor.TestTools.TestRunner.Api.ICallbacks}}
+
+
+Callbacks in the \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api}{Test\+Runner\+Api}} for the test stages when running tests.  
+
+
+Inheritance diagram for Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+ICallbacks\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks_a5ef6dc7fbce3006b93aae8b8a5c0da50}{Run\+Started}} (ITest\+Adaptor tests\+To\+Run)
+\begin{DoxyCompactList}\small\item\em A callback invoked when a test run is started. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks_a2e78de56f0792fe8bb709c86a0688d31}{Run\+Finished}} (\mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor}{ITest\+Result\+Adaptor}} result)
+\begin{DoxyCompactList}\small\item\em A callback invoked when a test run is finished. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks_ada2c726a94ee2458cbf7c0b8dd9f1907}{Test\+Started}} (ITest\+Adaptor test)
+\begin{DoxyCompactList}\small\item\em A callback invoked when each individual node of the test tree has started executing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks_ab0bcb5306332c5d27d1be0aaf8f5d2ae}{Test\+Finished}} (\mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor}{ITest\+Result\+Adaptor}} result)
+\begin{DoxyCompactList}\small\item\em A callback invoked when each individual node of the test tree has finished executing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Callbacks in the \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api}{Test\+Runner\+Api}} for the test stages when running tests. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks_a2e78de56f0792fe8bb709c86a0688d31}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks_a2e78de56f0792fe8bb709c86a0688d31}} 
+\index{UnityEditor.TestTools.TestRunner.Api.ICallbacks@{UnityEditor.TestTools.TestRunner.Api.ICallbacks}!RunFinished@{RunFinished}}
+\index{RunFinished@{RunFinished}!UnityEditor.TestTools.TestRunner.Api.ICallbacks@{UnityEditor.TestTools.TestRunner.Api.ICallbacks}}
+\doxysubsubsection{\texorpdfstring{RunFinished()}{RunFinished()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+ICallbacks.\+Run\+Finished (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor}{ITest\+Result\+Adaptor}}}]{result }\end{DoxyParamCaption})}
+
+
+
+A callback invoked when a test run is finished. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & The result of the test run.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks_a5ef6dc7fbce3006b93aae8b8a5c0da50}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks_a5ef6dc7fbce3006b93aae8b8a5c0da50}} 
+\index{UnityEditor.TestTools.TestRunner.Api.ICallbacks@{UnityEditor.TestTools.TestRunner.Api.ICallbacks}!RunStarted@{RunStarted}}
+\index{RunStarted@{RunStarted}!UnityEditor.TestTools.TestRunner.Api.ICallbacks@{UnityEditor.TestTools.TestRunner.Api.ICallbacks}}
+\doxysubsubsection{\texorpdfstring{RunStarted()}{RunStarted()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+ICallbacks.\+Run\+Started (\begin{DoxyParamCaption}\item[{ITest\+Adaptor}]{tests\+To\+Run }\end{DoxyParamCaption})}
+
+
+
+A callback invoked when a test run is started. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tests\+To\+Run} & The full loaded test tree.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks_ab0bcb5306332c5d27d1be0aaf8f5d2ae}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks_ab0bcb5306332c5d27d1be0aaf8f5d2ae}} 
+\index{UnityEditor.TestTools.TestRunner.Api.ICallbacks@{UnityEditor.TestTools.TestRunner.Api.ICallbacks}!TestFinished@{TestFinished}}
+\index{TestFinished@{TestFinished}!UnityEditor.TestTools.TestRunner.Api.ICallbacks@{UnityEditor.TestTools.TestRunner.Api.ICallbacks}}
+\doxysubsubsection{\texorpdfstring{TestFinished()}{TestFinished()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+ICallbacks.\+Test\+Finished (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor}{ITest\+Result\+Adaptor}}}]{result }\end{DoxyParamCaption})}
+
+
+
+A callback invoked when each individual node of the test tree has finished executing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & The result of the test tree node after it had been executed.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks_ada2c726a94ee2458cbf7c0b8dd9f1907}\label{interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks_ada2c726a94ee2458cbf7c0b8dd9f1907}} 
+\index{UnityEditor.TestTools.TestRunner.Api.ICallbacks@{UnityEditor.TestTools.TestRunner.Api.ICallbacks}!TestStarted@{TestStarted}}
+\index{TestStarted@{TestStarted}!UnityEditor.TestTools.TestRunner.Api.ICallbacks@{UnityEditor.TestTools.TestRunner.Api.ICallbacks}}
+\doxysubsubsection{\texorpdfstring{TestStarted()}{TestStarted()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+ICallbacks.\+Test\+Started (\begin{DoxyParamCaption}\item[{ITest\+Adaptor}]{test }\end{DoxyParamCaption})}
+
+
+
+A callback invoked when each individual node of the test tree has started executing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em test} & The test node currently executed.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Editor.\+Test\+Runner/\+Api/ICallbacks.\+cs\end{DoxyCompactItemize}

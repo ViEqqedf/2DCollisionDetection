@@ -1,0 +1,141 @@
+\hypertarget{class_physics_1_1_physics_tool}{}\doxysection{Physics.\+Physics\+Tool类 参考}
+\label{class_physics_1_1_physics_tool}\index{Physics.PhysicsTool@{Physics.PhysicsTool}}
+
+
+Physics.\+Physics\+Tool 的协作图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{class_physics_1_1_physics_tool__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_physics_1_1_physics_tool_ac2c48c532bc6585303430de3c0340e5d}{Is\+Point\+In\+Polygon}} (List$<$ Vector3 $>$ vertices, Vector3 point)
+\begin{DoxyCompactList}\small\item\em 检查点是否在一个多边形中 \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_physics_1_1_physics_tool_af55ec23d78d0aaba2528177ab9691f3f}{Is\+Point\+On\+Segment}} (Vector3 line\+Start, Vector3 line\+End, Vector3 point)
+\begin{DoxyCompactList}\small\item\em 点是否在线段上 \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_physics_1_1_physics_tool_a87ade42d134664139753a2fe7da7e7a9}{Is\+Point\+In\+Triangle}} (List$<$ Vector3 $>$ points, Vector3 point)
+\begin{DoxyCompactList}\small\item\em 检查点是否在三角形内 \end{DoxyCompactList}\item 
+static Vector3 \mbox{\hyperlink{class_physics_1_1_physics_tool_a2b923d3cf606c6980a6b26c5b7bfc80f}{Get\+Perpendicular\+To\+Origin}} (Vector3 a, Vector3 b)
+\item 
+static Vector3 \mbox{\hyperlink{class_physics_1_1_physics_tool_a76623f29e2f14991ed006a429914f55a}{Get\+Closest\+Point\+To\+Origin}} (Vector3 a, Vector3 b)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_physics_1_1_physics_tool_a76623f29e2f14991ed006a429914f55a}\label{class_physics_1_1_physics_tool_a76623f29e2f14991ed006a429914f55a}} 
+\index{Physics.PhysicsTool@{Physics.PhysicsTool}!GetClosestPointToOrigin@{GetClosestPointToOrigin}}
+\index{GetClosestPointToOrigin@{GetClosestPointToOrigin}!Physics.PhysicsTool@{Physics.PhysicsTool}}
+\doxysubsubsection{\texorpdfstring{GetClosestPointToOrigin()}{GetClosestPointToOrigin()}}
+{\footnotesize\ttfamily static Vector3 Physics.\+Physics\+Tool.\+Get\+Closest\+Point\+To\+Origin (\begin{DoxyParamCaption}\item[{Vector3}]{a,  }\item[{Vector3}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_physics_tool_a76623f29e2f14991ed006a429914f55a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_physics_tool_a2b923d3cf606c6980a6b26c5b7bfc80f}\label{class_physics_1_1_physics_tool_a2b923d3cf606c6980a6b26c5b7bfc80f}} 
+\index{Physics.PhysicsTool@{Physics.PhysicsTool}!GetPerpendicularToOrigin@{GetPerpendicularToOrigin}}
+\index{GetPerpendicularToOrigin@{GetPerpendicularToOrigin}!Physics.PhysicsTool@{Physics.PhysicsTool}}
+\doxysubsubsection{\texorpdfstring{GetPerpendicularToOrigin()}{GetPerpendicularToOrigin()}}
+{\footnotesize\ttfamily static Vector3 Physics.\+Physics\+Tool.\+Get\+Perpendicular\+To\+Origin (\begin{DoxyParamCaption}\item[{Vector3}]{a,  }\item[{Vector3}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_physics_tool_a2b923d3cf606c6980a6b26c5b7bfc80f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_physics_tool_ac2c48c532bc6585303430de3c0340e5d}\label{class_physics_1_1_physics_tool_ac2c48c532bc6585303430de3c0340e5d}} 
+\index{Physics.PhysicsTool@{Physics.PhysicsTool}!IsPointInPolygon@{IsPointInPolygon}}
+\index{IsPointInPolygon@{IsPointInPolygon}!Physics.PhysicsTool@{Physics.PhysicsTool}}
+\doxysubsubsection{\texorpdfstring{IsPointInPolygon()}{IsPointInPolygon()}}
+{\footnotesize\ttfamily static bool Physics.\+Physics\+Tool.\+Is\+Point\+In\+Polygon (\begin{DoxyParamCaption}\item[{List$<$ Vector3 $>$}]{vertices,  }\item[{Vector3}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+检查点是否在一个多边形中 
+
+
+\begin{DoxyParams}{参数}
+{\em vertices} & 点集，顺序要求能够从头到尾连接闭环\\
+\hline
+{\em point} & 要检查的点\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_physics_tool_ac2c48c532bc6585303430de3c0340e5d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_physics_tool_a87ade42d134664139753a2fe7da7e7a9}\label{class_physics_1_1_physics_tool_a87ade42d134664139753a2fe7da7e7a9}} 
+\index{Physics.PhysicsTool@{Physics.PhysicsTool}!IsPointInTriangle@{IsPointInTriangle}}
+\index{IsPointInTriangle@{IsPointInTriangle}!Physics.PhysicsTool@{Physics.PhysicsTool}}
+\doxysubsubsection{\texorpdfstring{IsPointInTriangle()}{IsPointInTriangle()}}
+{\footnotesize\ttfamily static bool Physics.\+Physics\+Tool.\+Is\+Point\+In\+Triangle (\begin{DoxyParamCaption}\item[{List$<$ Vector3 $>$}]{points,  }\item[{Vector3}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+检查点是否在三角形内 
+
+
+\begin{DoxyParams}{参数}
+{\em points} & 点集\\
+\hline
+{\em point} & 要检查的点\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_physics_tool_a87ade42d134664139753a2fe7da7e7a9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_physics_tool_af55ec23d78d0aaba2528177ab9691f3f}\label{class_physics_1_1_physics_tool_af55ec23d78d0aaba2528177ab9691f3f}} 
+\index{Physics.PhysicsTool@{Physics.PhysicsTool}!IsPointOnSegment@{IsPointOnSegment}}
+\index{IsPointOnSegment@{IsPointOnSegment}!Physics.PhysicsTool@{Physics.PhysicsTool}}
+\doxysubsubsection{\texorpdfstring{IsPointOnSegment()}{IsPointOnSegment()}}
+{\footnotesize\ttfamily static bool Physics.\+Physics\+Tool.\+Is\+Point\+On\+Segment (\begin{DoxyParamCaption}\item[{Vector3}]{line\+Start,  }\item[{Vector3}]{line\+End,  }\item[{Vector3}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+点是否在线段上 
+
+
+\begin{DoxyParams}{参数}
+{\em line\+Start} & 线段起点\\
+\hline
+{\em line\+End} & 线段终点\\
+\hline
+{\em point} & 检查点\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_physics_tool_af55ec23d78d0aaba2528177ab9691f3f_icgraph}
+\end{center}
+\end{figure}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Assets/\+Scripts/\mbox{\hyperlink{_physics_tool_8cs}{Physics\+Tool.\+cs}}\end{DoxyCompactItemize}

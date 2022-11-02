@@ -1,0 +1,88 @@
+\hypertarget{class_unity_engine_1_1_timeline_1_1_custom_style_attribute}{}\doxysection{Unity\+Engine.\+Timeline.\+Custom\+Style\+Attribute Class Reference}
+\label{class_unity_engine_1_1_timeline_1_1_custom_style_attribute}\index{UnityEngine.Timeline.CustomStyleAttribute@{UnityEngine.Timeline.CustomStyleAttribute}}
+
+
+Use this attribute to customize the appearance of a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_marker}{Marker}}.  
+
+
+Inheritance diagram for Unity\+Engine.\+Timeline.\+Custom\+Style\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_timeline_1_1_custom_style_attribute}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_custom_style_attribute_ac2169e6482a6a192d33805f7217db309}{Custom\+Style\+Attribute}} (string \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_custom_style_attribute_a602b27face2220fcd38ff9d1fedbf14e}{uss\+Style}})
+\begin{DoxyCompactList}\small\item\em Creates a new \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_custom_style_attribute}{Custom\+Style\+Attribute}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_custom_style_attribute_a602b27face2220fcd38ff9d1fedbf14e}\label{class_unity_engine_1_1_timeline_1_1_custom_style_attribute_a602b27face2220fcd38ff9d1fedbf14e}} 
+readonly string {\bfseries uss\+Style}
+\begin{DoxyCompactList}\small\item\em The name of the USS style. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Use this attribute to customize the appearance of a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_marker}{Marker}}. 
+
+Specify the style to use to draw a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_marker}{Marker}}. 
+
+How to create a custom style rule\+: 1) Create a \textquotesingle{}common.\+uss\textquotesingle{} USS file in an Editor folder in a Style\+Sheets/\+Extensions folder hierarchy. Example of valid folder paths\+:
+\begin{DoxyItemize}
+\item Assets/\+Editor/\+Style\+Sheets/\+Extensions
+\item Assets/\+Editor/\+Markers/\+Style\+Sheets/\+Extensions
+\item Assets/\+Timeline/\+Editor/\+My\+Markers/\+Style\+Sheets/\+Extensions Rules in \textquotesingle{}dark.\+uss\textquotesingle{} are used if you use the Pro Skin and rules in \textquotesingle{}light.\+uss\textquotesingle{} are used otherwise.
+\end{DoxyItemize}
+
+2)In the USS file, create a styling rule to customize the appearance of the marker. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{MyStyle}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \textcolor{comment}{/* Specify the appearance of the marker in the collapsed state here. *\&zwj;/}}
+\DoxyCodeLine{\textcolor{comment}{\}}}
+\DoxyCodeLine{\textcolor{comment}{}}
+\DoxyCodeLine{\textcolor{comment}{MyStyle:checked}}
+\DoxyCodeLine{\textcolor{comment}{\{}}
+\DoxyCodeLine{\textcolor{comment}{  /* Specify the appearance of the marker in the expanded state here. *\&zwj;/}}
+\DoxyCodeLine{\textcolor{comment}{\}}}
+\DoxyCodeLine{\textcolor{comment}{}}
+\DoxyCodeLine{\textcolor{comment}{MyStyle:focused:checked}}
+\DoxyCodeLine{\textcolor{comment}{\{}}
+\DoxyCodeLine{\textcolor{comment}{  /* Specify the appearance of the marker in the selected state here. *\&zwj;/}}
+\DoxyCodeLine{\textcolor{comment}{\}}}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_marker}{Unity\+Engine.\+Timeline.\+Marker}}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_custom_style_attribute_ac2169e6482a6a192d33805f7217db309}\label{class_unity_engine_1_1_timeline_1_1_custom_style_attribute_ac2169e6482a6a192d33805f7217db309}} 
+\index{UnityEngine.Timeline.CustomStyleAttribute@{UnityEngine.Timeline.CustomStyleAttribute}!CustomStyleAttribute@{CustomStyleAttribute}}
+\index{CustomStyleAttribute@{CustomStyleAttribute}!UnityEngine.Timeline.CustomStyleAttribute@{UnityEngine.Timeline.CustomStyleAttribute}}
+\doxysubsubsection{\texorpdfstring{CustomStyleAttribute()}{CustomStyleAttribute()}}
+{\footnotesize\ttfamily Unity\+Engine.\+Timeline.\+Custom\+Style\+Attribute.\+Custom\+Style\+Attribute (\begin{DoxyParamCaption}\item[{string}]{uss\+Style }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_custom_style_attribute}{Custom\+Style\+Attribute}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uss\+Style} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/Timeline\+Attributes.\+cs\end{DoxyCompactItemize}

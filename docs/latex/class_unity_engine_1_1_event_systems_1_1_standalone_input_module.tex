@@ -1,0 +1,178 @@
+\hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module}{}\doxysection{Unity\+Engine.\+Event\+Systems.\+Standalone\+Input\+Module Class Reference}
+\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module}\index{UnityEngine.EventSystems.StandaloneInputModule@{UnityEngine.EventSystems.StandaloneInputModule}}
+
+
+A Base\+Input\+Module designed for mouse / keyboard / controller input.  
+
+
+Inheritance diagram for Unity\+Engine.\+Event\+Systems.\+Standalone\+Input\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_engine_1_1_event_systems_1_1_standalone_input_module}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_aa4b61320b4465d965280d73beb2bca46}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_aa4b61320b4465d965280d73beb2bca46}} 
+enum {\bfseries Input\+Mode} \{ {\bfseries Mouse}
+, {\bfseries Buttons}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_ab9f07d25f5709b7077f3023b331472f1}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_ab9f07d25f5709b7077f3023b331472f1}} 
+override void {\bfseries Update\+Module} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a4e0575c78195934ff269b707b932b3ca}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a4e0575c78195934ff269b707b932b3ca}} 
+override bool {\bfseries Should\+Activate\+Module} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a57fa37dee370cbf97f498d1fb01beb16}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a57fa37dee370cbf97f498d1fb01beb16}} 
+override void {\bfseries Activate\+Module} ()
+\begin{DoxyCompactList}\small\item\em See Base\+Input\+Module. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a44c8ddc2f359c0886c5eaf4ff0cf3f3a}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a44c8ddc2f359c0886c5eaf4ff0cf3f3a}} 
+override void {\bfseries Deactivate\+Module} ()
+\begin{DoxyCompactList}\small\item\em See Base\+Input\+Module. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_ac263731c27fa3adb4f58ca3f419f812c}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_ac263731c27fa3adb4f58ca3f419f812c}} 
+override void {\bfseries Process} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a764027a9ab1805f560b929ae8bfff4f3}{Process\+Touch\+Press}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} pointer\+Event, bool pressed, bool released)
+\begin{DoxyCompactList}\small\item\em This method is called by \mbox{\hyperlink{namespace_unity}{Unity}} whenever a touch event is processed. Override this method with a custom implementation to process touch events yourself. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a135a433266dfaff064c4537fa85b88d5}{Send\+Submit\+Event\+To\+Selected\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Calculate and send a submit event to the current selected object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_af7bca39083bd7e371ce1af3f5c499d94}{Send\+Move\+Event\+To\+Selected\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Calculate and send a move event to the current selected object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_ae1b78a11ed257f11d7470cbea7f4e1c7}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_ae1b78a11ed257f11d7470cbea7f4e1c7}} 
+void {\bfseries Process\+Mouse\+Event} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a491fc823d374c912caec4acdcc57ab93}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a491fc823d374c912caec4acdcc57ab93}} 
+virtual bool {\bfseries Force\+Auto\+Select} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a5ee4634ca3dbbf691484d60accaaed3d}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a5ee4634ca3dbbf691484d60accaaed3d}} 
+void {\bfseries Process\+Mouse\+Event} (int id)
+\begin{DoxyCompactList}\small\item\em Process all mouse events. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a1f7ae3aef0facc03cc2c75ba79e68738}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a1f7ae3aef0facc03cc2c75ba79e68738}} 
+bool {\bfseries Send\+Update\+Event\+To\+Selected\+Object} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a54b548c9a6f6ec22bc68499846f58a01}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a54b548c9a6f6ec22bc68499846f58a01}} 
+void {\bfseries Process\+Mouse\+Press} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_1_1_mouse_button_event_data}{Mouse\+Button\+Event\+Data}} data)
+\begin{DoxyCompactList}\small\item\em Calculate and process any mouse button state changes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_ae9a55d7507471b90e93d265b4c13b66b}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_ae9a55d7507471b90e93d265b4c13b66b}} 
+Game\+Object {\bfseries Get\+Current\+Focused\+Game\+Object} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_af9de6877354113c87300182257d04431}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_af9de6877354113c87300182257d04431}} 
+Input\+Mode {\bfseries input\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a44b779bfc2657d99729d4f2dca788362}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a44b779bfc2657d99729d4f2dca788362}} 
+bool {\bfseries allow\+Activation\+On\+Mobile\+Device}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a1a6907034c5ec344ffe0400198b89e2a}{force\+Module\+Active}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Force this module to be active. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a2f6ada204b3dcacc33f2c2e19bc22523}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a2f6ada204b3dcacc33f2c2e19bc22523}} 
+float {\bfseries input\+Actions\+Per\+Second}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of keyboard / controller inputs allowed per second. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_afbb977ff5c2c4784189ed83523c418a3}{repeat\+Delay}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Delay in seconds before the input actions per second repeat rate takes effect. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a560cb211b92d89d3e01eed83da0e19d4}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a560cb211b92d89d3e01eed83da0e19d4}} 
+string {\bfseries horizontal\+Axis}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Name of the horizontal axis for movement (if axis events are used). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a139786cc66680a89151465b4bc0920bf}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a139786cc66680a89151465b4bc0920bf}} 
+string {\bfseries vertical\+Axis}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Name of the vertical axis for movement (if axis events are used). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a952b244be802a45f89d1e31afc23f64c}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a952b244be802a45f89d1e31afc23f64c}} 
+string {\bfseries submit\+Button}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum number of input events handled per second. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a8a6b824e465a266af830ca328289b549}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a8a6b824e465a266af830ca328289b549}} 
+string {\bfseries cancel\+Button}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Input manager name for the \textquotesingle{}cancel\textquotesingle{} button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A Base\+Input\+Module designed for mouse / keyboard / controller input. 
+
+Input module for working with, mouse, keyboard, or controller. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a764027a9ab1805f560b929ae8bfff4f3}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a764027a9ab1805f560b929ae8bfff4f3}} 
+\index{UnityEngine.EventSystems.StandaloneInputModule@{UnityEngine.EventSystems.StandaloneInputModule}!ProcessTouchPress@{ProcessTouchPress}}
+\index{ProcessTouchPress@{ProcessTouchPress}!UnityEngine.EventSystems.StandaloneInputModule@{UnityEngine.EventSystems.StandaloneInputModule}}
+\doxysubsubsection{\texorpdfstring{ProcessTouchPress()}{ProcessTouchPress()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Event\+Systems.\+Standalone\+Input\+Module.\+Process\+Touch\+Press (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}}}]{pointer\+Event,  }\item[{bool}]{pressed,  }\item[{bool}]{released }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+This method is called by \mbox{\hyperlink{namespace_unity}{Unity}} whenever a touch event is processed. Override this method with a custom implementation to process touch events yourself. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer\+Event} & Event data relating to the touch event, such as position and ID to be passed to the touch event destination object.\\
+\hline
+{\em pressed} & This is true for the first frame of a touch event, and false thereafter. This can therefore be used to determine the instant a touch event occurred.\\
+\hline
+{\em released} & This is true only for the last frame of a touch event.\\
+\hline
+\end{DoxyParams}
+
+
+This method can be overridden in derived classes to change how touch press events are handled. \mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_af7bca39083bd7e371ce1af3f5c499d94}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_af7bca39083bd7e371ce1af3f5c499d94}} 
+\index{UnityEngine.EventSystems.StandaloneInputModule@{UnityEngine.EventSystems.StandaloneInputModule}!SendMoveEventToSelectedObject@{SendMoveEventToSelectedObject}}
+\index{SendMoveEventToSelectedObject@{SendMoveEventToSelectedObject}!UnityEngine.EventSystems.StandaloneInputModule@{UnityEngine.EventSystems.StandaloneInputModule}}
+\doxysubsubsection{\texorpdfstring{SendMoveEventToSelectedObject()}{SendMoveEventToSelectedObject()}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Event\+Systems.\+Standalone\+Input\+Module.\+Send\+Move\+Event\+To\+Selected\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Calculate and send a move event to the current selected object. 
+
+\begin{DoxyReturn}{Returns}
+If the move event was used by the selected object.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a135a433266dfaff064c4537fa85b88d5}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a135a433266dfaff064c4537fa85b88d5}} 
+\index{UnityEngine.EventSystems.StandaloneInputModule@{UnityEngine.EventSystems.StandaloneInputModule}!SendSubmitEventToSelectedObject@{SendSubmitEventToSelectedObject}}
+\index{SendSubmitEventToSelectedObject@{SendSubmitEventToSelectedObject}!UnityEngine.EventSystems.StandaloneInputModule@{UnityEngine.EventSystems.StandaloneInputModule}}
+\doxysubsubsection{\texorpdfstring{SendSubmitEventToSelectedObject()}{SendSubmitEventToSelectedObject()}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Event\+Systems.\+Standalone\+Input\+Module.\+Send\+Submit\+Event\+To\+Selected\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Calculate and send a submit event to the current selected object. 
+
+\begin{DoxyReturn}{Returns}
+If the submit event was used by the selected object.
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a1a6907034c5ec344ffe0400198b89e2a}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_a1a6907034c5ec344ffe0400198b89e2a}} 
+\index{UnityEngine.EventSystems.StandaloneInputModule@{UnityEngine.EventSystems.StandaloneInputModule}!forceModuleActive@{forceModuleActive}}
+\index{forceModuleActive@{forceModuleActive}!UnityEngine.EventSystems.StandaloneInputModule@{UnityEngine.EventSystems.StandaloneInputModule}}
+\doxysubsubsection{\texorpdfstring{forceModuleActive}{forceModuleActive}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Event\+Systems.\+Standalone\+Input\+Module.\+force\+Module\+Active\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Force this module to be active. 
+
+If there is no module active with higher priority (ordered in the inspector) this module will be forced active even if valid enabling conditions are not met. \mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_afbb977ff5c2c4784189ed83523c418a3}\label{class_unity_engine_1_1_event_systems_1_1_standalone_input_module_afbb977ff5c2c4784189ed83523c418a3}} 
+\index{UnityEngine.EventSystems.StandaloneInputModule@{UnityEngine.EventSystems.StandaloneInputModule}!repeatDelay@{repeatDelay}}
+\index{repeatDelay@{repeatDelay}!UnityEngine.EventSystems.StandaloneInputModule@{UnityEngine.EventSystems.StandaloneInputModule}}
+\doxysubsubsection{\texorpdfstring{repeatDelay}{repeatDelay}}
+{\footnotesize\ttfamily float Unity\+Engine.\+Event\+Systems.\+Standalone\+Input\+Module.\+repeat\+Delay\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Delay in seconds before the input actions per second repeat rate takes effect. 
+
+If the same direction is sustained, the input\+Actions\+Per\+Second property can be used to control the rate at which events are fired. However, it can be desirable that the first repetition is delayed, so the user doesn\textquotesingle{}t get repeated actions by accident. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+Event\+System/\+Input\+Modules/Standalone\+Input\+Module.\+cs\end{DoxyCompactItemize}

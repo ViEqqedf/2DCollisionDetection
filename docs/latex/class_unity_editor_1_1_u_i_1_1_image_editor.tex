@@ -1,0 +1,87 @@
+\hypertarget{class_unity_editor_1_1_u_i_1_1_image_editor}{}\doxysection{Unity\+Editor.\+UI.\+Image\+Editor Class Reference}
+\label{class_unity_editor_1_1_u_i_1_1_image_editor}\index{UnityEditor.UI.ImageEditor@{UnityEditor.UI.ImageEditor}}
+
+
+Editor class used to edit \mbox{\hyperlink{namespace_unity_editor_1_1_u_i}{UI}} Sprites.  
+
+
+Inheritance diagram for Unity\+Editor.\+UI.\+Image\+Editor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_editor_1_1_u_i_1_1_image_editor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_image_editor_a0f28b93c9e6b9577218392d451bfc1bd}\label{class_unity_editor_1_1_u_i_1_1_image_editor_a0f28b93c9e6b9577218392d451bfc1bd}} 
+override void {\bfseries On\+Inspector\+GUI} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_image_editor_a7e2b0fbffcf05d8a72a7d10830912b75}\label{class_unity_editor_1_1_u_i_1_1_image_editor_a7e2b0fbffcf05d8a72a7d10830912b75}} 
+override bool {\bfseries Has\+Preview\+GUI} ()
+\begin{DoxyCompactList}\small\item\em All graphics have a preview. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_image_editor_af823b80115bc03b2578b6b2ff23eacc0}\label{class_unity_editor_1_1_u_i_1_1_image_editor_af823b80115bc03b2578b6b2ff23eacc0}} 
+override void {\bfseries On\+Preview\+GUI} (Rect rect, GUIStyle background)
+\begin{DoxyCompactList}\small\item\em Draw the Image preview. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_unity_editor_1_1_u_i_1_1_image_editor_a2b233fff0b9145cffc78fb8e76aba44a}{Get\+Info\+String}} ()
+\begin{DoxyCompactList}\small\item\em A string containing the Image details to be used as a overlay on the component Preview. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_u_i_1_1_image_editor_ad0502a86283aab23c13a046c48cf498b}{On\+Enable}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_u_i_1_1_image_editor_a39a2aaded117dd8fd5ddd23ab0307248}{On\+Disable}} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_image_editor_abdef42140ee734ddeaf3197f2ac3f066}\label{class_unity_editor_1_1_u_i_1_1_image_editor_abdef42140ee734ddeaf3197f2ac3f066}} 
+void {\bfseries Sprite\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Draw the atlas and Image selection fields. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_image_editor_abfcf372cc810b6ae590d86cdc56e93b7}\label{class_unity_editor_1_1_u_i_1_1_image_editor_abfcf372cc810b6ae590d86cdc56e93b7}} 
+void {\bfseries Type\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Sprites\textquotesingle{}s custom properties based on the type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Editor class used to edit \mbox{\hyperlink{namespace_unity_editor_1_1_u_i}{UI}} Sprites. 
+
+Custom Editor for the Image Component. Extend this class to write a custom editor for a component derived from Image. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_image_editor_a2b233fff0b9145cffc78fb8e76aba44a}\label{class_unity_editor_1_1_u_i_1_1_image_editor_a2b233fff0b9145cffc78fb8e76aba44a}} 
+\index{UnityEditor.UI.ImageEditor@{UnityEditor.UI.ImageEditor}!GetInfoString@{GetInfoString}}
+\index{GetInfoString@{GetInfoString}!UnityEditor.UI.ImageEditor@{UnityEditor.UI.ImageEditor}}
+\doxysubsubsection{\texorpdfstring{GetInfoString()}{GetInfoString()}}
+{\footnotesize\ttfamily override string Unity\+Editor.\+UI.\+Image\+Editor.\+Get\+Info\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A string containing the Image details to be used as a overlay on the component Preview. 
+
+\begin{DoxyReturn}{Returns}
+The Image details. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_image_editor_a39a2aaded117dd8fd5ddd23ab0307248}\label{class_unity_editor_1_1_u_i_1_1_image_editor_a39a2aaded117dd8fd5ddd23ab0307248}} 
+\index{UnityEditor.UI.ImageEditor@{UnityEditor.UI.ImageEditor}!OnDisable@{OnDisable}}
+\index{OnDisable@{OnDisable}!UnityEditor.UI.ImageEditor@{UnityEditor.UI.ImageEditor}}
+\doxysubsubsection{\texorpdfstring{OnDisable()}{OnDisable()}}
+{\footnotesize\ttfamily override void Unity\+Editor.\+UI.\+Image\+Editor.\+On\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_u_i_1_1_graphic_editor}{Unity\+Editor.\+UI.\+Graphic\+Editor}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_image_editor_ad0502a86283aab23c13a046c48cf498b}\label{class_unity_editor_1_1_u_i_1_1_image_editor_ad0502a86283aab23c13a046c48cf498b}} 
+\index{UnityEditor.UI.ImageEditor@{UnityEditor.UI.ImageEditor}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!UnityEditor.UI.ImageEditor@{UnityEditor.UI.ImageEditor}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily override void Unity\+Editor.\+UI.\+Image\+Editor.\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_u_i_1_1_graphic_editor}{Unity\+Editor.\+UI.\+Graphic\+Editor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Editor/\+UI/Image\+Editor.\+cs\end{DoxyCompactItemize}

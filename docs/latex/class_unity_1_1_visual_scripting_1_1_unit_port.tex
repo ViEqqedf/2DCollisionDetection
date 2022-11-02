@@ -1,0 +1,265 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port}{}\doxysection{Unity.\+Visual\+Scripting.\+Unit\+Port\texorpdfstring{$<$}{<} TValid\+Other, TInvalid\+Other, TExternal\+Connection \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_unity_1_1_visual_scripting_1_1_unit_port}\index{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Unit\+Port\texorpdfstring{$<$}{<} TValid\+Other, TInvalid\+Other, TExternal\+Connection \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_1_1_visual_scripting_1_1_unit_port}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_aea77f0f25718627da9c6c2f9c59951d3}{Can\+Validly\+Connect\+To}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnit\+Port}} port)
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_a7cea141dd588dff5f5ddc3acc1cadd7f}{Can\+Invalidly\+Connect\+To}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnit\+Port}} port)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_a1d57e70365b156f89eaa7cbc415fe24f}{Validly\+Connect\+To}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnit\+Port}} port)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_a6aa44dea7fb2512eead348f0e26029fa}{Invalidly\+Connect\+To}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnit\+Port}} port)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_a711f3b75bccd4ecb74455888fc733c25}{Disconnect}} ()
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_a12e957867941578883618772c9129291}\label{class_unity_1_1_visual_scripting_1_1_unit_port_a12e957867941578883618772c9129291}} 
+abstract bool {\bfseries Can\+Connect\+To\+Valid} (TValid\+Other port)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_a1533ac97d1ad1e9cab3dad37222d5dd4}\label{class_unity_1_1_visual_scripting_1_1_unit_port_a1533ac97d1ad1e9cab3dad37222d5dd4}} 
+bool {\bfseries Can\+Connect\+To\+Invalid} (TInvalid\+Other port)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_a678e553fc08eca5ccc06de523aff9d7f}\label{class_unity_1_1_visual_scripting_1_1_unit_port_a678e553fc08eca5ccc06de523aff9d7f}} 
+abstract void {\bfseries Connect\+To\+Valid} (TValid\+Other port)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_ac8b187e2b6189d12b512d252c59eae95}\label{class_unity_1_1_visual_scripting_1_1_unit_port_ac8b187e2b6189d12b512d252c59eae95}} 
+abstract void {\bfseries Connect\+To\+Invalid} (TInvalid\+Other port)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_a6c2cf23467fdba13c9bc85eb8922fa20}\label{class_unity_1_1_visual_scripting_1_1_unit_port_a6c2cf23467fdba13c9bc85eb8922fa20}} 
+abstract void {\bfseries Disconnect\+From\+Valid} (TValid\+Other port)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_af34b3076fe0894cb98c8828f36bc6577}\label{class_unity_1_1_visual_scripting_1_1_unit_port_af34b3076fe0894cb98c8828f36bc6577}} 
+abstract void {\bfseries Disconnect\+From\+Invalid} (TInvalid\+Other port)
+\item 
+abstract \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnit\+Port}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_aa54194d6ffc172c6174db5cc0a29aaea}{Compatible\+Port}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit}{IUnit}} unit)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_af7b1645a1180f49594c6cfb8927b39e6}\label{class_unity_1_1_visual_scripting_1_1_unit_port_af7b1645a1180f49594c6cfb8927b39e6}} 
+{\bfseries Unit\+Port} (string key)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_acd20a9b38169e6cbe27885b75d2bd012}\label{class_unity_1_1_visual_scripting_1_1_unit_port_acd20a9b38169e6cbe27885b75d2bd012}} 
+void {\bfseries Connect\+Invalid} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_output_port}{IUnit\+Output\+Port}} source, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_input_port}{IUnit\+Input\+Port}} destination)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_aa441863187375a8ddd9d2ff2bc8e8150}\label{class_unity_1_1_visual_scripting_1_1_unit_port_aa441863187375a8ddd9d2ff2bc8e8150}} 
+void {\bfseries Disconnect\+Invalid} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_output_port}{IUnit\+Output\+Port}} source, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_input_port}{IUnit\+Input\+Port}} destination)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit}{IUnit}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_abebcfa95c8fed5140217c12b879dd241}{unit}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_a437ba4520cfcabe4f2cb643b198f10b7}{key}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{IGraph}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_a7e80b3ca50bbeff533c0a914f2bf5353}{graph}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_relation}{IUnit\+Relation}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_a4e328309ec4dab30a297980f14133eb2}{relations}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+abstract IEnumerable$<$ TExternal\+Connection $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_acfe7993911e50eeb07abd8e5b2295e14}{valid\+Connections}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+abstract IEnumerable$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_invalid_connection}{Invalid\+Connection}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_a0fe918d8c4910f9b02b78a599c00ad03}{invalid\+Connections}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_a4357fcccd357bc6da2ca3281027eb10c}\label{class_unity_1_1_visual_scripting_1_1_unit_port_a4357fcccd357bc6da2ca3281027eb10c}} 
+abstract IEnumerable$<$ TValid\+Other $>$ {\bfseries valid\+Connected\+Ports}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_a5af6b3c1fce0ed72da6fe26f6800d669}\label{class_unity_1_1_visual_scripting_1_1_unit_port_a5af6b3c1fce0ed72da6fe26f6800d669}} 
+abstract IEnumerable$<$ TInvalid\+Other $>$ {\bfseries invalid\+Connected\+Ports}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_connection}{IUnit\+Connection}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_afcd0f1874a76c0ca67c28fb5d2142433}{connections}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnit\+Port}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_a31dbb36df7193db4fa2cf7597d75900e}{connected\+Ports}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_a91f255c0fd32e7fde49db9fce1778663}{has\+Any\+Connection}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_a8a8b18d5822d0dfea9b2f9721988d20a}{has\+Valid\+Connection}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_aa9194f2a569a98f4b84dedb13c6f7658}{has\+Invalid\+Connection}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_a7cea141dd588dff5f5ddc3acc1cadd7f}\label{class_unity_1_1_visual_scripting_1_1_unit_port_a7cea141dd588dff5f5ddc3acc1cadd7f}} 
+\index{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}!CanInvalidlyConnectTo@{CanInvalidlyConnectTo}}
+\index{CanInvalidlyConnectTo@{CanInvalidlyConnectTo}!Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}}
+\doxysubsubsection{\texorpdfstring{CanInvalidlyConnectTo()}{CanInvalidlyConnectTo()}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port}{Unity.\+Visual\+Scripting.\+Unit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$.Can\+Invalidly\+Connect\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{Unity.\+Visual\+Scripting.\+IUnit\+Port}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_aea77f0f25718627da9c6c2f9c59951d3}\label{class_unity_1_1_visual_scripting_1_1_unit_port_aea77f0f25718627da9c6c2f9c59951d3}} 
+\index{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}!CanValidlyConnectTo@{CanValidlyConnectTo}}
+\index{CanValidlyConnectTo@{CanValidlyConnectTo}!Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}}
+\doxysubsubsection{\texorpdfstring{CanValidlyConnectTo()}{CanValidlyConnectTo()}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port}{Unity.\+Visual\+Scripting.\+Unit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$.Can\+Validly\+Connect\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{Unity.\+Visual\+Scripting.\+IUnit\+Port}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_aa54194d6ffc172c6174db5cc0a29aaea}\label{class_unity_1_1_visual_scripting_1_1_unit_port_aa54194d6ffc172c6174db5cc0a29aaea}} 
+\index{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}!CompatiblePort@{CompatiblePort}}
+\index{CompatiblePort@{CompatiblePort}!Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}}
+\doxysubsubsection{\texorpdfstring{CompatiblePort()}{CompatiblePort()}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnit\+Port}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port}{Unity.\+Visual\+Scripting.\+Unit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$.Compatible\+Port (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit}{IUnit}}}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{Unity.\+Visual\+Scripting.\+IUnit\+Port}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_a711f3b75bccd4ecb74455888fc733c25}\label{class_unity_1_1_visual_scripting_1_1_unit_port_a711f3b75bccd4ecb74455888fc733c25}} 
+\index{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}!Disconnect@{Disconnect}}
+\index{Disconnect@{Disconnect}!Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}}
+\doxysubsubsection{\texorpdfstring{Disconnect()}{Disconnect()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port}{Unity.\+Visual\+Scripting.\+Unit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$.Disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{Unity.\+Visual\+Scripting.\+IUnit\+Port}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_a6aa44dea7fb2512eead348f0e26029fa}\label{class_unity_1_1_visual_scripting_1_1_unit_port_a6aa44dea7fb2512eead348f0e26029fa}} 
+\index{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}!InvalidlyConnectTo@{InvalidlyConnectTo}}
+\index{InvalidlyConnectTo@{InvalidlyConnectTo}!Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}}
+\doxysubsubsection{\texorpdfstring{InvalidlyConnectTo()}{InvalidlyConnectTo()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port}{Unity.\+Visual\+Scripting.\+Unit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$.Invalidly\+Connect\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{Unity.\+Visual\+Scripting.\+IUnit\+Port}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_a1d57e70365b156f89eaa7cbc415fe24f}\label{class_unity_1_1_visual_scripting_1_1_unit_port_a1d57e70365b156f89eaa7cbc415fe24f}} 
+\index{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}!ValidlyConnectTo@{ValidlyConnectTo}}
+\index{ValidlyConnectTo@{ValidlyConnectTo}!Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}}
+\doxysubsubsection{\texorpdfstring{ValidlyConnectTo()}{ValidlyConnectTo()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port}{Unity.\+Visual\+Scripting.\+Unit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$.Validly\+Connect\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{Unity.\+Visual\+Scripting.\+IUnit\+Port}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_a31dbb36df7193db4fa2cf7597d75900e}\label{class_unity_1_1_visual_scripting_1_1_unit_port_a31dbb36df7193db4fa2cf7597d75900e}} 
+\index{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}!connectedPorts@{connectedPorts}}
+\index{connectedPorts@{connectedPorts}!Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}}
+\doxysubsubsection{\texorpdfstring{connectedPorts}{connectedPorts}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnit\+Port}}$>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port}{Unity.\+Visual\+Scripting.\+Unit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$.connected\+Ports\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{Unity.\+Visual\+Scripting.\+IUnit\+Port}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_afcd0f1874a76c0ca67c28fb5d2142433}\label{class_unity_1_1_visual_scripting_1_1_unit_port_afcd0f1874a76c0ca67c28fb5d2142433}} 
+\index{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}!connections@{connections}}
+\index{connections@{connections}!Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}}
+\doxysubsubsection{\texorpdfstring{connections}{connections}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_connection}{IUnit\+Connection}}$>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port}{Unity.\+Visual\+Scripting.\+Unit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$.connections\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{Unity.\+Visual\+Scripting.\+IUnit\+Port}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_a7e80b3ca50bbeff533c0a914f2bf5353}\label{class_unity_1_1_visual_scripting_1_1_unit_port_a7e80b3ca50bbeff533c0a914f2bf5353}} 
+\index{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}!graph@{graph}}
+\index{graph@{graph}!Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}}
+\doxysubsubsection{\texorpdfstring{graph}{graph}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{IGraph}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port}{Unity.\+Visual\+Scripting.\+Unit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$.graph\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_item}{Unity.\+Visual\+Scripting.\+IGraph\+Item}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_a91f255c0fd32e7fde49db9fce1778663}\label{class_unity_1_1_visual_scripting_1_1_unit_port_a91f255c0fd32e7fde49db9fce1778663}} 
+\index{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}!hasAnyConnection@{hasAnyConnection}}
+\index{hasAnyConnection@{hasAnyConnection}!Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}}
+\doxysubsubsection{\texorpdfstring{hasAnyConnection}{hasAnyConnection}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port}{Unity.\+Visual\+Scripting.\+Unit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$.has\+Any\+Connection\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{Unity.\+Visual\+Scripting.\+IUnit\+Port}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_aa9194f2a569a98f4b84dedb13c6f7658}\label{class_unity_1_1_visual_scripting_1_1_unit_port_aa9194f2a569a98f4b84dedb13c6f7658}} 
+\index{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}!hasInvalidConnection@{hasInvalidConnection}}
+\index{hasInvalidConnection@{hasInvalidConnection}!Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}}
+\doxysubsubsection{\texorpdfstring{hasInvalidConnection}{hasInvalidConnection}}
+{\footnotesize\ttfamily virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port}{Unity.\+Visual\+Scripting.\+Unit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$.has\+Invalid\+Connection\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{Unity.\+Visual\+Scripting.\+IUnit\+Port}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_a8a8b18d5822d0dfea9b2f9721988d20a}\label{class_unity_1_1_visual_scripting_1_1_unit_port_a8a8b18d5822d0dfea9b2f9721988d20a}} 
+\index{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}!hasValidConnection@{hasValidConnection}}
+\index{hasValidConnection@{hasValidConnection}!Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}}
+\doxysubsubsection{\texorpdfstring{hasValidConnection}{hasValidConnection}}
+{\footnotesize\ttfamily virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port}{Unity.\+Visual\+Scripting.\+Unit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$.has\+Valid\+Connection\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{Unity.\+Visual\+Scripting.\+IUnit\+Port}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_a0fe918d8c4910f9b02b78a599c00ad03}\label{class_unity_1_1_visual_scripting_1_1_unit_port_a0fe918d8c4910f9b02b78a599c00ad03}} 
+\index{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}!invalidConnections@{invalidConnections}}
+\index{invalidConnections@{invalidConnections}!Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}}
+\doxysubsubsection{\texorpdfstring{invalidConnections}{invalidConnections}}
+{\footnotesize\ttfamily abstract IEnumerable$<$\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_invalid_connection}{Invalid\+Connection}}$>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port}{Unity.\+Visual\+Scripting.\+Unit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$.invalid\+Connections\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{Unity.\+Visual\+Scripting.\+IUnit\+Port}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_a437ba4520cfcabe4f2cb643b198f10b7}\label{class_unity_1_1_visual_scripting_1_1_unit_port_a437ba4520cfcabe4f2cb643b198f10b7}} 
+\index{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}!key@{key}}
+\index{key@{key}!Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily string \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port}{Unity.\+Visual\+Scripting.\+Unit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$.key\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{Unity.\+Visual\+Scripting.\+IUnit\+Port}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_a4e328309ec4dab30a297980f14133eb2}\label{class_unity_1_1_visual_scripting_1_1_unit_port_a4e328309ec4dab30a297980f14133eb2}} 
+\index{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}!relations@{relations}}
+\index{relations@{relations}!Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}}
+\doxysubsubsection{\texorpdfstring{relations}{relations}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_relation}{IUnit\+Relation}}$>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port}{Unity.\+Visual\+Scripting.\+Unit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$.relations\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{Unity.\+Visual\+Scripting.\+IUnit\+Port}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_abebcfa95c8fed5140217c12b879dd241}\label{class_unity_1_1_visual_scripting_1_1_unit_port_abebcfa95c8fed5140217c12b879dd241}} 
+\index{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}!unit@{unit}}
+\index{unit@{unit}!Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}}
+\doxysubsubsection{\texorpdfstring{unit}{unit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit}{IUnit}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port}{Unity.\+Visual\+Scripting.\+Unit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$.unit\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{Unity.\+Visual\+Scripting.\+IUnit\+Port}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_unit_port_acfe7993911e50eeb07abd8e5b2295e14}\label{class_unity_1_1_visual_scripting_1_1_unit_port_acfe7993911e50eeb07abd8e5b2295e14}} 
+\index{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}!validConnections@{validConnections}}
+\index{validConnections@{validConnections}!Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$@{Unity.VisualScripting.UnitPort$<$ TValidOther, TInvalidOther, TExternalConnection $>$}}
+\doxysubsubsection{\texorpdfstring{validConnections}{validConnections}}
+{\footnotesize\ttfamily abstract IEnumerable$<$TExternal\+Connection$>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port}{Unity.\+Visual\+Scripting.\+Unit\+Port}}$<$ TValid\+Other, TInvalid\+Other, TExternal\+Connection $>$.valid\+Connections\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{Unity.\+Visual\+Scripting.\+IUnit\+Port}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Flow/\+Ports/Unit\+Port.\+cs\end{DoxyCompactItemize}

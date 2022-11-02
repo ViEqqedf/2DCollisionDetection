@@ -1,0 +1,95 @@
+\hypertarget{class_unity_editor_1_1_timeline_1_1_control_playable_asset_editor}{}\doxysection{Unity\+Editor.\+Timeline.\+Control\+Playable\+Asset\+Editor Class Reference}
+\label{class_unity_editor_1_1_timeline_1_1_control_playable_asset_editor}\index{UnityEditor.Timeline.ControlPlayableAssetEditor@{UnityEditor.Timeline.ControlPlayableAssetEditor}}
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Control\+Playable\+Asset\+Editor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_timeline_1_1_control_playable_asset_editor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_clip_draw_options}{Clip\+Draw\+Options}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_control_playable_asset_editor_a4b98a28c3dd539f39b534146bbf0a811}{Get\+Clip\+Options}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} clip)
+\begin{DoxyCompactList}\small\item\em Implement this method to override the default options for drawing a clip. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_control_playable_asset_editor_ae4c0ddc693ea5a279351ebbeaed7d221}{On\+Create}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} clip, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} cloned\+From)
+\begin{DoxyCompactList}\small\item\em Called when a clip is created. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_control_playable_asset_editor_a7387198fcf6a6ebb8d221d7182fe06d9}{Get\+Sub\+Timelines}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} clip, Playable\+Director director, List$<$ Playable\+Director $>$ sub\+Timelines)
+\begin{DoxyCompactList}\small\item\em Gets the sub-\/timelines for a specific clip. Implement this method if your clip supports playing nested timelines. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_control_playable_asset_editor_a4b98a28c3dd539f39b534146bbf0a811}\label{class_unity_editor_1_1_timeline_1_1_control_playable_asset_editor_a4b98a28c3dd539f39b534146bbf0a811}} 
+\index{UnityEditor.Timeline.ControlPlayableAssetEditor@{UnityEditor.Timeline.ControlPlayableAssetEditor}!GetClipOptions@{GetClipOptions}}
+\index{GetClipOptions@{GetClipOptions}!UnityEditor.Timeline.ControlPlayableAssetEditor@{UnityEditor.Timeline.ControlPlayableAssetEditor}}
+\doxysubsubsection{\texorpdfstring{GetClipOptions()}{GetClipOptions()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_clip_draw_options}{Clip\+Draw\+Options}} Unity\+Editor.\+Timeline.\+Control\+Playable\+Asset\+Editor.\+Get\+Clip\+Options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}}}]{clip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implement this method to override the default options for drawing a clip. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip} & The clip being drawn.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The options for drawing a clip.
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_editor_a3381f162ac568a6c20c749bc74a7a06b}{Unity\+Editor.\+Timeline.\+Clip\+Editor}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_control_playable_asset_editor_a7387198fcf6a6ebb8d221d7182fe06d9}\label{class_unity_editor_1_1_timeline_1_1_control_playable_asset_editor_a7387198fcf6a6ebb8d221d7182fe06d9}} 
+\index{UnityEditor.Timeline.ControlPlayableAssetEditor@{UnityEditor.Timeline.ControlPlayableAssetEditor}!GetSubTimelines@{GetSubTimelines}}
+\index{GetSubTimelines@{GetSubTimelines}!UnityEditor.Timeline.ControlPlayableAssetEditor@{UnityEditor.Timeline.ControlPlayableAssetEditor}}
+\doxysubsubsection{\texorpdfstring{GetSubTimelines()}{GetSubTimelines()}}
+{\footnotesize\ttfamily override void Unity\+Editor.\+Timeline.\+Control\+Playable\+Asset\+Editor.\+Get\+Sub\+Timelines (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}}}]{clip,  }\item[{Playable\+Director}]{director,  }\item[{List$<$ Playable\+Director $>$}]{sub\+Timelines }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the sub-\/timelines for a specific clip. Implement this method if your clip supports playing nested timelines. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip} & The clip with the Control\+Playable\+Asset.\\
+\hline
+{\em director} & The playable director driving the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} Clip. This may not be the same as Timeline\+Editor.\+inspected\+Director.\\
+\hline
+{\em sub\+Timelines} & Specify the sub-\/timelines to control.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_editor_ac419b723377d66feeaf06f9013f119a6}{Unity\+Editor.\+Timeline.\+Clip\+Editor}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_control_playable_asset_editor_ae4c0ddc693ea5a279351ebbeaed7d221}\label{class_unity_editor_1_1_timeline_1_1_control_playable_asset_editor_ae4c0ddc693ea5a279351ebbeaed7d221}} 
+\index{UnityEditor.Timeline.ControlPlayableAssetEditor@{UnityEditor.Timeline.ControlPlayableAssetEditor}!OnCreate@{OnCreate}}
+\index{OnCreate@{OnCreate}!UnityEditor.Timeline.ControlPlayableAssetEditor@{UnityEditor.Timeline.ControlPlayableAssetEditor}}
+\doxysubsubsection{\texorpdfstring{OnCreate()}{OnCreate()}}
+{\footnotesize\ttfamily override void Unity\+Editor.\+Timeline.\+Control\+Playable\+Asset\+Editor.\+On\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}}}]{clip,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{track,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}}}]{cloned\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called when a clip is created. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip} & The newly created clip.\\
+\hline
+{\em track} & The track that the clip is assigned to.\\
+\hline
+{\em cloned\+From} & The source that the clip was copied from. This can be set to null if the clip is not a copy.\\
+\hline
+\end{DoxyParams}
+
+
+The callback occurs before the clip is assigned to the track. 
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_editor_a586e666943496ce611ce864fee755710}{Unity\+Editor.\+Timeline.\+Clip\+Editor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Editor/\+Control\+Track/Control\+Playable\+Asset\+Editor.\+cs\end{DoxyCompactItemize}

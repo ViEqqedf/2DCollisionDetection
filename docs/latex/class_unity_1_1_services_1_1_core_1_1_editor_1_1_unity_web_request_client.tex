@@ -1,0 +1,83 @@
+\hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_unity_web_request_client}{}\doxysection{Unity.\+Services.\+Core.\+Editor.\+Unity\+Web\+Request\+Client Class Reference}
+\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_unity_web_request_client}\index{Unity.Services.Core.Editor.UnityWebRequestClient@{Unity.Services.Core.Editor.UnityWebRequestClient}}
+Inheritance diagram for Unity.\+Services.\+Core.\+Editor.\+Unity\+Web\+Request\+Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_1_1_services_1_1_core_1_1_editor_1_1_unity_web_request_client}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_unity_web_request_client_ae9f2bdec432370696df8edf9f734525b}{Get\+Base\+Url\+For}} (string service\+Id)
+\begin{DoxyCompactList}\small\item\em Get the base URL to reach the service identified by the given {\itshape service\+Id} .  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_services_1_1_core_1_1_editor_1_1_http_options}{Http\+Options}} \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_unity_web_request_client_ac929da8e342571c519690439ca5888fe}{Get\+Default\+Options\+For}} (string service\+Id)
+\begin{DoxyCompactList}\small\item\em Get the default options for requests targeting the service identified by the given {\itshape service\+Id} .  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_unity_web_request_client_aaf5a265eb914ae8aed308064cd7647cf}{Create\+Request\+For\+Service}} (string service\+Id, string resource\+Path)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} targeting the service identified by the given {\itshape service\+Id} . Also set its default options.  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}{IAsync\+Operation}}$<$ \mbox{\hyperlink{struct_unity_1_1_services_1_1_core_1_1_editor_1_1_read_only_http_response}{Read\+Only\+Http\+Response}} $>$ \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_unity_web_request_client_a09a4f05fb7f46ef55bc039a67ad3d1cf}{Send}} (\mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} request)
+\begin{DoxyCompactList}\small\item\em Send the given {\itshape request} . Note\+: The success of the returned operation only means that the request could be handled gracefully; the request in itself can still fail (HTTP error or network error).  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_unity_web_request_client_aaf5a265eb914ae8aed308064cd7647cf}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_unity_web_request_client_aaf5a265eb914ae8aed308064cd7647cf}} 
+\index{Unity.Services.Core.Editor.UnityWebRequestClient@{Unity.Services.Core.Editor.UnityWebRequestClient}!CreateRequestForService@{CreateRequestForService}}
+\index{CreateRequestForService@{CreateRequestForService}!Unity.Services.Core.Editor.UnityWebRequestClient@{Unity.Services.Core.Editor.UnityWebRequestClient}}
+\doxysubsubsection{\texorpdfstring{CreateRequestForService()}{CreateRequestForService()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} Unity.\+Services.\+Core.\+Editor.\+Unity\+Web\+Request\+Client.\+Create\+Request\+For\+Service (\begin{DoxyParamCaption}\item[{string}]{service\+Id,  }\item[{string}]{resource\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} targeting the service identified by the given {\itshape service\+Id} . Also set its default options.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_http_client_a8de741e7ac82ad983ef270bf756c2fde}{Unity.\+Services.\+Core.\+Editor.\+IHttp\+Client}}.
+
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_unity_web_request_client_ae9f2bdec432370696df8edf9f734525b}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_unity_web_request_client_ae9f2bdec432370696df8edf9f734525b}} 
+\index{Unity.Services.Core.Editor.UnityWebRequestClient@{Unity.Services.Core.Editor.UnityWebRequestClient}!GetBaseUrlFor@{GetBaseUrlFor}}
+\index{GetBaseUrlFor@{GetBaseUrlFor}!Unity.Services.Core.Editor.UnityWebRequestClient@{Unity.Services.Core.Editor.UnityWebRequestClient}}
+\doxysubsubsection{\texorpdfstring{GetBaseUrlFor()}{GetBaseUrlFor()}}
+{\footnotesize\ttfamily string Unity.\+Services.\+Core.\+Editor.\+Unity\+Web\+Request\+Client.\+Get\+Base\+Url\+For (\begin{DoxyParamCaption}\item[{string}]{service\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the base URL to reach the service identified by the given {\itshape service\+Id} .  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_http_client_ae7c877db40a2952c49bbbbdd080f59ff}{Unity.\+Services.\+Core.\+Editor.\+IHttp\+Client}}.
+
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_unity_web_request_client_ac929da8e342571c519690439ca5888fe}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_unity_web_request_client_ac929da8e342571c519690439ca5888fe}} 
+\index{Unity.Services.Core.Editor.UnityWebRequestClient@{Unity.Services.Core.Editor.UnityWebRequestClient}!GetDefaultOptionsFor@{GetDefaultOptionsFor}}
+\index{GetDefaultOptionsFor@{GetDefaultOptionsFor}!Unity.Services.Core.Editor.UnityWebRequestClient@{Unity.Services.Core.Editor.UnityWebRequestClient}}
+\doxysubsubsection{\texorpdfstring{GetDefaultOptionsFor()}{GetDefaultOptionsFor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_unity_1_1_services_1_1_core_1_1_editor_1_1_http_options}{Http\+Options}} Unity.\+Services.\+Core.\+Editor.\+Unity\+Web\+Request\+Client.\+Get\+Default\+Options\+For (\begin{DoxyParamCaption}\item[{string}]{service\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the default options for requests targeting the service identified by the given {\itshape service\+Id} .  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_http_client_a5fbc15b97bcae346e504fc1034094149}{Unity.\+Services.\+Core.\+Editor.\+IHttp\+Client}}.
+
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_unity_web_request_client_a09a4f05fb7f46ef55bc039a67ad3d1cf}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_unity_web_request_client_a09a4f05fb7f46ef55bc039a67ad3d1cf}} 
+\index{Unity.Services.Core.Editor.UnityWebRequestClient@{Unity.Services.Core.Editor.UnityWebRequestClient}!Send@{Send}}
+\index{Send@{Send}!Unity.Services.Core.Editor.UnityWebRequestClient@{Unity.Services.Core.Editor.UnityWebRequestClient}}
+\doxysubsubsection{\texorpdfstring{Send()}{Send()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}{IAsync\+Operation}}$<$ \mbox{\hyperlink{struct_unity_1_1_services_1_1_core_1_1_editor_1_1_read_only_http_response}{Read\+Only\+Http\+Response}} $>$ Unity.\+Services.\+Core.\+Editor.\+Unity\+Web\+Request\+Client.\+Send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}}}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Send the given {\itshape request} . Note\+: The success of the returned operation only means that the request could be handled gracefully; the request in itself can still fail (HTTP error or network error).  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_http_client_a65a93958fbcf2a620568f72a41a590eb}{Unity.\+Services.\+Core.\+Editor.\+IHttp\+Client}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+services.\+core@1.\+0.\+1/\+Editor/\+Core/\+Networking/Unity\+Web\+Request\+Client.\+cs\end{DoxyCompactItemize}

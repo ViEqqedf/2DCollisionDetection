@@ -1,0 +1,99 @@
+\hypertarget{class_scene_with_nested_layout_elements_load}{}\doxysection{Scene\+With\+Nested\+Layout\+Elements\+Load Class Reference}
+\label{class_scene_with_nested_layout_elements_load}\index{SceneWithNestedLayoutElementsLoad@{SceneWithNestedLayoutElementsLoad}}
+Inheritance diagram for Scene\+With\+Nested\+Layout\+Elements\+Load\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scene_with_nested_layout_elements_load}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_scene_with_nested_layout_elements_load_a61ca85d7b8f9595f568bc39bd193be62}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Implement this method to call actions automatically before the build process. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_with_nested_layout_elements_load_a207d3e1e14d91689f658613fb59f2004}\label{class_scene_with_nested_layout_elements_load_a207d3e1e14d91689f658613fb59f2004}} 
+IEnumerator {\bfseries Scene\+With\+Nested\+Aspect\+Ratio\+Fitter\+Loads} ()
+\item 
+\mbox{\Hypertarget{class_scene_with_nested_layout_elements_load_a94e305ccd42879eed292596ae5bddb89}\label{class_scene_with_nested_layout_elements_load_a94e305ccd42879eed292596ae5bddb89}} 
+IEnumerator {\bfseries Scene\+With\+Nested\+Content\+Size\+Fitter\+Loads} ()
+\item 
+\mbox{\Hypertarget{class_scene_with_nested_layout_elements_load_abb122fbb51fdee45736b111f31771ae9}\label{class_scene_with_nested_layout_elements_load_abb122fbb51fdee45736b111f31771ae9}} 
+IEnumerator {\bfseries Scene\+With\+Nested\+Layout\+Group\+Loads} ()
+\item 
+\mbox{\Hypertarget{class_scene_with_nested_layout_elements_load_a3482901bdce7dd7abdcd852b0457c7f1}\label{class_scene_with_nested_layout_elements_load_a3482901bdce7dd7abdcd852b0457c7f1}} 
+void {\bfseries Test\+Setup} ()
+\item 
+\mbox{\Hypertarget{class_scene_with_nested_layout_elements_load_af08e88f411a45898ac561db7b778985f}\label{class_scene_with_nested_layout_elements_load_af08e88f411a45898ac561db7b778985f}} 
+void {\bfseries Tear\+Down} ()
+\item 
+\mbox{\Hypertarget{class_scene_with_nested_layout_elements_load_ad98bdde1a54b860c95bf6753305e7fb1}\label{class_scene_with_nested_layout_elements_load_ad98bdde1a54b860c95bf6753305e7fb1}} 
+void {\bfseries On\+Time\+Tear\+Down} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_with_nested_layout_elements_load_a61ca85d7b8f9595f568bc39bd193be62}\label{class_scene_with_nested_layout_elements_load_a61ca85d7b8f9595f568bc39bd193be62}} 
+\index{SceneWithNestedLayoutElementsLoad@{SceneWithNestedLayoutElementsLoad}!Setup@{Setup}}
+\index{Setup@{Setup}!SceneWithNestedLayoutElementsLoad@{SceneWithNestedLayoutElementsLoad}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily void Scene\+With\+Nested\+Layout\+Elements\+Load.\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implement this method to call actions automatically before the build process. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }CreateSpriteTest : IPrebuildSetup}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    Texture2D m\_Texture;}
+\DoxyCodeLine{    Sprite m\_Sprite;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_scene_with_nested_layout_elements_load_a61ca85d7b8f9595f568bc39bd193be62}{Setup}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#if UNITY\_EDITOR}}
+\DoxyCodeLine{        var spritePath = \textcolor{stringliteral}{"{}Assets/Resources/Circle.png"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{        var ti = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.AssetImporter.GetAtPath(spritePath) as \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporter;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.textureCompression = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporterCompression.Uncompressed;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.SaveAndReimport();}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [SetUp]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} SetUpTest()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        m\_Texture = Resources.Load<Texture2D>(\textcolor{stringliteral}{"{}Circle"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [Test]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} WhenNullTextureIsPassed\_CreateShouldReturnNullSprite()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with Valid Texture.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        LogAssert.Expect(LogType.Log, \textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Sprite.Create(m\_Texture, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Debug.Log(\textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with NULL Texture. Should return NULL Sprite.}}
+\DoxyCodeLine{        m\_Sprite = Sprite.Create(\textcolor{keyword}{null}, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Assert.That(m\_Sprite, Is.Null, \textcolor{stringliteral}{"{}Sprite created with null texture should be null"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup_a9a9eaa928efe50645e61412528e84309}{Unity\+Engine.\+Test\+Tools.\+IPrebuild\+Setup}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Tests/\+Runtime/\+Nested\+Layout/Scene\+With\+Nested\+Layout\+Elements\+Loads.\+cs\end{DoxyCompactItemize}

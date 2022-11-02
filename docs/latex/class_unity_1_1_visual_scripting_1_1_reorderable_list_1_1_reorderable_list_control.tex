@@ -1,0 +1,1044 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control}{}\doxysection{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control}\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+
+
+Base class for custom reorderable list control.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+delegate void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a53e46267fd8e876c0863e8909345a4f8}{Draw\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Invoked to draw content for empty list. \end{DoxyCompactList}\item 
+delegate void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a97a64ee825d0e5f3f0d0781615a338a0}{Draw\+Empty\+Absolute}} (Rect position)
+\begin{DoxyCompactList}\small\item\em Invoked to draw content for empty list with absolute positioning. \end{DoxyCompactList}\item 
+delegate T \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_af429737193eca19ce5011bab6bda05a8}{Item\+Drawer$<$ T $>$}} (Rect position, T item)
+\begin{DoxyCompactList}\small\item\em Invoked to draw list item. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a53d65eb1329a014dc01c94e41f697c2f}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a53d65eb1329a014dc01c94e41f697c2f}} 
+{\bfseries Reorderable\+List\+Control} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control}{Reorderable\+List\+Control}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a57b09239b78c2e4377fc6a8120d48487}{Reorderable\+List\+Control}} (\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_reorderable_list_ab50155d50a05f368df2f672a02a066df}{Reorderable\+List\+Flags}} flags)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control}{Reorderable\+List\+Control}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a961f9b8631244b2f3831ee328dd6f869}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a961f9b8631244b2f3831ee328dd6f869}} 
+void {\bfseries Draw} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a53e46267fd8e876c0863e8909345a4f8}{Draw\+Empty}} draw\+Empty)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ab4d6c14eebf684b294c6790c8894f3f7}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ab4d6c14eebf684b294c6790c8894f3f7}} 
+void {\bfseries Draw} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_acc12f2668fa9c89940f8b9cc3c11a718}{Draw}} (Rect position, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a97a64ee825d0e5f3f0d0781615a338a0}{Draw\+Empty\+Absolute}} draw\+Empty)
+\begin{DoxyCompactList}\small\item\em Draw list control with absolute positioning. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a900fc02daf4be78e9a7748a022dbac3e}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a900fc02daf4be78e9a7748a022dbac3e}} 
+void {\bfseries Draw} (Rect position, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a9dd51a6452763aa8dbce8e23451b4ce1}{Draw\+Size\+Field}} (Rect position, GUIContent label, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor)
+\begin{DoxyCompactList}\small\item\em Draw list size field with absolute positioning and a custom prefix label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aa2e1e2588a3639b0af695709feab0913}{Draw\+Size\+Field}} (Rect position, string label, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor)
+\begin{DoxyCompactList}\small\item\em Draw list size field with absolute positioning and a custom prefix label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_adefb2ad62a550f064e649e2a6f3a6548}{Draw\+Size\+Field}} (Rect position, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor)
+\begin{DoxyCompactList}\small\item\em Draw list size field with absolute positioning with the default prefix label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a6b1c34ac8a89dd78eccc016ec9296f1c}{Draw\+Size\+Field}} (GUIContent label, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor)
+\begin{DoxyCompactList}\small\item\em Draw list size field with automatic layout and a custom prefix label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ad7ad1dc43926ff32a06d010d122c410b}{Draw\+Size\+Field}} (string label, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor)
+\begin{DoxyCompactList}\small\item\em Draw list size field with automatic layout and a custom prefix label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ac76776841969a20be4462cbf6bbf1ee5}{Draw\+Size\+Field}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor)
+\begin{DoxyCompactList}\small\item\em Draw list size field with automatic layout and the default prefix label. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a7f36206d18672a71baaf5a22b786055c}{Do\+Command}} (string command\+Name, int item\+Index, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor)
+\begin{DoxyCompactList}\small\item\em Call to manually perform command. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a5627e22ddd1c4ecddcb974aad03f3812}{Do\+Command}} (GUIContent command, int item\+Index, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor)
+\begin{DoxyCompactList}\small\item\em Call to manually perform command. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a19e4b34b819fa02f7e1f528c1ac70b94}{Calculate\+List\+Height}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor)
+\begin{DoxyCompactList}\small\item\em Calculate height of list control in pixels. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a812f76c81491528a66d6e12977f3d59d}{Calculate\+List\+Height}} (int item\+Count, float item\+Height)
+\begin{DoxyCompactList}\small\item\em Calculate height of list control in pixels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a481fdad59dd37ad37eef32125c512e06}{Draw\+Control\+From\+State}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a53e46267fd8e876c0863e8909345a4f8}{Draw\+Empty}} draw\+Empty, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_reorderable_list_ab50155d50a05f368df2f672a02a066df}{Reorderable\+List\+Flags}} flags)
+\begin{DoxyCompactList}\small\item\em Generate and draw control from state object. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a414a2e7ed9f56c9242ca03472cb39bf0}{Draw\+Control\+From\+State}} (Rect position, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a97a64ee825d0e5f3f0d0781615a338a0}{Draw\+Empty\+Absolute}} draw\+Empty, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_reorderable_list_ab50155d50a05f368df2f672a02a066df}{Reorderable\+List\+Flags}} flags)
+\begin{DoxyCompactList}\small\item\em Generate and draw control from state object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ad1a426f1362f1b044199fb52796453a7}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ad1a426f1362f1b044199fb52796453a7}} 
+static readonly Color {\bfseries Anchor\+Background\+Color}
+\begin{DoxyCompactList}\small\item\em Background color of anchor list item. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aab404c84a6e92d5d1ca91848017f8efc}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aab404c84a6e92d5d1ca91848017f8efc}} 
+static readonly Color {\bfseries Target\+Background\+Color}
+\begin{DoxyCompactList}\small\item\em Background color of target slot when dragging list item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a9c15ce203362e0d1feee04f80de4b033}{On\+Add\+Menu\+Clicked}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_add_menu_clicked_event_args}{Add\+Menu\+Clicked\+Event\+Args}} args)
+\begin{DoxyCompactList}\small\item\em Raises event when add menu button is clicked. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a0e49441dd0e64ecf10fcc8c33cf79eda}{On\+Item\+Inserted}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_item_inserted_event_args}{Item\+Inserted\+Event\+Args}} args)
+\begin{DoxyCompactList}\small\item\em Raises event after list item is inserted or duplicated. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aa3c02ebe5a090718846c1f10b2b1a8e6}{On\+Item\+Removing}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_item_removing_event_args}{Item\+Removing\+Event\+Args}} args)
+\begin{DoxyCompactList}\small\item\em Raises event before list item is removed and provides oppertunity to cancel. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ab49b81b5c534b49e77230db141e07bb9}{On\+Item\+Moving}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_item_moving_event_args}{Item\+Moving\+Event\+Args}} args)
+\begin{DoxyCompactList}\small\item\em Raises event immediately before list item is moved and provides oppertunity to cancel. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a5070f79e58a97c1b0648b618a678e792}{On\+Item\+Moved}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_item_moved_event_args}{Item\+Moved\+Event\+Args}} args)
+\begin{DoxyCompactList}\small\item\em Raises event after list item has been moved. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a3a346382a299323b0ab4eb7d2881fee8}{Draw\+Drop\+Indicator}} (Rect position)
+\begin{DoxyCompactList}\small\item\em Draws drop insertion indicator. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a63bd8d618c696bef8ec1160b5c10d6d3}{Add\+Items\+To\+Menu}} (Generic\+Menu menu, int item\+Index, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor)
+\begin{DoxyCompactList}\small\item\em Invoked to generate context menu for list item. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ac05d4016b5c72b99b173a1e15b1a16ee}{Handle\+Command}} (string command\+Name, int item\+Index, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor)
+\begin{DoxyCompactList}\small\item\em Invoked to handle context command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a79600265b19a7f852626a69073281792}{Move\+Item}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor, int source\+Index, int dest\+Index)
+\begin{DoxyCompactList}\small\item\em Move item from source index to destination index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aa96bac9c76599e33071630bd1278b8bf}{Add\+Item}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_add}{Add}} item at end of list and raises the event \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a4e99e27fb2cd7f9759b060dac9e245e9}{Item\+Inserted}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a273bcc0efe70bebfe3bc598461d28427}{Insert\+Item}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor, int item\+Index)
+\begin{DoxyCompactList}\small\item\em Insert item at specified index and raises the event \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a4e99e27fb2cd7f9759b060dac9e245e9}{Item\+Inserted}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a328ec98f43cdd68af058d58cd3aec6d9}{Duplicate\+Item}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor, int item\+Index)
+\begin{DoxyCompactList}\small\item\em Duplicate specified item and raises the event \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a4e99e27fb2cd7f9759b060dac9e245e9}{Item\+Inserted}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a6f949211621a50b9a757e544e5d8cb74}{Remove\+Item}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor, int item\+Index)
+\begin{DoxyCompactList}\small\item\em Remove specified item. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a68b1249e5c485077ee532700dd4b1e96}{Clear\+All}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor)
+\begin{DoxyCompactList}\small\item\em Remove all items from list. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a185947ca744f9b2046442d8a2480a689}{Resize\+List}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} adaptor, int new\+Count)
+\begin{DoxyCompactList}\small\item\em Set count of items in list by adding or removing items. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a9554940bef3f78b2bc680c112f7162a5}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a9554940bef3f78b2bc680c112f7162a5}} 
+static readonly GUIContent {\bfseries Command\+Move\+To\+Top} = new GUIContent(\char`\"{}Move to Top\char`\"{})
+\begin{DoxyCompactList}\small\item\em Content for \char`\"{}\+Move to Top\char`\"{} command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_af877762951982833e236fe12abd3c93a}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_af877762951982833e236fe12abd3c93a}} 
+static readonly GUIContent {\bfseries Command\+Move\+To\+Bottom} = new GUIContent(\char`\"{}Move to Bottom\char`\"{})
+\begin{DoxyCompactList}\small\item\em Content for \char`\"{}\+Move to Bottom\char`\"{} command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a6838aefa01f956aedbac8f98f4f3fb5f}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a6838aefa01f956aedbac8f98f4f3fb5f}} 
+static readonly GUIContent {\bfseries Command\+Insert\+Above} = new GUIContent(\char`\"{}Insert Above\char`\"{})
+\begin{DoxyCompactList}\small\item\em Content for \char`\"{}\+Insert Above\char`\"{} command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a5df0a324a22fefb918b88d9aaeca8c5f}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a5df0a324a22fefb918b88d9aaeca8c5f}} 
+static readonly GUIContent {\bfseries Command\+Insert\+Below} = new GUIContent(\char`\"{}Insert Below\char`\"{})
+\begin{DoxyCompactList}\small\item\em Content for \char`\"{}\+Insert Below\char`\"{} command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a150239fa66e95362c1996fb28d803213}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a150239fa66e95362c1996fb28d803213}} 
+static readonly GUIContent {\bfseries Command\+Duplicate} = new GUIContent(\char`\"{}Duplicate\char`\"{})
+\begin{DoxyCompactList}\small\item\em Content for \char`\"{}\+Duplicate\char`\"{} command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aebe359e0cb86a7077e3f082ffdb81d16}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aebe359e0cb86a7077e3f082ffdb81d16}} 
+static readonly GUIContent {\bfseries Command\+Remove} = new GUIContent(\char`\"{}Remove\char`\"{})
+\begin{DoxyCompactList}\small\item\em Content for \char`\"{}\+Remove\char`\"{} command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a13dc9e7b0d8e180ff9a068292768ea1c}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a13dc9e7b0d8e180ff9a068292768ea1c}} 
+static readonly GUIContent {\bfseries Command\+Clear\+All} = new GUIContent(\char`\"{}Clear All\char`\"{})
+\begin{DoxyCompactList}\small\item\em Content for \char`\"{}\+Clear All\char`\"{} command. \end{DoxyCompactList}\item 
+static readonly Generic\+Menu.\+Menu\+Function2 \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a830696203c01af8a355a60ae636c58ea}{Default\+Context\+Handler}} = Default\+Context\+Menu\+Handler
+\begin{DoxyCompactList}\small\item\em Default functionality to handle context command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a0fd4a1c20b8915c2e05d587b3c4131d7}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a0fd4a1c20b8915c2e05d587b3c4131d7}} 
+static int {\bfseries Current\+List\+Control\+ID}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the control ID of the list that is currently being drawn. \end{DoxyCompactList}\item 
+static Rect \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aff83a1cfcd20f37733d2ef9e2ef9a4bd}{Current\+List\+Position}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the position of the list control that is currently being drawn. \end{DoxyCompactList}\item 
+static Rect \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a0f9c7a4ec95abd3c12dd0dbbcbc6616b}{Current\+Item\+Total\+Position}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the total position of the list item that is currently being drawn. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a49cdacbec44502629a03b4bae82f6caf}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a49cdacbec44502629a03b4bae82f6caf}} 
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_reorderable_list_ab50155d50a05f368df2f672a02a066df}{Reorderable\+List\+Flags}} {\bfseries Flags}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets flags which affect behavior of control. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a9c393b6950a8ea06a3bf3dfdcecff584}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a9c393b6950a8ea06a3bf3dfdcecff584}} 
+float {\bfseries Vertical\+Spacing}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the vertical spacing below the reorderable list control. \end{DoxyCompactList}\item 
+GUIStyle \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a77b9e74c0f4eda22c649c15cb3fed763}{Container\+Style}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets style used to draw background of list control. \end{DoxyCompactList}\item 
+GUIStyle \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a2f9173248ef0ee6dc8aac6d96c829c1d}{Footer\+Button\+Style}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets style used to draw footer buttons. \end{DoxyCompactList}\item 
+GUIStyle \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a7f90dc6d4cab1a281f3a433539c7c011}{Item\+Button\+Style}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets style used to draw list item buttons (like the remove button). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aacea8a3b8b64d028fdbd08a9f284b036}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aacea8a3b8b64d028fdbd08a9f284b036}} 
+Color {\bfseries Horizontal\+Line\+Color}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the color of the horizontal lines that appear between list items. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ace257e212949df61ff9f09d6da62876c}{Horizontal\+Line\+At\+Start}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets a boolean value indicating whether a horizontal line should be shown above the first list item at the start of the list control. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_afb45f06794858c46e81266090ed839f8}{Horizontal\+Line\+At\+End}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets a boolean value indicating whether a horizontal line should be shown below the last list item at the end of the list control. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_reorderable_list_aa10d554aba115b6e60244beab7ce3444}{Add\+Menu\+Clicked\+Event\+Handler}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ad76aa9ae73e330a0730088872dd737c2}{Add\+Menu\+Clicked}}
+\begin{DoxyCompactList}\small\item\em Occurs when add menu button is clicked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a4e99e27fb2cd7f9759b060dac9e245e9}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a4e99e27fb2cd7f9759b060dac9e245e9}} 
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_reorderable_list_a22a31b8690bc033a42d92b154a31896a}{Item\+Inserted\+Event\+Handler}} {\bfseries Item\+Inserted}
+\begin{DoxyCompactList}\small\item\em Occurs after list item is inserted or duplicated. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a7ecf99c4a01667246e5c5e5cfccbd718}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a7ecf99c4a01667246e5c5e5cfccbd718}} 
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_reorderable_list_acee4792dec062b0e2bed2288f2fe6596}{Item\+Removing\+Event\+Handler}} {\bfseries Item\+Removing}
+\begin{DoxyCompactList}\small\item\em Occurs before list item is removed and allowing for remove operation to be cancelled. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ad00e17b8b446b7717ab7f662a82ea193}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ad00e17b8b446b7717ab7f662a82ea193}} 
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_reorderable_list_a18f3022a8f9524a8fe1bf4099c18dfb2}{Item\+Moving\+Event\+Handler}} {\bfseries Item\+Moving}
+\begin{DoxyCompactList}\small\item\em Occurs immediately before list item is moved allowing for move operation to be cancelled. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aa435d44c390a3169bbd26aa12cb3fba3}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aa435d44c390a3169bbd26aa12cb3fba3}} 
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_reorderable_list_ab6d7d6829c90c71c94641050704b483f}{Item\+Moved\+Event\+Handler}} {\bfseries Item\+Moved}
+\begin{DoxyCompactList}\small\item\em Occurs after list item has been moved. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for custom reorderable list control. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a57b09239b78c2e4377fc6a8120d48487}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a57b09239b78c2e4377fc6a8120d48487}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!ReorderableListControl@{ReorderableListControl}}
+\index{ReorderableListControl@{ReorderableListControl}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{ReorderableListControl()}{ReorderableListControl()}}
+{\footnotesize\ttfamily Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Reorderable\+List\+Control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_reorderable_list_ab50155d50a05f368df2f672a02a066df}{Reorderable\+List\+Flags}}}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control}{Reorderable\+List\+Control}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flags} & Optional flags which affect behavior of control.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aa96bac9c76599e33071630bd1278b8bf}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aa96bac9c76599e33071630bd1278b8bf}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!AddItem@{AddItem}}
+\index{AddItem@{AddItem}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{AddItem()}{AddItem()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Add\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_add}{Add}} item at end of list and raises the event \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a4e99e27fb2cd7f9759b060dac9e245e9}{Item\+Inserted}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a63bd8d618c696bef8ec1160b5c10d6d3}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a63bd8d618c696bef8ec1160b5c10d6d3}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!AddItemsToMenu@{AddItemsToMenu}}
+\index{AddItemsToMenu@{AddItemsToMenu}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{AddItemsToMenu()}{AddItemsToMenu()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Add\+Items\+To\+Menu (\begin{DoxyParamCaption}\item[{Generic\+Menu}]{menu,  }\item[{int}]{item\+Index,  }\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Invoked to generate context menu for list item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em menu} & Menu which can be populated.\\
+\hline
+{\em item\+Index} & Zero-\/based index of item which was right-\/clicked.\\
+\hline
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a812f76c81491528a66d6e12977f3d59d}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a812f76c81491528a66d6e12977f3d59d}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!CalculateListHeight@{CalculateListHeight}}
+\index{CalculateListHeight@{CalculateListHeight}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{CalculateListHeight()}{CalculateListHeight()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Calculate\+List\+Height (\begin{DoxyParamCaption}\item[{int}]{item\+Count,  }\item[{float}]{item\+Height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculate height of list control in pixels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item\+Count} & Count of items in list.\\
+\hline
+{\em item\+Height} & Fixed height of list item.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Required list height in pixels. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a19e4b34b819fa02f7e1f528c1ac70b94}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a19e4b34b819fa02f7e1f528c1ac70b94}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!CalculateListHeight@{CalculateListHeight}}
+\index{CalculateListHeight@{CalculateListHeight}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{CalculateListHeight()}{CalculateListHeight()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Calculate\+List\+Height (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculate height of list control in pixels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Required list height in pixels. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a68b1249e5c485077ee532700dd4b1e96}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a68b1249e5c485077ee532700dd4b1e96}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!ClearAll@{ClearAll}}
+\index{ClearAll@{ClearAll}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{ClearAll()}{ClearAll()}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Clear\+All (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Remove all items from list. 
+
+The event \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a7ecf99c4a01667246e5c5e5cfccbd718}{Item\+Removing}} is raised for each item prior to clearing array and allows entire operation to be cancelled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a value of {\ttfamily false} if operation was cancelled. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a5627e22ddd1c4ecddcb974aad03f3812}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a5627e22ddd1c4ecddcb974aad03f3812}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!DoCommand@{DoCommand}}
+\index{DoCommand@{DoCommand}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{DoCommand()}{DoCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Do\+Command (\begin{DoxyParamCaption}\item[{GUIContent}]{command,  }\item[{int}]{item\+Index,  }\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Call to manually perform command. 
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_warning}{Warning}} message is logged to console if attempted to execute unknown command.
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & Content representing command.\\
+\hline
+{\em item\+Index} & Zero-\/based index of item which was right-\/clicked.\\
+\hline
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value of {\ttfamily true} if command was known; otherwise {\ttfamily false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a7f36206d18672a71baaf5a22b786055c}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a7f36206d18672a71baaf5a22b786055c}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!DoCommand@{DoCommand}}
+\index{DoCommand@{DoCommand}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{DoCommand()}{DoCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Do\+Command (\begin{DoxyParamCaption}\item[{string}]{command\+Name,  }\item[{int}]{item\+Index,  }\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Call to manually perform command. 
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_warning}{Warning}} message is logged to console if attempted to execute unknown command.
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Name} & Name of command. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} is the text shown in the context menu.\\
+\hline
+{\em item\+Index} & Zero-\/based index of item which was right-\/clicked.\\
+\hline
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value of {\ttfamily true} if command was known; otherwise {\ttfamily false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_acc12f2668fa9c89940f8b9cc3c11a718}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_acc12f2668fa9c89940f8b9cc3c11a718}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!Draw@{Draw}}
+\index{Draw@{Draw}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Draw (\begin{DoxyParamCaption}\item[{Rect}]{position,  }\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor,  }\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a97a64ee825d0e5f3f0d0781615a338a0}{Draw\+Empty\+Absolute}}}]{draw\+Empty }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Draw list control with absolute positioning. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position of list control in GUI.\\
+\hline
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+{\em draw\+Empty} & Delegate for drawing empty list.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a481fdad59dd37ad37eef32125c512e06}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a481fdad59dd37ad37eef32125c512e06}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!DrawControlFromState@{DrawControlFromState}}
+\index{DrawControlFromState@{DrawControlFromState}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{DrawControlFromState()}{DrawControlFromState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Draw\+Control\+From\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor,  }\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a53e46267fd8e876c0863e8909345a4f8}{Draw\+Empty}}}]{draw\+Empty,  }\item[{\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_reorderable_list_ab50155d50a05f368df2f672a02a066df}{Reorderable\+List\+Flags}}}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Generate and draw control from state object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+{\em draw\+Empty} & Delegate for drawing empty list.\\
+\hline
+{\em flags} & Optional flags to pass into list field.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a414a2e7ed9f56c9242ca03472cb39bf0}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a414a2e7ed9f56c9242ca03472cb39bf0}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!DrawControlFromState@{DrawControlFromState}}
+\index{DrawControlFromState@{DrawControlFromState}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{DrawControlFromState()}{DrawControlFromState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Draw\+Control\+From\+State (\begin{DoxyParamCaption}\item[{Rect}]{position,  }\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor,  }\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a97a64ee825d0e5f3f0d0781615a338a0}{Draw\+Empty\+Absolute}}}]{draw\+Empty,  }\item[{\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_reorderable_list_ab50155d50a05f368df2f672a02a066df}{Reorderable\+List\+Flags}}}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Generate and draw control from state object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position of control.\\
+\hline
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+{\em draw\+Empty} & Delegate for drawing empty list.\\
+\hline
+{\em flags} & Optional flags to pass into list field.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a3a346382a299323b0ab4eb7d2881fee8}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a3a346382a299323b0ab4eb7d2881fee8}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!DrawDropIndicator@{DrawDropIndicator}}
+\index{DrawDropIndicator@{DrawDropIndicator}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{DrawDropIndicator()}{DrawDropIndicator()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Draw\+Drop\+Indicator (\begin{DoxyParamCaption}\item[{Rect}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Draws drop insertion indicator. 
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} method is only ever called during repaint events.
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position if the drop indicator.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a53e46267fd8e876c0863e8909345a4f8}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a53e46267fd8e876c0863e8909345a4f8}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!DrawEmpty@{DrawEmpty}}
+\index{DrawEmpty@{DrawEmpty}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{DrawEmpty()}{DrawEmpty()}}
+{\footnotesize\ttfamily delegate void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Draw\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Invoked to draw content for empty list. 
+
+Callback should make use of {\ttfamily GUILayout} to present controls.
+
+The following listing displays a label for empty list control\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{using }Unity.VisualScripting.Dependencies.ReorderableList;}
+\DoxyCodeLine{\textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_unity_editor}{UnityEditor}};}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }ExampleWindow : EditorWindow \{}
+\DoxyCodeLine{    \textcolor{keyword}{private} List\(\backslash\)<\textcolor{keywordtype}{string}\(\backslash\)> \_list;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keywordtype}{void} OnEnable() \{}
+\DoxyCodeLine{        \_list = \textcolor{keyword}{new} List\(\backslash\)<\textcolor{keywordtype}{string}\(\backslash\)>();}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keywordtype}{void} OnGUI() \{}
+\DoxyCodeLine{        ReorderableListGUI.ListField(\_list, ReorderableListGUI.TextFieldItemDrawer, DrawEmptyMessage);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keywordtype}{string} DrawEmptyMessage() \{}
+\DoxyCodeLine{        GUILayout.Label(\textcolor{stringliteral}{"{}List is empty!"{}}, EditorStyles.miniLabel);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{import} Rotorz.ReorderableList;}
+\DoxyCodeLine{\textcolor{keyword}{import} System.Collections.Generic;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }ExampleWindow \textcolor{keyword}{extends} EditorWindow \{}
+\DoxyCodeLine{    \textcolor{keyword}{private} var \_list:List.\(\backslash\)<String\(\backslash\)>;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{function} OnEnable() \{}
+\DoxyCodeLine{        \_list = \textcolor{keyword}{new} List.\(\backslash\)<String\(\backslash\)>();}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keyword}{function} OnGUI() \{}
+\DoxyCodeLine{        ReorderableListGUI.ListField(\_list, ReorderableListGUI.TextFieldItemDrawer, DrawEmptyMessage);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{function} DrawEmptyMessage() \{}
+\DoxyCodeLine{        GUILayout.Label(\textcolor{stringliteral}{'List is empty!'}, EditorStyles.miniLabel);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a97a64ee825d0e5f3f0d0781615a338a0}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a97a64ee825d0e5f3f0d0781615a338a0}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!DrawEmptyAbsolute@{DrawEmptyAbsolute}}
+\index{DrawEmptyAbsolute@{DrawEmptyAbsolute}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{DrawEmptyAbsolute()}{DrawEmptyAbsolute()}}
+{\footnotesize\ttfamily delegate void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Draw\+Empty\+Absolute (\begin{DoxyParamCaption}\item[{Rect}]{position }\end{DoxyParamCaption})}
+
+
+
+Invoked to draw content for empty list with absolute positioning. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position of empty content.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a6b1c34ac8a89dd78eccc016ec9296f1c}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a6b1c34ac8a89dd78eccc016ec9296f1c}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!DrawSizeField@{DrawSizeField}}
+\index{DrawSizeField@{DrawSizeField}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{DrawSizeField()}{DrawSizeField()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Draw\+Size\+Field (\begin{DoxyParamCaption}\item[{GUIContent}]{label,  }\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Draw list size field with automatic layout and a custom prefix label. 
+
+Specify a value of {\ttfamily GUIContent.\+none} for argument {\itshape label}  to omit prefix label from the drawn control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & Prefix label for the control.\\
+\hline
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ac76776841969a20be4462cbf6bbf1ee5}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ac76776841969a20be4462cbf6bbf1ee5}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!DrawSizeField@{DrawSizeField}}
+\index{DrawSizeField@{DrawSizeField}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{DrawSizeField()}{DrawSizeField()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Draw\+Size\+Field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Draw list size field with automatic layout and the default prefix label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a9dd51a6452763aa8dbce8e23451b4ce1}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a9dd51a6452763aa8dbce8e23451b4ce1}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!DrawSizeField@{DrawSizeField}}
+\index{DrawSizeField@{DrawSizeField}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{DrawSizeField()}{DrawSizeField()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Draw\+Size\+Field (\begin{DoxyParamCaption}\item[{Rect}]{position,  }\item[{GUIContent}]{label,  }\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Draw list size field with absolute positioning and a custom prefix label. 
+
+Specify a value of {\ttfamily GUIContent.\+none} for argument {\itshape label}  to omit prefix label from the drawn control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position of list control in GUI.\\
+\hline
+{\em label} & Prefix label for the control.\\
+\hline
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_adefb2ad62a550f064e649e2a6f3a6548}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_adefb2ad62a550f064e649e2a6f3a6548}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!DrawSizeField@{DrawSizeField}}
+\index{DrawSizeField@{DrawSizeField}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{DrawSizeField()}{DrawSizeField()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Draw\+Size\+Field (\begin{DoxyParamCaption}\item[{Rect}]{position,  }\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Draw list size field with absolute positioning with the default prefix label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position of list control in GUI.\\
+\hline
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aa2e1e2588a3639b0af695709feab0913}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aa2e1e2588a3639b0af695709feab0913}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!DrawSizeField@{DrawSizeField}}
+\index{DrawSizeField@{DrawSizeField}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{DrawSizeField()}{DrawSizeField()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Draw\+Size\+Field (\begin{DoxyParamCaption}\item[{Rect}]{position,  }\item[{string}]{label,  }\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Draw list size field with absolute positioning and a custom prefix label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position of list control in GUI.\\
+\hline
+{\em label} & Prefix label for the control.\\
+\hline
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ad7ad1dc43926ff32a06d010d122c410b}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ad7ad1dc43926ff32a06d010d122c410b}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!DrawSizeField@{DrawSizeField}}
+\index{DrawSizeField@{DrawSizeField}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{DrawSizeField()}{DrawSizeField()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Draw\+Size\+Field (\begin{DoxyParamCaption}\item[{string}]{label,  }\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Draw list size field with automatic layout and a custom prefix label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & Prefix label for the control.\\
+\hline
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a328ec98f43cdd68af058d58cd3aec6d9}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a328ec98f43cdd68af058d58cd3aec6d9}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!DuplicateItem@{DuplicateItem}}
+\index{DuplicateItem@{DuplicateItem}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{DuplicateItem()}{DuplicateItem()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Duplicate\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor,  }\item[{int}]{item\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Duplicate specified item and raises the event \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a4e99e27fb2cd7f9759b060dac9e245e9}{Item\+Inserted}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+{\em item\+Index} & Zero-\/based index of item.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ac05d4016b5c72b99b173a1e15b1a16ee}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ac05d4016b5c72b99b173a1e15b1a16ee}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!HandleCommand@{HandleCommand}}
+\index{HandleCommand@{HandleCommand}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{HandleCommand()}{HandleCommand()}}
+{\footnotesize\ttfamily virtual bool Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Handle\+Command (\begin{DoxyParamCaption}\item[{string}]{command\+Name,  }\item[{int}]{item\+Index,  }\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Invoked to handle context command. 
+
+It is important to set the value of {\ttfamily GUI.\+changed} to {\ttfamily true} if any changes are made by command handler. 
+
+Default command handling functionality can be inherited\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{protected} \textcolor{keyword}{override} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ac05d4016b5c72b99b173a1e15b1a16ee}{HandleCommand}}(\textcolor{keywordtype}{string} commandName, \textcolor{keywordtype}{int} itemIndex, IReorderableListAdaptor adaptor) \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (base.HandleCommand(itemIndex, adaptor))}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// Place custom command handling code here...}}
+\DoxyCodeLine{    \textcolor{keywordflow}{switch} (commandName) \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Your Command"{}}:}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{function} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ac05d4016b5c72b99b173a1e15b1a16ee}{HandleCommand}}(commandName:String, itemIndex:\textcolor{keywordtype}{int}, adaptor:IReorderableListAdaptor):boolean \{}
+\DoxyCodeLine{    if (base.\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ac05d4016b5c72b99b173a1e15b1a16ee}{HandleCommand}}(itemIndex, adaptor))}
+\DoxyCodeLine{        return true;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// Place custom command handling code here...}}
+\DoxyCodeLine{    \textcolor{keywordflow}{switch} (commandName) \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{case} \textcolor{stringliteral}{'Your Command'}:}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Name} & Name of command. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} is the text shown in the context menu.\\
+\hline
+{\em item\+Index} & Zero-\/based index of item which was right-\/clicked.\\
+\hline
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value of {\ttfamily true} if command was known; otherwise {\ttfamily false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a273bcc0efe70bebfe3bc598461d28427}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a273bcc0efe70bebfe3bc598461d28427}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!InsertItem@{InsertItem}}
+\index{InsertItem@{InsertItem}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{InsertItem()}{InsertItem()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Insert\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor,  }\item[{int}]{item\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Insert item at specified index and raises the event \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a4e99e27fb2cd7f9759b060dac9e245e9}{Item\+Inserted}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+{\em item\+Index} & Zero-\/based index of item.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_af429737193eca19ce5011bab6bda05a8}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_af429737193eca19ce5011bab6bda05a8}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!ItemDrawer$<$ T $>$@{ItemDrawer$<$ T $>$}}
+\index{ItemDrawer$<$ T $>$@{ItemDrawer$<$ T $>$}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{ItemDrawer$<$ T $>$()}{ItemDrawer< T >()}}
+{\footnotesize\ttfamily delegate T Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Item\+Drawer$<$ T $>$ (\begin{DoxyParamCaption}\item[{Rect}]{position,  }\item[{T}]{item }\end{DoxyParamCaption})}
+
+
+
+Invoked to draw list item. 
+
+GUI controls must be positioned absolutely within the given rectangle since list items must be sized consistently. 
+
+The following listing presents a text field for each list item\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{using }Unity.VisualScripting.Dependencies.ReorderableList;}
+\DoxyCodeLine{\textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_unity_editor}{UnityEditor}};}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }ExampleWindow : EditorWindow \{}
+\DoxyCodeLine{    \textcolor{keyword}{public} List\(\backslash\)<\textcolor{keywordtype}{string}\(\backslash\)> wishlist = \textcolor{keyword}{new} List\(\backslash\)<\textcolor{keywordtype}{string}\(\backslash\)>();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keywordtype}{void} OnGUI() \{}
+\DoxyCodeLine{        ReorderableListGUI.ListField(wishlist, DrawListItem);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keywordtype}{string} DrawListItem(Rect position, \textcolor{keywordtype}{string} value) \{}
+\DoxyCodeLine{        \textcolor{comment}{// Text fields do not like \(\backslash\)<tt\(\backslash\)>null\(\backslash\)</tt\(\backslash\)> values!}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (value == \textcolor{keyword}{null})}
+\DoxyCodeLine{            value = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} EditorGUI.TextField(position, value);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{import} Rotorz.ReorderableList;}
+\DoxyCodeLine{\textcolor{keyword}{import} System.Collections.Generic;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }ExampleWindow \textcolor{keyword}{extends} EditorWindow \{}
+\DoxyCodeLine{    var wishlist:List.\(\backslash\)<String\(\backslash\)>;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{function} OnGUI() \{}
+\DoxyCodeLine{        ReorderableListGUI.ListField(wishlist, DrawListItem);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{function} DrawListItem(position:Rect, value:String):String \{}
+\DoxyCodeLine{        \textcolor{comment}{// Text fields do not like \(\backslash\)<tt\(\backslash\)>null\(\backslash\)</tt\(\backslash\)> values!}}
+\DoxyCodeLine{        if (value == null)}
+\DoxyCodeLine{            value = \textcolor{stringliteral}{''};}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} EditorGUI.TextField(position, value);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of item list.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position of list item.\\
+\hline
+{\em item} & The list item.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The modified value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a79600265b19a7f852626a69073281792}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a79600265b19a7f852626a69073281792}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!MoveItem@{MoveItem}}
+\index{MoveItem@{MoveItem}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{MoveItem()}{MoveItem()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Move\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor,  }\item[{int}]{source\+Index,  }\item[{int}]{dest\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Move item from source index to destination index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+{\em source\+Index} & Zero-\/based index of source item.\\
+\hline
+{\em dest\+Index} & Zero-\/based index of destination index.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a9c15ce203362e0d1feee04f80de4b033}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a9c15ce203362e0d1feee04f80de4b033}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!OnAddMenuClicked@{OnAddMenuClicked}}
+\index{OnAddMenuClicked@{OnAddMenuClicked}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{OnAddMenuClicked()}{OnAddMenuClicked()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+On\+Add\+Menu\+Clicked (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_add_menu_clicked_event_args}{Add\+Menu\+Clicked\+Event\+Args}}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Raises event when add menu button is clicked. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Event arguments.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a0e49441dd0e64ecf10fcc8c33cf79eda}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a0e49441dd0e64ecf10fcc8c33cf79eda}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!OnItemInserted@{OnItemInserted}}
+\index{OnItemInserted@{OnItemInserted}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{OnItemInserted()}{OnItemInserted()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+On\+Item\+Inserted (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_item_inserted_event_args}{Item\+Inserted\+Event\+Args}}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Raises event after list item is inserted or duplicated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Event arguments.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a5070f79e58a97c1b0648b618a678e792}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a5070f79e58a97c1b0648b618a678e792}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!OnItemMoved@{OnItemMoved}}
+\index{OnItemMoved@{OnItemMoved}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{OnItemMoved()}{OnItemMoved()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+On\+Item\+Moved (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_item_moved_event_args}{Item\+Moved\+Event\+Args}}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Raises event after list item has been moved. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Event arguments.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ab49b81b5c534b49e77230db141e07bb9}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ab49b81b5c534b49e77230db141e07bb9}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!OnItemMoving@{OnItemMoving}}
+\index{OnItemMoving@{OnItemMoving}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{OnItemMoving()}{OnItemMoving()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+On\+Item\+Moving (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_item_moving_event_args}{Item\+Moving\+Event\+Args}}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Raises event immediately before list item is moved and provides oppertunity to cancel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Event arguments.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aa3c02ebe5a090718846c1f10b2b1a8e6}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aa3c02ebe5a090718846c1f10b2b1a8e6}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!OnItemRemoving@{OnItemRemoving}}
+\index{OnItemRemoving@{OnItemRemoving}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{OnItemRemoving()}{OnItemRemoving()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+On\+Item\+Removing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_item_removing_event_args}{Item\+Removing\+Event\+Args}}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Raises event before list item is removed and provides oppertunity to cancel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Event arguments.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a6f949211621a50b9a757e544e5d8cb74}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a6f949211621a50b9a757e544e5d8cb74}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!RemoveItem@{RemoveItem}}
+\index{RemoveItem@{RemoveItem}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{RemoveItem()}{RemoveItem()}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Remove\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor,  }\item[{int}]{item\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Remove specified item. 
+
+The event \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a7ecf99c4a01667246e5c5e5cfccbd718}{Item\+Removing}} is raised prior to removing item and allows removal to be cancelled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+{\em item\+Index} & Zero-\/based index of item.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a value of {\ttfamily false} if operation was cancelled. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a185947ca744f9b2046442d8a2480a689}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a185947ca744f9b2046442d8a2480a689}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!ResizeList@{ResizeList}}
+\index{ResizeList@{ResizeList}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{ResizeList()}{ResizeList()}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Resize\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}}}]{adaptor,  }\item[{int}]{new\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Set count of items in list by adding or removing items. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adaptor} & Reorderable list adaptor.\\
+\hline
+{\em new\+Count} & New count of items.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a value of {\ttfamily false} if operation was cancelled. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a830696203c01af8a355a60ae636c58ea}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a830696203c01af8a355a60ae636c58ea}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!DefaultContextHandler@{DefaultContextHandler}}
+\index{DefaultContextHandler@{DefaultContextHandler}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{DefaultContextHandler}{DefaultContextHandler}}
+{\footnotesize\ttfamily readonly Generic\+Menu.\+Menu\+Function2 Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Default\+Context\+Handler = Default\+Context\+Menu\+Handler\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Default functionality to handle context command. 
+
+Can be used when adding custom items to the context menu\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{protected} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a63bd8d618c696bef8ec1160b5c10d6d3}{AddItemsToMenu}}(GenericMenu menu, \textcolor{keywordtype}{int} itemIndex, IReorderableListAdaptor adaptor) \{}
+\DoxyCodeLine{    var specialCommand = \textcolor{keyword}{new} GUIContent(\textcolor{stringliteral}{"{}Special Command"{}});}
+\DoxyCodeLine{    menu.AddItem(specialCommand, \textcolor{keyword}{false}, defaultContextHandler, specialCommand);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{function} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a63bd8d618c696bef8ec1160b5c10d6d3}{AddItemsToMenu}}(menu:GenericMenu, itemIndex:\textcolor{keywordtype}{int}, list:IReorderableListAdaptor) \{}
+\DoxyCodeLine{    var specialCommand = \textcolor{keyword}{new} GUIContent(\textcolor{stringliteral}{'Special Command'});}
+\DoxyCodeLine{    menu.AddItem(specialCommand, \textcolor{keyword}{false}, defaultContextHandler, specialCommand);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a63bd8d618c696bef8ec1160b5c10d6d3}{Add\+Items\+To\+Menu}}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ad76aa9ae73e330a0730088872dd737c2}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ad76aa9ae73e330a0730088872dd737c2}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!AddMenuClicked@{AddMenuClicked}}
+\index{AddMenuClicked@{AddMenuClicked}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{AddMenuClicked}{AddMenuClicked}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_reorderable_list_aa10d554aba115b6e60244beab7ce3444}{Add\+Menu\+Clicked\+Event\+Handler}} Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Add\+Menu\+Clicked\hspace{0.3cm}{\ttfamily [add]}, {\ttfamily [remove]}}
+
+
+
+Occurs when add menu button is clicked. 
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_add}{Add}} menu button is only shown when there is at least one subscriber to this event.\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a77b9e74c0f4eda22c649c15cb3fed763}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a77b9e74c0f4eda22c649c15cb3fed763}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!ContainerStyle@{ContainerStyle}}
+\index{ContainerStyle@{ContainerStyle}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{ContainerStyle}{ContainerStyle}}
+{\footnotesize\ttfamily GUIStyle Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Container\+Style\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets style used to draw background of list control. 
+
+\begin{DoxySeeAlso}{See also}
+Reorderable\+List\+Styles.\+Container
+
+
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a0f9c7a4ec95abd3c12dd0dbbcbc6616b}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a0f9c7a4ec95abd3c12dd0dbbcbc6616b}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!CurrentItemTotalPosition@{CurrentItemTotalPosition}}
+\index{CurrentItemTotalPosition@{CurrentItemTotalPosition}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{CurrentItemTotalPosition}{CurrentItemTotalPosition}}
+{\footnotesize\ttfamily Rect Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Current\+Item\+Total\+Position\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+Gets the total position of the list item that is currently being drawn. 
+
+The value of this property should be ignored for Event\+Type.\+Layout type events when using reorderable list controls with automatic layout. 
+
+Current\+Item\+Index \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aff83a1cfcd20f37733d2ef9e2ef9a4bd}{Current\+List\+Position}} \mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aff83a1cfcd20f37733d2ef9e2ef9a4bd}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_aff83a1cfcd20f37733d2ef9e2ef9a4bd}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!CurrentListPosition@{CurrentListPosition}}
+\index{CurrentListPosition@{CurrentListPosition}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{CurrentListPosition}{CurrentListPosition}}
+{\footnotesize\ttfamily Rect Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Current\+List\+Position\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+Gets the position of the list control that is currently being drawn. 
+
+The value of this property should be ignored for Event\+Type.\+Layout type events when using reorderable list controls with automatic layout. 
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a0f9c7a4ec95abd3c12dd0dbbcbc6616b}{Current\+Item\+Total\+Position}} \mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a2f9173248ef0ee6dc8aac6d96c829c1d}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a2f9173248ef0ee6dc8aac6d96c829c1d}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!FooterButtonStyle@{FooterButtonStyle}}
+\index{FooterButtonStyle@{FooterButtonStyle}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{FooterButtonStyle}{FooterButtonStyle}}
+{\footnotesize\ttfamily GUIStyle Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Footer\+Button\+Style\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets style used to draw footer buttons. 
+
+\begin{DoxySeeAlso}{See also}
+Reorderable\+List\+Styles.\+Footer\+Button
+
+
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_afb45f06794858c46e81266090ed839f8}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_afb45f06794858c46e81266090ed839f8}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!HorizontalLineAtEnd@{HorizontalLineAtEnd}}
+\index{HorizontalLineAtEnd@{HorizontalLineAtEnd}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{HorizontalLineAtEnd}{HorizontalLineAtEnd}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Horizontal\+Line\+At\+End\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets a boolean value indicating whether a horizontal line should be shown below the last list item at the end of the list control. 
+
+Horizontal line is not drawn for an empty list regardless of the value of this property. \mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ace257e212949df61ff9f09d6da62876c}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_ace257e212949df61ff9f09d6da62876c}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!HorizontalLineAtStart@{HorizontalLineAtStart}}
+\index{HorizontalLineAtStart@{HorizontalLineAtStart}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{HorizontalLineAtStart}{HorizontalLineAtStart}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Horizontal\+Line\+At\+Start\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets a boolean value indicating whether a horizontal line should be shown above the first list item at the start of the list control. 
+
+Horizontal line is not drawn for an empty list regardless of the value of this property. \mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a7f90dc6d4cab1a281f3a433539c7c011}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control_a7f90dc6d4cab1a281f3a433539c7c011}} 
+\index{Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}!ItemButtonStyle@{ItemButtonStyle}}
+\index{ItemButtonStyle@{ItemButtonStyle}!Unity.VisualScripting.ReorderableList.ReorderableListControl@{Unity.VisualScripting.ReorderableList.ReorderableListControl}}
+\doxysubsubsection{\texorpdfstring{ItemButtonStyle}{ItemButtonStyle}}
+{\footnotesize\ttfamily GUIStyle Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Reorderable\+List\+Control.\+Item\+Button\+Style\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets style used to draw list item buttons (like the remove button). 
+
+\begin{DoxySeeAlso}{See also}
+Reorderable\+List\+Styles.\+Item\+Button
+
+
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Editor/\+Visual\+Scripting.\+Core/\+Dependencies/\+Reorderable\+List/Reorderable\+List\+Control.\+cs\end{DoxyCompactItemize}

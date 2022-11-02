@@ -1,0 +1,132 @@
+\hypertarget{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service}{}\doxysection{Unity.\+Services.\+Core.\+Editor.\+IEditor\+Game\+Service Interface Reference}
+\label{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service}\index{Unity.Services.Core.Editor.IEditorGameService@{Unity.Services.Core.Editor.IEditorGameService}}
+
+
+Base contract for all editor game services defined by \mbox{\hyperlink{namespace_unity_1_1_services_1_1_core_1_1_editor}{Core.\+Editor}} package.  
+
+
+Inheritance diagram for Unity.\+Services.\+Core.\+Editor.\+IEditor\+Game\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_a167d82a19afc58be5747ad8f7cb8f0c5}{Get\+Formatted\+Dashboard\+Url}} ()
+\begin{DoxyCompactList}\small\item\em The Url that is used to reach the dashboard for this service \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_acc39192946160e7406035e6554aa00d0}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Name of the service \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_identifier}{IEditor\+Game\+Service\+Identifier}} \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_adbd3e9c408b3f03adddee4b2ce3f3edc}{Identifier}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The identifier of this service. It is used when registering/fetching the service to/from the \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_registry}{Editor\+Game\+Service\+Registry}} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_a3dae03a8c99f30fa92f2c4b9d3bb8983}{Requires\+Coppa\+Compliance}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, this service requires COPPACompliance to be defined \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_a7f7699215ed8bfceb3e8e86231ea3871}{Has\+Dashboard}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, this service will provide access to a Dashboard \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_enabler}{IEditor\+Game\+Service\+Enabler}} \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_a0ddd93daf1324ee618310c3ddfc46c67}{Enabler}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The implementation of the enabler required by this service. If no enabler is required, set to null. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base contract for all editor game services defined by \mbox{\hyperlink{namespace_unity_1_1_services_1_1_core_1_1_editor}{Core.\+Editor}} package. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_a167d82a19afc58be5747ad8f7cb8f0c5}\label{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_a167d82a19afc58be5747ad8f7cb8f0c5}} 
+\index{Unity.Services.Core.Editor.IEditorGameService@{Unity.Services.Core.Editor.IEditorGameService}!GetFormattedDashboardUrl@{GetFormattedDashboardUrl}}
+\index{GetFormattedDashboardUrl@{GetFormattedDashboardUrl}!Unity.Services.Core.Editor.IEditorGameService@{Unity.Services.Core.Editor.IEditorGameService}}
+\doxysubsubsection{\texorpdfstring{GetFormattedDashboardUrl()}{GetFormattedDashboardUrl()}}
+{\footnotesize\ttfamily string Unity.\+Services.\+Core.\+Editor.\+IEditor\+Game\+Service.\+Get\+Formatted\+Dashboard\+Url (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The Url that is used to reach the dashboard for this service 
+
+\begin{DoxyReturn}{Returns}
+Return a formatted URL to this service\textquotesingle{}s dashboard. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_cloud_1_1_collaborate_1_1_editor_game_service_1_1_cloud_collab_service_a89ffff62fc87110e5cb1664ab8e6b61c}{Unity.\+Cloud.\+Collaborate.\+Editor\+Game\+Service.\+Cloud\+Collab\+Service}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_a0ddd93daf1324ee618310c3ddfc46c67}\label{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_a0ddd93daf1324ee618310c3ddfc46c67}} 
+\index{Unity.Services.Core.Editor.IEditorGameService@{Unity.Services.Core.Editor.IEditorGameService}!Enabler@{Enabler}}
+\index{Enabler@{Enabler}!Unity.Services.Core.Editor.IEditorGameService@{Unity.Services.Core.Editor.IEditorGameService}}
+\doxysubsubsection{\texorpdfstring{Enabler}{Enabler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_enabler}{IEditor\+Game\+Service\+Enabler}} Unity.\+Services.\+Core.\+Editor.\+IEditor\+Game\+Service.\+Enabler\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The implementation of the enabler required by this service. If no enabler is required, set to null. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_cloud_1_1_collaborate_1_1_editor_game_service_1_1_cloud_collab_service_ad7b6d1e72d7376d2f66291c8fccbc5ed}{Unity.\+Cloud.\+Collaborate.\+Editor\+Game\+Service.\+Cloud\+Collab\+Service}}.
+
+\mbox{\Hypertarget{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_a7f7699215ed8bfceb3e8e86231ea3871}\label{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_a7f7699215ed8bfceb3e8e86231ea3871}} 
+\index{Unity.Services.Core.Editor.IEditorGameService@{Unity.Services.Core.Editor.IEditorGameService}!HasDashboard@{HasDashboard}}
+\index{HasDashboard@{HasDashboard}!Unity.Services.Core.Editor.IEditorGameService@{Unity.Services.Core.Editor.IEditorGameService}}
+\doxysubsubsection{\texorpdfstring{HasDashboard}{HasDashboard}}
+{\footnotesize\ttfamily bool Unity.\+Services.\+Core.\+Editor.\+IEditor\+Game\+Service.\+Has\+Dashboard\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+If true, this service will provide access to a Dashboard 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_cloud_1_1_collaborate_1_1_editor_game_service_1_1_cloud_collab_service_af7b2c6d505fa16c3b73f4cd0fa0c45ab}{Unity.\+Cloud.\+Collaborate.\+Editor\+Game\+Service.\+Cloud\+Collab\+Service}}.
+
+\mbox{\Hypertarget{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_adbd3e9c408b3f03adddee4b2ce3f3edc}\label{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_adbd3e9c408b3f03adddee4b2ce3f3edc}} 
+\index{Unity.Services.Core.Editor.IEditorGameService@{Unity.Services.Core.Editor.IEditorGameService}!Identifier@{Identifier}}
+\index{Identifier@{Identifier}!Unity.Services.Core.Editor.IEditorGameService@{Unity.Services.Core.Editor.IEditorGameService}}
+\doxysubsubsection{\texorpdfstring{Identifier}{Identifier}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_identifier}{IEditor\+Game\+Service\+Identifier}} Unity.\+Services.\+Core.\+Editor.\+IEditor\+Game\+Service.\+Identifier\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The identifier of this service. It is used when registering/fetching the service to/from the \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_registry}{Editor\+Game\+Service\+Registry}} 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_cloud_1_1_collaborate_1_1_editor_game_service_1_1_cloud_collab_service_a5ab680219064bff76e2062052398dbd7}{Unity.\+Cloud.\+Collaborate.\+Editor\+Game\+Service.\+Cloud\+Collab\+Service}}.
+
+\mbox{\Hypertarget{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_acc39192946160e7406035e6554aa00d0}\label{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_acc39192946160e7406035e6554aa00d0}} 
+\index{Unity.Services.Core.Editor.IEditorGameService@{Unity.Services.Core.Editor.IEditorGameService}!Name@{Name}}
+\index{Name@{Name}!Unity.Services.Core.Editor.IEditorGameService@{Unity.Services.Core.Editor.IEditorGameService}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string Unity.\+Services.\+Core.\+Editor.\+IEditor\+Game\+Service.\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Name of the service 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_cloud_1_1_collaborate_1_1_editor_game_service_1_1_cloud_collab_service_a10a61963b3564311cabb8a893b3e4084}{Unity.\+Cloud.\+Collaborate.\+Editor\+Game\+Service.\+Cloud\+Collab\+Service}}.
+
+\mbox{\Hypertarget{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_a3dae03a8c99f30fa92f2c4b9d3bb8983}\label{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_a3dae03a8c99f30fa92f2c4b9d3bb8983}} 
+\index{Unity.Services.Core.Editor.IEditorGameService@{Unity.Services.Core.Editor.IEditorGameService}!RequiresCoppaCompliance@{RequiresCoppaCompliance}}
+\index{RequiresCoppaCompliance@{RequiresCoppaCompliance}!Unity.Services.Core.Editor.IEditorGameService@{Unity.Services.Core.Editor.IEditorGameService}}
+\doxysubsubsection{\texorpdfstring{RequiresCoppaCompliance}{RequiresCoppaCompliance}}
+{\footnotesize\ttfamily bool Unity.\+Services.\+Core.\+Editor.\+IEditor\+Game\+Service.\+Requires\+Coppa\+Compliance\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+If true, this service requires COPPACompliance to be defined 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_cloud_1_1_collaborate_1_1_editor_game_service_1_1_cloud_collab_service_a2510374ea4d1e6a5692f08b9601cd844}{Unity.\+Cloud.\+Collaborate.\+Editor\+Game\+Service.\+Cloud\+Collab\+Service}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+services.\+core@1.\+0.\+1/\+Editor/\+Core/\+Editor\+Game\+Service/IEditor\+Game\+Service.\+cs\end{DoxyCompactItemize}

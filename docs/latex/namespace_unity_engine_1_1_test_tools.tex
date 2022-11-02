@@ -1,0 +1,114 @@
+\hypertarget{namespace_unity_engine_1_1_test_tools}{}\doxysection{Unity\+Engine.\+Test\+Tools Namespace Reference}
+\label{namespace_unity_engine_1_1_test_tools}\index{UnityEngine.TestTools@{UnityEngine.TestTools}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Attribute\+Helper}
+\item 
+class {\bfseries Before\+After\+Test\+Command\+Base}
+\item 
+class {\bfseries Before\+After\+Test\+Command\+State}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute}{Conditional\+Ignore\+Attribute}}
+\begin{DoxyCompactList}\small\item\em This attribute is an alternative to the standard {\ttfamily Ignore} attribute in \href{https://nunit.org/}{\texttt{ NUnit}}. It allows for ignoring tests only under a specified condition. The condition evaluates during {\ttfamily On\+Load}, referenced by ID. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_enter_play_mode}{Enter\+Play\+Mode}}
+\begin{DoxyCompactList}\small\item\em Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}{IEdit\+Mode\+Test\+Yield\+Instruction}}. Creates a yield instruction to enter Play Mode. \end{DoxyCompactList}\item 
+class {\bfseries Enumerable\+Apply\+Changes\+To\+Context\+Command}
+\item 
+class {\bfseries Enumerable\+Repeated\+Test\+Command}
+\item 
+class {\bfseries Enumerable\+Retry\+Test\+Command}
+\item 
+class {\bfseries Enumerable\+Set\+Up\+Tear\+Down\+Command}
+\item 
+class {\bfseries Enumerable\+Test\+Method\+Command}
+\item 
+class {\bfseries Enumerable\+Test\+State}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_exit_play_mode}{Exit\+Play\+Mode}}
+\begin{DoxyCompactList}\small\item\em Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}{IEdit\+Mode\+Test\+Yield\+Instruction}}. A new instance of the class is a yield instruction to exit Play Mode. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}{IEdit\+Mode\+Test\+Yield\+Instruction}}
+\begin{DoxyCompactList}\small\item\em In an Edit Mode test, you can use {\ttfamily \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}{IEdit\+Mode\+Test\+Yield\+Instruction}}} interface to implement your own instruction. There are also a couple of commonly used implementations available\+: \end{DoxyCompactList}\item 
+class {\bfseries Immediate\+Enumerable\+Command}
+\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_mono_behaviour_test}{IMono\+Behaviour\+Test}}
+\begin{DoxyCompactList}\small\item\em An interface implemented by a Mono\+Behaviour test. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_outer_unity_test_action}{IOuter\+Unity\+Test\+Action}}
+\begin{DoxyCompactList}\small\item\em When implemented by an attribute, this interface implemented to provide actions to execute before setup and after teardown of tests. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_post_build_cleanup}{IPost\+Build\+Cleanup}}
+\begin{DoxyCompactList}\small\item\em Implement this interface if you want to define a set of actions to execute as a post-\/build step. Cleanup runs right away for a standalone test run, but only after all the tests run within the Editor. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup}{IPrebuild\+Setup}}
+\begin{DoxyCompactList}\small\item\em Implement this interface if you want to define a set of actions to run as a pre-\/build step. \end{DoxyCompactList}\item 
+class {\bfseries Log\+Assert}
+\begin{DoxyCompactList}\small\item\em A test fails if \mbox{\hyperlink{namespace_unity}{Unity}} logs a message other than a regular log or warning message. Use {\ttfamily Log\+Assert} to check for an expected message in the log so that the test does not fail when \mbox{\hyperlink{namespace_unity}{Unity}} logs the message. Use {\ttfamily Log\+Assert.\+Expect} before running the code under test, as the check for expected logs runs at the end of each frame. A test also reports a failure, if an expected message does not appear, or if \mbox{\hyperlink{namespace_unity}{Unity}} does not log any regular log or warning messages. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_mono_behaviour_test}{Mono\+Behaviour\+Test}}
+\begin{DoxyCompactList}\small\item\em This is a wrapper that allows running tests on Mono\+Behaviour scripts. Inherits from Custom\+Yield\+Instruction. \end{DoxyCompactList}\item 
+class {\bfseries Outer\+Unity\+Test\+Action\+Command}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_post_build_cleanup_attribute}{Post\+Build\+Cleanup\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Post\+Build\+Cleanup attributes run if the respective test or test class is in the current test run. The test is included either by running all tests or setting a \href{https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/workflow-create-test.html\#filters}{\texttt{ filter}} that includes the test. If multiple tests reference the same pre-\/built setup or post-\/build cleanup, then it only runs once. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_prebuild_setup_attribute}{Prebuild\+Setup\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Prebuild\+Setup attribute run if the test or test class is in the current test run. The test is included either by running all tests or setting a filter that includes the test. If multiple tests reference the same pre-\/built setup or post-\/build cleanup, then it only runs once. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_recompile_scripts}{Recompile\+Scripts}}
+\begin{DoxyCompactList}\small\item\em {\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_recompile_scripts}{Recompile\+Scripts}}} is an \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}{IEdit\+Mode\+Test\+Yield\+Instruction}} that you can yield in Edit Mode tests. It lets you trigger a recompilation of scripts in the \mbox{\hyperlink{namespace_unity}{Unity}} Editor. \end{DoxyCompactList}\item 
+class {\bfseries Set\+Up\+Tear\+Down\+Command}
+\item 
+class {\bfseries Test\+Action\+Command}
+\item 
+class {\bfseries Test\+Command\+Pc\+Helper}
+\item 
+class {\bfseries Test\+Enumerator}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_test_must_expect_all_logs_attribute}{Test\+Must\+Expect\+All\+Logs\+Attribute}}
+\begin{DoxyCompactList}\small\item\em The presence of this attribute will cause the test runner to require that every single log is expected. By default, the runner will only automatically fail on any error logs, so this adds warnings and infos as well. It is the same as calling {\ttfamily Log\+Assert.\+No\+Unexpected\+Received()} at the bottom of every affected test. \end{DoxyCompactList}\item 
+class {\bfseries Test\+Platform\+Enum\+Extensions}
+\item 
+class {\bfseries Unity\+Combinatorial\+Strategy}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute}{Unity\+Platform\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Use this attribute to define a specific set of platforms you want or do not want your test(s) to run on. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_unity_set_up_attribute}{Unity\+Set\+Up\+Attribute}}
+\begin{DoxyCompactList}\small\item\em The {\ttfamily Unity\+Set\+Up} and \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_unity_tear_down_attribute}{Unity\+Tear\+Down\+Attribute}} attributes are identical to the standard {\ttfamily Set\+Up} and {\ttfamily Tear\+Down} attributes, with the exception that they allow for \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}{IEdit\+Mode\+Test\+Yield\+Instruction}}. The {\ttfamily Unity\+Set\+Up} and {\ttfamily Unity\+Tear\+Down} attributes expect a return type of \href{https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator?view=netframework-4.8}{\texttt{ IEnumerator}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_unity_tear_down_attribute}{Unity\+Tear\+Down\+Attribute}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_unity_set_up_attribute}{Unity\+Set\+Up\+Attribute}} and {\ttfamily Unity\+Tear\+Down} attributes are identical to the standard {\ttfamily Set\+Up} and {\ttfamily Tear\+Down} attributes, with the exception that they allow for \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}{IEdit\+Mode\+Test\+Yield\+Instruction}}. The {\ttfamily Unity\+Set\+Up} and {\ttfamily Unity\+Tear\+Down} attributes expect a return type of \href{https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator?view=netframework-4.8}{\texttt{ IEnumerator}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_unity_test_attribute}{Unity\+Test\+Attribute}}
+\begin{DoxyCompactList}\small\item\em {\ttfamily Unity\+Test} attribute is the main addition to the standard \href{http://www.nunit.org/}{\texttt{ NUnit}} library for the \mbox{\hyperlink{namespace_unity}{Unity}} Test Framework. This type of unit test allows you to skip a frame from within a test (so background tasks can finish) or give certain commands to the \mbox{\hyperlink{namespace_unity}{Unity}} {\bfseries{Editor}}, such as performing a domain reload or entering {\bfseries{Play Mode}} from an {\bfseries{Edit Mode}} test. In Play Mode, the {\ttfamily Unity\+Test} attribute runs as a \href{https://docs.unity3d.com/Manual/Coroutines.html}{\texttt{ coroutine}}. Whereas Edit Mode tests run in the \href{https://docs.unity3d.com/ScriptReference/EditorApplication-update.html}{\texttt{ Editor\+Application.\+update}} callback loop. The {\ttfamily Unity\+Test} attribute is, in fact, an alternative to the {\ttfamily NUnit} \href{https://github.com/nunit/docs/wiki/Test-Attribute}{\texttt{ Test attribute}}, which allows yielding instructions back to the framework. Once the instruction is complete, the test run continues. If you {\ttfamily yield return null}, you skip a frame. That might be necessary to ensure that some changes do happen on the next iteration of either the {\ttfamily Editor\+Application.\+update} loop or the \href{https://docs.unity3d.com/Manual/ExecutionOrder.html}{\texttt{ game loop}}. \end{DoxyCompactList}\item 
+class {\bfseries Unity\+Test\+Method\+Command}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload}{Wait\+For\+Domain\+Reload}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload}{Wait\+For\+Domain\+Reload}} is an \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}{IEdit\+Mode\+Test\+Yield\+Instruction}} that you can yield in Edit Mode tests. It delays the execution of scripts until after an incoming domain reload. If the domain reload results in a script compilation failure, then it throws an exception. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_test_tools_a5a0403d5399516208d8232fac155f61f}{Test\+Platform}} \+: byte \{ \mbox{\hyperlink{namespace_unity_engine_1_1_test_tools_a5a0403d5399516208d8232fac155f61fab1c94ca2fbc3e78fc30069c8d0f01680}{All}} = 0x\+FF
+, \mbox{\hyperlink{namespace_unity_engine_1_1_test_tools_a5a0403d5399516208d8232fac155f61fa892169d13e2cfd4638bf38dd53dd0178}{Edit\+Mode}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 1
+, \mbox{\hyperlink{namespace_unity_engine_1_1_test_tools_a5a0403d5399516208d8232fac155f61fa194ed09f62aaab600e7a9fdc32763f40}{Play\+Mode}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 2
+ \}
+\begin{DoxyCompactList}\small\item\em A flag indicating the targeted test platforms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_unity_engine_1_1_test_tools_a5a0403d5399516208d8232fac155f61f}\label{namespace_unity_engine_1_1_test_tools_a5a0403d5399516208d8232fac155f61f}} 
+\index{UnityEngine.TestTools@{UnityEngine.TestTools}!TestPlatform@{TestPlatform}}
+\index{TestPlatform@{TestPlatform}!UnityEngine.TestTools@{UnityEngine.TestTools}}
+\doxysubsubsection{\texorpdfstring{TestPlatform}{TestPlatform}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_unity_engine_1_1_test_tools_a5a0403d5399516208d8232fac155f61f}{Unity\+Engine.\+Test\+Tools.\+Test\+Platform}} \+: byte}
+
+
+
+A flag indicating the targeted test platforms. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{All@{All}!UnityEngine.TestTools@{UnityEngine.TestTools}}\index{UnityEngine.TestTools@{UnityEngine.TestTools}!All@{All}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_test_tools_a5a0403d5399516208d8232fac155f61fab1c94ca2fbc3e78fc30069c8d0f01680}\label{namespace_unity_engine_1_1_test_tools_a5a0403d5399516208d8232fac155f61fab1c94ca2fbc3e78fc30069c8d0f01680}} 
+All&Both platforms. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EditMode@{EditMode}!UnityEngine.TestTools@{UnityEngine.TestTools}}\index{UnityEngine.TestTools@{UnityEngine.TestTools}!EditMode@{EditMode}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_test_tools_a5a0403d5399516208d8232fac155f61fa892169d13e2cfd4638bf38dd53dd0178}\label{namespace_unity_engine_1_1_test_tools_a5a0403d5399516208d8232fac155f61fa892169d13e2cfd4638bf38dd53dd0178}} 
+Edit\+Mode&The Edit\+Mode test platform. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PlayMode@{PlayMode}!UnityEngine.TestTools@{UnityEngine.TestTools}}\index{UnityEngine.TestTools@{UnityEngine.TestTools}!PlayMode@{PlayMode}}}\mbox{\Hypertarget{namespace_unity_engine_1_1_test_tools_a5a0403d5399516208d8232fac155f61fa194ed09f62aaab600e7a9fdc32763f40}\label{namespace_unity_engine_1_1_test_tools_a5a0403d5399516208d8232fac155f61fa194ed09f62aaab600e7a9fdc32763f40}} 
+Play\+Mode&The Play\+Mode test platform. \\
+\hline
+
+\end{DoxyEnumFields}

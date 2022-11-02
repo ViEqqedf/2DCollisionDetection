@@ -1,0 +1,46 @@
+\hypertarget{interface_unity_engine_1_1_timeline_1_1_i_time_control}{}\doxysection{Unity\+Engine.\+Timeline.\+ITime\+Control Interface Reference}
+\label{interface_unity_engine_1_1_timeline_1_1_i_time_control}\index{UnityEngine.Timeline.ITimeControl@{UnityEngine.Timeline.ITimeControl}}
+
+
+Interface that can be implemented by Mono\+Behaviours indicating that they receive time-\/related control calls from a Playable\+Graph.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_time_control_ab4c0716cf185f3833bfdf3c332f9c913}{Set\+Time}} (double time)
+\begin{DoxyCompactList}\small\item\em Called each frame the \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} clip is active. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interface_unity_engine_1_1_timeline_1_1_i_time_control_a794f2a46049fb4575d0e592b4a86fb7e}\label{interface_unity_engine_1_1_timeline_1_1_i_time_control_a794f2a46049fb4575d0e592b4a86fb7e}} 
+void {\bfseries On\+Control\+Time\+Start} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} clip becomes active. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interface_unity_engine_1_1_timeline_1_1_i_time_control_a2f7806fb91e9a958735766ca8c81e0c1}\label{interface_unity_engine_1_1_timeline_1_1_i_time_control_a2f7806fb91e9a958735766ca8c81e0c1}} 
+void {\bfseries On\+Control\+Time\+Stop} ()
+\begin{DoxyCompactList}\small\item\em Called when the associated \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} clip becomes deactivated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface that can be implemented by Mono\+Behaviours indicating that they receive time-\/related control calls from a Playable\+Graph. 
+
+Implementing this interface on Mono\+Behaviours attached to Game\+Objects under control by control-\/tracks will cause them to be notified when associated \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} clips are active. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_unity_engine_1_1_timeline_1_1_i_time_control_ab4c0716cf185f3833bfdf3c332f9c913}\label{interface_unity_engine_1_1_timeline_1_1_i_time_control_ab4c0716cf185f3833bfdf3c332f9c913}} 
+\index{UnityEngine.Timeline.ITimeControl@{UnityEngine.Timeline.ITimeControl}!SetTime@{SetTime}}
+\index{SetTime@{SetTime}!UnityEngine.Timeline.ITimeControl@{UnityEngine.Timeline.ITimeControl}}
+\doxysubsubsection{\texorpdfstring{SetTime()}{SetTime()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Timeline.\+ITime\+Control.\+Set\+Time (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})}
+
+
+
+Called each frame the \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} clip is active. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & The local time of the associated \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} clip.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Playables/ITime\+Control.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,106 @@
+\hypertarget{class_unity_editor_1_1_timeline_1_1_move_item_handler}{}\doxysection{Unity\+Editor.\+Timeline.\+Move\+Item\+Handler Class Reference}
+\label{class_unity_editor_1_1_timeline_1_1_move_item_handler}\index{UnityEditor.Timeline.MoveItemHandler@{UnityEditor.Timeline.MoveItemHandler}}
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Move\+Item\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_timeline_1_1_move_item_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_move_item_handler_a3b4a148ee3d503dcfb6bec4b35ce7c04}\label{class_unity_editor_1_1_timeline_1_1_move_item_handler_a3b4a148ee3d503dcfb6bec4b35ce7c04}} 
+{\bfseries Move\+Item\+Handler} (\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}} state)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_move_item_handler_a41063e72fac96982c4279b18b3d31933}\label{class_unity_editor_1_1_timeline_1_1_move_item_handler_a41063e72fac96982c4279b18b3d31933}} 
+void {\bfseries Grab} (IEnumerable$<$ \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{ITimeline\+Item}} $>$ items, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} reference\+Track)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_move_item_handler_a56751ba720182e4e848c9601c8ab5ba6}\label{class_unity_editor_1_1_timeline_1_1_move_item_handler_a56751ba720182e4e848c9601c8ab5ba6}} 
+void {\bfseries Grab} (IEnumerable$<$ \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{ITimeline\+Item}} $>$ items, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} reference\+Track, Vector2 mouse\+Position)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_move_item_handler_a3569772e77425ba2b50916cf2710c721}\label{class_unity_editor_1_1_timeline_1_1_move_item_handler_a3569772e77425ba2b50916cf2710c721}} 
+void {\bfseries Drop} ()
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_handler_afde4b5d6492fcbd7b410523d02c93b78}{Should\+Snap\+To}} (\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_snappable}{ISnappable}} snappable)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_move_item_handler_ab1639c22edd815e767d83be8a89c07cc}\label{class_unity_editor_1_1_timeline_1_1_move_item_handler_ab1639c22edd815e767d83be8a89c07cc}} 
+void {\bfseries Update\+Track\+Target} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_move_item_handler_ad8bec61d6764d51dc980d8b33f261329}\label{class_unity_editor_1_1_timeline_1_1_move_item_handler_ad8bec61d6764d51dc980d8b33f261329}} 
+void {\bfseries On\+GUI} (Event evt)
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_handler_a544e7f85d72a7ad51bf348973c40ff12}{On\+Attracted\+Edge}} (\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_attractable}{IAttractable}} attractable, Manipulate\+Edges manipulate\+Edges, Attracted\+Edge edge, double time)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_move_item_handler_a5bd2232dc5b53e272c87bfc2444085d3}\label{class_unity_editor_1_1_timeline_1_1_move_item_handler_a5bd2232dc5b53e272c87bfc2444085d3}} 
+void {\bfseries Refresh\+Preview\+Items} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_move_item_handler_a7b570643b67be7c901469b4add0dbb34}\label{class_unity_editor_1_1_timeline_1_1_move_item_handler_a7b570643b67be7c901469b4add0dbb34}} 
+void {\bfseries On\+Track\+Detach} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_move_item_handler_a4b69398c4d251bf74d8ed4068604d15d}\label{class_unity_editor_1_1_timeline_1_1_move_item_handler_a4b69398c4d251bf74d8ed4068604d15d}} 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} {\bfseries target\+Track}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_move_item_handler_ae237f8e0f6012b8139faff759da40bbe}\label{class_unity_editor_1_1_timeline_1_1_move_item_handler_ae237f8e0f6012b8139faff759da40bbe}} 
+bool {\bfseries allow\+Track\+Switch}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_move_item_handler_a82c36b809654e8104bc5293d41d05d1c}\label{class_unity_editor_1_1_timeline_1_1_move_item_handler_a82c36b809654e8104bc5293d41d05d1c}} 
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_moving_items}{Moving\+Items}}\mbox{[}$\,$\mbox{]} {\bfseries moving\+Items}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+double \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_handler_afc853e1ff924806afdef4115be5a3a51}{start}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+double \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_handler_a23b2b53203e4ce18675db3103e4ba08e}{end}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_move_item_handler_a544e7f85d72a7ad51bf348973c40ff12}\label{class_unity_editor_1_1_timeline_1_1_move_item_handler_a544e7f85d72a7ad51bf348973c40ff12}} 
+\index{UnityEditor.Timeline.MoveItemHandler@{UnityEditor.Timeline.MoveItemHandler}!OnAttractedEdge@{OnAttractedEdge}}
+\index{OnAttractedEdge@{OnAttractedEdge}!UnityEditor.Timeline.MoveItemHandler@{UnityEditor.Timeline.MoveItemHandler}}
+\doxysubsubsection{\texorpdfstring{OnAttractedEdge()}{OnAttractedEdge()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Move\+Item\+Handler.\+On\+Attracted\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_attractable}{IAttractable}}}]{attractable,  }\item[{Manipulate\+Edges}]{manipulate\+Edges,  }\item[{Attracted\+Edge}]{edge,  }\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_attraction_handler}{Unity\+Editor.\+Timeline.\+IAttraction\+Handler}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_move_item_handler_afde4b5d6492fcbd7b410523d02c93b78}\label{class_unity_editor_1_1_timeline_1_1_move_item_handler_afde4b5d6492fcbd7b410523d02c93b78}} 
+\index{UnityEditor.Timeline.MoveItemHandler@{UnityEditor.Timeline.MoveItemHandler}!ShouldSnapTo@{ShouldSnapTo}}
+\index{ShouldSnapTo@{ShouldSnapTo}!UnityEditor.Timeline.MoveItemHandler@{UnityEditor.Timeline.MoveItemHandler}}
+\doxysubsubsection{\texorpdfstring{ShouldSnapTo()}{ShouldSnapTo()}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+Move\+Item\+Handler.\+Should\+Snap\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_snappable}{ISnappable}}}]{snappable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_attractable}{Unity\+Editor.\+Timeline.\+IAttractable}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_move_item_handler_a23b2b53203e4ce18675db3103e4ba08e}\label{class_unity_editor_1_1_timeline_1_1_move_item_handler_a23b2b53203e4ce18675db3103e4ba08e}} 
+\index{UnityEditor.Timeline.MoveItemHandler@{UnityEditor.Timeline.MoveItemHandler}!end@{end}}
+\index{end@{end}!UnityEditor.Timeline.MoveItemHandler@{UnityEditor.Timeline.MoveItemHandler}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily double Unity\+Editor.\+Timeline.\+Move\+Item\+Handler.\+end\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_attractable}{Unity\+Editor.\+Timeline.\+IAttractable}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_move_item_handler_afc853e1ff924806afdef4115be5a3a51}\label{class_unity_editor_1_1_timeline_1_1_move_item_handler_afc853e1ff924806afdef4115be5a3a51}} 
+\index{UnityEditor.Timeline.MoveItemHandler@{UnityEditor.Timeline.MoveItemHandler}!start@{start}}
+\index{start@{start}!UnityEditor.Timeline.MoveItemHandler@{UnityEditor.Timeline.MoveItemHandler}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily double Unity\+Editor.\+Timeline.\+Move\+Item\+Handler.\+start\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_attractable}{Unity\+Editor.\+Timeline.\+IAttractable}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Editor/\+Manipulators/\+Move/Move\+Item\+Handler.\+cs\end{DoxyCompactItemize}

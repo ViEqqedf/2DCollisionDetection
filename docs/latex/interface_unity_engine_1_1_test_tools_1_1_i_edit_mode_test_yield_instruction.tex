@@ -1,0 +1,92 @@
+\hypertarget{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+IEdit\+Mode\+Test\+Yield\+Instruction Interface Reference}
+\label{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}\index{UnityEngine.TestTools.IEditModeTestYieldInstruction@{UnityEngine.TestTools.IEditModeTestYieldInstruction}}
+
+
+In an Edit Mode test, you can use {\ttfamily \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}{IEdit\+Mode\+Test\+Yield\+Instruction}}} interface to implement your own instruction. There are also a couple of commonly used implementations available\+:  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Tools.\+IEdit\+Mode\+Test\+Yield\+Instruction\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.891720cm]{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerator \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_a4f785da8cc50e662bf8e4da01004c7fe}{Perform}} ()
+\begin{DoxyCompactList}\small\item\em Used to define multi-\/frame operations performed when instantiating a yield instruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_a3cf7b174d1ecc9cdd26d231adcd4f3a9}{Expect\+Domain\+Reload}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether or not the instruction expects a domain reload to occur. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_af28e01e066b7355ab048bcf78a24e9cd}{Expected\+Playmode\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether or not the instruction expects the \mbox{\hyperlink{namespace_unity}{Unity}} Editor to be in {\bfseries{Play Mode}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+In an Edit Mode test, you can use {\ttfamily \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}{IEdit\+Mode\+Test\+Yield\+Instruction}}} interface to implement your own instruction. There are also a couple of commonly used implementations available\+: 
+
+
+\begin{DoxyItemize}
+\item \href{https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/api/UnityEngine.TestTools.EnterPlayMode.html}{\texttt{ Enter\+Play\+More}}
+\item \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_exit_play_mode}{Exit\+Play\+Mode}}
+\item \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_recompile_scripts}{Recompile\+Scripts}}
+\item \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload}{Wait\+For\+Domain\+Reload}} 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_a4f785da8cc50e662bf8e4da01004c7fe}\label{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_a4f785da8cc50e662bf8e4da01004c7fe}} 
+\index{UnityEngine.TestTools.IEditModeTestYieldInstruction@{UnityEngine.TestTools.IEditModeTestYieldInstruction}!Perform@{Perform}}
+\index{Perform@{Perform}!UnityEngine.TestTools.IEditModeTestYieldInstruction@{UnityEngine.TestTools.IEditModeTestYieldInstruction}}
+\doxysubsubsection{\texorpdfstring{Perform()}{Perform()}}
+{\footnotesize\ttfamily IEnumerator Unity\+Engine.\+Test\+Tools.\+IEdit\+Mode\+Test\+Yield\+Instruction.\+Perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used to define multi-\/frame operations performed when instantiating a yield instruction. 
+
+\begin{DoxyReturn}{Returns}
+Enumerable collection of operations to perform.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_enter_play_mode_af34c05ff2b496e2709ad4335734827f6}{Unity\+Engine.\+Test\+Tools.\+Enter\+Play\+Mode}}, \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_exit_play_mode_aa17fd2b60de390aa6973cf93c319d6be}{Unity\+Engine.\+Test\+Tools.\+Exit\+Play\+Mode}}, \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_acf12e80721614112b7b1e40876670384}{Unity\+Engine.\+Test\+Tools.\+Recompile\+Scripts}}, and \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload_a213d6092e4594430cd4790b7f0a85d7a}{Unity\+Engine.\+Test\+Tools.\+Wait\+For\+Domain\+Reload}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_a3cf7b174d1ecc9cdd26d231adcd4f3a9}\label{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_a3cf7b174d1ecc9cdd26d231adcd4f3a9}} 
+\index{UnityEngine.TestTools.IEditModeTestYieldInstruction@{UnityEngine.TestTools.IEditModeTestYieldInstruction}!ExpectDomainReload@{ExpectDomainReload}}
+\index{ExpectDomainReload@{ExpectDomainReload}!UnityEngine.TestTools.IEditModeTestYieldInstruction@{UnityEngine.TestTools.IEditModeTestYieldInstruction}}
+\doxysubsubsection{\texorpdfstring{ExpectDomainReload}{ExpectDomainReload}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+IEdit\+Mode\+Test\+Yield\+Instruction.\+Expect\+Domain\+Reload\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Whether or not the instruction expects a domain reload to occur. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_enter_play_mode_af2d3b05071110f0567f01eea020274c3}{Unity\+Engine.\+Test\+Tools.\+Enter\+Play\+Mode}}, \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_exit_play_mode_a18cb0e0f13c5ac86c3ff5e1d005e040a}{Unity\+Engine.\+Test\+Tools.\+Exit\+Play\+Mode}}, \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_a6e57b555d4c38817ae8cc61fc00a8c04}{Unity\+Engine.\+Test\+Tools.\+Recompile\+Scripts}}, and \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload_a002df9c8547de10393b2682c9127373d}{Unity\+Engine.\+Test\+Tools.\+Wait\+For\+Domain\+Reload}}.
+
+\mbox{\Hypertarget{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_af28e01e066b7355ab048bcf78a24e9cd}\label{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_af28e01e066b7355ab048bcf78a24e9cd}} 
+\index{UnityEngine.TestTools.IEditModeTestYieldInstruction@{UnityEngine.TestTools.IEditModeTestYieldInstruction}!ExpectedPlaymodeState@{ExpectedPlaymodeState}}
+\index{ExpectedPlaymodeState@{ExpectedPlaymodeState}!UnityEngine.TestTools.IEditModeTestYieldInstruction@{UnityEngine.TestTools.IEditModeTestYieldInstruction}}
+\doxysubsubsection{\texorpdfstring{ExpectedPlaymodeState}{ExpectedPlaymodeState}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+IEdit\+Mode\+Test\+Yield\+Instruction.\+Expected\+Playmode\+State\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Whether or not the instruction expects the \mbox{\hyperlink{namespace_unity}{Unity}} Editor to be in {\bfseries{Play Mode}}. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_enter_play_mode_a1be4e0809bc62bee832caaa8ed7a5cfc}{Unity\+Engine.\+Test\+Tools.\+Enter\+Play\+Mode}}, \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_exit_play_mode_a4d243050b469dc4b4f2bf5697015a68d}{Unity\+Engine.\+Test\+Tools.\+Exit\+Play\+Mode}}, \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_a2e863521754cc2a2d3d17ea1bd9f78d5}{Unity\+Engine.\+Test\+Tools.\+Recompile\+Scripts}}, and \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_wait_for_domain_reload_a839d2cad3d38c2956f861447e61891b8}{Unity\+Engine.\+Test\+Tools.\+Wait\+For\+Domain\+Reload}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Engine.\+Test\+Runner/\+Test\+Runner/\+Messages/IEdit\+Mode\+Test\+Yield\+Instruction.\+cs\end{DoxyCompactItemize}

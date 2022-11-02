@@ -1,0 +1,78 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_layout_element}{}\doxysection{Unity\+Engine.\+UI.\+Layout\+Element Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_layout_element}\index{UnityEngine.UI.LayoutElement@{UnityEngine.UI.LayoutElement}}
+
+
+Add this component to a Game\+Object to make it into a layout element or override values on an existing layout element.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Layout\+Element\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.314050cm]{class_unity_engine_1_1_u_i_1_1_layout_element}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_element_a2fd108eb648837ba312fdd9fd58f3fd1}{Calculate\+Layout\+Input\+Horizontal}} ()
+\begin{DoxyCompactList}\small\item\em After this method is invoked, layout horizontal input properties should return up-\/to-\/date values. Children will already have up-\/to-\/date layout horizontal inputs when this methods is called. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_element_a0682cab252b2cc9033be414cc5fb80f5}{Calculate\+Layout\+Input\+Vertical}} ()
+\begin{DoxyCompactList}\small\item\em After this method is invoked, layout vertical input properties should return up-\/to-\/date values. Children will already have up-\/to-\/date layout vertical inputs when this methods is called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_element_a5623075893272fee3cf54988848ad399}{ignore\+Layout}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Should this Rect\+Transform be ignored by the layout system? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Add this component to a Game\+Object to make it into a layout element or override values on an existing layout element. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_element_a2fd108eb648837ba312fdd9fd58f3fd1}\label{class_unity_engine_1_1_u_i_1_1_layout_element_a2fd108eb648837ba312fdd9fd58f3fd1}} 
+\index{UnityEngine.UI.LayoutElement@{UnityEngine.UI.LayoutElement}!CalculateLayoutInputHorizontal@{CalculateLayoutInputHorizontal}}
+\index{CalculateLayoutInputHorizontal@{CalculateLayoutInputHorizontal}!UnityEngine.UI.LayoutElement@{UnityEngine.UI.LayoutElement}}
+\doxysubsubsection{\texorpdfstring{CalculateLayoutInputHorizontal()}{CalculateLayoutInputHorizontal()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+UI.\+Layout\+Element.\+Calculate\+Layout\+Input\+Horizontal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+After this method is invoked, layout horizontal input properties should return up-\/to-\/date values. Children will already have up-\/to-\/date layout horizontal inputs when this methods is called. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a38e697b28b30f3ff350c0c43d9c29441}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_element_a0682cab252b2cc9033be414cc5fb80f5}\label{class_unity_engine_1_1_u_i_1_1_layout_element_a0682cab252b2cc9033be414cc5fb80f5}} 
+\index{UnityEngine.UI.LayoutElement@{UnityEngine.UI.LayoutElement}!CalculateLayoutInputVertical@{CalculateLayoutInputVertical}}
+\index{CalculateLayoutInputVertical@{CalculateLayoutInputVertical}!UnityEngine.UI.LayoutElement@{UnityEngine.UI.LayoutElement}}
+\doxysubsubsection{\texorpdfstring{CalculateLayoutInputVertical()}{CalculateLayoutInputVertical()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+UI.\+Layout\+Element.\+Calculate\+Layout\+Input\+Vertical (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+After this method is invoked, layout vertical input properties should return up-\/to-\/date values. Children will already have up-\/to-\/date layout vertical inputs when this methods is called. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a1e0f42ff8a350a7996b1ebfacdac2b0b}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_element_a5623075893272fee3cf54988848ad399}\label{class_unity_engine_1_1_u_i_1_1_layout_element_a5623075893272fee3cf54988848ad399}} 
+\index{UnityEngine.UI.LayoutElement@{UnityEngine.UI.LayoutElement}!ignoreLayout@{ignoreLayout}}
+\index{ignoreLayout@{ignoreLayout}!UnityEngine.UI.LayoutElement@{UnityEngine.UI.LayoutElement}}
+\doxysubsubsection{\texorpdfstring{ignoreLayout}{ignoreLayout}}
+{\footnotesize\ttfamily virtual bool Unity\+Engine.\+UI.\+Layout\+Element.\+ignore\+Layout\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Should this Rect\+Transform be ignored by the layout system? 
+
+Setting this property to true will make a parent layout group component not consider this Rect\+Transform part of the group. The Rect\+Transform can then be manually positioned despite being a child Game\+Object of a layout group. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/\+Layout/Layout\+Element.\+cs\end{DoxyCompactItemize}

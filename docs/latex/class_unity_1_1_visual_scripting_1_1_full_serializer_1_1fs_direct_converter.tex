@@ -1,0 +1,112 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter}{}\doxysection{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter\texorpdfstring{$<$}{<} TModel \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter}\index{Unity.VisualScripting.FullSerializer.fsDirectConverter$<$ TModel $>$@{Unity.VisualScripting.FullSerializer.fsDirectConverter$<$ TModel $>$}}
+
+
+The direct converter is similar to a regular converter, except that it targets specifically only one type. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} means that it can be used without performance impact when discovering converters. It is strongly recommended that you derive from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter}{fs\+Direct\+Converter}}\{TModel\}.  
+
+
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter\texorpdfstring{$<$}{<} TModel \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.447028cm]{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+sealed override \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_ad313d1b0d32c3e9d3663fe0cc0d14830}{Try\+Serialize}} (object instance, out \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} serialized, Type storage\+Type)
+\begin{DoxyCompactList}\small\item\em Serialize the actual object into the given data storage. \end{DoxyCompactList}\item 
+sealed override \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a9d1b3877f125753ec9b5574a7556685b}{Try\+Deserialize}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} data, ref object instance, Type storage\+Type)
+\begin{DoxyCompactList}\small\item\em Deserialize data into the object instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a4573db9c9b79b1d296aeeb3fa8ac2f09}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a4573db9c9b79b1d296aeeb3fa8ac2f09}} 
+abstract \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} {\bfseries Do\+Serialize} (TModel model, Dictionary$<$ string, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} $>$ serialized)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a6f25511102781abcf863b9bc331a0bbe}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a6f25511102781abcf863b9bc331a0bbe}} 
+abstract \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} {\bfseries Do\+Deserialize} (Dictionary$<$ string, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} $>$ data, ref TModel model)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_ab34301d357e1ec83a7d9a7460f48839e}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_ab34301d357e1ec83a7d9a7460f48839e}} 
+abstract Type {\bfseries Model\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a7fc7394b054501ea290a7b74cf955a1d}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a7fc7394b054501ea290a7b74cf955a1d}} 
+override Type {\bfseries Model\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The direct converter is similar to a regular converter, except that it targets specifically only one type. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} means that it can be used without performance impact when discovering converters. It is strongly recommended that you derive from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter}{fs\+Direct\+Converter}}\{TModel\}. 
+
+Due to the way that direct converters operate, inheritance is {\itshape not} supported. Direct converters will only be used with the exact Model\+Type object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a9d1b3877f125753ec9b5574a7556685b}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a9d1b3877f125753ec9b5574a7556685b}} 
+\index{Unity.VisualScripting.FullSerializer.fsDirectConverter$<$ TModel $>$@{Unity.VisualScripting.FullSerializer.fsDirectConverter$<$ TModel $>$}!TryDeserialize@{TryDeserialize}}
+\index{TryDeserialize@{TryDeserialize}!Unity.VisualScripting.FullSerializer.fsDirectConverter$<$ TModel $>$@{Unity.VisualScripting.FullSerializer.fsDirectConverter$<$ TModel $>$}}
+\doxysubsubsection{\texorpdfstring{TryDeserialize()}{TryDeserialize()}}
+{\footnotesize\ttfamily sealed override \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter}}$<$ TModel $>$.Try\+Deserialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}}}]{data,  }\item[{ref object}]{instance,  }\item[{Type}]{storage\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Deserialize data into the object instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Serialization data to deserialize from.\\
+\hline
+{\em instance} & The object instance to deserialize into. \\
+\hline
+{\em storage\+Type} & The field/property type that is storing the instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if serialization was successful, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a7ad963c1c4c08809ed1b257fa2820704}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Base\+Converter}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_loose_assembly_name_converter_a717e4b278617b3277952a7006612c457}{Unity.\+Visual\+Scripting.\+Loose\+Assembly\+Name\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_namespace_converter_a03b2d0980bf63eacb7caf9eec49498b7}{Unity.\+Visual\+Scripting.\+Namespace\+Converter}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_category_converter_a8d7a6da315e1c3c50ea316dc46db3a8f}{Unity.\+Visual\+Scripting.\+Unit\+Category\+Converter}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_ad313d1b0d32c3e9d3663fe0cc0d14830}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_ad313d1b0d32c3e9d3663fe0cc0d14830}} 
+\index{Unity.VisualScripting.FullSerializer.fsDirectConverter$<$ TModel $>$@{Unity.VisualScripting.FullSerializer.fsDirectConverter$<$ TModel $>$}!TrySerialize@{TrySerialize}}
+\index{TrySerialize@{TrySerialize}!Unity.VisualScripting.FullSerializer.fsDirectConverter$<$ TModel $>$@{Unity.VisualScripting.FullSerializer.fsDirectConverter$<$ TModel $>$}}
+\doxysubsubsection{\texorpdfstring{TrySerialize()}{TrySerialize()}}
+{\footnotesize\ttfamily sealed override \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter}}$<$ TModel $>$.Try\+Serialize (\begin{DoxyParamCaption}\item[{object}]{instance,  }\item[{out \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}}}]{serialized,  }\item[{Type}]{storage\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Serialize the actual object into the given data storage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & The object instance to serialize. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} will never be null. \\
+\hline
+{\em serialized} & The serialized state.\\
+\hline
+{\em storage\+Type} & The field/property type that is storing this instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} serialization was successful.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a887cf0fed399e9bbced3697579f0be38}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Base\+Converter}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_loose_assembly_name_converter_a733471854750b178c271c729e8d083a5}{Unity.\+Visual\+Scripting.\+Loose\+Assembly\+Name\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_namespace_converter_a2f0879bbc8bb063e0dc64501609f3559}{Unity.\+Visual\+Scripting.\+Namespace\+Converter}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_category_converter_a3292adc9771cfb481fa924cdfaa54bf9}{Unity.\+Visual\+Scripting.\+Unit\+Category\+Converter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Core/\+Dependencies/\+Full\+Serializer/fs\+Direct\+Converter.\+cs\end{DoxyCompactItemize}

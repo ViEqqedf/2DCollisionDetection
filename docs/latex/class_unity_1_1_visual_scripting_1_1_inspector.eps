@@ -1,0 +1,407 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: ClassName
+%%Creator: Doxygen
+%%CreationDate: Time
+%%For: 
+%Magnification: 1.00
+%%Orientation: Portrait
+%%BoundingBox: 0 0 500 1547.619019
+%%Pages: 0
+%%BeginSetup
+%%EndSetup
+%%EndComments
+
+% ----- variables -----
+
+/boxwidth 0 def
+/boxheight 40 def
+/fontheight 24 def
+/marginwidth 10 def
+/distx 20 def
+/disty 40 def
+/boundaspect 0.323077 def  % aspect ratio of the BoundingBox (width/height)
+/boundx 500 def
+/boundy boundx boundaspect div def
+/xspacing 0 def
+/yspacing 0 def
+/rows 52 def
+/cols 2 def
+/scalefactor 0 def
+/boxfont /Times-Roman findfont fontheight scalefont def
+
+% ----- procedures -----
+
+/dotted { [1 4] 0 setdash } def
+/dashed { [5] 0 setdash } def
+/solid  { [] 0 setdash } def
+
+/max % result = MAX(arg1,arg2)
+{
+  /a exch def
+  /b exch def
+  a b gt {a} {b} ifelse
+} def
+
+/xoffset % result = MAX(0,(scalefactor-(boxwidth*cols+distx*(cols-1)))/2)
+{
+  0 scalefactor boxwidth cols mul distx cols 1 sub mul add sub 2 div max
+} def
+
+/cw % boxwidth = MAX(boxwidth, stringwidth(arg1))
+{
+  /str exch def
+  /boxwidth boxwidth str stringwidth pop max def
+} def
+
+/box % draws a box with text 'arg1' at grid pos (arg2,arg3)
+{ gsave
+  2 setlinewidth
+  newpath
+  exch xspacing mul xoffset add
+  exch yspacing mul
+  moveto
+  boxwidth 0 rlineto 
+  0 boxheight rlineto 
+  boxwidth neg 0 rlineto 
+  0 boxheight neg rlineto 
+  closepath
+  dup stringwidth pop neg boxwidth add 2 div
+  boxheight fontheight 2 div sub 2 div
+  rmoveto show stroke
+  grestore
+} def  
+
+/mark
+{ newpath
+  exch xspacing mul xoffset add boxwidth add
+  exch yspacing mul
+  moveto
+  0 boxheight 4 div rlineto
+  boxheight neg 4 div boxheight neg 4 div rlineto
+  closepath
+  eofill
+  stroke
+} def
+
+/arrow
+{ newpath
+  moveto
+  3 -8 rlineto
+  -6 0 rlineto
+  3 8 rlineto
+  closepath
+  eofill
+  stroke
+} def
+
+/out % draws an output connector for the block at (arg1,arg2)
+{
+  newpath
+  exch xspacing mul xoffset add boxwidth 2 div add
+  exch yspacing mul boxheight add
+  /y exch def
+  /x exch def
+  x y moveto
+  0 disty 2 div rlineto 
+  stroke
+  1 eq { x y disty 2 div add arrow } if
+} def
+
+/in % draws an input connector for the block at (arg1,arg2)
+{
+  newpath
+  exch xspacing mul xoffset add boxwidth 2 div add
+  exch yspacing mul disty 2 div sub
+  /y exch def
+  /x exch def
+  x y moveto
+  0 disty 2 div rlineto
+  stroke
+  1 eq { x y disty 2 div add arrow } if
+} def
+
+/hedge
+{
+  exch xspacing mul xoffset add boxwidth 2 div add
+  exch yspacing mul boxheight 2 div sub
+  /y exch def
+  /x exch def
+  newpath
+  x y moveto
+  boxwidth 2 div distx add 0 rlineto
+  stroke
+  1 eq
+  { newpath x boxwidth 2 div distx add add y moveto
+    -8 3 rlineto
+    0 -6 rlineto
+    8 3 rlineto
+    closepath
+    eofill
+    stroke
+  } if
+} def
+
+/vedge
+{
+  /ye exch def
+  /ys exch def
+  /xs exch def
+  newpath
+  xs xspacing mul xoffset add boxwidth 2 div add dup
+  ys yspacing mul boxheight 2 div sub
+  moveto
+  ye yspacing mul boxheight 2 div sub
+  lineto
+  stroke
+} def
+
+/conn % connections the blocks from col 'arg1' to 'arg2' of row 'arg3'
+{
+  /ys exch def
+  /xe exch def
+  /xs exch def
+  newpath
+  xs xspacing mul xoffset add boxwidth 2 div add
+  ys yspacing mul disty 2 div sub
+  moveto
+  xspacing xe xs sub mul 0
+  rlineto
+  stroke
+} def
+
+% ----- main ------
+
+boxfont setfont
+1 boundaspect scale
+(Unity.VisualScripting.Inspector) cw
+(IDisposable) cw
+(Unity.VisualScripting.AnimationCurveInspector) cw
+(Unity.VisualScripting.BoolInspector) cw
+(Unity.VisualScripting.BoundsInspector) cw
+(Unity.VisualScripting.CharInspector) cw
+(Unity.VisualScripting.ColorInspector) cw
+(Unity.VisualScripting.ContinuousNumberInspector< T >) cw
+(Unity.VisualScripting.CustomPropertyDrawerInspector) cw
+(Unity.VisualScripting.DictionaryAssetEditor) cw
+(Unity.VisualScripting.DictionaryInspector) cw
+(Unity.VisualScripting.DiscreteNumberInspector< T >) cw
+(Unity.VisualScripting.EnumInspector) cw
+(Unity.VisualScripting.GraphEditor) cw
+(Unity.VisualScripting.GraphGroupEditor) cw
+(Unity.VisualScripting.GraphInputInspector) cw
+(Unity.VisualScripting.GraphInspector< TGraphContext >) cw
+(Unity.VisualScripting.GraphNestEditor) cw
+(Unity.VisualScripting.GraphOutputInspector) cw
+(Unity.VisualScripting.GuidInspector) cw
+(Unity.VisualScripting.ImplementationInspector< T >) cw
+(Unity.VisualScripting.KeyValuePairInspector) cw
+(Unity.VisualScripting.LayerMaskInspector) cw
+(Unity.VisualScripting.ListInspector) cw
+(Unity.VisualScripting.LiteralInspector) cw
+(Unity.VisualScripting.LooseAssemblyNameInspector) cw
+(Unity.VisualScripting.MachineEditor) cw
+(Unity.VisualScripting.MacroEditor) cw
+(Unity.VisualScripting.MemberInspector) cw
+(Unity.VisualScripting.NamespaceInspector) cw
+(Unity.VisualScripting.NullableInspector) cw
+(Unity.VisualScripting.QuaternionInspector) cw
+(Unity.VisualScripting.Ray2DInspector) cw
+(Unity.VisualScripting.RayInspector) cw
+(Unity.VisualScripting.RectInspector) cw
+(Unity.VisualScripting.ReflectedInspector) cw
+(Unity.VisualScripting.SemanticVersionInspector) cw
+(Unity.VisualScripting.StringInspector) cw
+(Unity.VisualScripting.SystemObjectInspector) cw
+(Unity.VisualScripting.TypeHandleInspector) cw
+(Unity.VisualScripting.TypeInspector) cw
+(Unity.VisualScripting.UnitPortDefinitionInspector) cw
+(Unity.VisualScripting.UnityObjectInspector) cw
+(Unity.VisualScripting.UnknownEditor) cw
+(Unity.VisualScripting.UnknownInspector) cw
+(Unity.VisualScripting.VariableDeclarationInspector) cw
+(Unity.VisualScripting.VariableDeclarationsInspector) cw
+(Unity.VisualScripting.VariableNameAttributeInspector) cw
+(Unity.VisualScripting.VariableNameInspector) cw
+(Unity.VisualScripting.VariablesAssetEditor) cw
+(Unity.VisualScripting.VariablesEditor) cw
+(Unity.VisualScripting.VectorInspector) cw
+/boxwidth boxwidth marginwidth 2 mul add def
+/xspacing boxwidth distx add def
+/yspacing boxheight disty add def
+/scalefactor 
+  boxwidth cols mul distx cols 1 sub mul add
+  boxheight rows mul disty rows 1 sub mul add boundaspect mul 
+  max def
+boundx scalefactor div boundy scalefactor div scale
+
+% ----- classes -----
+
+ (Unity.VisualScripting.Inspector) 0.000000 50.000000 box
+ (IDisposable) 0.000000 51.000000 box
+ (Unity.VisualScripting.AnimationCurveInspector) 1.000000 49.000000 box
+ (Unity.VisualScripting.BoolInspector) 1.000000 48.000000 box
+ (Unity.VisualScripting.BoundsInspector) 1.000000 47.000000 box
+ (Unity.VisualScripting.CharInspector) 1.000000 46.000000 box
+ (Unity.VisualScripting.ColorInspector) 1.000000 45.000000 box
+ (Unity.VisualScripting.ContinuousNumberInspector< T >) 1.000000 44.000000 box
+ (Unity.VisualScripting.CustomPropertyDrawerInspector) 1.000000 43.000000 box
+ (Unity.VisualScripting.DictionaryAssetEditor) 1.000000 42.000000 box
+ (Unity.VisualScripting.DictionaryInspector) 1.000000 41.000000 box
+ (Unity.VisualScripting.DiscreteNumberInspector< T >) 1.000000 40.000000 box
+ (Unity.VisualScripting.EnumInspector) 1.000000 39.000000 box
+ (Unity.VisualScripting.GraphEditor) 1.000000 38.000000 box
+1.000000 38.000000 mark
+ (Unity.VisualScripting.GraphGroupEditor) 1.000000 37.000000 box
+ (Unity.VisualScripting.GraphInputInspector) 1.000000 36.000000 box
+ (Unity.VisualScripting.GraphInspector< TGraphContext >) 1.000000 35.000000 box
+1.000000 35.000000 mark
+ (Unity.VisualScripting.GraphNestEditor) 1.000000 34.000000 box
+ (Unity.VisualScripting.GraphOutputInspector) 1.000000 33.000000 box
+ (Unity.VisualScripting.GuidInspector) 1.000000 32.000000 box
+ (Unity.VisualScripting.ImplementationInspector< T >) 1.000000 31.000000 box
+ (Unity.VisualScripting.KeyValuePairInspector) 1.000000 30.000000 box
+ (Unity.VisualScripting.LayerMaskInspector) 1.000000 29.000000 box
+ (Unity.VisualScripting.ListInspector) 1.000000 28.000000 box
+ (Unity.VisualScripting.LiteralInspector) 1.000000 27.000000 box
+ (Unity.VisualScripting.LooseAssemblyNameInspector) 1.000000 26.000000 box
+ (Unity.VisualScripting.MachineEditor) 1.000000 25.000000 box
+1.000000 25.000000 mark
+ (Unity.VisualScripting.MacroEditor) 1.000000 24.000000 box
+ (Unity.VisualScripting.MemberInspector) 1.000000 23.000000 box
+ (Unity.VisualScripting.NamespaceInspector) 1.000000 22.000000 box
+ (Unity.VisualScripting.NullableInspector) 1.000000 21.000000 box
+ (Unity.VisualScripting.QuaternionInspector) 1.000000 20.000000 box
+ (Unity.VisualScripting.Ray2DInspector) 1.000000 19.000000 box
+ (Unity.VisualScripting.RayInspector) 1.000000 18.000000 box
+ (Unity.VisualScripting.RectInspector) 1.000000 17.000000 box
+ (Unity.VisualScripting.ReflectedInspector) 1.000000 16.000000 box
+1.000000 16.000000 mark
+ (Unity.VisualScripting.SemanticVersionInspector) 1.000000 15.000000 box
+ (Unity.VisualScripting.StringInspector) 1.000000 14.000000 box
+ (Unity.VisualScripting.SystemObjectInspector) 1.000000 13.000000 box
+ (Unity.VisualScripting.TypeHandleInspector) 1.000000 12.000000 box
+ (Unity.VisualScripting.TypeInspector) 1.000000 11.000000 box
+ (Unity.VisualScripting.UnitPortDefinitionInspector) 1.000000 10.000000 box
+1.000000 10.000000 mark
+ (Unity.VisualScripting.UnityObjectInspector) 1.000000 9.000000 box
+ (Unity.VisualScripting.UnknownEditor) 1.000000 8.000000 box
+ (Unity.VisualScripting.UnknownInspector) 1.000000 7.000000 box
+ (Unity.VisualScripting.VariableDeclarationInspector) 1.000000 6.000000 box
+ (Unity.VisualScripting.VariableDeclarationsInspector) 1.000000 5.000000 box
+ (Unity.VisualScripting.VariableNameAttributeInspector) 1.000000 4.000000 box
+ (Unity.VisualScripting.VariableNameInspector) 1.000000 3.000000 box
+ (Unity.VisualScripting.VariablesAssetEditor) 1.000000 2.000000 box
+ (Unity.VisualScripting.VariablesEditor) 1.000000 1.000000 box
+ (Unity.VisualScripting.VectorInspector) 1.000000 0.000000 box
+1.000000 0.000000 mark
+
+% ----- relations -----
+
+solid
+0 0.000000 50.000000 out
+solid
+1 0.000000 51.000000 in
+solid
+1 0.000000 49.250000 out
+solid
+0 0.000000 49.500000 hedge
+solid
+0 0.000000 48.500000 hedge
+solid
+0 0.000000 47.500000 hedge
+solid
+0 0.000000 46.500000 hedge
+solid
+0 0.000000 45.500000 hedge
+solid
+0 0.000000 44.500000 hedge
+solid
+0 0.000000 43.500000 hedge
+solid
+0 0.000000 42.500000 hedge
+solid
+0 0.000000 41.500000 hedge
+solid
+0 0.000000 40.500000 hedge
+solid
+0 0.000000 39.500000 hedge
+solid
+0 0.000000 38.500000 hedge
+solid
+0 0.000000 37.500000 hedge
+solid
+0 0.000000 36.500000 hedge
+solid
+0 0.000000 35.500000 hedge
+solid
+0 0.000000 34.500000 hedge
+solid
+0 0.000000 33.500000 hedge
+solid
+0 0.000000 32.500000 hedge
+solid
+0 0.000000 31.500000 hedge
+solid
+0 0.000000 30.500000 hedge
+solid
+0 0.000000 29.500000 hedge
+solid
+0 0.000000 28.500000 hedge
+solid
+0 0.000000 27.500000 hedge
+solid
+0 0.000000 26.500000 hedge
+solid
+0 0.000000 25.500000 hedge
+solid
+0 0.000000 24.500000 hedge
+solid
+0 0.000000 23.500000 hedge
+solid
+0 0.000000 22.500000 hedge
+solid
+0 0.000000 21.500000 hedge
+solid
+0 0.000000 20.500000 hedge
+solid
+0 0.000000 19.500000 hedge
+solid
+0 0.000000 18.500000 hedge
+solid
+0 0.000000 17.500000 hedge
+solid
+0 0.000000 16.500000 hedge
+solid
+0 0.000000 15.500000 hedge
+solid
+0 0.000000 14.500000 hedge
+solid
+0 0.000000 13.500000 hedge
+solid
+0 0.000000 12.500000 hedge
+solid
+0 0.000000 11.500000 hedge
+solid
+0 0.000000 10.500000 hedge
+solid
+0 0.000000 9.500000 hedge
+solid
+0 0.000000 8.500000 hedge
+solid
+0 0.000000 7.500000 hedge
+solid
+0 0.000000 6.500000 hedge
+solid
+0 0.000000 5.500000 hedge
+solid
+0 0.000000 4.500000 hedge
+solid
+0 0.000000 3.500000 hedge
+solid
+0 0.000000 2.500000 hedge
+solid
+0 0.000000 1.500000 hedge
+solid
+0 0.000000 0.500000 hedge
+solid
+0.000000 50.000000 0.500000 vedge

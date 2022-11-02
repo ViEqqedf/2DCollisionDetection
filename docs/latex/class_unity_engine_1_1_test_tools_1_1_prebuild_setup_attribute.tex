@@ -1,0 +1,106 @@
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_prebuild_setup_attribute}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+Prebuild\+Setup\+Attribute Class Reference}
+\label{class_unity_engine_1_1_test_tools_1_1_prebuild_setup_attribute}\index{UnityEngine.TestTools.PrebuildSetupAttribute@{UnityEngine.TestTools.PrebuildSetupAttribute}}
+
+
+Prebuild\+Setup attribute run if the test or test class is in the current test run. The test is included either by running all tests or setting a filter that includes the test. If multiple tests reference the same pre-\/built setup or post-\/build cleanup, then it only runs once.  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Tools.\+Prebuild\+Setup\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_test_tools_1_1_prebuild_setup_attribute}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_prebuild_setup_attribute_a413866aaf5480ecdedff4e078bfc6fac}{Prebuild\+Setup\+Attribute}} (Type target\+Class)
+\begin{DoxyCompactList}\small\item\em Initializes and returns an instance of \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_prebuild_setup_attribute}{Prebuild\+Setup\+Attribute}} by type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_prebuild_setup_attribute_af10105774f3f681e42f1435e3e8201b4}{Prebuild\+Setup\+Attribute}} (string target\+Class\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Prebuild\+Setup attribute run if the test or test class is in the current test run. The test is included either by running all tests or setting a filter that includes the test. If multiple tests reference the same pre-\/built setup or post-\/build cleanup, then it only runs once. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_prebuild_setup_attribute_a413866aaf5480ecdedff4e078bfc6fac}\label{class_unity_engine_1_1_test_tools_1_1_prebuild_setup_attribute_a413866aaf5480ecdedff4e078bfc6fac}} 
+\index{UnityEngine.TestTools.PrebuildSetupAttribute@{UnityEngine.TestTools.PrebuildSetupAttribute}!PrebuildSetupAttribute@{PrebuildSetupAttribute}}
+\index{PrebuildSetupAttribute@{PrebuildSetupAttribute}!UnityEngine.TestTools.PrebuildSetupAttribute@{UnityEngine.TestTools.PrebuildSetupAttribute}}
+\doxysubsubsection{\texorpdfstring{PrebuildSetupAttribute()}{PrebuildSetupAttribute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Unity\+Engine.\+Test\+Tools.\+Prebuild\+Setup\+Attribute.\+Prebuild\+Setup\+Attribute (\begin{DoxyParamCaption}\item[{Type}]{target\+Class }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes and returns an instance of \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_prebuild_setup_attribute}{Prebuild\+Setup\+Attribute}} by type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Class} & The type of the target class.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_prebuild_setup_attribute_af10105774f3f681e42f1435e3e8201b4}\label{class_unity_engine_1_1_test_tools_1_1_prebuild_setup_attribute_af10105774f3f681e42f1435e3e8201b4}} 
+\index{UnityEngine.TestTools.PrebuildSetupAttribute@{UnityEngine.TestTools.PrebuildSetupAttribute}!PrebuildSetupAttribute@{PrebuildSetupAttribute}}
+\index{PrebuildSetupAttribute@{PrebuildSetupAttribute}!UnityEngine.TestTools.PrebuildSetupAttribute@{UnityEngine.TestTools.PrebuildSetupAttribute}}
+\doxysubsubsection{\texorpdfstring{PrebuildSetupAttribute()}{PrebuildSetupAttribute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Unity\+Engine.\+Test\+Tools.\+Prebuild\+Setup\+Attribute.\+Prebuild\+Setup\+Attribute (\begin{DoxyParamCaption}\item[{string}]{target\+Class\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Class\+Name} & \\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }CreateSpriteTest : IPrebuildSetup}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    Texture2D m\_Texture;}
+\DoxyCodeLine{    Sprite m\_Sprite;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} Setup()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{@verbatim }
+\DoxyCodeLine{\textcolor{preprocessor}{\#if UNITY\_EDITOR}}
+\DoxyCodeLine{}
+\DoxyCodeLine{var spritePath = \textcolor{stringliteral}{"{}Assets/Resources/Circle.png"{}};}
+\DoxyCodeLine{var ti = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.AssetImporter.GetAtPath(spritePath) as \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporter;}
+\DoxyCodeLine{ti.textureCompression = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporterCompression.Uncompressed;}
+\DoxyCodeLine{ti.SaveAndReimport();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\textcolor{keyword}{@end}verbatim     \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [SetUp]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} SetUpTest()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        m\_Texture = Resources.Load<Texture2D>(\textcolor{stringliteral}{"{}Circle"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [Test]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} WhenNullTextureIsPassed\_CreateShouldReturnNullSprite()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{@verbatim }
+\DoxyCodeLine{\textcolor{comment}{// Check with Valid Texture.}}
+\DoxyCodeLine{LogAssert.Expect(LogType.Log, \textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{Sprite.Create(m\_Texture, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{Debug.Log(\textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Check with NULL Texture. Should return NULL Sprite.}}
+\DoxyCodeLine{m\_Sprite = Sprite.Create(\textcolor{keyword}{null}, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.heig`t), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{Assert.That(m\_Sprite, Is.Null, \textcolor{stringliteral}{"{}Sprite created with null texture should be null"{}});}
+\DoxyCodeLine{\textcolor{keyword}{@end}verbatim     \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ Tip\+: Use {\ttfamily \#if UNITY\+\_\+\+EDITOR} if you want to access Editor only APIs, but the setup/cleanup is inside a {\bfseries{Play Mode}} assembly. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Engine.\+Test\+Runner/\+Utils/Prebuild\+Scene\+Setup\+Attribute.\+cs\end{DoxyCompactItemize}

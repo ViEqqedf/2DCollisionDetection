@@ -1,0 +1,126 @@
+\hypertarget{class_unity_engine_1_1_timeline_1_1_time_control_playable}{}\doxysection{Unity\+Engine.\+Timeline.\+Time\+Control\+Playable Class Reference}
+\label{class_unity_engine_1_1_timeline_1_1_time_control_playable}\index{UnityEngine.Timeline.TimeControlPlayable@{UnityEngine.Timeline.TimeControlPlayable}}
+
+
+A Playable\+Behaviour that manages a component that implements the \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_time_control}{ITime\+Control}} interface  
+
+
+Inheritance diagram for Unity\+Engine.\+Timeline.\+Time\+Control\+Playable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_timeline_1_1_time_control_playable}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_control_playable_a855e3e7b2792b55630244e1e8f60312a}{Initialize}} (\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_time_control}{ITime\+Control}} time\+Control)
+\begin{DoxyCompactList}\small\item\em Initializes the behaviour \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_control_playable_a4585626f7ccc01ec2b654f51e7e82e59}{Prepare\+Frame}} (Playable playable, Frame\+Data info)
+\begin{DoxyCompactList}\small\item\em This function is called during the Prepare\+Frame phase of the Playable\+Graph. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_control_playable_a75460a3385ed7fb3d554701097b1036e}{On\+Behaviour\+Play}} (Playable playable, Frame\+Data info)
+\begin{DoxyCompactList}\small\item\em This function is called when the Playable play state is changed to Playables.\+Play\+State.\+Playing. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_control_playable_a959c89cb0e849c6abf3ab237002a5380}{On\+Behaviour\+Pause}} (Playable playable, Frame\+Data info)
+\begin{DoxyCompactList}\small\item\em This function is called when the Playable play state is changed to Play\+State.\+Paused. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Script\+Playable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_control_playable}{Time\+Control\+Playable}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_control_playable_a9467e961d5243a4cdd815ed7c8084fd5}{Create}} (Playable\+Graph graph, \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_time_control}{ITime\+Control}} time\+Control)
+\begin{DoxyCompactList}\small\item\em Creates a Playable with a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_control_playable}{Time\+Control\+Playable}} behaviour attached \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Playable\+Behaviour that manages a component that implements the \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_time_control}{ITime\+Control}} interface 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_time_control_playable_a9467e961d5243a4cdd815ed7c8084fd5}\label{class_unity_engine_1_1_timeline_1_1_time_control_playable_a9467e961d5243a4cdd815ed7c8084fd5}} 
+\index{UnityEngine.Timeline.TimeControlPlayable@{UnityEngine.Timeline.TimeControlPlayable}!Create@{Create}}
+\index{Create@{Create}!UnityEngine.Timeline.TimeControlPlayable@{UnityEngine.Timeline.TimeControlPlayable}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily static Script\+Playable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_control_playable}{Time\+Control\+Playable}} $>$ Unity\+Engine.\+Timeline.\+Time\+Control\+Playable.\+Create (\begin{DoxyParamCaption}\item[{Playable\+Graph}]{graph,  }\item[{\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_time_control}{ITime\+Control}}}]{time\+Control }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Creates a Playable with a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_control_playable}{Time\+Control\+Playable}} behaviour attached 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & The Playable\+Graph to inject the Playable into.\\
+\hline
+{\em time\+Control} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_time_control_playable_a855e3e7b2792b55630244e1e8f60312a}\label{class_unity_engine_1_1_timeline_1_1_time_control_playable_a855e3e7b2792b55630244e1e8f60312a}} 
+\index{UnityEngine.Timeline.TimeControlPlayable@{UnityEngine.Timeline.TimeControlPlayable}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!UnityEngine.Timeline.TimeControlPlayable@{UnityEngine.Timeline.TimeControlPlayable}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Timeline.\+Time\+Control\+Playable.\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_time_control}{ITime\+Control}}}]{time\+Control }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes the behaviour 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Control} & Component that implements the \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_time_control}{ITime\+Control}} interface\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_time_control_playable_a959c89cb0e849c6abf3ab237002a5380}\label{class_unity_engine_1_1_timeline_1_1_time_control_playable_a959c89cb0e849c6abf3ab237002a5380}} 
+\index{UnityEngine.Timeline.TimeControlPlayable@{UnityEngine.Timeline.TimeControlPlayable}!OnBehaviourPause@{OnBehaviourPause}}
+\index{OnBehaviourPause@{OnBehaviourPause}!UnityEngine.Timeline.TimeControlPlayable@{UnityEngine.Timeline.TimeControlPlayable}}
+\doxysubsubsection{\texorpdfstring{OnBehaviourPause()}{OnBehaviourPause()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Time\+Control\+Playable.\+On\+Behaviour\+Pause (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called when the Playable play state is changed to Play\+State.\+Paused. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The playable this behaviour is attached to.\\
+\hline
+{\em info} & A Frame\+Data structure that contains information about the current frame context.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_time_control_playable_a75460a3385ed7fb3d554701097b1036e}\label{class_unity_engine_1_1_timeline_1_1_time_control_playable_a75460a3385ed7fb3d554701097b1036e}} 
+\index{UnityEngine.Timeline.TimeControlPlayable@{UnityEngine.Timeline.TimeControlPlayable}!OnBehaviourPlay@{OnBehaviourPlay}}
+\index{OnBehaviourPlay@{OnBehaviourPlay}!UnityEngine.Timeline.TimeControlPlayable@{UnityEngine.Timeline.TimeControlPlayable}}
+\doxysubsubsection{\texorpdfstring{OnBehaviourPlay()}{OnBehaviourPlay()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Time\+Control\+Playable.\+On\+Behaviour\+Play (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called when the Playable play state is changed to Playables.\+Play\+State.\+Playing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The Playable that owns the current Playable\+Behaviour.\\
+\hline
+{\em info} & A Frame\+Data structure that contains information about the current frame context.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_time_control_playable_a4585626f7ccc01ec2b654f51e7e82e59}\label{class_unity_engine_1_1_timeline_1_1_time_control_playable_a4585626f7ccc01ec2b654f51e7e82e59}} 
+\index{UnityEngine.Timeline.TimeControlPlayable@{UnityEngine.Timeline.TimeControlPlayable}!PrepareFrame@{PrepareFrame}}
+\index{PrepareFrame@{PrepareFrame}!UnityEngine.Timeline.TimeControlPlayable@{UnityEngine.Timeline.TimeControlPlayable}}
+\doxysubsubsection{\texorpdfstring{PrepareFrame()}{PrepareFrame()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Time\+Control\+Playable.\+Prepare\+Frame (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called during the Prepare\+Frame phase of the Playable\+Graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The Playable that owns the current Playable\+Behaviour.\\
+\hline
+{\em info} & A Frame\+Data structure that contains information about the current frame context.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Playables/Time\+Control\+Playable.\+cs\end{DoxyCompactItemize}

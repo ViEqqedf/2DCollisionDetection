@@ -1,0 +1,63 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_type}{}\doxysection{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Meta\+Type Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_type}\index{Unity.VisualScripting.FullSerializer.fsMetaType@{Unity.VisualScripting.FullSerializer.fsMetaType}}
+
+
+Meta\+Type contains metadata about a type. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} is used by the reflection serializer.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_type_a8665fbcee4e6b8c6c52fe5b4bf23e2b2}{Emit\+Aot\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Attempt to emit an AOT compiled direct converter for this type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_type_af46c470b8f23497e6c2f150ba30c02fd}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_type_af46c470b8f23497e6c2f150ba30c02fd}} 
+object {\bfseries Create\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Creates a new instance of the type that this metadata points back to. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} this type has a default constructor, then Activator.\+Create\+Instance will be used to construct the type (or Array.\+Create\+Instance if it an array). Otherwise, an uninitialized object created via Formatter\+Services.\+Get\+Safe\+Uninitialized\+Object is used to construct the instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_type_a4b11e725b8b73bf6b70896fe7ff35c78}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_type_a4b11e725b8b73bf6b70896fe7ff35c78}} 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_type}{fs\+Meta\+Type}} {\bfseries Get} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config}{fs\+Config}} config, Type type)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_type_ac4d856d36cb06ea1195e49c7e82d8ea0}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_type_ac4d856d36cb06ea1195e49c7e82d8ea0}} 
+static void {\bfseries Clear\+Cache} ()
+\begin{DoxyCompactList}\small\item\em Clears out the cached type results. Useful if some prior assumptions become invalid, ie, the default member serialization mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_type_ab7f8c31534e07fdc3a0347d7d30c7009}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_type_ab7f8c31534e07fdc3a0347d7d30c7009}} 
+Type {\bfseries Reflected\+Type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_type_aa806fba8a7a2d8e76ddfbee470d92303}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_type_aa806fba8a7a2d8e76ddfbee470d92303}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property}{fs\+Meta\+Property}}\mbox{[}$\,$\mbox{]} {\bfseries Properties}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_type_af365ef8f8e33086f2c64882d0f6f566e}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_type_af365ef8f8e33086f2c64882d0f6f566e}} 
+bool {\bfseries Has\+Default\+Constructor}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if the type represented by this metadata contains a default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Meta\+Type contains metadata about a type. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} is used by the reflection serializer. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_type_a8665fbcee4e6b8c6c52fe5b4bf23e2b2}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_type_a8665fbcee4e6b8c6c52fe5b4bf23e2b2}} 
+\index{Unity.VisualScripting.FullSerializer.fsMetaType@{Unity.VisualScripting.FullSerializer.fsMetaType}!EmitAotData@{EmitAotData}}
+\index{EmitAotData@{EmitAotData}!Unity.VisualScripting.FullSerializer.fsMetaType@{Unity.VisualScripting.FullSerializer.fsMetaType}}
+\doxysubsubsection{\texorpdfstring{EmitAotData()}{EmitAotData()}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Meta\+Type.\+Emit\+Aot\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Attempt to emit an AOT compiled direct converter for this type. 
+
+\begin{DoxyReturn}{Returns}
+True if AOT data was emitted, false otherwise.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Core/\+Dependencies/\+Full\+Serializer/\+Reflection/fs\+Meta\+Type.\+cs\end{DoxyCompactItemize}

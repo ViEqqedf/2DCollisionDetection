@@ -1,0 +1,17 @@
+\hypertarget{namespace_unity_engine_1_1_test_tools_1_1_n_unit_extensions}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+NUnit\+Extensions Namespace Reference}
+\label{namespace_unity_engine_1_1_test_tools_1_1_n_unit_extensions}\index{UnityEngine.TestTools.NUnitExtensions@{UnityEngine.TestTools.NUnitExtensions}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Action\+Delegator}
+\begin{DoxyCompactList}\small\item\em This class delegates actions from the NUnit thread that should be executed on the main thread. NUnit thread calls Delegate which blocks the execution on the thread until the action is executed. The main thread will poll for awaiting actions (Has\+Action) and invoke them (Execute). Once the action is executed, the main thread releases the lock and executino on the NUnit thread is continued. \end{DoxyCompactList}\item 
+class {\bfseries Base\+Delegator}
+\item 
+class {\bfseries Construct\+Delegator}
+\begin{DoxyCompactList}\small\item\em Specialization of Base\+Delegator that makes sure objects are created on the Main\+Thread. It also deals with Scriptable\+Objects so that tests can survive assembly reload. \end{DoxyCompactList}\item 
+interface {\bfseries IAsync\+Test\+Assembly\+Builder}
+\item 
+interface {\bfseries IState\+Serializer}
+\item 
+class {\bfseries Unity\+Test\+Assembly\+Builder}
+\end{DoxyCompactItemize}

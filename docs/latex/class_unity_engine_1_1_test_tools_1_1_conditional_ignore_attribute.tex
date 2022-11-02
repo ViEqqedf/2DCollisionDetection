@@ -1,0 +1,120 @@
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+Conditional\+Ignore\+Attribute Class Reference}
+\label{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute}\index{UnityEngine.TestTools.ConditionalIgnoreAttribute@{UnityEngine.TestTools.ConditionalIgnoreAttribute}}
+
+
+This attribute is an alternative to the standard {\ttfamily Ignore} attribute in \href{https://nunit.org/}{\texttt{ NUnit}}. It allows for ignoring tests only under a specified condition. The condition evaluates during {\ttfamily On\+Load}, referenced by ID.  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Tools.\+Conditional\+Ignore\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.904762cm]{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute_ab933fde9b9d2f3873444c92fc2564d43}{Conditional\+Ignore\+Attribute}} (string condition\+Key, string ignore\+Reason)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute}{Conditional\+Ignore\+Attribute}} class with a condition key. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute_a4a0e17fc4c4d6da061d0d875efdb210a}{Apply\+To\+Test}} (Test test)
+\begin{DoxyCompactList}\small\item\em Modifies a test as defined for the specific attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute_a28de322ff132c36b3801121667407a83}{Add\+Conditional\+Ignore\+Mapping}} (string key, bool value)
+\begin{DoxyCompactList}\small\item\em Adds a flag indicating whether tests with the same key should be ignored. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This attribute is an alternative to the standard {\ttfamily Ignore} attribute in \href{https://nunit.org/}{\texttt{ NUnit}}. It allows for ignoring tests only under a specified condition. The condition evaluates during {\ttfamily On\+Load}, referenced by ID. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute_ab933fde9b9d2f3873444c92fc2564d43}\label{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute_ab933fde9b9d2f3873444c92fc2564d43}} 
+\index{UnityEngine.TestTools.ConditionalIgnoreAttribute@{UnityEngine.TestTools.ConditionalIgnoreAttribute}!ConditionalIgnoreAttribute@{ConditionalIgnoreAttribute}}
+\index{ConditionalIgnoreAttribute@{ConditionalIgnoreAttribute}!UnityEngine.TestTools.ConditionalIgnoreAttribute@{UnityEngine.TestTools.ConditionalIgnoreAttribute}}
+\doxysubsubsection{\texorpdfstring{ConditionalIgnoreAttribute()}{ConditionalIgnoreAttribute()}}
+{\footnotesize\ttfamily Unity\+Engine.\+Test\+Tools.\+Conditional\+Ignore\+Attribute.\+Conditional\+Ignore\+Attribute (\begin{DoxyParamCaption}\item[{string}]{condition\+Key,  }\item[{string}]{ignore\+Reason }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute}{Conditional\+Ignore\+Attribute}} class with a condition key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em condition\+Key} & The key to check for enabling the conditional ignore. The condition is set with the static \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute_a28de322ff132c36b3801121667407a83}{Add\+Conditional\+Ignore\+Mapping}} method.\\
+\hline
+{\em ignore\+Reason} & The reason for the ignore.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute_a28de322ff132c36b3801121667407a83}\label{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute_a28de322ff132c36b3801121667407a83}} 
+\index{UnityEngine.TestTools.ConditionalIgnoreAttribute@{UnityEngine.TestTools.ConditionalIgnoreAttribute}!AddConditionalIgnoreMapping@{AddConditionalIgnoreMapping}}
+\index{AddConditionalIgnoreMapping@{AddConditionalIgnoreMapping}!UnityEngine.TestTools.ConditionalIgnoreAttribute@{UnityEngine.TestTools.ConditionalIgnoreAttribute}}
+\doxysubsubsection{\texorpdfstring{AddConditionalIgnoreMapping()}{AddConditionalIgnoreMapping()}}
+{\footnotesize\ttfamily static void Unity\+Engine.\+Test\+Tools.\+Conditional\+Ignore\+Attribute.\+Add\+Conditional\+Ignore\+Mapping (\begin{DoxyParamCaption}\item[{string}]{key,  }\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Adds a flag indicating whether tests with the same key should be ignored. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to ignore tests for.\\
+\hline
+{\em value} & A boolean value indicating whether the tests should be ignored.\\
+\hline
+\end{DoxyParams}
+
+
+An example in which tests are ignored in the Mac editor only. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_unity_editor}{UnityEditor}};}
+\DoxyCodeLine{\textcolor{keyword}{using }NUnit.Framework;}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_unity_engine_1_1_test_tools}{UnityEngine.TestTools}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{[InitializeOnLoad]}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }OnLoad}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{static} OnLoad()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        var editorIsOSX = \textcolor{keyword}{false};}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#if UNITY\_EDITOR\_OSX}}
+\DoxyCodeLine{        editorIsOSX = \textcolor{keyword}{true};}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute}{ConditionalIgnoreAttribute}}.\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute_a28de322ff132c36b3801121667407a83}{AddConditionalIgnoreMapping}}(\textcolor{stringliteral}{"{}IgnoreInMacEditor"{}}, editorIsOSX);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }MyTestClass}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    [Test, ConditionalIgnore(\textcolor{stringliteral}{"{}IgnoreInMacEditor"{}}, \textcolor{stringliteral}{"{}Ignored on Mac editor."{}})]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} TestNeverRunningInMacEditor()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        Assert.Pass();}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute_a4a0e17fc4c4d6da061d0d875efdb210a}\label{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute_a4a0e17fc4c4d6da061d0d875efdb210a}} 
+\index{UnityEngine.TestTools.ConditionalIgnoreAttribute@{UnityEngine.TestTools.ConditionalIgnoreAttribute}!ApplyToTest@{ApplyToTest}}
+\index{ApplyToTest@{ApplyToTest}!UnityEngine.TestTools.ConditionalIgnoreAttribute@{UnityEngine.TestTools.ConditionalIgnoreAttribute}}
+\doxysubsubsection{\texorpdfstring{ApplyToTest()}{ApplyToTest()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Test\+Tools.\+Conditional\+Ignore\+Attribute.\+Apply\+To\+Test (\begin{DoxyParamCaption}\item[{Test}]{test }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Modifies a test as defined for the specific attribute. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em test} & The test to modify\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Engine.\+Test\+Runner/\+NUnit\+Extensions/\+Attributes/Conditional\+Ignore\+Attribute.\+cs\end{DoxyCompactItemize}

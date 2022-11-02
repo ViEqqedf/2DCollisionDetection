@@ -1,0 +1,277 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_image}{}\doxysection{Unity\+Engine.\+UI.\+Image Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_image}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}}
+
+
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} is a textured element in the \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} hierarchy.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Image\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.821138cm]{class_unity_engine_1_1_u_i_1_1_image}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44}{Type}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44a1fbb1e3943c2c6c560247ac8f9289780}{Simple}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44afa6a7b9fa989f179f6bbf2796bf4337c}{Sliced}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44a320af35370596a9ea75686c6624a9f07}{Tiled}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44ad9d586f8c792f8f661052af42536323c}{Filled}}
+ \}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} fill type controls how to display the image. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264}{Fill\+Method}} \{ \newline
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264ac1b5fa03ecdb95d4a45dd1c40b02527f}{Horizontal}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264a06ce2a25e5d12c166a36f654dbea6012}{Vertical}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264ae0dfa985a2ef37ae7d082e900b6238e3}{Radial90}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264a6bd7fc00f06215961bb5f04035792535}{Radial180}}
+, \newline
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264a48e5a36465bbfc8b2a203cb260e29cfe}{Radial360}}
+ \}
+\begin{DoxyCompactList}\small\item\em The possible fill method types for a Filled \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a7930dd0018586b7a106c332efb22cc8b}{Origin\+Horizontal}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a7930dd0018586b7a106c332efb22cc8ba945d5e233cf7d6240f6b783b36a374ff}{Left}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a7930dd0018586b7a106c332efb22cc8ba92b09c7c48c520c3c55e497875da437c}{Right}}
+ \}
+\begin{DoxyCompactList}\small\item\em Origin for the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264ac1b5fa03ecdb95d4a45dd1c40b02527f}{Image.\+Fill\+Method.\+Horizontal}}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a846c0b9bc908f5b0f98bfb1f199c2c36}{Origin\+Vertical}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a846c0b9bc908f5b0f98bfb1f199c2c36a2ad9d63b69c4a10a5cc9cad923133bc4}{Bottom}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a846c0b9bc908f5b0f98bfb1f199c2c36aa4ffdcf0dc1f31b9acaf295d75b51d00}{Top}}
+ \}
+\begin{DoxyCompactList}\small\item\em Origin for the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264a06ce2a25e5d12c166a36f654dbea6012}{Image.\+Fill\+Method.\+Vertical}}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59f}{Origin90}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59fa98e5a1c44509157ebcaf46c515c78875}{Bottom\+Left}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59fab32beb056fbfe36afbabc6c88c81ab36}{Top\+Left}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59fa1d85a557894c340c318493f33bfa8efb}{Top\+Right}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59fa9146bfc669fddc88db2c4d89297d0e9a}{Bottom\+Right}}
+ \}
+\begin{DoxyCompactList}\small\item\em Origin for the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264ae0dfa985a2ef37ae7d082e900b6238e3}{Image.\+Fill\+Method.\+Radial90}}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885}{Origin180}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885a2ad9d63b69c4a10a5cc9cad923133bc4}{Bottom}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885a945d5e233cf7d6240f6b783b36a374ff}{Left}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885aa4ffdcf0dc1f31b9acaf295d75b51d00}{Top}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885a92b09c7c48c520c3c55e497875da437c}{Right}}
+ \}
+\begin{DoxyCompactList}\small\item\em Origin for the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264a6bd7fc00f06215961bb5f04035792535}{Image.\+Fill\+Method.\+Radial180}}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312}{Origin360}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312a2ad9d63b69c4a10a5cc9cad923133bc4}{Bottom}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312a92b09c7c48c520c3c55e497875da437c}{Right}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312aa4ffdcf0dc1f31b9acaf295d75b51d00}{Top}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312a945d5e233cf7d6240f6b783b36a374ff}{Left}}
+ \}
+\begin{DoxyCompactList}\small\item\em One of the points of the Arc for the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264a48e5a36465bbfc8b2a203cb260e29cfe}{Image.\+Fill\+Method.\+Radial360}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a62939b0c582cfa78bf52c426c0a5b063}\label{class_unity_engine_1_1_u_i_1_1_image_a62939b0c582cfa78bf52c426c0a5b063}} 
+static Material {\bfseries s\+\_\+\+ETC1\+Default\+UI} = null
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} is a textured element in the \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} hierarchy. 
+
+Displays a Sprite inside the \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} System. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264}\label{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264}} 
+\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!FillMethod@{FillMethod}}
+\index{FillMethod@{FillMethod}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}
+\doxysubsubsection{\texorpdfstring{FillMethod}{FillMethod}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264}{Unity\+Engine.\+UI.\+Image.\+Fill\+Method}}}
+
+
+
+The possible fill method types for a Filled \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Horizontal@{Horizontal}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Horizontal@{Horizontal}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264ac1b5fa03ecdb95d4a45dd1c40b02527f}\label{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264ac1b5fa03ecdb95d4a45dd1c40b02527f}} 
+Horizontal&The \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} will be filled Horizontally. The \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} will be Cropped at either left or right size depending on Image.\+fill\+Origing at the Image.\+fill\+Amount \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Vertical@{Vertical}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Vertical@{Vertical}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264a06ce2a25e5d12c166a36f654dbea6012}\label{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264a06ce2a25e5d12c166a36f654dbea6012}} 
+Vertical&The \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} will be filled Vertically. The \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} will be Cropped at either top or Bottom size depending on Image.\+fill\+Origin at the Image.\+fill\+Amount \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Radial90@{Radial90}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Radial90@{Radial90}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264ae0dfa985a2ef37ae7d082e900b6238e3}\label{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264ae0dfa985a2ef37ae7d082e900b6238e3}} 
+Radial90&The \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} will be filled Radially with the radial center in one of the corners. For this method the Image.\+fill\+Amount represents an angle between 0 and 90 degrees. The \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} will be cut by a line passing at the Image.\+fill\+Origin at the specified angle. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Radial180@{Radial180}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Radial180@{Radial180}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264a6bd7fc00f06215961bb5f04035792535}\label{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264a6bd7fc00f06215961bb5f04035792535}} 
+Radial180&The \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} will be filled Radially with the radial center in one of the edges. For this method the Image.\+fill\+Amount represents an angle between 0 and 180 degrees. The \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} will be cut by a line passing at the Image.\+fill\+Origin at the specified angle. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Radial360@{Radial360}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Radial360@{Radial360}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264a48e5a36465bbfc8b2a203cb260e29cfe}\label{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264a48e5a36465bbfc8b2a203cb260e29cfe}} 
+Radial360&The \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} will be filled Radially with the radial center at the center. or this method the Image.\+fill\+Amount represents an angle between 0 and 360 degrees. The Arc defined by the center of the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}}, the Image.\+fill\+Origin and the angle will be cut from the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}}. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885}\label{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885}} 
+\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Origin180@{Origin180}}
+\index{Origin180@{Origin180}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}
+\doxysubsubsection{\texorpdfstring{Origin180}{Origin180}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885}{Unity\+Engine.\+UI.\+Image.\+Origin180}}}
+
+
+
+Origin for the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264a6bd7fc00f06215961bb5f04035792535}{Image.\+Fill\+Method.\+Radial180}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bottom@{Bottom}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Bottom@{Bottom}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885a2ad9d63b69c4a10a5cc9cad923133bc4}\label{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885a2ad9d63b69c4a10a5cc9cad923133bc4}} 
+Bottom&Center of the radial at the center of the Bottom edge. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Left@{Left}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Left@{Left}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885a945d5e233cf7d6240f6b783b36a374ff}\label{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885a945d5e233cf7d6240f6b783b36a374ff}} 
+Left&Center of the radial at the center of the Left edge. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Top@{Top}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Top@{Top}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885aa4ffdcf0dc1f31b9acaf295d75b51d00}\label{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885aa4ffdcf0dc1f31b9acaf295d75b51d00}} 
+Top&Center of the radial at the center of the Top edge. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Right@{Right}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Right@{Right}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885a92b09c7c48c520c3c55e497875da437c}\label{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885a92b09c7c48c520c3c55e497875da437c}} 
+Right&Center of the radial at the center of the Right edge. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312}\label{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312}} 
+\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Origin360@{Origin360}}
+\index{Origin360@{Origin360}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}
+\doxysubsubsection{\texorpdfstring{Origin360}{Origin360}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312}{Unity\+Engine.\+UI.\+Image.\+Origin360}}}
+
+
+
+One of the points of the Arc for the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264a48e5a36465bbfc8b2a203cb260e29cfe}{Image.\+Fill\+Method.\+Radial360}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bottom@{Bottom}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Bottom@{Bottom}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312a2ad9d63b69c4a10a5cc9cad923133bc4}\label{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312a2ad9d63b69c4a10a5cc9cad923133bc4}} 
+Bottom&Arc starting at the center of the Bottom edge. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Right@{Right}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Right@{Right}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312a92b09c7c48c520c3c55e497875da437c}\label{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312a92b09c7c48c520c3c55e497875da437c}} 
+Right&Arc starting at the center of the Right edge. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Top@{Top}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Top@{Top}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312aa4ffdcf0dc1f31b9acaf295d75b51d00}\label{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312aa4ffdcf0dc1f31b9acaf295d75b51d00}} 
+Top&Arc starting at the center of the Top edge. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Left@{Left}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Left@{Left}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312a945d5e233cf7d6240f6b783b36a374ff}\label{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312a945d5e233cf7d6240f6b783b36a374ff}} 
+Left&Arc starting at the center of the Left edge. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59f}\label{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59f}} 
+\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Origin90@{Origin90}}
+\index{Origin90@{Origin90}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}
+\doxysubsubsection{\texorpdfstring{Origin90}{Origin90}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59f}{Unity\+Engine.\+UI.\+Image.\+Origin90}}}
+
+
+
+Origin for the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264ae0dfa985a2ef37ae7d082e900b6238e3}{Image.\+Fill\+Method.\+Radial90}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BottomLeft@{BottomLeft}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!BottomLeft@{BottomLeft}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59fa98e5a1c44509157ebcaf46c515c78875}\label{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59fa98e5a1c44509157ebcaf46c515c78875}} 
+Bottom\+Left&Radial starting at the Bottom Left corner. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TopLeft@{TopLeft}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!TopLeft@{TopLeft}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59fab32beb056fbfe36afbabc6c88c81ab36}\label{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59fab32beb056fbfe36afbabc6c88c81ab36}} 
+Top\+Left&Radial starting at the Top Left corner. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TopRight@{TopRight}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!TopRight@{TopRight}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59fa1d85a557894c340c318493f33bfa8efb}\label{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59fa1d85a557894c340c318493f33bfa8efb}} 
+Top\+Right&Radial starting at the Top Right corner. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BottomRight@{BottomRight}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!BottomRight@{BottomRight}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59fa9146bfc669fddc88db2c4d89297d0e9a}\label{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59fa9146bfc669fddc88db2c4d89297d0e9a}} 
+Bottom\+Right&Radial starting at the Bottom Right corner. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a7930dd0018586b7a106c332efb22cc8b}\label{class_unity_engine_1_1_u_i_1_1_image_a7930dd0018586b7a106c332efb22cc8b}} 
+\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!OriginHorizontal@{OriginHorizontal}}
+\index{OriginHorizontal@{OriginHorizontal}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}
+\doxysubsubsection{\texorpdfstring{OriginHorizontal}{OriginHorizontal}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a7930dd0018586b7a106c332efb22cc8b}{Unity\+Engine.\+UI.\+Image.\+Origin\+Horizontal}}}
+
+
+
+Origin for the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264ac1b5fa03ecdb95d4a45dd1c40b02527f}{Image.\+Fill\+Method.\+Horizontal}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Left@{Left}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Left@{Left}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a7930dd0018586b7a106c332efb22cc8ba945d5e233cf7d6240f6b783b36a374ff}\label{class_unity_engine_1_1_u_i_1_1_image_a7930dd0018586b7a106c332efb22cc8ba945d5e233cf7d6240f6b783b36a374ff}} 
+Left&\texorpdfstring{$>$}{>}Origin at the Left side. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Right@{Right}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Right@{Right}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a7930dd0018586b7a106c332efb22cc8ba92b09c7c48c520c3c55e497875da437c}\label{class_unity_engine_1_1_u_i_1_1_image_a7930dd0018586b7a106c332efb22cc8ba92b09c7c48c520c3c55e497875da437c}} 
+Right&\texorpdfstring{$>$}{>}Origin at the Right side. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a846c0b9bc908f5b0f98bfb1f199c2c36}\label{class_unity_engine_1_1_u_i_1_1_image_a846c0b9bc908f5b0f98bfb1f199c2c36}} 
+\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!OriginVertical@{OriginVertical}}
+\index{OriginVertical@{OriginVertical}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}
+\doxysubsubsection{\texorpdfstring{OriginVertical}{OriginVertical}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a846c0b9bc908f5b0f98bfb1f199c2c36}{Unity\+Engine.\+UI.\+Image.\+Origin\+Vertical}}}
+
+
+
+Origin for the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264a06ce2a25e5d12c166a36f654dbea6012}{Image.\+Fill\+Method.\+Vertical}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bottom@{Bottom}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Bottom@{Bottom}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a846c0b9bc908f5b0f98bfb1f199c2c36a2ad9d63b69c4a10a5cc9cad923133bc4}\label{class_unity_engine_1_1_u_i_1_1_image_a846c0b9bc908f5b0f98bfb1f199c2c36a2ad9d63b69c4a10a5cc9cad923133bc4}} 
+Bottom&\texorpdfstring{$>$}{>}Origin at the Bottom Edge. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Top@{Top}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Top@{Top}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_a846c0b9bc908f5b0f98bfb1f199c2c36aa4ffdcf0dc1f31b9acaf295d75b51d00}\label{class_unity_engine_1_1_u_i_1_1_image_a846c0b9bc908f5b0f98bfb1f199c2c36aa4ffdcf0dc1f31b9acaf295d75b51d00}} 
+Top&\texorpdfstring{$>$}{>}Origin at the Top Edge. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44}\label{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44}} 
+\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Type@{Type}}
+\index{Type@{Type}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44}{Unity\+Engine.\+UI.\+Image.\+Type}}}
+
+
+
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} fill type controls how to display the image. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Simple@{Simple}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Simple@{Simple}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44a1fbb1e3943c2c6c560247ac8f9289780}\label{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44a1fbb1e3943c2c6c560247ac8f9289780}} 
+Simple&Displays the full \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} This setting shows the entire image stretched across the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}}\textquotesingle{}s Rect\+Transform \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sliced@{Sliced}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Sliced@{Sliced}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44afa6a7b9fa989f179f6bbf2796bf4337c}\label{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44afa6a7b9fa989f179f6bbf2796bf4337c}} 
+Sliced&Displays the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} as a 9-\/sliced graphic. A 9-\/sliced image displays a central area stretched across the image surrounded by a border comprising of 4 corners and 4 stretched edges.
+
+This has the effect of creating a resizable skinned rectangular element suitable for dialog boxes, windows, and general \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} elements.
+
+Note\+: For this method to work properly the Sprite assigned to Image.\+sprite needs to have Sprite.\+border defined. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Tiled@{Tiled}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Tiled@{Tiled}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44a320af35370596a9ea75686c6624a9f07}\label{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44a320af35370596a9ea75686c6624a9f07}} 
+Tiled&Displays a sliced Sprite with its resizable sections tiled instead of stretched. A Tiled image behaves similarly to a \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44afa6a7b9fa989f179f6bbf2796bf4337c}{UI.\+Image.\+Type.\+Sliced}}$\vert$\+Sliced image, except that the resizable sections of the image are repeated instead of being stretched. This can be useful for detailed \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} graphics that do not look good when stretched.
+
+It uses the Sprite.\+border value to determine how each part (border and center) should be tiled.
+
+The \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} sections will repeat the corresponding section in the Sprite until the whole section is filled. The corner sections will be unaffected and will draw in the same way as a Sliced \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}}. The edges will repeat along their lengths. The center section will repeat across the whole central part of the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}}.
+
+The \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} section will repeat the corresponding section in the Sprite until the whole section is filled.
+
+Be aware that if you are tiling a Sprite with borders or a packed sprite, a mesh will be generated to create the tiles. The size of the mesh will be limited to 16250 quads; if your tiling would require more tiles, the size of the tiles will be enlarged to ensure that the number of generated quads stays below this limit.
+
+For optimum efficiency, use a Sprite with no borders and with no packing, and make sure the Sprite.\+texture wrap mode is set to Texture\+Wrap\+Mode.\+Repeat.\+These settings will prevent the generation of additional geometry.\+If this is not possible, limit the number of tiles in your \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Filled@{Filled}!UnityEngine.UI.Image@{UnityEngine.UI.Image}}\index{UnityEngine.UI.Image@{UnityEngine.UI.Image}!Filled@{Filled}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44ad9d586f8c792f8f661052af42536323c}\label{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44ad9d586f8c792f8f661052af42536323c}} 
+Filled&Displays only a portion of the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}}. A Filled \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} will display a section of the Sprite, with the rest of the Rect\+Transform left transparent. The Image.\+fill\+Amount determines how much of the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} to show, and Image.\+fill\+Method controls the shape in which the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} will be cut.
+
+This can be used for example to display circular or linear status information such as timers, health bars, and loading bars. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/Image.\+cs\end{DoxyCompactItemize}

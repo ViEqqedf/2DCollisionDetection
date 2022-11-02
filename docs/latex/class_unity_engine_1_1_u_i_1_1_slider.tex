@@ -1,0 +1,69 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_slider}{}\doxysection{Unity\+Engine.\+UI.\+Slider Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_slider}\index{UnityEngine.UI.Slider@{UnityEngine.UI.Slider}}
+
+
+A standard slider that can be moved between a minimum and maximum value.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Slider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.778157cm]{class_unity_engine_1_1_u_i_1_1_slider}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_slider_1_1_slider_event}{Slider\+Event}}
+\begin{DoxyCompactList}\small\item\em Event type used by the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_slider}{UI.\+Slider}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_slider_a1f6edd535923dd43e95157369b1224c9}{Direction}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_slider_a1f6edd535923dd43e95157369b1224c9ad1e80c506f4c89e3c4fb1c1b4867a03c}{Left\+To\+Right}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_slider_a1f6edd535923dd43e95157369b1224c9ab7b0ea3028791689ea070674776855e2}{Right\+To\+Left}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_slider_a1f6edd535923dd43e95157369b1224c9a63dc349be51108dcfd197c7ab02b486a}{Bottom\+To\+Top}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_slider_a1f6edd535923dd43e95157369b1224c9af2b1a19a8d0f523d042f9ede79a80804}{Top\+To\+Bottom}}
+ \}
+\begin{DoxyCompactList}\small\item\em Setting that indicates one of four directions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A standard slider that can be moved between a minimum and maximum value. 
+
+The slider component is a \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}} that controls a fill, a handle, or both. The fill, when used, spans from the minimum value to the current value while the handle, when used, follow the current value. The anchors of the fill and handle Rect\+Transforms are driven by the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_slider}{Slider}}. The fill and handle can be direct children of the Game\+Object with the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_slider}{Slider}}, or intermediary Rect\+Transforms can be placed in between for additional control. When a change to the slider value occurs, a callback is sent to any registered listeners of UI.\+Slider.\+on\+Value\+Changed. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_slider_a1f6edd535923dd43e95157369b1224c9}\label{class_unity_engine_1_1_u_i_1_1_slider_a1f6edd535923dd43e95157369b1224c9}} 
+\index{UnityEngine.UI.Slider@{UnityEngine.UI.Slider}!Direction@{Direction}}
+\index{Direction@{Direction}!UnityEngine.UI.Slider@{UnityEngine.UI.Slider}}
+\doxysubsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_slider_a1f6edd535923dd43e95157369b1224c9}{Unity\+Engine.\+UI.\+Slider.\+Direction}}}
+
+
+
+Setting that indicates one of four directions. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LeftToRight@{LeftToRight}!UnityEngine.UI.Slider@{UnityEngine.UI.Slider}}\index{UnityEngine.UI.Slider@{UnityEngine.UI.Slider}!LeftToRight@{LeftToRight}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_slider_a1f6edd535923dd43e95157369b1224c9ad1e80c506f4c89e3c4fb1c1b4867a03c}\label{class_unity_engine_1_1_u_i_1_1_slider_a1f6edd535923dd43e95157369b1224c9ad1e80c506f4c89e3c4fb1c1b4867a03c}} 
+Left\+To\+Right&From the left to the right \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RightToLeft@{RightToLeft}!UnityEngine.UI.Slider@{UnityEngine.UI.Slider}}\index{UnityEngine.UI.Slider@{UnityEngine.UI.Slider}!RightToLeft@{RightToLeft}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_slider_a1f6edd535923dd43e95157369b1224c9ab7b0ea3028791689ea070674776855e2}\label{class_unity_engine_1_1_u_i_1_1_slider_a1f6edd535923dd43e95157369b1224c9ab7b0ea3028791689ea070674776855e2}} 
+Right\+To\+Left&From the right to the left \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BottomToTop@{BottomToTop}!UnityEngine.UI.Slider@{UnityEngine.UI.Slider}}\index{UnityEngine.UI.Slider@{UnityEngine.UI.Slider}!BottomToTop@{BottomToTop}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_slider_a1f6edd535923dd43e95157369b1224c9a63dc349be51108dcfd197c7ab02b486a}\label{class_unity_engine_1_1_u_i_1_1_slider_a1f6edd535923dd43e95157369b1224c9a63dc349be51108dcfd197c7ab02b486a}} 
+Bottom\+To\+Top&From the bottom to the top. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TopToBottom@{TopToBottom}!UnityEngine.UI.Slider@{UnityEngine.UI.Slider}}\index{UnityEngine.UI.Slider@{UnityEngine.UI.Slider}!TopToBottom@{TopToBottom}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_slider_a1f6edd535923dd43e95157369b1224c9af2b1a19a8d0f523d042f9ede79a80804}\label{class_unity_engine_1_1_u_i_1_1_slider_a1f6edd535923dd43e95157369b1224c9af2b1a19a8d0f523d042f9ede79a80804}} 
+Top\+To\+Bottom&From the top to the bottom. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/Slider.\+cs\end{DoxyCompactItemize}

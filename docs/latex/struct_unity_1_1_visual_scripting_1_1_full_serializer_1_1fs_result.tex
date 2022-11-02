@@ -1,0 +1,118 @@
+\hypertarget{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{}\doxysection{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Result Struct Reference}
+\label{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}\index{Unity.VisualScripting.FullSerializer.fsResult@{Unity.VisualScripting.FullSerializer.fsResult}}
+
+
+The result of some sort of operation. A result is either successful or not, but if it is successful then there may be a set of warnings/messages associated with it. These warnings describe the performed error recovery operations.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_ad6863ced4a46a2f078b7410e8619ffdc}{Add\+Message}} (string message)
+\begin{DoxyCompactList}\small\item\em Adds a new message to this result. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_aa6efbe7bda6000aa7304c396c63579b8}\label{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_aa6efbe7bda6000aa7304c396c63579b8}} 
+void {\bfseries Add\+Messages} (\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} result)
+\begin{DoxyCompactList}\small\item\em Adds only the messages from the other result into this result, ignoring the success/failure status of the other result. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_ac73d053c59565d0696f41839281ccbf0}{Merge}} (\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} other)
+\begin{DoxyCompactList}\small\item\em Merges the other result into this one. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} the other result failed, then this one too will have failed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_a81300859bb353d6db107c32c3ac23568}\label{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_a81300859bb353d6db107c32c3ac23568}} 
+\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} {\bfseries Assert\+Success} ()
+\begin{DoxyCompactList}\small\item\em A simply utility method that will assert that this result is successful. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} it is not, then an exception is thrown. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_a4ec1e398e4365bba41faa82d45750b18}\label{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_a4ec1e398e4365bba41faa82d45750b18}} 
+\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} {\bfseries Assert\+Success\+Without\+Warnings} ()
+\begin{DoxyCompactList}\small\item\em A simple utility method that will assert that this result is successful and that there are no warning messages. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} throws an exception if either of those asserts are false. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_aecf654df2ef85d11d59d8081521ad298}\label{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_aecf654df2ef85d11d59d8081521ad298}} 
+static \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} {\bfseries Warn} (string warning)
+\begin{DoxyCompactList}\small\item\em Create a result that is successful but contains the given warning message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_a984e99a93587e675b3ab7a71ebf2a63d}\label{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_a984e99a93587e675b3ab7a71ebf2a63d}} 
+static \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} {\bfseries Fail} (string warning)
+\begin{DoxyCompactList}\small\item\em Create a result that failed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_afee7094899098f606d66060fcd547438}\label{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_afee7094899098f606d66060fcd547438}} 
+static \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} {\bfseries operator+} (\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} a, \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} b)
+\begin{DoxyCompactList}\small\item\em Only use this as +=! \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_ac9a15f9261a207df7d4860657859deb9}{Success}}
+\begin{DoxyCompactList}\small\item\em A successful result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_acdfca0c2d60233c53f8da2bebe785073}\label{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_acdfca0c2d60233c53f8da2bebe785073}} 
+bool {\bfseries Failed}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Did this result fail? \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} so, you can see the reasons why in {\ttfamily Raw\+Messages}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_a0abda5e88335b6625043ad49417f7785}\label{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_a0abda5e88335b6625043ad49417f7785}} 
+bool {\bfseries Succeeded}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Was the result a success? Note that even successful operations may have warning messages ({\ttfamily Raw\+Messages}) associated with them. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_abbae600de486fe88256c2478cc375dbb}\label{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_abbae600de486fe88256c2478cc375dbb}} 
+bool {\bfseries Has\+Warnings}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Does this result have any warnings? \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} says nothing about if it failed or succeeded, just if it has warning messages associated with it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_a6a11964436bbb5ede8e41050f6df42e5}\label{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_a6a11964436bbb5ede8e41050f6df42e5}} 
+Exception {\bfseries As\+Exception}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Utility method to convert the result to an exception. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} method is only defined is {\ttfamily Failed} returns true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_a4f51e28a9c86d4a16bad0d1942fdb334}\label{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_a4f51e28a9c86d4a16bad0d1942fdb334}} 
+IEnumerable$<$ string $>$ {\bfseries Raw\+Messages}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_a5094b2181d1981c85535e887789b4804}\label{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_a5094b2181d1981c85535e887789b4804}} 
+string {\bfseries Formatted\+Messages}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The result of some sort of operation. A result is either successful or not, but if it is successful then there may be a set of warnings/messages associated with it. These warnings describe the performed error recovery operations. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_ad6863ced4a46a2f078b7410e8619ffdc}\label{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_ad6863ced4a46a2f078b7410e8619ffdc}} 
+\index{Unity.VisualScripting.FullSerializer.fsResult@{Unity.VisualScripting.FullSerializer.fsResult}!AddMessage@{AddMessage}}
+\index{AddMessage@{AddMessage}!Unity.VisualScripting.FullSerializer.fsResult@{Unity.VisualScripting.FullSerializer.fsResult}}
+\doxysubsubsection{\texorpdfstring{AddMessage()}{AddMessage()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Result.\+Add\+Message (\begin{DoxyParamCaption}\item[{string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a new message to this result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_ac73d053c59565d0696f41839281ccbf0}\label{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_ac73d053c59565d0696f41839281ccbf0}} 
+\index{Unity.VisualScripting.FullSerializer.fsResult@{Unity.VisualScripting.FullSerializer.fsResult}!Merge@{Merge}}
+\index{Merge@{Merge}!Unity.VisualScripting.FullSerializer.fsResult@{Unity.VisualScripting.FullSerializer.fsResult}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Result.\+Merge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Merges the other result into this one. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} the other result failed, then this one too will have failed. 
+
+Note that you can use += instead of this method so that you don\textquotesingle{}t bury the actual method call that is generating the other \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}}. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_ac9a15f9261a207df7d4860657859deb9}\label{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result_ac9a15f9261a207df7d4860657859deb9}} 
+\index{Unity.VisualScripting.FullSerializer.fsResult@{Unity.VisualScripting.FullSerializer.fsResult}!Success@{Success}}
+\index{Success@{Success}!Unity.VisualScripting.FullSerializer.fsResult@{Unity.VisualScripting.FullSerializer.fsResult}}
+\doxysubsubsection{\texorpdfstring{Success}{Success}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Result.\+Success\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{keyword}{new} fsResult}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            \_success = \textcolor{keyword}{true}}
+\DoxyCodeLine{        \}}
+
+\end{DoxyCode}
+
+
+A successful result. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Core/\+Dependencies/\+Full\+Serializer/fs\+Result.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,136 @@
+\hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc}{}\doxysection{Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc Namespace Reference}
+\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc}\index{Unity.VisualScripting.Dependencies.NCalc@{Unity.VisualScripting.Dependencies.NCalc}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_binary_expression}{Binary\+Expression}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_evaluation_exception}{Evaluation\+Exception}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_evaluation_visitor}{Evaluation\+Visitor}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression}{Expression}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_function_args}{Function\+Args}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_function_expression}{Function\+Expression}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_identifier_expression}{Identifier\+Expression}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_logical_expression}{Logical\+Expression}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_logical_expression_visitor}{Logical\+Expression\+Visitor}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_n_calc_lexer}{NCalc\+Lexer}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_n_calc_parser}{NCalc\+Parser}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_parameter_args}{Parameter\+Args}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_serialization_visitor}{Serialization\+Visitor}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_ternary_expression}{Ternary\+Expression}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_unary_expression}{Unary\+Expression}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_value_expression}{Value\+Expression}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_aa5a18a3d2f9c9340624dd6ca15a9a77c}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_aa5a18a3d2f9c9340624dd6ca15a9a77c}} 
+enum {\bfseries Binary\+Expression\+Type} \{ \newline
+{\bfseries And}
+, {\bfseries Or}
+, {\bfseries Not\+Equal}
+, {\bfseries Lesser\+Or\+Equal}
+, \newline
+{\bfseries Greater\+Or\+Equal}
+, {\bfseries Lesser}
+, {\bfseries Greater}
+, {\bfseries Equal}
+, \newline
+{\bfseries Minus}
+, {\bfseries Plus}
+, {\bfseries Modulo}
+, {\bfseries Div}
+, \newline
+{\bfseries Times}
+, {\bfseries Bitwise\+Or}
+, {\bfseries Bitwise\+And}
+, {\bfseries Bitwise\+XOr}
+, \newline
+{\bfseries Left\+Shift}
+, {\bfseries Right\+Shift}
+, {\bfseries Unknown}
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393}{Evaluate\+Options}} \{ \newline
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393a6adf97f83acf6453d4a6a4b1070f3754}{None}} = 1
+, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393a37c903d9b43d2f21b2ad8ea520914e7a}{Ignore\+Case}} = 2
+, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393a9c2a36ed94b288fe8f5ce5b6b16d3fdd}{No\+Cache}} = 4
+, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393a7523fd1c755f1742c91af5d134500b8e}{Iterate\+Parameters}} = 8
+, \newline
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393a33ce8a1db87a077b906ff3ee4cafee40}{Round\+Away\+From\+Zero}} = 16
+ \}
+\begin{DoxyCompactList}\small\item\em Provides enumerated values to use to set evaluation options. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1bded15b9fea3ce10780f4d131b8e90b}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1bded15b9fea3ce10780f4d131b8e90b}} 
+enum {\bfseries Unary\+Expression\+Type} \{ {\bfseries Not}
+, {\bfseries Negate}
+, {\bfseries Bitwise\+Not}
+ \}
+\item 
+\mbox{\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a33dc236b1340e4f96b4cbb4c37b4706a}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a33dc236b1340e4f96b4cbb4c37b4706a}} 
+enum {\bfseries Value\+Type} \{ \newline
+{\bfseries Integer}
+, {\bfseries String}
+, {\bfseries Date\+Time}
+, {\bfseries Float}
+, \newline
+{\bfseries Boolean}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_ab796e25a4a6028437244a134433b3978}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_ab796e25a4a6028437244a134433b3978}} 
+delegate void {\bfseries Evaluate\+Function\+Handler} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}} flow, string name, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_function_args}{Function\+Args}} args)
+\item 
+\mbox{\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a48e4cd461f805375f51eb9e3652ffc15}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a48e4cd461f805375f51eb9e3652ffc15}} 
+delegate void {\bfseries Evaluate\+Parameter\+Handler} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}} flow, string name, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_parameter_args}{Parameter\+Args}} args)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393}} 
+\index{Unity.VisualScripting.Dependencies.NCalc@{Unity.VisualScripting.Dependencies.NCalc}!EvaluateOptions@{EvaluateOptions}}
+\index{EvaluateOptions@{EvaluateOptions}!Unity.VisualScripting.Dependencies.NCalc@{Unity.VisualScripting.Dependencies.NCalc}}
+\doxysubsubsection{\texorpdfstring{EvaluateOptions}{EvaluateOptions}}
+{\footnotesize\ttfamily enum Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc.\+Evaluate\+Options}
+
+
+
+Provides enumerated values to use to set evaluation options. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!Unity.VisualScripting.Dependencies.NCalc@{Unity.VisualScripting.Dependencies.NCalc}}\index{Unity.VisualScripting.Dependencies.NCalc@{Unity.VisualScripting.Dependencies.NCalc}!None@{None}}}\mbox{\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393a6adf97f83acf6453d4a6a4b1070f3754}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393a6adf97f83acf6453d4a6a4b1070f3754}} 
+None&Specifies that no options are set. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IgnoreCase@{IgnoreCase}!Unity.VisualScripting.Dependencies.NCalc@{Unity.VisualScripting.Dependencies.NCalc}}\index{Unity.VisualScripting.Dependencies.NCalc@{Unity.VisualScripting.Dependencies.NCalc}!IgnoreCase@{IgnoreCase}}}\mbox{\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393a37c903d9b43d2f21b2ad8ea520914e7a}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393a37c903d9b43d2f21b2ad8ea520914e7a}} 
+Ignore\+Case&Specifies case-\/insensitive matching. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NoCache@{NoCache}!Unity.VisualScripting.Dependencies.NCalc@{Unity.VisualScripting.Dependencies.NCalc}}\index{Unity.VisualScripting.Dependencies.NCalc@{Unity.VisualScripting.Dependencies.NCalc}!NoCache@{NoCache}}}\mbox{\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393a9c2a36ed94b288fe8f5ce5b6b16d3fdd}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393a9c2a36ed94b288fe8f5ce5b6b16d3fdd}} 
+No\+Cache&No-\/cache mode. Ingores any pre-\/compiled expression in the cache. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IterateParameters@{IterateParameters}!Unity.VisualScripting.Dependencies.NCalc@{Unity.VisualScripting.Dependencies.NCalc}}\index{Unity.VisualScripting.Dependencies.NCalc@{Unity.VisualScripting.Dependencies.NCalc}!IterateParameters@{IterateParameters}}}\mbox{\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393a7523fd1c755f1742c91af5d134500b8e}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393a7523fd1c755f1742c91af5d134500b8e}} 
+Iterate\+Parameters&Treats parameters as arrays and result a set of results. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RoundAwayFromZero@{RoundAwayFromZero}!Unity.VisualScripting.Dependencies.NCalc@{Unity.VisualScripting.Dependencies.NCalc}}\index{Unity.VisualScripting.Dependencies.NCalc@{Unity.VisualScripting.Dependencies.NCalc}!RoundAwayFromZero@{RoundAwayFromZero}}}\mbox{\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393a33ce8a1db87a077b906ff3ee4cafee40}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393a33ce8a1db87a077b906ff3ee4cafee40}} 
+Round\+Away\+From\+Zero&When using Round(), if a number is halfway between two others, it is rounded toward the nearest number that is away from zero. \\
+\hline
+
+\end{DoxyEnumFields}

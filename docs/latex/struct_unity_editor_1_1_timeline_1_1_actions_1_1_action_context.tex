@@ -1,0 +1,55 @@
+\hypertarget{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context}{}\doxysection{Unity\+Editor.\+Timeline.\+Actions.\+Action\+Context Struct Reference}
+\label{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context}\index{UnityEditor.Timeline.Actions.ActionContext@{UnityEditor.Timeline.Actions.ActionContext}}
+
+
+Action context to be used by actions.  
+
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context_a15f9c833cc1c17747a0c78678476076d}\label{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context_a15f9c833cc1c17747a0c78678476076d}} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} $>$ {\bfseries m\+\_\+\+Tracks}
+\item 
+\mbox{\Hypertarget{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context_a20946dd87055f48159a64358b400d385}\label{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context_a20946dd87055f48159a64358b400d385}} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} $>$ {\bfseries m\+\_\+\+Clips}
+\item 
+\mbox{\Hypertarget{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context_a0eafd18ee606c5e36e4606ef6ca7a307}\label{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context_a0eafd18ee606c5e36e4606ef6ca7a307}} 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} $>$ {\bfseries m\+\_\+\+Markers}
+\item 
+\mbox{\Hypertarget{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context_a294813120d6b6446b8602742dc9f77b1}\label{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context_a294813120d6b6446b8602742dc9f77b1}} 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} {\bfseries timeline}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} asset that is currently opened in the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context_a27e65f534cadbdacc55162784a4a1633}\label{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context_a27e65f534cadbdacc55162784a4a1633}} 
+Playable\+Director {\bfseries director}
+\begin{DoxyCompactList}\small\item\em The Playable\+Director that is used to play the current \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} asset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context_ad5f05376258b83bce8022144aaa235b1}\label{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context_ad5f05376258b83bce8022144aaa235b1}} 
+double? {\bfseries invocation\+Time}
+\begin{DoxyCompactList}\small\item\em Time based on the position of the cursor on the timeline (in seconds). null if the time is not available (in case of a shortcut for example). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context_a50627ef6f529375231af7c0cf52294d4}\label{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context_a50627ef6f529375231af7c0cf52294d4}} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} $>$ {\bfseries tracks}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Tracks that will be used by the actions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context_a6af7004bf0b2f978f33c6e7c6b05a7aa}\label{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context_a6af7004bf0b2f978f33c6e7c6b05a7aa}} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} $>$ {\bfseries clips}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Clips that will be used by the actions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context_aab35aa0aa9e13cc7ea937c48e1883a3b}\label{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context_aab35aa0aa9e13cc7ea937c48e1883a3b}} 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} $>$ {\bfseries markers}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Markers that will be used by the actions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Action context to be used by actions. 
+
+\begin{DoxySeeAlso}{See also}
+Invoker, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action}{Timeline\+Action}}
+
+
+\end{DoxySeeAlso}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Editor/\+Actions/Action\+Context.\+cs\end{DoxyCompactItemize}

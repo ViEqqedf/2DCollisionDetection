@@ -1,0 +1,269 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_state}{}\doxysection{Unity.\+Visual\+Scripting.\+State Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_state}\index{Unity.VisualScripting.State@{Unity.VisualScripting.State}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.135385cm]{class_unity_1_1_visual_scripting_1_1_state}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_1_1_data}{Data}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_1_1_debug_data}{Debug\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_a44f51f96fd4435f9bece76c166d66fa8}{Create\+Data}} ()
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_debug_data}{IGraph\+Element\+Debug\+Data}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_ab5f35400f5ebf0cd21fab6dae2ab9b82}{Create\+Debug\+Data}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_a470335550ba1314e423e5e29c061c627}{Before\+Remove}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_a30e033d78433e506aa71d6a3b6112e17}{Instantiate}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} instance)
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_aa5fbea407c8776e74664077ce9f1b9b5}{Uninstantiate}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} instance)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_a1c0bb2d2eba12abac5019537fab8f86b}\label{class_unity_1_1_visual_scripting_1_1_state_a1c0bb2d2eba12abac5019537fab8f86b}} 
+void {\bfseries Disconnect} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_ae7476a98ece5b77663bb9d3c52566ae9}{On\+Enter}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}} flow, State\+Enter\+Reason reason)
+\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_ae5caefe3f35842e2ee4955c84c80c0bb}{On\+Exit}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}} flow, State\+Exit\+Reason reason)
+\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_a58c6afb69d8da8e9b92402cefedc1583}{On\+Branch\+To}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}} flow, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state}{IState}} destination)
+\item 
+override \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_analytics_identifier}{Analytics\+Identifier}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_a06552086997fb4bf37df5b4ceed15cbc}{Get\+Analytics\+Identifier}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_aad86e054668ad2e3eef59b0974405624}\label{class_unity_1_1_visual_scripting_1_1_state_aad86e054668ad2e3eef59b0974405624}} 
+const float {\bfseries Default\+Width} = 170
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_ad927c0f2aa4e292e98ba8467324689bc}\label{class_unity_1_1_visual_scripting_1_1_state_ad927c0f2aa4e292e98ba8467324689bc}} 
+void {\bfseries Copy\+From} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state}{State}} source)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_ae15529a57ad8ae8b547b286759e682bb}\label{class_unity_1_1_visual_scripting_1_1_state_ae15529a57ad8ae8b547b286759e682bb}} 
+virtual void {\bfseries On\+Enter\+Implementation} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}} flow)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_acfe1c1fc2601e33bd1afc075016a6175}\label{class_unity_1_1_visual_scripting_1_1_state_acfe1c1fc2601e33bd1afc075016a6175}} 
+virtual void {\bfseries Update\+Implementation} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}} flow)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_a1fd32f8dd2fd9268827ab985e8e6e6bc}\label{class_unity_1_1_visual_scripting_1_1_state_a1fd32f8dd2fd9268827ab985e8e6e6bc}} 
+virtual void {\bfseries Fixed\+Update\+Implementation} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}} flow)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_ab1e05ab1c33e5eac0aceba688815c024}\label{class_unity_1_1_visual_scripting_1_1_state_ab1e05ab1c33e5eac0aceba688815c024}} 
+virtual void {\bfseries Late\+Update\+Implementation} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}} flow)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_a1fda9cf71b0725d0d902bb3b695d0973}\label{class_unity_1_1_visual_scripting_1_1_state_a1fda9cf71b0725d0d902bb3b695d0973}} 
+virtual void {\bfseries On\+Exit\+Implementation} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}} flow)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_a63c2ee900d85ee6ba147d3cd18899b55}{is\+Start}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_a6aa9039bc5a83136bcaeb1d2ef24df38}{can\+Be\+Source}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_aa449f97baf19c20baa15783651e91164}{can\+Be\+Destination}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state_transition}{IState\+Transition}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_a37574470159be8257fd981e6b4686d10}{outgoing\+Transitions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state_transition}{IState\+Transition}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_a9565467fdbe4ebf8f2f02d6433113698}{incoming\+Transitions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_a33afc309d049153cde6200ffe81fdf4a}\label{class_unity_1_1_visual_scripting_1_1_state_a33afc309d049153cde6200ffe81fdf4a}} 
+List$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state_transition}{IState\+Transition}} $>$ {\bfseries outgoing\+Transitions\+No\+Alloc}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state_transition}{IState\+Transition}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_a4b23306fa94231f13ca7f7bff2c13162}{transitions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Vector2 \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_a7bf83994ab05c4cb084e32865b726b85}{position}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_abb03ef3d33cf3cc6f3de64d1fd01fa8b}{width}} = Default\+Width\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_a470335550ba1314e423e5e29c061c627}\label{class_unity_1_1_visual_scripting_1_1_state_a470335550ba1314e423e5e29c061c627}} 
+\index{Unity.VisualScripting.State@{Unity.VisualScripting.State}!BeforeRemove@{BeforeRemove}}
+\index{BeforeRemove@{BeforeRemove}!Unity.VisualScripting.State@{Unity.VisualScripting.State}}
+\doxysubsubsection{\texorpdfstring{BeforeRemove()}{BeforeRemove()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+State.\+Before\+Remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_element}{Unity.\+Visual\+Scripting.\+Graph\+Element$<$ State\+Graph $>$}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_a44f51f96fd4435f9bece76c166d66fa8}\label{class_unity_1_1_visual_scripting_1_1_state_a44f51f96fd4435f9bece76c166d66fa8}} 
+\index{Unity.VisualScripting.State@{Unity.VisualScripting.State}!CreateData@{CreateData}}
+\index{CreateData@{CreateData}!Unity.VisualScripting.State@{Unity.VisualScripting.State}}
+\doxysubsubsection{\texorpdfstring{CreateData()}{CreateData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}} Unity.\+Visual\+Scripting.\+State.\+Create\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_with_data}{Unity.\+Visual\+Scripting.\+IGraph\+Element\+With\+Data}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_ab5f35400f5ebf0cd21fab6dae2ab9b82}\label{class_unity_1_1_visual_scripting_1_1_state_ab5f35400f5ebf0cd21fab6dae2ab9b82}} 
+\index{Unity.VisualScripting.State@{Unity.VisualScripting.State}!CreateDebugData@{CreateDebugData}}
+\index{CreateDebugData@{CreateDebugData}!Unity.VisualScripting.State@{Unity.VisualScripting.State}}
+\doxysubsubsection{\texorpdfstring{CreateDebugData()}{CreateDebugData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_debug_data}{IGraph\+Element\+Debug\+Data}} Unity.\+Visual\+Scripting.\+State.\+Create\+Debug\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_with_debug_data}{Unity.\+Visual\+Scripting.\+IGraph\+Element\+With\+Debug\+Data}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_a06552086997fb4bf37df5b4ceed15cbc}\label{class_unity_1_1_visual_scripting_1_1_state_a06552086997fb4bf37df5b4ceed15cbc}} 
+\index{Unity.VisualScripting.State@{Unity.VisualScripting.State}!GetAnalyticsIdentifier@{GetAnalyticsIdentifier}}
+\index{GetAnalyticsIdentifier@{GetAnalyticsIdentifier}!Unity.VisualScripting.State@{Unity.VisualScripting.State}}
+\doxysubsubsection{\texorpdfstring{GetAnalyticsIdentifier()}{GetAnalyticsIdentifier()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_analytics_identifier}{Analytics\+Identifier}} Unity.\+Visual\+Scripting.\+State.\+Get\+Analytics\+Identifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_element}{Unity.\+Visual\+Scripting.\+Graph\+Element$<$ State\+Graph $>$}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_a30e033d78433e506aa71d6a3b6112e17}\label{class_unity_1_1_visual_scripting_1_1_state_a30e033d78433e506aa71d6a3b6112e17}} 
+\index{Unity.VisualScripting.State@{Unity.VisualScripting.State}!Instantiate@{Instantiate}}
+\index{Instantiate@{Instantiate}!Unity.VisualScripting.State@{Unity.VisualScripting.State}}
+\doxysubsubsection{\texorpdfstring{Instantiate()}{Instantiate()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+State.\+Instantiate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}}}]{instance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_element}{Unity.\+Visual\+Scripting.\+Graph\+Element$<$ State\+Graph $>$}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_a58c6afb69d8da8e9b92402cefedc1583}\label{class_unity_1_1_visual_scripting_1_1_state_a58c6afb69d8da8e9b92402cefedc1583}} 
+\index{Unity.VisualScripting.State@{Unity.VisualScripting.State}!OnBranchTo@{OnBranchTo}}
+\index{OnBranchTo@{OnBranchTo}!Unity.VisualScripting.State@{Unity.VisualScripting.State}}
+\doxysubsubsection{\texorpdfstring{OnBranchTo()}{OnBranchTo()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+State.\+On\+Branch\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}}}]{flow,  }\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state}{IState}}}]{destination }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state}{Unity.\+Visual\+Scripting.\+IState}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_ae7476a98ece5b77663bb9d3c52566ae9}\label{class_unity_1_1_visual_scripting_1_1_state_ae7476a98ece5b77663bb9d3c52566ae9}} 
+\index{Unity.VisualScripting.State@{Unity.VisualScripting.State}!OnEnter@{OnEnter}}
+\index{OnEnter@{OnEnter}!Unity.VisualScripting.State@{Unity.VisualScripting.State}}
+\doxysubsubsection{\texorpdfstring{OnEnter()}{OnEnter()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+State.\+On\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}}}]{flow,  }\item[{State\+Enter\+Reason}]{reason }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state}{Unity.\+Visual\+Scripting.\+IState}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_ae5caefe3f35842e2ee4955c84c80c0bb}\label{class_unity_1_1_visual_scripting_1_1_state_ae5caefe3f35842e2ee4955c84c80c0bb}} 
+\index{Unity.VisualScripting.State@{Unity.VisualScripting.State}!OnExit@{OnExit}}
+\index{OnExit@{OnExit}!Unity.VisualScripting.State@{Unity.VisualScripting.State}}
+\doxysubsubsection{\texorpdfstring{OnExit()}{OnExit()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+State.\+On\+Exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}}}]{flow,  }\item[{State\+Exit\+Reason}]{reason }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state}{Unity.\+Visual\+Scripting.\+IState}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_aa5fbea407c8776e74664077ce9f1b9b5}\label{class_unity_1_1_visual_scripting_1_1_state_aa5fbea407c8776e74664077ce9f1b9b5}} 
+\index{Unity.VisualScripting.State@{Unity.VisualScripting.State}!Uninstantiate@{Uninstantiate}}
+\index{Uninstantiate@{Uninstantiate}!Unity.VisualScripting.State@{Unity.VisualScripting.State}}
+\doxysubsubsection{\texorpdfstring{Uninstantiate()}{Uninstantiate()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+State.\+Uninstantiate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}}}]{instance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_element}{Unity.\+Visual\+Scripting.\+Graph\+Element$<$ State\+Graph $>$}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_aa449f97baf19c20baa15783651e91164}\label{class_unity_1_1_visual_scripting_1_1_state_aa449f97baf19c20baa15783651e91164}} 
+\index{Unity.VisualScripting.State@{Unity.VisualScripting.State}!canBeDestination@{canBeDestination}}
+\index{canBeDestination@{canBeDestination}!Unity.VisualScripting.State@{Unity.VisualScripting.State}}
+\doxysubsubsection{\texorpdfstring{canBeDestination}{canBeDestination}}
+{\footnotesize\ttfamily virtual bool Unity.\+Visual\+Scripting.\+State.\+can\+Be\+Destination\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state}{Unity.\+Visual\+Scripting.\+IState}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_a6aa9039bc5a83136bcaeb1d2ef24df38}\label{class_unity_1_1_visual_scripting_1_1_state_a6aa9039bc5a83136bcaeb1d2ef24df38}} 
+\index{Unity.VisualScripting.State@{Unity.VisualScripting.State}!canBeSource@{canBeSource}}
+\index{canBeSource@{canBeSource}!Unity.VisualScripting.State@{Unity.VisualScripting.State}}
+\doxysubsubsection{\texorpdfstring{canBeSource}{canBeSource}}
+{\footnotesize\ttfamily virtual bool Unity.\+Visual\+Scripting.\+State.\+can\+Be\+Source\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state}{Unity.\+Visual\+Scripting.\+IState}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_a9565467fdbe4ebf8f2f02d6433113698}\label{class_unity_1_1_visual_scripting_1_1_state_a9565467fdbe4ebf8f2f02d6433113698}} 
+\index{Unity.VisualScripting.State@{Unity.VisualScripting.State}!incomingTransitions@{incomingTransitions}}
+\index{incomingTransitions@{incomingTransitions}!Unity.VisualScripting.State@{Unity.VisualScripting.State}}
+\doxysubsubsection{\texorpdfstring{incomingTransitions}{incomingTransitions}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state_transition}{IState\+Transition}}$>$ Unity.\+Visual\+Scripting.\+State.\+incoming\+Transitions\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state}{Unity.\+Visual\+Scripting.\+IState}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_a63c2ee900d85ee6ba147d3cd18899b55}\label{class_unity_1_1_visual_scripting_1_1_state_a63c2ee900d85ee6ba147d3cd18899b55}} 
+\index{Unity.VisualScripting.State@{Unity.VisualScripting.State}!isStart@{isStart}}
+\index{isStart@{isStart}!Unity.VisualScripting.State@{Unity.VisualScripting.State}}
+\doxysubsubsection{\texorpdfstring{isStart}{isStart}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+State.\+is\+Start\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state}{Unity.\+Visual\+Scripting.\+IState}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_a37574470159be8257fd981e6b4686d10}\label{class_unity_1_1_visual_scripting_1_1_state_a37574470159be8257fd981e6b4686d10}} 
+\index{Unity.VisualScripting.State@{Unity.VisualScripting.State}!outgoingTransitions@{outgoingTransitions}}
+\index{outgoingTransitions@{outgoingTransitions}!Unity.VisualScripting.State@{Unity.VisualScripting.State}}
+\doxysubsubsection{\texorpdfstring{outgoingTransitions}{outgoingTransitions}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state_transition}{IState\+Transition}}$>$ Unity.\+Visual\+Scripting.\+State.\+outgoing\+Transitions\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state}{Unity.\+Visual\+Scripting.\+IState}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_a7bf83994ab05c4cb084e32865b726b85}\label{class_unity_1_1_visual_scripting_1_1_state_a7bf83994ab05c4cb084e32865b726b85}} 
+\index{Unity.VisualScripting.State@{Unity.VisualScripting.State}!position@{position}}
+\index{position@{position}!Unity.VisualScripting.State@{Unity.VisualScripting.State}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily Vector2 Unity.\+Visual\+Scripting.\+State.\+position\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state}{Unity.\+Visual\+Scripting.\+IState}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_a4b23306fa94231f13ca7f7bff2c13162}\label{class_unity_1_1_visual_scripting_1_1_state_a4b23306fa94231f13ca7f7bff2c13162}} 
+\index{Unity.VisualScripting.State@{Unity.VisualScripting.State}!transitions@{transitions}}
+\index{transitions@{transitions}!Unity.VisualScripting.State@{Unity.VisualScripting.State}}
+\doxysubsubsection{\texorpdfstring{transitions}{transitions}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state_transition}{IState\+Transition}}$>$ Unity.\+Visual\+Scripting.\+State.\+transitions\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state}{Unity.\+Visual\+Scripting.\+IState}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_abb03ef3d33cf3cc6f3de64d1fd01fa8b}\label{class_unity_1_1_visual_scripting_1_1_state_abb03ef3d33cf3cc6f3de64d1fd01fa8b}} 
+\index{Unity.VisualScripting.State@{Unity.VisualScripting.State}!width@{width}}
+\index{width@{width}!Unity.VisualScripting.State@{Unity.VisualScripting.State}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily float Unity.\+Visual\+Scripting.\+State.\+width = Default\+Width\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state}{Unity.\+Visual\+Scripting.\+IState}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+State/State.\+cs\end{DoxyCompactItemize}

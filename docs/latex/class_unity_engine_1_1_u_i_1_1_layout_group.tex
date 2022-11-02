@@ -1,0 +1,555 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group}{}\doxysection{Unity\+Engine.\+UI.\+Layout\+Group Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_layout_group}\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+
+
+Abstract base class to use for layout groups.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Layout\+Group\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.163842cm]{class_unity_engine_1_1_u_i_1_1_layout_group}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_acaff989057730feb143801736840ee05}{Calculate\+Layout\+Input\+Horizontal}} ()
+\begin{DoxyCompactList}\small\item\em After this method is invoked, layout horizontal input properties should return up-\/to-\/date values. Children will already have up-\/to-\/date layout horizontal inputs when this methods is called. \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a6b7c4507858ad7ab0dc5c1eda66128be}{Calculate\+Layout\+Input\+Vertical}} ()
+\begin{DoxyCompactList}\small\item\em After this method is invoked, layout vertical input properties should return up-\/to-\/date values. Children will already have up-\/to-\/date layout vertical inputs when this methods is called. \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a769fc63323ccfaccdcc5bf2dbd9d1737}{Set\+Layout\+Horizontal}} ()
+\begin{DoxyCompactList}\small\item\em Callback invoked by the auto layout system which handles horizontal aspects of the layout. \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a8e79b44c0bf76c4927550be2116f1b1a}{Set\+Layout\+Vertical}} ()
+\begin{DoxyCompactList}\small\item\em Callback invoked by the auto layout system which handles vertical aspects of the layout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a34b80e4e9d2a4e0fbfe0a10b8dfac007}{On\+Enable}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a8275e09ae52cf114f2eea250c7d814e2}{On\+Disable}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_af2dbb52ea3181cf869ae9cf8e4d37b8e}{On\+Did\+Apply\+Animation\+Properties}} ()
+\begin{DoxyCompactList}\small\item\em Callback for when properties have been changed by animation. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a0a51f38c2ba128840a0beaeb075d6562}{Get\+Total\+Min\+Size}} (int axis)
+\begin{DoxyCompactList}\small\item\em The min size for the layout group on the given axis. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_af466b9e643828030937bbac84077b1b3}{Get\+Total\+Preferred\+Size}} (int axis)
+\begin{DoxyCompactList}\small\item\em The preferred size for the layout group on the given axis. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a44d0491c06cb47c5db7020b2cd93224f}{Get\+Total\+Flexible\+Size}} (int axis)
+\begin{DoxyCompactList}\small\item\em The flexible size for the layout group on the given axis. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a6e6b2d5488ac9d3a0023e2328260efcf}{Get\+Start\+Offset}} (int axis, float required\+Space\+Without\+Padding)
+\begin{DoxyCompactList}\small\item\em Returns the calculated position of the first child layout element along the given axis. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a3c425bc59e53bca743a5e50ef494b92a}{Get\+Alignment\+On\+Axis}} (int axis)
+\begin{DoxyCompactList}\small\item\em Returns the alignment on the specified axis as a fraction where 0 is left/top, 0.\+5 is middle, and 1 is right/bottom. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a6a091521efd71c3a4cfb82e42ea4a713}{Set\+Layout\+Input\+For\+Axis}} (float total\+Min, float total\+Preferred, float total\+Flexible, int axis)
+\begin{DoxyCompactList}\small\item\em Used to set the calculated layout properties for the given axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a3c48c66c95d94ae8328dc71ee65344c0}{Set\+Child\+Along\+Axis}} (Rect\+Transform rect, int axis, float pos)
+\begin{DoxyCompactList}\small\item\em Set the position and size of a child layout element along the given axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_ad23548e64198cd88fb65f6c00e58d032}{Set\+Child\+Along\+Axis\+With\+Scale}} (Rect\+Transform rect, int axis, float pos, float scale\+Factor)
+\begin{DoxyCompactList}\small\item\em Set the position and size of a child layout element along the given axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a5d2a30293dfce8a007ae6904e692a415}{Set\+Child\+Along\+Axis}} (Rect\+Transform rect, int axis, float pos, float size)
+\begin{DoxyCompactList}\small\item\em Set the position and size of a child layout element along the given axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_ab95ad26a490bbc0c79685058c07290e1}{Set\+Child\+Along\+Axis\+With\+Scale}} (Rect\+Transform rect, int axis, float pos, float size, float scale\+Factor)
+\begin{DoxyCompactList}\small\item\em Set the position and size of a child layout element along the given axis. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a6219a761156aec0bc5a2bd240b04eb19}{On\+Rect\+Transform\+Dimensions\+Change}} ()
+\begin{DoxyCompactList}\small\item\em This callback is called when the dimensions of an associated Rect\+Transform change. It is always called before Awake, On\+Enable, or Start. The call is also made to all child Rect\+Transforms, regardless of whether their dimensions change (which depends on how they are anchored). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_ad3c6a58cbb4ba1998c275d516bfa12e1}\label{class_unity_engine_1_1_u_i_1_1_layout_group_ad3c6a58cbb4ba1998c275d516bfa12e1}} 
+virtual void {\bfseries On\+Transform\+Children\+Changed} ()
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_adf54836016cf119d6ab5f4a478464534}{Set\+Property$<$ T $>$}} (ref T current\+Value, T new\+Value)
+\begin{DoxyCompactList}\small\item\em Helper method used to set a given property if it has changed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a76d1c0ccf54705406e0f27f49f8fd8bd}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a76d1c0ccf54705406e0f27f49f8fd8bd}} 
+void {\bfseries Set\+Dirty} ()
+\begin{DoxyCompactList}\small\item\em Mark the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group}{Layout\+Group}} as dirty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a781b67e0f8db6891bdb9593a8934637a}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a781b67e0f8db6891bdb9593a8934637a}} 
+Rect\+Offset {\bfseries m\+\_\+\+Padding} = new Rect\+Offset()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_aa092e21c757918101de0a1b87f096e20}\label{class_unity_engine_1_1_u_i_1_1_layout_group_aa092e21c757918101de0a1b87f096e20}} 
+Text\+Anchor {\bfseries m\+\_\+\+Child\+Alignment} = Text\+Anchor.\+Upper\+Left
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_ad93dbccd6f5b29f14f3ec4756480fc10}\label{class_unity_engine_1_1_u_i_1_1_layout_group_ad93dbccd6f5b29f14f3ec4756480fc10}} 
+Driven\+Rect\+Transform\+Tracker {\bfseries m\+\_\+\+Tracker}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a6293eec9fc0c79bea5e512a80f7f3467}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a6293eec9fc0c79bea5e512a80f7f3467}} 
+Rect\+Offset {\bfseries padding}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The padding to add around the child layout elements. \end{DoxyCompactList}\item 
+Text\+Anchor \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a01a59b5b0b0fb8af0811a0805f0bd646}{child\+Alignment}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The alignment to use for the child layout elements in the layout group. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a24ab4ac4fda631d0e8f1a8b9293e1a07}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a24ab4ac4fda631d0e8f1a8b9293e1a07}} 
+Rect\+Transform {\bfseries rect\+Transform}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a1144491073344d23005cf2490ec3ad21}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a1144491073344d23005cf2490ec3ad21}} 
+List$<$ Rect\+Transform $>$ {\bfseries rect\+Children}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_ab56f77c9aa4fc69d2addca446d0cf8a0}{min\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em See \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a61f430b52f90f43b91f9ded0fcee43d6}{Layout\+Element.\+min\+Width}} \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a5e6333a178f52de8a99c3cfb63a4a50c}{preferred\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em See \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a69c7300cf30f5787cbb8e6750cf9a035}{Layout\+Element.\+preferred\+Width}} \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a90da1287a15ea77bf893ccb634dbbdd0}{flexible\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em See \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a8c4aaed207092d7d625b40c383e21816}{Layout\+Element.\+flexible\+Width}} \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a44c5189a988c93a8706a404c33470435}{min\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em See \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a05bfb63b5a7eb646ba6576af07060333}{Layout\+Element.\+min\+Height}} \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_ac6d61ed614db1f11aeef16a67c7a1ab4}{preferred\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em See \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a103a61023ccb5bc93fbb3cc8c3460531}{Layout\+Element.\+preferred\+Height}} \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a114825432b1eeb0a490b4eeb266881a1}{flexible\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em See \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a98516af90dc6529d486803b6774dc798}{Layout\+Element.\+flexible\+Height}} \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a9faa8f52026a2db90605b307e53849c8}{layout\+Priority}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em See \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a13e5c560042cac2db6ddfd22143f1be9}{Layout\+Element.\+layout\+Priority}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class to use for layout groups. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_acaff989057730feb143801736840ee05}\label{class_unity_engine_1_1_u_i_1_1_layout_group_acaff989057730feb143801736840ee05}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!CalculateLayoutInputHorizontal@{CalculateLayoutInputHorizontal}}
+\index{CalculateLayoutInputHorizontal@{CalculateLayoutInputHorizontal}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{CalculateLayoutInputHorizontal()}{CalculateLayoutInputHorizontal()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+UI.\+Layout\+Group.\+Calculate\+Layout\+Input\+Horizontal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+After this method is invoked, layout horizontal input properties should return up-\/to-\/date values. Children will already have up-\/to-\/date layout horizontal inputs when this methods is called. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a38e697b28b30f3ff350c0c43d9c29441}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ad4bd80df4950d497ccc9476f09d08e5b}{Unity\+Engine.\+UI.\+Grid\+Layout\+Group}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_horizontal_layout_group_a6136b7643998d19b6615e0058fbd7b4a}{Unity\+Engine.\+UI.\+Horizontal\+Layout\+Group}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_vertical_layout_group_a77cceaa17631a98bf7155ba3ec41ad3d}{Unity\+Engine.\+UI.\+Vertical\+Layout\+Group}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a6b7c4507858ad7ab0dc5c1eda66128be}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a6b7c4507858ad7ab0dc5c1eda66128be}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!CalculateLayoutInputVertical@{CalculateLayoutInputVertical}}
+\index{CalculateLayoutInputVertical@{CalculateLayoutInputVertical}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{CalculateLayoutInputVertical()}{CalculateLayoutInputVertical()}}
+{\footnotesize\ttfamily abstract void Unity\+Engine.\+UI.\+Layout\+Group.\+Calculate\+Layout\+Input\+Vertical (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+After this method is invoked, layout vertical input properties should return up-\/to-\/date values. Children will already have up-\/to-\/date layout vertical inputs when this methods is called. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a1e0f42ff8a350a7996b1ebfacdac2b0b}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab28466e280164bcde2a2eb046c088911}{Unity\+Engine.\+UI.\+Grid\+Layout\+Group}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_horizontal_layout_group_a33c01e60a3415edf6bc253115ee7f308}{Unity\+Engine.\+UI.\+Horizontal\+Layout\+Group}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_vertical_layout_group_a1e8170b70d54d39a3cf26e8bf7327288}{Unity\+Engine.\+UI.\+Vertical\+Layout\+Group}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a3c425bc59e53bca743a5e50ef494b92a}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a3c425bc59e53bca743a5e50ef494b92a}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!GetAlignmentOnAxis@{GetAlignmentOnAxis}}
+\index{GetAlignmentOnAxis@{GetAlignmentOnAxis}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{GetAlignmentOnAxis()}{GetAlignmentOnAxis()}}
+{\footnotesize\ttfamily float Unity\+Engine.\+UI.\+Layout\+Group.\+Get\+Alignment\+On\+Axis (\begin{DoxyParamCaption}\item[{int}]{axis }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns the alignment on the specified axis as a fraction where 0 is left/top, 0.\+5 is middle, and 1 is right/bottom. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis to get alignment along. 0 is horizontal and 1 is vertical.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The alignment as a fraction where 0 is left/top, 0.\+5 is middle, and 1 is right/bottom.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a6e6b2d5488ac9d3a0023e2328260efcf}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a6e6b2d5488ac9d3a0023e2328260efcf}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!GetStartOffset@{GetStartOffset}}
+\index{GetStartOffset@{GetStartOffset}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{GetStartOffset()}{GetStartOffset()}}
+{\footnotesize\ttfamily float Unity\+Engine.\+UI.\+Layout\+Group.\+Get\+Start\+Offset (\begin{DoxyParamCaption}\item[{int}]{axis,  }\item[{float}]{required\+Space\+Without\+Padding }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns the calculated position of the first child layout element along the given axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis index. 0 is horizontal and 1 is vertical.\\
+\hline
+{\em required\+Space\+Without\+Padding} & The total space required on the given axis for all the layout elements including spacing and excluding padding.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The position of the first child along the given axis.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a44d0491c06cb47c5db7020b2cd93224f}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a44d0491c06cb47c5db7020b2cd93224f}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!GetTotalFlexibleSize@{GetTotalFlexibleSize}}
+\index{GetTotalFlexibleSize@{GetTotalFlexibleSize}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{GetTotalFlexibleSize()}{GetTotalFlexibleSize()}}
+{\footnotesize\ttfamily float Unity\+Engine.\+UI.\+Layout\+Group.\+Get\+Total\+Flexible\+Size (\begin{DoxyParamCaption}\item[{int}]{axis }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+The flexible size for the layout group on the given axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis index. 0 is horizontal and 1 is vertical.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The flexible size
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a0a51f38c2ba128840a0beaeb075d6562}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a0a51f38c2ba128840a0beaeb075d6562}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!GetTotalMinSize@{GetTotalMinSize}}
+\index{GetTotalMinSize@{GetTotalMinSize}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{GetTotalMinSize()}{GetTotalMinSize()}}
+{\footnotesize\ttfamily float Unity\+Engine.\+UI.\+Layout\+Group.\+Get\+Total\+Min\+Size (\begin{DoxyParamCaption}\item[{int}]{axis }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+The min size for the layout group on the given axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis index. 0 is horizontal and 1 is vertical.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The min size
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_af466b9e643828030937bbac84077b1b3}\label{class_unity_engine_1_1_u_i_1_1_layout_group_af466b9e643828030937bbac84077b1b3}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!GetTotalPreferredSize@{GetTotalPreferredSize}}
+\index{GetTotalPreferredSize@{GetTotalPreferredSize}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{GetTotalPreferredSize()}{GetTotalPreferredSize()}}
+{\footnotesize\ttfamily float Unity\+Engine.\+UI.\+Layout\+Group.\+Get\+Total\+Preferred\+Size (\begin{DoxyParamCaption}\item[{int}]{axis }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+The preferred size for the layout group on the given axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis index. 0 is horizontal and 1 is vertical.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The preferred size.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_af2dbb52ea3181cf869ae9cf8e4d37b8e}\label{class_unity_engine_1_1_u_i_1_1_layout_group_af2dbb52ea3181cf869ae9cf8e4d37b8e}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!OnDidApplyAnimationProperties@{OnDidApplyAnimationProperties}}
+\index{OnDidApplyAnimationProperties@{OnDidApplyAnimationProperties}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{OnDidApplyAnimationProperties()}{OnDidApplyAnimationProperties()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Layout\+Group.\+On\+Did\+Apply\+Animation\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Callback for when properties have been changed by animation. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a8275e09ae52cf114f2eea250c7d814e2}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a8275e09ae52cf114f2eea250c7d814e2}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!OnDisable@{OnDisable}}
+\index{OnDisable@{OnDisable}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{OnDisable()}{OnDisable()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Layout\+Group.\+On\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a34b80e4e9d2a4e0fbfe0a10b8dfac007}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a34b80e4e9d2a4e0fbfe0a10b8dfac007}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Layout\+Group.\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a6219a761156aec0bc5a2bd240b04eb19}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a6219a761156aec0bc5a2bd240b04eb19}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!OnRectTransformDimensionsChange@{OnRectTransformDimensionsChange}}
+\index{OnRectTransformDimensionsChange@{OnRectTransformDimensionsChange}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{OnRectTransformDimensionsChange()}{OnRectTransformDimensionsChange()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Layout\+Group.\+On\+Rect\+Transform\+Dimensions\+Change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+This callback is called when the dimensions of an associated Rect\+Transform change. It is always called before Awake, On\+Enable, or Start. The call is also made to all child Rect\+Transforms, regardless of whether their dimensions change (which depends on how they are anchored). 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_acfb0bcf126b8ea0953525ebb20a87985}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a3c48c66c95d94ae8328dc71ee65344c0}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a3c48c66c95d94ae8328dc71ee65344c0}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!SetChildAlongAxis@{SetChildAlongAxis}}
+\index{SetChildAlongAxis@{SetChildAlongAxis}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{SetChildAlongAxis()}{SetChildAlongAxis()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Layout\+Group.\+Set\+Child\+Along\+Axis (\begin{DoxyParamCaption}\item[{Rect\+Transform}]{rect,  }\item[{int}]{axis,  }\item[{float}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Set the position and size of a child layout element along the given axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rect} & The Rect\+Transform of the child layout element.\\
+\hline
+{\em axis} & The axis to set the position and size along. 0 is horizontal and 1 is vertical.\\
+\hline
+{\em pos} & The position from the left side or top.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a5d2a30293dfce8a007ae6904e692a415}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a5d2a30293dfce8a007ae6904e692a415}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!SetChildAlongAxis@{SetChildAlongAxis}}
+\index{SetChildAlongAxis@{SetChildAlongAxis}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{SetChildAlongAxis()}{SetChildAlongAxis()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Layout\+Group.\+Set\+Child\+Along\+Axis (\begin{DoxyParamCaption}\item[{Rect\+Transform}]{rect,  }\item[{int}]{axis,  }\item[{float}]{pos,  }\item[{float}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Set the position and size of a child layout element along the given axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rect} & The Rect\+Transform of the child layout element.\\
+\hline
+{\em axis} & The axis to set the position and size along. 0 is horizontal and 1 is vertical.\\
+\hline
+{\em pos} & The position from the left side or top.\\
+\hline
+{\em size} & The size.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_ad23548e64198cd88fb65f6c00e58d032}\label{class_unity_engine_1_1_u_i_1_1_layout_group_ad23548e64198cd88fb65f6c00e58d032}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!SetChildAlongAxisWithScale@{SetChildAlongAxisWithScale}}
+\index{SetChildAlongAxisWithScale@{SetChildAlongAxisWithScale}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{SetChildAlongAxisWithScale()}{SetChildAlongAxisWithScale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Layout\+Group.\+Set\+Child\+Along\+Axis\+With\+Scale (\begin{DoxyParamCaption}\item[{Rect\+Transform}]{rect,  }\item[{int}]{axis,  }\item[{float}]{pos,  }\item[{float}]{scale\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Set the position and size of a child layout element along the given axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rect} & The Rect\+Transform of the child layout element.\\
+\hline
+{\em axis} & The axis to set the position and size along. 0 is horizontal and 1 is vertical.\\
+\hline
+{\em pos} & The position from the left side or top.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_ab95ad26a490bbc0c79685058c07290e1}\label{class_unity_engine_1_1_u_i_1_1_layout_group_ab95ad26a490bbc0c79685058c07290e1}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!SetChildAlongAxisWithScale@{SetChildAlongAxisWithScale}}
+\index{SetChildAlongAxisWithScale@{SetChildAlongAxisWithScale}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{SetChildAlongAxisWithScale()}{SetChildAlongAxisWithScale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Layout\+Group.\+Set\+Child\+Along\+Axis\+With\+Scale (\begin{DoxyParamCaption}\item[{Rect\+Transform}]{rect,  }\item[{int}]{axis,  }\item[{float}]{pos,  }\item[{float}]{size,  }\item[{float}]{scale\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Set the position and size of a child layout element along the given axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rect} & The Rect\+Transform of the child layout element.\\
+\hline
+{\em axis} & The axis to set the position and size along. 0 is horizontal and 1 is vertical.\\
+\hline
+{\em pos} & The position from the left side or top.\\
+\hline
+{\em size} & The size.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a769fc63323ccfaccdcc5bf2dbd9d1737}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a769fc63323ccfaccdcc5bf2dbd9d1737}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!SetLayoutHorizontal@{SetLayoutHorizontal}}
+\index{SetLayoutHorizontal@{SetLayoutHorizontal}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{SetLayoutHorizontal()}{SetLayoutHorizontal()}}
+{\footnotesize\ttfamily abstract void Unity\+Engine.\+UI.\+Layout\+Group.\+Set\+Layout\+Horizontal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Callback invoked by the auto layout system which handles horizontal aspects of the layout. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_controller_a95b624c7b7e9cc77de533391420aef66}{Unity\+Engine.\+UI.\+ILayout\+Controller}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a1cdba1355d46027c7398f5b40b20cc02}{Unity\+Engine.\+UI.\+Grid\+Layout\+Group}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_horizontal_layout_group_a1f2bf04fbbc163b14e16b528d7a0c97a}{Unity\+Engine.\+UI.\+Horizontal\+Layout\+Group}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_vertical_layout_group_a34560cd3c74a447bc84e92cd3633e01c}{Unity\+Engine.\+UI.\+Vertical\+Layout\+Group}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a6a091521efd71c3a4cfb82e42ea4a713}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a6a091521efd71c3a4cfb82e42ea4a713}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!SetLayoutInputForAxis@{SetLayoutInputForAxis}}
+\index{SetLayoutInputForAxis@{SetLayoutInputForAxis}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{SetLayoutInputForAxis()}{SetLayoutInputForAxis()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Layout\+Group.\+Set\+Layout\+Input\+For\+Axis (\begin{DoxyParamCaption}\item[{float}]{total\+Min,  }\item[{float}]{total\+Preferred,  }\item[{float}]{total\+Flexible,  }\item[{int}]{axis }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Used to set the calculated layout properties for the given axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em total\+Min} & The min size for the layout group.\\
+\hline
+{\em total\+Preferred} & The preferred size for the layout group.\\
+\hline
+{\em total\+Flexible} & The flexible size for the layout group.\\
+\hline
+{\em axis} & The axis to set sizes for. 0 is horizontal and 1 is vertical.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a8e79b44c0bf76c4927550be2116f1b1a}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a8e79b44c0bf76c4927550be2116f1b1a}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!SetLayoutVertical@{SetLayoutVertical}}
+\index{SetLayoutVertical@{SetLayoutVertical}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{SetLayoutVertical()}{SetLayoutVertical()}}
+{\footnotesize\ttfamily abstract void Unity\+Engine.\+UI.\+Layout\+Group.\+Set\+Layout\+Vertical (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Callback invoked by the auto layout system which handles vertical aspects of the layout. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_controller_a3a661d763b5fd014a3b5bb05c133eb77}{Unity\+Engine.\+UI.\+ILayout\+Controller}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_aa639a03a0ea5812aef0b7299bfe7bcd0}{Unity\+Engine.\+UI.\+Grid\+Layout\+Group}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_horizontal_layout_group_a1802eac198c20c8b43f6a62af1e91c36}{Unity\+Engine.\+UI.\+Horizontal\+Layout\+Group}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_vertical_layout_group_a90854ae9526aa73aa6559b2ccfc134ac}{Unity\+Engine.\+UI.\+Vertical\+Layout\+Group}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_adf54836016cf119d6ab5f4a478464534}\label{class_unity_engine_1_1_u_i_1_1_layout_group_adf54836016cf119d6ab5f4a478464534}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!SetProperty$<$ T $>$@{SetProperty$<$ T $>$}}
+\index{SetProperty$<$ T $>$@{SetProperty$<$ T $>$}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{SetProperty$<$ T $>$()}{SetProperty< T >()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Layout\+Group.\+Set\+Property$<$ T $>$ (\begin{DoxyParamCaption}\item[{ref T}]{current\+Value,  }\item[{T}]{new\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Helper method used to set a given property if it has changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Value} & A reference to the member value.\\
+\hline
+{\em new\+Value} & The new value.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a01a59b5b0b0fb8af0811a0805f0bd646}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a01a59b5b0b0fb8af0811a0805f0bd646}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!childAlignment@{childAlignment}}
+\index{childAlignment@{childAlignment}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{childAlignment}{childAlignment}}
+{\footnotesize\ttfamily Text\+Anchor Unity\+Engine.\+UI.\+Layout\+Group.\+child\+Alignment\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The alignment to use for the child layout elements in the layout group. 
+
+If a layout element does not specify a flexible width or height, its child elements many not use the available space within the layout group. In this case, use the alignment settings to specify how to align child elements within their layout group. \mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a114825432b1eeb0a490b4eeb266881a1}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a114825432b1eeb0a490b4eeb266881a1}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!flexibleHeight@{flexibleHeight}}
+\index{flexibleHeight@{flexibleHeight}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{flexibleHeight}{flexibleHeight}}
+{\footnotesize\ttfamily virtual float Unity\+Engine.\+UI.\+Layout\+Group.\+flexible\+Height\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+See \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a98516af90dc6529d486803b6774dc798}{Layout\+Element.\+flexible\+Height}} 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a98516af90dc6529d486803b6774dc798}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a90da1287a15ea77bf893ccb634dbbdd0}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a90da1287a15ea77bf893ccb634dbbdd0}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!flexibleWidth@{flexibleWidth}}
+\index{flexibleWidth@{flexibleWidth}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{flexibleWidth}{flexibleWidth}}
+{\footnotesize\ttfamily virtual float Unity\+Engine.\+UI.\+Layout\+Group.\+flexible\+Width\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+See \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a8c4aaed207092d7d625b40c383e21816}{Layout\+Element.\+flexible\+Width}} 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a8c4aaed207092d7d625b40c383e21816}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a9faa8f52026a2db90605b307e53849c8}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a9faa8f52026a2db90605b307e53849c8}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!layoutPriority@{layoutPriority}}
+\index{layoutPriority@{layoutPriority}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{layoutPriority}{layoutPriority}}
+{\footnotesize\ttfamily virtual int Unity\+Engine.\+UI.\+Layout\+Group.\+layout\+Priority\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+See \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a13e5c560042cac2db6ddfd22143f1be9}{Layout\+Element.\+layout\+Priority}} 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a13e5c560042cac2db6ddfd22143f1be9}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a44c5189a988c93a8706a404c33470435}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a44c5189a988c93a8706a404c33470435}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!minHeight@{minHeight}}
+\index{minHeight@{minHeight}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{minHeight}{minHeight}}
+{\footnotesize\ttfamily virtual float Unity\+Engine.\+UI.\+Layout\+Group.\+min\+Height\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+See \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a05bfb63b5a7eb646ba6576af07060333}{Layout\+Element.\+min\+Height}} 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a05bfb63b5a7eb646ba6576af07060333}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_ab56f77c9aa4fc69d2addca446d0cf8a0}\label{class_unity_engine_1_1_u_i_1_1_layout_group_ab56f77c9aa4fc69d2addca446d0cf8a0}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!minWidth@{minWidth}}
+\index{minWidth@{minWidth}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{minWidth}{minWidth}}
+{\footnotesize\ttfamily virtual float Unity\+Engine.\+UI.\+Layout\+Group.\+min\+Width\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+See \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a61f430b52f90f43b91f9ded0fcee43d6}{Layout\+Element.\+min\+Width}} 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a61f430b52f90f43b91f9ded0fcee43d6}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_ac6d61ed614db1f11aeef16a67c7a1ab4}\label{class_unity_engine_1_1_u_i_1_1_layout_group_ac6d61ed614db1f11aeef16a67c7a1ab4}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!preferredHeight@{preferredHeight}}
+\index{preferredHeight@{preferredHeight}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{preferredHeight}{preferredHeight}}
+{\footnotesize\ttfamily virtual float Unity\+Engine.\+UI.\+Layout\+Group.\+preferred\+Height\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+See \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a103a61023ccb5bc93fbb3cc8c3460531}{Layout\+Element.\+preferred\+Height}} 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a103a61023ccb5bc93fbb3cc8c3460531}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_group_a5e6333a178f52de8a99c3cfb63a4a50c}\label{class_unity_engine_1_1_u_i_1_1_layout_group_a5e6333a178f52de8a99c3cfb63a4a50c}} 
+\index{UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}!preferredWidth@{preferredWidth}}
+\index{preferredWidth@{preferredWidth}!UnityEngine.UI.LayoutGroup@{UnityEngine.UI.LayoutGroup}}
+\doxysubsubsection{\texorpdfstring{preferredWidth}{preferredWidth}}
+{\footnotesize\ttfamily virtual float Unity\+Engine.\+UI.\+Layout\+Group.\+preferred\+Width\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+See \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a69c7300cf30f5787cbb8e6750cf9a035}{Layout\+Element.\+preferred\+Width}} 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a69c7300cf30f5787cbb8e6750cf9a035}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/\+Layout/Layout\+Group.\+cs\end{DoxyCompactItemize}

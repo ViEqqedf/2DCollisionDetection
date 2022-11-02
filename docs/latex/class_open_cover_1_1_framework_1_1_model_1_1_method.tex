@@ -1,0 +1,148 @@
+\hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_method}{}\doxysection{Open\+Cover.\+Framework.\+Model.\+Method Class Reference}
+\label{class_open_cover_1_1_framework_1_1_model_1_1_method}\index{OpenCover.Framework.Model.Method@{OpenCover.Framework.Model.Method}}
+
+
+An method entity that can be instrumented  
+
+
+Inheritance diagram for Open\+Cover.\+Framework.\+Model.\+Method\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_open_cover_1_1_framework_1_1_model_1_1_method}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_method_a93b8cf34666e78a0ccdb060e54bf16f9}{Mark\+As\+Skipped}} (\mbox{\hyperlink{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cada}{Skipped\+Method}} reason)
+\begin{DoxyCompactList}\small\item\em Mark an entity as skipped \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_method_accb8e0d83a1e9bd301aa4f9edc202384}\label{class_open_cover_1_1_framework_1_1_model_1_1_method_accb8e0d83a1e9bd301aa4f9edc202384}} 
+int {\bfseries Metadata\+Token}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Metadata\+Token used to identify this entity within the assembly \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_method_a1ad402fa1fd170056bf155cdc059a3a1}\label{class_open_cover_1_1_framework_1_1_model_1_1_method_a1ad402fa1fd170056bf155cdc059a3a1}} 
+string {\bfseries Full\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The full name of the method (method-\/definition), includes return-\/type namespace-\/class\+::call-\/name(argument-\/types) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_method_a044bfd424d8094cee9a45f969b0d5dc7}\label{class_open_cover_1_1_framework_1_1_model_1_1_method_a044bfd424d8094cee9a45f969b0d5dc7}} 
+\mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_file_ref}{File\+Ref}} {\bfseries File\+Ref}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A reference to a file in the file collection (used to help visualisation) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_method_ab7e5405d9efa560e3a9446d02d2177fc}\label{class_open_cover_1_1_framework_1_1_model_1_1_method_ab7e5405d9efa560e3a9446d02d2177fc}} 
+\mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point}{Sequence\+Point}}\mbox{[}$\,$\mbox{]} {\bfseries Sequence\+Points}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A list of sequence points that have been produced for this method \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_method_adc81b08b50c2077a051d3b6079b170b9}\label{class_open_cover_1_1_framework_1_1_model_1_1_method_adc81b08b50c2077a051d3b6079b170b9}} 
+\mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_branch_point}{Branch\+Point}}\mbox{[}$\,$\mbox{]} {\bfseries Branch\+Points}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A list of branch points that have been identified for this method \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_method_aee1cab943cd2178cfc159d99e02b7ea4}\label{class_open_cover_1_1_framework_1_1_model_1_1_method_aee1cab943cd2178cfc159d99e02b7ea4}} 
+\mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point}{Instrumentation\+Point}} {\bfseries Method\+Point}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A method point to identify the entry of a method \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_method_aa2f8a3ee5e611ad62f8cadbad2add64e}\label{class_open_cover_1_1_framework_1_1_model_1_1_method_aa2f8a3ee5e611ad62f8cadbad2add64e}} 
+bool {\bfseries Visited}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Has the method been visited \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_method_a372e2b0160919b3147df72426c641737}{Cyclomatic\+Complexity}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em What is the cyclomatic complexity of this method. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_method_a82ba38d3eb4f511a71606eb87368d274}{NPath\+Complexity}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em What is the NPath complexity of this method. \end{DoxyCompactList}\item 
+decimal \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_method_a48ab70e5629fc7acafcc66955781ca12}{Sequence\+Coverage}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em What is the sequence coverage of this method \end{DoxyCompactList}\item 
+decimal \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_method_ae99e8cb2b5bbc993cd56eea6564e1aae}{Branch\+Coverage}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em What is the branch coverage of this method \end{DoxyCompactList}\item 
+decimal \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_method_a561cbf6a382cb37956c31b8e77ebf5e6}{Crap\+Score}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em What is the crap score of this method based on the following calculation CRAP1(m) = comp(m)$^\wedge$2 $\ast$ (1 – cov(m)/100)$^\wedge$3 + comp(m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_method_a630d1d3f45db84e7cdeac3b577eb049a}\label{class_open_cover_1_1_framework_1_1_model_1_1_method_a630d1d3f45db84e7cdeac3b577eb049a}} 
+bool {\bfseries Is\+Constructor}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is this method a constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_method_a81ded6deb55bb956a74b4f6943514dce}\label{class_open_cover_1_1_framework_1_1_model_1_1_method_a81ded6deb55bb956a74b4f6943514dce}} 
+bool {\bfseries Is\+Static}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is this method static \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_method_a8f71dd8f42027f130bb2aa2a47148609}\label{class_open_cover_1_1_framework_1_1_model_1_1_method_a8f71dd8f42027f130bb2aa2a47148609}} 
+bool {\bfseries Is\+Getter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is this method a property getter \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_method_a09ec36835da2da2e3309fbe3bef6e461}\label{class_open_cover_1_1_framework_1_1_model_1_1_method_a09ec36835da2da2e3309fbe3bef6e461}} 
+bool {\bfseries Is\+Setter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is this method a property setter \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An method entity that can be instrumented 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_method_a93b8cf34666e78a0ccdb060e54bf16f9}\label{class_open_cover_1_1_framework_1_1_model_1_1_method_a93b8cf34666e78a0ccdb060e54bf16f9}} 
+\index{OpenCover.Framework.Model.Method@{OpenCover.Framework.Model.Method}!MarkAsSkipped@{MarkAsSkipped}}
+\index{MarkAsSkipped@{MarkAsSkipped}!OpenCover.Framework.Model.Method@{OpenCover.Framework.Model.Method}}
+\doxysubsubsection{\texorpdfstring{MarkAsSkipped()}{MarkAsSkipped()}}
+{\footnotesize\ttfamily override void Open\+Cover.\+Framework.\+Model.\+Method.\+Mark\+As\+Skipped (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cada}{Skipped\+Method}}}]{reason }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Mark an entity as skipped 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reason} & Provide a reason\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_skipped_entity_a18c3040575659a6a65e42305b3c63c32}{Open\+Cover.\+Framework.\+Model.\+Skipped\+Entity}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_method_ae99e8cb2b5bbc993cd56eea6564e1aae}\label{class_open_cover_1_1_framework_1_1_model_1_1_method_ae99e8cb2b5bbc993cd56eea6564e1aae}} 
+\index{OpenCover.Framework.Model.Method@{OpenCover.Framework.Model.Method}!BranchCoverage@{BranchCoverage}}
+\index{BranchCoverage@{BranchCoverage}!OpenCover.Framework.Model.Method@{OpenCover.Framework.Model.Method}}
+\doxysubsubsection{\texorpdfstring{BranchCoverage}{BranchCoverage}}
+{\footnotesize\ttfamily decimal Open\+Cover.\+Framework.\+Model.\+Method.\+Branch\+Coverage\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+What is the branch coverage of this method 
+
+Rounded for ease\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_method_a561cbf6a382cb37956c31b8e77ebf5e6}\label{class_open_cover_1_1_framework_1_1_model_1_1_method_a561cbf6a382cb37956c31b8e77ebf5e6}} 
+\index{OpenCover.Framework.Model.Method@{OpenCover.Framework.Model.Method}!CrapScore@{CrapScore}}
+\index{CrapScore@{CrapScore}!OpenCover.Framework.Model.Method@{OpenCover.Framework.Model.Method}}
+\doxysubsubsection{\texorpdfstring{CrapScore}{CrapScore}}
+{\footnotesize\ttfamily decimal Open\+Cover.\+Framework.\+Model.\+Method.\+Crap\+Score\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+What is the crap score of this method based on the following calculation CRAP1(m) = comp(m)$^\wedge$2 $\ast$ (1 – cov(m)/100)$^\wedge$3 + comp(m) 
+
+Rounded for ease\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_method_a372e2b0160919b3147df72426c641737}\label{class_open_cover_1_1_framework_1_1_model_1_1_method_a372e2b0160919b3147df72426c641737}} 
+\index{OpenCover.Framework.Model.Method@{OpenCover.Framework.Model.Method}!CyclomaticComplexity@{CyclomaticComplexity}}
+\index{CyclomaticComplexity@{CyclomaticComplexity}!OpenCover.Framework.Model.Method@{OpenCover.Framework.Model.Method}}
+\doxysubsubsection{\texorpdfstring{CyclomaticComplexity}{CyclomaticComplexity}}
+{\footnotesize\ttfamily int Open\+Cover.\+Framework.\+Model.\+Method.\+Cyclomatic\+Complexity\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+What is the cyclomatic complexity of this method. 
+
+Calculated using the Gendarme rules library\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_method_a82ba38d3eb4f511a71606eb87368d274}\label{class_open_cover_1_1_framework_1_1_model_1_1_method_a82ba38d3eb4f511a71606eb87368d274}} 
+\index{OpenCover.Framework.Model.Method@{OpenCover.Framework.Model.Method}!NPathComplexity@{NPathComplexity}}
+\index{NPathComplexity@{NPathComplexity}!OpenCover.Framework.Model.Method@{OpenCover.Framework.Model.Method}}
+\doxysubsubsection{\texorpdfstring{NPathComplexity}{NPathComplexity}}
+{\footnotesize\ttfamily int Open\+Cover.\+Framework.\+Model.\+Method.\+NPath\+Complexity\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+What is the NPath complexity of this method. 
+
+Product of path branches (ie\+:path0=2;path1=3;path2=2 =\texorpdfstring{$>$}{>}2$\ast$3$\ast$2==12\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_method_a48ab70e5629fc7acafcc66955781ca12}\label{class_open_cover_1_1_framework_1_1_model_1_1_method_a48ab70e5629fc7acafcc66955781ca12}} 
+\index{OpenCover.Framework.Model.Method@{OpenCover.Framework.Model.Method}!SequenceCoverage@{SequenceCoverage}}
+\index{SequenceCoverage@{SequenceCoverage}!OpenCover.Framework.Model.Method@{OpenCover.Framework.Model.Method}}
+\doxysubsubsection{\texorpdfstring{SequenceCoverage}{SequenceCoverage}}
+{\footnotesize\ttfamily decimal Open\+Cover.\+Framework.\+Model.\+Method.\+Sequence\+Coverage\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+What is the sequence coverage of this method 
+
+Rounded for ease
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+testtools.\+codecoverage@1.\+0.\+1/\+Editor/\+Coverage\+Formats/\+Open\+Cover/\+Model/Method.\+cs\end{DoxyCompactItemize}

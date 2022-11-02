@@ -1,0 +1,93 @@
+.TH "Physics.PhysicsCachePool" 3 "2022年 十一月 2日 星期三" "PhysicsWorld" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Physics.PhysicsCachePool
+.SH SYNOPSIS
+.br
+.PP
+.SS "静态 Public 成员函数"
+
+.in +1c
+.ti -1c
+.RI "static \fBCollisionPair\fP \fBGetCollisionPairFromPool\fP ()"
+.br
+.ti -1c
+.RI "static void \fBRecycleCollisionPair\fP (List< \fBCollisionPair\fP > pairs)"
+.br
+.ti -1c
+.RI "static \fBSimplexEdge\fP \fBGetSimplexEdgeFromPool\fP ()"
+.br
+.ti -1c
+.RI "static void \fBRecycleSimplexEdge\fP (\fBSimplexEdge\fP simplexEdge)"
+.br
+.ti -1c
+.RI "static \fBEdge\fP \fBGetEdgeFromPool\fP ()"
+.br
+.ti -1c
+.RI "static void \fBRecycleEdge\fP (\fBEdge\fP edge)"
+.br
+.ti -1c
+.RI "static void \fBRecycleEdge\fP (List< \fBEdge\fP > edges)"
+.br
+.in -1c
+.SS "静态 Public 属性"
+
+.in +1c
+.ti -1c
+.RI "static Stack< \fBCollisionPair\fP > \fBcollisionPairPool\fP = new Stack<\fBCollisionPair\fP>()"
+.br
+.ti -1c
+.RI "static Stack< \fBSimplexEdge\fP > \fBsimplexEdgePool\fP = new Stack<\fBSimplexEdge\fP>()"
+.br
+.ti -1c
+.RI "static Stack< \fBEdge\fP > \fBedgePool\fP = new Stack<\fBEdge\fP>()"
+.br
+.in -1c
+.SS "静态 Private 属性"
+
+.in +1c
+.ti -1c
+.RI "static int \fBcollisionPairCacheCount\fP = 0"
+.br
+.ti -1c
+.RI "static int \fBsimplexEdgeCount\fP = 0"
+.br
+.ti -1c
+.RI "static int \fBedgeCount\fP = 0"
+.br
+.in -1c
+.SH "成员函数说明"
+.PP 
+.SS "static \fBCollisionPair\fP Physics\&.PhysicsCachePool\&.GetCollisionPairFromPool ()\fC [inline]\fP, \fC [static]\fP"
+
+.SS "static \fBEdge\fP Physics\&.PhysicsCachePool\&.GetEdgeFromPool ()\fC [inline]\fP, \fC [static]\fP"
+
+.SS "static \fBSimplexEdge\fP Physics\&.PhysicsCachePool\&.GetSimplexEdgeFromPool ()\fC [inline]\fP, \fC [static]\fP"
+
+.SS "static void Physics\&.PhysicsCachePool\&.RecycleCollisionPair (List< \fBCollisionPair\fP > pairs)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "static void Physics\&.PhysicsCachePool\&.RecycleEdge (\fBEdge\fP edge)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "static void Physics\&.PhysicsCachePool\&.RecycleEdge (List< \fBEdge\fP > edges)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "static void Physics\&.PhysicsCachePool\&.RecycleSimplexEdge (\fBSimplexEdge\fP simplexEdge)\fC [inline]\fP, \fC [static]\fP"
+
+.SH "类成员变量说明"
+.PP 
+.SS "int Physics\&.PhysicsCachePool\&.collisionPairCacheCount = 0\fC [static]\fP, \fC [private]\fP"
+
+.SS "Stack<\fBCollisionPair\fP> Physics\&.PhysicsCachePool\&.collisionPairPool = new Stack<\fBCollisionPair\fP>()\fC [static]\fP"
+
+.SS "int Physics\&.PhysicsCachePool\&.edgeCount = 0\fC [static]\fP, \fC [private]\fP"
+
+.SS "Stack<\fBEdge\fP> Physics\&.PhysicsCachePool\&.edgePool = new Stack<\fBEdge\fP>()\fC [static]\fP"
+
+.SS "int Physics\&.PhysicsCachePool\&.simplexEdgeCount = 0\fC [static]\fP, \fC [private]\fP"
+
+.SS "Stack<\fBSimplexEdge\fP> Physics\&.PhysicsCachePool\&.simplexEdgePool = new Stack<\fBSimplexEdge\fP>()\fC [static]\fP"
+
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 PhysicsWorld 的 源代码自动生成\&.

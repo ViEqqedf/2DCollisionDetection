@@ -1,0 +1,180 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter}{}\doxysection{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Base\+Converter Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter}\index{Unity.VisualScripting.FullSerializer.fsBaseConverter@{Unity.VisualScripting.FullSerializer.fsBaseConverter}}
+
+
+The serialization converter allows for customization of the serialization process.  
+
+
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Base\+Converter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.011494cm]{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual object \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a5b8efae2c0e894b3256e9ca07dd55eb6}{Create\+Instance}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} data, Type storage\+Type)
+\begin{DoxyCompactList}\small\item\em Construct an object instance that will be passed to Try\+Deserialize. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} should {\bfseries{not}} deserialize the object. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a6a5daa6d9c428b4f82534c7ec6674511}{Request\+Cycle\+Support}} (Type storage\+Type)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} true, then the serializer will support cyclic references with the given converted type. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_addbae2b8a08e134923f1a5c9ed39d4df}{Request\+Inheritance\+Support}} (Type storage\+Type)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} true, then the serializer will include inheritance data for the given converter. \end{DoxyCompactList}\item 
+abstract \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a887cf0fed399e9bbced3697579f0be38}{Try\+Serialize}} (object instance, out \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} serialized, Type storage\+Type)
+\begin{DoxyCompactList}\small\item\em Serialize the actual object into the given data storage. \end{DoxyCompactList}\item 
+abstract \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a7ad963c1c4c08809ed1b257fa2820704}{Try\+Deserialize}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} data, ref object instance, Type storage\+Type)
+\begin{DoxyCompactList}\small\item\em Deserialize data into the object instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_aa30b393bbc334f4934e1fa94d3a558cb}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_aa30b393bbc334f4934e1fa94d3a558cb}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer}{fs\+Serializer}} {\bfseries Serializer}
+\begin{DoxyCompactList}\small\item\em The serializer that was owns this converter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_ac7cb8d113b0feff1f6d377df3a1a0b9a}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_ac7cb8d113b0feff1f6d377df3a1a0b9a}} 
+\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} {\bfseries Fail\+Expected\+Type} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} data, params \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_full_serializer_ad54f008cdd0b1fa5110cd0172ec38ab9}{fs\+Data\+Type}}\mbox{[}$\,$\mbox{]} types)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_ab352e7adb08eddddeebd18ceabed1404}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_ab352e7adb08eddddeebd18ceabed1404}} 
+\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} {\bfseries Check\+Type} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} data, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_full_serializer_ad54f008cdd0b1fa5110cd0172ec38ab9}{fs\+Data\+Type}} type)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a0279e7cdcdba9fafe8dc688107de69b1}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a0279e7cdcdba9fafe8dc688107de69b1}} 
+\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} {\bfseries Check\+Key} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} data, string key, out \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} subitem)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_adf81ff12acaf9113900883d5b3c0d2c0}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_adf81ff12acaf9113900883d5b3c0d2c0}} 
+\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} {\bfseries Check\+Key} (Dictionary$<$ string, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} $>$ data, string key, out \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} subitem)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a75a4135d0d991a91db46c274b352db04}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a75a4135d0d991a91db46c274b352db04}} 
+\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} {\bfseries Serialize\+Member$<$ T $>$} (Dictionary$<$ string, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} $>$ data, Type override\+Converter\+Type, string name, T value)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a3481f758fd4f8d1789165404e1398703}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a3481f758fd4f8d1789165404e1398703}} 
+\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} {\bfseries Deserialize\+Member$<$ T $>$} (Dictionary$<$ string, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} $>$ data, Type override\+Converter\+Type, string name, out T value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The serialization converter allows for customization of the serialization process. 
+
+You do not want to derive from this class -\/ there is no way to actually use it within the serializer.. Instead, derive from either \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_converter}{fs\+Converter}} or \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter}{fs\+Direct\+Converter}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a5b8efae2c0e894b3256e9ca07dd55eb6}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a5b8efae2c0e894b3256e9ca07dd55eb6}} 
+\index{Unity.VisualScripting.FullSerializer.fsBaseConverter@{Unity.VisualScripting.FullSerializer.fsBaseConverter}!CreateInstance@{CreateInstance}}
+\index{CreateInstance@{CreateInstance}!Unity.VisualScripting.FullSerializer.fsBaseConverter@{Unity.VisualScripting.FullSerializer.fsBaseConverter}}
+\doxysubsubsection{\texorpdfstring{CreateInstance()}{CreateInstance()}}
+{\footnotesize\ttfamily virtual object Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Base\+Converter.\+Create\+Instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}}}]{data,  }\item[{Type}]{storage\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Construct an object instance that will be passed to Try\+Deserialize. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} should {\bfseries{not}} deserialize the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data the object was serialized with.\\
+\hline
+{\em storage\+Type} & The field/property type that is storing the instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An object instance
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_array_converter_a1162a49dcdf6d99f2dea11e1aaae5c8b}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Array\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_dictionary_converter_acead2e6bfc79d65cc556fb9508ce8ed1}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Dictionary\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_enum_converter_aa273590a4116bda55790c4a4eeb0b94e}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Enum\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_forward_converter_aca7cc2ec674a928ce8f9127ccb4616fa}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Forward\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_aa11ace9c3faf9b76c5554480ce5559ee}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Guid\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_i_enumerable_converter_a4694f03702b8e7530c05206f1955db9d}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+IEnumerable\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_nullable_converter_a3aa2420fdb37f2ec98d4228483d9f74b}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Nullable\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_reflected_converter_ad9f6e2647a846eb28e65f64eef26ea16}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Reflected\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_type_converter_a696604f8014aa82c33b27e37666b6144}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Type\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_weak_reference_converter_a6cca6f5e4e5e2a0c7e1c77efbab56bb5}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Weak\+Reference\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1_animation_curve___direct_converter_ab8200af175ee4fe0ad52a84a3d35d1b2}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+Animation\+Curve\+\_\+\+Direct\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1_bounds___direct_converter_a27af365c1a7445e71e0f21b1b6b3d586}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+Bounds\+\_\+\+Direct\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1_gradient___direct_converter_a1832623496334b634bb4d0ef6a3fef46}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+Gradient\+\_\+\+Direct\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1_g_u_i_style___direct_converter_ad7d4f53165cdc7a6984a8fc19380f0d7}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+GUIStyle\+\_\+\+Direct\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1_g_u_i_style_state___direct_converter_a8249a7a87535f29998c69fa12fd05296}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+GUIStyle\+State\+\_\+\+Direct\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1_keyframe___direct_converter_a8d6704dc83617e6e94da8db1f7fd1813}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+Keyframe\+\_\+\+Direct\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1_layer_mask___direct_converter_a41c7a6384e99bdb9bc729bcf783569b3}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+Layer\+Mask\+\_\+\+Direct\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1_rect___direct_converter_a8298d7768a179acb6281f3e62b61c8cc}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+Rect\+\_\+\+Direct\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1_rect_offset___direct_converter_af02a9cde655bbea0f30e716ba8a3ef17}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+Rect\+Offset\+\_\+\+Direct\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_loose_assembly_name_converter_a1f064e7c39314e06fb0df793e675a07e}{Unity.\+Visual\+Scripting.\+Loose\+Assembly\+Name\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_namespace_converter_ac0d126ac17d2f1d023443b16f14b846b}{Unity.\+Visual\+Scripting.\+Namespace\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_ray2_d_converter_a11491aaa74378f69fa0d1f81d9b40368}{Unity.\+Visual\+Scripting.\+Ray2\+DConverter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_ray_converter_afb4fca4aeeddb910430d8537cf67bfdb}{Unity.\+Visual\+Scripting.\+Ray\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unity_object_converter_ae2feff6dce48cc89739ad0f0b7c8231d}{Unity.\+Visual\+Scripting.\+Unity\+Object\+Converter}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_category_converter_a408c4d85c92152085231e7442ab2dcc6}{Unity.\+Visual\+Scripting.\+Unit\+Category\+Converter}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a6a5daa6d9c428b4f82534c7ec6674511}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a6a5daa6d9c428b4f82534c7ec6674511}} 
+\index{Unity.VisualScripting.FullSerializer.fsBaseConverter@{Unity.VisualScripting.FullSerializer.fsBaseConverter}!RequestCycleSupport@{RequestCycleSupport}}
+\index{RequestCycleSupport@{RequestCycleSupport}!Unity.VisualScripting.FullSerializer.fsBaseConverter@{Unity.VisualScripting.FullSerializer.fsBaseConverter}}
+\doxysubsubsection{\texorpdfstring{RequestCycleSupport()}{RequestCycleSupport()}}
+{\footnotesize\ttfamily virtual bool Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Base\+Converter.\+Request\+Cycle\+Support (\begin{DoxyParamCaption}\item[{Type}]{storage\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} true, then the serializer will support cyclic references with the given converted type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em storage\+Type} & The field/property type that is currently storing the object that is being serialized. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_array_converter_a3bb06bba8e2581df6a536238035efad4}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Array\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_enum_converter_a3021a7a0bdde6b20eaf07da55641c47f}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Enum\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_a119ffcbba5a9dc5540c2ef75f6c833a1}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Guid\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_key_value_pair_converter_a2220171258a77bc22e65aba91aaf63b4}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Key\+Value\+Pair\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_primitive_converter_a0d6e9314db447cd9c46fa585af403beb}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Primitive\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_weak_reference_converter_a7eea1b509857355be75c68cd367066da}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Weak\+Reference\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unity_object_converter_a25badab30dda9287016ccf249a03d185}{Unity.\+Visual\+Scripting.\+Unity\+Object\+Converter}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_type_converter_ab899e5e161fbcd1a8f44b90750eb4d5c}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Type\+Converter}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_addbae2b8a08e134923f1a5c9ed39d4df}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_addbae2b8a08e134923f1a5c9ed39d4df}} 
+\index{Unity.VisualScripting.FullSerializer.fsBaseConverter@{Unity.VisualScripting.FullSerializer.fsBaseConverter}!RequestInheritanceSupport@{RequestInheritanceSupport}}
+\index{RequestInheritanceSupport@{RequestInheritanceSupport}!Unity.VisualScripting.FullSerializer.fsBaseConverter@{Unity.VisualScripting.FullSerializer.fsBaseConverter}}
+\doxysubsubsection{\texorpdfstring{RequestInheritanceSupport()}{RequestInheritanceSupport()}}
+{\footnotesize\ttfamily virtual bool Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Base\+Converter.\+Request\+Inheritance\+Support (\begin{DoxyParamCaption}\item[{Type}]{storage\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} true, then the serializer will include inheritance data for the given converter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em storage\+Type} & The field/property type that is currently storing the object that is being serialized. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_array_converter_a6ac8794699bb0a070d95f6ac236bb97f}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Array\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_enum_converter_af5110dbba5b024d1da2f4bc3dd9ace1d}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Enum\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_a5dbe0d98850d95977c3e454eb55da624}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Guid\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_key_value_pair_converter_a58739c95d018a2a5ff0db71d68e6e9c1}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Key\+Value\+Pair\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_primitive_converter_a328c99110fd794d3a2bb031eb955f367}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Primitive\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_weak_reference_converter_a81053678b10e9f606f74793aaebc0edc}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Weak\+Reference\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unity_object_converter_aeca331d9d194c17ec42270abb26ab720}{Unity.\+Visual\+Scripting.\+Unity\+Object\+Converter}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_type_converter_a866b561daa4fa80677e605a67cb4bab6}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Type\+Converter}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a7ad963c1c4c08809ed1b257fa2820704}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a7ad963c1c4c08809ed1b257fa2820704}} 
+\index{Unity.VisualScripting.FullSerializer.fsBaseConverter@{Unity.VisualScripting.FullSerializer.fsBaseConverter}!TryDeserialize@{TryDeserialize}}
+\index{TryDeserialize@{TryDeserialize}!Unity.VisualScripting.FullSerializer.fsBaseConverter@{Unity.VisualScripting.FullSerializer.fsBaseConverter}}
+\doxysubsubsection{\texorpdfstring{TryDeserialize()}{TryDeserialize()}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Base\+Converter.\+Try\+Deserialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}}}]{data,  }\item[{ref object}]{instance,  }\item[{Type}]{storage\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Deserialize data into the object instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Serialization data to deserialize from.\\
+\hline
+{\em instance} & The object instance to deserialize into. \\
+\hline
+{\em storage\+Type} & The field/property type that is storing the instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if serialization was successful, false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_array_converter_ad8ac361eeaeed2fa5da3764a662ee0cb}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Array\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_date_converter_a042c359292bac45afc6d606e1230310e}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Date\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_enum_converter_a06212c73b0f888f8260b1c2d1411b085}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Enum\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_forward_converter_a91a69ce03c149c7ce8de4212ea023d5b}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Forward\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_aad8acbaabcae60625a1938f7ea7863ea}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Guid\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_key_value_pair_converter_a41042b8df3091659849140a2ed0ba366}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Key\+Value\+Pair\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_nullable_converter_a5e50e6f70889cd4b14fbbece7a350d6f}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Nullable\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_reflected_converter_a76fd5d13fa4f6a9e5bc7418db0039093}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Reflected\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_type_converter_a31ac9ef00527b3439a8a431a89a280d5}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Type\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_weak_reference_converter_ae1ef8042ed548a85a84127ed30b32843}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Weak\+Reference\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a9d1b3877f125753ec9b5574a7556685b}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ TModel $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a9d1b3877f125753ec9b5574a7556685b}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ Animation\+Curve $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a9d1b3877f125753ec9b5574a7556685b}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ Bounds $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a9d1b3877f125753ec9b5574a7556685b}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ GUIStyle\+State $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a9d1b3877f125753ec9b5574a7556685b}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ GUIStyle $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a9d1b3877f125753ec9b5574a7556685b}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ Gradient $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a9d1b3877f125753ec9b5574a7556685b}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ Keyframe $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a9d1b3877f125753ec9b5574a7556685b}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ Layer\+Mask $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a9d1b3877f125753ec9b5574a7556685b}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ Rect\+Offset $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a9d1b3877f125753ec9b5574a7556685b}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ Rect $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a9d1b3877f125753ec9b5574a7556685b}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ Ray2\+D $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_a9d1b3877f125753ec9b5574a7556685b}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ Ray $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_loose_assembly_name_converter_a717e4b278617b3277952a7006612c457}{Unity.\+Visual\+Scripting.\+Loose\+Assembly\+Name\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_namespace_converter_a03b2d0980bf63eacb7caf9eec49498b7}{Unity.\+Visual\+Scripting.\+Namespace\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_category_converter_a8d7a6da315e1c3c50ea316dc46db3a8f}{Unity.\+Visual\+Scripting.\+Unit\+Category\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_dictionary_converter_adf7fc00769ab67cad80e3bfa88cb8dc1}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Dictionary\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_i_enumerable_converter_a06362213c0d571218db0fe4525116f1c}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+IEnumerable\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_primitive_converter_aac893105540d8b2ebea21101ea3fd4c3}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Primitive\+Converter}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unity_object_converter_a1305e9aea1cd725817bdbe800597a5a2}{Unity.\+Visual\+Scripting.\+Unity\+Object\+Converter}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a887cf0fed399e9bbced3697579f0be38}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter_a887cf0fed399e9bbced3697579f0be38}} 
+\index{Unity.VisualScripting.FullSerializer.fsBaseConverter@{Unity.VisualScripting.FullSerializer.fsBaseConverter}!TrySerialize@{TrySerialize}}
+\index{TrySerialize@{TrySerialize}!Unity.VisualScripting.FullSerializer.fsBaseConverter@{Unity.VisualScripting.FullSerializer.fsBaseConverter}}
+\doxysubsubsection{\texorpdfstring{TrySerialize()}{TrySerialize()}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Base\+Converter.\+Try\+Serialize (\begin{DoxyParamCaption}\item[{object}]{instance,  }\item[{out \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}}}]{serialized,  }\item[{Type}]{storage\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Serialize the actual object into the given data storage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & The object instance to serialize. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} will never be null. \\
+\hline
+{\em serialized} & The serialized state.\\
+\hline
+{\em storage\+Type} & The field/property type that is storing this instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} serialization was successful.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_array_converter_a427119d01f6567f9b4bb7711f32160e9}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Array\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_date_converter_afdd073aa7275adc9574ff19c9784026b}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Date\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_enum_converter_a12e41bbf83b8acce2652e7f87781a2a9}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Enum\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_forward_converter_a4ca88dbc24cbd3d7abc780e5f64935b7}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Forward\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_guid_converter_a109c6da31adb6007bd3b4f5a5c632af7}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Guid\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_key_value_pair_converter_aae4a527f6831fa78978db35fede80b78}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Key\+Value\+Pair\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_nullable_converter_a79f1dadcd81650e007addefc0cecf634}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Nullable\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_primitive_converter_acccdde8290283a7b6facc0c26c78a2b0}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Primitive\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_reflected_converter_a0084ab72c17b8bcdc618c57d0a51b30a}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Reflected\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_type_converter_aaa52108e94a96c022a83b2aa679f3df5}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Type\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_weak_reference_converter_a42af55b9831eba9044888be89f6d23d4}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Weak\+Reference\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_ad313d1b0d32c3e9d3663fe0cc0d14830}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ TModel $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_ad313d1b0d32c3e9d3663fe0cc0d14830}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ Animation\+Curve $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_ad313d1b0d32c3e9d3663fe0cc0d14830}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ Bounds $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_ad313d1b0d32c3e9d3663fe0cc0d14830}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ GUIStyle\+State $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_ad313d1b0d32c3e9d3663fe0cc0d14830}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ GUIStyle $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_ad313d1b0d32c3e9d3663fe0cc0d14830}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ Gradient $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_ad313d1b0d32c3e9d3663fe0cc0d14830}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ Keyframe $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_ad313d1b0d32c3e9d3663fe0cc0d14830}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ Layer\+Mask $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_ad313d1b0d32c3e9d3663fe0cc0d14830}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ Rect\+Offset $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_ad313d1b0d32c3e9d3663fe0cc0d14830}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ Rect $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_ad313d1b0d32c3e9d3663fe0cc0d14830}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ Ray2\+D $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_direct_converter_ad313d1b0d32c3e9d3663fe0cc0d14830}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Direct\+Converter$<$ Ray $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_loose_assembly_name_converter_a733471854750b178c271c729e8d083a5}{Unity.\+Visual\+Scripting.\+Loose\+Assembly\+Name\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_namespace_converter_a2f0879bbc8bb063e0dc64501609f3559}{Unity.\+Visual\+Scripting.\+Namespace\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unity_object_converter_af3bdf85cb9e6a2b31053b2c9f9cb95e2}{Unity.\+Visual\+Scripting.\+Unity\+Object\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_category_converter_a3292adc9771cfb481fa924cdfaa54bf9}{Unity.\+Visual\+Scripting.\+Unit\+Category\+Converter}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_dictionary_converter_a3f834b3f074aa2a72f3a84d78b9cf8e8}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Dictionary\+Converter}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_i_enumerable_converter_ae6b6877d4c9d1af64403fca378222121}{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+IEnumerable\+Converter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Core/\+Dependencies/\+Full\+Serializer/fs\+Base\+Converter.\+cs\end{DoxyCompactItemize}

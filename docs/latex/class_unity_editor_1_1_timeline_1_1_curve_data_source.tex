@@ -1,0 +1,112 @@
+\hypertarget{class_unity_editor_1_1_timeline_1_1_curve_data_source}{}\doxysection{Unity\+Editor.\+Timeline.\+Curve\+Data\+Source Class Reference}
+\label{class_unity_editor_1_1_timeline_1_1_curve_data_source}\index{UnityEditor.Timeline.CurveDataSource@{UnityEditor.Timeline.CurveDataSource}}
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Curve\+Data\+Source\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.840841cm]{class_unity_editor_1_1_timeline_1_1_curve_data_source}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_curve_data_source_aa80f4951232a6a60fbb7a8fcd633dd84}\label{class_unity_editor_1_1_timeline_1_1_curve_data_source_aa80f4951232a6a60fbb7a8fcd633dd84}} 
+virtual void {\bfseries Apply\+Curve\+Changes} (IEnumerable$<$ Curve\+Wrapper $>$ updated\+Curves)
+\item 
+virtual UInt64 \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_curve_data_source_ad1a6bbc50f325c149ad3637eea2e093d}{Get\+Clip\+Version}} ()
+\begin{DoxyCompactList}\small\item\em The clip version is a value that will change when a curve gets updated. it\textquotesingle{}s used to detect when an animation clip has been changed externally \end{DoxyCompactList}\item 
+virtual Curve\+Change\+Type \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_curve_data_source_ae4eeda2d7277e1fb3c0bba8bf0340165}{Update\+External\+Changes}} (ref UInt64 curve\+Version)
+\begin{DoxyCompactList}\small\item\em Call this method to check if the underlying clip has changed\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_curve_data_source_a2757995dddbc6256028034135b42272f}\label{class_unity_editor_1_1_timeline_1_1_curve_data_source_a2757995dddbc6256028034135b42272f}} 
+virtual string {\bfseries Modify\+Property\+Display\+Name} (string path, string property\+Name)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_curve_data_source_ae9fb2131c89045a49bca2957a727316f}\label{class_unity_editor_1_1_timeline_1_1_curve_data_source_ae9fb2131c89045a49bca2957a727316f}} 
+virtual void {\bfseries Remove\+Curves} (IEnumerable$<$ Editor\+Curve\+Binding $>$ bindings)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_curve_data_source_a2d574493c3b662abc4ceea4e241b57a8}\label{class_unity_editor_1_1_timeline_1_1_curve_data_source_a2d574493c3b662abc4ceea4e241b57a8}} 
+Rect {\bfseries Get\+Background\+Rect} (\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}} state)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_curve_data_source_afe23f6d72f36ab4ffb23da22b04491a8}\label{class_unity_editor_1_1_timeline_1_1_curve_data_source_afe23f6d72f36ab4ffb23da22b04491a8}} 
+List$<$ Curve\+Wrapper $>$ {\bfseries Generate\+Wrappers} (IEnumerable$<$ Editor\+Curve\+Binding $>$ bindings)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_curve_data_source_a8ca689611d5b0005e991525ac34dd19d}\label{class_unity_editor_1_1_timeline_1_1_curve_data_source_a8ca689611d5b0005e991525ac34dd19d}} 
+static \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_curve_data_source}{Curve\+Data\+Source}} {\bfseries Create} (\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i}{IRow\+GUI}} track\+GUI)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_curve_data_source_a238985e77846502b455c73bd5a09790e}\label{class_unity_editor_1_1_timeline_1_1_curve_data_source_a238985e77846502b455c73bd5a09790e}} 
+static \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_curve_data_source}{Curve\+Data\+Source}} {\bfseries Create} (\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i}{Timeline\+Clip\+GUI}} clip\+GUI)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_curve_data_source_a4bd66ee3f7e349f2095ed9acd487c3a7}\label{class_unity_editor_1_1_timeline_1_1_curve_data_source_a4bd66ee3f7e349f2095ed9acd487c3a7}} 
+{\bfseries Curve\+Data\+Source} (\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i}{IRow\+GUI}} track\+GUI)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_curve_data_source_a7e34b2517db04e174264f8c535ed7f0c}\label{class_unity_editor_1_1_timeline_1_1_curve_data_source_a7e34b2517db04e174264f8c535ed7f0c}} 
+virtual void {\bfseries Configure\+Curve\+Wrapper} (Curve\+Wrapper wrapper)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_curve_data_source_a741648dcc3138f0a79ed8e7d7a94cd59}\label{class_unity_editor_1_1_timeline_1_1_curve_data_source_a741648dcc3138f0a79ed8e7d7a94cd59}} 
+virtual int {\bfseries Create\+Hash\+Code} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_curve_data_source_a4c12dfef4ef4a16013190e7c1809ec18}\label{class_unity_editor_1_1_timeline_1_1_curve_data_source_a4c12dfef4ef4a16013190e7c1809ec18}} 
+int {\bfseries id}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_curve_data_source_aacae356cfd709ff8df1d97d51a010b27}\label{class_unity_editor_1_1_timeline_1_1_curve_data_source_aacae356cfd709ff8df1d97d51a010b27}} 
+abstract Animation\+Clip {\bfseries animation\+Clip}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_curve_data_source_aa27ae23df367c22e40fded5c6aab84d3}\label{class_unity_editor_1_1_timeline_1_1_curve_data_source_aa27ae23df367c22e40fded5c6aab84d3}} 
+abstract float {\bfseries start}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_curve_data_source_ab3eba2c286ce8134eb3d024060e22288}\label{class_unity_editor_1_1_timeline_1_1_curve_data_source_ab3eba2c286ce8134eb3d024060e22288}} 
+abstract float {\bfseries time\+Scale}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_curve_data_source_a230293d7eb91bcb91630853abe410153}\label{class_unity_editor_1_1_timeline_1_1_curve_data_source_a230293d7eb91bcb91630853abe410153}} 
+abstract string {\bfseries grouping\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_curve_data_source_ad1a6bbc50f325c149ad3637eea2e093d}\label{class_unity_editor_1_1_timeline_1_1_curve_data_source_ad1a6bbc50f325c149ad3637eea2e093d}} 
+\index{UnityEditor.Timeline.CurveDataSource@{UnityEditor.Timeline.CurveDataSource}!GetClipVersion@{GetClipVersion}}
+\index{GetClipVersion@{GetClipVersion}!UnityEditor.Timeline.CurveDataSource@{UnityEditor.Timeline.CurveDataSource}}
+\doxysubsubsection{\texorpdfstring{GetClipVersion()}{GetClipVersion()}}
+{\footnotesize\ttfamily virtual UInt64 Unity\+Editor.\+Timeline.\+Curve\+Data\+Source.\+Get\+Clip\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+The clip version is a value that will change when a curve gets updated. it\textquotesingle{}s used to detect when an animation clip has been changed externally 
+
+\begin{DoxyReturn}{Returns}
+A versioning value indicating the state of the curve. If the curve is updated externally this value will change. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_aa45af0770bf053a9ce83424183b4e405}{Unity\+Editor.\+Timeline.\+Clip\+Parameters\+Curve\+Data\+Source}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_parameters_curve_data_source_af0ba8012c55419145157fca7be74089e}{Unity\+Editor.\+Timeline.\+Track\+Parameters\+Curve\+Data\+Source}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_curve_data_source_ae4eeda2d7277e1fb3c0bba8bf0340165}\label{class_unity_editor_1_1_timeline_1_1_curve_data_source_ae4eeda2d7277e1fb3c0bba8bf0340165}} 
+\index{UnityEditor.Timeline.CurveDataSource@{UnityEditor.Timeline.CurveDataSource}!UpdateExternalChanges@{UpdateExternalChanges}}
+\index{UpdateExternalChanges@{UpdateExternalChanges}!UnityEditor.Timeline.CurveDataSource@{UnityEditor.Timeline.CurveDataSource}}
+\doxysubsubsection{\texorpdfstring{UpdateExternalChanges()}{UpdateExternalChanges()}}
+{\footnotesize\ttfamily virtual Curve\+Change\+Type Unity\+Editor.\+Timeline.\+Curve\+Data\+Source.\+Update\+External\+Changes (\begin{DoxyParamCaption}\item[{ref UInt64}]{curve\+Version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Call this method to check if the underlying clip has changed
+
+
+\begin{DoxyParams}{Parameters}
+{\em curve\+Version} & A versioning value. This will be updated to the latest version\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value indicating how the clip has changed
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Editor/\+Animation/Curve\+Data\+Source.\+cs\end{DoxyCompactItemize}

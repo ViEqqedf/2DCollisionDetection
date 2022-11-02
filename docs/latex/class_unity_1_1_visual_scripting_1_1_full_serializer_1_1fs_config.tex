@@ -1,0 +1,104 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config}{}\doxysection{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Config Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config}\index{Unity.VisualScripting.FullSerializer.fsConfig@{Unity.VisualScripting.FullSerializer.fsConfig}}
+
+
+Enables some top-\/level customization of Full Serializer.  
+
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Type\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_a0891f54b8e397d29164738679063afaf}{Serialize\+Attributes}}
+\begin{DoxyCompactList}\small\item\em The attributes that will force a field or property to be serialized. \end{DoxyCompactList}\item 
+Type\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_ac07c7253158ea316f6ba8461f606a624}{Ignore\+Serialize\+Attributes}}
+\begin{DoxyCompactList}\small\item\em The attributes that will force a field or property to {\itshape not} be serialized. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_abffb7195a40a8c2419b8180116edfbf7}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_abffb7195a40a8c2419b8180116edfbf7}} 
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_full_serializer_aa8bf2158000e71fcb861adb89c5eb7cc}{fs\+Member\+Serialization}} {\bfseries Default\+Member\+Serialization} = \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_full_serializer_aa8bf2158000e71fcb861adb89c5eb7cca7a1920d61156abc05a60135aefe8bc67}{fs\+Member\+Serialization.\+Default}}
+\begin{DoxyCompactList}\small\item\em The default member serialization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_ac9403a7ac294e15f8a0cca0dc308c72b}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_ac9403a7ac294e15f8a0cca0dc308c72b}} 
+Func$<$ string, Member\+Info, string $>$ {\bfseries Get\+Json\+Name\+From\+Member\+Name} = (name, info) =$>$ name
+\begin{DoxyCompactList}\small\item\em Convert a C\# field/property name into the key used for the JSON object. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_for}{For}} example, you could force all JSON names to lowercase with\+: \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_ac9403a7ac294e15f8a0cca0dc308c72b}{fs\+Config.\+Get\+Json\+Name\+From\+Member\+Name}} = (name, info) =\texorpdfstring{$>$}{>} name.\+To\+Lower(); \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} will only be used when the name is not explicitly specified with fs\+Property. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_aa4e5604bd45d42c27d8739aff5085f62}{Enable\+Property\+Serialization}} = true
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} false, then {\itshape all} property serialization support will be disabled \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_a12fd9ce18e37fc8099c5393c9fbea1ed}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_a12fd9ce18e37fc8099c5393c9fbea1ed}} 
+bool {\bfseries Serialize\+Non\+Auto\+Properties} = false
+\begin{DoxyCompactList}\small\item\em Should the default serialization behaviour include non-\/auto properties? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_af9399d8c02f0d6ae24053797aabe4d34}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_af9399d8c02f0d6ae24053797aabe4d34}} 
+bool {\bfseries Serialize\+Non\+Public\+Set\+Properties} = true
+\begin{DoxyCompactList}\small\item\em Should the default serialization behaviour include properties with non-\/public setters? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_a5a49cbc81759085f949f784ba5fff1e2}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_a5a49cbc81759085f949f784ba5fff1e2}} 
+string {\bfseries Custom\+Date\+Time\+Format\+String} = null
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} not null, this string format will be used for Date\+Time instead of the default one. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_aae3d42aeea50651b57de84da6331efc9}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_aae3d42aeea50651b57de84da6331efc9}} 
+bool {\bfseries Serialize64\+Bit\+Integer\+As\+String} = false
+\begin{DoxyCompactList}\small\item\em Int64 and UInt64 will be serialized and deserialized as string for compatibility \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_a50c8892045d9ffb1735896f91e5320f8}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_a50c8892045d9ffb1735896f91e5320f8}} 
+bool {\bfseries Serialize\+Enums\+As\+Integer} = false
+\begin{DoxyCompactList}\small\item\em Enums are serialized using their names by default. Setting this to true will serialize them as integers instead. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Enables some top-\/level customization of Full Serializer. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_aa4e5604bd45d42c27d8739aff5085f62}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_aa4e5604bd45d42c27d8739aff5085f62}} 
+\index{Unity.VisualScripting.FullSerializer.fsConfig@{Unity.VisualScripting.FullSerializer.fsConfig}!EnablePropertySerialization@{EnablePropertySerialization}}
+\index{EnablePropertySerialization@{EnablePropertySerialization}!Unity.VisualScripting.FullSerializer.fsConfig@{Unity.VisualScripting.FullSerializer.fsConfig}}
+\doxysubsubsection{\texorpdfstring{EnablePropertySerialization}{EnablePropertySerialization}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Config.\+Enable\+Property\+Serialization = true}
+
+
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} false, then {\itshape all} property serialization support will be disabled 
+
+
+\begin{DoxyItemize}
+\item even properties explicitly annotated with fs\+Property or any other opt-\/in annotation. Setting this to false means that Serialize\+Non\+Auto\+Properties and Serialize\+Non\+Public\+Set\+Properties will be completely ignored. 
+\end{DoxyItemize}\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_ac07c7253158ea316f6ba8461f606a624}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_ac07c7253158ea316f6ba8461f606a624}} 
+\index{Unity.VisualScripting.FullSerializer.fsConfig@{Unity.VisualScripting.FullSerializer.fsConfig}!IgnoreSerializeAttributes@{IgnoreSerializeAttributes}}
+\index{IgnoreSerializeAttributes@{IgnoreSerializeAttributes}!Unity.VisualScripting.FullSerializer.fsConfig@{Unity.VisualScripting.FullSerializer.fsConfig}}
+\doxysubsubsection{\texorpdfstring{IgnoreSerializeAttributes}{IgnoreSerializeAttributes}}
+{\footnotesize\ttfamily Type \mbox{[}$\,$\mbox{]} Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Config.\+Ignore\+Serialize\+Attributes}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            typeof(NonSerializedAttribute),}
+\DoxyCodeLine{            typeof(fsIgnoreAttribute),}
+\DoxyCodeLine{            typeof(DoNotSerializeAttribute)}
+\DoxyCodeLine{        \}}
+
+\end{DoxyCode}
+
+
+The attributes that will force a field or property to {\itshape not} be serialized. 
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_a0891f54b8e397d29164738679063afaf}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config_a0891f54b8e397d29164738679063afaf}} 
+\index{Unity.VisualScripting.FullSerializer.fsConfig@{Unity.VisualScripting.FullSerializer.fsConfig}!SerializeAttributes@{SerializeAttributes}}
+\index{SerializeAttributes@{SerializeAttributes}!Unity.VisualScripting.FullSerializer.fsConfig@{Unity.VisualScripting.FullSerializer.fsConfig}}
+\doxysubsubsection{\texorpdfstring{SerializeAttributes}{SerializeAttributes}}
+{\footnotesize\ttfamily Type \mbox{[}$\,$\mbox{]} Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Config.\+Serialize\+Attributes}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{            typeof(\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}}.SerializeField),}
+\DoxyCodeLine{}
+\DoxyCodeLine{            typeof(fsPropertyAttribute),}
+\DoxyCodeLine{            typeof(SerializeAttribute),}
+\DoxyCodeLine{            typeof(SerializeAsAttribute)}
+\DoxyCodeLine{        \}}
+
+\end{DoxyCode}
+
+
+The attributes that will force a field or property to be serialized. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Core/\+Dependencies/\+Full\+Serializer/fs\+Config.\+cs\end{DoxyCompactItemize}

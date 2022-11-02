@@ -1,0 +1,200 @@
+\hypertarget{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository}{}\doxysection{Unity\+Editor.\+Settings\+Management.\+ISettings\+Repository Interface Reference}
+\label{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository}\index{UnityEditor.SettingsManagement.ISettingsRepository@{UnityEditor.SettingsManagement.ISettingsRepository}}
+
+
+A settings repository is responsible for implementing the saving and loading of values.  
+
+
+Inheritance diagram for Unity\+Editor.\+Settings\+Management.\+ISettings\+Repository\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.564246cm]{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_a4253fe13e46401fe56c349b86df82633}{Save}} ()
+\begin{DoxyCompactList}\small\item\em Save all settings to their serialized state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_aa53594744a78de588326903be6713110}{Set$<$ T $>$}} (string key, T value)
+\begin{DoxyCompactList}\small\item\em Set a value for key of type T. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_afca325f1144799c33d50cb54c76a8010}{Get$<$ T $>$}} (string key, T fallback=default(T))
+\begin{DoxyCompactList}\small\item\em Get a value with key of type T, or return the fallback value if no matching key is found. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_adf1d13be958b46d837526ee0e2869d78}{Contains\+Key$<$ T $>$}} (string key)
+\begin{DoxyCompactList}\small\item\em Does the repository contain a setting with key and type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_a7239fef53f11645f9efe8d4281aaa5a7}{Remove$<$ T $>$}} (string key)
+\begin{DoxyCompactList}\small\item\em Remove a key value pair from the settings repository. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Settings\+Scope \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_adb466a49b9696b304e8189b2c42deaa9}{scope}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_a769da36baee1411082893df3913ae53a}{name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A name to identify this repository. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_a3cfa56177303d5fac535d3fb6bbf65cc}{path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A settings repository is responsible for implementing the saving and loading of values. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_adf1d13be958b46d837526ee0e2869d78}\label{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_adf1d13be958b46d837526ee0e2869d78}} 
+\index{UnityEditor.SettingsManagement.ISettingsRepository@{UnityEditor.SettingsManagement.ISettingsRepository}!ContainsKey$<$ T $>$@{ContainsKey$<$ T $>$}}
+\index{ContainsKey$<$ T $>$@{ContainsKey$<$ T $>$}!UnityEditor.SettingsManagement.ISettingsRepository@{UnityEditor.SettingsManagement.ISettingsRepository}}
+\doxysubsubsection{\texorpdfstring{ContainsKey$<$ T $>$()}{ContainsKey< T >()}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Settings\+Management.\+ISettings\+Repository.\+Contains\+Key$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{key }\end{DoxyParamCaption})}
+
+
+
+Does the repository contain a setting with key and type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The settings key.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of value to search for.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+True if a setting matching both key and type is found, false if no entry is found.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_package_settings_repository_adf4ad4bc9886e928878da5ed230a2dfc}{Unity\+Editor.\+Settings\+Management.\+Package\+Settings\+Repository}}, and \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_settings_repository_a9542e7a9ebcc37bf5e89252874a8ccfe}{Unity\+Editor.\+Settings\+Management.\+User\+Settings\+Repository}}.
+
+\mbox{\Hypertarget{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_afca325f1144799c33d50cb54c76a8010}\label{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_afca325f1144799c33d50cb54c76a8010}} 
+\index{UnityEditor.SettingsManagement.ISettingsRepository@{UnityEditor.SettingsManagement.ISettingsRepository}!Get$<$ T $>$@{Get$<$ T $>$}}
+\index{Get$<$ T $>$@{Get$<$ T $>$}!UnityEditor.SettingsManagement.ISettingsRepository@{UnityEditor.SettingsManagement.ISettingsRepository}}
+\doxysubsubsection{\texorpdfstring{Get$<$ T $>$()}{Get< T >()}}
+{\footnotesize\ttfamily T Unity\+Editor.\+Settings\+Management.\+ISettings\+Repository.\+Get$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{key,  }\item[{T}]{fallback = {\ttfamily default(T)} }\end{DoxyParamCaption})}
+
+
+
+Get a value with key of type T, or return the fallback value if no matching key is found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The settings key.\\
+\hline
+{\em fallback} & If no key with a value of type T is found, this value is returned.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of value to search for.\\
+\hline
+\end{DoxyTemplParams}
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_package_settings_repository_a35ac6a55a6fc62c95605ed391387d428}{Unity\+Editor.\+Settings\+Management.\+Package\+Settings\+Repository}}, and \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_settings_repository_a6bda9cf652b55d2ede17bd917b147376}{Unity\+Editor.\+Settings\+Management.\+User\+Settings\+Repository}}.
+
+\mbox{\Hypertarget{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_a7239fef53f11645f9efe8d4281aaa5a7}\label{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_a7239fef53f11645f9efe8d4281aaa5a7}} 
+\index{UnityEditor.SettingsManagement.ISettingsRepository@{UnityEditor.SettingsManagement.ISettingsRepository}!Remove$<$ T $>$@{Remove$<$ T $>$}}
+\index{Remove$<$ T $>$@{Remove$<$ T $>$}!UnityEditor.SettingsManagement.ISettingsRepository@{UnityEditor.SettingsManagement.ISettingsRepository}}
+\doxysubsubsection{\texorpdfstring{Remove$<$ T $>$()}{Remove< T >()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Settings\+Management.\+ISettings\+Repository.\+Remove$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{key }\end{DoxyParamCaption})}
+
+
+
+Remove a key value pair from the settings repository. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_package_settings_repository_a8cbc1159ae0f6a07cfb14eeea5a3af9c}{Unity\+Editor.\+Settings\+Management.\+Package\+Settings\+Repository}}, and \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_settings_repository_a70fd8005a05ef713ce444868859fb4f8}{Unity\+Editor.\+Settings\+Management.\+User\+Settings\+Repository}}.
+
+\mbox{\Hypertarget{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_a4253fe13e46401fe56c349b86df82633}\label{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_a4253fe13e46401fe56c349b86df82633}} 
+\index{UnityEditor.SettingsManagement.ISettingsRepository@{UnityEditor.SettingsManagement.ISettingsRepository}!Save@{Save}}
+\index{Save@{Save}!UnityEditor.SettingsManagement.ISettingsRepository@{UnityEditor.SettingsManagement.ISettingsRepository}}
+\doxysubsubsection{\texorpdfstring{Save()}{Save()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Settings\+Management.\+ISettings\+Repository.\+Save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Save all settings to their serialized state. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_package_settings_repository_ad78feb1630eca6294874eb8cee6dd5bd}{Unity\+Editor.\+Settings\+Management.\+Package\+Settings\+Repository}}, and \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_settings_repository_ac283700e63b71987b3bcb53239541b41}{Unity\+Editor.\+Settings\+Management.\+User\+Settings\+Repository}}.
+
+\mbox{\Hypertarget{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_aa53594744a78de588326903be6713110}\label{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_aa53594744a78de588326903be6713110}} 
+\index{UnityEditor.SettingsManagement.ISettingsRepository@{UnityEditor.SettingsManagement.ISettingsRepository}!Set$<$ T $>$@{Set$<$ T $>$}}
+\index{Set$<$ T $>$@{Set$<$ T $>$}!UnityEditor.SettingsManagement.ISettingsRepository@{UnityEditor.SettingsManagement.ISettingsRepository}}
+\doxysubsubsection{\texorpdfstring{Set$<$ T $>$()}{Set< T >()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Settings\+Management.\+ISettings\+Repository.\+Set$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{key,  }\item[{T}]{value }\end{DoxyParamCaption})}
+
+
+
+Set a value for key of type T. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The settings key.\\
+\hline
+{\em value} & The value to set. Must be serializable.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of value.\\
+\hline
+\end{DoxyTemplParams}
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_package_settings_repository_ad50096e456cb4e8ed2582afd646725c4}{Unity\+Editor.\+Settings\+Management.\+Package\+Settings\+Repository}}, and \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_settings_repository_a34fbc02bb906c650f5879ce3f39dae2f}{Unity\+Editor.\+Settings\+Management.\+User\+Settings\+Repository}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_a769da36baee1411082893df3913ae53a}\label{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_a769da36baee1411082893df3913ae53a}} 
+\index{UnityEditor.SettingsManagement.ISettingsRepository@{UnityEditor.SettingsManagement.ISettingsRepository}!name@{name}}
+\index{name@{name}!UnityEditor.SettingsManagement.ISettingsRepository@{UnityEditor.SettingsManagement.ISettingsRepository}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string Unity\+Editor.\+Settings\+Management.\+ISettings\+Repository.\+name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+A name to identify this repository. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_package_settings_repository_ab773786b2c61ee7e865d4015dcc75e9c}{Unity\+Editor.\+Settings\+Management.\+Package\+Settings\+Repository}}, and \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_settings_repository_a90250f4883a0c7d81a64500ec8d99672}{Unity\+Editor.\+Settings\+Management.\+User\+Settings\+Repository}}.
+
+\mbox{\Hypertarget{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_a3cfa56177303d5fac535d3fb6bbf65cc}\label{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_a3cfa56177303d5fac535d3fb6bbf65cc}} 
+\index{UnityEditor.SettingsManagement.ISettingsRepository@{UnityEditor.SettingsManagement.ISettingsRepository}!path@{path}}
+\index{path@{path}!UnityEditor.SettingsManagement.ISettingsRepository@{UnityEditor.SettingsManagement.ISettingsRepository}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily string Unity\+Editor.\+Settings\+Management.\+ISettings\+Repository.\+path\hspace{0.3cm}{\ttfamily [get]}}
+
+File path to the serialized settings data. 
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_package_settings_repository_a4cccf3821a51fc6ca217013db0297462}{Unity\+Editor.\+Settings\+Management.\+Package\+Settings\+Repository}}, and \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_settings_repository_aad56306d7aea826fb0d78ff2d86bd513}{Unity\+Editor.\+Settings\+Management.\+User\+Settings\+Repository}}.
+
+\mbox{\Hypertarget{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_adb466a49b9696b304e8189b2c42deaa9}\label{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository_adb466a49b9696b304e8189b2c42deaa9}} 
+\index{UnityEditor.SettingsManagement.ISettingsRepository@{UnityEditor.SettingsManagement.ISettingsRepository}!scope@{scope}}
+\index{scope@{scope}!UnityEditor.SettingsManagement.ISettingsRepository@{UnityEditor.SettingsManagement.ISettingsRepository}}
+\doxysubsubsection{\texorpdfstring{scope}{scope}}
+{\footnotesize\ttfamily Settings\+Scope Unity\+Editor.\+Settings\+Management.\+ISettings\+Repository.\+scope\hspace{0.3cm}{\ttfamily [get]}}
+
+What Settings\+Scope this repository applies to. 
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_package_settings_repository_ad31935f435d0624c3b63f1d881f269b5}{Unity\+Editor.\+Settings\+Management.\+Package\+Settings\+Repository}}, and \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_settings_repository_a237876737094c00ff6d119606503a40f}{Unity\+Editor.\+Settings\+Management.\+User\+Settings\+Repository}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+settings-\/manager@1.\+0.\+3/\+Editor/ISettings\+Repository.\+cs\end{DoxyCompactItemize}

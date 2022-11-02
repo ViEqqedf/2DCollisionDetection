@@ -1,0 +1,67 @@
+\hypertarget{interface_unity_engine_1_1_u_i_1_1_i_layout_controller}{}\doxysection{Unity\+Engine.\+UI.\+ILayout\+Controller Interface Reference}
+\label{interface_unity_engine_1_1_u_i_1_1_i_layout_controller}\index{UnityEngine.UI.ILayoutController@{UnityEngine.UI.ILayoutController}}
+
+
+Base interface to be implemented by components that control the layout of Rect\+Transforms.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+ILayout\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.163842cm]{interface_unity_engine_1_1_u_i_1_1_i_layout_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_controller_a95b624c7b7e9cc77de533391420aef66}{Set\+Layout\+Horizontal}} ()
+\begin{DoxyCompactList}\small\item\em Callback invoked by the auto layout system which handles horizontal aspects of the layout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_controller_a3a661d763b5fd014a3b5bb05c133eb77}{Set\+Layout\+Vertical}} ()
+\begin{DoxyCompactList}\small\item\em Callback invoked by the auto layout system which handles vertical aspects of the layout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base interface to be implemented by components that control the layout of Rect\+Transforms. 
+
+If a component is driving its own Rect\+Transform it should implement the interface \mbox{[}\mbox{[}ILayout\+Self\+Controller\mbox{]}\mbox{]}. If a component is driving the Rect\+Transforms of its children, it should implement \mbox{[}\mbox{[}\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_group}{ILayout\+Group}}\mbox{]}\mbox{]}.
+
+The layout system will first invoke Set\+Layout\+Horizontal and then Set\+Layout\+Vertical.
+
+In the Set\+Layout\+Horizontal call it is valid to call Layout\+Utility.\+Get\+Min\+Width, Layout\+Utility.\+Get\+Preferred\+Width, and Layout\+Utility.\+Get\+Flexible\+Width on the Rect\+Transform of itself or any of its children. In the Set\+Layout\+Vertical call it is valid to call Layout\+Utility.\+Get\+Min\+Height, Layout\+Utility.\+Get\+Preferred\+Height, and Layout\+Utility.\+Get\+Flexible\+Height on the Rect\+Transform of itself or any of its children.
+
+The component may use this information to determine the width and height to use for its own Rect\+Transform or the Rect\+Transforms of its children. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_layout_controller_a95b624c7b7e9cc77de533391420aef66}\label{interface_unity_engine_1_1_u_i_1_1_i_layout_controller_a95b624c7b7e9cc77de533391420aef66}} 
+\index{UnityEngine.UI.ILayoutController@{UnityEngine.UI.ILayoutController}!SetLayoutHorizontal@{SetLayoutHorizontal}}
+\index{SetLayoutHorizontal@{SetLayoutHorizontal}!UnityEngine.UI.ILayoutController@{UnityEngine.UI.ILayoutController}}
+\doxysubsubsection{\texorpdfstring{SetLayoutHorizontal()}{SetLayoutHorizontal()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+ILayout\+Controller.\+Set\+Layout\+Horizontal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Callback invoked by the auto layout system which handles horizontal aspects of the layout. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a1cdba1355d46027c7398f5b40b20cc02}{Unity\+Engine.\+UI.\+Grid\+Layout\+Group}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_horizontal_layout_group_a1f2bf04fbbc163b14e16b528d7a0c97a}{Unity\+Engine.\+UI.\+Horizontal\+Layout\+Group}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a769fc63323ccfaccdcc5bf2dbd9d1737}{Unity\+Engine.\+UI.\+Layout\+Group}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_vertical_layout_group_a34560cd3c74a447bc84e92cd3633e01c}{Unity\+Engine.\+UI.\+Vertical\+Layout\+Group}}.
+
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_layout_controller_a3a661d763b5fd014a3b5bb05c133eb77}\label{interface_unity_engine_1_1_u_i_1_1_i_layout_controller_a3a661d763b5fd014a3b5bb05c133eb77}} 
+\index{UnityEngine.UI.ILayoutController@{UnityEngine.UI.ILayoutController}!SetLayoutVertical@{SetLayoutVertical}}
+\index{SetLayoutVertical@{SetLayoutVertical}!UnityEngine.UI.ILayoutController@{UnityEngine.UI.ILayoutController}}
+\doxysubsubsection{\texorpdfstring{SetLayoutVertical()}{SetLayoutVertical()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+ILayout\+Controller.\+Set\+Layout\+Vertical (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Callback invoked by the auto layout system which handles vertical aspects of the layout. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_aa639a03a0ea5812aef0b7299bfe7bcd0}{Unity\+Engine.\+UI.\+Grid\+Layout\+Group}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_horizontal_layout_group_a1802eac198c20c8b43f6a62af1e91c36}{Unity\+Engine.\+UI.\+Horizontal\+Layout\+Group}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a8e79b44c0bf76c4927550be2116f1b1a}{Unity\+Engine.\+UI.\+Layout\+Group}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_vertical_layout_group_a90854ae9526aa73aa6559b2ccfc134ac}{Unity\+Engine.\+UI.\+Vertical\+Layout\+Group}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/\+Layout/ILayout\+Element.\+cs\end{DoxyCompactItemize}

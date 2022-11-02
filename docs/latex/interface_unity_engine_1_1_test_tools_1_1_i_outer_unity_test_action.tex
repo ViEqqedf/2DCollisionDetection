@@ -1,0 +1,61 @@
+\hypertarget{interface_unity_engine_1_1_test_tools_1_1_i_outer_unity_test_action}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+IOuter\+Unity\+Test\+Action Interface Reference}
+\label{interface_unity_engine_1_1_test_tools_1_1_i_outer_unity_test_action}\index{UnityEngine.TestTools.IOuterUnityTestAction@{UnityEngine.TestTools.IOuterUnityTestAction}}
+
+
+When implemented by an attribute, this interface implemented to provide actions to execute before setup and after teardown of tests.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerator \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_outer_unity_test_action_a64057549c2f0f92c6d5867fc3b94c0b1}{Before\+Test}} (ITest test)
+\begin{DoxyCompactList}\small\item\em Executed before each test is run\end{DoxyCompactList}\item 
+IEnumerator \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_outer_unity_test_action_ac1a109cb1765c180b192515344c66067}{After\+Test}} (ITest test)
+\begin{DoxyCompactList}\small\item\em Executed after each test is run\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+When implemented by an attribute, this interface implemented to provide actions to execute before setup and after teardown of tests. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_unity_engine_1_1_test_tools_1_1_i_outer_unity_test_action_ac1a109cb1765c180b192515344c66067}\label{interface_unity_engine_1_1_test_tools_1_1_i_outer_unity_test_action_ac1a109cb1765c180b192515344c66067}} 
+\index{UnityEngine.TestTools.IOuterUnityTestAction@{UnityEngine.TestTools.IOuterUnityTestAction}!AfterTest@{AfterTest}}
+\index{AfterTest@{AfterTest}!UnityEngine.TestTools.IOuterUnityTestAction@{UnityEngine.TestTools.IOuterUnityTestAction}}
+\doxysubsubsection{\texorpdfstring{AfterTest()}{AfterTest()}}
+{\footnotesize\ttfamily IEnumerator Unity\+Engine.\+Test\+Tools.\+IOuter\+Unity\+Test\+Action.\+After\+Test (\begin{DoxyParamCaption}\item[{ITest}]{test }\end{DoxyParamCaption})}
+
+
+
+Executed after each test is run
+
+
+\begin{DoxyParams}{Parameters}
+{\em test} & The test that has just been run.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Enumerable collection of actions to perform after test teardown.
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_unity_engine_1_1_test_tools_1_1_i_outer_unity_test_action_a64057549c2f0f92c6d5867fc3b94c0b1}\label{interface_unity_engine_1_1_test_tools_1_1_i_outer_unity_test_action_a64057549c2f0f92c6d5867fc3b94c0b1}} 
+\index{UnityEngine.TestTools.IOuterUnityTestAction@{UnityEngine.TestTools.IOuterUnityTestAction}!BeforeTest@{BeforeTest}}
+\index{BeforeTest@{BeforeTest}!UnityEngine.TestTools.IOuterUnityTestAction@{UnityEngine.TestTools.IOuterUnityTestAction}}
+\doxysubsubsection{\texorpdfstring{BeforeTest()}{BeforeTest()}}
+{\footnotesize\ttfamily IEnumerator Unity\+Engine.\+Test\+Tools.\+IOuter\+Unity\+Test\+Action.\+Before\+Test (\begin{DoxyParamCaption}\item[{ITest}]{test }\end{DoxyParamCaption})}
+
+
+
+Executed before each test is run
+
+
+\begin{DoxyParams}{Parameters}
+{\em test} & The test that is going to be run.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Enumerable collection of actions to perform before test setup.
+\end{DoxyReturn}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Engine.\+Test\+Runner/\+Utils/IOuter\+Unity\+Test\+Action.\+cs\end{DoxyCompactItemize}

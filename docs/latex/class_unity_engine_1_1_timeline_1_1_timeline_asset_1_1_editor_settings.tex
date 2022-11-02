@@ -1,0 +1,107 @@
+\hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings}{}\doxysection{Unity\+Engine.\+Timeline.\+Timeline\+Asset.\+Editor\+Settings Class Reference}
+\label{class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings}\index{UnityEngine.Timeline.TimelineAsset.EditorSettings@{UnityEngine.Timeline.TimelineAsset.EditorSettings}}
+
+
+Properties of the timeline that are used by the editor  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings_ae6db1d1f9eec7772847a8571e705072f}{Set\+Standard\+Frame\+Rate}} (\mbox{\hyperlink{namespace_unity_engine_1_1_timeline_a946a7b462b33b8896271487a91d54ee0}{Standard\+Frame\+Rates}} enum\+Value)
+\begin{DoxyCompactList}\small\item\em Sets the Editor\+Setting frame\+Rate to one of the provided standard frame rates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings_a85c45fa3246c5dd3d62814e695aa0708}\label{class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings_a85c45fa3246c5dd3d62814e695aa0708}} 
+float {\bfseries fps}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The frames per second used for snapping and time ruler display \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings_a9f3a707a830672d8b59b8cd14da3866a}{frame\+Rate}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The frames per second used for framelocked preview, frame snapping and time ruler display, \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings_a32cea31946cb3bf103e781db0edd5919}{scene\+Preview}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set to false to ignore scene preview when this timeline is played by the \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Properties of the timeline that are used by the editor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings_ae6db1d1f9eec7772847a8571e705072f}\label{class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings_ae6db1d1f9eec7772847a8571e705072f}} 
+\index{UnityEngine.Timeline.TimelineAsset.EditorSettings@{UnityEngine.Timeline.TimelineAsset.EditorSettings}!SetStandardFrameRate@{SetStandardFrameRate}}
+\index{SetStandardFrameRate@{SetStandardFrameRate}!UnityEngine.Timeline.TimelineAsset.EditorSettings@{UnityEngine.Timeline.TimelineAsset.EditorSettings}}
+\doxysubsubsection{\texorpdfstring{SetStandardFrameRate()}{SetStandardFrameRate()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Timeline.\+Timeline\+Asset.\+Editor\+Settings.\+Set\+Standard\+Frame\+Rate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_timeline_a946a7b462b33b8896271487a91d54ee0}{Standard\+Frame\+Rates}}}]{enum\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the Editor\+Setting frame\+Rate to one of the provided standard frame rates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enum\+Value} & Standard\+Frame\+Rates value, used to set the current \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings}{Editor\+Settings}} frame\+Rate value.\\
+\hline
+\end{DoxyParams}
+
+
+When specifying drop frame values, it is recommended to select one of the provided standard frame rates. Specifying a non-\/standard custom frame rate may give incorrect results when playback\+Locked\+To\+Frame is enabled during \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} playback. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & Thrown when the enum\+Value is not a valid member of Standard\+Frame\+Rates.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Unity\+Engine.\+Timeline.\+Timeline\+Asset}}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings_a9f3a707a830672d8b59b8cd14da3866a}\label{class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings_a9f3a707a830672d8b59b8cd14da3866a}} 
+\index{UnityEngine.Timeline.TimelineAsset.EditorSettings@{UnityEngine.Timeline.TimelineAsset.EditorSettings}!frameRate@{frameRate}}
+\index{frameRate@{frameRate}!UnityEngine.Timeline.TimelineAsset.EditorSettings@{UnityEngine.Timeline.TimelineAsset.EditorSettings}}
+\doxysubsubsection{\texorpdfstring{frameRate}{frameRate}}
+{\footnotesize\ttfamily double Unity\+Engine.\+Timeline.\+Timeline\+Asset.\+Editor\+Settings.\+frame\+Rate\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The frames per second used for framelocked preview, frame snapping and time ruler display, 
+
+If frame\+Rate is set to a non-\/standard custom frame rate, \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} playback may give incorrect results when playback\+Locked\+To\+Frame is true. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Unity\+Engine.\+Timeline.\+Timeline\+Asset}}
+
+
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings_a32cea31946cb3bf103e781db0edd5919}\label{class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings_a32cea31946cb3bf103e781db0edd5919}} 
+\index{UnityEngine.Timeline.TimelineAsset.EditorSettings@{UnityEngine.Timeline.TimelineAsset.EditorSettings}!scenePreview@{scenePreview}}
+\index{scenePreview@{scenePreview}!UnityEngine.Timeline.TimelineAsset.EditorSettings@{UnityEngine.Timeline.TimelineAsset.EditorSettings}}
+\doxysubsubsection{\texorpdfstring{scenePreview}{scenePreview}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Timeline.\+Timeline\+Asset.\+Editor\+Settings.\+scene\+Preview\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Set to false to ignore scene preview when this timeline is played by the \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} window. 
+
+When set to false, this setting will
+\begin{DoxyItemize}
+\item Disable scene preview when this timeline is played by the \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} window.
+\item Disable recording for all recordable tracks.
+\item Disable play range in the \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} window.
+\item {\ttfamily Stop()} is not called on the {\ttfamily Playable\+Director} when switching between different {\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}}}s in the Timeline\+Window.
+\end{DoxyItemize}
+
+{\ttfamily scene\+Preview} will only be applied if the asset is the master timeline. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Unity\+Engine.\+Timeline.\+Timeline\+Asset}}
+
+
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/Timeline\+Asset.\+cs\end{DoxyCompactItemize}

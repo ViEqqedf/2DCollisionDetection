@@ -1,0 +1,6 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="node1" href="$interface_physics_1_1_i_physics_world.html" title=" " alt="" coords="5,5,163,32"/>
+<area shape="rect" id="node2" href="$class_physics_1_1_physics_world.html" title=" " alt="" coords="231,5,385,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="28,56,140,83"/>
+<area shape="rect" id="node4" href="$class_physics_1_1_collision_object_proxy.html" title=" " alt="" coords="211,56,405,83"/>
+</map>

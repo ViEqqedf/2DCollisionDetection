@@ -1,0 +1,95 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_graph_connection_collection}{}\doxysection{Unity.\+Visual\+Scripting.\+Graph\+Connection\+Collection\texorpdfstring{$<$}{<} TConnection, TSource, TDestination \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_unity_1_1_visual_scripting_1_1_graph_connection_collection}\index{Unity.VisualScripting.GraphConnectionCollection$<$ TConnection, TSource, TDestination $>$@{Unity.VisualScripting.GraphConnectionCollection$<$ TConnection, TSource, TDestination $>$}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Graph\+Connection\+Collection\texorpdfstring{$<$}{<} TConnection, TSource, TDestination \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.738786cm]{class_unity_1_1_visual_scripting_1_1_graph_connection_collection}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_ae616e5b9ee75b68e07824b94a91177ad}\label{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_ae616e5b9ee75b68e07824b94a91177ad}} 
+{\bfseries Graph\+Connection\+Collection} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{IGraph}} graph)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_afe7dc70ae41bb16e1f9ce305f39709dc}\label{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_afe7dc70ae41bb16e1f9ce305f39709dc}} 
+bool {\bfseries Try\+Get\+Value} (Guid key, out TConnection value)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_ab234d95a8b10366fd48a32fd5abd32c3}\label{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_ab234d95a8b10366fd48a32fd5abd32c3}} 
+bool {\bfseries Contains} (Guid key)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_a3297ffd34b0751edda9ae1f2ca8408c7}\label{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_a3297ffd34b0751edda9ae1f2ca8408c7}} 
+bool {\bfseries Remove} (Guid key)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_ade4b1ac88163bb869f15aa52a44b99c7}{Before\+Add}} (TConnection item)
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_abd09f8b492830964be518b10bfc5bcb7}{After\+Add}} (TConnection item)
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_ad238140727a35ecd06eac6f1ce748b13}{Before\+Remove}} (TConnection item)
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_a8c9a86fecad4eb4ff67d7d43a367bf43}{After\+Remove}} (TConnection item)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_ae9b76c59f8c5916dcb5cc5bf6d96260a}\label{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_ae9b76c59f8c5916dcb5cc5bf6d96260a}} 
+Action$<$ TConnection $>$ {\bfseries Item\+Added}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_ad9ace3d52131dd2e1f45e75c9941b572}\label{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_ad9ace3d52131dd2e1f45e75c9941b572}} 
+Action$<$ TConnection $>$ {\bfseries Item\+Removed}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_aea264f657904c0bae59da52f335b74e3}\label{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_aea264f657904c0bae59da52f335b74e3}} 
+Action {\bfseries Collection\+Changed}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_abd09f8b492830964be518b10bfc5bcb7}\label{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_abd09f8b492830964be518b10bfc5bcb7}} 
+\index{Unity.VisualScripting.GraphConnectionCollection$<$ TConnection, TSource, TDestination $>$@{Unity.VisualScripting.GraphConnectionCollection$<$ TConnection, TSource, TDestination $>$}!AfterAdd@{AfterAdd}}
+\index{AfterAdd@{AfterAdd}!Unity.VisualScripting.GraphConnectionCollection$<$ TConnection, TSource, TDestination $>$@{Unity.VisualScripting.GraphConnectionCollection$<$ TConnection, TSource, TDestination $>$}}
+\doxysubsubsection{\texorpdfstring{AfterAdd()}{AfterAdd()}}
+{\footnotesize\ttfamily override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_connection_collection}{Unity.\+Visual\+Scripting.\+Graph\+Connection\+Collection}}$<$ TConnection, TSource, TDestination $>$.After\+Add (\begin{DoxyParamCaption}\item[{TConnection}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_connection_collection_base}{Unity.\+Visual\+Scripting.\+Connection\+Collection\+Base$<$ TConnection, TSource, TDestination, Graph\+Element\+Collection$<$ TConnection $>$ $>$}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_a8c9a86fecad4eb4ff67d7d43a367bf43}\label{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_a8c9a86fecad4eb4ff67d7d43a367bf43}} 
+\index{Unity.VisualScripting.GraphConnectionCollection$<$ TConnection, TSource, TDestination $>$@{Unity.VisualScripting.GraphConnectionCollection$<$ TConnection, TSource, TDestination $>$}!AfterRemove@{AfterRemove}}
+\index{AfterRemove@{AfterRemove}!Unity.VisualScripting.GraphConnectionCollection$<$ TConnection, TSource, TDestination $>$@{Unity.VisualScripting.GraphConnectionCollection$<$ TConnection, TSource, TDestination $>$}}
+\doxysubsubsection{\texorpdfstring{AfterRemove()}{AfterRemove()}}
+{\footnotesize\ttfamily override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_connection_collection}{Unity.\+Visual\+Scripting.\+Graph\+Connection\+Collection}}$<$ TConnection, TSource, TDestination $>$.After\+Remove (\begin{DoxyParamCaption}\item[{TConnection}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_connection_collection_base}{Unity.\+Visual\+Scripting.\+Connection\+Collection\+Base$<$ TConnection, TSource, TDestination, Graph\+Element\+Collection$<$ TConnection $>$ $>$}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_ade4b1ac88163bb869f15aa52a44b99c7}\label{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_ade4b1ac88163bb869f15aa52a44b99c7}} 
+\index{Unity.VisualScripting.GraphConnectionCollection$<$ TConnection, TSource, TDestination $>$@{Unity.VisualScripting.GraphConnectionCollection$<$ TConnection, TSource, TDestination $>$}!BeforeAdd@{BeforeAdd}}
+\index{BeforeAdd@{BeforeAdd}!Unity.VisualScripting.GraphConnectionCollection$<$ TConnection, TSource, TDestination $>$@{Unity.VisualScripting.GraphConnectionCollection$<$ TConnection, TSource, TDestination $>$}}
+\doxysubsubsection{\texorpdfstring{BeforeAdd()}{BeforeAdd()}}
+{\footnotesize\ttfamily override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_connection_collection}{Unity.\+Visual\+Scripting.\+Graph\+Connection\+Collection}}$<$ TConnection, TSource, TDestination $>$.Before\+Add (\begin{DoxyParamCaption}\item[{TConnection}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_connection_collection_base}{Unity.\+Visual\+Scripting.\+Connection\+Collection\+Base$<$ TConnection, TSource, TDestination, Graph\+Element\+Collection$<$ TConnection $>$ $>$}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_ad238140727a35ecd06eac6f1ce748b13}\label{class_unity_1_1_visual_scripting_1_1_graph_connection_collection_ad238140727a35ecd06eac6f1ce748b13}} 
+\index{Unity.VisualScripting.GraphConnectionCollection$<$ TConnection, TSource, TDestination $>$@{Unity.VisualScripting.GraphConnectionCollection$<$ TConnection, TSource, TDestination $>$}!BeforeRemove@{BeforeRemove}}
+\index{BeforeRemove@{BeforeRemove}!Unity.VisualScripting.GraphConnectionCollection$<$ TConnection, TSource, TDestination $>$@{Unity.VisualScripting.GraphConnectionCollection$<$ TConnection, TSource, TDestination $>$}}
+\doxysubsubsection{\texorpdfstring{BeforeRemove()}{BeforeRemove()}}
+{\footnotesize\ttfamily override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_connection_collection}{Unity.\+Visual\+Scripting.\+Graph\+Connection\+Collection}}$<$ TConnection, TSource, TDestination $>$.Before\+Remove (\begin{DoxyParamCaption}\item[{TConnection}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_connection_collection_base}{Unity.\+Visual\+Scripting.\+Connection\+Collection\+Base$<$ TConnection, TSource, TDestination, Graph\+Element\+Collection$<$ TConnection $>$ $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Core/\+Connections/Graph\+Connection\+Collection.\+cs\end{DoxyCompactItemize}

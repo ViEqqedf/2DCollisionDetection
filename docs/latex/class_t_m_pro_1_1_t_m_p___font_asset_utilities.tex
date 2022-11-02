@@ -1,0 +1,107 @@
+\hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_utilities}{}\doxysection{TMPro.\+TMP\+\_\+\+Font\+Asset\+Utilities Class Reference}
+\label{class_t_m_pro_1_1_t_m_p___font_asset_utilities}\index{TMPro.TMP\_FontAssetUtilities@{TMPro.TMP\_FontAssetUtilities}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___character}{TMP\+\_\+\+Character}} \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_utilities_a9d70106b39c64e03f4e62e1f13c0948b}{Get\+Character\+From\+Font\+Asset}} (uint unicode, \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} source\+Font\+Asset, bool include\+Fallbacks, Font\+Styles font\+Style, Font\+Weight font\+Weight, out bool is\+Alternative\+Typeface)
+\begin{DoxyCompactList}\small\item\em Returns the text element (character) for the given unicode value taking into consideration the requested font style and weight. Function searches the source font asset, its list of font assets assigned as alternative typefaces and potentially its fallbacks. The font asset out parameter contains a reference to the font asset containing the character. The typeface type indicates whether the returned font asset is the source font asset, an alternative typeface or fallback font asset. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___character}{TMP\+\_\+\+Character}} \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_utilities_afdc59bd1dcec2cddc898a4f034a66dee}{Get\+Character\+From\+Font\+Assets}} (uint unicode, \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} source\+Font\+Asset, List$<$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} $>$ font\+Assets, bool include\+Fallbacks, Font\+Styles font\+Style, Font\+Weight font\+Weight, out bool is\+Alternative\+Typeface)
+\begin{DoxyCompactList}\small\item\em Returns the text element (character) for the given unicode value taking into consideration the requested font style and weight. Function searches the provided list of font assets, the list of font assets assigned as alternative typefaces to them as well as their fallbacks. The font asset out parameter contains a reference to the font asset containing the character. The typeface type indicates whether the returned font asset is the source font asset, an alternative typeface or fallback font asset. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_character}{TMP\+\_\+\+Sprite\+Character}} \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_utilities_a466e7da43c7a39c16ec53c04c98335bc}{Get\+Sprite\+Character\+From\+Sprite\+Asset}} (uint unicode, \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset}{TMP\+\_\+\+Sprite\+Asset}} sprite\+Asset, bool include\+Fallbacks)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_utilities_a1f34ababfd8ed6e00fa3a83796442ade}\label{class_t_m_pro_1_1_t_m_p___font_asset_utilities_a1f34ababfd8ed6e00fa3a83796442ade}} 
+static \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_utilities}{TMP\+\_\+\+Font\+Asset\+Utilities}} {\bfseries instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get a singleton instance of the Font Asset Utilities class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_utilities_a9d70106b39c64e03f4e62e1f13c0948b}\label{class_t_m_pro_1_1_t_m_p___font_asset_utilities_a9d70106b39c64e03f4e62e1f13c0948b}} 
+\index{TMPro.TMP\_FontAssetUtilities@{TMPro.TMP\_FontAssetUtilities}!GetCharacterFromFontAsset@{GetCharacterFromFontAsset}}
+\index{GetCharacterFromFontAsset@{GetCharacterFromFontAsset}!TMPro.TMP\_FontAssetUtilities@{TMPro.TMP\_FontAssetUtilities}}
+\doxysubsubsection{\texorpdfstring{GetCharacterFromFontAsset()}{GetCharacterFromFontAsset()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___character}{TMP\+\_\+\+Character}} TMPro.\+TMP\+\_\+\+Font\+Asset\+Utilities.\+Get\+Character\+From\+Font\+Asset (\begin{DoxyParamCaption}\item[{uint}]{unicode,  }\item[{\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}}}]{source\+Font\+Asset,  }\item[{bool}]{include\+Fallbacks,  }\item[{Font\+Styles}]{font\+Style,  }\item[{Font\+Weight}]{font\+Weight,  }\item[{out bool}]{is\+Alternative\+Typeface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns the text element (character) for the given unicode value taking into consideration the requested font style and weight. Function searches the source font asset, its list of font assets assigned as alternative typefaces and potentially its fallbacks. The font asset out parameter contains a reference to the font asset containing the character. The typeface type indicates whether the returned font asset is the source font asset, an alternative typeface or fallback font asset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unicode} & The unicode value of the requested character\\
+\hline
+{\em source\+Font\+Asset} & The font asset to be searched\\
+\hline
+{\em include\+Fallbacks} & Include the fallback font assets in the search\\
+\hline
+{\em font\+Style} & The font style\\
+\hline
+{\em font\+Weight} & The font weight\\
+\hline
+{\em is\+Alternative\+Typeface} & Indicates if the OUT font asset is an alternative typeface or fallback font asset\\
+\hline
+{\em font\+Asset} & The font asset that contains the requested character\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_utilities_afdc59bd1dcec2cddc898a4f034a66dee}\label{class_t_m_pro_1_1_t_m_p___font_asset_utilities_afdc59bd1dcec2cddc898a4f034a66dee}} 
+\index{TMPro.TMP\_FontAssetUtilities@{TMPro.TMP\_FontAssetUtilities}!GetCharacterFromFontAssets@{GetCharacterFromFontAssets}}
+\index{GetCharacterFromFontAssets@{GetCharacterFromFontAssets}!TMPro.TMP\_FontAssetUtilities@{TMPro.TMP\_FontAssetUtilities}}
+\doxysubsubsection{\texorpdfstring{GetCharacterFromFontAssets()}{GetCharacterFromFontAssets()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___character}{TMP\+\_\+\+Character}} TMPro.\+TMP\+\_\+\+Font\+Asset\+Utilities.\+Get\+Character\+From\+Font\+Assets (\begin{DoxyParamCaption}\item[{uint}]{unicode,  }\item[{\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}}}]{source\+Font\+Asset,  }\item[{List$<$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} $>$}]{font\+Assets,  }\item[{bool}]{include\+Fallbacks,  }\item[{Font\+Styles}]{font\+Style,  }\item[{Font\+Weight}]{font\+Weight,  }\item[{out bool}]{is\+Alternative\+Typeface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns the text element (character) for the given unicode value taking into consideration the requested font style and weight. Function searches the provided list of font assets, the list of font assets assigned as alternative typefaces to them as well as their fallbacks. The font asset out parameter contains a reference to the font asset containing the character. The typeface type indicates whether the returned font asset is the source font asset, an alternative typeface or fallback font asset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unicode} & The unicode value of the requested character\\
+\hline
+{\em source\+Font\+Asset} & The font asset originating the search query\\
+\hline
+{\em font\+Assets} & The list of font assets to search\\
+\hline
+{\em include\+Fallbacks} & Determines if the fallback of each font assets on the list will be searched\\
+\hline
+{\em font\+Style} & The font style\\
+\hline
+{\em font\+Weight} & The font weight\\
+\hline
+{\em is\+Alternative\+Typeface} & Determines if the OUT font asset is an alternative typeface or fallback font asset\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_utilities_a466e7da43c7a39c16ec53c04c98335bc}\label{class_t_m_pro_1_1_t_m_p___font_asset_utilities_a466e7da43c7a39c16ec53c04c98335bc}} 
+\index{TMPro.TMP\_FontAssetUtilities@{TMPro.TMP\_FontAssetUtilities}!GetSpriteCharacterFromSpriteAsset@{GetSpriteCharacterFromSpriteAsset}}
+\index{GetSpriteCharacterFromSpriteAsset@{GetSpriteCharacterFromSpriteAsset}!TMPro.TMP\_FontAssetUtilities@{TMPro.TMP\_FontAssetUtilities}}
+\doxysubsubsection{\texorpdfstring{GetSpriteCharacterFromSpriteAsset()}{GetSpriteCharacterFromSpriteAsset()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_character}{TMP\+\_\+\+Sprite\+Character}} TMPro.\+TMP\+\_\+\+Font\+Asset\+Utilities.\+Get\+Sprite\+Character\+From\+Sprite\+Asset (\begin{DoxyParamCaption}\item[{uint}]{unicode,  }\item[{\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset}{TMP\+\_\+\+Sprite\+Asset}}}]{sprite\+Asset,  }\item[{bool}]{include\+Fallbacks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em unicode} & \\
+\hline
+{\em sprite\+Asset} & \\
+\hline
+{\em include\+Fallbacks} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+textmeshpro@3.\+0.\+6/\+Scripts/\+Runtime/TMP\+\_\+\+Font\+Asset\+Utilities.\+cs\end{DoxyCompactItemize}

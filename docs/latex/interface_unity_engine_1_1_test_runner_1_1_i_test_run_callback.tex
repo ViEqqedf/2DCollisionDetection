@@ -1,0 +1,89 @@
+\hypertarget{interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback}{}\doxysection{Unity\+Engine.\+Test\+Runner.\+ITest\+Run\+Callback Interface Reference}
+\label{interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback}\index{UnityEngine.TestRunner.ITestRunCallback@{UnityEngine.TestRunner.ITestRunCallback}}
+
+
+Interface for getting callsbacks on test progress directly from NUnit. This is available both in the editor and directly in the runtime. It is registered by using \mbox{\hyperlink{class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute}{Test\+Run\+Callback\+Attribute}}.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback_ad290b5b9b82cf0bd314fcd68dc5fded9}{Run\+Started}} (ITest tests\+To\+Run)
+\begin{DoxyCompactList}\small\item\em A callback invoked when a test run is started. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback_ae0f94bef390385094a65bea0582bc467}{Run\+Finished}} (ITest\+Result test\+Results)
+\begin{DoxyCompactList}\small\item\em A callback invoked when a test run is finished. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback_a3aa9dea3244effacf52b014767b8f7f3}{Test\+Started}} (ITest test)
+\begin{DoxyCompactList}\small\item\em A callback invoked when each individual node of the test tree has started executing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback_a4e01768f48ac18117f4203d1a33a5057}{Test\+Finished}} (ITest\+Result result)
+\begin{DoxyCompactList}\small\item\em A callback invoked when each individual node of the test tree has finished executing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for getting callsbacks on test progress directly from NUnit. This is available both in the editor and directly in the runtime. It is registered by using \mbox{\hyperlink{class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute}{Test\+Run\+Callback\+Attribute}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback_ae0f94bef390385094a65bea0582bc467}\label{interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback_ae0f94bef390385094a65bea0582bc467}} 
+\index{UnityEngine.TestRunner.ITestRunCallback@{UnityEngine.TestRunner.ITestRunCallback}!RunFinished@{RunFinished}}
+\index{RunFinished@{RunFinished}!UnityEngine.TestRunner.ITestRunCallback@{UnityEngine.TestRunner.ITestRunCallback}}
+\doxysubsubsection{\texorpdfstring{RunFinished()}{RunFinished()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Test\+Runner.\+ITest\+Run\+Callback.\+Run\+Finished (\begin{DoxyParamCaption}\item[{ITest\+Result}]{test\+Results }\end{DoxyParamCaption})}
+
+
+
+A callback invoked when a test run is finished. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em test\+Results} & The result of the test run.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback_ad290b5b9b82cf0bd314fcd68dc5fded9}\label{interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback_ad290b5b9b82cf0bd314fcd68dc5fded9}} 
+\index{UnityEngine.TestRunner.ITestRunCallback@{UnityEngine.TestRunner.ITestRunCallback}!RunStarted@{RunStarted}}
+\index{RunStarted@{RunStarted}!UnityEngine.TestRunner.ITestRunCallback@{UnityEngine.TestRunner.ITestRunCallback}}
+\doxysubsubsection{\texorpdfstring{RunStarted()}{RunStarted()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Test\+Runner.\+ITest\+Run\+Callback.\+Run\+Started (\begin{DoxyParamCaption}\item[{ITest}]{tests\+To\+Run }\end{DoxyParamCaption})}
+
+
+
+A callback invoked when a test run is started. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tests\+To\+Run} & The full loaded test tree.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback_a4e01768f48ac18117f4203d1a33a5057}\label{interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback_a4e01768f48ac18117f4203d1a33a5057}} 
+\index{UnityEngine.TestRunner.ITestRunCallback@{UnityEngine.TestRunner.ITestRunCallback}!TestFinished@{TestFinished}}
+\index{TestFinished@{TestFinished}!UnityEngine.TestRunner.ITestRunCallback@{UnityEngine.TestRunner.ITestRunCallback}}
+\doxysubsubsection{\texorpdfstring{TestFinished()}{TestFinished()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Test\+Runner.\+ITest\+Run\+Callback.\+Test\+Finished (\begin{DoxyParamCaption}\item[{ITest\+Result}]{result }\end{DoxyParamCaption})}
+
+
+
+A callback invoked when each individual node of the test tree has finished executing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & The result of the test tree node after it had been executed.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback_a3aa9dea3244effacf52b014767b8f7f3}\label{interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback_a3aa9dea3244effacf52b014767b8f7f3}} 
+\index{UnityEngine.TestRunner.ITestRunCallback@{UnityEngine.TestRunner.ITestRunCallback}!TestStarted@{TestStarted}}
+\index{TestStarted@{TestStarted}!UnityEngine.TestRunner.ITestRunCallback@{UnityEngine.TestRunner.ITestRunCallback}}
+\doxysubsubsection{\texorpdfstring{TestStarted()}{TestStarted()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Test\+Runner.\+ITest\+Run\+Callback.\+Test\+Started (\begin{DoxyParamCaption}\item[{ITest}]{test }\end{DoxyParamCaption})}
+
+
+
+A callback invoked when each individual node of the test tree has started executing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em test} & The test node currently executed.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Engine.\+Test\+Runner/\+Utils/ITest\+Run\+Callback.\+cs\end{DoxyCompactItemize}

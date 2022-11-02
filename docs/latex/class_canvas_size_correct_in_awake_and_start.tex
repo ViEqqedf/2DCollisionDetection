@@ -1,0 +1,90 @@
+\hypertarget{class_canvas_size_correct_in_awake_and_start}{}\doxysection{Canvas\+Size\+Correct\+In\+Awake\+And\+Start Class Reference}
+\label{class_canvas_size_correct_in_awake_and_start}\index{CanvasSizeCorrectInAwakeAndStart@{CanvasSizeCorrectInAwakeAndStart}}
+Inheritance diagram for Canvas\+Size\+Correct\+In\+Awake\+And\+Start\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_canvas_size_correct_in_awake_and_start}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_canvas_size_correct_in_awake_and_start_a829cdf86cdca546f0d95391cdb631a98}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Implement this method to call actions automatically before the build process. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_canvas_size_correct_in_awake_and_start_a7c4d12b3e47eb52be04cf322afb028bd}\label{class_canvas_size_correct_in_awake_and_start_a7c4d12b3e47eb52be04cf322afb028bd}} 
+void {\bfseries Test\+Setup} ()
+\item 
+\mbox{\Hypertarget{class_canvas_size_correct_in_awake_and_start_a6b3651f08dc518d37e67c891fa00bf47}\label{class_canvas_size_correct_in_awake_and_start_a6b3651f08dc518d37e67c891fa00bf47}} 
+IEnumerator {\bfseries Canvas\+Size\+Is\+Correct\+In\+Awake\+And\+Start} ()
+\item 
+\mbox{\Hypertarget{class_canvas_size_correct_in_awake_and_start_a89dcf78abec422ebf049ae8f63d17501}\label{class_canvas_size_correct_in_awake_and_start_a89dcf78abec422ebf049ae8f63d17501}} 
+void {\bfseries Tear\+Down} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_canvas_size_correct_in_awake_and_start_a829cdf86cdca546f0d95391cdb631a98}\label{class_canvas_size_correct_in_awake_and_start_a829cdf86cdca546f0d95391cdb631a98}} 
+\index{CanvasSizeCorrectInAwakeAndStart@{CanvasSizeCorrectInAwakeAndStart}!Setup@{Setup}}
+\index{Setup@{Setup}!CanvasSizeCorrectInAwakeAndStart@{CanvasSizeCorrectInAwakeAndStart}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily void Canvas\+Size\+Correct\+In\+Awake\+And\+Start.\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implement this method to call actions automatically before the build process. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }CreateSpriteTest : IPrebuildSetup}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    Texture2D m\_Texture;}
+\DoxyCodeLine{    Sprite m\_Sprite;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_canvas_size_correct_in_awake_and_start_a829cdf86cdca546f0d95391cdb631a98}{Setup}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#if UNITY\_EDITOR}}
+\DoxyCodeLine{        var spritePath = \textcolor{stringliteral}{"{}Assets/Resources/Circle.png"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{        var ti = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.AssetImporter.GetAtPath(spritePath) as \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporter;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.textureCompression = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporterCompression.Uncompressed;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.SaveAndReimport();}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [SetUp]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} SetUpTest()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        m\_Texture = Resources.Load<Texture2D>(\textcolor{stringliteral}{"{}Circle"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [Test]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} WhenNullTextureIsPassed\_CreateShouldReturnNullSprite()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with Valid Texture.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        LogAssert.Expect(LogType.Log, \textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Sprite.Create(m\_Texture, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Debug.Log(\textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with NULL Texture. Should return NULL Sprite.}}
+\DoxyCodeLine{        m\_Sprite = Sprite.Create(\textcolor{keyword}{null}, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Assert.That(m\_Sprite, Is.Null, \textcolor{stringliteral}{"{}Sprite created with null texture should be null"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup_a9a9eaa928efe50645e61412528e84309}{Unity\+Engine.\+Test\+Tools.\+IPrebuild\+Setup}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Tests/\+Runtime/\+Canvas/Canvas\+Size\+Correct\+In\+Awake\+And\+Start.\+cs\end{DoxyCompactItemize}

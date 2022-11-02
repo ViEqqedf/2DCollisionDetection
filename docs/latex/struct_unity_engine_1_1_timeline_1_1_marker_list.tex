@@ -1,0 +1,82 @@
+\hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list}{}\doxysection{Unity\+Engine.\+Timeline.\+Marker\+List Struct Reference}
+\label{struct_unity_engine_1_1_timeline_1_1_marker_list}\index{UnityEngine.Timeline.MarkerList@{UnityEngine.Timeline.MarkerList}}
+Inheritance diagram for Unity\+Engine.\+Timeline.\+Marker\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_unity_engine_1_1_timeline_1_1_marker_list}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_ac0ca0826286b7315dfb9c9ffa00d4a89}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_ac0ca0826286b7315dfb9c9ffa00d4a89}} 
+{\bfseries Marker\+List} (int capacity)
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_a649040ac4669a76590c04ac640fa1466}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_a649040ac4669a76590c04ac640fa1466}} 
+void {\bfseries Add} (Scriptable\+Object item)
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_ae95a6de8cd139e474608ba707895bbc3}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_ae95a6de8cd139e474608ba707895bbc3}} 
+bool {\bfseries Remove} (\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} item)
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_ae7c1ba2acb127eb64dc7715eb22e2220}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_ae7c1ba2acb127eb64dc7715eb22e2220}} 
+bool {\bfseries Remove} (Scriptable\+Object item, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} timeline\+Asset, Playable\+Asset thing\+To\+Dirty)
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_a59bbfcf40ab7fe46075ae35103179650}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_a59bbfcf40ab7fe46075ae35103179650}} 
+void {\bfseries Clear} ()
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_a5c9d130f02a792405cc95a0fd10aae2f}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_a5c9d130f02a792405cc95a0fd10aae2f}} 
+bool {\bfseries Contains} (Scriptable\+Object item)
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_a4502d58bbca2afe1c4e489226e7e455d}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_a4502d58bbca2afe1c4e489226e7e455d}} 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} $>$ {\bfseries Get\+Markers} ()
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_a06cc1c85b9f9c5cabf1f3ee1664e6cc8}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_a06cc1c85b9f9c5cabf1f3ee1664e6cc8}} 
+List$<$ Scriptable\+Object $>$ {\bfseries Get\+Raw\+Marker\+List} ()
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_ac6916fa491879966b809ce6f68fafed1}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_ac6916fa491879966b809ce6f68fafed1}} 
+\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} {\bfseries Create\+Marker} (Type type, double time, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} owner)
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_a0bc5838fed89fa38871158dc86a25e09}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_a0bc5838fed89fa38871158dc86a25e09}} 
+bool {\bfseries Has\+Notifications} ()
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_ac01b4f9030ee7613227b49c1f426c1ec}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_ac01b4f9030ee7613227b49c1f426c1ec}} 
+void ISerialization\+Callback\+Receiver. {\bfseries On\+Before\+Serialize} ()
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_af226cb1e663e861650791fee4fce2b99}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_af226cb1e663e861650791fee4fce2b99}} 
+void ISerialization\+Callback\+Receiver. {\bfseries On\+After\+Deserialize} ()
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_adf074803f6bd7ebda13e6a70cc35abea}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_adf074803f6bd7ebda13e6a70cc35abea}} 
+void {\bfseries Build\+Cache} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_a11fbea795d3e489929a7f8486f3de038}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_a11fbea795d3e489929a7f8486f3de038}} 
+List$<$ Scriptable\+Object $>$ {\bfseries m\+\_\+\+Objects}
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_a7529de79e65876280dc5c545e2cdaaf0}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_a7529de79e65876280dc5c545e2cdaaf0}} 
+List$<$ \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} $>$ {\bfseries m\+\_\+\+Cache}
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_a5f7de9bed3dfb52260362bb2fdaea8e8}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_a5f7de9bed3dfb52260362bb2fdaea8e8}} 
+bool {\bfseries m\+\_\+\+Cache\+Dirty}
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_abfb924a4720e7788e49efec4ae928e25}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_abfb924a4720e7788e49efec4ae928e25}} 
+bool {\bfseries m\+\_\+\+Has\+Notifications}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_a1b53499777ad1438ad55fdbd1507b117}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_a1b53499777ad1438ad55fdbd1507b117}} 
+List$<$ \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} $>$ {\bfseries markers}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_a78e3bbaef029f2c920eb9cb6bc61dc54}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_a78e3bbaef029f2c920eb9cb6bc61dc54}} 
+int {\bfseries Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{struct_unity_engine_1_1_timeline_1_1_marker_list_ab4b1791e08bd605de4b7ecece3e9d8d1}\label{struct_unity_engine_1_1_timeline_1_1_marker_list_ab4b1791e08bd605de4b7ecece3e9d8d1}} 
+\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} {\bfseries this\mbox{[}int idx\mbox{]}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Events/Marker\+List.\+cs\end{DoxyCompactItemize}

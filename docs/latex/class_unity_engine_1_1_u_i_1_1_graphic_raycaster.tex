@@ -1,0 +1,168 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_raycaster}{}\doxysection{Unity\+Engine.\+UI.\+Graphic\+Raycaster Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_graphic_raycaster}\index{UnityEngine.UI.GraphicRaycaster@{UnityEngine.UI.GraphicRaycaster}}
+
+
+A derived Base\+Raycaster to raycast against Graphic elements.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Graphic\+Raycaster\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_unity_engine_1_1_u_i_1_1_graphic_raycaster}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a7ee4379eea4122a988ea0ab030eaeba0}{Blocking\+Objects}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a7ee4379eea4122a988ea0ab030eaeba0a6adf97f83acf6453d4a6a4b1070f3754}{None}} = 0
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a7ee4379eea4122a988ea0ab030eaeba0a7fec533aaab2dc4c675964c8ff8a747b}{TwoD}} = 1
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a7ee4379eea4122a988ea0ab030eaeba0a31a45a851a6939edcdc88b6533deec13}{ThreeD}} = 2
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a7ee4379eea4122a988ea0ab030eaeba0ab1c94ca2fbc3e78fc30069c8d0f01680}{All}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em Type of raycasters to check against to check for canvas blocking elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_aeda417b94b26f589328f71b442e21fe4}{Raycast}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data, List$<$ \mbox{\hyperlink{struct_unity_engine_1_1_event_systems_1_1_raycast_result}{Raycast\+Result}} $>$ result\+Append\+List)
+\begin{DoxyCompactList}\small\item\em Perform the raycast against the list of graphics associated with the Canvas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a050cc1f2e4585ea49166d0619f4f70b7}\label{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a050cc1f2e4585ea49166d0619f4f70b7}} 
+Layer\+Mask {\bfseries m\+\_\+\+Blocking\+Mask} = k\+No\+Event\+Mask\+Set
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_aa21d811521c0ccd7f508880ec7f38c60}\label{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_aa21d811521c0ccd7f508880ec7f38c60}} 
+const int {\bfseries k\+No\+Event\+Mask\+Set} = -\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+override int \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_ac0e5b9ccb66407b0e737db10d562935e}{sort\+Order\+Priority}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Priority of the raycaster based upon sort order. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a69372c54169c63d9ff767d92d90c9096}{render\+Order\+Priority}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Priority of the raycaster based upon render order. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a97b565fd7dc8c2e96f25b5a3bca81e85}\label{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a97b565fd7dc8c2e96f25b5a3bca81e85}} 
+bool {\bfseries ignore\+Reversed\+Graphics}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether \mbox{\hyperlink{namespace_graphics}{Graphics}} facing away from the raycaster are checked for raycasts. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a1bbb38ef1316a734ed33f3d3fa5de92e}\label{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a1bbb38ef1316a734ed33f3d3fa5de92e}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a7ee4379eea4122a988ea0ab030eaeba0}{Blocking\+Objects}} {\bfseries blocking\+Objects}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The type of objects that are checked to determine if they block graphic raycasts. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a192a295de1170b22319df022c021aad9}\label{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a192a295de1170b22319df022c021aad9}} 
+Layer\+Mask {\bfseries blocking\+Mask}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The type of objects specified through Layer\+Mask that are checked to determine if they block graphic raycasts. \end{DoxyCompactList}\item 
+override Camera \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a1fbe767e311a979cb42450379e3c0dff}{event\+Camera}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The camera that will generate rays for this raycaster. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A derived Base\+Raycaster to raycast against Graphic elements. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a7ee4379eea4122a988ea0ab030eaeba0}\label{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a7ee4379eea4122a988ea0ab030eaeba0}} 
+\index{UnityEngine.UI.GraphicRaycaster@{UnityEngine.UI.GraphicRaycaster}!BlockingObjects@{BlockingObjects}}
+\index{BlockingObjects@{BlockingObjects}!UnityEngine.UI.GraphicRaycaster@{UnityEngine.UI.GraphicRaycaster}}
+\doxysubsubsection{\texorpdfstring{BlockingObjects}{BlockingObjects}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a7ee4379eea4122a988ea0ab030eaeba0}{Unity\+Engine.\+UI.\+Graphic\+Raycaster.\+Blocking\+Objects}}}
+
+
+
+Type of raycasters to check against to check for canvas blocking elements. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!UnityEngine.UI.GraphicRaycaster@{UnityEngine.UI.GraphicRaycaster}}\index{UnityEngine.UI.GraphicRaycaster@{UnityEngine.UI.GraphicRaycaster}!None@{None}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a7ee4379eea4122a988ea0ab030eaeba0a6adf97f83acf6453d4a6a4b1070f3754}\label{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a7ee4379eea4122a988ea0ab030eaeba0a6adf97f83acf6453d4a6a4b1070f3754}} 
+None&Perform no raycasts. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TwoD@{TwoD}!UnityEngine.UI.GraphicRaycaster@{UnityEngine.UI.GraphicRaycaster}}\index{UnityEngine.UI.GraphicRaycaster@{UnityEngine.UI.GraphicRaycaster}!TwoD@{TwoD}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a7ee4379eea4122a988ea0ab030eaeba0a7fec533aaab2dc4c675964c8ff8a747b}\label{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a7ee4379eea4122a988ea0ab030eaeba0a7fec533aaab2dc4c675964c8ff8a747b}} 
+TwoD&Perform a 2D raycast check to check for blocking 2D elements \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ThreeD@{ThreeD}!UnityEngine.UI.GraphicRaycaster@{UnityEngine.UI.GraphicRaycaster}}\index{UnityEngine.UI.GraphicRaycaster@{UnityEngine.UI.GraphicRaycaster}!ThreeD@{ThreeD}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a7ee4379eea4122a988ea0ab030eaeba0a31a45a851a6939edcdc88b6533deec13}\label{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a7ee4379eea4122a988ea0ab030eaeba0a31a45a851a6939edcdc88b6533deec13}} 
+ThreeD&Perform a 3D raycast check to check for blocking 3D elements \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{All@{All}!UnityEngine.UI.GraphicRaycaster@{UnityEngine.UI.GraphicRaycaster}}\index{UnityEngine.UI.GraphicRaycaster@{UnityEngine.UI.GraphicRaycaster}!All@{All}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a7ee4379eea4122a988ea0ab030eaeba0ab1c94ca2fbc3e78fc30069c8d0f01680}\label{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a7ee4379eea4122a988ea0ab030eaeba0ab1c94ca2fbc3e78fc30069c8d0f01680}} 
+All&Perform a 2D and a 3D raycasts to check for blocking 2D and 3D elements. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_aeda417b94b26f589328f71b442e21fe4}\label{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_aeda417b94b26f589328f71b442e21fe4}} 
+\index{UnityEngine.UI.GraphicRaycaster@{UnityEngine.UI.GraphicRaycaster}!Raycast@{Raycast}}
+\index{Raycast@{Raycast}!UnityEngine.UI.GraphicRaycaster@{UnityEngine.UI.GraphicRaycaster}}
+\doxysubsubsection{\texorpdfstring{Raycast()}{Raycast()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Graphic\+Raycaster.\+Raycast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}}}]{event\+Data,  }\item[{List$<$ \mbox{\hyperlink{struct_unity_engine_1_1_event_systems_1_1_raycast_result}{Raycast\+Result}} $>$}]{result\+Append\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Perform the raycast against the list of graphics associated with the Canvas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & Current event data\\
+\hline
+{\em result\+Append\+List} & List of hit objects to append new results to.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_raycaster_ac03b822ff3220ed496262a02ba2e36e8}{Unity\+Engine.\+Event\+Systems.\+Base\+Raycaster}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a1fbe767e311a979cb42450379e3c0dff}\label{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a1fbe767e311a979cb42450379e3c0dff}} 
+\index{UnityEngine.UI.GraphicRaycaster@{UnityEngine.UI.GraphicRaycaster}!eventCamera@{eventCamera}}
+\index{eventCamera@{eventCamera}!UnityEngine.UI.GraphicRaycaster@{UnityEngine.UI.GraphicRaycaster}}
+\doxysubsubsection{\texorpdfstring{eventCamera}{eventCamera}}
+{\footnotesize\ttfamily override Camera Unity\+Engine.\+UI.\+Graphic\+Raycaster.\+event\+Camera\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The camera that will generate rays for this raycaster. 
+
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item Null if Camera mode is Screen\+Space\+Overlay or Screen\+Space\+Camera and has no camera.
+\item canvas.\+world\+Canvas if not null
+\item Camera.\+main. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a69372c54169c63d9ff767d92d90c9096}\label{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_a69372c54169c63d9ff767d92d90c9096}} 
+\index{UnityEngine.UI.GraphicRaycaster@{UnityEngine.UI.GraphicRaycaster}!renderOrderPriority@{renderOrderPriority}}
+\index{renderOrderPriority@{renderOrderPriority}!UnityEngine.UI.GraphicRaycaster@{UnityEngine.UI.GraphicRaycaster}}
+\doxysubsubsection{\texorpdfstring{renderOrderPriority}{renderOrderPriority}}
+{\footnotesize\ttfamily override int Unity\+Engine.\+UI.\+Graphic\+Raycaster.\+render\+Order\+Priority\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Priority of the raycaster based upon render order. 
+
+\begin{DoxyReturn}{Returns}
+The render\+Order priority. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_ac0e5b9ccb66407b0e737db10d562935e}\label{class_unity_engine_1_1_u_i_1_1_graphic_raycaster_ac0e5b9ccb66407b0e737db10d562935e}} 
+\index{UnityEngine.UI.GraphicRaycaster@{UnityEngine.UI.GraphicRaycaster}!sortOrderPriority@{sortOrderPriority}}
+\index{sortOrderPriority@{sortOrderPriority}!UnityEngine.UI.GraphicRaycaster@{UnityEngine.UI.GraphicRaycaster}}
+\doxysubsubsection{\texorpdfstring{sortOrderPriority}{sortOrderPriority}}
+{\footnotesize\ttfamily override int Unity\+Engine.\+UI.\+Graphic\+Raycaster.\+sort\+Order\+Priority\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Priority of the raycaster based upon sort order. 
+
+\begin{DoxyReturn}{Returns}
+The sort\+Order priority. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/Graphic\+Raycaster.\+cs\end{DoxyCompactItemize}

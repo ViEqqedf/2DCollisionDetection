@@ -1,0 +1,105 @@
+\hypertarget{class_graphics_1_1_mask_tests}{}\doxysection{Graphics.\+Mask\+Tests Class Reference}
+\label{class_graphics_1_1_mask_tests}\index{Graphics.MaskTests@{Graphics.MaskTests}}
+Inheritance diagram for Graphics.\+Mask\+Tests\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_graphics_1_1_mask_tests}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_graphics_1_1_mask_tests_ae3259531e8bc89ee00c50acafff80504}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Implement this method to call actions automatically before the build process. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graphics_1_1_mask_tests_abb154d745a303483741f82421ed50498}\label{class_graphics_1_1_mask_tests_abb154d745a303483741f82421ed50498}} 
+void {\bfseries Test\+Setup} ()
+\item 
+\mbox{\Hypertarget{class_graphics_1_1_mask_tests_a8ff684392ec439c936cd941fa377b549}\label{class_graphics_1_1_mask_tests_a8ff684392ec439c936cd941fa377b549}} 
+void {\bfseries Tear\+Down} ()
+\item 
+\mbox{\Hypertarget{class_graphics_1_1_mask_tests_ad21c4d1c70f7a06fd6788aa0408a3795}\label{class_graphics_1_1_mask_tests_ad21c4d1c70f7a06fd6788aa0408a3795}} 
+void {\bfseries One\+Time\+Tear\+Down} ()
+\item 
+\mbox{\Hypertarget{class_graphics_1_1_mask_tests_a402d9354cb62a7b4dd15e7bf8fc5ab8c}\label{class_graphics_1_1_mask_tests_a402d9354cb62a7b4dd15e7bf8fc5ab8c}} 
+IEnumerator {\bfseries Get\+Modified\+Material\+Returns\+Original\+Material\+When\+No\+Graphic\+Component\+Is\+Attached} ()
+\item 
+\mbox{\Hypertarget{class_graphics_1_1_mask_tests_a6ee4a43353ee5c5c98d0a672712597a9}\label{class_graphics_1_1_mask_tests_a6ee4a43353ee5c5c98d0a672712597a9}} 
+void {\bfseries Get\+Modified\+Material\+Returns\+Original\+Material\+When\+Depth\+Is\+Eight\+Or\+More} ()
+\item 
+\mbox{\Hypertarget{class_graphics_1_1_mask_tests_a369d62c5bf188a8e4d968dbcaf48f6ce}\label{class_graphics_1_1_mask_tests_a369d62c5bf188a8e4d968dbcaf48f6ce}} 
+void {\bfseries Get\+Modified\+Material\+Returns\+Desired\+Material\+With\+Single\+Mask} ()
+\item 
+\mbox{\Hypertarget{class_graphics_1_1_mask_tests_ad2fe2cbba1b38d2af2ca616ae384016d}\label{class_graphics_1_1_mask_tests_ad2fe2cbba1b38d2af2ca616ae384016d}} 
+void {\bfseries Get\+Modified\+Material\+Returns\+Desired\+Material\+With\+Multiple\+Masks} ()
+\item 
+\mbox{\Hypertarget{class_graphics_1_1_mask_tests_ad894c0d0b76b8760d47b475763e6f8e7}\label{class_graphics_1_1_mask_tests_ad894c0d0b76b8760d47b475763e6f8e7}} 
+void {\bfseries Graphic\+Component\+With\+Mask\+Is\+Marked\+As\+Is\+Masking\+Graphic\+When\+Enabled} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graphics_1_1_mask_tests_ae3259531e8bc89ee00c50acafff80504}\label{class_graphics_1_1_mask_tests_ae3259531e8bc89ee00c50acafff80504}} 
+\index{Graphics.MaskTests@{Graphics.MaskTests}!Setup@{Setup}}
+\index{Setup@{Setup}!Graphics.MaskTests@{Graphics.MaskTests}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily void Graphics.\+Mask\+Tests.\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implement this method to call actions automatically before the build process. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }CreateSpriteTest : IPrebuildSetup}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    Texture2D m\_Texture;}
+\DoxyCodeLine{    Sprite m\_Sprite;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graphics_1_1_mask_tests_ae3259531e8bc89ee00c50acafff80504}{Setup}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#if UNITY\_EDITOR}}
+\DoxyCodeLine{        var spritePath = \textcolor{stringliteral}{"{}Assets/Resources/Circle.png"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{        var ti = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.AssetImporter.GetAtPath(spritePath) as \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporter;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.textureCompression = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporterCompression.Uncompressed;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.SaveAndReimport();}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [SetUp]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} SetUpTest()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        m\_Texture = Resources.Load<Texture2D>(\textcolor{stringliteral}{"{}Circle"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [Test]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} WhenNullTextureIsPassed\_CreateShouldReturnNullSprite()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with Valid Texture.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        LogAssert.Expect(LogType.Log, \textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Sprite.Create(m\_Texture, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Debug.Log(\textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with NULL Texture. Should return NULL Sprite.}}
+\DoxyCodeLine{        m\_Sprite = Sprite.Create(\textcolor{keyword}{null}, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Assert.That(m\_Sprite, Is.Null, \textcolor{stringliteral}{"{}Sprite created with null texture should be null"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup_a9a9eaa928efe50645e61412528e84309}{Unity\+Engine.\+Test\+Tools.\+IPrebuild\+Setup}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Tests/\+Runtime/\+Graphic/Mask\+Tests.\+cs\end{DoxyCompactItemize}

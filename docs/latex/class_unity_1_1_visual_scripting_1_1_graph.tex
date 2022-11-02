@@ -1,0 +1,193 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_graph}{}\doxysection{Unity.\+Visual\+Scripting.\+Graph Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_graph}\index{Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Graph\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.602231cm]{class_unity_1_1_visual_scripting_1_1_graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_a7dd17ec30f0f3b5f595f07bcbc60efd5}\label{class_unity_1_1_visual_scripting_1_1_graph_a7dd17ec30f0f3b5f595f07bcbc60efd5}} 
+override string {\bfseries To\+String} ()
+\item 
+abstract \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_a4acf7df0b83ed6a62f63dbcdc0d4c47d}{Create\+Data}} ()
+\item 
+virtual \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_debug_data}{IGraph\+Debug\+Data}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_af0f476c6a3642793888ba398196133c0}{Create\+Debug\+Data}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_a2599c29ee67422eaea7e8e12b931a3be}{Instantiate}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} instance)
+\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_ad8d35810b5b6dc1c832638aa5de3dbd0}{Uninstantiate}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} instance)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_acb3a023563f3afd7063c6c16af5f0a46}\label{class_unity_1_1_visual_scripting_1_1_graph_acb3a023563f3afd7063c6c16af5f0a46}} 
+virtual void {\bfseries On\+Before\+Serialize} ()
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_ab42dc3f738715eff1ded28f8dfffb662}\label{class_unity_1_1_visual_scripting_1_1_graph_ab42dc3f738715eff1ded28f8dfffb662}} 
+void {\bfseries On\+After\+Deserialize} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_af8cd07ea76689c076b9b42a1dc7b0eb3}{On\+After\+Dependencies\+Deserialized}} ()
+\item 
+IEnumerable$<$ object $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_ac28984dd1fdc708942066b5c4fc944a6}{Get\+Aot\+Stubs}} (Hash\+Set$<$ object $>$ visited)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_a54475d3e72d875151eb200189f7c0cf4}{Prewarm}} ()
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_a01d48e871c7f8a4dc1b90cdc1d8ba329}\label{class_unity_1_1_visual_scripting_1_1_graph_a01d48e871c7f8a4dc1b90cdc1d8ba329}} 
+virtual void {\bfseries Dispose} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_merged_graph_element_collection}{Merged\+Graph\+Element\+Collection}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_a9ad0bf7b118cb422ceebce9da7c65692}{elements}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_adec15ff0d6e3d28b16f3e50d7908ce99}{title}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_a8f842833d76e40a788ecc96fc41b7004}{summary}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Vector2 \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_a2030d84ee9eaf0ed2ac85f5835e6a2c1}{pan}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_aa9af235dc0da780c25c91d0cdfa777e6}{zoom}} = 1\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_serialization_dependency}{ISerialization\+Dependency}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_a172405d6a3f14b6347562aea88a8f02b}{deserialization\+Dependencies}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_a4acf7df0b83ed6a62f63dbcdc0d4c47d}\label{class_unity_1_1_visual_scripting_1_1_graph_a4acf7df0b83ed6a62f63dbcdc0d4c47d}} 
+\index{Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}!CreateData@{CreateData}}
+\index{CreateData@{CreateData}!Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}}
+\doxysubsubsection{\texorpdfstring{CreateData()}{CreateData()}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}} Unity.\+Visual\+Scripting.\+Graph.\+Create\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{Unity.\+Visual\+Scripting.\+IGraph}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_af0f476c6a3642793888ba398196133c0}\label{class_unity_1_1_visual_scripting_1_1_graph_af0f476c6a3642793888ba398196133c0}} 
+\index{Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}!CreateDebugData@{CreateDebugData}}
+\index{CreateDebugData@{CreateDebugData}!Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}}
+\doxysubsubsection{\texorpdfstring{CreateDebugData()}{CreateDebugData()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_debug_data}{IGraph\+Debug\+Data}} Unity.\+Visual\+Scripting.\+Graph.\+Create\+Debug\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{Unity.\+Visual\+Scripting.\+IGraph}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_ac28984dd1fdc708942066b5c4fc944a6}\label{class_unity_1_1_visual_scripting_1_1_graph_ac28984dd1fdc708942066b5c4fc944a6}} 
+\index{Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}!GetAotStubs@{GetAotStubs}}
+\index{GetAotStubs@{GetAotStubs}!Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}}
+\doxysubsubsection{\texorpdfstring{GetAotStubs()}{GetAotStubs()}}
+{\footnotesize\ttfamily IEnumerable$<$ object $>$ Unity.\+Visual\+Scripting.\+Graph.\+Get\+Aot\+Stubs (\begin{DoxyParamCaption}\item[{Hash\+Set$<$ object $>$}]{visited }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_aot_stubbable}{Unity.\+Visual\+Scripting.\+IAot\+Stubbable}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_a2599c29ee67422eaea7e8e12b931a3be}\label{class_unity_1_1_visual_scripting_1_1_graph_a2599c29ee67422eaea7e8e12b931a3be}} 
+\index{Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}!Instantiate@{Instantiate}}
+\index{Instantiate@{Instantiate}!Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}}
+\doxysubsubsection{\texorpdfstring{Instantiate()}{Instantiate()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Graph.\+Instantiate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}}}]{instance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{Unity.\+Visual\+Scripting.\+IGraph}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_af8cd07ea76689c076b9b42a1dc7b0eb3}\label{class_unity_1_1_visual_scripting_1_1_graph_af8cd07ea76689c076b9b42a1dc7b0eb3}} 
+\index{Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}!OnAfterDependenciesDeserialized@{OnAfterDependenciesDeserialized}}
+\index{OnAfterDependenciesDeserialized@{OnAfterDependenciesDeserialized}!Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}}
+\doxysubsubsection{\texorpdfstring{OnAfterDependenciesDeserialized()}{OnAfterDependenciesDeserialized()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Graph.\+On\+After\+Dependencies\+Deserialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_serialization_depender}{Unity.\+Visual\+Scripting.\+ISerialization\+Depender}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_a54475d3e72d875151eb200189f7c0cf4}\label{class_unity_1_1_visual_scripting_1_1_graph_a54475d3e72d875151eb200189f7c0cf4}} 
+\index{Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}!Prewarm@{Prewarm}}
+\index{Prewarm@{Prewarm}!Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}}
+\doxysubsubsection{\texorpdfstring{Prewarm()}{Prewarm()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Graph.\+Prewarm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_prewarmable}{Unity.\+Visual\+Scripting.\+IPrewarmable}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_ad8d35810b5b6dc1c832638aa5de3dbd0}\label{class_unity_1_1_visual_scripting_1_1_graph_ad8d35810b5b6dc1c832638aa5de3dbd0}} 
+\index{Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}!Uninstantiate@{Uninstantiate}}
+\index{Uninstantiate@{Uninstantiate}!Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}}
+\doxysubsubsection{\texorpdfstring{Uninstantiate()}{Uninstantiate()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Graph.\+Uninstantiate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}}}]{instance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{Unity.\+Visual\+Scripting.\+IGraph}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_a172405d6a3f14b6347562aea88a8f02b}\label{class_unity_1_1_visual_scripting_1_1_graph_a172405d6a3f14b6347562aea88a8f02b}} 
+\index{Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}!deserializationDependencies@{deserializationDependencies}}
+\index{deserializationDependencies@{deserializationDependencies}!Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}}
+\doxysubsubsection{\texorpdfstring{deserializationDependencies}{deserializationDependencies}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_serialization_dependency}{ISerialization\+Dependency}}$>$ Unity.\+Visual\+Scripting.\+Graph.\+deserialization\+Dependencies\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_serialization_depender}{Unity.\+Visual\+Scripting.\+ISerialization\+Depender}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_a9ad0bf7b118cb422ceebce9da7c65692}\label{class_unity_1_1_visual_scripting_1_1_graph_a9ad0bf7b118cb422ceebce9da7c65692}} 
+\index{Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}!elements@{elements}}
+\index{elements@{elements}!Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}}
+\doxysubsubsection{\texorpdfstring{elements}{elements}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_merged_graph_element_collection}{Merged\+Graph\+Element\+Collection}} Unity.\+Visual\+Scripting.\+Graph.\+elements\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{Unity.\+Visual\+Scripting.\+IGraph}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_a2030d84ee9eaf0ed2ac85f5835e6a2c1}\label{class_unity_1_1_visual_scripting_1_1_graph_a2030d84ee9eaf0ed2ac85f5835e6a2c1}} 
+\index{Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}!pan@{pan}}
+\index{pan@{pan}!Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}}
+\doxysubsubsection{\texorpdfstring{pan}{pan}}
+{\footnotesize\ttfamily Vector2 Unity.\+Visual\+Scripting.\+Graph.\+pan\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{Unity.\+Visual\+Scripting.\+IGraph}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_a8f842833d76e40a788ecc96fc41b7004}\label{class_unity_1_1_visual_scripting_1_1_graph_a8f842833d76e40a788ecc96fc41b7004}} 
+\index{Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}!summary@{summary}}
+\index{summary@{summary}!Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}}
+\doxysubsubsection{\texorpdfstring{summary}{summary}}
+{\footnotesize\ttfamily string Unity.\+Visual\+Scripting.\+Graph.\+summary\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{Unity.\+Visual\+Scripting.\+IGraph}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_adec15ff0d6e3d28b16f3e50d7908ce99}\label{class_unity_1_1_visual_scripting_1_1_graph_adec15ff0d6e3d28b16f3e50d7908ce99}} 
+\index{Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}!title@{title}}
+\index{title@{title}!Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily string Unity.\+Visual\+Scripting.\+Graph.\+title\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{Unity.\+Visual\+Scripting.\+IGraph}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_aa9af235dc0da780c25c91d0cdfa777e6}\label{class_unity_1_1_visual_scripting_1_1_graph_aa9af235dc0da780c25c91d0cdfa777e6}} 
+\index{Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}!zoom@{zoom}}
+\index{zoom@{zoom}!Unity.VisualScripting.Graph@{Unity.VisualScripting.Graph}}
+\doxysubsubsection{\texorpdfstring{zoom}{zoom}}
+{\footnotesize\ttfamily float Unity.\+Visual\+Scripting.\+Graph.\+zoom = 1\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{Unity.\+Visual\+Scripting.\+IGraph}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Core/\+Graphs/Graph.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,242 @@
+\hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{}\doxysection{Unity.\+Services.\+Core.\+Editor.\+Http\+Request Class Reference}
+\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}\index{Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}}
+
+
+Contain all data of an HTTP request.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_aa6b564c3e4e8d139b1115199e068ae36}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_aa6b564c3e4e8d139b1115199e068ae36}} 
+{\bfseries Http\+Request} ()
+\begin{DoxyCompactList}\small\item\em Initialize a new instance of the \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a25cbe0fb240d19846a0b082bb7147b31}{Http\+Request}} (string method, string url, Dictionary$<$ string, string $>$ headers, byte\mbox{[}$\,$\mbox{]} body)
+\begin{DoxyCompactList}\small\item\em Initialize a new instance of the \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} class with the given parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_ad2f9bc8100549eb0381390265cb84ba6}{Set\+Method}} (string method)
+\begin{DoxyCompactList}\small\item\em Set the given {\itshape method}  to this request. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a26579302d44013fc2a0be29d4443d547}{Set\+Url}} (string url)
+\begin{DoxyCompactList}\small\item\em Set the given {\itshape url}  to this request. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a6c03978d795a43b2c23fa39fa95053cd}{Set\+Header}} (string key, string value)
+\begin{DoxyCompactList}\small\item\em Add or update a header to this request using the given {\itshape key}  and {\itshape value} . \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_abd6b7aec8ead60007431c26c35c1909a}{Set\+Headers}} (Dictionary$<$ string, string $>$ headers)
+\begin{DoxyCompactList}\small\item\em Set the given {\itshape headers}  to this request. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a40f59b6a496be36279a77c8ff5aca792}{Set\+Body}} (byte\mbox{[}$\,$\mbox{]} body)
+\begin{DoxyCompactList}\small\item\em Set the given {\itshape body}  to this request. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_acb7d51b896fef3a34b1540acbc12f591}{Set\+Options}} (\mbox{\hyperlink{struct_unity_1_1_services_1_1_core_1_1_editor_1_1_http_options}{Http\+Options}} options)
+\begin{DoxyCompactList}\small\item\em Set the given {\itshape options}  to this request. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a8e4e70b8f80caad0327c67a55f0f8950}{Set\+Redirect\+Limit}} (int redirect\+Limit)
+\begin{DoxyCompactList}\small\item\em Set the given {\itshape redirect\+Limit}  to this request. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a006688b482075070465098175dbcec32}{Set\+Time\+Out\+In\+Seconds}} (int timeout)
+\begin{DoxyCompactList}\small\item\em Set the given {\itshape timeout}  to this request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a8406ab7c96f8150ccadaa0ce52803ca2}{Method}}
+\begin{DoxyCompactList}\small\item\em The HTTP method to use. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a20d55f9bc44f77783ff8c432582f3ca3}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a20d55f9bc44f77783ff8c432582f3ca3}} 
+string {\bfseries Url}
+\begin{DoxyCompactList}\small\item\em The targeted url. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_aab0123b4d8d230eb56700d91f348c59d}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_aab0123b4d8d230eb56700d91f348c59d}} 
+Dictionary$<$ string, string $>$ {\bfseries Headers}
+\begin{DoxyCompactList}\small\item\em The headers additional information. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a8051b66ade9e1ca9794ada5503446d73}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a8051b66ade9e1ca9794ada5503446d73}} 
+byte\mbox{[}$\,$\mbox{]} {\bfseries Body}
+\begin{DoxyCompactList}\small\item\em The additional data of this request serialized into bytes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a33a7c7ec0438228aaea663724f6dcfd3}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a33a7c7ec0438228aaea663724f6dcfd3}} 
+\mbox{\hyperlink{struct_unity_1_1_services_1_1_core_1_1_editor_1_1_http_options}{Http\+Options}} {\bfseries Options}
+\begin{DoxyCompactList}\small\item\em Settings to customize this request\textquotesingle{}s behaviour. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contain all data of an HTTP request. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a25cbe0fb240d19846a0b082bb7147b31}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a25cbe0fb240d19846a0b082bb7147b31}} 
+\index{Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}!HttpRequest@{HttpRequest}}
+\index{HttpRequest@{HttpRequest}!Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}}
+\doxysubsubsection{\texorpdfstring{HttpRequest()}{HttpRequest()}}
+{\footnotesize\ttfamily Unity.\+Services.\+Core.\+Editor.\+Http\+Request.\+Http\+Request (\begin{DoxyParamCaption}\item[{string}]{method,  }\item[{string}]{url,  }\item[{Dictionary$<$ string, string $>$}]{headers,  }\item[{byte\mbox{[}$\,$\mbox{]}}]{body }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize a new instance of the \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} class with the given parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em method} & The HTTP method to use. Valid methods are\+: DELETE, GET, PATCH, POST, PUT. \\
+\hline
+{\em url} & The target url of the created request. \\
+\hline
+{\em headers} & The headers to add to the request. \\
+\hline
+{\em body} & The request\textquotesingle{}s data serialized into bytes. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a40f59b6a496be36279a77c8ff5aca792}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a40f59b6a496be36279a77c8ff5aca792}} 
+\index{Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}!SetBody@{SetBody}}
+\index{SetBody@{SetBody}!Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}}
+\doxysubsubsection{\texorpdfstring{SetBody()}{SetBody()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} Unity.\+Services.\+Core.\+Editor.\+Http\+Request.\+Set\+Body (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{body }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the given {\itshape body}  to this request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em body} & The request\textquotesingle{}s data serialized into bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return this request. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a6c03978d795a43b2c23fa39fa95053cd}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a6c03978d795a43b2c23fa39fa95053cd}} 
+\index{Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}!SetHeader@{SetHeader}}
+\index{SetHeader@{SetHeader}!Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}}
+\doxysubsubsection{\texorpdfstring{SetHeader()}{SetHeader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} Unity.\+Services.\+Core.\+Editor.\+Http\+Request.\+Set\+Header (\begin{DoxyParamCaption}\item[{string}]{key,  }\item[{string}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add or update a header to this request using the given {\itshape key}  and {\itshape value} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The header\textquotesingle{}s key. \\
+\hline
+{\em value} & The header\textquotesingle{}s value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return this request. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_abd6b7aec8ead60007431c26c35c1909a}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_abd6b7aec8ead60007431c26c35c1909a}} 
+\index{Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}!SetHeaders@{SetHeaders}}
+\index{SetHeaders@{SetHeaders}!Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}}
+\doxysubsubsection{\texorpdfstring{SetHeaders()}{SetHeaders()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} Unity.\+Services.\+Core.\+Editor.\+Http\+Request.\+Set\+Headers (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{headers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the given {\itshape headers}  to this request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em headers} & The headers to add to the request. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return this request. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_ad2f9bc8100549eb0381390265cb84ba6}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_ad2f9bc8100549eb0381390265cb84ba6}} 
+\index{Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}!SetMethod@{SetMethod}}
+\index{SetMethod@{SetMethod}!Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}}
+\doxysubsubsection{\texorpdfstring{SetMethod()}{SetMethod()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} Unity.\+Services.\+Core.\+Editor.\+Http\+Request.\+Set\+Method (\begin{DoxyParamCaption}\item[{string}]{method }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the given {\itshape method}  to this request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em method} & The HTTP method to use. Valid methods are\+: DELETE, GET, PATCH, POST, PUT. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return this request. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_acb7d51b896fef3a34b1540acbc12f591}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_acb7d51b896fef3a34b1540acbc12f591}} 
+\index{Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}!SetOptions@{SetOptions}}
+\index{SetOptions@{SetOptions}!Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}}
+\doxysubsubsection{\texorpdfstring{SetOptions()}{SetOptions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} Unity.\+Services.\+Core.\+Editor.\+Http\+Request.\+Set\+Options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_services_1_1_core_1_1_editor_1_1_http_options}{Http\+Options}}}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the given {\itshape options}  to this request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em options} & The settings to customize the request\textquotesingle{}s behaviour. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return this request. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a8e4e70b8f80caad0327c67a55f0f8950}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a8e4e70b8f80caad0327c67a55f0f8950}} 
+\index{Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}!SetRedirectLimit@{SetRedirectLimit}}
+\index{SetRedirectLimit@{SetRedirectLimit}!Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}}
+\doxysubsubsection{\texorpdfstring{SetRedirectLimit()}{SetRedirectLimit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} Unity.\+Services.\+Core.\+Editor.\+Http\+Request.\+Set\+Redirect\+Limit (\begin{DoxyParamCaption}\item[{int}]{redirect\+Limit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the given {\itshape redirect\+Limit}  to this request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em redirect\+Limit} & The number of redirects this request can follow without failing. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return this request. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a006688b482075070465098175dbcec32}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a006688b482075070465098175dbcec32}} 
+\index{Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}!SetTimeOutInSeconds@{SetTimeOutInSeconds}}
+\index{SetTimeOutInSeconds@{SetTimeOutInSeconds}!Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}}
+\doxysubsubsection{\texorpdfstring{SetTimeOutInSeconds()}{SetTimeOutInSeconds()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} Unity.\+Services.\+Core.\+Editor.\+Http\+Request.\+Set\+Time\+Out\+In\+Seconds (\begin{DoxyParamCaption}\item[{int}]{timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the given {\itshape timeout}  to this request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timeout} & The delay, in seconds, after which the request will be considered a failure if it didn\textquotesingle{}t have a response. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return this request. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a26579302d44013fc2a0be29d4443d547}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a26579302d44013fc2a0be29d4443d547}} 
+\index{Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}!SetUrl@{SetUrl}}
+\index{SetUrl@{SetUrl}!Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}}
+\doxysubsubsection{\texorpdfstring{SetUrl()}{SetUrl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request}{Http\+Request}} Unity.\+Services.\+Core.\+Editor.\+Http\+Request.\+Set\+Url (\begin{DoxyParamCaption}\item[{string}]{url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the given {\itshape url}  to this request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & The target url of the created request. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return this request. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a8406ab7c96f8150ccadaa0ce52803ca2}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_http_request_a8406ab7c96f8150ccadaa0ce52803ca2}} 
+\index{Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}!Method@{Method}}
+\index{Method@{Method}!Unity.Services.Core.Editor.HttpRequest@{Unity.Services.Core.Editor.HttpRequest}}
+\doxysubsubsection{\texorpdfstring{Method}{Method}}
+{\footnotesize\ttfamily string Unity.\+Services.\+Core.\+Editor.\+Http\+Request.\+Method}
+
+
+
+The HTTP method to use. 
+
+Common values are\+: DELETE, GET, PATCH, POST, PUT ... 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+services.\+core@1.\+0.\+1/\+Editor/\+Core/\+Networking/Http\+Request.\+cs\end{DoxyCompactItemize}

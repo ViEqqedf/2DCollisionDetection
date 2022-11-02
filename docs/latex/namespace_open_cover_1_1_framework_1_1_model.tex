@@ -1,0 +1,115 @@
+\hypertarget{namespace_open_cover_1_1_framework_1_1_model}{}\doxysection{Open\+Cover.\+Framework.\+Model Namespace Reference}
+\label{namespace_open_cover_1_1_framework_1_1_model}\index{OpenCover.Framework.Model@{OpenCover.Framework.Model}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_branch_point}{Branch\+Point}}
+\begin{DoxyCompactList}\small\item\em a branch point \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_class}{Class}}
+\begin{DoxyCompactList}\small\item\em An entity that contains methods \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_coverage_session}{Coverage\+Session}}
+\begin{DoxyCompactList}\small\item\em A coverage session \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_file}{File}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_file}{File}} details of a source file \end{DoxyCompactList}\item 
+class {\bfseries File\+Equality\+Comparer}
+\item 
+class \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_file_ref}{File\+Ref}}
+\begin{DoxyCompactList}\small\item\em A file reference within the coverage session and is used to point to an existing \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_file}{File}} entity \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_open_cover_1_1_framework_1_1_model_1_1_i_document_reference}{IDocument\+Reference}}
+\begin{DoxyCompactList}\small\item\em A point may have a document reference \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point}{Instrumentation\+Point}}
+\begin{DoxyCompactList}\small\item\em An instrumentable point \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_method}{Method}}
+\begin{DoxyCompactList}\small\item\em An method entity that can be instrumented \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_module}{Module}}
+\begin{DoxyCompactList}\small\item\em The details of a module \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point}{Sequence\+Point}}
+\begin{DoxyCompactList}\small\item\em a sequence point \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_skipped_entity}{Skipped\+Entity}}
+\begin{DoxyCompactList}\small\item\em The entity can be skipped from coverage but needs to supply a reason \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_summary}{Summary}}
+\begin{DoxyCompactList}\small\item\em A summary of results \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_summary_skipped_entity}{Summary\+Skipped\+Entity}}
+\begin{DoxyCompactList}\small\item\em A skipped entity that also carries a \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_summary}{Summary}} object which is not always serialized \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_tracked_method}{Tracked\+Method}}
+\begin{DoxyCompactList}\small\item\em A method being tracked \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_tracked_method_ref}{Tracked\+Method\+Ref}}
+\begin{DoxyCompactList}\small\item\em A reference to a tracked method \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cada}{Skipped\+Method}} \{ \newline
+\mbox{\hyperlink{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaaf2bbdf9f72c085adc4d0404e370f0f4c}{Attribute}} = 3
+, \mbox{\hyperlink{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaa0b27918290ff5323bea1e3b78a9cf04e}{File}} = 4
+, \mbox{\hyperlink{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaad7778d0c64b6ba21494c97f77a66885a}{Filter}} = 2
+, \mbox{\hyperlink{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaa1a30e827f0ab104e6621fc4bc58af809}{Missing\+Pdb}} = 1
+, \newline
+\mbox{\hyperlink{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaaba05d28b1409e52082555f5921119665}{Inferred}} = 5
+, \mbox{\hyperlink{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaae72cc8a1af594ecf79481692c7b8c9b6}{Auto\+Implemented\+Property}} = 6
+, \mbox{\hyperlink{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaac8e51579695bb3cd04dedeac66c4ec5c}{Native\+Code}} = 7
+, \mbox{\hyperlink{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaa88183b946cc5f0e8c96b2e66e1c74a7e}{Unknown}} = 8
+, \newline
+\mbox{\hyperlink{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaada932eeeff27a6c3fb5ecb516a6343ad}{Folder\+Exclusion}} = 9
+, \mbox{\hyperlink{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaa26545d7107c7489959a37bd671181fca}{Delegate}} = 10
+, \mbox{\hyperlink{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaaaf7bf0295c22dace970fb6c0c7580659}{FSharp\+Internal}} = 11
+ \}
+\begin{DoxyCompactList}\small\item\em Describes how a method or class was skipped \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cada}\label{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cada}} 
+\index{OpenCover.Framework.Model@{OpenCover.Framework.Model}!SkippedMethod@{SkippedMethod}}
+\index{SkippedMethod@{SkippedMethod}!OpenCover.Framework.Model@{OpenCover.Framework.Model}}
+\doxysubsubsection{\texorpdfstring{SkippedMethod}{SkippedMethod}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cada}{Open\+Cover.\+Framework.\+Model.\+Skipped\+Method}}}
+
+
+
+Describes how a method or class was skipped 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Attribute@{Attribute}!OpenCover.Framework.Model@{OpenCover.Framework.Model}}\index{OpenCover.Framework.Model@{OpenCover.Framework.Model}!Attribute@{Attribute}}}\mbox{\Hypertarget{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaaf2bbdf9f72c085adc4d0404e370f0f4c}\label{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaaf2bbdf9f72c085adc4d0404e370f0f4c}} 
+Attribute&Entity was skipped due to a matching exclusion attribute filter \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{File@{File}!OpenCover.Framework.Model@{OpenCover.Framework.Model}}\index{OpenCover.Framework.Model@{OpenCover.Framework.Model}!File@{File}}}\mbox{\Hypertarget{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaa0b27918290ff5323bea1e3b78a9cf04e}\label{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaa0b27918290ff5323bea1e3b78a9cf04e}} 
+File&Entity was skipped due to a matching exclusion file filter \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Filter@{Filter}!OpenCover.Framework.Model@{OpenCover.Framework.Model}}\index{OpenCover.Framework.Model@{OpenCover.Framework.Model}!Filter@{Filter}}}\mbox{\Hypertarget{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaad7778d0c64b6ba21494c97f77a66885a}\label{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaad7778d0c64b6ba21494c97f77a66885a}} 
+Filter&Entity was skipped due to a matching exclusion module/class filter \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MissingPdb@{MissingPdb}!OpenCover.Framework.Model@{OpenCover.Framework.Model}}\index{OpenCover.Framework.Model@{OpenCover.Framework.Model}!MissingPdb@{MissingPdb}}}\mbox{\Hypertarget{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaa1a30e827f0ab104e6621fc4bc58af809}\label{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaa1a30e827f0ab104e6621fc4bc58af809}} 
+Missing\+Pdb&Entity was skipped due to a missing PDB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Inferred@{Inferred}!OpenCover.Framework.Model@{OpenCover.Framework.Model}}\index{OpenCover.Framework.Model@{OpenCover.Framework.Model}!Inferred@{Inferred}}}\mbox{\Hypertarget{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaaba05d28b1409e52082555f5921119665}\label{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaaba05d28b1409e52082555f5921119665}} 
+Inferred&Entity was skipped by inference (usually related to \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_file}{File}} filters) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AutoImplementedProperty@{AutoImplementedProperty}!OpenCover.Framework.Model@{OpenCover.Framework.Model}}\index{OpenCover.Framework.Model@{OpenCover.Framework.Model}!AutoImplementedProperty@{AutoImplementedProperty}}}\mbox{\Hypertarget{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaae72cc8a1af594ecf79481692c7b8c9b6}\label{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaae72cc8a1af594ecf79481692c7b8c9b6}} 
+Auto\+Implemented\+Property&Entity (method) was skipped as it is an auto-\/implemented property. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NativeCode@{NativeCode}!OpenCover.Framework.Model@{OpenCover.Framework.Model}}\index{OpenCover.Framework.Model@{OpenCover.Framework.Model}!NativeCode@{NativeCode}}}\mbox{\Hypertarget{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaac8e51579695bb3cd04dedeac66c4ec5c}\label{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaac8e51579695bb3cd04dedeac66c4ec5c}} 
+Native\+Code&Entity (method) was skipped as it is native code. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unknown@{Unknown}!OpenCover.Framework.Model@{OpenCover.Framework.Model}}\index{OpenCover.Framework.Model@{OpenCover.Framework.Model}!Unknown@{Unknown}}}\mbox{\Hypertarget{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaa88183b946cc5f0e8c96b2e66e1c74a7e}\label{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaa88183b946cc5f0e8c96b2e66e1c74a7e}} 
+Unknown&Entity (method) was skipped for other reasons. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FolderExclusion@{FolderExclusion}!OpenCover.Framework.Model@{OpenCover.Framework.Model}}\index{OpenCover.Framework.Model@{OpenCover.Framework.Model}!FolderExclusion@{FolderExclusion}}}\mbox{\Hypertarget{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaada932eeeff27a6c3fb5ecb516a6343ad}\label{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaada932eeeff27a6c3fb5ecb516a6343ad}} 
+Folder\+Exclusion&Entity (dll) was skipped due to folder exclusion. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Delegate@{Delegate}!OpenCover.Framework.Model@{OpenCover.Framework.Model}}\index{OpenCover.Framework.Model@{OpenCover.Framework.Model}!Delegate@{Delegate}}}\mbox{\Hypertarget{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaa26545d7107c7489959a37bd671181fca}\label{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaa26545d7107c7489959a37bd671181fca}} 
+Delegate&Entity (method) was skipped due to being a delegate. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FSharpInternal@{FSharpInternal}!OpenCover.Framework.Model@{OpenCover.Framework.Model}}\index{OpenCover.Framework.Model@{OpenCover.Framework.Model}!FSharpInternal@{FSharpInternal}}}\mbox{\Hypertarget{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaaaf7bf0295c22dace970fb6c0c7580659}\label{namespace_open_cover_1_1_framework_1_1_model_a770699d4e664d6177cb0705b5e77cadaaaf7bf0295c22dace970fb6c0c7580659}} 
+FSharp\+Internal&Entity (method) was skipped due to being an F\# internal implementation detail (in either a record or discriminated union type). \\
+\hline
+
+\end{DoxyEnumFields}

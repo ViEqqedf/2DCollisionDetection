@@ -1,0 +1,85 @@
+.TH "Physics.Collision.Shape.CollisionShape" 3 "2022年 十一月 2日 星期三" "PhysicsWorld" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Physics.Collision.Shape.CollisionShape
+.SH SYNOPSIS
+.br
+.PP
+.PP
+被 \fBPhysics\&.Collision\&.Shape\&.Circle\fP, \fBPhysics\&.Collision\&.Shape\&.CustomShape\fP , 以及 \fBPhysics\&.Collision\&.Shape\&.Rect\fP 继承\&.
+.SS "Public 成员函数"
+
+.in +1c
+.ti -1c
+.RI "\fBCollisionShape\fP (\fBShapeType\fP \fBshapeType\fP)"
+.br
+.ti -1c
+.RI "\fBCollisionShape\fP (\fBShapeType\fP \fBshapeType\fP, Vector3[] \fBlocalVertices\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBUpdateShape\fP ()"
+.br
+.ti -1c
+.RI "void \fBApplyWorldVertices\fP (Vector3 origin, Vector3 rotate, float scale)"
+.br
+.in -1c
+.SS "Public 属性"
+
+.in +1c
+.ti -1c
+.RI "readonly \fBShapeType\fP \fBshapeType\fP"
+.br
+.in -1c
+.SS "Protected 成员函数"
+
+.in +1c
+.ti -1c
+.RI "abstract void \fBGetBound\fP (out Vector3 lowerBound, out Vector3 upperBound)"
+.br
+.in -1c
+.SS "属性"
+
+.in +1c
+.ti -1c
+.RI "List< Vector3 > \fBlocalVertices\fP\fC [get, protected set]\fP"
+.br
+.ti -1c
+.RI "List< Vector3 > \fBvertices\fP\fC [get, protected set]\fP"
+.br
+.ti -1c
+.RI "\fBAABB\fP \fBaabb\fP\fC [get, protected set]\fP"
+.br
+.in -1c
+.SH "构造及析构函数说明"
+.PP 
+.SS "Physics\&.Collision\&.Shape\&.CollisionShape\&.CollisionShape (\fBShapeType\fP shapeType)\fC [inline]\fP"
+
+.SS "Physics\&.Collision\&.Shape\&.CollisionShape\&.CollisionShape (\fBShapeType\fP shapeType, Vector3[] localVertices)\fC [inline]\fP"
+
+.SH "成员函数说明"
+.PP 
+.SS "void Physics\&.Collision\&.Shape\&.CollisionShape\&.ApplyWorldVertices (Vector3 origin, Vector3 rotate, float scale)\fC [inline]\fP"
+
+.SS "abstract void Physics\&.Collision\&.Shape\&.CollisionShape\&.GetBound (out Vector3 lowerBound, out Vector3 upperBound)\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+在 \fBPhysics\&.Collision\&.Shape\&.Circle\fP, \fBPhysics\&.Collision\&.Shape\&.CustomShape\fP , 以及 \fBPhysics\&.Collision\&.Shape\&.Rect\fP 内被实现\&.
+.SS "virtual void Physics\&.Collision\&.Shape\&.CollisionShape\&.UpdateShape ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.SH "类成员变量说明"
+.PP 
+.SS "readonly \fBShapeType\fP Physics\&.Collision\&.Shape\&.CollisionShape\&.shapeType"
+
+.SH "属性说明"
+.PP 
+.SS "\fBAABB\fP Physics\&.Collision\&.Shape\&.CollisionShape\&.aabb\fC [get]\fP, \fC [protected set]\fP"
+
+.SS "List<Vector3> Physics\&.Collision\&.Shape\&.CollisionShape\&.localVertices\fC [get]\fP, \fC [protected set]\fP"
+
+.SS "List<Vector3> Physics\&.Collision\&.Shape\&.CollisionShape\&.vertices\fC [get]\fP, \fC [protected set]\fP"
+
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 PhysicsWorld 的 源代码自动生成\&.

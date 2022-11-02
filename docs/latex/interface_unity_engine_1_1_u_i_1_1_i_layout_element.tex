@@ -1,0 +1,197 @@
+\hypertarget{interface_unity_engine_1_1_u_i_1_1_i_layout_element}{}\doxysection{Unity\+Engine.\+UI.\+ILayout\+Element Interface Reference}
+\label{interface_unity_engine_1_1_u_i_1_1_i_layout_element}\index{UnityEngine.UI.ILayoutElement@{UnityEngine.UI.ILayoutElement}}
+
+
+A component is treated as a layout element by the auto layout system if it implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element}{ILayout\+Element}}.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+ILayout\+Element\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{interface_unity_engine_1_1_u_i_1_1_i_layout_element}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a38e697b28b30f3ff350c0c43d9c29441}{Calculate\+Layout\+Input\+Horizontal}} ()
+\begin{DoxyCompactList}\small\item\em After this method is invoked, layout horizontal input properties should return up-\/to-\/date values. Children will already have up-\/to-\/date layout horizontal inputs when this methods is called. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a1e0f42ff8a350a7996b1ebfacdac2b0b}{Calculate\+Layout\+Input\+Vertical}} ()
+\begin{DoxyCompactList}\small\item\em After this method is invoked, layout vertical input properties should return up-\/to-\/date values. Children will already have up-\/to-\/date layout vertical inputs when this methods is called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a61f430b52f90f43b91f9ded0fcee43d6}{min\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The minimum width this layout element may be allocated. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a69c7300cf30f5787cbb8e6750cf9a035}{preferred\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The preferred width this layout element should be allocated if there is sufficient space. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a8c4aaed207092d7d625b40c383e21816}{flexible\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The extra relative width this layout element should be allocated if there is additional available space. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a05bfb63b5a7eb646ba6576af07060333}{min\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The minimum height this layout element may be allocated. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a103a61023ccb5bc93fbb3cc8c3460531}{preferred\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The preferred height this layout element should be allocated if there is sufficient space. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a98516af90dc6529d486803b6774dc798}{flexible\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The extra relative height this layout element should be allocated if there is additional available space. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a13e5c560042cac2db6ddfd22143f1be9}{layout\+Priority}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The layout priority of this component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A component is treated as a layout element by the auto layout system if it implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element}{ILayout\+Element}}. 
+
+The layout system will invoke Calculate\+Layout\+Input\+Horizontal before querying min\+Width, preferred\+Width, and flexible\+Width. It can potentially save performance if these properties are cached when Calculate\+Layout\+Input\+Horizontal is invoked, so they don\textquotesingle{}t need to be recalculated every time the properties are queried.
+
+The layout system will invoke Calculate\+Layout\+Input\+Vertical before querying min\+Height, preferred\+Height, and flexible\+Height.\+It can potentially save performance if these properties are cached when Calculate\+Layout\+Input\+Vertical is invoked, so they don\textquotesingle{}t need to be recalculated every time the properties are queried.
+
+The min\+Width, preferred\+Width, and flexible\+Width properties should not rely on any properties of the Rect\+Transform of the layout element, otherwise the behavior will be non-\/deterministic. The min\+Height, preferred\+Height, and flexible\+Height properties may rely on horizontal aspects of the Rect\+Transform, such as the width or the X component of the position. Any properties of the Rect\+Transforms on child layout elements may always be relied on. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a38e697b28b30f3ff350c0c43d9c29441}\label{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a38e697b28b30f3ff350c0c43d9c29441}} 
+\index{UnityEngine.UI.ILayoutElement@{UnityEngine.UI.ILayoutElement}!CalculateLayoutInputHorizontal@{CalculateLayoutInputHorizontal}}
+\index{CalculateLayoutInputHorizontal@{CalculateLayoutInputHorizontal}!UnityEngine.UI.ILayoutElement@{UnityEngine.UI.ILayoutElement}}
+\doxysubsubsection{\texorpdfstring{CalculateLayoutInputHorizontal()}{CalculateLayoutInputHorizontal()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+ILayout\+Element.\+Calculate\+Layout\+Input\+Horizontal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+After this method is invoked, layout horizontal input properties should return up-\/to-\/date values. Children will already have up-\/to-\/date layout horizontal inputs when this methods is called. 
+
+
+
+Implemented in \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a2a8879e4aa818ad1338e1cbf2ca31b6d}{TMPro.\+Text\+Mesh\+Pro\+UGUI}}, \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_afe0d25a4249cd2f113ef129b192487f7}{TMPro.\+TMP\+\_\+\+Input\+Field}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ad4bd80df4950d497ccc9476f09d08e5b}{Unity\+Engine.\+UI.\+Grid\+Layout\+Group}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_horizontal_layout_group_a6136b7643998d19b6615e0058fbd7b4a}{Unity\+Engine.\+UI.\+Horizontal\+Layout\+Group}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_element_a2fd108eb648837ba312fdd9fd58f3fd1}{Unity\+Engine.\+UI.\+Layout\+Element}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_acaff989057730feb143801736840ee05}{Unity\+Engine.\+UI.\+Layout\+Group}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_vertical_layout_group_a77cceaa17631a98bf7155ba3ec41ad3d}{Unity\+Engine.\+UI.\+Vertical\+Layout\+Group}}.
+
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a1e0f42ff8a350a7996b1ebfacdac2b0b}\label{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a1e0f42ff8a350a7996b1ebfacdac2b0b}} 
+\index{UnityEngine.UI.ILayoutElement@{UnityEngine.UI.ILayoutElement}!CalculateLayoutInputVertical@{CalculateLayoutInputVertical}}
+\index{CalculateLayoutInputVertical@{CalculateLayoutInputVertical}!UnityEngine.UI.ILayoutElement@{UnityEngine.UI.ILayoutElement}}
+\doxysubsubsection{\texorpdfstring{CalculateLayoutInputVertical()}{CalculateLayoutInputVertical()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+ILayout\+Element.\+Calculate\+Layout\+Input\+Vertical (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+After this method is invoked, layout vertical input properties should return up-\/to-\/date values. Children will already have up-\/to-\/date layout vertical inputs when this methods is called. 
+
+
+
+Implemented in \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a5d1d50b2bf96c764e4decc60c0b5762c}{TMPro.\+Text\+Mesh\+Pro\+UGUI}}, \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_acae3f149c33bbbbef6a160ec193ffe29}{TMPro.\+TMP\+\_\+\+Input\+Field}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab28466e280164bcde2a2eb046c088911}{Unity\+Engine.\+UI.\+Grid\+Layout\+Group}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_horizontal_layout_group_a33c01e60a3415edf6bc253115ee7f308}{Unity\+Engine.\+UI.\+Horizontal\+Layout\+Group}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_element_a0682cab252b2cc9033be414cc5fb80f5}{Unity\+Engine.\+UI.\+Layout\+Element}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a6b7c4507858ad7ab0dc5c1eda66128be}{Unity\+Engine.\+UI.\+Layout\+Group}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_vertical_layout_group_a1e8170b70d54d39a3cf26e8bf7327288}{Unity\+Engine.\+UI.\+Vertical\+Layout\+Group}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a98516af90dc6529d486803b6774dc798}\label{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a98516af90dc6529d486803b6774dc798}} 
+\index{UnityEngine.UI.ILayoutElement@{UnityEngine.UI.ILayoutElement}!flexibleHeight@{flexibleHeight}}
+\index{flexibleHeight@{flexibleHeight}!UnityEngine.UI.ILayoutElement@{UnityEngine.UI.ILayoutElement}}
+\doxysubsubsection{\texorpdfstring{flexibleHeight}{flexibleHeight}}
+{\footnotesize\ttfamily float Unity\+Engine.\+UI.\+ILayout\+Element.\+flexible\+Height\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The extra relative height this layout element should be allocated if there is additional available space. 
+
+example\texorpdfstring{$>$}{>} code\texorpdfstring{$>$}{>} !\mbox{[}CDATA\mbox{[} using \mbox{\hyperlink{namespace_unity_engine}{Unity\+Engine}}; using System.\+Collections; using \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{Unity\+Engine.\+UI}}; // Required when using \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} elements.
+
+public class Example\+Class \+: Mono\+Behaviour \{ public Transform My\+Content\+Panel;
+
+//\+Sets the flexible height on on all children in the content panel. public void Start() \{ //\+Assign all the children of the content panel to an array. \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_element}{Layout\+Element}}\mbox{[}\mbox{]} my\+Layout\+Elements = My\+Content\+Panel.\+Get\+Components\+In\+Children$<$\+Layout\+Element$>$();
+
+//\+For each child in the array change its \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_element}{Layout\+Element}}\textquotesingle{}s flexible height to 100. foreach (\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_element}{Layout\+Element}} element in my\+Layout\+Elements) \{ element.\+flexible\+Height = 100f; \} \} \} \mbox{]}\mbox{]}\texorpdfstring{$>$}{>} /code\texorpdfstring{$>$}{>} /example\texorpdfstring{$>$}{>} 
+
+Implemented in \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a568da65a23b26203574921bea33840a0}{TMPro.\+TMP\+\_\+\+Input\+Field}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a114825432b1eeb0a490b4eeb266881a1}{Unity\+Engine.\+UI.\+Layout\+Group}}.
+
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a8c4aaed207092d7d625b40c383e21816}\label{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a8c4aaed207092d7d625b40c383e21816}} 
+\index{UnityEngine.UI.ILayoutElement@{UnityEngine.UI.ILayoutElement}!flexibleWidth@{flexibleWidth}}
+\index{flexibleWidth@{flexibleWidth}!UnityEngine.UI.ILayoutElement@{UnityEngine.UI.ILayoutElement}}
+\doxysubsubsection{\texorpdfstring{flexibleWidth}{flexibleWidth}}
+{\footnotesize\ttfamily float Unity\+Engine.\+UI.\+ILayout\+Element.\+flexible\+Width\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The extra relative width this layout element should be allocated if there is additional available space. 
+
+Setting preferred\+Width to -\/1 removed the preferred\+Width. 
+
+code\texorpdfstring{$>$}{>} !\mbox{[}CDATA\mbox{[} using \mbox{\hyperlink{namespace_unity_engine}{Unity\+Engine}}; using System.\+Collections; using \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{Unity\+Engine.\+UI}}; // Required when using \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} elements.
+
+public class Example\+Class \+: Mono\+Behaviour \{ public Transform My\+Content\+Panel;
+
+//\+Sets the flexible height on on all children in the content panel. public void Start() \{ //\+Assign all the children of the content panel to an array. \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_element}{Layout\+Element}}\mbox{[}\mbox{]} my\+Layout\+Elements = My\+Content\+Panel.\+Get\+Components\+In\+Children$<$\+Layout\+Element$>$();
+
+//\+For each child in the array change its \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_element}{Layout\+Element}}\textquotesingle{}s flexible width to 200. foreach (\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_element}{Layout\+Element}} element in my\+Layout\+Elements) \{ element.\+flexible\+Width = 200f; \} \} \} \mbox{]}\mbox{]}\texorpdfstring{$>$}{>} /code\texorpdfstring{$>$}{>} /example\texorpdfstring{$>$}{>} 
+
+Implemented in \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a25c74a066efdfa747cb3469f462f8825}{TMPro.\+TMP\+\_\+\+Input\+Field}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a90da1287a15ea77bf893ccb634dbbdd0}{Unity\+Engine.\+UI.\+Layout\+Group}}.
+
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a13e5c560042cac2db6ddfd22143f1be9}\label{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a13e5c560042cac2db6ddfd22143f1be9}} 
+\index{UnityEngine.UI.ILayoutElement@{UnityEngine.UI.ILayoutElement}!layoutPriority@{layoutPriority}}
+\index{layoutPriority@{layoutPriority}!UnityEngine.UI.ILayoutElement@{UnityEngine.UI.ILayoutElement}}
+\doxysubsubsection{\texorpdfstring{layoutPriority}{layoutPriority}}
+{\footnotesize\ttfamily int Unity\+Engine.\+UI.\+ILayout\+Element.\+layout\+Priority\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The layout priority of this component. 
+
+If multiple components on the same Game\+Object implement the \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element}{ILayout\+Element}} interface, the values provided by components that return a higher priority value are given priority. However, values less than zero are ignored. This way a component can override only select properties by leaving the remaning values to be -\/1 or other values less than zero. 
+
+Implemented in \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_aa6010922a5695b55d560c870d451aaa6}{TMPro.\+TMP\+\_\+\+Input\+Field}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a9faa8f52026a2db90605b307e53849c8}{Unity\+Engine.\+UI.\+Layout\+Group}}.
+
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a05bfb63b5a7eb646ba6576af07060333}\label{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a05bfb63b5a7eb646ba6576af07060333}} 
+\index{UnityEngine.UI.ILayoutElement@{UnityEngine.UI.ILayoutElement}!minHeight@{minHeight}}
+\index{minHeight@{minHeight}!UnityEngine.UI.ILayoutElement@{UnityEngine.UI.ILayoutElement}}
+\doxysubsubsection{\texorpdfstring{minHeight}{minHeight}}
+{\footnotesize\ttfamily float Unity\+Engine.\+UI.\+ILayout\+Element.\+min\+Height\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The minimum height this layout element may be allocated. 
+
+
+
+Implemented in \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_ae7e67981266ea16e99a2bc78d5833dd0}{TMPro.\+TMP\+\_\+\+Input\+Field}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a44c5189a988c93a8706a404c33470435}{Unity\+Engine.\+UI.\+Layout\+Group}}.
+
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a61f430b52f90f43b91f9ded0fcee43d6}\label{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a61f430b52f90f43b91f9ded0fcee43d6}} 
+\index{UnityEngine.UI.ILayoutElement@{UnityEngine.UI.ILayoutElement}!minWidth@{minWidth}}
+\index{minWidth@{minWidth}!UnityEngine.UI.ILayoutElement@{UnityEngine.UI.ILayoutElement}}
+\doxysubsubsection{\texorpdfstring{minWidth}{minWidth}}
+{\footnotesize\ttfamily float Unity\+Engine.\+UI.\+ILayout\+Element.\+min\+Width\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The minimum width this layout element may be allocated. 
+
+
+
+Implemented in \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a5218a8379f7d1a1e59e538adc3f83377}{TMPro.\+TMP\+\_\+\+Input\+Field}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_ab56f77c9aa4fc69d2addca446d0cf8a0}{Unity\+Engine.\+UI.\+Layout\+Group}}.
+
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a103a61023ccb5bc93fbb3cc8c3460531}\label{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a103a61023ccb5bc93fbb3cc8c3460531}} 
+\index{UnityEngine.UI.ILayoutElement@{UnityEngine.UI.ILayoutElement}!preferredHeight@{preferredHeight}}
+\index{preferredHeight@{preferredHeight}!UnityEngine.UI.ILayoutElement@{UnityEngine.UI.ILayoutElement}}
+\doxysubsubsection{\texorpdfstring{preferredHeight}{preferredHeight}}
+{\footnotesize\ttfamily float Unity\+Engine.\+UI.\+ILayout\+Element.\+preferred\+Height\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The preferred height this layout element should be allocated if there is sufficient space. 
+
+Preferred\+Height can be set to -\/1 to remove the size. 
+
+Implemented in \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a59f6a4a9bca1443c6b3e06e0e52b8ece}{TMPro.\+TMP\+\_\+\+Input\+Field}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_ac6d61ed614db1f11aeef16a67c7a1ab4}{Unity\+Engine.\+UI.\+Layout\+Group}}.
+
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a69c7300cf30f5787cbb8e6750cf9a035}\label{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a69c7300cf30f5787cbb8e6750cf9a035}} 
+\index{UnityEngine.UI.ILayoutElement@{UnityEngine.UI.ILayoutElement}!preferredWidth@{preferredWidth}}
+\index{preferredWidth@{preferredWidth}!UnityEngine.UI.ILayoutElement@{UnityEngine.UI.ILayoutElement}}
+\doxysubsubsection{\texorpdfstring{preferredWidth}{preferredWidth}}
+{\footnotesize\ttfamily float Unity\+Engine.\+UI.\+ILayout\+Element.\+preferred\+Width\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The preferred width this layout element should be allocated if there is sufficient space. 
+
+Preferred\+Width can be set to -\/1 to remove the size. 
+
+Implemented in \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a10971fe8fdf5f458468c658f28bbc965}{TMPro.\+TMP\+\_\+\+Input\+Field}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a5e6333a178f52de8a99c3cfb63a4a50c}{Unity\+Engine.\+UI.\+Layout\+Group}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/\+Layout/ILayout\+Element.\+cs\end{DoxyCompactItemize}

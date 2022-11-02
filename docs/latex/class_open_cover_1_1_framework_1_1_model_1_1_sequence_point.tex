@@ -1,0 +1,136 @@
+\hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point}{}\doxysection{Open\+Cover.\+Framework.\+Model.\+Sequence\+Point Class Reference}
+\label{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point}\index{OpenCover.Framework.Model.SequencePoint@{OpenCover.Framework.Model.SequencePoint}}
+
+
+a sequence point  
+
+
+Inheritance diagram for Open\+Cover.\+Framework.\+Model.\+Sequence\+Point\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.783440cm]{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a1f0bf6d1a77255f6faf7bc876cc02136}{Is\+Position\+Equal}} (\mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point}{Sequence\+Point}} sp)
+\begin{DoxyCompactList}\small\item\em Is Start/\+End Line/\+Column equal \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a821b558ef01261130998e7fe4c3491f8}{Is\+File\+Id\+Equal}} (\mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point}{Sequence\+Point}} sp)
+\begin{DoxyCompactList}\small\item\em Is File\+Id equal? (If File\+Id is 0 then file is unknown) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_acf66d631a86041442ed72c1b607439be}\label{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_acf66d631a86041442ed72c1b607439be}} 
+int {\bfseries Start\+Line}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The start line of the sequence point \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a4f61c9dc5da35e55e6b1c9da638eaa3a}\label{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a4f61c9dc5da35e55e6b1c9da638eaa3a}} 
+int {\bfseries Start\+Column}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The start column of the sequence point \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_ae6de450cae9b532f5dea930f822075f4}\label{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_ae6de450cae9b532f5dea930f822075f4}} 
+int {\bfseries End\+Line}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The end line of the sequence point \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_abf54765083ab106d3ea1cf71ebb63a84}\label{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_abf54765083ab106d3ea1cf71ebb63a84}} 
+int {\bfseries End\+Column}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The end column of the sequence point \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a346f805c3c6a8b4fabda00fd42075534}{Branch\+Exits\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Count of merged branches \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a10c92a6fc72be455d45e99a9378f01c7}\label{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a10c92a6fc72be455d45e99a9378f01c7}} 
+int {\bfseries Branch\+Exits\+Visit}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Visit count of merged branches \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a5a223830ba700a113fadea8fbda305a0}{File\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The file associated with the supplied startline \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a10f2b849febb1b7d3e205fcc9d086ab0}{Document}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The url to the document if an entry was not mapped to an id \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a5aa14f4a991f541627452144da4b6e7a}\label{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a5aa14f4a991f541627452144da4b6e7a}} 
+bool {\bfseries Is\+Single\+Char\+Sequence\+Point}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Property \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+a sequence point 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a821b558ef01261130998e7fe4c3491f8}\label{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a821b558ef01261130998e7fe4c3491f8}} 
+\index{OpenCover.Framework.Model.SequencePoint@{OpenCover.Framework.Model.SequencePoint}!IsFileIdEqual@{IsFileIdEqual}}
+\index{IsFileIdEqual@{IsFileIdEqual}!OpenCover.Framework.Model.SequencePoint@{OpenCover.Framework.Model.SequencePoint}}
+\doxysubsubsection{\texorpdfstring{IsFileIdEqual()}{IsFileIdEqual()}}
+{\footnotesize\ttfamily bool Open\+Cover.\+Framework.\+Model.\+Sequence\+Point.\+Is\+File\+Id\+Equal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point}{Sequence\+Point}}}]{sp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Is File\+Id equal? (If File\+Id is 0 then file is unknown) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a1f0bf6d1a77255f6faf7bc876cc02136}\label{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a1f0bf6d1a77255f6faf7bc876cc02136}} 
+\index{OpenCover.Framework.Model.SequencePoint@{OpenCover.Framework.Model.SequencePoint}!IsPositionEqual@{IsPositionEqual}}
+\index{IsPositionEqual@{IsPositionEqual}!OpenCover.Framework.Model.SequencePoint@{OpenCover.Framework.Model.SequencePoint}}
+\doxysubsubsection{\texorpdfstring{IsPositionEqual()}{IsPositionEqual()}}
+{\footnotesize\ttfamily bool Open\+Cover.\+Framework.\+Model.\+Sequence\+Point.\+Is\+Position\+Equal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point}{Sequence\+Point}}}]{sp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Is Start/\+End Line/\+Column equal 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a346f805c3c6a8b4fabda00fd42075534}\label{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a346f805c3c6a8b4fabda00fd42075534}} 
+\index{OpenCover.Framework.Model.SequencePoint@{OpenCover.Framework.Model.SequencePoint}!BranchExitsCount@{BranchExitsCount}}
+\index{BranchExitsCount@{BranchExitsCount}!OpenCover.Framework.Model.SequencePoint@{OpenCover.Framework.Model.SequencePoint}}
+\doxysubsubsection{\texorpdfstring{BranchExitsCount}{BranchExitsCount}}
+{\footnotesize\ttfamily int Open\+Cover.\+Framework.\+Model.\+Sequence\+Point.\+Branch\+Exits\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Count of merged branches 
+
+The number of branch exits \mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a10f2b849febb1b7d3e205fcc9d086ab0}\label{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a10f2b849febb1b7d3e205fcc9d086ab0}} 
+\index{OpenCover.Framework.Model.SequencePoint@{OpenCover.Framework.Model.SequencePoint}!Document@{Document}}
+\index{Document@{Document}!OpenCover.Framework.Model.SequencePoint@{OpenCover.Framework.Model.SequencePoint}}
+\doxysubsubsection{\texorpdfstring{Document}{Document}}
+{\footnotesize\ttfamily string Open\+Cover.\+Framework.\+Model.\+Sequence\+Point.\+Document\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The url to the document if an entry was not mapped to an id 
+
+
+
+Implements \mbox{\hyperlink{interface_open_cover_1_1_framework_1_1_model_1_1_i_document_reference_a414262d04d50c0a365519bcca39534a2}{Open\+Cover.\+Framework.\+Model.\+IDocument\+Reference}}.
+
+\mbox{\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a5a223830ba700a113fadea8fbda305a0}\label{class_open_cover_1_1_framework_1_1_model_1_1_sequence_point_a5a223830ba700a113fadea8fbda305a0}} 
+\index{OpenCover.Framework.Model.SequencePoint@{OpenCover.Framework.Model.SequencePoint}!FileId@{FileId}}
+\index{FileId@{FileId}!OpenCover.Framework.Model.SequencePoint@{OpenCover.Framework.Model.SequencePoint}}
+\doxysubsubsection{\texorpdfstring{FileId}{FileId}}
+{\footnotesize\ttfamily uint Open\+Cover.\+Framework.\+Model.\+Sequence\+Point.\+File\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The file associated with the supplied startline 
+
+
+
+Implements \mbox{\hyperlink{interface_open_cover_1_1_framework_1_1_model_1_1_i_document_reference_ac2d30bb9d6413317f5990420b54a2249}{Open\+Cover.\+Framework.\+Model.\+IDocument\+Reference}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+testtools.\+codecoverage@1.\+0.\+1/\+Editor/\+Coverage\+Formats/\+Open\+Cover/\+Model/Sequence\+Point.\+cs\end{DoxyCompactItemize}

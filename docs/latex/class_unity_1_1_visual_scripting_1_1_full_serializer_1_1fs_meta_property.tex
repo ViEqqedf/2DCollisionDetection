@@ -1,0 +1,51 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property}{}\doxysection{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Meta\+Property Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property}\index{Unity.VisualScripting.FullSerializer.fsMetaProperty@{Unity.VisualScripting.FullSerializer.fsMetaProperty}}
+
+
+A property or field on a Meta\+Type. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} unifies the Field\+Info and Property\+Info classes.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_a4aa6ba5b863daf64757bfe1ddfd105b1}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_a4aa6ba5b863daf64757bfe1ddfd105b1}} 
+void {\bfseries Write} (object context, object value)
+\begin{DoxyCompactList}\small\item\em Writes a value to the property that this Meta\+Property represents, using given object instance as the context. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_a1fb60f660204e2253d3606799cc87e44}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_a1fb60f660204e2253d3606799cc87e44}} 
+object {\bfseries Read} (object context)
+\begin{DoxyCompactList}\small\item\em Reads a value from the property that this Meta\+Property represents, using the given object instance as the context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_a7e43a3eb9fcadbda67483945ea23c228}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_a7e43a3eb9fcadbda67483945ea23c228}} 
+Type {\bfseries Storage\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The type of value that is stored inside of the property. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_for}{For}} example, for an int field, Storage\+Type will be typeof(int). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_a4b06481b5e13bf16aac341d9ad06a05d}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_a4b06481b5e13bf16aac341d9ad06a05d}} 
+Type {\bfseries Override\+Converter\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A custom \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter}{fs\+Base\+Converter}} instance to use for this field/property, if requested. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} will be null if the default converter selection algorithm should be used. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} is specified using the \mbox{[}fs\+Object\mbox{]} annotation with the Converter field. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_a032c70ff8e1568869415d286a26019e0}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_a032c70ff8e1568869415d286a26019e0}} 
+bool {\bfseries Can\+Read}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Can this property be read? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_a44fb9343848e52b9c964abfa651e24aa}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_a44fb9343848e52b9c964abfa651e24aa}} 
+bool {\bfseries Can\+Write}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Can this property be written to? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_a88f17d924e4d6309a29b5c7944350765}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_a88f17d924e4d6309a29b5c7944350765}} 
+string {\bfseries Json\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The serialized name of the property, as it should appear in JSON. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_aa33763bceeb1a6db17d19b732c694a79}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_aa33763bceeb1a6db17d19b732c694a79}} 
+string {\bfseries Member\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name of the actual member. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_a3fe8b0330b1b98187f485e49fe6c0564}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_a3fe8b0330b1b98187f485e49fe6c0564}} 
+bool {\bfseries Is\+Public}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is this member public? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_a5bd0cacf644289263af98521ffe17002}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_meta_property_a5bd0cacf644289263af98521ffe17002}} 
+bool {\bfseries Is\+Read\+Only}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is this type readonly? We can modify readonly properties using reflection, but not using generated C\#. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A property or field on a Meta\+Type. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} unifies the Field\+Info and Property\+Info classes. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Core/\+Dependencies/\+Full\+Serializer/\+Reflection/fs\+Meta\+Property.\+cs\end{DoxyCompactItemize}

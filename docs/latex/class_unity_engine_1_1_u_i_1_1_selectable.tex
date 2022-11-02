@@ -1,0 +1,169 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_selectable}{}\doxysection{Unity\+Engine.\+UI.\+Selectable Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_selectable}\index{UnityEngine.UI.Selectable@{UnityEngine.UI.Selectable}}
+
+
+Simple selectable object -\/ derived from to create a selectable control.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Selectable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_unity_engine_1_1_u_i_1_1_selectable}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_selectable_aed581958744a69ac1a36176c0dda008a}\label{class_unity_engine_1_1_u_i_1_1_selectable_aed581958744a69ac1a36176c0dda008a}} 
+static \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}}\mbox{[}$\,$\mbox{]} {\bfseries s\+\_\+\+Selectables} = new \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}}\mbox{[}10\mbox{]}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_selectable_aefd532adbeb7407701c46f57751f619c}\label{class_unity_engine_1_1_u_i_1_1_selectable_aefd532adbeb7407701c46f57751f619c}} 
+static int {\bfseries s\+\_\+\+Selectable\+Count} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_u_i_1_1_sprite_state}{Sprite\+State}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable_a35a3bec2a64a37feee159003a09e82cf}{sprite\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Copy of the array of all the selectable objects currently active in the scene. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_animation_triggers}{Animation\+Triggers}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable_a30f30933362defcf850a05474828d1ab}{animation\+Triggers}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_animation_triggers}{Animation\+Triggers}} for this selectable object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Simple selectable object -\/ derived from to create a selectable control. 
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_selectable_a30f30933362defcf850a05474828d1ab}\label{class_unity_engine_1_1_u_i_1_1_selectable_a30f30933362defcf850a05474828d1ab}} 
+\index{UnityEngine.UI.Selectable@{UnityEngine.UI.Selectable}!animationTriggers@{animationTriggers}}
+\index{animationTriggers@{animationTriggers}!UnityEngine.UI.Selectable@{UnityEngine.UI.Selectable}}
+\doxysubsubsection{\texorpdfstring{animationTriggers}{animationTriggers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_animation_triggers}{Animation\+Triggers}} Unity\+Engine.\+UI.\+Selectable.\+animation\+Triggers\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_animation_triggers}{Animation\+Triggers}} for this selectable object. 
+
+Modifications will not be visible if transition is not Animation. \mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_selectable_a35a3bec2a64a37feee159003a09e82cf}\label{class_unity_engine_1_1_u_i_1_1_selectable_a35a3bec2a64a37feee159003a09e82cf}} 
+\index{UnityEngine.UI.Selectable@{UnityEngine.UI.Selectable}!spriteState@{spriteState}}
+\index{spriteState@{spriteState}!UnityEngine.UI.Selectable@{UnityEngine.UI.Selectable}}
+\doxysubsubsection{\texorpdfstring{spriteState}{spriteState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_unity_engine_1_1_u_i_1_1_sprite_state}{Sprite\+State}} Unity\+Engine.\+UI.\+Selectable.\+sprite\+State\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Copy of the array of all the selectable objects currently active in the scene. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keyword}{using }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{    \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{    \textcolor{keyword}{using }\mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UnityEngine.UI}}; \textcolor{comment}{// required when using UI elements in scripts}}
+\DoxyCodeLine{   }
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{class }Example : MonoBehaviour}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{//Displays the names of all selectable elements in the scene}}
+\DoxyCodeLine{        \textcolor{keyword}{public} \textcolor{keywordtype}{void} GetNames()}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{foreach} (\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}} selectableUI \textcolor{keywordflow}{in} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}}.allSelectablesArray)}
+\DoxyCodeLine{            \{}
+\DoxyCodeLine{                Debug.Log(selectableUI.name);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    /code>}
+\DoxyCodeLine{    </example> */}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}}[] allSelectablesArray}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{get}}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}}[] temp = \textcolor{keyword}{new} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}}[s\_SelectableCount];}
+\DoxyCodeLine{        Array.Copy(s\_Selectables, temp, s\_SelectableCount);}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} temp;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{int} allSelectableCount \{ \textcolor{keyword}{get} \{ \textcolor{keywordflow}{return} s\_SelectableCount; \} \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{[Obsolete(\textcolor{stringliteral}{"{}Replaced with allSelectablesArray to have better performance when disabling a element"{}}, \textcolor{keyword}{false})]}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{static} List<Selectable> allSelectables}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{get}}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{keyword}{new} List<Selectable>(allSelectablesArray);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{int} AllSelectablesNoAlloc(\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}}[] selectables)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} copyCount = selectables.Length < s\_SelectableCount ? selectables.Length : s\_SelectableCount;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    Array.Copy(s\_Selectables, selectables, copyCount);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} copyCount;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Navigation information.}}
+\DoxyCodeLine{[FormerlySerializedAs(\textcolor{stringliteral}{"{}navigation"{}})]}
+\DoxyCodeLine{[SerializeField]}
+\DoxyCodeLine{\textcolor{keyword}{private} \mbox{\hyperlink{struct_unity_engine_1_1_u_i_1_1_navigation}{Navigation}} m\_Navigation = \mbox{\hyperlink{struct_unity_engine_1_1_u_i_1_1_navigation}{Navigation}}.defaultNavigation;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{enum} Transition}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    None,}
+\DoxyCodeLine{}
+\DoxyCodeLine{    ColorTint,}
+\DoxyCodeLine{}
+\DoxyCodeLine{    SpriteSwap,}
+\DoxyCodeLine{}
+\DoxyCodeLine{    Animation}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Type of the transition that occurs when the button state changes.}}
+\DoxyCodeLine{[FormerlySerializedAs(\textcolor{stringliteral}{"{}transition"{}})]}
+\DoxyCodeLine{[SerializeField]}
+\DoxyCodeLine{\textcolor{keyword}{private} Transition m\_Transition = Transition.ColorTint;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Colors used for a color tint-\/based transition.}}
+\DoxyCodeLine{[FormerlySerializedAs(\textcolor{stringliteral}{"{}colors"{}})]}
+\DoxyCodeLine{[SerializeField]}
+\DoxyCodeLine{\textcolor{keyword}{private} \mbox{\hyperlink{struct_unity_engine_1_1_u_i_1_1_color_block}{ColorBlock}} m\_Colors = \mbox{\hyperlink{struct_unity_engine_1_1_u_i_1_1_color_block}{ColorBlock}}.defaultColorBlock;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Sprites used for a Image swap-\/based transition.}}
+\DoxyCodeLine{[FormerlySerializedAs(\textcolor{stringliteral}{"{}spriteState"{}})]}
+\DoxyCodeLine{[SerializeField]}
+\DoxyCodeLine{\textcolor{keyword}{private} \mbox{\hyperlink{struct_unity_engine_1_1_u_i_1_1_sprite_state}{SpriteState}} m\_SpriteState;}
+\DoxyCodeLine{}
+\DoxyCodeLine{[FormerlySerializedAs(\textcolor{stringliteral}{"{}animationTriggers"{}})]}
+\DoxyCodeLine{[SerializeField]}
+\DoxyCodeLine{\textcolor{keyword}{private} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_animation_triggers}{AnimationTriggers}} m\_AnimationTriggers = \textcolor{keyword}{new} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_animation_triggers}{AnimationTriggers}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{[Tooltip(\textcolor{stringliteral}{"{}Can the Selectable be interacted with?"{}})]}
+\DoxyCodeLine{[SerializeField]}
+\DoxyCodeLine{\textcolor{keyword}{private} \textcolor{keywordtype}{bool} m\_Interactable = \textcolor{keyword}{true};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Graphic that will be colored.}}
+\DoxyCodeLine{[FormerlySerializedAs(\textcolor{stringliteral}{"{}highlightGraphic"{}})]}
+\DoxyCodeLine{[FormerlySerializedAs(\textcolor{stringliteral}{"{}m\_HighlightGraphic"{}})]}
+\DoxyCodeLine{[SerializeField]}
+\DoxyCodeLine{\textcolor{keyword}{private} Graphic m\_TargetGraphic;}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{private} \textcolor{keywordtype}{bool} m\_GroupsAllowInteraction = \textcolor{keyword}{true};}
+\DoxyCodeLine{\textcolor{keyword}{protected} \textcolor{keywordtype}{int} m\_CurrentIndex = -\/1;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public} \mbox{\hyperlink{struct_unity_engine_1_1_u_i_1_1_navigation}{Navigation}}        navigation        \{ \textcolor{keyword}{get} \{ \textcolor{keywordflow}{return} m\_Navigation; \} \textcolor{keyword}{set} \{ \textcolor{keywordflow}{if} (SetPropertyUtility.SetStruct(ref m\_Navigation, value))        OnSetProperty(); \} \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public} Transition        transition        \{ \textcolor{keyword}{get} \{ \textcolor{keywordflow}{return} m\_Transition; \} \textcolor{keyword}{set} \{ \textcolor{keywordflow}{if} (SetPropertyUtility.SetStruct(ref m\_Transition, value))        OnSetProperty(); \} \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public} \mbox{\hyperlink{struct_unity_engine_1_1_u_i_1_1_color_block}{ColorBlock}}        colors            \{ \textcolor{keyword}{get} \{ \textcolor{keywordflow}{return} m\_Colors; \} \textcolor{keyword}{set} \{ \textcolor{keywordflow}{if} (SetPropertyUtility.SetStruct(ref m\_Colors, value))            OnSetProperty(); \} \}}
+\DoxyCodeLine{}
+
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/Selectable.\+cs\end{DoxyCompactItemize}

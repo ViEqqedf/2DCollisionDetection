@@ -1,0 +1,140 @@
+\hypertarget{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{}\doxysection{Unity\+Engine.\+Event\+Systems.\+UIBehaviour Class Reference}
+\label{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}\index{UnityEngine.EventSystems.UIBehaviour@{UnityEngine.EventSystems.UIBehaviour}}
+
+
+Base behaviour that has protected implementations of \mbox{\hyperlink{namespace_unity}{Unity}} lifecycle functions.  
+
+
+Inheritance diagram for Unity\+Engine.\+Event\+Systems.\+UIBehaviour\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ac3b9d503ad9eb607e691775b2c680d08}\label{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ac3b9d503ad9eb607e691775b2c680d08}} 
+virtual bool {\bfseries Is\+Active} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the Game\+Object and the Component are active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a1b4d2b6956ce44150ae96433d1d15e8f}{Is\+Destroyed}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the native representation of the behaviour has been destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a1235b9fe2fae01d3a2fc407166e0fa41}\label{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a1235b9fe2fae01d3a2fc407166e0fa41}} 
+virtual void {\bfseries Awake} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a50bb1d6a54cafd4e344fc4578fc7c322}{On\+Enable}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ad9097dfd9b409602fc182c1b790600ea}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ad7fc972dc923e760a4be478cf72de2f9}{On\+Disable}} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a3eaa412ca986ca777a4d7b9654c1f3d4}\label{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a3eaa412ca986ca777a4d7b9654c1f3d4}} 
+virtual void {\bfseries On\+Destroy} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_acfb0bcf126b8ea0953525ebb20a87985}{On\+Rect\+Transform\+Dimensions\+Change}} ()
+\begin{DoxyCompactList}\small\item\em This callback is called when the dimensions of an associated Rect\+Transform change. It is always called before Awake, On\+Enable, or Start. The call is also made to all child Rect\+Transforms, regardless of whether their dimensions change (which depends on how they are anchored). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ac9eba6c0a20f81ea61f6e760b6df5d83}\label{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ac9eba6c0a20f81ea61f6e760b6df5d83}} 
+virtual void {\bfseries On\+Before\+Transform\+Parent\+Changed} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a6ed51ea799aa1a343e0e847255dfd3cd}\label{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a6ed51ea799aa1a343e0e847255dfd3cd}} 
+virtual void {\bfseries On\+Transform\+Parent\+Changed} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a6ad4a13c8cc29c6620e56028e07d4c0e}{On\+Did\+Apply\+Animation\+Properties}} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_aa47d9812b94689b322fa7370fa47f5ca}\label{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_aa47d9812b94689b322fa7370fa47f5ca}} 
+virtual void {\bfseries On\+Canvas\+Group\+Changed} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a73f180fef8560a44a756525ecfe3092f}{On\+Canvas\+Hierarchy\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Called when the state of the parent Canvas is changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base behaviour that has protected implementations of \mbox{\hyperlink{namespace_unity}{Unity}} lifecycle functions. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a1b4d2b6956ce44150ae96433d1d15e8f}\label{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a1b4d2b6956ce44150ae96433d1d15e8f}} 
+\index{UnityEngine.EventSystems.UIBehaviour@{UnityEngine.EventSystems.UIBehaviour}!IsDestroyed@{IsDestroyed}}
+\index{IsDestroyed@{IsDestroyed}!UnityEngine.EventSystems.UIBehaviour@{UnityEngine.EventSystems.UIBehaviour}}
+\doxysubsubsection{\texorpdfstring{IsDestroyed()}{IsDestroyed()}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Event\+Systems.\+UIBehaviour.\+Is\+Destroyed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if the native representation of the behaviour has been destroyed. 
+
+When a parent canvas is either enabled, disabled or a nested canvas\textquotesingle{}s Override\+Sorting is changed this function is called. You can for example use this to modify objects below a canvas that may depend on a parent canvas -\/ for example, if a canvas is disabled you may want to halt some processing of a \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} element. \mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a73f180fef8560a44a756525ecfe3092f}\label{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a73f180fef8560a44a756525ecfe3092f}} 
+\index{UnityEngine.EventSystems.UIBehaviour@{UnityEngine.EventSystems.UIBehaviour}!OnCanvasHierarchyChanged@{OnCanvasHierarchyChanged}}
+\index{OnCanvasHierarchyChanged@{OnCanvasHierarchyChanged}!UnityEngine.EventSystems.UIBehaviour@{UnityEngine.EventSystems.UIBehaviour}}
+\doxysubsubsection{\texorpdfstring{OnCanvasHierarchyChanged()}{OnCanvasHierarchyChanged()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+Event\+Systems.\+UIBehaviour.\+On\+Canvas\+Hierarchy\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called when the state of the parent Canvas is changed. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_raycaster_a164c59b009794bd834c96e17acfa17c4}{Unity\+Engine.\+Event\+Systems.\+Base\+Raycaster}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d_ade2d8acc495971e2aebca0eda359fa20}{Unity\+Engine.\+UI.\+Rect\+Mask2D}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a6ad4a13c8cc29c6620e56028e07d4c0e}\label{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a6ad4a13c8cc29c6620e56028e07d4c0e}} 
+\index{UnityEngine.EventSystems.UIBehaviour@{UnityEngine.EventSystems.UIBehaviour}!OnDidApplyAnimationProperties@{OnDidApplyAnimationProperties}}
+\index{OnDidApplyAnimationProperties@{OnDidApplyAnimationProperties}!UnityEngine.EventSystems.UIBehaviour@{UnityEngine.EventSystems.UIBehaviour}}
+\doxysubsubsection{\texorpdfstring{OnDidApplyAnimationProperties()}{OnDidApplyAnimationProperties()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+Event\+Systems.\+UIBehaviour.\+On\+Did\+Apply\+Animation\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_af2dbb52ea3181cf869ae9cf8e4d37b8e}{Unity\+Engine.\+UI.\+Layout\+Group}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ad7fc972dc923e760a4be478cf72de2f9}\label{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ad7fc972dc923e760a4be478cf72de2f9}} 
+\index{UnityEngine.EventSystems.UIBehaviour@{UnityEngine.EventSystems.UIBehaviour}!OnDisable@{OnDisable}}
+\index{OnDisable@{OnDisable}!UnityEngine.EventSystems.UIBehaviour@{UnityEngine.EventSystems.UIBehaviour}}
+\doxysubsubsection{\texorpdfstring{OnDisable()}{OnDisable()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+Event\+Systems.\+UIBehaviour.\+On\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_t_m_pro_1_1_text_container_adbd08c1c446399e7336765eed64da59f}{TMPro.\+Text\+Container}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a4ec70651819b490554edadf01344ce26}{Unity\+Engine.\+UI.\+Canvas\+Scaler}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a50bb1d6a54cafd4e344fc4578fc7c322}\label{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a50bb1d6a54cafd4e344fc4578fc7c322}} 
+\index{UnityEngine.EventSystems.UIBehaviour@{UnityEngine.EventSystems.UIBehaviour}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!UnityEngine.EventSystems.UIBehaviour@{UnityEngine.EventSystems.UIBehaviour}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+Event\+Systems.\+UIBehaviour.\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_t_m_pro_1_1_text_container_a9781ce6d36e9f18c93171d29f8d0146c}{TMPro.\+Text\+Container}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_acfb0bcf126b8ea0953525ebb20a87985}\label{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_acfb0bcf126b8ea0953525ebb20a87985}} 
+\index{UnityEngine.EventSystems.UIBehaviour@{UnityEngine.EventSystems.UIBehaviour}!OnRectTransformDimensionsChange@{OnRectTransformDimensionsChange}}
+\index{OnRectTransformDimensionsChange@{OnRectTransformDimensionsChange}!UnityEngine.EventSystems.UIBehaviour@{UnityEngine.EventSystems.UIBehaviour}}
+\doxysubsubsection{\texorpdfstring{OnRectTransformDimensionsChange()}{OnRectTransformDimensionsChange()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+Event\+Systems.\+UIBehaviour.\+On\+Rect\+Transform\+Dimensions\+Change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+This callback is called when the dimensions of an associated Rect\+Transform change. It is always called before Awake, On\+Enable, or Start. The call is also made to all child Rect\+Transforms, regardless of whether their dimensions change (which depends on how they are anchored). 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_t_m_pro_1_1_text_container_a8bb1eabc8e3cfaf2fd2027fcd8f32696}{TMPro.\+Text\+Container}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a75dc042f53ed88a8002af380a4c91b9f}{Unity\+Engine.\+UI.\+Aspect\+Ratio\+Fitter}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_content_size_fitter_a8eac45ba52858a4335aa500377793d4c}{Unity\+Engine.\+UI.\+Content\+Size\+Fitter}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a6219a761156aec0bc5a2bd240b04eb19}{Unity\+Engine.\+UI.\+Layout\+Group}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a643d8d6ef4f0237b91e58d44490292da}{Unity\+Engine.\+UI.\+Scrollbar}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ad9097dfd9b409602fc182c1b790600ea}\label{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ad9097dfd9b409602fc182c1b790600ea}} 
+\index{UnityEngine.EventSystems.UIBehaviour@{UnityEngine.EventSystems.UIBehaviour}!Start@{Start}}
+\index{Start@{Start}!UnityEngine.EventSystems.UIBehaviour@{UnityEngine.EventSystems.UIBehaviour}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+Event\+Systems.\+UIBehaviour.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_a2248d6cf8726b4240010543a4f861ca5}{Unity\+Engine.\+UI.\+Toggle\+Group}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+Event\+System/UIBehaviour.\+cs\end{DoxyCompactItemize}
