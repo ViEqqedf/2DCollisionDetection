@@ -1,0 +1,163 @@
+\hypertarget{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider}{}\doxysection{Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+Assembly\+Name\+Provider Class Reference}
+\label{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider}\index{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}}
+Inheritance diagram for Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+Assembly\+Name\+Provider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_af2e57b90b21d21e64da62d9fba88868a}{Get\+Assembly\+Name\+From\+Script\+Path}} (string path)
+\item 
+IEnumerable$<$ Assembly $>$ \mbox{\hyperlink{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_a82c5e33d4ce7ad29884c55587e59e1b2}{Get\+Assemblies}} (Func$<$ string, bool $>$ should\+File\+Be\+Part\+Of\+Solution)
+\item 
+\mbox{\Hypertarget{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_ab3aa0de8c76807d8074d28b687ffd78b}\label{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_ab3aa0de8c76807d8074d28b687ffd78b}} 
+string {\bfseries Get\+Compile\+Output\+Path} (string assembly\+Name)
+\item 
+IEnumerable$<$ string $>$ \mbox{\hyperlink{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_ab5df3beda5e2fa6c9ddc4368b3129e60}{Get\+All\+Asset\+Paths}} ()
+\item 
+Unity\+Editor.\+Package\+Manager.\+Package\+Info \mbox{\hyperlink{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_a81a836c4210ae036e3ec93d91b36a984}{Find\+For\+Asset\+Path}} (string asset\+Path)
+\item 
+bool \mbox{\hyperlink{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_a92b7c2b44320e35ed2edddaaec8fbc81}{Is\+Internalized\+Package\+Path}} (string path)
+\item 
+Response\+File\+Data \mbox{\hyperlink{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_aba3386f2359b86522d46fda634cd037b}{Parse\+Response\+File}} (string response\+File\+Path, string project\+Directory, string\mbox{[}$\,$\mbox{]} system\+Reference\+Directories)
+\item 
+void \mbox{\hyperlink{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_a4072fd38486e1f3f58a3f20786368baa}{Toggle\+Project\+Generation}} (Project\+Generation\+Flag preference)
+\item 
+\mbox{\Hypertarget{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_ad8ad7f1be94f862ea901ab085ebce231}\label{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_ad8ad7f1be94f862ea901ab085ebce231}} 
+void {\bfseries Reset\+Project\+Generation\+Flag} ()
+\item 
+string \mbox{\hyperlink{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_af77abb1adea92cf47d6689c147e9bc67}{Get\+Assembly\+Name}} (string assembly\+Output\+Path, string assembly\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_ae05d73a597872eb9f74c6664b76d468c}{Project\+Supported\+Extensions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_aeb55e17a0e6f858465ebf838477e14a7}{Project\+Generation\+Root\+Namespace}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Project\+Generation\+Flag \mbox{\hyperlink{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_a7969aa2b6b575feeff4c56e4c59f8b52}{Project\+Generation\+Flag}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_a81a836c4210ae036e3ec93d91b36a984}\label{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_a81a836c4210ae036e3ec93d91b36a984}} 
+\index{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}!FindForAssetPath@{FindForAssetPath}}
+\index{FindForAssetPath@{FindForAssetPath}!Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}}
+\doxysubsubsection{\texorpdfstring{FindForAssetPath()}{FindForAssetPath()}}
+{\footnotesize\ttfamily Unity\+Editor.\+Package\+Manager.\+Package\+Info Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+Assembly\+Name\+Provider.\+Find\+For\+Asset\+Path (\begin{DoxyParamCaption}\item[{string}]{asset\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider}{Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+IAssembly\+Name\+Provider}}.
+
+\mbox{\Hypertarget{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_ab5df3beda5e2fa6c9ddc4368b3129e60}\label{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_ab5df3beda5e2fa6c9ddc4368b3129e60}} 
+\index{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}!GetAllAssetPaths@{GetAllAssetPaths}}
+\index{GetAllAssetPaths@{GetAllAssetPaths}!Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}}
+\doxysubsubsection{\texorpdfstring{GetAllAssetPaths()}{GetAllAssetPaths()}}
+{\footnotesize\ttfamily IEnumerable$<$ string $>$ Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+Assembly\+Name\+Provider.\+Get\+All\+Asset\+Paths (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider}{Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+IAssembly\+Name\+Provider}}.
+
+\mbox{\Hypertarget{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_a82c5e33d4ce7ad29884c55587e59e1b2}\label{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_a82c5e33d4ce7ad29884c55587e59e1b2}} 
+\index{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}!GetAssemblies@{GetAssemblies}}
+\index{GetAssemblies@{GetAssemblies}!Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}}
+\doxysubsubsection{\texorpdfstring{GetAssemblies()}{GetAssemblies()}}
+{\footnotesize\ttfamily IEnumerable$<$ Assembly $>$ Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+Assembly\+Name\+Provider.\+Get\+Assemblies (\begin{DoxyParamCaption}\item[{Func$<$ string, bool $>$}]{should\+File\+Be\+Part\+Of\+Solution }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider}{Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+IAssembly\+Name\+Provider}}.
+
+\mbox{\Hypertarget{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_af77abb1adea92cf47d6689c147e9bc67}\label{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_af77abb1adea92cf47d6689c147e9bc67}} 
+\index{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}!GetAssemblyName@{GetAssemblyName}}
+\index{GetAssemblyName@{GetAssemblyName}!Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}}
+\doxysubsubsection{\texorpdfstring{GetAssemblyName()}{GetAssemblyName()}}
+{\footnotesize\ttfamily string Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+Assembly\+Name\+Provider.\+Get\+Assembly\+Name (\begin{DoxyParamCaption}\item[{string}]{assembly\+Output\+Path,  }\item[{string}]{assembly\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider}{Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+IAssembly\+Name\+Provider}}.
+
+\mbox{\Hypertarget{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_af2e57b90b21d21e64da62d9fba88868a}\label{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_af2e57b90b21d21e64da62d9fba88868a}} 
+\index{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}!GetAssemblyNameFromScriptPath@{GetAssemblyNameFromScriptPath}}
+\index{GetAssemblyNameFromScriptPath@{GetAssemblyNameFromScriptPath}!Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}}
+\doxysubsubsection{\texorpdfstring{GetAssemblyNameFromScriptPath()}{GetAssemblyNameFromScriptPath()}}
+{\footnotesize\ttfamily string Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+Assembly\+Name\+Provider.\+Get\+Assembly\+Name\+From\+Script\+Path (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider}{Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+IAssembly\+Name\+Provider}}.
+
+\mbox{\Hypertarget{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_a92b7c2b44320e35ed2edddaaec8fbc81}\label{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_a92b7c2b44320e35ed2edddaaec8fbc81}} 
+\index{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}!IsInternalizedPackagePath@{IsInternalizedPackagePath}}
+\index{IsInternalizedPackagePath@{IsInternalizedPackagePath}!Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}}
+\doxysubsubsection{\texorpdfstring{IsInternalizedPackagePath()}{IsInternalizedPackagePath()}}
+{\footnotesize\ttfamily bool Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+Assembly\+Name\+Provider.\+Is\+Internalized\+Package\+Path (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider}{Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+IAssembly\+Name\+Provider}}.
+
+\mbox{\Hypertarget{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_aba3386f2359b86522d46fda634cd037b}\label{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_aba3386f2359b86522d46fda634cd037b}} 
+\index{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}!ParseResponseFile@{ParseResponseFile}}
+\index{ParseResponseFile@{ParseResponseFile}!Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}}
+\doxysubsubsection{\texorpdfstring{ParseResponseFile()}{ParseResponseFile()}}
+{\footnotesize\ttfamily Response\+File\+Data Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+Assembly\+Name\+Provider.\+Parse\+Response\+File (\begin{DoxyParamCaption}\item[{string}]{response\+File\+Path,  }\item[{string}]{project\+Directory,  }\item[{string\mbox{[}$\,$\mbox{]}}]{system\+Reference\+Directories }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider}{Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+IAssembly\+Name\+Provider}}.
+
+\mbox{\Hypertarget{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_a4072fd38486e1f3f58a3f20786368baa}\label{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_a4072fd38486e1f3f58a3f20786368baa}} 
+\index{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}!ToggleProjectGeneration@{ToggleProjectGeneration}}
+\index{ToggleProjectGeneration@{ToggleProjectGeneration}!Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}}
+\doxysubsubsection{\texorpdfstring{ToggleProjectGeneration()}{ToggleProjectGeneration()}}
+{\footnotesize\ttfamily void Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+Assembly\+Name\+Provider.\+Toggle\+Project\+Generation (\begin{DoxyParamCaption}\item[{Project\+Generation\+Flag}]{preference }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider}{Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+IAssembly\+Name\+Provider}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_a7969aa2b6b575feeff4c56e4c59f8b52}\label{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_a7969aa2b6b575feeff4c56e4c59f8b52}} 
+\index{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}!ProjectGenerationFlag@{ProjectGenerationFlag}}
+\index{ProjectGenerationFlag@{ProjectGenerationFlag}!Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}}
+\doxysubsubsection{\texorpdfstring{ProjectGenerationFlag}{ProjectGenerationFlag}}
+{\footnotesize\ttfamily Project\+Generation\+Flag Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+Assembly\+Name\+Provider.\+Project\+Generation\+Flag\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider}{Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+IAssembly\+Name\+Provider}}.
+
+\mbox{\Hypertarget{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_aeb55e17a0e6f858465ebf838477e14a7}\label{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_aeb55e17a0e6f858465ebf838477e14a7}} 
+\index{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}!ProjectGenerationRootNamespace@{ProjectGenerationRootNamespace}}
+\index{ProjectGenerationRootNamespace@{ProjectGenerationRootNamespace}!Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}}
+\doxysubsubsection{\texorpdfstring{ProjectGenerationRootNamespace}{ProjectGenerationRootNamespace}}
+{\footnotesize\ttfamily string Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+Assembly\+Name\+Provider.\+Project\+Generation\+Root\+Namespace\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider}{Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+IAssembly\+Name\+Provider}}.
+
+\mbox{\Hypertarget{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_ae05d73a597872eb9f74c6664b76d468c}\label{class_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_assembly_name_provider_ae05d73a597872eb9f74c6664b76d468c}} 
+\index{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}!ProjectSupportedExtensions@{ProjectSupportedExtensions}}
+\index{ProjectSupportedExtensions@{ProjectSupportedExtensions}!Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.AssemblyNameProvider}}
+\doxysubsubsection{\texorpdfstring{ProjectSupportedExtensions}{ProjectSupportedExtensions}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+Assembly\+Name\+Provider.\+Project\+Supported\+Extensions\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider}{Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+IAssembly\+Name\+Provider}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ide.\+visualstudio@2.\+0.\+12/\+Editor/\+Project\+Generation/Assembly\+Name\+Provider.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,868 @@
+\hypertarget{class_t_m_pro_1_1_t_m_p___input_field}{}\doxysection{TMPro.\+TMP\+\_\+\+Input\+Field Class Reference}
+\label{class_t_m_pro_1_1_t_m_p___input_field}\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+
+
+Editable text input field.  
+
+
+Inheritance diagram for TMPro.\+TMP\+\_\+\+Input\+Field\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11.000000cm]{class_t_m_pro_1_1_t_m_p___input_field}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_1_1_on_change_event}{On\+Change\+Event}}
+\item 
+class \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_1_1_selection_event}{Selection\+Event}}
+\item 
+class \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_1_1_submit_event}{Submit\+Event}}
+\item 
+class \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_1_1_text_selection_event}{Text\+Selection\+Event}}
+\item 
+class \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_1_1_touch_screen_keyboard_event}{Touch\+Screen\+Keyboard\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a30e2af425a58881d8b71361e70ddbe27}\label{class_t_m_pro_1_1_t_m_p___input_field_a30e2af425a58881d8b71361e70ddbe27}} 
+enum {\bfseries Content\+Type} \{ \newline
+{\bfseries Standard}
+, {\bfseries Autocorrected}
+, {\bfseries Integer\+Number}
+, {\bfseries Decimal\+Number}
+, \newline
+{\bfseries Alphanumeric}
+, {\bfseries Name}
+, {\bfseries Email\+Address}
+, {\bfseries Password}
+, \newline
+{\bfseries Pin}
+, {\bfseries Custom}
+ \}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ab72a4b889f55cc4a2f98611fca609ccf}\label{class_t_m_pro_1_1_t_m_p___input_field_ab72a4b889f55cc4a2f98611fca609ccf}} 
+enum {\bfseries Input\+Type} \{ {\bfseries Standard}
+, {\bfseries Auto\+Correct}
+, {\bfseries Password}
+ \}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a96ac8b8cc04492aadbf24839b8d6376e}\label{class_t_m_pro_1_1_t_m_p___input_field_a96ac8b8cc04492aadbf24839b8d6376e}} 
+enum {\bfseries Character\+Validation} \{ \newline
+{\bfseries None}
+, {\bfseries Digit}
+, {\bfseries Integer}
+, {\bfseries Decimal}
+, \newline
+{\bfseries Alphanumeric}
+, {\bfseries Name}
+, {\bfseries Regex}
+, {\bfseries Email\+Address}
+, \newline
+{\bfseries Custom\+Validator}
+ \}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a0da8af0aef5faef7c405ac72d28bd214}\label{class_t_m_pro_1_1_t_m_p___input_field_a0da8af0aef5faef7c405ac72d28bd214}} 
+enum {\bfseries Line\+Type} \{ {\bfseries Single\+Line}
+, {\bfseries Multi\+Line\+Submit}
+, {\bfseries Multi\+Line\+Newline}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a34dece90fcdb81bf3489208eab7a8a82}\label{class_t_m_pro_1_1_t_m_p___input_field_a34dece90fcdb81bf3489208eab7a8a82}} 
+delegate char {\bfseries On\+Validate\+Input} (string \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_ab89ad02ff00c4c076c5bd3303528e5de}{text}}, int char\+Index, char added\+Char)
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a743882255eff278cc542ef5e9b38f1d6}\label{class_t_m_pro_1_1_t_m_p___input_field_a743882255eff278cc542ef5e9b38f1d6}} 
+void {\bfseries Set\+Text\+Without\+Notify} (string input)
+\begin{DoxyCompactList}\small\item\em Set Input field\textquotesingle{}s current text value without invoke on\+Value\+Changed. This is not necessarily the same as what is visible on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a0470349eb9f2156696cd6a921b558ba7}{Move\+Text\+End}} (bool shift)
+\begin{DoxyCompactList}\small\item\em Move to the end of the text. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_aff69df0c224c73b666addf48c10eec44}{Move\+Text\+Start}} (bool shift)
+\begin{DoxyCompactList}\small\item\em Move to the start of the text. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a817cdcf34d7711275ffa8643b02a73fa}{Move\+To\+End\+Of\+Line}} (bool shift, bool ctrl)
+\begin{DoxyCompactList}\small\item\em Move to the end of the current line of text. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_ad0c485854da42ede16b5127258120c40}{Move\+To\+Start\+Of\+Line}} (bool shift, bool ctrl)
+\begin{DoxyCompactList}\small\item\em Move to the start of the current line of text. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_afb0884739580ae97b441c56b1018786a}\label{class_t_m_pro_1_1_t_m_p___input_field_afb0884739580ae97b441c56b1018786a}} 
+virtual void {\bfseries On\+Begin\+Drag} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ad670bf0eee71dbabbe95948062a0fea2}\label{class_t_m_pro_1_1_t_m_p___input_field_ad670bf0eee71dbabbe95948062a0fea2}} 
+virtual void {\bfseries On\+Drag} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ae19fc88d3c5efaee7f436e700f16c54a}\label{class_t_m_pro_1_1_t_m_p___input_field_ae19fc88d3c5efaee7f436e700f16c54a}} 
+virtual void {\bfseries On\+End\+Drag} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a9b56bc090d1633c3452c7be950b9b373}{On\+Pointer\+Down}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\begin{DoxyCompactList}\small\item\em Use this callback to detect pointer down events. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_abdbb932fc8d6aa12272b0a480ad13504}\label{class_t_m_pro_1_1_t_m_p___input_field_abdbb932fc8d6aa12272b0a480ad13504}} 
+void {\bfseries Process\+Event} (Event e)
+\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a6daaf6eadebb182f92aa088d7abb86dc}{On\+Update\+Selected}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_event_data}{Base\+Event\+Data}} event\+Data)
+\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a459befbf2b33143cbcf80cf32f1953b8}{On\+Scroll}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_aa9dfe88bdbfa9c6490c14833711d604f}\label{class_t_m_pro_1_1_t_m_p___input_field_aa9dfe88bdbfa9c6490c14833711d604f}} 
+void {\bfseries Force\+Label\+Update} ()
+\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_acb2dc09ce7a2a0ccda89e917a23d35f3}{Rebuild}} (\mbox{\hyperlink{namespace_unity_engine_1_1_u_i_a76b804cb1978e6dc1162615deaa710e9}{Canvas\+Update}} update)
+\begin{DoxyCompactList}\small\item\em Rebuild the element for the given stage. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a3828d087682e3659d369879a4bffac42}{Layout\+Complete}} ()
+\begin{DoxyCompactList}\small\item\em Callback sent when this ICanvas\+Element has completed layout. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a89a96f3d5ff67619b0c24c9cec50859d}{Graphic\+Update\+Complete}} ()
+\begin{DoxyCompactList}\small\item\em Callback sent when this ICanvas\+Element has completed Graphic rebuild. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ac9c67e94d54028f82f604b75bdeac336}\label{class_t_m_pro_1_1_t_m_p___input_field_ac9c67e94d54028f82f604b75bdeac336}} 
+void {\bfseries Activate\+Input\+Field} ()
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a7bfcd4822d6fa704e155a822fd357879}\label{class_t_m_pro_1_1_t_m_p___input_field_a7bfcd4822d6fa704e155a822fd357879}} 
+override void {\bfseries On\+Select} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_event_data}{Base\+Event\+Data}} event\+Data)
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a08cbf6021ac297247b38fbb6559b7996}\label{class_t_m_pro_1_1_t_m_p___input_field_a08cbf6021ac297247b38fbb6559b7996}} 
+virtual void {\bfseries On\+Pointer\+Click} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a6b3e476c9e6b55214549999eedb4ff09}\label{class_t_m_pro_1_1_t_m_p___input_field_a6b3e476c9e6b55214549999eedb4ff09}} 
+void {\bfseries On\+Control\+Click} ()
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a0ca70769250b44af1ef6a8c743f5563e}\label{class_t_m_pro_1_1_t_m_p___input_field_a0ca70769250b44af1ef6a8c743f5563e}} 
+void {\bfseries Release\+Selection} ()
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_af972523ea46f02204c7471f54ccd61b6}\label{class_t_m_pro_1_1_t_m_p___input_field_af972523ea46f02204c7471f54ccd61b6}} 
+void {\bfseries Deactivate\+Input\+Field} (bool clear\+Selection=false)
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a4408fce00917fd765ef1a1e5017a3464}\label{class_t_m_pro_1_1_t_m_p___input_field_a4408fce00917fd765ef1a1e5017a3464}} 
+override void {\bfseries On\+Deselect} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_event_data}{Base\+Event\+Data}} event\+Data)
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a5d0a7dce46ca21b97a7a1554579d2887}\label{class_t_m_pro_1_1_t_m_p___input_field_a5d0a7dce46ca21b97a7a1554579d2887}} 
+virtual void {\bfseries On\+Submit} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_event_data}{Base\+Event\+Data}} event\+Data)
+\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_afe0d25a4249cd2f113ef129b192487f7}{Calculate\+Layout\+Input\+Horizontal}} ()
+\begin{DoxyCompactList}\small\item\em See ILayout\+Element.\+Calculate\+Layout\+Input\+Horizontal. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_acae3f149c33bbbbef6a160ec193ffe29}{Calculate\+Layout\+Input\+Vertical}} ()
+\begin{DoxyCompactList}\small\item\em See ILayout\+Element.\+Calculate\+Layout\+Input\+Vertical. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_aba2ab9700cbd18d64736530a34d91068}{Set\+Global\+Point\+Size}} (float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a1ac8a2780c0a65e2ed41fd216d0c4454}{point\+Size}})
+\begin{DoxyCompactList}\small\item\em Function to conveniently set the point size of both Placeholder and Input Field text object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a2ed20e5b12507b1ff2e108dd99d4091f}{Set\+Global\+Font\+Asset}} (\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_ac13a97bd7e0eb0e19b5a50efc11adb67}{font\+Asset}})
+\begin{DoxyCompactList}\small\item\em Function to conveniently set the Font Asset of both Placeholder and Input Field text object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a12fc070748fd5c39cbb8c907aa3145ee}\label{class_t_m_pro_1_1_t_m_p___input_field_a12fc070748fd5c39cbb8c907aa3145ee}} 
+enum {\bfseries Edit\+State} \{ {\bfseries Continue}
+, {\bfseries Finish}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a732fc6d9f7104a4ce580164aa86e14d2}\label{class_t_m_pro_1_1_t_m_p___input_field_a732fc6d9f7104a4ce580164aa86e14d2}} 
+void {\bfseries Clamp\+String\+Pos} (ref int pos)
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a80e2f1a3a3ab3fd938e07396f6cc7647}\label{class_t_m_pro_1_1_t_m_p___input_field_a80e2f1a3a3ab3fd938e07396f6cc7647}} 
+void {\bfseries Clamp\+Caret\+Pos} (ref int pos)
+\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_ad2ff861cc6eb60e636a7dc4cb8280437}{On\+Enable}} ()
+\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_ae84831aa9c5d44a1ca91685d772b44d4}{On\+Disable}} ()
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ab9ec006dcffd4f1aceb65e632e224c49}\label{class_t_m_pro_1_1_t_m_p___input_field_ab9ec006dcffd4f1aceb65e632e224c49}} 
+void {\bfseries On\+Focus} ()
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ae7246b94a4be46fb34a132db2cbcbf98}\label{class_t_m_pro_1_1_t_m_p___input_field_ae7246b94a4be46fb34a132db2cbcbf98}} 
+void {\bfseries Select\+All} ()
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a4b7cccc36ecd8672c02a29ef7ebc2dd3}\label{class_t_m_pro_1_1_t_m_p___input_field_a4b7cccc36ecd8672c02a29ef7ebc2dd3}} 
+virtual void {\bfseries Late\+Update} ()
+\begin{DoxyCompactList}\small\item\em Update the text based on input. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a9ef972ef2261f10383fd4a900a9c3449}\label{class_t_m_pro_1_1_t_m_p___input_field_a9ef972ef2261f10383fd4a900a9c3449}} 
+Edit\+State {\bfseries Key\+Pressed} (Event evt)
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ad8ccac2088400564ddeac6201c0aba03}\label{class_t_m_pro_1_1_t_m_p___input_field_ad8ccac2088400564ddeac6201c0aba03}} 
+virtual bool {\bfseries Is\+Valid\+Char} (char c)
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a3d675445c819058d84bfa8b8889fb119}\label{class_t_m_pro_1_1_t_m_p___input_field_a3d675445c819058d84bfa8b8889fb119}} 
+virtual void {\bfseries Append} (string input)
+\begin{DoxyCompactList}\small\item\em Append the specified text to the end of the current. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a3d0b5e6b105dd61c4cfb9cfeb7956133}\label{class_t_m_pro_1_1_t_m_p___input_field_a3d0b5e6b105dd61c4cfb9cfeb7956133}} 
+virtual void {\bfseries Append} (char input)
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_adba4a85e3c7777a5573ed2ff139e4517}\label{class_t_m_pro_1_1_t_m_p___input_field_adba4a85e3c7777a5573ed2ff139e4517}} 
+void {\bfseries Send\+On\+End\+Edit} ()
+\begin{DoxyCompactList}\small\item\em Submit the input field\textquotesingle{}s text. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_abf60ea8cc14546e9e0ca9f88db152b13}\label{class_t_m_pro_1_1_t_m_p___input_field_abf60ea8cc14546e9e0ca9f88db152b13}} 
+void {\bfseries Send\+On\+Submit} ()
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ac542ca4fb9d53a6a8c37b16dc07bb60a}\label{class_t_m_pro_1_1_t_m_p___input_field_ac542ca4fb9d53a6a8c37b16dc07bb60a}} 
+void {\bfseries Send\+On\+Focus} ()
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a54f68d8730b8905a4a9a31c21c911926}\label{class_t_m_pro_1_1_t_m_p___input_field_a54f68d8730b8905a4a9a31c21c911926}} 
+void {\bfseries Send\+On\+Focus\+Lost} ()
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a99c2a06204ab72d3bde231e3cca78254}\label{class_t_m_pro_1_1_t_m_p___input_field_a99c2a06204ab72d3bde231e3cca78254}} 
+void {\bfseries Send\+On\+Text\+Selection} ()
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ac3305c44c797f1f8c62d81851e8f118c}\label{class_t_m_pro_1_1_t_m_p___input_field_ac3305c44c797f1f8c62d81851e8f118c}} 
+void {\bfseries Send\+On\+End\+Text\+Selection} ()
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a211b4307fb6c80ae9a94b85121eb81bc}\label{class_t_m_pro_1_1_t_m_p___input_field_a211b4307fb6c80ae9a94b85121eb81bc}} 
+void {\bfseries Send\+Touch\+Screen\+Keyboard\+Status\+Changed} ()
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a1ac4c595e5f686b371e27745b0a2c99b}\label{class_t_m_pro_1_1_t_m_p___input_field_a1ac4c595e5f686b371e27745b0a2c99b}} 
+void {\bfseries Update\+Label} ()
+\begin{DoxyCompactList}\small\item\em Update the visual text Text. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_afd6552ded1ac4de1c4efd868bdc66a33}\label{class_t_m_pro_1_1_t_m_p___input_field_afd6552ded1ac4de1c4efd868bdc66a33}} 
+char {\bfseries Validate} (string \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_ab89ad02ff00c4c076c5bd3303528e5de}{text}}, int pos, char ch)
+\begin{DoxyCompactList}\small\item\em Validate the specified input. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_af860afd96be9a72782c9b4c7ce91f5e6}\label{class_t_m_pro_1_1_t_m_p___input_field_af860afd96be9a72782c9b4c7ce91f5e6}} 
+override void {\bfseries Do\+State\+Transition} (Selection\+State state, bool instant)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a74b60ae1a4ca6638bd4c9fc19f43197f}\label{class_t_m_pro_1_1_t_m_p___input_field_a74b60ae1a4ca6638bd4c9fc19f43197f}} 
+Touch\+Screen\+Keyboard {\bfseries m\+\_\+\+Soft\+Keyboard}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_af2b1df4e2e5d982e884c8790d70add1c}\label{class_t_m_pro_1_1_t_m_p___input_field_af2b1df4e2e5d982e884c8790d70add1c}} 
+Rect\+Transform {\bfseries m\+\_\+\+Rect\+Transform}
+\begin{DoxyCompactList}\small\item\em Text Text used to display the input\textquotesingle{}s value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a9fd2bebbbaf2c101dc1b449cb8ab0d20}\label{class_t_m_pro_1_1_t_m_p___input_field_a9fd2bebbbaf2c101dc1b449cb8ab0d20}} 
+Rect\+Transform {\bfseries m\+\_\+\+Text\+Viewport}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a7f0bbadef2f5713e9a5fafae1ee50cc8}\label{class_t_m_pro_1_1_t_m_p___input_field_a7f0bbadef2f5713e9a5fafae1ee50cc8}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}{Rect\+Mask2D}} {\bfseries m\+\_\+\+Text\+Component\+Rect\+Mask}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a084571b4df1137a398e3a5a1f0365cc8}\label{class_t_m_pro_1_1_t_m_p___input_field_a084571b4df1137a398e3a5a1f0365cc8}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_rect_mask2_d}{Rect\+Mask2D}} {\bfseries m\+\_\+\+Text\+Viewport\+Rect\+Mask}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a44ea9a4d415404140ed245e28f8a589c}\label{class_t_m_pro_1_1_t_m_p___input_field_a44ea9a4d415404140ed245e28f8a589c}} 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text}{TMP\+\_\+\+Text}} {\bfseries m\+\_\+\+Text\+Component}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_adbd686703ef2fd1f51a620aacf112dbc}\label{class_t_m_pro_1_1_t_m_p___input_field_adbd686703ef2fd1f51a620aacf112dbc}} 
+Rect\+Transform {\bfseries m\+\_\+\+Text\+Component\+Rect\+Transform}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a1b11b8b2838c990e39234868d969922d}\label{class_t_m_pro_1_1_t_m_p___input_field_a1b11b8b2838c990e39234868d969922d}} 
+Graphic {\bfseries m\+\_\+\+Placeholder}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a72bb99d7d3c24889ba474b9957b87c86}\label{class_t_m_pro_1_1_t_m_p___input_field_a72bb99d7d3c24889ba474b9957b87c86}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar}{Scrollbar}} {\bfseries m\+\_\+\+Vertical\+Scrollbar}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a44b82f1f901c2db14d9d584a834f6b1f}\label{class_t_m_pro_1_1_t_m_p___input_field_a44b82f1f901c2db14d9d584a834f6b1f}} 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___scrollbar_event_handler}{TMP\+\_\+\+Scrollbar\+Event\+Handler}} {\bfseries m\+\_\+\+Vertical\+Scrollbar\+Event\+Handler}
+\item 
+float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a11ee0e78a149f3a7834002859bfbbd5b}{m\+\_\+\+Scroll\+Sensitivity}} = 1.\+0f
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a925d3f2771b9953684628c73b48b4d1e}\label{class_t_m_pro_1_1_t_m_p___input_field_a925d3f2771b9953684628c73b48b4d1e}} 
+string {\bfseries m\+\_\+\+Text} = string.\+Empty
+\begin{DoxyCompactList}\small\item\em Input field\textquotesingle{}s value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a31d3a28972c4d3c6e1f7118538dfce8d}\label{class_t_m_pro_1_1_t_m_p___input_field_a31d3a28972c4d3c6e1f7118538dfce8d}} 
+int {\bfseries m\+\_\+\+String\+Position} = 0
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_abb17ee7de4a2f9ebaabec9e671928f61}\label{class_t_m_pro_1_1_t_m_p___input_field_abb17ee7de4a2f9ebaabec9e671928f61}} 
+int {\bfseries m\+\_\+\+String\+Select\+Position} = 0
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a9b15ea9c322d7d51733893da49799a9c}\label{class_t_m_pro_1_1_t_m_p___input_field_a9b15ea9c322d7d51733893da49799a9c}} 
+int {\bfseries m\+\_\+\+Caret\+Position} = 0
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_af5bfddd9f54a20f9c9ea8654e24eb45a}\label{class_t_m_pro_1_1_t_m_p___input_field_af5bfddd9f54a20f9c9ea8654e24eb45a}} 
+int {\bfseries m\+\_\+\+Caret\+Select\+Position} = 0
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a0b237f1b8bade0a11bd66f32d11f4c7e}\label{class_t_m_pro_1_1_t_m_p___input_field_a0b237f1b8bade0a11bd66f32d11f4c7e}} 
+UIVertex\mbox{[}$\,$\mbox{]} {\bfseries m\+\_\+\+Cursor\+Verts} = null
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_aa41edfd2c43f42a95c7f6ffcbf633686}\label{class_t_m_pro_1_1_t_m_p___input_field_aa41edfd2c43f42a95c7f6ffcbf633686}} 
+Mesh {\bfseries m\+\_\+\+Mesh}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a9bbaabf0475f8c76c7b48b4dd3c96b92}\label{class_t_m_pro_1_1_t_m_p___input_field_a9bbaabf0475f8c76c7b48b4dd3c96b92}} 
+bool {\bfseries m\+\_\+\+Caret\+Visible}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a867ba97e4606bacc2f3eca57faad9c48}\label{class_t_m_pro_1_1_t_m_p___input_field_a867ba97e4606bacc2f3eca57faad9c48}} 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} {\bfseries m\+\_\+\+Global\+Font\+Asset}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a7f595e104245fea77a81e309cc9e527b}\label{class_t_m_pro_1_1_t_m_p___input_field_a7f595e104245fea77a81e309cc9e527b}} 
+bool {\bfseries m\+\_\+\+On\+Focus\+Select\+All} = true
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a6d8562baedf249de6f7f6d12bc6c9a93}\label{class_t_m_pro_1_1_t_m_p___input_field_a6d8562baedf249de6f7f6d12bc6c9a93}} 
+bool {\bfseries m\+\_\+is\+Select\+All}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a565eda5a52adc73b118854dcd8c7f0e6}\label{class_t_m_pro_1_1_t_m_p___input_field_a565eda5a52adc73b118854dcd8c7f0e6}} 
+bool {\bfseries m\+\_\+\+Reset\+On\+De\+Activation} = true
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_accb94749f5654852ae2edef1165a6f34}\label{class_t_m_pro_1_1_t_m_p___input_field_accb94749f5654852ae2edef1165a6f34}} 
+bool {\bfseries m\+\_\+is\+Rich\+Text\+Editing\+Allowed} = false
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_aba52488be4856fc4c30c2f5ad35ac267}\label{class_t_m_pro_1_1_t_m_p___input_field_aba52488be4856fc4c30c2f5ad35ac267}} 
+int {\bfseries m\+\_\+\+Line\+Limit} = 0
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_aa0aae2c2fc753f1d7ed97f552399b685}\label{class_t_m_pro_1_1_t_m_p___input_field_aa0aae2c2fc753f1d7ed97f552399b685}} 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_validator}{TMP\+\_\+\+Input\+Validator}} {\bfseries m\+\_\+\+Input\+Validator} = null
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ad3640613447de8014aa5cbbb8230dbd2}\label{class_t_m_pro_1_1_t_m_p___input_field_ad3640613447de8014aa5cbbb8230dbd2}} 
+Mesh {\bfseries mesh}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_aef653449d7af3f273835cd4bcbcc6b16}\label{class_t_m_pro_1_1_t_m_p___input_field_aef653449d7af3f273835cd4bcbcc6b16}} 
+bool {\bfseries should\+Hide\+Mobile\+Input}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Should the mobile keyboard input be hidden. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a58549122007ce2d2c863d5f725cafc89}\label{class_t_m_pro_1_1_t_m_p___input_field_a58549122007ce2d2c863d5f725cafc89}} 
+bool {\bfseries should\+Hide\+Soft\+Keyboard}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_ab89ad02ff00c4c076c5bd3303528e5de}{text}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Input field\textquotesingle{}s current text value. This is not necessarily the same as what is visible on screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ad0adb2aaa39a20d28250502e300708a1}\label{class_t_m_pro_1_1_t_m_p___input_field_ad0adb2aaa39a20d28250502e300708a1}} 
+bool {\bfseries is\+Focused}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a189bdcef8ba63cfdb87663d7eda77ac5}\label{class_t_m_pro_1_1_t_m_p___input_field_a189bdcef8ba63cfdb87663d7eda77ac5}} 
+float {\bfseries caret\+Blink\+Rate}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a62dfe3f69bf1f6afa3f8d9202af93765}\label{class_t_m_pro_1_1_t_m_p___input_field_a62dfe3f69bf1f6afa3f8d9202af93765}} 
+int {\bfseries caret\+Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_aa426bf08e2a529483205e898eafa3270}\label{class_t_m_pro_1_1_t_m_p___input_field_aa426bf08e2a529483205e898eafa3270}} 
+Rect\+Transform {\bfseries text\+Viewport}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a53ff62868818b04e9a143824d281a4a1}\label{class_t_m_pro_1_1_t_m_p___input_field_a53ff62868818b04e9a143824d281a4a1}} 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text}{TMP\+\_\+\+Text}} {\bfseries text\+Component}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a1e9e0c35ae9c680e3a8840290583b2dc}\label{class_t_m_pro_1_1_t_m_p___input_field_a1e9e0c35ae9c680e3a8840290583b2dc}} 
+Graphic {\bfseries placeholder}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a0e0e0e5361b2ce210d8a23cdc955c1f1}\label{class_t_m_pro_1_1_t_m_p___input_field_a0e0e0e5361b2ce210d8a23cdc955c1f1}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar}{Scrollbar}} {\bfseries vertical\+Scrollbar}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_afcc210fa4443bf1e44612d6e525d5047}\label{class_t_m_pro_1_1_t_m_p___input_field_afcc210fa4443bf1e44612d6e525d5047}} 
+float {\bfseries scroll\+Sensitivity}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_aa744dfcde3735af0e4be0bbb301b18f1}\label{class_t_m_pro_1_1_t_m_p___input_field_aa744dfcde3735af0e4be0bbb301b18f1}} 
+Color {\bfseries caret\+Color}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ae95089918945d8b6cc2b669d4de7fb23}\label{class_t_m_pro_1_1_t_m_p___input_field_ae95089918945d8b6cc2b669d4de7fb23}} 
+bool {\bfseries custom\+Caret\+Color}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_afc5f2333c0987147b81b74b243bece87}\label{class_t_m_pro_1_1_t_m_p___input_field_afc5f2333c0987147b81b74b243bece87}} 
+Color {\bfseries selection\+Color}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_af9c998ec6ee4418ef8ad13d61cfc7226}\label{class_t_m_pro_1_1_t_m_p___input_field_af9c998ec6ee4418ef8ad13d61cfc7226}} 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_1_1_submit_event}{Submit\+Event}} {\bfseries on\+End\+Edit}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a5c3e2616c6bb71a9648f87c547f1b1e2}\label{class_t_m_pro_1_1_t_m_p___input_field_a5c3e2616c6bb71a9648f87c547f1b1e2}} 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_1_1_submit_event}{Submit\+Event}} {\bfseries on\+Submit}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_aff088e8d938f85dd7a143f7d4e9576af}\label{class_t_m_pro_1_1_t_m_p___input_field_aff088e8d938f85dd7a143f7d4e9576af}} 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_1_1_selection_event}{Selection\+Event}} {\bfseries on\+Select}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_af269e66a8c51c4677c569fd02983312d}\label{class_t_m_pro_1_1_t_m_p___input_field_af269e66a8c51c4677c569fd02983312d}} 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_1_1_selection_event}{Selection\+Event}} {\bfseries on\+Deselect}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_af1c52092e530ca45a1af4f2653fe320b}\label{class_t_m_pro_1_1_t_m_p___input_field_af1c52092e530ca45a1af4f2653fe320b}} 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_1_1_text_selection_event}{Text\+Selection\+Event}} {\bfseries on\+Text\+Selection}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a367d020208ed8d2d01f25e7c46b2806e}\label{class_t_m_pro_1_1_t_m_p___input_field_a367d020208ed8d2d01f25e7c46b2806e}} 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_1_1_text_selection_event}{Text\+Selection\+Event}} {\bfseries on\+End\+Text\+Selection}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_aaf909cd0451dbaa7fc816c22aba484b4}\label{class_t_m_pro_1_1_t_m_p___input_field_aaf909cd0451dbaa7fc816c22aba484b4}} 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_1_1_on_change_event}{On\+Change\+Event}} {\bfseries on\+Value\+Changed}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_aa16d8f32c0aa6cbfa88f0c712f43477b}\label{class_t_m_pro_1_1_t_m_p___input_field_aa16d8f32c0aa6cbfa88f0c712f43477b}} 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_1_1_touch_screen_keyboard_event}{Touch\+Screen\+Keyboard\+Event}} {\bfseries on\+Touch\+Screen\+Keyboard\+Status\+Changed}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_aee71958e449b48fa7df100ca8c9c5409}\label{class_t_m_pro_1_1_t_m_p___input_field_aee71958e449b48fa7df100ca8c9c5409}} 
+On\+Validate\+Input {\bfseries on\+Validate\+Input}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a973f5c94811ee85dad28d96193fb925e}\label{class_t_m_pro_1_1_t_m_p___input_field_a973f5c94811ee85dad28d96193fb925e}} 
+int {\bfseries character\+Limit}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a1ac8a2780c0a65e2ed41fd216d0c4454}\label{class_t_m_pro_1_1_t_m_p___input_field_a1ac8a2780c0a65e2ed41fd216d0c4454}} 
+float {\bfseries point\+Size}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set the point size on both Placeholder and Input text object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ac13a97bd7e0eb0e19b5a50efc11adb67}\label{class_t_m_pro_1_1_t_m_p___input_field_ac13a97bd7e0eb0e19b5a50efc11adb67}} 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} {\bfseries font\+Asset}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets the Font Asset on both Placeholder and Input child objects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_abf3bccd8c0c63eff2f8de40194d6aeb7}\label{class_t_m_pro_1_1_t_m_p___input_field_abf3bccd8c0c63eff2f8de40194d6aeb7}} 
+bool {\bfseries on\+Focus\+Select\+All}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines if the whole text will be selected when focused. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a614c7ba0b401a31c87380e49fee3d443}\label{class_t_m_pro_1_1_t_m_p___input_field_a614c7ba0b401a31c87380e49fee3d443}} 
+bool {\bfseries reset\+On\+De\+Activation}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines if the text and caret position as well as selection will be reset when the input field is deactivated. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a9a402064db2a20ffce7abb59d2619688}\label{class_t_m_pro_1_1_t_m_p___input_field_a9a402064db2a20ffce7abb59d2619688}} 
+bool {\bfseries restore\+Original\+Text\+On\+Escape}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Controls whether the original text is restored when pressing \char`\"{}\+ESC\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ab710f2c64b44e6c2c4fe4a10542e67fc}\label{class_t_m_pro_1_1_t_m_p___input_field_ab710f2c64b44e6c2c4fe4a10542e67fc}} 
+bool {\bfseries is\+Rich\+Text\+Editing\+Allowed}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is Rich Text editing allowed? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_af72fd8ccfa126c4a684801ea3de9b93c}\label{class_t_m_pro_1_1_t_m_p___input_field_af72fd8ccfa126c4a684801ea3de9b93c}} 
+Content\+Type {\bfseries content\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_aca5c1fb3adf7c83602b96eaf7aa77405}\label{class_t_m_pro_1_1_t_m_p___input_field_aca5c1fb3adf7c83602b96eaf7aa77405}} 
+Line\+Type {\bfseries line\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ab7c1cac08f8e13f6508e2ab6cfda4bdb}\label{class_t_m_pro_1_1_t_m_p___input_field_ab7c1cac08f8e13f6508e2ab6cfda4bdb}} 
+int {\bfseries line\+Limit}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Limits the number of lines of text in the Input Field. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a5c3a71f562853f264523c61e0f719683}\label{class_t_m_pro_1_1_t_m_p___input_field_a5c3a71f562853f264523c61e0f719683}} 
+Input\+Type {\bfseries input\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ae050f33bb2ccfacb6983c97a0cef4505}\label{class_t_m_pro_1_1_t_m_p___input_field_ae050f33bb2ccfacb6983c97a0cef4505}} 
+Touch\+Screen\+Keyboard\+Type {\bfseries keyboard\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a56b1eac3a3a883380b261358b4ccf63f}\label{class_t_m_pro_1_1_t_m_p___input_field_a56b1eac3a3a883380b261358b4ccf63f}} 
+Character\+Validation {\bfseries character\+Validation}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a0133238d9e97ac0eafb921dede2f9ff7}\label{class_t_m_pro_1_1_t_m_p___input_field_a0133238d9e97ac0eafb921dede2f9ff7}} 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_validator}{TMP\+\_\+\+Input\+Validator}} {\bfseries input\+Validator}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets the Input Validation to use a Custom Input Validation script. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a2148fac74d4c78ea333f8d4b589c4883}\label{class_t_m_pro_1_1_t_m_p___input_field_a2148fac74d4c78ea333f8d4b589c4883}} 
+bool {\bfseries read\+Only}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a5e4d09d36172c6647cf70dc6223c6bfa}\label{class_t_m_pro_1_1_t_m_p___input_field_a5e4d09d36172c6647cf70dc6223c6bfa}} 
+bool {\bfseries rich\+Text}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a76c102dad3fdfa675bd65d5c382a1c8d}\label{class_t_m_pro_1_1_t_m_p___input_field_a76c102dad3fdfa675bd65d5c382a1c8d}} 
+bool {\bfseries multi\+Line}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ac79a41642fb8efadc77aeaf6af2695dc}\label{class_t_m_pro_1_1_t_m_p___input_field_ac79a41642fb8efadc77aeaf6af2695dc}} 
+char {\bfseries asterisk\+Char}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a6f9abe7ff08ce17ffece2dc9a6df3ae9}\label{class_t_m_pro_1_1_t_m_p___input_field_a6f9abe7ff08ce17ffece2dc9a6df3ae9}} 
+bool {\bfseries was\+Canceled}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a48b9911b7de2a895d5411f4526a1acc1}\label{class_t_m_pro_1_1_t_m_p___input_field_a48b9911b7de2a895d5411f4526a1acc1}} 
+int {\bfseries caret\+Position\+Internal}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current position of the cursor. Getters are public Setters are protected \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a6d8ce3c8a0d73fc9eafc686186c6d75a}\label{class_t_m_pro_1_1_t_m_p___input_field_a6d8ce3c8a0d73fc9eafc686186c6d75a}} 
+int {\bfseries string\+Position\+Internal}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a370c7d141866bb8a55fe40919dd3c28d}\label{class_t_m_pro_1_1_t_m_p___input_field_a370c7d141866bb8a55fe40919dd3c28d}} 
+int {\bfseries caret\+Select\+Position\+Internal}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a70a7a69109043b8b87e3169cd2347501}\label{class_t_m_pro_1_1_t_m_p___input_field_a70a7a69109043b8b87e3169cd2347501}} 
+int {\bfseries string\+Select\+Position\+Internal}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a3d3a39b5c399ed120a847fed2d842d81}\label{class_t_m_pro_1_1_t_m_p___input_field_a3d3a39b5c399ed120a847fed2d842d81}} 
+int {\bfseries caret\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get\+: Returns the focus position as thats the position that moves around even during selection. Set\+: Set both the anchor and focus position such that a selection doesn\textquotesingle{}t happen \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ad2940845ebee386ae2b382a25761ce8c}\label{class_t_m_pro_1_1_t_m_p___input_field_ad2940845ebee386ae2b382a25761ce8c}} 
+int {\bfseries selection\+Anchor\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get\+: Returns the fixed position of selection Set\+: If composition\+String is 0 set the fixed position \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a93771e08f4ee7c293af4ebc1e5bc0d9a}\label{class_t_m_pro_1_1_t_m_p___input_field_a93771e08f4ee7c293af4ebc1e5bc0d9a}} 
+int {\bfseries selection\+Focus\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get\+: Returns the variable position of selection Set\+: If composition\+String is 0 set the variable position \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a50c68e4085013bd06441947658e90317}{string\+Position}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ac36ae4cd4a58fa36661b49928217875e}\label{class_t_m_pro_1_1_t_m_p___input_field_ac36ae4cd4a58fa36661b49928217875e}} 
+int {\bfseries selection\+String\+Anchor\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The fixed position of the selection in the raw string which may contains rich text. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_abfe0c449ec61505b163eb5949a09f9ff}\label{class_t_m_pro_1_1_t_m_p___input_field_abfe0c449ec61505b163eb5949a09f9ff}} 
+int {\bfseries selection\+String\+Focus\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The variable position of the selection in the raw string which may contains rich text. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a5218a8379f7d1a1e59e538adc3f83377}{min\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em See ILayout\+Element.\+min\+Width. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a10971fe8fdf5f458468c658f28bbc965}{preferred\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the displayed with of all input characters. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a25c74a066efdfa747cb3469f462f8825}{flexible\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em See ILayout\+Element.\+flexible\+Width. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_ae7e67981266ea16e99a2bc78d5833dd0}{min\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em See ILayout\+Element.\+min\+Height. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a59f6a4a9bca1443c6b3e06e0e52b8ece}{preferred\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the height of all the text if constrained to the height of the Rect\+Transform. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_a568da65a23b26203574921bea33840a0}{flexible\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em See ILayout\+Element.\+flexible\+Height. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___input_field_aa6010922a5695b55d560c870d451aaa6}{layout\+Priority}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em See ILayout\+Element.\+layout\+Priority. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Editable text input field. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_afe0d25a4249cd2f113ef129b192487f7}\label{class_t_m_pro_1_1_t_m_p___input_field_afe0d25a4249cd2f113ef129b192487f7}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!CalculateLayoutInputHorizontal@{CalculateLayoutInputHorizontal}}
+\index{CalculateLayoutInputHorizontal@{CalculateLayoutInputHorizontal}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{CalculateLayoutInputHorizontal()}{CalculateLayoutInputHorizontal()}}
+{\footnotesize\ttfamily virtual void TMPro.\+TMP\+\_\+\+Input\+Field.\+Calculate\+Layout\+Input\+Horizontal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+See ILayout\+Element.\+Calculate\+Layout\+Input\+Horizontal. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a38e697b28b30f3ff350c0c43d9c29441}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_acae3f149c33bbbbef6a160ec193ffe29}\label{class_t_m_pro_1_1_t_m_p___input_field_acae3f149c33bbbbef6a160ec193ffe29}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!CalculateLayoutInputVertical@{CalculateLayoutInputVertical}}
+\index{CalculateLayoutInputVertical@{CalculateLayoutInputVertical}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{CalculateLayoutInputVertical()}{CalculateLayoutInputVertical()}}
+{\footnotesize\ttfamily virtual void TMPro.\+TMP\+\_\+\+Input\+Field.\+Calculate\+Layout\+Input\+Vertical (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+See ILayout\+Element.\+Calculate\+Layout\+Input\+Vertical. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a1e0f42ff8a350a7996b1ebfacdac2b0b}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a89a96f3d5ff67619b0c24c9cec50859d}\label{class_t_m_pro_1_1_t_m_p___input_field_a89a96f3d5ff67619b0c24c9cec50859d}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!GraphicUpdateComplete@{GraphicUpdateComplete}}
+\index{GraphicUpdateComplete@{GraphicUpdateComplete}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{GraphicUpdateComplete()}{GraphicUpdateComplete()}}
+{\footnotesize\ttfamily virtual void TMPro.\+TMP\+\_\+\+Input\+Field.\+Graphic\+Update\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Callback sent when this ICanvas\+Element has completed Graphic rebuild. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a6a89ea41d304c5a96c16c37decee168a}{Unity\+Engine.\+UI.\+ICanvas\+Element}}.
+
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a3828d087682e3659d369879a4bffac42}\label{class_t_m_pro_1_1_t_m_p___input_field_a3828d087682e3659d369879a4bffac42}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!LayoutComplete@{LayoutComplete}}
+\index{LayoutComplete@{LayoutComplete}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{LayoutComplete()}{LayoutComplete()}}
+{\footnotesize\ttfamily virtual void TMPro.\+TMP\+\_\+\+Input\+Field.\+Layout\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Callback sent when this ICanvas\+Element has completed layout. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a5f507a968983077ca1be60142513ab1e}{Unity\+Engine.\+UI.\+ICanvas\+Element}}.
+
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a0470349eb9f2156696cd6a921b558ba7}\label{class_t_m_pro_1_1_t_m_p___input_field_a0470349eb9f2156696cd6a921b558ba7}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!MoveTextEnd@{MoveTextEnd}}
+\index{MoveTextEnd@{MoveTextEnd}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{MoveTextEnd()}{MoveTextEnd()}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Input\+Field.\+Move\+Text\+End (\begin{DoxyParamCaption}\item[{bool}]{shift }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move to the end of the text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_aff69df0c224c73b666addf48c10eec44}\label{class_t_m_pro_1_1_t_m_p___input_field_aff69df0c224c73b666addf48c10eec44}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!MoveTextStart@{MoveTextStart}}
+\index{MoveTextStart@{MoveTextStart}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{MoveTextStart()}{MoveTextStart()}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Input\+Field.\+Move\+Text\+Start (\begin{DoxyParamCaption}\item[{bool}]{shift }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move to the start of the text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a817cdcf34d7711275ffa8643b02a73fa}\label{class_t_m_pro_1_1_t_m_p___input_field_a817cdcf34d7711275ffa8643b02a73fa}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!MoveToEndOfLine@{MoveToEndOfLine}}
+\index{MoveToEndOfLine@{MoveToEndOfLine}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{MoveToEndOfLine()}{MoveToEndOfLine()}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Input\+Field.\+Move\+To\+End\+Of\+Line (\begin{DoxyParamCaption}\item[{bool}]{shift,  }\item[{bool}]{ctrl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move to the end of the current line of text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ad0c485854da42ede16b5127258120c40}\label{class_t_m_pro_1_1_t_m_p___input_field_ad0c485854da42ede16b5127258120c40}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!MoveToStartOfLine@{MoveToStartOfLine}}
+\index{MoveToStartOfLine@{MoveToStartOfLine}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{MoveToStartOfLine()}{MoveToStartOfLine()}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Input\+Field.\+Move\+To\+Start\+Of\+Line (\begin{DoxyParamCaption}\item[{bool}]{shift,  }\item[{bool}]{ctrl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move to the start of the current line of text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ae84831aa9c5d44a1ca91685d772b44d4}\label{class_t_m_pro_1_1_t_m_p___input_field_ae84831aa9c5d44a1ca91685d772b44d4}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!OnDisable@{OnDisable}}
+\index{OnDisable@{OnDisable}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{OnDisable()}{OnDisable()}}
+{\footnotesize\ttfamily override void TMPro.\+TMP\+\_\+\+Input\+Field.\+On\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ad2ff861cc6eb60e636a7dc4cb8280437}\label{class_t_m_pro_1_1_t_m_p___input_field_ad2ff861cc6eb60e636a7dc4cb8280437}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily override void TMPro.\+TMP\+\_\+\+Input\+Field.\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a9b56bc090d1633c3452c7be950b9b373}\label{class_t_m_pro_1_1_t_m_p___input_field_a9b56bc090d1633c3452c7be950b9b373}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!OnPointerDown@{OnPointerDown}}
+\index{OnPointerDown@{OnPointerDown}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{OnPointerDown()}{OnPointerDown()}}
+{\footnotesize\ttfamily override void TMPro.\+TMP\+\_\+\+Input\+Field.\+On\+Pointer\+Down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}}}]{event\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Use this callback to detect pointer down events. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_down_handler_a18d183648f495d70fdcf81467f0c3715}{Unity\+Engine.\+Event\+Systems.\+IPointer\+Down\+Handler}}.
+
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a459befbf2b33143cbcf80cf32f1953b8}\label{class_t_m_pro_1_1_t_m_p___input_field_a459befbf2b33143cbcf80cf32f1953b8}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!OnScroll@{OnScroll}}
+\index{OnScroll@{OnScroll}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{OnScroll()}{OnScroll()}}
+{\footnotesize\ttfamily virtual void TMPro.\+TMP\+\_\+\+Input\+Field.\+On\+Scroll (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}}}]{event\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a6daaf6eadebb182f92aa088d7abb86dc}\label{class_t_m_pro_1_1_t_m_p___input_field_a6daaf6eadebb182f92aa088d7abb86dc}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!OnUpdateSelected@{OnUpdateSelected}}
+\index{OnUpdateSelected@{OnUpdateSelected}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{OnUpdateSelected()}{OnUpdateSelected()}}
+{\footnotesize\ttfamily virtual void TMPro.\+TMP\+\_\+\+Input\+Field.\+On\+Update\+Selected (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_event_data}{Base\+Event\+Data}}}]{event\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_acb2dc09ce7a2a0ccda89e917a23d35f3}\label{class_t_m_pro_1_1_t_m_p___input_field_acb2dc09ce7a2a0ccda89e917a23d35f3}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!Rebuild@{Rebuild}}
+\index{Rebuild@{Rebuild}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{Rebuild()}{Rebuild()}}
+{\footnotesize\ttfamily virtual void TMPro.\+TMP\+\_\+\+Input\+Field.\+Rebuild (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_u_i_a76b804cb1978e6dc1162615deaa710e9}{Canvas\+Update}}}]{executing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Rebuild the element for the given stage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em executing} & The current Canvas\+Update stage being rebuild.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a50a9583739ecd91674db5a81da1f0bd5}{Unity\+Engine.\+UI.\+ICanvas\+Element}}.
+
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a2ed20e5b12507b1ff2e108dd99d4091f}\label{class_t_m_pro_1_1_t_m_p___input_field_a2ed20e5b12507b1ff2e108dd99d4091f}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!SetGlobalFontAsset@{SetGlobalFontAsset}}
+\index{SetGlobalFontAsset@{SetGlobalFontAsset}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{SetGlobalFontAsset()}{SetGlobalFontAsset()}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Input\+Field.\+Set\+Global\+Font\+Asset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}}}]{font\+Asset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to conveniently set the Font Asset of both Placeholder and Input Field text object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em font\+Asset} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_aba2ab9700cbd18d64736530a34d91068}\label{class_t_m_pro_1_1_t_m_p___input_field_aba2ab9700cbd18d64736530a34d91068}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!SetGlobalPointSize@{SetGlobalPointSize}}
+\index{SetGlobalPointSize@{SetGlobalPointSize}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{SetGlobalPointSize()}{SetGlobalPointSize()}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Input\+Field.\+Set\+Global\+Point\+Size (\begin{DoxyParamCaption}\item[{float}]{point\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to conveniently set the point size of both Placeholder and Input Field text object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+Size} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a11ee0e78a149f3a7834002859bfbbd5b}\label{class_t_m_pro_1_1_t_m_p___input_field_a11ee0e78a149f3a7834002859bfbbd5b}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!m\_ScrollSensitivity@{m\_ScrollSensitivity}}
+\index{m\_ScrollSensitivity@{m\_ScrollSensitivity}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{m\_ScrollSensitivity}{m\_ScrollSensitivity}}
+{\footnotesize\ttfamily float TMPro.\+TMP\+\_\+\+Input\+Field.\+m\+\_\+\+Scroll\+Sensitivity = 1.\+0f\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a568da65a23b26203574921bea33840a0}\label{class_t_m_pro_1_1_t_m_p___input_field_a568da65a23b26203574921bea33840a0}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!flexibleHeight@{flexibleHeight}}
+\index{flexibleHeight@{flexibleHeight}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{flexibleHeight}{flexibleHeight}}
+{\footnotesize\ttfamily virtual float TMPro.\+TMP\+\_\+\+Input\+Field.\+flexible\+Height\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+See ILayout\+Element.\+flexible\+Height. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a98516af90dc6529d486803b6774dc798}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a25c74a066efdfa747cb3469f462f8825}\label{class_t_m_pro_1_1_t_m_p___input_field_a25c74a066efdfa747cb3469f462f8825}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!flexibleWidth@{flexibleWidth}}
+\index{flexibleWidth@{flexibleWidth}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{flexibleWidth}{flexibleWidth}}
+{\footnotesize\ttfamily virtual float TMPro.\+TMP\+\_\+\+Input\+Field.\+flexible\+Width\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+See ILayout\+Element.\+flexible\+Width. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a8c4aaed207092d7d625b40c383e21816}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_aa6010922a5695b55d560c870d451aaa6}\label{class_t_m_pro_1_1_t_m_p___input_field_aa6010922a5695b55d560c870d451aaa6}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!layoutPriority@{layoutPriority}}
+\index{layoutPriority@{layoutPriority}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{layoutPriority}{layoutPriority}}
+{\footnotesize\ttfamily virtual int TMPro.\+TMP\+\_\+\+Input\+Field.\+layout\+Priority\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+See ILayout\+Element.\+layout\+Priority. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a13e5c560042cac2db6ddfd22143f1be9}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ae7e67981266ea16e99a2bc78d5833dd0}\label{class_t_m_pro_1_1_t_m_p___input_field_ae7e67981266ea16e99a2bc78d5833dd0}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!minHeight@{minHeight}}
+\index{minHeight@{minHeight}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{minHeight}{minHeight}}
+{\footnotesize\ttfamily virtual float TMPro.\+TMP\+\_\+\+Input\+Field.\+min\+Height\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+See ILayout\+Element.\+min\+Height. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a05bfb63b5a7eb646ba6576af07060333}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a5218a8379f7d1a1e59e538adc3f83377}\label{class_t_m_pro_1_1_t_m_p___input_field_a5218a8379f7d1a1e59e538adc3f83377}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!minWidth@{minWidth}}
+\index{minWidth@{minWidth}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{minWidth}{minWidth}}
+{\footnotesize\ttfamily virtual float TMPro.\+TMP\+\_\+\+Input\+Field.\+min\+Width\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+See ILayout\+Element.\+min\+Width. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a61f430b52f90f43b91f9ded0fcee43d6}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a59f6a4a9bca1443c6b3e06e0e52b8ece}\label{class_t_m_pro_1_1_t_m_p___input_field_a59f6a4a9bca1443c6b3e06e0e52b8ece}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!preferredHeight@{preferredHeight}}
+\index{preferredHeight@{preferredHeight}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{preferredHeight}{preferredHeight}}
+{\footnotesize\ttfamily virtual float TMPro.\+TMP\+\_\+\+Input\+Field.\+preferred\+Height\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Get the height of all the text if constrained to the height of the Rect\+Transform. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a103a61023ccb5bc93fbb3cc8c3460531}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a10971fe8fdf5f458468c658f28bbc965}\label{class_t_m_pro_1_1_t_m_p___input_field_a10971fe8fdf5f458468c658f28bbc965}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!preferredWidth@{preferredWidth}}
+\index{preferredWidth@{preferredWidth}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{preferredWidth}{preferredWidth}}
+{\footnotesize\ttfamily virtual float TMPro.\+TMP\+\_\+\+Input\+Field.\+preferred\+Width\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Get the displayed with of all input characters. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a69c7300cf30f5787cbb8e6750cf9a035}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_a50c68e4085013bd06441947658e90317}\label{class_t_m_pro_1_1_t_m_p___input_field_a50c68e4085013bd06441947658e90317}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!stringPosition@{stringPosition}}
+\index{stringPosition@{stringPosition}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{stringPosition}{stringPosition}}
+{\footnotesize\ttfamily int TMPro.\+TMP\+\_\+\+Input\+Field.\+string\+Position\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___input_field_ab89ad02ff00c4c076c5bd3303528e5de}\label{class_t_m_pro_1_1_t_m_p___input_field_ab89ad02ff00c4c076c5bd3303528e5de}} 
+\index{TMPro.TMP\_InputField@{TMPro.TMP\_InputField}!text@{text}}
+\index{text@{text}!TMPro.TMP\_InputField@{TMPro.TMP\_InputField}}
+\doxysubsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily string TMPro.\+TMP\+\_\+\+Input\+Field.\+text\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Input field\textquotesingle{}s current text value. This is not necessarily the same as what is visible on screen. 
+
+Note that null is invalid value for Input\+Field.\+text. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{\textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UnityEngine.UI}}; \textcolor{comment}{// Required when Using UI elements.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }Example : MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field}{InputField}} mainInputField;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} Start()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        mainInputField.text = \textcolor{stringliteral}{"{}Enter Text Here..."{}};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+textmeshpro@3.\+0.\+6/\+Scripts/\+Runtime/TMP\+\_\+\+Input\+Field.\+cs\end{DoxyCompactItemize}

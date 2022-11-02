@@ -1,0 +1,79 @@
+\hypertarget{class_unity_editor_1_1_timeline_1_1_frame_selected_action}{}\doxysection{Unity\+Editor.\+Timeline.\+Frame\+Selected\+Action Class Reference}
+\label{class_unity_editor_1_1_timeline_1_1_frame_selected_action}\index{UnityEditor.Timeline.FrameSelectedAction@{UnityEditor.Timeline.FrameSelectedAction}}
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Frame\+Selected\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_editor_1_1_timeline_1_1_frame_selected_action}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Action\+Validity}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_frame_selected_action_ac6f9e9010b8091954128cc38bc2581d3}{Validate}} (\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context}{Action\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Defines the validity of an Action based on the context. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_frame_selected_action_ae18cdcff57510e0ce168d37da9ee7c05}{Execute}} (\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context}{Action\+Context}} action\+Context)
+\begin{DoxyCompactList}\small\item\em Execute the action. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_frame_selected_action_a86ba4e0f36ea278c416ca823cf16d2dd}\label{class_unity_editor_1_1_timeline_1_1_frame_selected_action_a86ba4e0f36ea278c416ca823cf16d2dd}} 
+static void {\bfseries Frame\+Range} (float start\+Time, float end\+Time)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_frame_selected_action_a442b0f041a45338c8ddefbb745390c03}\label{class_unity_editor_1_1_timeline_1_1_frame_selected_action_a442b0f041a45338c8ddefbb745390c03}} 
+static bool {\bfseries Should\+Handle\+Inline\+Curve} (\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner}{IClip\+Curve\+Editor\+Owner}} curve\+Editor\+Owner)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_frame_selected_action_ab09a658fec6224dbfc5a24ebd15e426e}\label{class_unity_editor_1_1_timeline_1_1_frame_selected_action_ab09a658fec6224dbfc5a24ebd15e426e}} 
+static void {\bfseries Frame\+Inline\+Curves} (\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner}{IClip\+Curve\+Editor\+Owner}} curve\+Editor\+Owner, bool selection\+Only)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_frame_selected_action_ae18cdcff57510e0ce168d37da9ee7c05}\label{class_unity_editor_1_1_timeline_1_1_frame_selected_action_ae18cdcff57510e0ce168d37da9ee7c05}} 
+\index{UnityEditor.Timeline.FrameSelectedAction@{UnityEditor.Timeline.FrameSelectedAction}!Execute@{Execute}}
+\index{Execute@{Execute}!UnityEditor.Timeline.FrameSelectedAction@{UnityEditor.Timeline.FrameSelectedAction}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily override bool Unity\+Editor.\+Timeline.\+Frame\+Selected\+Action.\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context}{Action\+Context}}}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Execute the action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Context for the action.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the action has been executed. false otherwise
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action_a22e77a5546afb4b72f548a68f79a6c1c}{Unity\+Editor.\+Timeline.\+Actions.\+Timeline\+Action}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_frame_selected_action_ac6f9e9010b8091954128cc38bc2581d3}\label{class_unity_editor_1_1_timeline_1_1_frame_selected_action_ac6f9e9010b8091954128cc38bc2581d3}} 
+\index{UnityEditor.Timeline.FrameSelectedAction@{UnityEditor.Timeline.FrameSelectedAction}!Validate@{Validate}}
+\index{Validate@{Validate}!UnityEditor.Timeline.FrameSelectedAction@{UnityEditor.Timeline.FrameSelectedAction}}
+\doxysubsubsection{\texorpdfstring{Validate()}{Validate()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Action\+Validity}} Unity\+Editor.\+Timeline.\+Frame\+Selected\+Action.\+Validate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context}{Action\+Context}}}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Defines the validity of an Action based on the context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Context for the action.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Visual state of the menu for the action.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action_a973c37f44794c3012aad16695470cd8c}{Unity\+Editor.\+Timeline.\+Actions.\+Timeline\+Action}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Editor/\+Actions/Timeline\+Actions.\+cs\end{DoxyCompactItemize}

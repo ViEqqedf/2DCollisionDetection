@@ -1,0 +1,172 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas}{}\doxysection{Unity.\+Visual\+Scripting.\+State\+Canvas Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_state_canvas}\index{Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+State\+Canvas\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_1_1_visual_scripting_1_1_state_canvas}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas_ae831d8c12c42f68291d4492a7764c7ba}\label{class_unity_1_1_visual_scripting_1_1_state_canvas_ae831d8c12c42f68291d4492a7764c7ba}} 
+{\bfseries State\+Canvas} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_graph}{State\+Graph}} graph)
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_canvas_a4a7dab7b9353b2528c24d95ceeaaaf93}{Shrink\+Copy\+Group}} (Hash\+Set$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element}{IGraph\+Element}} $>$ copy\+Group)
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_canvas_a3827dc6d06c1101be5b81ddd58a576ac}{On\+Toolbar\+GUI}} ()
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas_ae3dca24c2da281f0cb5c105a928ac90b}\label{class_unity_1_1_visual_scripting_1_1_state_canvas_ae3dca24c2da281f0cb5c105a928ac90b}} 
+void {\bfseries Add\+State} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state}{IState}} state, Vector2 position)
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_canvas_a6b8bbd770dcb95c4217913d2c1d81e68}{Close}} ()
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas_a7c8bdb75d43457de64243708376683c2}\label{class_unity_1_1_visual_scripting_1_1_state_canvas_a7c8bdb75d43457de64243708376683c2}} 
+void {\bfseries Complete\+Transition\+To\+New\+State} ()
+\item 
+override bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_canvas_a6bb3442074ce74f4542ab8296fb0b0e2}{Accepts\+Drag\+And\+Drop}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_canvas_af59508975f32b27c8dfab9976f1d49ab}{Perform\+Drag\+And\+Drop}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_canvas_a3578d85ae100a97651c599f0438fbfa8}{Draw\+Drag\+And\+Drop\+Preview}} ()
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas_acba90caa877376954b5a463f90459f75}\label{class_unity_1_1_visual_scripting_1_1_state_canvas_acba90caa877376954b5a463f90459f75}} 
+void {\bfseries Start\+Transition} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state}{IState}} source)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas_addc56d3c8cae9d5bddf1b694129defdc}\label{class_unity_1_1_visual_scripting_1_1_state_canvas_addc56d3c8cae9d5bddf1b694129defdc}} 
+void {\bfseries End\+Transition} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state}{IState}} destination)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas_a96f55f5c4eb6cf4a0ec1dc8d1e726aee}\label{class_unity_1_1_visual_scripting_1_1_state_canvas_a96f55f5c4eb6cf4a0ec1dc8d1e726aee}} 
+void {\bfseries Cancel\+Transition} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_canvas_a507593472da18f8939c0abe6890feb22}{Draw\+Background}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_canvas_a20aa06dba47e6ca61f3c225daa41c652}{On\+Context}} ()
+\item 
+override IEnumerable$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dropdown_option}{Dropdown\+Option}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_canvas_a9cbc1459e060a7957720cb8e546e133b}{Get\+Context\+Options}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_state_canvas_adf5929ace882b0c4923a466046da3edc}{Handle\+High\+Priority\+Input}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas_ab1bb8088866338baeae46be16e49ba5c}\label{class_unity_1_1_visual_scripting_1_1_state_canvas_ab1bb8088866338baeae46be16e49ba5c}} 
+override bool {\bfseries should\+Edge\+Pan}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas_ae1b75a5c4764f801a64837a37c24302a}\label{class_unity_1_1_visual_scripting_1_1_state_canvas_ae1b75a5c4764f801a64837a37c24302a}} 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_state}{IState}} {\bfseries transition\+Source}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas_aebbcdaae74c015aa513341fb9a77cf3b}\label{class_unity_1_1_visual_scripting_1_1_state_canvas_aebbcdaae74c015aa513341fb9a77cf3b}} 
+bool {\bfseries is\+Creating\+Transition}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas_a6bb3442074ce74f4542ab8296fb0b0e2}\label{class_unity_1_1_visual_scripting_1_1_state_canvas_a6bb3442074ce74f4542ab8296fb0b0e2}} 
+\index{Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}!AcceptsDragAndDrop@{AcceptsDragAndDrop}}
+\index{AcceptsDragAndDrop@{AcceptsDragAndDrop}!Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}}
+\doxysubsubsection{\texorpdfstring{AcceptsDragAndDrop()}{AcceptsDragAndDrop()}}
+{\footnotesize\ttfamily override bool Unity.\+Visual\+Scripting.\+State\+Canvas.\+Accepts\+Drag\+And\+Drop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ State\+Graph $>$}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas_a6b8bbd770dcb95c4217913d2c1d81e68}\label{class_unity_1_1_visual_scripting_1_1_state_canvas_a6b8bbd770dcb95c4217913d2c1d81e68}} 
+\index{Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}!Close@{Close}}
+\index{Close@{Close}!Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}}
+\doxysubsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+State\+Canvas.\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ State\+Graph $>$}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas_a507593472da18f8939c0abe6890feb22}\label{class_unity_1_1_visual_scripting_1_1_state_canvas_a507593472da18f8939c0abe6890feb22}} 
+\index{Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}!DrawBackground@{DrawBackground}}
+\index{DrawBackground@{DrawBackground}!Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}}
+\doxysubsubsection{\texorpdfstring{DrawBackground()}{DrawBackground()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+State\+Canvas.\+Draw\+Background (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ State\+Graph $>$}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas_a3578d85ae100a97651c599f0438fbfa8}\label{class_unity_1_1_visual_scripting_1_1_state_canvas_a3578d85ae100a97651c599f0438fbfa8}} 
+\index{Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}!DrawDragAndDropPreview@{DrawDragAndDropPreview}}
+\index{DrawDragAndDropPreview@{DrawDragAndDropPreview}!Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}}
+\doxysubsubsection{\texorpdfstring{DrawDragAndDropPreview()}{DrawDragAndDropPreview()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+State\+Canvas.\+Draw\+Drag\+And\+Drop\+Preview (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ State\+Graph $>$}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas_a9cbc1459e060a7957720cb8e546e133b}\label{class_unity_1_1_visual_scripting_1_1_state_canvas_a9cbc1459e060a7957720cb8e546e133b}} 
+\index{Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}!GetContextOptions@{GetContextOptions}}
+\index{GetContextOptions@{GetContextOptions}!Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}}
+\doxysubsubsection{\texorpdfstring{GetContextOptions()}{GetContextOptions()}}
+{\footnotesize\ttfamily override IEnumerable$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dropdown_option}{Dropdown\+Option}} $>$ Unity.\+Visual\+Scripting.\+State\+Canvas.\+Get\+Context\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ State\+Graph $>$}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas_adf5929ace882b0c4923a466046da3edc}\label{class_unity_1_1_visual_scripting_1_1_state_canvas_adf5929ace882b0c4923a466046da3edc}} 
+\index{Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}!HandleHighPriorityInput@{HandleHighPriorityInput}}
+\index{HandleHighPriorityInput@{HandleHighPriorityInput}!Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}}
+\doxysubsubsection{\texorpdfstring{HandleHighPriorityInput()}{HandleHighPriorityInput()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+State\+Canvas.\+Handle\+High\+Priority\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ State\+Graph $>$}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas_a20aa06dba47e6ca61f3c225daa41c652}\label{class_unity_1_1_visual_scripting_1_1_state_canvas_a20aa06dba47e6ca61f3c225daa41c652}} 
+\index{Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}!OnContext@{OnContext}}
+\index{OnContext@{OnContext}!Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}}
+\doxysubsubsection{\texorpdfstring{OnContext()}{OnContext()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+State\+Canvas.\+On\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ State\+Graph $>$}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas_a3827dc6d06c1101be5b81ddd58a576ac}\label{class_unity_1_1_visual_scripting_1_1_state_canvas_a3827dc6d06c1101be5b81ddd58a576ac}} 
+\index{Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}!OnToolbarGUI@{OnToolbarGUI}}
+\index{OnToolbarGUI@{OnToolbarGUI}!Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}}
+\doxysubsubsection{\texorpdfstring{OnToolbarGUI()}{OnToolbarGUI()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+State\+Canvas.\+On\+Toolbar\+GUI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ State\+Graph $>$}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas_af59508975f32b27c8dfab9976f1d49ab}\label{class_unity_1_1_visual_scripting_1_1_state_canvas_af59508975f32b27c8dfab9976f1d49ab}} 
+\index{Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}!PerformDragAndDrop@{PerformDragAndDrop}}
+\index{PerformDragAndDrop@{PerformDragAndDrop}!Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}}
+\doxysubsubsection{\texorpdfstring{PerformDragAndDrop()}{PerformDragAndDrop()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+State\+Canvas.\+Perform\+Drag\+And\+Drop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ State\+Graph $>$}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_state_canvas_a4a7dab7b9353b2528c24d95ceeaaaf93}\label{class_unity_1_1_visual_scripting_1_1_state_canvas_a4a7dab7b9353b2528c24d95ceeaaaf93}} 
+\index{Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}!ShrinkCopyGroup@{ShrinkCopyGroup}}
+\index{ShrinkCopyGroup@{ShrinkCopyGroup}!Unity.VisualScripting.StateCanvas@{Unity.VisualScripting.StateCanvas}}
+\doxysubsubsection{\texorpdfstring{ShrinkCopyGroup()}{ShrinkCopyGroup()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+State\+Canvas.\+Shrink\+Copy\+Group (\begin{DoxyParamCaption}\item[{Hash\+Set$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element}{IGraph\+Element}} $>$}]{copy\+Group }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ State\+Graph $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Editor/\+Visual\+Scripting.\+State/\+Graph/State\+Canvas.\+cs\end{DoxyCompactItemize}

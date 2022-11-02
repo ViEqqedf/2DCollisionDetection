@@ -1,0 +1,78 @@
+\hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_remote_configuration}{}\doxysection{Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Remote\+Configuration\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_remote_configuration}\index{Unity.Services.Core.Editor.EditorGameServiceRemoteConfiguration$<$ T $>$@{Unity.Services.Core.Editor.EditorGameServiceRemoteConfiguration$<$ T $>$}}
+
+
+Fetches and parses JSON config object or returns a newly constructed object on failure. If the config is successfully loaded it will be cached in Session\+State  
+
+
+Inheritance diagram for Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Remote\+Configuration\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_remote_configuration}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_remote_configuration_ac57546d1ef0f65ca5f55cac25b2b9931}{Editor\+Game\+Service\+Remote\+Configuration}} (string config\+Url)
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_remote_configuration_a0fd80f02cf41093f6d8f19e0b942b2ae}{Get\+Configuration}} (Action$<$ T $>$ on\+Get\+Configuration\+Completed)
+\begin{DoxyCompactList}\small\item\em Retrieves the configuration from the cache or server and provides it to the caller. Makes an effort to return the cached object first, then checks Session\+State, and finally fetches from the server. If all else fails returns a default constructed object. NB\+: Newly constructed instances of this class will use Session\+State if it\textquotesingle{}s available before calling out to the server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_remote_configuration_ad9880f248b11c6cf0e6554971e175eef}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_remote_configuration_ad9880f248b11c6cf0e6554971e175eef}} 
+void {\bfseries Clear\+Cache} ()
+\begin{DoxyCompactList}\small\item\em Erases the configuration from Session\+State and from memory. Will force the configuration to be fetched from the server the next time it is requested. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fetches and parses JSON config object or returns a newly constructed object on failure. If the config is successfully loaded it will be cached in Session\+State 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of object to deserialize\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_remote_configuration_ac57546d1ef0f65ca5f55cac25b2b9931}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_remote_configuration_ac57546d1ef0f65ca5f55cac25b2b9931}} 
+\index{Unity.Services.Core.Editor.EditorGameServiceRemoteConfiguration$<$ T $>$@{Unity.Services.Core.Editor.EditorGameServiceRemoteConfiguration$<$ T $>$}!EditorGameServiceRemoteConfiguration@{EditorGameServiceRemoteConfiguration}}
+\index{EditorGameServiceRemoteConfiguration@{EditorGameServiceRemoteConfiguration}!Unity.Services.Core.Editor.EditorGameServiceRemoteConfiguration$<$ T $>$@{Unity.Services.Core.Editor.EditorGameServiceRemoteConfiguration$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{EditorGameServiceRemoteConfiguration()}{EditorGameServiceRemoteConfiguration()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_remote_configuration}{Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Remote\+Configuration}}$<$ T $>$.\mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_remote_configuration}{Editor\+Game\+Service\+Remote\+Configuration}} (\begin{DoxyParamCaption}\item[{string}]{config\+Url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config\+Url} & The url to use to fetch the config\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_remote_configuration_a0fd80f02cf41093f6d8f19e0b942b2ae}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_remote_configuration_a0fd80f02cf41093f6d8f19e0b942b2ae}} 
+\index{Unity.Services.Core.Editor.EditorGameServiceRemoteConfiguration$<$ T $>$@{Unity.Services.Core.Editor.EditorGameServiceRemoteConfiguration$<$ T $>$}!GetConfiguration@{GetConfiguration}}
+\index{GetConfiguration@{GetConfiguration}!Unity.Services.Core.Editor.EditorGameServiceRemoteConfiguration$<$ T $>$@{Unity.Services.Core.Editor.EditorGameServiceRemoteConfiguration$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetConfiguration()}{GetConfiguration()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_remote_configuration}{Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Remote\+Configuration}}$<$ T $>$.Get\+Configuration (\begin{DoxyParamCaption}\item[{Action$<$ T $>$}]{on\+Get\+Configuration\+Completed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the configuration from the cache or server and provides it to the caller. Makes an effort to return the cached object first, then checks Session\+State, and finally fetches from the server. If all else fails returns a default constructed object. NB\+: Newly constructed instances of this class will use Session\+State if it\textquotesingle{}s available before calling out to the server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Get\+Configuration\+Completed} & Callback action to retrieve the configuration. \\
+\hline
+\end{DoxyParams}
+\texorpdfstring{$>$}{>} 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+services.\+core@1.\+0.\+1/\+Editor/\+Core/\+Editor\+Game\+Service/Editor\+Game\+Service\+Remote\+Configuration.\+cs\end{DoxyCompactItemize}

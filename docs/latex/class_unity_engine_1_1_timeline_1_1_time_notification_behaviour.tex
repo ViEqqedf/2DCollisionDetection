@@ -1,0 +1,162 @@
+\hypertarget{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour}{}\doxysection{Unity\+Engine.\+Timeline.\+Time\+Notification\+Behaviour Class Reference}
+\label{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour}\index{UnityEngine.Timeline.TimeNotificationBehaviour@{UnityEngine.Timeline.TimeNotificationBehaviour}}
+
+
+Use this Playable\+Behaviour to send notifications at a given time.  
+
+
+Inheritance diagram for Unity\+Engine.\+Timeline.\+Time\+Notification\+Behaviour\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_a70798078c052162d622c7fa1f4ea80eb}{Add\+Notification}} (double time, INotification payload, \mbox{\hyperlink{namespace_unity_engine_1_1_timeline_a6ffec03980068c41a328fb2480de321f}{Notification\+Flags}} flags=\mbox{\hyperlink{namespace_unity_engine_1_1_timeline_a6ffec03980068c41a328fb2480de321faf81cc3979eac3825792fe6b0f420473d}{Notification\+Flags.\+Retroactive}})
+\begin{DoxyCompactList}\small\item\em Adds a notification to be sent with flags, at a specific time. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_a9a7a533c6baec1d03403a7974a85da8a}{On\+Graph\+Start}} (Playable playable)
+\begin{DoxyCompactList}\small\item\em This method is called when the Playable\+Graph that owns this Playable\+Behaviour starts. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_a2c97f08062fba7190308d972f3e3b82e}{On\+Behaviour\+Pause}} (Playable playable, Frame\+Data info)
+\begin{DoxyCompactList}\small\item\em This method is called when the Playable play state is changed to Play\+State.\+Paused \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_ac1a03a6dc9d74c476aff5f753be19008}{Prepare\+Frame}} (Playable playable, Frame\+Data info)
+\begin{DoxyCompactList}\small\item\em This method is called during the Prepare\+Frame phase of the Playable\+Graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Script\+Playable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour}{Time\+Notification\+Behaviour}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_af747b322ff6f157bbf706f3aa1e8bcbf}{Create}} (Playable\+Graph graph, double duration, Director\+Wrap\+Mode loop\+Mode)
+\begin{DoxyCompactList}\small\item\em Creates and initializes a Script\+Playable with a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour}{Time\+Notification\+Behaviour}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Playable \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_a66137895677979bf7017aa853b61bd96}{time\+Source}}\hspace{0.3cm}{\ttfamily  \mbox{[}set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets an optional Playable that provides duration and Wrap mode information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Use this Playable\+Behaviour to send notifications at a given time. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespace_unity_engine_1_1_timeline_a6ffec03980068c41a328fb2480de321f}{Unity\+Engine.\+Timeline.\+Notification\+Flags}}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_a70798078c052162d622c7fa1f4ea80eb}\label{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_a70798078c052162d622c7fa1f4ea80eb}} 
+\index{UnityEngine.Timeline.TimeNotificationBehaviour@{UnityEngine.Timeline.TimeNotificationBehaviour}!AddNotification@{AddNotification}}
+\index{AddNotification@{AddNotification}!UnityEngine.Timeline.TimeNotificationBehaviour@{UnityEngine.Timeline.TimeNotificationBehaviour}}
+\doxysubsubsection{\texorpdfstring{AddNotification()}{AddNotification()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Timeline.\+Time\+Notification\+Behaviour.\+Add\+Notification (\begin{DoxyParamCaption}\item[{double}]{time,  }\item[{INotification}]{payload,  }\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_timeline_a6ffec03980068c41a328fb2480de321f}{Notification\+Flags}}}]{flags = {\ttfamily \mbox{\hyperlink{namespace_unity_engine_1_1_timeline_a6ffec03980068c41a328fb2480de321faf81cc3979eac3825792fe6b0f420473d}{Notification\+Flags.\+Retroactive}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a notification to be sent with flags, at a specific time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & The time to send the notification.\\
+\hline
+{\em payload} & The notification.\\
+\hline
+{\em flags} & The notification flags that determine the notification behaviour. This parameter is set to Retroactive by default.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespace_unity_engine_1_1_timeline_a6ffec03980068c41a328fb2480de321f}{Unity\+Engine.\+Timeline.\+Notification\+Flags}}
+
+
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_af747b322ff6f157bbf706f3aa1e8bcbf}\label{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_af747b322ff6f157bbf706f3aa1e8bcbf}} 
+\index{UnityEngine.Timeline.TimeNotificationBehaviour@{UnityEngine.Timeline.TimeNotificationBehaviour}!Create@{Create}}
+\index{Create@{Create}!UnityEngine.Timeline.TimeNotificationBehaviour@{UnityEngine.Timeline.TimeNotificationBehaviour}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily static Script\+Playable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour}{Time\+Notification\+Behaviour}} $>$ Unity\+Engine.\+Timeline.\+Time\+Notification\+Behaviour.\+Create (\begin{DoxyParamCaption}\item[{Playable\+Graph}]{graph,  }\item[{double}]{duration,  }\item[{Director\+Wrap\+Mode}]{loop\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Creates and initializes a Script\+Playable with a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour}{Time\+Notification\+Behaviour}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & The playable graph.\\
+\hline
+{\em duration} & The duration of the playable.\\
+\hline
+{\em loop\+Mode} & The loop mode of the playable.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour}{Time\+Notification\+Behaviour}} linked to the Playable\+Graph.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_a2c97f08062fba7190308d972f3e3b82e}\label{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_a2c97f08062fba7190308d972f3e3b82e}} 
+\index{UnityEngine.Timeline.TimeNotificationBehaviour@{UnityEngine.Timeline.TimeNotificationBehaviour}!OnBehaviourPause@{OnBehaviourPause}}
+\index{OnBehaviourPause@{OnBehaviourPause}!UnityEngine.Timeline.TimeNotificationBehaviour@{UnityEngine.Timeline.TimeNotificationBehaviour}}
+\doxysubsubsection{\texorpdfstring{OnBehaviourPause()}{OnBehaviourPause()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Time\+Notification\+Behaviour.\+On\+Behaviour\+Pause (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method is called when the Playable play state is changed to Play\+State.\+Paused 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The reference to the playable associated with this Playable\+Behaviour.\\
+\hline
+{\em info} & Playable context information such as weight, evaluation\+Type, and so on.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_a9a7a533c6baec1d03403a7974a85da8a}\label{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_a9a7a533c6baec1d03403a7974a85da8a}} 
+\index{UnityEngine.Timeline.TimeNotificationBehaviour@{UnityEngine.Timeline.TimeNotificationBehaviour}!OnGraphStart@{OnGraphStart}}
+\index{OnGraphStart@{OnGraphStart}!UnityEngine.Timeline.TimeNotificationBehaviour@{UnityEngine.Timeline.TimeNotificationBehaviour}}
+\doxysubsubsection{\texorpdfstring{OnGraphStart()}{OnGraphStart()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Time\+Notification\+Behaviour.\+On\+Graph\+Start (\begin{DoxyParamCaption}\item[{Playable}]{playable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method is called when the Playable\+Graph that owns this Playable\+Behaviour starts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The reference to the playable associated with this Playable\+Behaviour.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_ac1a03a6dc9d74c476aff5f753be19008}\label{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_ac1a03a6dc9d74c476aff5f753be19008}} 
+\index{UnityEngine.Timeline.TimeNotificationBehaviour@{UnityEngine.Timeline.TimeNotificationBehaviour}!PrepareFrame@{PrepareFrame}}
+\index{PrepareFrame@{PrepareFrame}!UnityEngine.Timeline.TimeNotificationBehaviour@{UnityEngine.Timeline.TimeNotificationBehaviour}}
+\doxysubsubsection{\texorpdfstring{PrepareFrame()}{PrepareFrame()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Time\+Notification\+Behaviour.\+Prepare\+Frame (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method is called during the Prepare\+Frame phase of the Playable\+Graph. 
+
+Called once before processing starts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The reference to the playable associated with this Playable\+Behaviour.\\
+\hline
+{\em info} & Playable context information such as weight, evaluation\+Type, and so on.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_a66137895677979bf7017aa853b61bd96}\label{class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_a66137895677979bf7017aa853b61bd96}} 
+\index{UnityEngine.Timeline.TimeNotificationBehaviour@{UnityEngine.Timeline.TimeNotificationBehaviour}!timeSource@{timeSource}}
+\index{timeSource@{timeSource}!UnityEngine.Timeline.TimeNotificationBehaviour@{UnityEngine.Timeline.TimeNotificationBehaviour}}
+\doxysubsubsection{\texorpdfstring{timeSource}{timeSource}}
+{\footnotesize\ttfamily Playable Unity\+Engine.\+Timeline.\+Time\+Notification\+Behaviour.\+time\+Source\hspace{0.3cm}{\ttfamily [set]}}
+
+
+
+Sets an optional Playable that provides duration and Wrap mode information. 
+
+time\+Source is optional. By default, the duration and Wrap mode will come from the current Playable. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Playables/Time\+Notification\+Behaviour.\+cs\end{DoxyCompactItemize}

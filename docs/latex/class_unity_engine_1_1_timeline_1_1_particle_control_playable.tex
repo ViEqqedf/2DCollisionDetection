@@ -1,0 +1,136 @@
+\hypertarget{class_unity_engine_1_1_timeline_1_1_particle_control_playable}{}\doxysection{Unity\+Engine.\+Timeline.\+Particle\+Control\+Playable Class Reference}
+\label{class_unity_engine_1_1_timeline_1_1_particle_control_playable}\index{UnityEngine.Timeline.ParticleControlPlayable@{UnityEngine.Timeline.ParticleControlPlayable}}
+
+
+Playable that synchronizes a particle system simulation.  
+
+
+Inheritance diagram for Unity\+Engine.\+Timeline.\+Particle\+Control\+Playable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_timeline_1_1_particle_control_playable}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_particle_control_playable_a034d3170d4707041b31593d8ae9a5846}{Initialize}} (Particle\+System ps, uint random\+Seed)
+\begin{DoxyCompactList}\small\item\em Initializes the behaviour with a particle system and random seed. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_particle_control_playable_af0aaf33937844933660cdd47288f3ab6}{Prepare\+Frame}} (Playable playable, Frame\+Data data)
+\begin{DoxyCompactList}\small\item\em This function is called during the Prepare\+Frame phase of the Playable\+Graph. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_particle_control_playable_a281f83f6cc8ef038d2d6169bb44faec5}{On\+Behaviour\+Play}} (Playable playable, Frame\+Data info)
+\begin{DoxyCompactList}\small\item\em This function is called when the Playable play state is changed to Playables.\+Play\+State.\+Playing. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_particle_control_playable_aa005baf7e20e6481adf228b1be85f746}{On\+Behaviour\+Pause}} (Playable playable, Frame\+Data info)
+\begin{DoxyCompactList}\small\item\em This function is called when the Playable play state is changed to Play\+State.\+Paused. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Script\+Playable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_particle_control_playable}{Particle\+Control\+Playable}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_particle_control_playable_a57a6e3fa97de736d96ce8267e42c9230}{Create}} (Playable\+Graph graph, Particle\+System component, uint random\+Seed)
+\begin{DoxyCompactList}\small\item\em Creates a Playable with a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_particle_control_playable}{Particle\+Control\+Playable}} behaviour attached \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_particle_control_playable_ad7e4b2f974260c515ebccffe1aee1121}\label{class_unity_engine_1_1_timeline_1_1_particle_control_playable_ad7e4b2f974260c515ebccffe1aee1121}} 
+Particle\+System {\bfseries particle\+System}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The particle system to control \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Playable that synchronizes a particle system simulation. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_particle_control_playable_a57a6e3fa97de736d96ce8267e42c9230}\label{class_unity_engine_1_1_timeline_1_1_particle_control_playable_a57a6e3fa97de736d96ce8267e42c9230}} 
+\index{UnityEngine.Timeline.ParticleControlPlayable@{UnityEngine.Timeline.ParticleControlPlayable}!Create@{Create}}
+\index{Create@{Create}!UnityEngine.Timeline.ParticleControlPlayable@{UnityEngine.Timeline.ParticleControlPlayable}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily static Script\+Playable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_particle_control_playable}{Particle\+Control\+Playable}} $>$ Unity\+Engine.\+Timeline.\+Particle\+Control\+Playable.\+Create (\begin{DoxyParamCaption}\item[{Playable\+Graph}]{graph,  }\item[{Particle\+System}]{component,  }\item[{uint}]{random\+Seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Creates a Playable with a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_particle_control_playable}{Particle\+Control\+Playable}} behaviour attached 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & The Playable\+Graph to inject the Playable into.\\
+\hline
+{\em component} & The particle systtem to control\\
+\hline
+{\em random\+Seed} & A random seed to use for particle simulation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the created Playable.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_particle_control_playable_a034d3170d4707041b31593d8ae9a5846}\label{class_unity_engine_1_1_timeline_1_1_particle_control_playable_a034d3170d4707041b31593d8ae9a5846}} 
+\index{UnityEngine.Timeline.ParticleControlPlayable@{UnityEngine.Timeline.ParticleControlPlayable}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!UnityEngine.Timeline.ParticleControlPlayable@{UnityEngine.Timeline.ParticleControlPlayable}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Timeline.\+Particle\+Control\+Playable.\+Initialize (\begin{DoxyParamCaption}\item[{Particle\+System}]{ps,  }\item[{uint}]{random\+Seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes the behaviour with a particle system and random seed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ps} & \\
+\hline
+{\em random\+Seed} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_particle_control_playable_aa005baf7e20e6481adf228b1be85f746}\label{class_unity_engine_1_1_timeline_1_1_particle_control_playable_aa005baf7e20e6481adf228b1be85f746}} 
+\index{UnityEngine.Timeline.ParticleControlPlayable@{UnityEngine.Timeline.ParticleControlPlayable}!OnBehaviourPause@{OnBehaviourPause}}
+\index{OnBehaviourPause@{OnBehaviourPause}!UnityEngine.Timeline.ParticleControlPlayable@{UnityEngine.Timeline.ParticleControlPlayable}}
+\doxysubsubsection{\texorpdfstring{OnBehaviourPause()}{OnBehaviourPause()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Particle\+Control\+Playable.\+On\+Behaviour\+Pause (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called when the Playable play state is changed to Play\+State.\+Paused. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The playable this behaviour is attached to.\\
+\hline
+{\em info} & A Frame\+Data structure that contains information about the current frame context.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_particle_control_playable_a281f83f6cc8ef038d2d6169bb44faec5}\label{class_unity_engine_1_1_timeline_1_1_particle_control_playable_a281f83f6cc8ef038d2d6169bb44faec5}} 
+\index{UnityEngine.Timeline.ParticleControlPlayable@{UnityEngine.Timeline.ParticleControlPlayable}!OnBehaviourPlay@{OnBehaviourPlay}}
+\index{OnBehaviourPlay@{OnBehaviourPlay}!UnityEngine.Timeline.ParticleControlPlayable@{UnityEngine.Timeline.ParticleControlPlayable}}
+\doxysubsubsection{\texorpdfstring{OnBehaviourPlay()}{OnBehaviourPlay()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Particle\+Control\+Playable.\+On\+Behaviour\+Play (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called when the Playable play state is changed to Playables.\+Play\+State.\+Playing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The Playable that owns the current Playable\+Behaviour.\\
+\hline
+{\em info} & A Frame\+Data structure that contains information about the current frame context.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_particle_control_playable_af0aaf33937844933660cdd47288f3ab6}\label{class_unity_engine_1_1_timeline_1_1_particle_control_playable_af0aaf33937844933660cdd47288f3ab6}} 
+\index{UnityEngine.Timeline.ParticleControlPlayable@{UnityEngine.Timeline.ParticleControlPlayable}!PrepareFrame@{PrepareFrame}}
+\index{PrepareFrame@{PrepareFrame}!UnityEngine.Timeline.ParticleControlPlayable@{UnityEngine.Timeline.ParticleControlPlayable}}
+\doxysubsubsection{\texorpdfstring{PrepareFrame()}{PrepareFrame()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Particle\+Control\+Playable.\+Prepare\+Frame (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called during the Prepare\+Frame phase of the Playable\+Graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The Playable that owns the current Playable\+Behaviour.\\
+\hline
+{\em data} & A Frame\+Data structure that contains information about the current frame context.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Playables/Particle\+Control\+Playable.\+cs\end{DoxyCompactItemize}

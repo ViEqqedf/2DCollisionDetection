@@ -1,0 +1,228 @@
+\hypertarget{class_unity_editor_1_1_timeline_1_1_track_editor}{}\doxysection{Unity\+Editor.\+Timeline.\+Track\+Editor Class Reference}
+\label{class_unity_editor_1_1_timeline_1_1_track_editor}\index{UnityEditor.Timeline.TrackEditor@{UnityEditor.Timeline.TrackEditor}}
+
+
+Use this class to customize track types in the Timeline\+Editor.  
+
+
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Track\+Editor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_timeline_1_1_track_editor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_track_draw_options}{Track\+Draw\+Options}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor_a3d36fb306a9a0ee9b15dff285d330036}{Get\+Track\+Options}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track, Unity\+Engine.\+Object binding)
+\begin{DoxyCompactList}\small\item\em Implement this method to override the default options for drawing a track. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor_aea1e22bf8942adb19f776b525c933433}{Get\+Error\+Text}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track, Unity\+Engine.\+Object bound\+Object, \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_ab1298abef70580c7ae84c896c0fa4a85}{Track\+Binding\+Errors}} detect\+Errors)
+\begin{DoxyCompactList}\small\item\em Gets the error text for the specified track. \end{DoxyCompactList}\item 
+Color \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor_a172572f84be2d2b7c756da8a91b8b8ba}{Get\+Track\+Color}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track)
+\begin{DoxyCompactList}\small\item\em Gets the color information of a track. \end{DoxyCompactList}\item 
+System.\+Type \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor_a1eb8c0c3c958c9c3a890028bdcb6fcf8}{Get\+Binding\+Type}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track)
+\begin{DoxyCompactList}\small\item\em Gets the binding type for a track. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor_a6d49935006780094f55cf8adf37c6826}{On\+Create}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} copied\+From)
+\begin{DoxyCompactList}\small\item\em Callback for when a track is created. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor_a76e5612bfc7e6174e162ec65a551fa5f}{On\+Track\+Changed}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track)
+\begin{DoxyCompactList}\small\item\em Callback for when a track is changed. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor_a01cd3e762b94345a904b15e23f7f78d8}{Is\+Binding\+Assignable\+From}} (Unity\+Engine.\+Object candidate, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track)
+\begin{DoxyCompactList}\small\item\em Override this method to validate if a binding for {\itshape track}  can be determined from {\itshape candidate} . \end{DoxyCompactList}\item 
+virtual Unity\+Engine.\+Object \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor_afedf9fabc95d39487ecb22a7eaaec627}{Get\+Binding\+From}} (Unity\+Engine.\+Object candidate, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track)
+\begin{DoxyCompactList}\small\item\em Override this method to determine which object to bind to {\itshape track} . A binding object should be determined from {\itshape candidate} . \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_track_editor_abcc0b1e337aa04673dffccfa5b83dd87}\label{class_unity_editor_1_1_timeline_1_1_track_editor_abcc0b1e337aa04673dffccfa5b83dd87}} 
+static readonly float {\bfseries Default\+Track\+Height} = 30.\+0f
+\begin{DoxyCompactList}\small\item\em The default height of a track. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_track_editor_a8e3c09c79112fc72e507946e8a0e8fe5}\label{class_unity_editor_1_1_timeline_1_1_track_editor_a8e3c09c79112fc72e507946e8a0e8fe5}} 
+static readonly float {\bfseries Minimum\+Track\+Height} = 10.\+0f
+\begin{DoxyCompactList}\small\item\em The minimum unscaled height of a track. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_track_editor_ae07ef3cfd2fece33c904983ef556b32c}\label{class_unity_editor_1_1_timeline_1_1_track_editor_ae07ef3cfd2fece33c904983ef556b32c}} 
+static readonly float {\bfseries Maximum\+Track\+Height} = 256.\+0f
+\begin{DoxyCompactList}\small\item\em The maximum height of a track. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Use this class to customize track types in the Timeline\+Editor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_track_editor_afedf9fabc95d39487ecb22a7eaaec627}\label{class_unity_editor_1_1_timeline_1_1_track_editor_afedf9fabc95d39487ecb22a7eaaec627}} 
+\index{UnityEditor.Timeline.TrackEditor@{UnityEditor.Timeline.TrackEditor}!GetBindingFrom@{GetBindingFrom}}
+\index{GetBindingFrom@{GetBindingFrom}!UnityEditor.Timeline.TrackEditor@{UnityEditor.Timeline.TrackEditor}}
+\doxysubsubsection{\texorpdfstring{GetBindingFrom()}{GetBindingFrom()}}
+{\footnotesize\ttfamily virtual Unity\+Engine.\+Object Unity\+Editor.\+Timeline.\+Track\+Editor.\+Get\+Binding\+From (\begin{DoxyParamCaption}\item[{Unity\+Engine.\+Object}]{candidate,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{track }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Override this method to determine which object to bind to {\itshape track} . A binding object should be determined from {\itshape candidate} . 
+
+By default, the {\ttfamily Track\+Binding\+Type} attribute from {\itshape track}  will be used to determine the binding. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em candidate} & The source object from which a track binding should be determined.\\
+\hline
+{\em track} & The track to bind an object to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The object to bind to {\itshape track} .
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_binding_type_attribute}{Unity\+Engine.\+Timeline.\+Track\+Binding\+Type\+Attribute}}, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Unity\+Engine.\+Timeline.\+Track\+Asset}}
+
+
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_track_editor_a1eb8c0c3c958c9c3a890028bdcb6fcf8}\label{class_unity_editor_1_1_timeline_1_1_track_editor_a1eb8c0c3c958c9c3a890028bdcb6fcf8}} 
+\index{UnityEditor.Timeline.TrackEditor@{UnityEditor.Timeline.TrackEditor}!GetBindingType@{GetBindingType}}
+\index{GetBindingType@{GetBindingType}!UnityEditor.Timeline.TrackEditor@{UnityEditor.Timeline.TrackEditor}}
+\doxysubsubsection{\texorpdfstring{GetBindingType()}{GetBindingType()}}
+{\footnotesize\ttfamily System.\+Type Unity\+Editor.\+Timeline.\+Track\+Editor.\+Get\+Binding\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{track }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the binding type for a track. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em track} & The track to retrieve the binding type from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the binding type for the specified track. Returns null if the track does not have binding.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_track_editor_aea1e22bf8942adb19f776b525c933433}\label{class_unity_editor_1_1_timeline_1_1_track_editor_aea1e22bf8942adb19f776b525c933433}} 
+\index{UnityEditor.Timeline.TrackEditor@{UnityEditor.Timeline.TrackEditor}!GetErrorText@{GetErrorText}}
+\index{GetErrorText@{GetErrorText}!UnityEditor.Timeline.TrackEditor@{UnityEditor.Timeline.TrackEditor}}
+\doxysubsubsection{\texorpdfstring{GetErrorText()}{GetErrorText()}}
+{\footnotesize\ttfamily string Unity\+Editor.\+Timeline.\+Track\+Editor.\+Get\+Error\+Text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{track,  }\item[{Unity\+Engine.\+Object}]{bound\+Object,  }\item[{\mbox{\hyperlink{namespace_unity_editor_1_1_timeline_ab1298abef70580c7ae84c896c0fa4a85}{Track\+Binding\+Errors}}}]{detect\+Errors }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the error text for the specified track. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em track} & The track to retrieve options for.\\
+\hline
+{\em bound\+Object} & The binding for the track.\\
+\hline
+{\em detect\+Errors} & The errors to check for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An error to be displayed on the track, or string.\+Empty if there is no error.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_track_editor_a172572f84be2d2b7c756da8a91b8b8ba}\label{class_unity_editor_1_1_timeline_1_1_track_editor_a172572f84be2d2b7c756da8a91b8b8ba}} 
+\index{UnityEditor.Timeline.TrackEditor@{UnityEditor.Timeline.TrackEditor}!GetTrackColor@{GetTrackColor}}
+\index{GetTrackColor@{GetTrackColor}!UnityEditor.Timeline.TrackEditor@{UnityEditor.Timeline.TrackEditor}}
+\doxysubsubsection{\texorpdfstring{GetTrackColor()}{GetTrackColor()}}
+{\footnotesize\ttfamily Color Unity\+Editor.\+Timeline.\+Track\+Editor.\+Get\+Track\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{track }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the color information of a track. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em track} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the color for the specified track.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_track_editor_a3d36fb306a9a0ee9b15dff285d330036}\label{class_unity_editor_1_1_timeline_1_1_track_editor_a3d36fb306a9a0ee9b15dff285d330036}} 
+\index{UnityEditor.Timeline.TrackEditor@{UnityEditor.Timeline.TrackEditor}!GetTrackOptions@{GetTrackOptions}}
+\index{GetTrackOptions@{GetTrackOptions}!UnityEditor.Timeline.TrackEditor@{UnityEditor.Timeline.TrackEditor}}
+\doxysubsubsection{\texorpdfstring{GetTrackOptions()}{GetTrackOptions()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_track_draw_options}{Track\+Draw\+Options}} Unity\+Editor.\+Timeline.\+Track\+Editor.\+Get\+Track\+Options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{track,  }\item[{Unity\+Engine.\+Object}]{binding }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implement this method to override the default options for drawing a track. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em track} & The track from which track options are retrieved.\\
+\hline
+{\em binding} & The binding for the track.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The options for drawing the track.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_track_editor_a01cd3e762b94345a904b15e23f7f78d8}\label{class_unity_editor_1_1_timeline_1_1_track_editor_a01cd3e762b94345a904b15e23f7f78d8}} 
+\index{UnityEditor.Timeline.TrackEditor@{UnityEditor.Timeline.TrackEditor}!IsBindingAssignableFrom@{IsBindingAssignableFrom}}
+\index{IsBindingAssignableFrom@{IsBindingAssignableFrom}!UnityEditor.Timeline.TrackEditor@{UnityEditor.Timeline.TrackEditor}}
+\doxysubsubsection{\texorpdfstring{IsBindingAssignableFrom()}{IsBindingAssignableFrom()}}
+{\footnotesize\ttfamily virtual bool Unity\+Editor.\+Timeline.\+Track\+Editor.\+Is\+Binding\+Assignable\+From (\begin{DoxyParamCaption}\item[{Unity\+Engine.\+Object}]{candidate,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{track }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Override this method to validate if a binding for {\itshape track}  can be determined from {\itshape candidate} . 
+
+The default implementation of this method will return true if
+\begin{DoxyItemize}
+\item {\itshape candidate}  is not null or,
+\item {\itshape candidate}  is not part of a Prefab Asset or,
+\item {\itshape candidate}  is a Component that can be bound to {\itshape track}  
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em candidate} & \\
+\hline
+{\em track} & TBD\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a binding can be determined from {\itshape candidate} .
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_binding_type_attribute}{Unity\+Engine.\+Timeline.\+Track\+Binding\+Type\+Attribute}}, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Unity\+Engine.\+Timeline.\+Track\+Asset}}
+
+
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_track_editor_a6d49935006780094f55cf8adf37c6826}\label{class_unity_editor_1_1_timeline_1_1_track_editor_a6d49935006780094f55cf8adf37c6826}} 
+\index{UnityEditor.Timeline.TrackEditor@{UnityEditor.Timeline.TrackEditor}!OnCreate@{OnCreate}}
+\index{OnCreate@{OnCreate}!UnityEditor.Timeline.TrackEditor@{UnityEditor.Timeline.TrackEditor}}
+\doxysubsubsection{\texorpdfstring{OnCreate()}{OnCreate()}}
+{\footnotesize\ttfamily virtual void Unity\+Editor.\+Timeline.\+Track\+Editor.\+On\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{track,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{copied\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Callback for when a track is created. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em track} & The track that is created.\\
+\hline
+{\em copied\+From} & The source that the track is copied from. This can be set to null if the track is not a copy.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_activation_track_editor_aac85a9ef4fb7d3531a3c3509c648b3e9}{Unity\+Editor.\+Timeline.\+Activation\+Track\+Editor}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_track_editor_a76e5612bfc7e6174e162ec65a551fa5f}\label{class_unity_editor_1_1_timeline_1_1_track_editor_a76e5612bfc7e6174e162ec65a551fa5f}} 
+\index{UnityEditor.Timeline.TrackEditor@{UnityEditor.Timeline.TrackEditor}!OnTrackChanged@{OnTrackChanged}}
+\index{OnTrackChanged@{OnTrackChanged}!UnityEditor.Timeline.TrackEditor@{UnityEditor.Timeline.TrackEditor}}
+\doxysubsubsection{\texorpdfstring{OnTrackChanged()}{OnTrackChanged()}}
+{\footnotesize\ttfamily virtual void Unity\+Editor.\+Timeline.\+Track\+Editor.\+On\+Track\+Changed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{track }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Callback for when a track is changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em track} & The track that is changed.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Editor/\+Custom\+Editors/Track\+Editor.\+cs\end{DoxyCompactItemize}

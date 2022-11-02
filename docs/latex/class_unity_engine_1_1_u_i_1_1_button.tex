@@ -1,0 +1,55 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_button}{}\doxysection{Unity\+Engine.\+UI.\+Button Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_button}\index{UnityEngine.UI.Button@{UnityEngine.UI.Button}}
+
+
+A standard button that sends an event when clicked.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Button\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7.007963cm]{class_unity_engine_1_1_u_i_1_1_button}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_button_1_1_button_clicked_event}{Button\+Clicked\+Event}}
+\begin{DoxyCompactList}\small\item\em Function definition for a button click event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_button_1_1_button_clicked_event}{Button\+Clicked\+Event}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_button_ab3a84c4b258919352af02a2eeaab28a2}{on\+Click}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Unity\+Event that is triggered when the button is pressed. Note\+: Triggered on Mouse\+Up after Mouse\+Down on the same object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A standard button that sends an event when clicked. 
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_button_ab3a84c4b258919352af02a2eeaab28a2}\label{class_unity_engine_1_1_u_i_1_1_button_ab3a84c4b258919352af02a2eeaab28a2}} 
+\index{UnityEngine.UI.Button@{UnityEngine.UI.Button}!onClick@{onClick}}
+\index{onClick@{onClick}!UnityEngine.UI.Button@{UnityEngine.UI.Button}}
+\doxysubsubsection{\texorpdfstring{onClick}{onClick}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_button_1_1_button_clicked_event}{Button\+Clicked\+Event}} Unity\+Engine.\+UI.\+Button.\+on\+Click\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Unity\+Event that is triggered when the button is pressed. Note\+: Triggered on Mouse\+Up after Mouse\+Down on the same object. 
+
+example\texorpdfstring{$>$}{>} code\texorpdfstring{$>$}{>}
+
+using \mbox{\hyperlink{namespace_unity_engine}{Unity\+Engine}}; using \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{Unity\+Engine.\+UI}}; using System.\+Collections;
+
+public class Click\+Example \+: Mono\+Behaviour \{ public \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_button}{Button}} your\+Button;
+
+void Start() \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_button}{Button}} btn = your\+Button.\+Get\+Component\texorpdfstring{$<$}{<}\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_button}{Button}}\texorpdfstring{$>$}{>}(); btn.\+on\+Click.\+Add\+Listener(\+Task\+On\+Click); \}
+
+void Task\+On\+Click() \{ Debug.\+Log(\char`\"{}\+You have clicked the button!\char`\"{}); \} \}
+
+/code\texorpdfstring{$>$}{>} /example\texorpdfstring{$>$}{>} 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/Button.\+cs\end{DoxyCompactItemize}

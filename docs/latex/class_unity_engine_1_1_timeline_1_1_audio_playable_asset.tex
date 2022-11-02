@@ -1,0 +1,92 @@
+\hypertarget{class_unity_engine_1_1_timeline_1_1_audio_playable_asset}{}\doxysection{Unity\+Engine.\+Timeline.\+Audio\+Playable\+Asset Class Reference}
+\label{class_unity_engine_1_1_timeline_1_1_audio_playable_asset}\index{UnityEngine.Timeline.AudioPlayableAsset@{UnityEngine.Timeline.AudioPlayableAsset}}
+
+
+Playable\+Asset wrapper for an Audio\+Clip in \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}}.  
+
+
+Inheritance diagram for Unity\+Engine.\+Timeline.\+Audio\+Playable\+Asset\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_timeline_1_1_audio_playable_asset}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override Playable \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_audio_playable_asset_ada4b485be139d938dcfc5b98e3fe0ab4}{Create\+Playable}} (Playable\+Graph graph, Game\+Object go)
+\begin{DoxyCompactList}\small\item\em Creates the root of a Playable subgraph to play the audio clip. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_audio_playable_asset_ae5b9e8446c98b0c9c7f880c2fa0849eb}\label{class_unity_engine_1_1_timeline_1_1_audio_playable_asset_ae5b9e8446c98b0c9c7f880c2fa0849eb}} 
+Audio\+Clip {\bfseries clip}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The audio clip to be played \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_audio_playable_asset_af979639ca1cc5df34edf80e7d395ba02}{loop}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the audio clip loops. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_audio_playable_asset_a62e65ccf6786612098f7fe12784bf6f9}\label{class_unity_engine_1_1_timeline_1_1_audio_playable_asset_a62e65ccf6786612098f7fe12784bf6f9}} 
+override double {\bfseries duration}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the duration required to play the audio clip exactly once \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_audio_playable_asset_a756d4fda04e952960d018ed5cd7531dc}\label{class_unity_engine_1_1_timeline_1_1_audio_playable_asset_a756d4fda04e952960d018ed5cd7531dc}} 
+override IEnumerable$<$ Playable\+Binding $>$ {\bfseries outputs}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns a description of the Playable\+Outputs that may be created for this asset. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_engine_1_1_timeline_af0b68b9529bda08f212a5aefa79e7e03}{Clip\+Caps}} \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_audio_playable_asset_aa7f33d397802739fdffa70364038d421}{clip\+Caps}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the capabilities of Timeline\+Clips that contain an \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_audio_playable_asset}{Audio\+Playable\+Asset}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Playable\+Asset wrapper for an Audio\+Clip in \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_audio_playable_asset_ada4b485be139d938dcfc5b98e3fe0ab4}\label{class_unity_engine_1_1_timeline_1_1_audio_playable_asset_ada4b485be139d938dcfc5b98e3fe0ab4}} 
+\index{UnityEngine.Timeline.AudioPlayableAsset@{UnityEngine.Timeline.AudioPlayableAsset}!CreatePlayable@{CreatePlayable}}
+\index{CreatePlayable@{CreatePlayable}!UnityEngine.Timeline.AudioPlayableAsset@{UnityEngine.Timeline.AudioPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{CreatePlayable()}{CreatePlayable()}}
+{\footnotesize\ttfamily override Playable Unity\+Engine.\+Timeline.\+Audio\+Playable\+Asset.\+Create\+Playable (\begin{DoxyParamCaption}\item[{Playable\+Graph}]{graph,  }\item[{Game\+Object}]{go }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates the root of a Playable subgraph to play the audio clip. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & Playable\+Graph that will own the playable\\
+\hline
+{\em go} & The Game\+Object that triggered the graph build\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The root playable of the subgraph
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_audio_playable_asset_aa7f33d397802739fdffa70364038d421}\label{class_unity_engine_1_1_timeline_1_1_audio_playable_asset_aa7f33d397802739fdffa70364038d421}} 
+\index{UnityEngine.Timeline.AudioPlayableAsset@{UnityEngine.Timeline.AudioPlayableAsset}!clipCaps@{clipCaps}}
+\index{clipCaps@{clipCaps}!UnityEngine.Timeline.AudioPlayableAsset@{UnityEngine.Timeline.AudioPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{clipCaps}{clipCaps}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_unity_engine_1_1_timeline_af0b68b9529bda08f212a5aefa79e7e03}{Clip\+Caps}} Unity\+Engine.\+Timeline.\+Audio\+Playable\+Asset.\+clip\+Caps\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the capabilities of Timeline\+Clips that contain an \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_audio_playable_asset}{Audio\+Playable\+Asset}} 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset_ad73af6af3aa5b1f06545740d9da4db2c}{Unity\+Engine.\+Timeline.\+ITimeline\+Clip\+Asset}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_audio_playable_asset_af979639ca1cc5df34edf80e7d395ba02}\label{class_unity_engine_1_1_timeline_1_1_audio_playable_asset_af979639ca1cc5df34edf80e7d395ba02}} 
+\index{UnityEngine.Timeline.AudioPlayableAsset@{UnityEngine.Timeline.AudioPlayableAsset}!loop@{loop}}
+\index{loop@{loop}!UnityEngine.Timeline.AudioPlayableAsset@{UnityEngine.Timeline.AudioPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{loop}{loop}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Timeline.\+Audio\+Playable\+Asset.\+loop\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether the audio clip loops. 
+
+Use this to loop the audio clip when the duration of the timeline clip exceeds that of the audio clip. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Audio/Audio\+Playable\+Asset.\+cs\end{DoxyCompactItemize}

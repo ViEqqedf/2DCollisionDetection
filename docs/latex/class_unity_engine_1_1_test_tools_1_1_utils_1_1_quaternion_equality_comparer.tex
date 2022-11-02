@@ -1,0 +1,120 @@
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_quaternion_equality_comparer}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+Utils.\+Quaternion\+Equality\+Comparer Class Reference}
+\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_quaternion_equality_comparer}\index{UnityEngine.TestTools.Utils.QuaternionEqualityComparer@{UnityEngine.TestTools.Utils.QuaternionEqualityComparer}}
+
+
+Use this utility to compare two Quaternion objects for equality with NUnit assertion constraints. Use the static instance \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_quaternion_equality_comparer_a4f183e21511b12c78c043bf507a3ab3f}{Quaternion\+Equality\+Comparer.\+Instance}} to have the default calculation error value set to 0.\+00001f. For any other custom error value, use the one argument constructor.  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Tools.\+Utils.\+Quaternion\+Equality\+Comparer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_test_tools_1_1_utils_1_1_quaternion_equality_comparer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_quaternion_equality_comparer_a0e7dc85b255c3a066a04aae7f149d6e0}{Quaternion\+Equality\+Comparer}} (float allowed\+Error)
+\begin{DoxyCompactList}\small\item\em Creates an instance of the comparer with a custom allowed error value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_quaternion_equality_comparer_aac04afe12cfd116ef31a6f23a57df084}{Equals}} (Quaternion expected, Quaternion actual)
+\begin{DoxyCompactList}\small\item\em Compares the actual and expected Quaternion objects for equality using the Quaternion.\+Dot  method. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_quaternion_equality_comparer_acea63492702bceba46eaac3ecef0b289}{Get\+Hash\+Code}} (Quaternion quaternion)
+\begin{DoxyCompactList}\small\item\em Serves as the default hash function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_quaternion_equality_comparer_a4f183e21511b12c78c043bf507a3ab3f}\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_quaternion_equality_comparer_a4f183e21511b12c78c043bf507a3ab3f}} 
+static \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_quaternion_equality_comparer}{Quaternion\+Equality\+Comparer}} {\bfseries Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A comparer instance with the default error value 0.\+00001f. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Use this utility to compare two Quaternion objects for equality with NUnit assertion constraints. Use the static instance \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_quaternion_equality_comparer_a4f183e21511b12c78c043bf507a3ab3f}{Quaternion\+Equality\+Comparer.\+Instance}} to have the default calculation error value set to 0.\+00001f. For any other custom error value, use the one argument constructor. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_quaternion_equality_comparer_a0e7dc85b255c3a066a04aae7f149d6e0}\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_quaternion_equality_comparer_a0e7dc85b255c3a066a04aae7f149d6e0}} 
+\index{UnityEngine.TestTools.Utils.QuaternionEqualityComparer@{UnityEngine.TestTools.Utils.QuaternionEqualityComparer}!QuaternionEqualityComparer@{QuaternionEqualityComparer}}
+\index{QuaternionEqualityComparer@{QuaternionEqualityComparer}!UnityEngine.TestTools.Utils.QuaternionEqualityComparer@{UnityEngine.TestTools.Utils.QuaternionEqualityComparer}}
+\doxysubsubsection{\texorpdfstring{QuaternionEqualityComparer()}{QuaternionEqualityComparer()}}
+{\footnotesize\ttfamily Unity\+Engine.\+Test\+Tools.\+Utils.\+Quaternion\+Equality\+Comparer.\+Quaternion\+Equality\+Comparer (\begin{DoxyParamCaption}\item[{float}]{allowed\+Error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an instance of the comparer with a custom allowed error value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allowed\+Error} & Describes the custom allowed error value\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_quaternion_equality_comparer_aac04afe12cfd116ef31a6f23a57df084}\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_quaternion_equality_comparer_aac04afe12cfd116ef31a6f23a57df084}} 
+\index{UnityEngine.TestTools.Utils.QuaternionEqualityComparer@{UnityEngine.TestTools.Utils.QuaternionEqualityComparer}!Equals@{Equals}}
+\index{Equals@{Equals}!UnityEngine.TestTools.Utils.QuaternionEqualityComparer@{UnityEngine.TestTools.Utils.QuaternionEqualityComparer}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Utils.\+Quaternion\+Equality\+Comparer.\+Equals (\begin{DoxyParamCaption}\item[{Quaternion}]{expected,  }\item[{Quaternion}]{actual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares the actual and expected Quaternion objects for equality using the Quaternion.\+Dot  method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected} & Expected Quaternion value used for comparison\\
+\hline
+{\em actual} & Actual Quaternion value to test\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the quaternion are equals, false otherwise.
+\end{DoxyReturn}
+
+
+The following example shows how to verify if two Quaternion are equals 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }QuaternionTest}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    [Test]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} VerifyThat\_TwoQuaternionsAreEqual()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        var actual = \textcolor{keyword}{new} Quaternion(10f, 0f, 0f, 0f);}
+\DoxyCodeLine{        var expected = \textcolor{keyword}{new} Quaternion(1f, 10f, 0f, 0f);}
+\DoxyCodeLine{        var comparer = \textcolor{keyword}{new} QuaternionEqualityComparer(10e-\/6f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Assert.That(actual, Is.EqualTo(expected).Using(comparer));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{//Using default error 0.00001f}}
+\DoxyCodeLine{        actual = \textcolor{keyword}{new} Quaternion(10f, 0f, 0.1f, 0f);}
+\DoxyCodeLine{        expected = \textcolor{keyword}{new} Quaternion(1f, 10f, 0.1f, 0f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Assert.That(actual, Is.EqualTo(expected).Using(QuaternionEqualityComparer.Instance));}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_quaternion_equality_comparer_acea63492702bceba46eaac3ecef0b289}\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_quaternion_equality_comparer_acea63492702bceba46eaac3ecef0b289}} 
+\index{UnityEngine.TestTools.Utils.QuaternionEqualityComparer@{UnityEngine.TestTools.Utils.QuaternionEqualityComparer}!GetHashCode@{GetHashCode}}
+\index{GetHashCode@{GetHashCode}!UnityEngine.TestTools.Utils.QuaternionEqualityComparer@{UnityEngine.TestTools.Utils.QuaternionEqualityComparer}}
+\doxysubsubsection{\texorpdfstring{GetHashCode()}{GetHashCode()}}
+{\footnotesize\ttfamily int Unity\+Engine.\+Test\+Tools.\+Utils.\+Quaternion\+Equality\+Comparer.\+Get\+Hash\+Code (\begin{DoxyParamCaption}\item[{Quaternion}]{quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serves as the default hash function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quaternion} & A not null Quaternion\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Engine.\+Test\+Runner/\+Utils/Quaternion\+Equality\+Comparer.\+cs\end{DoxyCompactItemize}

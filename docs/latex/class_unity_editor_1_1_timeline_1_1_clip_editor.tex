@@ -1,0 +1,186 @@
+\hypertarget{class_unity_editor_1_1_timeline_1_1_clip_editor}{}\doxysection{Unity\+Editor.\+Timeline.\+Clip\+Editor Class Reference}
+\label{class_unity_editor_1_1_timeline_1_1_clip_editor}\index{UnityEditor.Timeline.ClipEditor@{UnityEditor.Timeline.ClipEditor}}
+
+
+Use this class to customize clip types in the Timeline\+Editor.  
+
+
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Clip\+Editor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.739274cm]{class_unity_editor_1_1_timeline_1_1_clip_editor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_clip_editor_affd8175678f7f46bbe5536d2e54a3731}\label{class_unity_editor_1_1_timeline_1_1_clip_editor_affd8175678f7f46bbe5536d2e54a3731}} 
+{\bfseries Clip\+Editor} ()
+\begin{DoxyCompactList}\small\item\em Default constructor \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_clip_draw_options}{Clip\+Draw\+Options}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_editor_a3381f162ac568a6c20c749bc74a7a06b}{Get\+Clip\+Options}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} clip)
+\begin{DoxyCompactList}\small\item\em Implement this method to override the default options for drawing a clip. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_editor_a6e8f05dd04feaf1aa635dfbebc092d78}{Draw\+Background}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} clip, \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_clip_background_region}{Clip\+Background\+Region}} region)
+\begin{DoxyCompactList}\small\item\em Override this method to draw a background for a clip . \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_editor_a586e666943496ce611ce864fee755710}{On\+Create}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} clip, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} cloned\+From)
+\begin{DoxyCompactList}\small\item\em Called when a clip is created. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_editor_a59ef2b27cdfd2e2b0f2331556c3da101}{Get\+Error\+Text}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} clip)
+\begin{DoxyCompactList}\small\item\em Gets the error text for the specified clip. \end{DoxyCompactList}\item 
+Color \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_editor_ab8b1aa2a6fa48c5f01fb91adb75812ad}{Get\+Default\+Highlight\+Color}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} clip)
+\begin{DoxyCompactList}\small\item\em The color drawn under the clip. By default, the color is the same as the track color. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_editor_a8b44b6fe0385359b27192362c34a7b9f}{On\+Clip\+Changed}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} clip)
+\begin{DoxyCompactList}\small\item\em Called when a clip is changed by the Editor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_editor_ac419b723377d66feeaf06f9013f119a6}{Get\+Sub\+Timelines}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} clip, Playable\+Director director, List$<$ Playable\+Director $>$ sub\+Timelines)
+\begin{DoxyCompactList}\small\item\em Gets the sub-\/timelines for a specific clip. Implement this method if your clip supports playing nested timelines. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Use this class to customize clip types in the Timeline\+Editor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_clip_editor_a6e8f05dd04feaf1aa635dfbebc092d78}\label{class_unity_editor_1_1_timeline_1_1_clip_editor_a6e8f05dd04feaf1aa635dfbebc092d78}} 
+\index{UnityEditor.Timeline.ClipEditor@{UnityEditor.Timeline.ClipEditor}!DrawBackground@{DrawBackground}}
+\index{DrawBackground@{DrawBackground}!UnityEditor.Timeline.ClipEditor@{UnityEditor.Timeline.ClipEditor}}
+\doxysubsubsection{\texorpdfstring{DrawBackground()}{DrawBackground()}}
+{\footnotesize\ttfamily virtual void Unity\+Editor.\+Timeline.\+Clip\+Editor.\+Draw\+Background (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}}}]{clip,  }\item[{\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_clip_background_region}{Clip\+Background\+Region}}}]{region }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Override this method to draw a background for a clip . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip} & The clip being drawn.\\
+\hline
+{\em region} & The on-\/screen area where the clip is drawn.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_audio_playable_asset_editor_a3687c81461e2b7f6bd9a83d683d0462c}{Unity\+Editor.\+Timeline.\+Audio\+Playable\+Asset\+Editor}}, \mbox{\hyperlink{class_timeline_1_1_samples_1_1_tween_clip_editor_a1f5551a8be24a329f90623fd909421ca}{Timeline.\+Samples.\+Tween\+Clip\+Editor}}, and \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_asset_clip_editor_a6ece1354692c0213a556d2056e95247d}{Timeline.\+Samples.\+Video\+Asset\+Clip\+Editor}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_clip_editor_a3381f162ac568a6c20c749bc74a7a06b}\label{class_unity_editor_1_1_timeline_1_1_clip_editor_a3381f162ac568a6c20c749bc74a7a06b}} 
+\index{UnityEditor.Timeline.ClipEditor@{UnityEditor.Timeline.ClipEditor}!GetClipOptions@{GetClipOptions}}
+\index{GetClipOptions@{GetClipOptions}!UnityEditor.Timeline.ClipEditor@{UnityEditor.Timeline.ClipEditor}}
+\doxysubsubsection{\texorpdfstring{GetClipOptions()}{GetClipOptions()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_clip_draw_options}{Clip\+Draw\+Options}} Unity\+Editor.\+Timeline.\+Clip\+Editor.\+Get\+Clip\+Options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}}}]{clip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implement this method to override the default options for drawing a clip. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip} & The clip being drawn.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The options for drawing a clip.
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_animation_playable_asset_editor_a108ae346467a30479805f887bbef05bf}{Unity\+Editor.\+Timeline.\+Animation\+Playable\+Asset\+Editor}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_audio_playable_asset_editor_a82a6ff7f4ecd7042084f4522017cde02}{Unity\+Editor.\+Timeline.\+Audio\+Playable\+Asset\+Editor}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_control_playable_asset_editor_a4b98a28c3dd539f39b534146bbf0a811}{Unity\+Editor.\+Timeline.\+Control\+Playable\+Asset\+Editor}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_clip_editor_ab8b1aa2a6fa48c5f01fb91adb75812ad}\label{class_unity_editor_1_1_timeline_1_1_clip_editor_ab8b1aa2a6fa48c5f01fb91adb75812ad}} 
+\index{UnityEditor.Timeline.ClipEditor@{UnityEditor.Timeline.ClipEditor}!GetDefaultHighlightColor@{GetDefaultHighlightColor}}
+\index{GetDefaultHighlightColor@{GetDefaultHighlightColor}!UnityEditor.Timeline.ClipEditor@{UnityEditor.Timeline.ClipEditor}}
+\doxysubsubsection{\texorpdfstring{GetDefaultHighlightColor()}{GetDefaultHighlightColor()}}
+{\footnotesize\ttfamily Color Unity\+Editor.\+Timeline.\+Clip\+Editor.\+Get\+Default\+Highlight\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}}}]{clip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The color drawn under the clip. By default, the color is the same as the track color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip} & The clip being drawn.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the highlight color of the clip being drawn.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_clip_editor_a59ef2b27cdfd2e2b0f2331556c3da101}\label{class_unity_editor_1_1_timeline_1_1_clip_editor_a59ef2b27cdfd2e2b0f2331556c3da101}} 
+\index{UnityEditor.Timeline.ClipEditor@{UnityEditor.Timeline.ClipEditor}!GetErrorText@{GetErrorText}}
+\index{GetErrorText@{GetErrorText}!UnityEditor.Timeline.ClipEditor@{UnityEditor.Timeline.ClipEditor}}
+\doxysubsubsection{\texorpdfstring{GetErrorText()}{GetErrorText()}}
+{\footnotesize\ttfamily string Unity\+Editor.\+Timeline.\+Clip\+Editor.\+Get\+Error\+Text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}}}]{clip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the error text for the specified clip. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip} & The clip being drawn.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the error text to be displayed as the tool tip for the clip. If there is no error to be displayed, this method returns string.\+Empty.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_clip_editor_ac419b723377d66feeaf06f9013f119a6}\label{class_unity_editor_1_1_timeline_1_1_clip_editor_ac419b723377d66feeaf06f9013f119a6}} 
+\index{UnityEditor.Timeline.ClipEditor@{UnityEditor.Timeline.ClipEditor}!GetSubTimelines@{GetSubTimelines}}
+\index{GetSubTimelines@{GetSubTimelines}!UnityEditor.Timeline.ClipEditor@{UnityEditor.Timeline.ClipEditor}}
+\doxysubsubsection{\texorpdfstring{GetSubTimelines()}{GetSubTimelines()}}
+{\footnotesize\ttfamily virtual void Unity\+Editor.\+Timeline.\+Clip\+Editor.\+Get\+Sub\+Timelines (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}}}]{clip,  }\item[{Playable\+Director}]{director,  }\item[{List$<$ Playable\+Director $>$}]{sub\+Timelines }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the sub-\/timelines for a specific clip. Implement this method if your clip supports playing nested timelines. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip} & The clip with the Control\+Playable\+Asset.\\
+\hline
+{\em director} & The playable director driving the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} Clip. This may not be the same as Timeline\+Editor.\+inspected\+Director.\\
+\hline
+{\em sub\+Timelines} & Specify the sub-\/timelines to control.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_control_playable_asset_editor_a7387198fcf6a6ebb8d221d7182fe06d9}{Unity\+Editor.\+Timeline.\+Control\+Playable\+Asset\+Editor}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_clip_editor_a8b44b6fe0385359b27192362c34a7b9f}\label{class_unity_editor_1_1_timeline_1_1_clip_editor_a8b44b6fe0385359b27192362c34a7b9f}} 
+\index{UnityEditor.Timeline.ClipEditor@{UnityEditor.Timeline.ClipEditor}!OnClipChanged@{OnClipChanged}}
+\index{OnClipChanged@{OnClipChanged}!UnityEditor.Timeline.ClipEditor@{UnityEditor.Timeline.ClipEditor}}
+\doxysubsubsection{\texorpdfstring{OnClipChanged()}{OnClipChanged()}}
+{\footnotesize\ttfamily virtual void Unity\+Editor.\+Timeline.\+Clip\+Editor.\+On\+Clip\+Changed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}}}]{clip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called when a clip is changed by the Editor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip} & The clip that changed.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_clip_editor_a586e666943496ce611ce864fee755710}\label{class_unity_editor_1_1_timeline_1_1_clip_editor_a586e666943496ce611ce864fee755710}} 
+\index{UnityEditor.Timeline.ClipEditor@{UnityEditor.Timeline.ClipEditor}!OnCreate@{OnCreate}}
+\index{OnCreate@{OnCreate}!UnityEditor.Timeline.ClipEditor@{UnityEditor.Timeline.ClipEditor}}
+\doxysubsubsection{\texorpdfstring{OnCreate()}{OnCreate()}}
+{\footnotesize\ttfamily virtual void Unity\+Editor.\+Timeline.\+Clip\+Editor.\+On\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}}}]{clip,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{track,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}}}]{cloned\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called when a clip is created. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip} & The newly created clip.\\
+\hline
+{\em track} & The track that the clip is assigned to.\\
+\hline
+{\em cloned\+From} & The source that the clip was copied from. This can be set to null if the clip is not a copy.\\
+\hline
+\end{DoxyParams}
+
+
+The callback occurs before the clip is assigned to the track. 
+
+Reimplemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_animation_playable_asset_editor_a84dc37b4b2f157fd697b9fa57265a1dc}{Unity\+Editor.\+Timeline.\+Animation\+Playable\+Asset\+Editor}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_control_playable_asset_editor_ae4c0ddc693ea5a279351ebbeaed7d221}{Unity\+Editor.\+Timeline.\+Control\+Playable\+Asset\+Editor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Editor/\+Custom\+Editors/Clip\+Editor.\+cs\end{DoxyCompactItemize}

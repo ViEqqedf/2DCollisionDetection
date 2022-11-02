@@ -1,0 +1,27 @@
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_unity_set_up_attribute}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+Unity\+Set\+Up\+Attribute Class Reference}
+\label{class_unity_engine_1_1_test_tools_1_1_unity_set_up_attribute}\index{UnityEngine.TestTools.UnitySetUpAttribute@{UnityEngine.TestTools.UnitySetUpAttribute}}
+
+
+The {\ttfamily Unity\+Set\+Up} and \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_unity_tear_down_attribute}{Unity\+Tear\+Down\+Attribute}} attributes are identical to the standard {\ttfamily Set\+Up} and {\ttfamily Tear\+Down} attributes, with the exception that they allow for \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}{IEdit\+Mode\+Test\+Yield\+Instruction}}. The {\ttfamily Unity\+Set\+Up} and {\ttfamily Unity\+Tear\+Down} attributes expect a return type of \href{https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator?view=netframework-4.8}{\texttt{ IEnumerator}}.  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Tools.\+Unity\+Set\+Up\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_test_tools_1_1_unity_set_up_attribute}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+The {\ttfamily Unity\+Set\+Up} and \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_unity_tear_down_attribute}{Unity\+Tear\+Down\+Attribute}} attributes are identical to the standard {\ttfamily Set\+Up} and {\ttfamily Tear\+Down} attributes, with the exception that they allow for \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}{IEdit\+Mode\+Test\+Yield\+Instruction}}. The {\ttfamily Unity\+Set\+Up} and {\ttfamily Unity\+Tear\+Down} attributes expect a return type of \href{https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator?view=netframework-4.8}{\texttt{ IEnumerator}}. 
+
+{\ttfamily  public class Set\+Up\+Tear\+Down\+Example \{ \mbox{[}Unity\+Set\+Up\mbox{]} public IEnumerator Set\+Up() \{ yield return new Enter\+Play\+Mode(); \}}
+
+{\ttfamily  \mbox{[}Test\mbox{]} public void My\+Test() \{ Debug.\+Log(\char`\"{}\+This runs inside playmode\char`\"{}); \}}
+
+{\ttfamily  \mbox{[}Unity\+Tear\+Down\mbox{]} public IEnumerator Tear\+Down() \{ yield return new Exit\+Play\+Mode(); \} \} } 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Engine.\+Test\+Runner/\+NUnit\+Extensions/\+Attributes/Unity\+Set\+Up\+Attribute.\+cs\end{DoxyCompactItemize}

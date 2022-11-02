@@ -1,0 +1,625 @@
+\hypertarget{class_t_m_pro_1_1_t_m_p___dropdown}{}\doxysection{TMPro.\+TMP\+\_\+\+Dropdown Class Reference}
+\label{class_t_m_pro_1_1_t_m_p___dropdown}\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+
+
+A standard dropdown that presents a list of options when clicked, of which one can be chosen.  
+
+
+Inheritance diagram for TMPro.\+TMP\+\_\+\+Dropdown\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.778157cm]{class_t_m_pro_1_1_t_m_p___dropdown}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_dropdown_event}{Dropdown\+Event}}
+\begin{DoxyCompactList}\small\item\em Unity\+Event callback for when a dropdown current option is changed. \end{DoxyCompactList}\item 
+class {\bfseries Dropdown\+Item}
+\item 
+class \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_option_data}{Option\+Data}}
+\begin{DoxyCompactList}\small\item\em Class to store the text and/or image of a single option in the dropdown list. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_option_data_list}{Option\+Data\+List}}
+\begin{DoxyCompactList}\small\item\em Class used internally to store the list of options for the dropdown list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_ae2eee5918398091f930c433c0ff939d7}{Set\+Value\+Without\+Notify}} (int input)
+\begin{DoxyCompactList}\small\item\em Set index number of the current selection in the Dropdown without invoking on\+Value\+Changed callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_ac99e89e4f86608cd77442d20b9de3aba}{Refresh\+Shown\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Refreshes the text and image (if available) of the currently selected option. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_aca7bde337dd9fb565f2a8ed96bf4bb25}{Add\+Options}} (List$<$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_option_data}{Option\+Data}} $>$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_a43e1c79bd6e32dd4546a6987d684bbb6}{options}})
+\begin{DoxyCompactList}\small\item\em Add multiple options to the options of the Dropdown based on a list of \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_option_data}{Option\+Data}} objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_afedde3cc300c5e96287f0e9d8731e34d}{Add\+Options}} (List$<$ string $>$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_a43e1c79bd6e32dd4546a6987d684bbb6}{options}})
+\begin{DoxyCompactList}\small\item\em Add multiple text-\/only options to the options of the Dropdown based on a list of strings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_a369717c09b1e1fa94f5e7dfa19ae9c1f}{Add\+Options}} (List$<$ Sprite $>$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_a43e1c79bd6e32dd4546a6987d684bbb6}{options}})
+\begin{DoxyCompactList}\small\item\em Add multiple image-\/only options to the options of the Dropdown based on a list of Sprites. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_a031c8b8c5711c7fdb8a64bad0d139a0d}\label{class_t_m_pro_1_1_t_m_p___dropdown_a031c8b8c5711c7fdb8a64bad0d139a0d}} 
+void {\bfseries Clear\+Options} ()
+\begin{DoxyCompactList}\small\item\em Clear the list of options in the Dropdown. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_a4694d50db9f52ecc96cb8dc27ea9f8e3}{On\+Pointer\+Click}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\begin{DoxyCompactList}\small\item\em Handling for when the dropdown is initially \textquotesingle{}clicked\textquotesingle{}. Typically shows the dropdown \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_a258ceecac06f7f153c9a3569a817d74f}{On\+Submit}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_event_data}{Base\+Event\+Data}} event\+Data)
+\begin{DoxyCompactList}\small\item\em Handling for when the dropdown is selected and a submit event is processed. Typically shows the dropdown \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_aa645c81e1d5c8ddaef20c6fcb1d77345}{On\+Cancel}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_event_data}{Base\+Event\+Data}} event\+Data)
+\begin{DoxyCompactList}\small\item\em This will hide the dropdown list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_ae309311315603a4869384e1591842a73}{Show}} ()
+\begin{DoxyCompactList}\small\item\em Show the dropdown. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_a7b1a625bbfae2222ce459deb2df40afd}\label{class_t_m_pro_1_1_t_m_p___dropdown_a7b1a625bbfae2222ce459deb2df40afd}} 
+void {\bfseries Hide} ()
+\begin{DoxyCompactList}\small\item\em Hide the dropdown list. I.\+e. close it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_a9f434a91461de7a9b709bce0a4f31bd7}{Awake}} ()
+\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_ad5f10181747d1751111539353dc2d3f6}{Start}} ()
+\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_aea5132cb3aedcc5874ea40a4a493c7e5}{On\+Disable}} ()
+\item 
+virtual Game\+Object \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_aaaca2aca289284551cb768b4de31123d}{Create\+Blocker}} (Canvas root\+Canvas)
+\begin{DoxyCompactList}\small\item\em Create a blocker that blocks clicks to other controls while the dropdown list is open. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_a1bf1e08099436573116705840810dc3f}{Destroy\+Blocker}} (Game\+Object blocker)
+\begin{DoxyCompactList}\small\item\em Convenience method to explicitly destroy the previously generated blocker object \end{DoxyCompactList}\item 
+virtual Game\+Object \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_ae6ae9d5a3c350ec81e2108ad6ccf254e}{Create\+Dropdown\+List}} (Game\+Object \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_a6ab2bc63f80032f0d78d195fac730d5f}{template}})
+\begin{DoxyCompactList}\small\item\em Create the dropdown list to be shown when the dropdown is clicked. The dropdown list should correspond to the provided template Game\+Object, equivalent to instantiating a copy of it. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_adf7f42bd73c1274367a38b60596f4645}{Destroy\+Dropdown\+List}} (Game\+Object dropdown\+List)
+\begin{DoxyCompactList}\small\item\em Convenience method to explicitly destroy the previously generated dropdown list \end{DoxyCompactList}\item 
+virtual Dropdown\+Item \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_a267fae8bb58d334e133686395b615bf1}{Create\+Item}} (Dropdown\+Item item\+Template)
+\begin{DoxyCompactList}\small\item\em Create a dropdown item based upon the item template. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_a1a885c39fedfa1f678c50f8d3c4f55b8}{Destroy\+Item}} (Dropdown\+Item item)
+\begin{DoxyCompactList}\small\item\em Convenience method to explicitly destroy the previously generated Items. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_a6ab2bc63f80032f0d78d195fac730d5f}\label{class_t_m_pro_1_1_t_m_p___dropdown_a6ab2bc63f80032f0d78d195fac730d5f}} 
+Rect\+Transform {\bfseries template}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Rect Transform of the template for the dropdown list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_a525bc41ab8c46321882490782ad76177}\label{class_t_m_pro_1_1_t_m_p___dropdown_a525bc41ab8c46321882490782ad76177}} 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text}{TMP\+\_\+\+Text}} {\bfseries caption\+Text}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Text component to hold the text of the currently selected option. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_a5cf589817b242dfa0a8a3c01e47afcd0}\label{class_t_m_pro_1_1_t_m_p___dropdown_a5cf589817b242dfa0a8a3c01e47afcd0}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} {\bfseries caption\+Image}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Image component to hold the image of the currently selected option. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_a0e4c530e2b674dd5a3c0dfdbffa0fad8}\label{class_t_m_pro_1_1_t_m_p___dropdown_a0e4c530e2b674dd5a3c0dfdbffa0fad8}} 
+Graphic {\bfseries placeholder}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The placeholder Graphic component. Shown when no option is selected. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_a1d3fd4382b24500164cf0f90038fed61}\label{class_t_m_pro_1_1_t_m_p___dropdown_a1d3fd4382b24500164cf0f90038fed61}} 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text}{TMP\+\_\+\+Text}} {\bfseries item\+Text}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Text component to hold the text of the item. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_a86b50c242998eef867e10237940509ea}\label{class_t_m_pro_1_1_t_m_p___dropdown_a86b50c242998eef867e10237940509ea}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Image}} {\bfseries item\+Image}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Image component to hold the image of the item \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_option_data}{Option\+Data}} $>$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_a43e1c79bd6e32dd4546a6987d684bbb6}{options}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of possible options. A text string and an image can be specified for each option. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_dropdown_event}{Dropdown\+Event}} \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_aadf2cfdd8d965fdca8e147ef8991def4}{on\+Value\+Changed}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A Unity\+Event that is invoked when a user has clicked one of the options in the dropdown list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_a95f07697062259dba20e219f5d6e35b9}\label{class_t_m_pro_1_1_t_m_p___dropdown_a95f07697062259dba20e219f5d6e35b9}} 
+float {\bfseries alpha\+Fade\+Speed}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time interval at which a drop down will appear and disappear \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_a0e886902a8de21487e23342580d68728}{value}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Value is the index number of the current selection in the Dropdown. 0 is the first option in the Dropdown, 1 is the second, and so on. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_a8006beec9a6f881bda679cff7f87eddd}\label{class_t_m_pro_1_1_t_m_p___dropdown_a8006beec9a6f881bda679cff7f87eddd}} 
+bool {\bfseries Is\+Expanded}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A standard dropdown that presents a list of options when clicked, of which one can be chosen. 
+
+The dropdown component is a Selectable. When an option is chosen, the label and/or image of the control changes to show the chosen option.
+
+When a dropdown event occurs a callback is sent to any registered listeners of on\+Value\+Changed. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_aca7bde337dd9fb565f2a8ed96bf4bb25}\label{class_t_m_pro_1_1_t_m_p___dropdown_aca7bde337dd9fb565f2a8ed96bf4bb25}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!AddOptions@{AddOptions}}
+\index{AddOptions@{AddOptions}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{AddOptions()}{AddOptions()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Dropdown.\+Add\+Options (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_option_data}{Option\+Data}} $>$}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add multiple options to the options of the Dropdown based on a list of \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_option_data}{Option\+Data}} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em options} & The list of \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_option_data}{Option\+Data}} to add.\\
+\hline
+\end{DoxyParams}
+/// 
+
+See \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_afedde3cc300c5e96287f0e9d8731e34d}{Add\+Options(\+List$<$string$>$ options)}} for code example of usages. \mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_a369717c09b1e1fa94f5e7dfa19ae9c1f}\label{class_t_m_pro_1_1_t_m_p___dropdown_a369717c09b1e1fa94f5e7dfa19ae9c1f}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!AddOptions@{AddOptions}}
+\index{AddOptions@{AddOptions}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{AddOptions()}{AddOptions()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Dropdown.\+Add\+Options (\begin{DoxyParamCaption}\item[{List$<$ Sprite $>$}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add multiple image-\/only options to the options of the Dropdown based on a list of Sprites. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em options} & The list of Sprites to add.\\
+\hline
+\end{DoxyParams}
+
+
+See \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_afedde3cc300c5e96287f0e9d8731e34d}{Add\+Options(\+List$<$string$>$ options)}} for code example of usages. \mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_afedde3cc300c5e96287f0e9d8731e34d}\label{class_t_m_pro_1_1_t_m_p___dropdown_afedde3cc300c5e96287f0e9d8731e34d}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!AddOptions@{AddOptions}}
+\index{AddOptions@{AddOptions}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{AddOptions()}{AddOptions()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Dropdown.\+Add\+Options (\begin{DoxyParamCaption}\item[{List$<$ string $>$}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add multiple text-\/only options to the options of the Dropdown based on a list of strings. 
+
+Add a List of string messages to the Dropdown. The Dropdown shows each member of the list as a separate option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em options} & The list of text strings to add.\\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//Create a new Dropdown GameObject by going to the Hierarchy and clicking Create>UI>Dropdown -\/ TextMeshPro. Attach this script to the Dropdown GameObject.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UnityEngine.UI}};}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_t_m_pro}{TMPro}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }Example : MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{comment}{//Create a List of new Dropdown options}}
+\DoxyCodeLine{    List<string> m\_DropOptions = \textcolor{keyword}{new} List<string> \{ \textcolor{stringliteral}{"{}Option 1"{}}, \textcolor{stringliteral}{"{}Option 2"{}}\};}
+\DoxyCodeLine{    \textcolor{comment}{//This is the Dropdown}}
+\DoxyCodeLine{    \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown}{TMP\_Dropdown}} m\_Dropdown;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} Start()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{//Fetch the Dropdown GameObject the script is attached to}}
+\DoxyCodeLine{        m\_Dropdown = GetComponent<TMP\_Dropdown>();}
+\DoxyCodeLine{        \textcolor{comment}{//Clear the old options of the Dropdown menu}}
+\DoxyCodeLine{        m\_Dropdown.\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_a031c8b8c5711c7fdb8a64bad0d139a0d}{ClearOptions}}();}
+\DoxyCodeLine{        \textcolor{comment}{//Add the options created in the List above}}
+\DoxyCodeLine{        m\_Dropdown.\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_aca7bde337dd9fb565f2a8ed96bf4bb25}{AddOptions}}(m\_DropOptions);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_a9f434a91461de7a9b709bce0a4f31bd7}\label{class_t_m_pro_1_1_t_m_p___dropdown_a9f434a91461de7a9b709bce0a4f31bd7}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!Awake@{Awake}}
+\index{Awake@{Awake}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily override void TMPro.\+TMP\+\_\+\+Dropdown.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_aaaca2aca289284551cb768b4de31123d}\label{class_t_m_pro_1_1_t_m_p___dropdown_aaaca2aca289284551cb768b4de31123d}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!CreateBlocker@{CreateBlocker}}
+\index{CreateBlocker@{CreateBlocker}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{CreateBlocker()}{CreateBlocker()}}
+{\footnotesize\ttfamily virtual Game\+Object TMPro.\+TMP\+\_\+\+Dropdown.\+Create\+Blocker (\begin{DoxyParamCaption}\item[{Canvas}]{root\+Canvas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Create a blocker that blocks clicks to other controls while the dropdown list is open. 
+
+Override this method to implement a different way to obtain a blocker Game\+Object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+Canvas} & The root canvas the dropdown is under.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created blocker object
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_ae6ae9d5a3c350ec81e2108ad6ccf254e}\label{class_t_m_pro_1_1_t_m_p___dropdown_ae6ae9d5a3c350ec81e2108ad6ccf254e}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!CreateDropdownList@{CreateDropdownList}}
+\index{CreateDropdownList@{CreateDropdownList}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{CreateDropdownList()}{CreateDropdownList()}}
+{\footnotesize\ttfamily virtual Game\+Object TMPro.\+TMP\+\_\+\+Dropdown.\+Create\+Dropdown\+List (\begin{DoxyParamCaption}\item[{Game\+Object}]{template }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Create the dropdown list to be shown when the dropdown is clicked. The dropdown list should correspond to the provided template Game\+Object, equivalent to instantiating a copy of it. 
+
+Override this method to implement a different way to obtain a dropdown list Game\+Object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em template} & The template to create the dropdown list from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created drop down list gameobject.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_a267fae8bb58d334e133686395b615bf1}\label{class_t_m_pro_1_1_t_m_p___dropdown_a267fae8bb58d334e133686395b615bf1}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!CreateItem@{CreateItem}}
+\index{CreateItem@{CreateItem}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{CreateItem()}{CreateItem()}}
+{\footnotesize\ttfamily virtual Dropdown\+Item TMPro.\+TMP\+\_\+\+Dropdown.\+Create\+Item (\begin{DoxyParamCaption}\item[{Dropdown\+Item}]{item\+Template }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Create a dropdown item based upon the item template. 
+
+Override this method to implement a different way to obtain an option item. The option item should correspond to the provided template Dropdown\+Item and its Game\+Object, equivalent to instantiating a copy of it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item\+Template} & e template to create the option item from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created dropdown item component
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_a1bf1e08099436573116705840810dc3f}\label{class_t_m_pro_1_1_t_m_p___dropdown_a1bf1e08099436573116705840810dc3f}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!DestroyBlocker@{DestroyBlocker}}
+\index{DestroyBlocker@{DestroyBlocker}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{DestroyBlocker()}{DestroyBlocker()}}
+{\footnotesize\ttfamily virtual void TMPro.\+TMP\+\_\+\+Dropdown.\+Destroy\+Blocker (\begin{DoxyParamCaption}\item[{Game\+Object}]{blocker }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Convenience method to explicitly destroy the previously generated blocker object 
+
+Override this method to implement a different way to dispose of a blocker Game\+Object that blocks clicks to other controls while the dropdown list is open. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em blocker} & The blocker object to destroy.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_adf7f42bd73c1274367a38b60596f4645}\label{class_t_m_pro_1_1_t_m_p___dropdown_adf7f42bd73c1274367a38b60596f4645}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!DestroyDropdownList@{DestroyDropdownList}}
+\index{DestroyDropdownList@{DestroyDropdownList}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{DestroyDropdownList()}{DestroyDropdownList()}}
+{\footnotesize\ttfamily virtual void TMPro.\+TMP\+\_\+\+Dropdown.\+Destroy\+Dropdown\+List (\begin{DoxyParamCaption}\item[{Game\+Object}]{dropdown\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Convenience method to explicitly destroy the previously generated dropdown list 
+
+Override this method to implement a different way to dispose of a dropdown list Game\+Object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dropdown\+List} & The dropdown list Game\+Object to destroy\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_a1a885c39fedfa1f678c50f8d3c4f55b8}\label{class_t_m_pro_1_1_t_m_p___dropdown_a1a885c39fedfa1f678c50f8d3c4f55b8}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!DestroyItem@{DestroyItem}}
+\index{DestroyItem@{DestroyItem}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{DestroyItem()}{DestroyItem()}}
+{\footnotesize\ttfamily virtual void TMPro.\+TMP\+\_\+\+Dropdown.\+Destroy\+Item (\begin{DoxyParamCaption}\item[{Dropdown\+Item}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Convenience method to explicitly destroy the previously generated Items. 
+
+Override this method to implement a different way to dispose of an option item. Likely no action needed since destroying the dropdown list destroys all contained items as well. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The Item to destroy.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_aa645c81e1d5c8ddaef20c6fcb1d77345}\label{class_t_m_pro_1_1_t_m_p___dropdown_aa645c81e1d5c8ddaef20c6fcb1d77345}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!OnCancel@{OnCancel}}
+\index{OnCancel@{OnCancel}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{OnCancel()}{OnCancel()}}
+{\footnotesize\ttfamily virtual void TMPro.\+TMP\+\_\+\+Dropdown.\+On\+Cancel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_event_data}{Base\+Event\+Data}}}]{event\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+This will hide the dropdown list. 
+
+Called by a Base\+Input\+Module when a Cancel event occurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & The associated event data.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_aea5132cb3aedcc5874ea40a4a493c7e5}\label{class_t_m_pro_1_1_t_m_p___dropdown_aea5132cb3aedcc5874ea40a4a493c7e5}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!OnDisable@{OnDisable}}
+\index{OnDisable@{OnDisable}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{OnDisable()}{OnDisable()}}
+{\footnotesize\ttfamily override void TMPro.\+TMP\+\_\+\+Dropdown.\+On\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_a4694d50db9f52ecc96cb8dc27ea9f8e3}\label{class_t_m_pro_1_1_t_m_p___dropdown_a4694d50db9f52ecc96cb8dc27ea9f8e3}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!OnPointerClick@{OnPointerClick}}
+\index{OnPointerClick@{OnPointerClick}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{OnPointerClick()}{OnPointerClick()}}
+{\footnotesize\ttfamily virtual void TMPro.\+TMP\+\_\+\+Dropdown.\+On\+Pointer\+Click (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}}}]{event\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Handling for when the dropdown is initially \textquotesingle{}clicked\textquotesingle{}. Typically shows the dropdown 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & The associated event data.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_a258ceecac06f7f153c9a3569a817d74f}\label{class_t_m_pro_1_1_t_m_p___dropdown_a258ceecac06f7f153c9a3569a817d74f}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!OnSubmit@{OnSubmit}}
+\index{OnSubmit@{OnSubmit}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{OnSubmit()}{OnSubmit()}}
+{\footnotesize\ttfamily virtual void TMPro.\+TMP\+\_\+\+Dropdown.\+On\+Submit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_event_data}{Base\+Event\+Data}}}]{event\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Handling for when the dropdown is selected and a submit event is processed. Typically shows the dropdown 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & The associated event data.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_ac99e89e4f86608cd77442d20b9de3aba}\label{class_t_m_pro_1_1_t_m_p___dropdown_ac99e89e4f86608cd77442d20b9de3aba}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!RefreshShownValue@{RefreshShownValue}}
+\index{RefreshShownValue@{RefreshShownValue}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{RefreshShownValue()}{RefreshShownValue()}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Dropdown.\+Refresh\+Shown\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Refreshes the text and image (if available) of the currently selected option. 
+
+If you have modified the list of options, you should call this method afterwards to ensure that the visual state of the dropdown corresponds to the updated options. \mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_ae2eee5918398091f930c433c0ff939d7}\label{class_t_m_pro_1_1_t_m_p___dropdown_ae2eee5918398091f930c433c0ff939d7}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!SetValueWithoutNotify@{SetValueWithoutNotify}}
+\index{SetValueWithoutNotify@{SetValueWithoutNotify}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{SetValueWithoutNotify()}{SetValueWithoutNotify()}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Dropdown.\+Set\+Value\+Without\+Notify (\begin{DoxyParamCaption}\item[{int}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set index number of the current selection in the Dropdown without invoking on\+Value\+Changed callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The new index for the current selection.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_ae309311315603a4869384e1591842a73}\label{class_t_m_pro_1_1_t_m_p___dropdown_ae309311315603a4869384e1591842a73}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!Show@{Show}}
+\index{Show@{Show}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{Show()}{Show()}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Dropdown.\+Show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Show the dropdown. 
+
+Plan for dropdown scrolling to ensure dropdown is contained within screen.
+
+We assume the Canvas is the screen that the dropdown must be kept inside. This is always valid for screen space canvas modes. For world space canvases we don\textquotesingle{}t know how it\textquotesingle{}s used, but it could be e.\+g. for an in-\/game monitor. We consider it a fair constraint that the canvas must be big enough to contain dropdowns. \mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_ad5f10181747d1751111539353dc2d3f6}\label{class_t_m_pro_1_1_t_m_p___dropdown_ad5f10181747d1751111539353dc2d3f6}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!Start@{Start}}
+\index{Start@{Start}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily override void TMPro.\+TMP\+\_\+\+Dropdown.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_aadf2cfdd8d965fdca8e147ef8991def4}\label{class_t_m_pro_1_1_t_m_p___dropdown_aadf2cfdd8d965fdca8e147ef8991def4}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!onValueChanged@{onValueChanged}}
+\index{onValueChanged@{onValueChanged}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{onValueChanged}{onValueChanged}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_dropdown_event}{Dropdown\+Event}} TMPro.\+TMP\+\_\+\+Dropdown.\+on\+Value\+Changed\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+A Unity\+Event that is invoked when a user has clicked one of the options in the dropdown list. 
+
+Use this to detect when a user selects one or more options in the Dropdown. Add a listener to perform an action when this Unity\+Event detects a selection by the user. See \href{https://unity3d.com/learn/tutorials/topics/scripting/delegates}{\texttt{ https\+://unity3d.\+com/learn/tutorials/topics/scripting/delegates}} for more information on delegates. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//Create a new Dropdown GameObject by going to the Hierarchy and clicking Create>UI>Dropdown -\/ TextMeshPro. Attach this script to the Dropdown GameObject.}}
+\DoxyCodeLine{\textcolor{comment}{//Set your own Text in the Inspector window}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UnityEngine.UI}};}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_t_m_pro}{TMPro}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }Example : MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown}{TMP\_Dropdown}} m\_Dropdown;}
+\DoxyCodeLine{    \textcolor{keyword}{public} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_text}{Text}} m\_Text;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} Start()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{//Fetch the Dropdown GameObject}}
+\DoxyCodeLine{        m\_Dropdown = GetComponent<TMP\_Dropdown>();}
+\DoxyCodeLine{        \textcolor{comment}{//Add listener for when the value of the Dropdown changes, to take action}}
+\DoxyCodeLine{        m\_Dropdown.\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_aadf2cfdd8d965fdca8e147ef8991def4}{onValueChanged}}.AddListener(delegate \{}
+\DoxyCodeLine{                DropdownValueChanged(m\_Dropdown);}
+\DoxyCodeLine{            \});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{//Initialize the Text to say the first value of the Dropdown}}
+\DoxyCodeLine{        m\_Text.text = \textcolor{stringliteral}{"{}First Value : "{}} + m\_Dropdown.\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_a0e886902a8de21487e23342580d68728}{value}};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{//Output the new value of the Dropdown into Text}}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} DropdownValueChanged(\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown}{TMP\_Dropdown}} change)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        m\_Text.text =  \textcolor{stringliteral}{"{}New Value : "{}} + change.\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_a0e886902a8de21487e23342580d68728}{value}};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_a43e1c79bd6e32dd4546a6987d684bbb6}\label{class_t_m_pro_1_1_t_m_p___dropdown_a43e1c79bd6e32dd4546a6987d684bbb6}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!options@{options}}
+\index{options@{options}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{options}{options}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_option_data}{Option\+Data}}$>$ TMPro.\+TMP\+\_\+\+Dropdown.\+options\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The list of possible options. A text string and an image can be specified for each option. 
+
+This is the list of options within the Dropdown. Each option contains Text and/or image data that you can specify using UI.\+Dropdown.\+Option\+Data before adding to the Dropdown list. This also unlocks the ability to edit the Dropdown, including the insertion, removal, and finding of options, as well as other useful tools 
+
+/// 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//Create a new Dropdown GameObject by going to the Hierarchy and clicking Create>UI>Dropdown -\/ TextMeshPro. Attach this script to the Dropdown GameObject.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UnityEngine.UI}};}
+\DoxyCodeLine{\textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_t_m_pro}{TMPro}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }Example : MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{comment}{//Use these for adding options to the Dropdown List}}
+\DoxyCodeLine{    \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_option_data}{TMP\_Dropdown.OptionData}} m\_NewData, m\_NewData2;}
+\DoxyCodeLine{    \textcolor{comment}{//The list of messages for the Dropdown}}
+\DoxyCodeLine{    List<\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown}{TMP\_Dropdown}}.\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_option_data}{OptionData}}> m\_Messages = \textcolor{keyword}{new} List<\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown}{TMP\_Dropdown}}.\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_option_data}{OptionData}}>();}
+\DoxyCodeLine{}
+\DoxyCodeLine{@verbatim }
+\DoxyCodeLine{\textcolor{comment}{//This is the Dropdown}}
+\DoxyCodeLine{\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown}{TMP\_Dropdown}} m\_Dropdown;}
+\DoxyCodeLine{\textcolor{keywordtype}{string} m\_MyString;}
+\DoxyCodeLine{\textcolor{keywordtype}{int} m\_Index;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} Start()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{comment}{//Fetch the Dropdown GameObject the script is attached to}}
+\DoxyCodeLine{    m\_Dropdown = GetComponent<TMP\_Dropdown>();}
+\DoxyCodeLine{    \textcolor{comment}{//Clear the old options of the Dropdown menu}}
+\DoxyCodeLine{    m\_Dropdown.ClearOptions();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{//Create a new option for the Dropdown menu which reads "{}Option 1"{} and add to messages List}}
+\DoxyCodeLine{    m\_NewData = \textcolor{keyword}{new} \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown}{TMP\_Dropdown}}.\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_option_data}{OptionData}}();}
+\DoxyCodeLine{    m\_NewData.text = \textcolor{stringliteral}{"{}Option 1"{}};}
+\DoxyCodeLine{    m\_Messages.Add(m\_NewData);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{//Create a new option for the Dropdown menu which reads "{}Option 2"{} and add to messages List}}
+\DoxyCodeLine{    m\_NewData2 = \textcolor{keyword}{new} \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown}{TMP\_Dropdown}}.\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_option_data}{OptionData}}();}
+\DoxyCodeLine{    m\_NewData2.text = \textcolor{stringliteral}{"{}Option 2"{}};}
+\DoxyCodeLine{    m\_Messages.Add(m\_NewData2);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{//Take each entry in the message List}}
+\DoxyCodeLine{    \textcolor{keywordflow}{foreach} (\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown}{TMP\_Dropdown}}.\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_option_data}{OptionData}} message in m\_Messages)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{//Add each entry to the Dropdown}}
+\DoxyCodeLine{        m\_Dropdown.options.Add(message);}
+\DoxyCodeLine{        \textcolor{comment}{//Make the index equal to the total number of entries}}
+\DoxyCodeLine{        m\_Index = m\_Messages.Count -\/ 1;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//This OnGUI function is used here for a quick demonstration. See the [[wiki:UISystem|UI Section]] for more information about setting up your own UI.}}
+\DoxyCodeLine{\textcolor{keywordtype}{void} OnGUI()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{comment}{//TextField for user to type new entry to add to Dropdown}}
+\DoxyCodeLine{    m\_MyString = GUI.TextField(\textcolor{keyword}{new} Rect(0, 40, 100, 40), m\_MyString);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{//Press the "{}Add"{} Button to add a new entry to the Dropdown}}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (GUI.Button(\textcolor{keyword}{new} Rect(0, 0, 100, 40), \textcolor{stringliteral}{"{}Add"{}}))}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{//Make the index the last number of entries}}
+\DoxyCodeLine{        m\_Index = m\_Messages.Count;}
+\DoxyCodeLine{        \textcolor{comment}{//Create a temporary option}}
+\DoxyCodeLine{        \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_option_data}{TMP\_Dropdown.OptionData}} temp = \textcolor{keyword}{new} \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown}{TMP\_Dropdown}}.\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_1_1_option_data}{OptionData}}();}
+\DoxyCodeLine{        \textcolor{comment}{//Make the option the data from the TextField}}
+\DoxyCodeLine{        temp.text = m\_MyString;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{//Update the messages list with the TextField data}}
+\DoxyCodeLine{        m\_Messages.Add(temp);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{//Add the Textfield data to the Dropdown}}
+\DoxyCodeLine{        m\_Dropdown.options.Insert(m\_Index, temp);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{//Press the "{}Remove"{} button to delete the selected option}}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (GUI.Button(\textcolor{keyword}{new} Rect(110, 0, 100, 40), \textcolor{stringliteral}{"{}Remove"{}}))}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{//Remove the current selected item from the Dropdown from the messages List}}
+\DoxyCodeLine{        m\_Messages.RemoveAt(m\_Dropdown.value);}
+\DoxyCodeLine{        \textcolor{comment}{//Remove the current selection from the Dropdown}}
+\DoxyCodeLine{        m\_Dropdown.options.RemoveAt(m\_Dropdown.value);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keyword}{@end}verbatim \}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___dropdown_a0e886902a8de21487e23342580d68728}\label{class_t_m_pro_1_1_t_m_p___dropdown_a0e886902a8de21487e23342580d68728}} 
+\index{TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}!value@{value}}
+\index{value@{value}!TMPro.TMP\_Dropdown@{TMPro.TMP\_Dropdown}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily int TMPro.\+TMP\+\_\+\+Dropdown.\+value\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The Value is the index number of the current selection in the Dropdown. 0 is the first option in the Dropdown, 1 is the second, and so on. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//Create a new Dropdown GameObject by going to the Hierarchy and clicking Create>UI>Dropdown -\/ TextMeshPro. Attach this script to the Dropdown GameObject.}}
+\DoxyCodeLine{\textcolor{comment}{//Set your own Text in the Inspector window}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UnityEngine.UI}};}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_t_m_pro}{TMPro}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }Example : MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{comment}{//Attach this script to a Dropdown GameObject}}
+\DoxyCodeLine{    \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown}{TMP\_Dropdown}} m\_Dropdown;}
+\DoxyCodeLine{    \textcolor{comment}{//This is the string that stores the current selection m\_Text of the Dropdown}}
+\DoxyCodeLine{    \textcolor{keywordtype}{string} m\_Message;}
+\DoxyCodeLine{    \textcolor{comment}{//This Text outputs the current selection to the screen}}
+\DoxyCodeLine{    \textcolor{keyword}{public} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_text}{Text}} m\_Text;}
+\DoxyCodeLine{    \textcolor{comment}{//This is the index value of the Dropdown}}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} m\_DropdownValue;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} Start()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{//Fetch the DropDown component from the GameObject}}
+\DoxyCodeLine{        m\_Dropdown = GetComponent<TMP\_Dropdown>();}
+\DoxyCodeLine{        \textcolor{comment}{//Output the first Dropdown index value}}
+\DoxyCodeLine{        Debug.Log(\textcolor{stringliteral}{"{}Starting Dropdown Value : "{}} + m\_Dropdown.\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_a0e886902a8de21487e23342580d68728}{value}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} Update()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{//Keep the current index of the Dropdown in a variable}}
+\DoxyCodeLine{        m\_DropdownValue = m\_Dropdown.\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_a0e886902a8de21487e23342580d68728}{value}};}
+\DoxyCodeLine{        \textcolor{comment}{//Change the message to say the name of the current Dropdown selection using the value}}
+\DoxyCodeLine{        m\_Message = m\_Dropdown.\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___dropdown_a43e1c79bd6e32dd4546a6987d684bbb6}{options}}[m\_DropdownValue].text;}
+\DoxyCodeLine{        \textcolor{comment}{//Change the on screen Text to reflect the current Dropdown selection}}
+\DoxyCodeLine{        m\_Text.text = m\_Message;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+textmeshpro@3.\+0.\+6/\+Scripts/\+Runtime/TMP\+\_\+\+Dropdown.\+cs\end{DoxyCompactItemize}

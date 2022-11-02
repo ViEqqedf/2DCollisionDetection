@@ -1,0 +1,201 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_group}{}\doxysection{Unity\+Engine.\+UI.\+Toggle\+Group Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_toggle_group}\index{UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}}
+
+
+A component that represents a group of UI.\+Toggles.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Toggle\+Group\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_unity_engine_1_1_u_i_1_1_toggle_group}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_a68bf1d1f68cadb784797c93f9894cf88}{Notify\+Toggle\+On}} (\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} toggle, bool send\+Callback=true)
+\begin{DoxyCompactList}\small\item\em Notify the group that the given toggle is enabled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_ae692eeabbc572358840a02b1630f2309}{Unregister\+Toggle}} (\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} toggle)
+\begin{DoxyCompactList}\small\item\em Unregister a toggle from the group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_a464a704999fd046b057c6668744b66bc}{Register\+Toggle}} (\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} toggle)
+\begin{DoxyCompactList}\small\item\em Register a toggle with the toggle group so it is watched for changes and notified if another toggle in the group changes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_group_a135c5a4b893fac7ab99b3f8ccc34fb22}\label{class_unity_engine_1_1_u_i_1_1_toggle_group_a135c5a4b893fac7ab99b3f8ccc34fb22}} 
+void {\bfseries Ensure\+Valid\+State} ()
+\begin{DoxyCompactList}\small\item\em Ensure that the toggle group still has a valid state. This is only relevant when a \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group}{Toggle\+Group}} is Started or a \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} has been deleted from the group. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_a6043a7b489a71fc5908ee5827a0aba9b}{Any\+Toggles\+On}} ()
+\begin{DoxyCompactList}\small\item\em Are any of the toggles on? \end{DoxyCompactList}\item 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_aa4b1d7d085fb2101f4f6b000694ff862}{Active\+Toggles}} ()
+\begin{DoxyCompactList}\small\item\em Returns the toggles in this group that are active. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_ac1005ce10a4784b460071c3e5d822366}{Get\+First\+Active\+Toggle}} ()
+\begin{DoxyCompactList}\small\item\em Returns the toggle that is the first in the list of active toggles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_af3ec0ddccc8c9e409e76edd4d0b799c0}{Set\+All\+Toggles\+Off}} (bool send\+Callback=true)
+\begin{DoxyCompactList}\small\item\em Switch all toggles off. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_a2248d6cf8726b4240010543a4f861ca5}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Because all the Toggles have registered themselves in the On\+Enabled, Start should check to make sure at least one \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} is active in groups that do not Allow\+Switch\+Off \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_aeeffdcede367f72e9d7e46e74044d54d}{On\+Enable}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_group_abab0008adf7c88f4513ed62eec136c66}\label{class_unity_engine_1_1_u_i_1_1_toggle_group_abab0008adf7c88f4513ed62eec136c66}} 
+List$<$ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} $>$ {\bfseries m\+\_\+\+Toggles} = new List$<$\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}}$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_abd3d40a3068f691acb80e0a24fc5e04f}{allow\+Switch\+Off}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is it allowed that no toggle is switched on? \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A component that represents a group of UI.\+Toggles. 
+
+When using a group reference the group from a \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{UI.\+Toggle}}. Only one member of a group can be active at a time. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_group_aa4b1d7d085fb2101f4f6b000694ff862}\label{class_unity_engine_1_1_u_i_1_1_toggle_group_aa4b1d7d085fb2101f4f6b000694ff862}} 
+\index{UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}!ActiveToggles@{ActiveToggles}}
+\index{ActiveToggles@{ActiveToggles}!UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}}
+\doxysubsubsection{\texorpdfstring{ActiveToggles()}{ActiveToggles()}}
+{\footnotesize\ttfamily IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} $>$ Unity\+Engine.\+UI.\+Toggle\+Group.\+Active\+Toggles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the toggles in this group that are active. 
+
+\begin{DoxyReturn}{Returns}
+The active toggles in the group.
+\end{DoxyReturn}
+
+
+Toggles belonging to this group but are not active either because their Game\+Object is inactive or because the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} component is disabled, are not returned as part of the list. \mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_group_a6043a7b489a71fc5908ee5827a0aba9b}\label{class_unity_engine_1_1_u_i_1_1_toggle_group_a6043a7b489a71fc5908ee5827a0aba9b}} 
+\index{UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}!AnyTogglesOn@{AnyTogglesOn}}
+\index{AnyTogglesOn@{AnyTogglesOn}!UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}}
+\doxysubsubsection{\texorpdfstring{AnyTogglesOn()}{AnyTogglesOn()}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+UI.\+Toggle\+Group.\+Any\+Toggles\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Are any of the toggles on? 
+
+\begin{DoxyReturn}{Returns}
+Are and of the toggles on?
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_group_ac1005ce10a4784b460071c3e5d822366}\label{class_unity_engine_1_1_u_i_1_1_toggle_group_ac1005ce10a4784b460071c3e5d822366}} 
+\index{UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}!GetFirstActiveToggle@{GetFirstActiveToggle}}
+\index{GetFirstActiveToggle@{GetFirstActiveToggle}!UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}}
+\doxysubsubsection{\texorpdfstring{GetFirstActiveToggle()}{GetFirstActiveToggle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} Unity\+Engine.\+UI.\+Toggle\+Group.\+Get\+First\+Active\+Toggle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the toggle that is the first in the list of active toggles. 
+
+\begin{DoxyReturn}{Returns}
+The first active toggle from m\+\_\+\+Toggles
+\end{DoxyReturn}
+
+
+Get the active toggle for this group. As the group \mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_group_a68bf1d1f68cadb784797c93f9894cf88}\label{class_unity_engine_1_1_u_i_1_1_toggle_group_a68bf1d1f68cadb784797c93f9894cf88}} 
+\index{UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}!NotifyToggleOn@{NotifyToggleOn}}
+\index{NotifyToggleOn@{NotifyToggleOn}!UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}}
+\doxysubsubsection{\texorpdfstring{NotifyToggleOn()}{NotifyToggleOn()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Toggle\+Group.\+Notify\+Toggle\+On (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}}}]{toggle,  }\item[{bool}]{send\+Callback = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Notify the group that the given toggle is enabled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em toggle} & The toggle that got triggered on.\\
+\hline
+{\em send\+Callback} & If other toggles should send on\+Value\+Changed.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_group_aeeffdcede367f72e9d7e46e74044d54d}\label{class_unity_engine_1_1_u_i_1_1_toggle_group_aeeffdcede367f72e9d7e46e74044d54d}} 
+\index{UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Toggle\+Group.\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_group_a464a704999fd046b057c6668744b66bc}\label{class_unity_engine_1_1_u_i_1_1_toggle_group_a464a704999fd046b057c6668744b66bc}} 
+\index{UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}!RegisterToggle@{RegisterToggle}}
+\index{RegisterToggle@{RegisterToggle}!UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}}
+\doxysubsubsection{\texorpdfstring{RegisterToggle()}{RegisterToggle()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Toggle\+Group.\+Register\+Toggle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}}}]{toggle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Register a toggle with the toggle group so it is watched for changes and notified if another toggle in the group changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em toggle} & The toggle to register with the group.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_group_af3ec0ddccc8c9e409e76edd4d0b799c0}\label{class_unity_engine_1_1_u_i_1_1_toggle_group_af3ec0ddccc8c9e409e76edd4d0b799c0}} 
+\index{UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}!SetAllTogglesOff@{SetAllTogglesOff}}
+\index{SetAllTogglesOff@{SetAllTogglesOff}!UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}}
+\doxysubsubsection{\texorpdfstring{SetAllTogglesOff()}{SetAllTogglesOff()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Toggle\+Group.\+Set\+All\+Toggles\+Off (\begin{DoxyParamCaption}\item[{bool}]{send\+Callback = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Switch all toggles off. 
+
+This method can be used to switch all toggles off, regardless of whether the allow\+Switch\+Off property is enabled or not. \mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_group_a2248d6cf8726b4240010543a4f861ca5}\label{class_unity_engine_1_1_u_i_1_1_toggle_group_a2248d6cf8726b4240010543a4f861ca5}} 
+\index{UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}!Start@{Start}}
+\index{Start@{Start}!UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Toggle\+Group.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Because all the Toggles have registered themselves in the On\+Enabled, Start should check to make sure at least one \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} is active in groups that do not Allow\+Switch\+Off 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_group_ae692eeabbc572358840a02b1630f2309}\label{class_unity_engine_1_1_u_i_1_1_toggle_group_ae692eeabbc572358840a02b1630f2309}} 
+\index{UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}!UnregisterToggle@{UnregisterToggle}}
+\index{UnregisterToggle@{UnregisterToggle}!UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}}
+\doxysubsubsection{\texorpdfstring{UnregisterToggle()}{UnregisterToggle()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Toggle\+Group.\+Unregister\+Toggle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}}}]{toggle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Unregister a toggle from the group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em toggle} & The toggle to remove.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_group_abd3d40a3068f691acb80e0a24fc5e04f}\label{class_unity_engine_1_1_u_i_1_1_toggle_group_abd3d40a3068f691acb80e0a24fc5e04f}} 
+\index{UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}!allowSwitchOff@{allowSwitchOff}}
+\index{allowSwitchOff@{allowSwitchOff}!UnityEngine.UI.ToggleGroup@{UnityEngine.UI.ToggleGroup}}
+\doxysubsubsection{\texorpdfstring{allowSwitchOff}{allowSwitchOff}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+UI.\+Toggle\+Group.\+allow\+Switch\+Off\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Is it allowed that no toggle is switched on? 
+
+If this setting is enabled, pressing the toggle that is currently switched on will switch it off, so that no toggle is switched on. If this setting is disabled, pressing the toggle that is currently switched on will not change its state. Note that even if allow\+Switch\+Off is false, the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} Group will not enforce its constraint right away if no toggles in the group are switched on when the scene is loaded or when the group is instantiated. It will only prevent the user from switching a toggle off. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/Toggle\+Group.\+cs\end{DoxyCompactItemize}

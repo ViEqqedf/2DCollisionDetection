@@ -1,0 +1,231 @@
+\hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{}\doxysection{TMPro.\+TMP\+\_\+\+Text\+Processing\+Stack\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Struct Template Reference}
+\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack}\index{TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}}
+
+
+Structure used to track XML tags of various types.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack_ae8831512ba87551b56fc84b10c97c6e6}{TMP\+\_\+\+Text\+Processing\+Stack}} (T\mbox{[}$\,$\mbox{]} stack)
+\begin{DoxyCompactList}\small\item\em Constructor to create a new item stack. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a5053c4addcb6de5a895de1dcea4c1535}{TMP\+\_\+\+Text\+Processing\+Stack}} (int capacity)
+\begin{DoxyCompactList}\small\item\em Constructor for a new item stack with the given capacity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_abea1a1b3f794337a53e1fe2438f1706c}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_abea1a1b3f794337a53e1fe2438f1706c}} 
+{\bfseries TMP\+\_\+\+Text\+Processing\+Stack} (int capacity, int \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a4d53f5d9b935098cf582927136a62cde}{rollover\+Size}})
+\item 
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a251279ee81e8a656885c8f07e48200f2}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a251279ee81e8a656885c8f07e48200f2}} 
+void {\bfseries Clear} ()
+\begin{DoxyCompactList}\small\item\em Function to clear and reset stack to first item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a1580e126246f80bf22e81f42b58c103a}{Set\+Default}} (T item)
+\begin{DoxyCompactList}\small\item\em Function to set the first item on the stack and reset index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack_ae714d56264dcfa5e94adebcee1c8e678}{Add}} (T item)
+\begin{DoxyCompactList}\small\item\em Function to add a new item to the stack. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack_ae88317fdd03d23ab9ffb5e7dbd22aac1}{Remove}} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve an item from the stack. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a32c376682e5f9ae7a7291676a9974e80}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a32c376682e5f9ae7a7291676a9974e80}} 
+void {\bfseries Push} (T item)
+\item 
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a96c2a8cc7189e7ed4116adbb6187bb27}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a96c2a8cc7189e7ed4116adbb6187bb27}} 
+T {\bfseries Pop} ()
+\item 
+T \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a59e978bf54e1905503edf75e0d75bb59}{Peek}} ()
+\item 
+T \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a316f48634f9ec9d9823cc7626e6439b8}{Current\+Item}} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the current item from the stack. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack_ae9a8507bf1567b8c84ddd28c52bb1d4f}{Previous\+Item}} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the previous item without affecting the stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a82dc6710d09eda5649b028da2b1adc0b}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a82dc6710d09eda5649b028da2b1adc0b}} 
+T\mbox{[}$\,$\mbox{]} {\bfseries item\+Stack}
+\item 
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_ac9b539a06415d0f8ec07983ee4b28f92}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_ac9b539a06415d0f8ec07983ee4b28f92}} 
+int {\bfseries index}
+\item 
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a6a31051ee436f5296def5c617ad0f8b2}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a6a31051ee436f5296def5c617ad0f8b2}} 
+T {\bfseries m\+\_\+\+Default\+Item}
+\item 
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a4d3888cf26473ad8ab690d517f8ec178}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a4d3888cf26473ad8ab690d517f8ec178}} 
+int {\bfseries m\+\_\+\+Capacity}
+\item 
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a5c4820ddcb00d4cc4914c0ec60acc5e9}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a5c4820ddcb00d4cc4914c0ec60acc5e9}} 
+int {\bfseries m\+\_\+\+Rollover\+Size}
+\item 
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a969b53235298d4a99293c6bedd4979f8}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a969b53235298d4a99293c6bedd4979f8}} 
+int {\bfseries m\+\_\+\+Count}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_affa0ef3f976d58893585986e954c0fab}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_affa0ef3f976d58893585986e954c0fab}} 
+const int {\bfseries k\+\_\+\+Default\+Capacity} = 4
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a02a0826eea3dc2bfabc3a602de955f3b}{Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a6a261f27e7056b45df07e09ae8425cbd}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a6a261f27e7056b45df07e09ae8425cbd}} 
+T {\bfseries current}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the current item on the stack. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a4d53f5d9b935098cf582927136a62cde}{rollover\+Size}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure used to track XML tags of various types. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_ae8831512ba87551b56fc84b10c97c6e6}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_ae8831512ba87551b56fc84b10c97c6e6}} 
+\index{TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}!TMP\_TextProcessingStack@{TMP\_TextProcessingStack}}
+\index{TMP\_TextProcessingStack@{TMP\_TextProcessingStack}!TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{TMP\_TextProcessingStack()}{TMP\_TextProcessingStack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMPro.\+TMP\+\_\+\+Text\+Processing\+Stack}}$<$ T $>$.\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}} (\begin{DoxyParamCaption}\item[{T\mbox{[}$\,$\mbox{]}}]{stack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor to create a new item stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a5053c4addcb6de5a895de1dcea4c1535}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a5053c4addcb6de5a895de1dcea4c1535}} 
+\index{TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}!TMP\_TextProcessingStack@{TMP\_TextProcessingStack}}
+\index{TMP\_TextProcessingStack@{TMP\_TextProcessingStack}!TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{TMP\_TextProcessingStack()}{TMP\_TextProcessingStack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMPro.\+TMP\+\_\+\+Text\+Processing\+Stack}}$<$ T $>$.\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}} (\begin{DoxyParamCaption}\item[{int}]{capacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for a new item stack with the given capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_ae714d56264dcfa5e94adebcee1c8e678}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_ae714d56264dcfa5e94adebcee1c8e678}} 
+\index{TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMPro.\+TMP\+\_\+\+Text\+Processing\+Stack}}$<$ T $>$.Add (\begin{DoxyParamCaption}\item[{T}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to add a new item to the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a316f48634f9ec9d9823cc7626e6439b8}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a316f48634f9ec9d9823cc7626e6439b8}} 
+\index{TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}!CurrentItem@{CurrentItem}}
+\index{CurrentItem@{CurrentItem}!TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CurrentItem()}{CurrentItem()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMPro.\+TMP\+\_\+\+Text\+Processing\+Stack}}$<$ T $>$.Current\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to retrieve the current item from the stack. 
+
+\begin{DoxyReturn}{Returns}
+item\+Stack $<$\+T$>$
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a59e978bf54e1905503edf75e0d75bb59}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a59e978bf54e1905503edf75e0d75bb59}} 
+\index{TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}!Peek@{Peek}}
+\index{Peek@{Peek}!TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Peek()}{Peek()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMPro.\+TMP\+\_\+\+Text\+Processing\+Stack}}$<$ T $>$.Peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_ae9a8507bf1567b8c84ddd28c52bb1d4f}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_ae9a8507bf1567b8c84ddd28c52bb1d4f}} 
+\index{TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}!PreviousItem@{PreviousItem}}
+\index{PreviousItem@{PreviousItem}!TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PreviousItem()}{PreviousItem()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMPro.\+TMP\+\_\+\+Text\+Processing\+Stack}}$<$ T $>$.Previous\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to retrieve the previous item without affecting the stack. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_ae88317fdd03d23ab9ffb5e7dbd22aac1}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_ae88317fdd03d23ab9ffb5e7dbd22aac1}} 
+\index{TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMPro.\+TMP\+\_\+\+Text\+Processing\+Stack}}$<$ T $>$.Remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to retrieve an item from the stack. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a1580e126246f80bf22e81f42b58c103a}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a1580e126246f80bf22e81f42b58c103a}} 
+\index{TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}!SetDefault@{SetDefault}}
+\index{SetDefault@{SetDefault}!TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetDefault()}{SetDefault()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMPro.\+TMP\+\_\+\+Text\+Processing\+Stack}}$<$ T $>$.Set\+Default (\begin{DoxyParamCaption}\item[{T}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to set the first item on the stack and reset index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a02a0826eea3dc2bfabc3a602de955f3b}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a02a0826eea3dc2bfabc3a602de955f3b}} 
+\index{TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}!Count@{Count}}
+\index{Count@{Count}!TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Count}{Count}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMPro.\+TMP\+\_\+\+Text\+Processing\+Stack}}$<$ T $>$.Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+
+
+\mbox{\Hypertarget{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a4d53f5d9b935098cf582927136a62cde}\label{struct_t_m_pro_1_1_t_m_p___text_processing_stack_a4d53f5d9b935098cf582927136a62cde}} 
+\index{TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}!rolloverSize@{rolloverSize}}
+\index{rolloverSize@{rolloverSize}!TMPro.TMP\_TextProcessingStack$<$ T $>$@{TMPro.TMP\_TextProcessingStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{rolloverSize}{rolloverSize}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMPro.\+TMP\+\_\+\+Text\+Processing\+Stack}}$<$ T $>$.rollover\+Size\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+textmeshpro@3.\+0.\+6/\+Scripts/\+Runtime/TMP\+\_\+\+Text\+Processing\+Stack.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,148 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_update_registry}{}\doxysection{Unity\+Engine.\+UI.\+Canvas\+Update\+Registry Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_canvas_update_registry}\index{UnityEngine.UI.CanvasUpdateRegistry@{UnityEngine.UI.CanvasUpdateRegistry}}
+
+
+A place where Canvas\+Elements can register themselves for rebuilding.  
+
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_ad5b0f17088ceb6cb98dcf9c82d6f2607}{Register\+Canvas\+Element\+For\+Layout\+Rebuild}} (\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}} element)
+\begin{DoxyCompactList}\small\item\em Try and add the given element to the layout rebuild list. Will not return if successfully added. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_a71bfb75febe21f77d857f62d502b0882}{Try\+Register\+Canvas\+Element\+For\+Layout\+Rebuild}} (\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}} element)
+\begin{DoxyCompactList}\small\item\em Try and add the given element to the layout rebuild list. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_a68bbad2e6049ac6ee0d9ecada4b1995b}{Register\+Canvas\+Element\+For\+Graphic\+Rebuild}} (\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}} element)
+\begin{DoxyCompactList}\small\item\em Try and add the given element to the rebuild list. Will not return if successfully added. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_af2ea6872d7501be5dd1c78bb41e021e7}{Try\+Register\+Canvas\+Element\+For\+Graphic\+Rebuild}} (\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}} element)
+\begin{DoxyCompactList}\small\item\em Try and add the given element to the rebuild list. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_a754c72c5b27625e5b88e42c7c6c1865d}{Un\+Register\+Canvas\+Element\+For\+Rebuild}} (\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}} element)
+\begin{DoxyCompactList}\small\item\em Remove the given element from both the graphic and the layout rebuild lists. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_a7110fea683a9fa7d04434d88876ebdfb}{Is\+Rebuilding\+Layout}} ()
+\begin{DoxyCompactList}\small\item\em Are graphics layouts currently being calculated.. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_a9b7a5c1c4a783404904fe71c7b610ea9}{Is\+Rebuilding\+Graphics}} ()
+\begin{DoxyCompactList}\small\item\em Are graphics currently being rebuild. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_a6c2d0cf0dc05c7e8cd288ec3a7ec83a2}\label{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_a6c2d0cf0dc05c7e8cd288ec3a7ec83a2}} 
+static \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_update_registry}{Canvas\+Update\+Registry}} {\bfseries instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the singleton registry instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A place where Canvas\+Elements can register themselves for rebuilding. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_a9b7a5c1c4a783404904fe71c7b610ea9}\label{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_a9b7a5c1c4a783404904fe71c7b610ea9}} 
+\index{UnityEngine.UI.CanvasUpdateRegistry@{UnityEngine.UI.CanvasUpdateRegistry}!IsRebuildingGraphics@{IsRebuildingGraphics}}
+\index{IsRebuildingGraphics@{IsRebuildingGraphics}!UnityEngine.UI.CanvasUpdateRegistry@{UnityEngine.UI.CanvasUpdateRegistry}}
+\doxysubsubsection{\texorpdfstring{IsRebuildingGraphics()}{IsRebuildingGraphics()}}
+{\footnotesize\ttfamily static bool Unity\+Engine.\+UI.\+Canvas\+Update\+Registry.\+Is\+Rebuilding\+Graphics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Are graphics currently being rebuild. 
+
+\begin{DoxyReturn}{Returns}
+True if the rebuild loop is \mbox{\hyperlink{namespace_unity_engine_1_1_u_i_a76b804cb1978e6dc1162615deaa710e9a9f8f53680b26c10da3b993add473b9e0}{Canvas\+Update.\+Pre\+Render}} or Canvas\+Update.\+Render
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_a7110fea683a9fa7d04434d88876ebdfb}\label{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_a7110fea683a9fa7d04434d88876ebdfb}} 
+\index{UnityEngine.UI.CanvasUpdateRegistry@{UnityEngine.UI.CanvasUpdateRegistry}!IsRebuildingLayout@{IsRebuildingLayout}}
+\index{IsRebuildingLayout@{IsRebuildingLayout}!UnityEngine.UI.CanvasUpdateRegistry@{UnityEngine.UI.CanvasUpdateRegistry}}
+\doxysubsubsection{\texorpdfstring{IsRebuildingLayout()}{IsRebuildingLayout()}}
+{\footnotesize\ttfamily static bool Unity\+Engine.\+UI.\+Canvas\+Update\+Registry.\+Is\+Rebuilding\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Are graphics layouts currently being calculated.. 
+
+\begin{DoxyReturn}{Returns}
+True if the rebuild loop is \mbox{\hyperlink{namespace_unity_engine_1_1_u_i_a76b804cb1978e6dc1162615deaa710e9a2f71a4c045735197aeea502e9019be66}{Canvas\+Update.\+Prelayout}}, \mbox{\hyperlink{namespace_unity_engine_1_1_u_i_a76b804cb1978e6dc1162615deaa710e9aebd9bec4d70abc789d439c1f136b0538}{Canvas\+Update.\+Layout}} or Canvas\+Update.\+Postlayout
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_a68bbad2e6049ac6ee0d9ecada4b1995b}\label{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_a68bbad2e6049ac6ee0d9ecada4b1995b}} 
+\index{UnityEngine.UI.CanvasUpdateRegistry@{UnityEngine.UI.CanvasUpdateRegistry}!RegisterCanvasElementForGraphicRebuild@{RegisterCanvasElementForGraphicRebuild}}
+\index{RegisterCanvasElementForGraphicRebuild@{RegisterCanvasElementForGraphicRebuild}!UnityEngine.UI.CanvasUpdateRegistry@{UnityEngine.UI.CanvasUpdateRegistry}}
+\doxysubsubsection{\texorpdfstring{RegisterCanvasElementForGraphicRebuild()}{RegisterCanvasElementForGraphicRebuild()}}
+{\footnotesize\ttfamily static void Unity\+Engine.\+UI.\+Canvas\+Update\+Registry.\+Register\+Canvas\+Element\+For\+Graphic\+Rebuild (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}}}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Try and add the given element to the rebuild list. Will not return if successfully added. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & The element that is needing rebuilt.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_ad5b0f17088ceb6cb98dcf9c82d6f2607}\label{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_ad5b0f17088ceb6cb98dcf9c82d6f2607}} 
+\index{UnityEngine.UI.CanvasUpdateRegistry@{UnityEngine.UI.CanvasUpdateRegistry}!RegisterCanvasElementForLayoutRebuild@{RegisterCanvasElementForLayoutRebuild}}
+\index{RegisterCanvasElementForLayoutRebuild@{RegisterCanvasElementForLayoutRebuild}!UnityEngine.UI.CanvasUpdateRegistry@{UnityEngine.UI.CanvasUpdateRegistry}}
+\doxysubsubsection{\texorpdfstring{RegisterCanvasElementForLayoutRebuild()}{RegisterCanvasElementForLayoutRebuild()}}
+{\footnotesize\ttfamily static void Unity\+Engine.\+UI.\+Canvas\+Update\+Registry.\+Register\+Canvas\+Element\+For\+Layout\+Rebuild (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}}}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Try and add the given element to the layout rebuild list. Will not return if successfully added. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & The element that is needing rebuilt.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_af2ea6872d7501be5dd1c78bb41e021e7}\label{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_af2ea6872d7501be5dd1c78bb41e021e7}} 
+\index{UnityEngine.UI.CanvasUpdateRegistry@{UnityEngine.UI.CanvasUpdateRegistry}!TryRegisterCanvasElementForGraphicRebuild@{TryRegisterCanvasElementForGraphicRebuild}}
+\index{TryRegisterCanvasElementForGraphicRebuild@{TryRegisterCanvasElementForGraphicRebuild}!UnityEngine.UI.CanvasUpdateRegistry@{UnityEngine.UI.CanvasUpdateRegistry}}
+\doxysubsubsection{\texorpdfstring{TryRegisterCanvasElementForGraphicRebuild()}{TryRegisterCanvasElementForGraphicRebuild()}}
+{\footnotesize\ttfamily static bool Unity\+Engine.\+UI.\+Canvas\+Update\+Registry.\+Try\+Register\+Canvas\+Element\+For\+Graphic\+Rebuild (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}}}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Try and add the given element to the rebuild list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & The element that is needing rebuilt.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the element was successfully added to the rebuilt list. False if either already inside a Graphic Update loop OR has already been added to the list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_a71bfb75febe21f77d857f62d502b0882}\label{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_a71bfb75febe21f77d857f62d502b0882}} 
+\index{UnityEngine.UI.CanvasUpdateRegistry@{UnityEngine.UI.CanvasUpdateRegistry}!TryRegisterCanvasElementForLayoutRebuild@{TryRegisterCanvasElementForLayoutRebuild}}
+\index{TryRegisterCanvasElementForLayoutRebuild@{TryRegisterCanvasElementForLayoutRebuild}!UnityEngine.UI.CanvasUpdateRegistry@{UnityEngine.UI.CanvasUpdateRegistry}}
+\doxysubsubsection{\texorpdfstring{TryRegisterCanvasElementForLayoutRebuild()}{TryRegisterCanvasElementForLayoutRebuild()}}
+{\footnotesize\ttfamily static bool Unity\+Engine.\+UI.\+Canvas\+Update\+Registry.\+Try\+Register\+Canvas\+Element\+For\+Layout\+Rebuild (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}}}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Try and add the given element to the layout rebuild list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & The element that is needing rebuilt.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the element was successfully added to the rebuilt list. False if either already inside a Graphic Update loop OR has already been added to the list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_a754c72c5b27625e5b88e42c7c6c1865d}\label{class_unity_engine_1_1_u_i_1_1_canvas_update_registry_a754c72c5b27625e5b88e42c7c6c1865d}} 
+\index{UnityEngine.UI.CanvasUpdateRegistry@{UnityEngine.UI.CanvasUpdateRegistry}!UnRegisterCanvasElementForRebuild@{UnRegisterCanvasElementForRebuild}}
+\index{UnRegisterCanvasElementForRebuild@{UnRegisterCanvasElementForRebuild}!UnityEngine.UI.CanvasUpdateRegistry@{UnityEngine.UI.CanvasUpdateRegistry}}
+\doxysubsubsection{\texorpdfstring{UnRegisterCanvasElementForRebuild()}{UnRegisterCanvasElementForRebuild()}}
+{\footnotesize\ttfamily static void Unity\+Engine.\+UI.\+Canvas\+Update\+Registry.\+Un\+Register\+Canvas\+Element\+For\+Rebuild (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}}}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Remove the given element from both the graphic and the layout rebuild lists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/Canvas\+Update\+Registry.\+cs\end{DoxyCompactItemize}

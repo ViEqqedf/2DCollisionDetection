@@ -1,0 +1,52 @@
+\hypertarget{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider}{}\doxysection{Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+IAssembly\+Name\+Provider Interface Reference}
+\label{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider}\index{Microsoft.Unity.VisualStudio.Editor.IAssemblyNameProvider@{Microsoft.Unity.VisualStudio.Editor.IAssemblyNameProvider}}
+Inheritance diagram for Microsoft.\+Unity.\+Visual\+Studio.\+Editor.\+IAssembly\+Name\+Provider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_afa0253d421d1df072f67a7fa74dc2af6}\label{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_afa0253d421d1df072f67a7fa74dc2af6}} 
+string {\bfseries Get\+Assembly\+Name\+From\+Script\+Path} (string path)
+\item 
+\mbox{\Hypertarget{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_ad59374069d2fbfdeb3df9659ea984d37}\label{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_ad59374069d2fbfdeb3df9659ea984d37}} 
+string {\bfseries Get\+Assembly\+Name} (string assembly\+Output\+Path, string assembly\+Name)
+\item 
+\mbox{\Hypertarget{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_a1cca00a7d77e00c85fa0ff1ead9585a5}\label{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_a1cca00a7d77e00c85fa0ff1ead9585a5}} 
+bool {\bfseries Is\+Internalized\+Package\+Path} (string path)
+\item 
+\mbox{\Hypertarget{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_a5657c425c1039e4bcdd8875e94fc198b}\label{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_a5657c425c1039e4bcdd8875e94fc198b}} 
+IEnumerable$<$ Assembly $>$ {\bfseries Get\+Assemblies} (Func$<$ string, bool $>$ should\+File\+Be\+Part\+Of\+Solution)
+\item 
+\mbox{\Hypertarget{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_a3cc34f911fcc6948b6866851484db0fb}\label{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_a3cc34f911fcc6948b6866851484db0fb}} 
+IEnumerable$<$ string $>$ {\bfseries Get\+All\+Asset\+Paths} ()
+\item 
+\mbox{\Hypertarget{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_af81a5de25c0cc40702b0a3a96e128ef5}\label{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_af81a5de25c0cc40702b0a3a96e128ef5}} 
+Unity\+Editor.\+Package\+Manager.\+Package\+Info {\bfseries Find\+For\+Asset\+Path} (string asset\+Path)
+\item 
+\mbox{\Hypertarget{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_a19a01ece2dcc90befed921a430c490fc}\label{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_a19a01ece2dcc90befed921a430c490fc}} 
+Response\+File\+Data {\bfseries Parse\+Response\+File} (string response\+File\+Path, string project\+Directory, string\mbox{[}$\,$\mbox{]} system\+Reference\+Directories)
+\item 
+\mbox{\Hypertarget{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_a9450efb48c1373b27ff8b308e33b5c6d}\label{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_a9450efb48c1373b27ff8b308e33b5c6d}} 
+void {\bfseries Toggle\+Project\+Generation} (Project\+Generation\+Flag preference)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_aeecdc7348b76ea53345ed78a50ce1677}\label{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_aeecdc7348b76ea53345ed78a50ce1677}} 
+string\mbox{[}$\,$\mbox{]} {\bfseries Project\+Supported\+Extensions}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_aa20f9401e1914d4a6452798b60f25f84}\label{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_aa20f9401e1914d4a6452798b60f25f84}} 
+string {\bfseries Project\+Generation\+Root\+Namespace}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_a73e2b4f48876632b68178cb154198bf5}\label{interface_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_i_assembly_name_provider_a73e2b4f48876632b68178cb154198bf5}} 
+Project\+Generation\+Flag {\bfseries Project\+Generation\+Flag}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ide.\+visualstudio@2.\+0.\+12/\+Editor/\+Project\+Generation/Assembly\+Name\+Provider.\+cs\end{DoxyCompactItemize}

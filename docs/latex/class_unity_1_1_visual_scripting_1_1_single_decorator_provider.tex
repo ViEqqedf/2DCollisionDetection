@@ -1,0 +1,112 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider}{}\doxysection{Unity.\+Visual\+Scripting.\+Single\+Decorator\+Provider\texorpdfstring{$<$}{<} TDecorated, TDecorator, TAttribute \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider}\index{Unity.VisualScripting.SingleDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.SingleDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a199d29f5f40d13a33f45fa400382c363}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a199d29f5f40d13a33f45fa400382c363}} 
+bool {\bfseries Has\+Decorator} (Type decorated\+Type)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a53263c17f762827575ddee4661dcae60}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a53263c17f762827575ddee4661dcae60}} 
+bool {\bfseries Try\+Get\+Decorator\+Type} (Type decorated\+Type, out Type decorator\+Type)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a8cf10df3592c6c5fc6973464a0bbb9af}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a8cf10df3592c6c5fc6973464a0bbb9af}} 
+Type {\bfseries Get\+Decorator\+Type} (Type decorated\+Type)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a7d32d4f1d4015ee8826e949c7c5a9d49}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a7d32d4f1d4015ee8826e949c7c5a9d49}} 
+abstract bool {\bfseries Is\+Valid} (TDecorated decorated)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_ab7911b5cd58b296b0a5830d50f4e1168}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_ab7911b5cd58b296b0a5830d50f4e1168}} 
+TDecorator {\bfseries Get\+Decorator} (TDecorated decorated)
+\item 
+T \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_ac01da996d27b1948d8993868075a7f57}{Get\+Decorator$<$ T $>$}} (TDecorated decorated)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_add4f6e4a90b977712cbf84916c1e2043}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_add4f6e4a90b977712cbf84916c1e2043}} 
+void {\bfseries Free} (TDecorator decorator)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_ae1ad7a0d3e3c895b1f990bef3892a2f5}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_ae1ad7a0d3e3c895b1f990bef3892a2f5}} 
+void {\bfseries Free} (IEnumerable$<$ TDecorator $>$ decorators)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a7a8eb5635c246bf869dea9c3f9ea755c}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a7a8eb5635c246bf869dea9c3f9ea755c}} 
+void {\bfseries Free\+Invalid} ()
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a808fa8a4089a22da142c5b6d0160bde7}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a808fa8a4089a22da142c5b6d0160bde7}} 
+void {\bfseries Free\+All} ()
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_abc853cf811b6d9ed90e7bce0265b9279}{Renew$<$ TSpecific\+Decorator $>$}} (ref TSpecific\+Decorator decorator, TDecorated decorated, Func$<$ TDecorated, TSpecific\+Decorator $>$ constructor=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a1529618868845fcf411c4f2475c42513}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a1529618868845fcf411c4f2475c42513}} 
+virtual TDecorator {\bfseries Create\+Decorator} (Type decorator\+Type, TDecorated decorated)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a8872c610f65050770fb9ca5e5624680c}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a8872c610f65050770fb9ca5e5624680c}} 
+virtual Type {\bfseries Get\+Decorated\+Type} (TDecorated decorated)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_ade39cff68b506db519507225195e9c95}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_ade39cff68b506db519507225195e9c95}} 
+virtual Type {\bfseries Resolve\+Decorator\+Type} (Type decorated\+Type)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a347cd927570042a0ad509838ca29b50b}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a347cd927570042a0ad509838ca29b50b}} 
+Type {\bfseries Resolve\+Decorator\+Type\+By\+Hierarchy} (Type decorated\+Type, bool inherit=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a93cb4dfd48f0b669b6e078c01ce57043}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a93cb4dfd48f0b669b6e078c01ce57043}} 
+readonly object {\bfseries types\+Lock} = new object()
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a4387652f7aa310679760834b959bff65}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a4387652f7aa310679760834b959bff65}} 
+readonly object {\bfseries instances\+Lock} = new object()
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a9dceecaa59603e531abe8a75ea000d11}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a9dceecaa59603e531abe8a75ea000d11}} 
+readonly Dictionary$<$ Type, Type $>$ {\bfseries defined\+Decorator\+Types}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a0561df73058958f37a5c24b7c28c8d49}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a0561df73058958f37a5c24b7c28c8d49}} 
+readonly Dictionary$<$ Type, Type $>$ {\bfseries resolved\+Decorator\+Types}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_aeba1f343ff70c31d23ba04360c5d66c4}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_aeba1f343ff70c31d23ba04360c5d66c4}} 
+readonly Dictionary$<$ TDecorated, TDecorator $>$ {\bfseries decorators}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_acef7c87725836c0cb02449400bdea362}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_acef7c87725836c0cb02449400bdea362}} 
+readonly Dictionary$<$ TDecorator, TDecorated $>$ {\bfseries decorateds}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a9f4672f987410d732f0228c2ed0010ed}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a9f4672f987410d732f0228c2ed0010ed}} 
+virtual IEnumerable$<$ Type $>$ {\bfseries typeset}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a4a6107c48468240a812b3190c64deffd}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a4a6107c48468240a812b3190c64deffd}} 
+abstract bool {\bfseries cache}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a931ebf085fbbb95803be1dcfd1bd9b3e}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a931ebf085fbbb95803be1dcfd1bd9b3e}} 
+virtual Time\+Span {\bfseries free\+Interval}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_ac01da996d27b1948d8993868075a7f57}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_ac01da996d27b1948d8993868075a7f57}} 
+\index{Unity.VisualScripting.SingleDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.SingleDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}!GetDecorator$<$ T $>$@{GetDecorator$<$ T $>$}}
+\index{GetDecorator$<$ T $>$@{GetDecorator$<$ T $>$}!Unity.VisualScripting.SingleDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.SingleDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}}
+\doxysubsubsection{\texorpdfstring{GetDecorator$<$ T $>$()}{GetDecorator< T >()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider}{Unity.\+Visual\+Scripting.\+Single\+Decorator\+Provider}}$<$ TDecorated, TDecorator, TAttribute $>$.Get\+Decorator$<$ T $>$ (\begin{DoxyParamCaption}\item[{TDecorated}]{decorated }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em TDecorator}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_abc853cf811b6d9ed90e7bce0265b9279}\label{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_abc853cf811b6d9ed90e7bce0265b9279}} 
+\index{Unity.VisualScripting.SingleDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.SingleDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}!Renew$<$ TSpecificDecorator $>$@{Renew$<$ TSpecificDecorator $>$}}
+\index{Renew$<$ TSpecificDecorator $>$@{Renew$<$ TSpecificDecorator $>$}!Unity.VisualScripting.SingleDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.SingleDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}}
+\doxysubsubsection{\texorpdfstring{Renew$<$ TSpecificDecorator $>$()}{Renew< TSpecificDecorator >()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider}{Unity.\+Visual\+Scripting.\+Single\+Decorator\+Provider}}$<$ TDecorated, TDecorator, TAttribute $>$.Renew$<$ TSpecific\+Decorator $>$ (\begin{DoxyParamCaption}\item[{ref TSpecific\+Decorator}]{decorator,  }\item[{TDecorated}]{decorated,  }\item[{Func$<$ TDecorated, TSpecific\+Decorator $>$}]{constructor = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TSpecific\+Decorator} : {\em TDecorator}]\end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Editor/\+Visual\+Scripting.\+Core/\+Decorators/Single\+Decorator\+Provider.\+cs\end{DoxyCompactItemize}

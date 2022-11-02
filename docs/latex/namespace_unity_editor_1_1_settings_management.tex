@@ -1,0 +1,75 @@
+\hypertarget{namespace_unity_editor_1_1_settings_management}{}\doxysection{Unity\+Editor.\+Settings\+Management Namespace Reference}
+\label{namespace_unity_editor_1_1_settings_management}\index{UnityEditor.SettingsManagement@{UnityEditor.SettingsManagement}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+interface \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository}{ISettings\+Repository}}
+\begin{DoxyCompactList}\small\item\em A settings repository is responsible for implementing the saving and loading of values. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting}{IUser\+Setting}}
+\begin{DoxyCompactList}\small\item\em Types implementing \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting}{IUser\+Setting}} are eligible for use with \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute}{User\+Setting\+Attribute}}, which enables fields to automatically populate the \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_settings_provider}{User\+Settings\+Provider}} interface. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_package_settings_repository}{Package\+Settings\+Repository}}
+\begin{DoxyCompactList}\small\item\em A settings repository that stores data local to a \mbox{\hyperlink{namespace_unity}{Unity}} project. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}} manages a collection of \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository}{ISettings\+Repository}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings_dictionary}{Settings\+Dictionary}}
+\item 
+class {\bfseries Settings\+GUILayout}
+\begin{DoxyCompactList}\small\item\em Extension methods for GUILayout that also implement settings-\/specific functionality. \end{DoxyCompactList}\item 
+class {\bfseries Settings\+GUIStyles}
+\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings_key_attribute}{Settings\+Key\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Register a field with \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}}, but do not automatically create a property field in the Settings\+Provider. Unlike \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute}{User\+Setting\+Attribute}}, this attribute is valid for instance properties as well as static. These values will not be shown in the Settings\+Provider, but will have their stored values cleared when \char`\"{}\+Reset All\char`\"{} is invoked. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{User\+Setting}}
+\begin{DoxyCompactList}\small\item\em A generic implementation of \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting}{IUser\+Setting}} to be used with a \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}} instance. This default implementation assumes the \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}} instance contains two \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository}{ISettings\+Repository}}, one for Settings\+Scope.\+Project and one for Settings\+Scope.\+User. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute}{User\+Setting\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Register a static field of type \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting}{IUser\+Setting}} with the \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_settings_provider}{User\+Settings\+Provider}} window. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_block_attribute}{User\+Setting\+Block\+Attribute}}
+\begin{DoxyCompactList}\small\item\em User\+Setting\+Block allows you add a section of settings to a category. \end{DoxyCompactList}\item 
+class {\bfseries User\+Settings}
+\begin{DoxyCompactList}\small\item\em A collection of utilities for working with settings. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_settings_provider}{User\+Settings\+Provider}}
+\begin{DoxyCompactList}\small\item\em A Unity\+Editor.\+Settings\+Provider implementation that creates an interface from settings reflected from a collection of assemblies. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_settings_repository}{User\+Settings\+Repository}}
+\begin{DoxyCompactList}\small\item\em A settings repository backed by the Unity\+Editor.\+Editor\+Prefs class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_value_wrapper}{Value\+Wrapper}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_unity_editor_1_1_settings_management_afd562761f3bf28807598613a1510a343}{Setting\+Visibility}} \{ \newline
+{\bfseries None} = 0 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0
+, \mbox{\hyperlink{namespace_unity_editor_1_1_settings_management_afd562761f3bf28807598613a1510a343aec24d78ce33048dc73a2b6b1a0690192}{Visible}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0
+, \mbox{\hyperlink{namespace_unity_editor_1_1_settings_management_afd562761f3bf28807598613a1510a343a7acdf85c69cc3c5305456a293524386e}{Hidden}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 1
+, \mbox{\hyperlink{namespace_unity_editor_1_1_settings_management_afd562761f3bf28807598613a1510a343a83aad050f2ed430d870b1323629f6035}{Unlisted}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 2
+, \newline
+\mbox{\hyperlink{namespace_unity_editor_1_1_settings_management_afd562761f3bf28807598613a1510a343a84b8026b3f5e6dcfb29e82e0b0b0f386}{Unregistered}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 3
+, {\bfseries All} = Visible $\vert$ Hidden $\vert$ Unlisted $\vert$ Unregistered
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_unity_editor_1_1_settings_management_afd562761f3bf28807598613a1510a343}\label{namespace_unity_editor_1_1_settings_management_afd562761f3bf28807598613a1510a343}} 
+\index{UnityEditor.SettingsManagement@{UnityEditor.SettingsManagement}!SettingVisibility@{SettingVisibility}}
+\index{SettingVisibility@{SettingVisibility}!UnityEditor.SettingsManagement@{UnityEditor.SettingsManagement}}
+\doxysubsubsection{\texorpdfstring{SettingVisibility}{SettingVisibility}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_unity_editor_1_1_settings_management_afd562761f3bf28807598613a1510a343}{Unity\+Editor.\+Settings\+Management.\+Setting\+Visibility}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Visible@{Visible}!UnityEditor.SettingsManagement@{UnityEditor.SettingsManagement}}\index{UnityEditor.SettingsManagement@{UnityEditor.SettingsManagement}!Visible@{Visible}}}\mbox{\Hypertarget{namespace_unity_editor_1_1_settings_management_afd562761f3bf28807598613a1510a343aec24d78ce33048dc73a2b6b1a0690192}\label{namespace_unity_editor_1_1_settings_management_afd562761f3bf28807598613a1510a343aec24d78ce33048dc73a2b6b1a0690192}} 
+Visible&These fields are automatically scraped by the Settings\+Provider and displayed. Matches any static field implementing \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting}{IUser\+Setting}} and tagged with \mbox{[}\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute}{User\+Setting\+Attribute}}(visible\+In\+Settings\+Provider = true)\mbox{]}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hidden@{Hidden}!UnityEditor.SettingsManagement@{UnityEditor.SettingsManagement}}\index{UnityEditor.SettingsManagement@{UnityEditor.SettingsManagement}!Hidden@{Hidden}}}\mbox{\Hypertarget{namespace_unity_editor_1_1_settings_management_afd562761f3bf28807598613a1510a343a7acdf85c69cc3c5305456a293524386e}\label{namespace_unity_editor_1_1_settings_management_afd562761f3bf28807598613a1510a343a7acdf85c69cc3c5305456a293524386e}} 
+Hidden&These fields will be reset by the \char`\"{}\+Reset All\char`\"{} menu in Settings\+Provider, but are not shown in the interface. Typically these fields require some conditional formatting or data handling, and are shown in the Settings\+Provider \mbox{\hyperlink{namespace_unity_editor_1_1_u_i}{UI}} with a \mbox{[}\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_block_attribute}{User\+Setting\+Block\+Attribute}}\mbox{]}. Matches any static field implementing \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting}{IUser\+Setting}} and tagged with \mbox{[}\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute}{User\+Setting\+Attribute}}(visible\+In\+Settings\+Provider = false)\mbox{]}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unlisted@{Unlisted}!UnityEditor.SettingsManagement@{UnityEditor.SettingsManagement}}\index{UnityEditor.SettingsManagement@{UnityEditor.SettingsManagement}!Unlisted@{Unlisted}}}\mbox{\Hypertarget{namespace_unity_editor_1_1_settings_management_afd562761f3bf28807598613a1510a343a83aad050f2ed430d870b1323629f6035}\label{namespace_unity_editor_1_1_settings_management_afd562761f3bf28807598613a1510a343a83aad050f2ed430d870b1323629f6035}} 
+Unlisted&Unlisted settings are not shown in the Settings\+Provider, but are reset to default values by the \char`\"{}\+Reset All\char`\"{} context menu. A static or instance field tagged with \mbox{[}\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings_key_attribute}{Settings\+Key\+Attribute}}\mbox{]}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unregistered@{Unregistered}!UnityEditor.SettingsManagement@{UnityEditor.SettingsManagement}}\index{UnityEditor.SettingsManagement@{UnityEditor.SettingsManagement}!Unregistered@{Unregistered}}}\mbox{\Hypertarget{namespace_unity_editor_1_1_settings_management_afd562761f3bf28807598613a1510a343a84b8026b3f5e6dcfb29e82e0b0b0f386}\label{namespace_unity_editor_1_1_settings_management_afd562761f3bf28807598613a1510a343a84b8026b3f5e6dcfb29e82e0b0b0f386}} 
+Unregistered&Unregistered \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting}{IUser\+Setting}} fields are not affected by the Settings\+Provider. A static field implementing \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting}{IUser\+Setting}} that is not marked with any setting attribute. \\
+\hline
+
+\end{DoxyEnumFields}

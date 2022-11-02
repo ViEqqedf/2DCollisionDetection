@@ -1,0 +1,418 @@
+\hypertarget{class_unity_editor_1_1_timeline_1_1_window_state}{}\doxysection{Unity\+Editor.\+Timeline.\+Window\+State Class Reference}
+\label{class_unity_editor_1_1_timeline_1_1_window_state}\index{UnityEditor.Timeline.WindowState@{UnityEditor.Timeline.WindowState}}
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Window\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_timeline_1_1_window_state}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ab2fe4262df2667bc9c2afcca061a2ccb}\label{class_unity_editor_1_1_timeline_1_1_window_state_ab2fe4262df2667bc9c2afcca061a2ccb}} 
+{\bfseries Window\+State} (\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_window}{Timeline\+Window}} w, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_hierarchy}{Sequence\+Hierarchy}} hierarchy)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_aea2f15e02d1c279836c9147416a00fc8}\label{class_unity_editor_1_1_timeline_1_1_window_state_aea2f15e02d1c279836c9147416a00fc8}} 
+void {\bfseries Add\+Captured} (\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_manipulator}{Manipulator}} manipulator)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ab02338c9f0effff10b0ab8d4e7c791d9}\label{class_unity_editor_1_1_timeline_1_1_window_state_ab02338c9f0effff10b0ab8d4e7c791d9}} 
+void {\bfseries Remove\+Captured} (\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_manipulator}{Manipulator}} manipulator)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a6abd1af8520de3f36a16d3cc46ed9068}\label{class_unity_editor_1_1_timeline_1_1_window_state_a6abd1af8520de3f36a16d3cc46ed9068}} 
+void {\bfseries On\+Destroy} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ae798ba2398fc06cf0f46598c14bf985e}\label{class_unity_editor_1_1_timeline_1_1_window_state_ae798ba2398fc06cf0f46598c14bf985e}} 
+void {\bfseries On\+Scene\+Saved} ()
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state_af21f768e0dd8aad7acdc12b4b34d8309}{Set\+Current\+Sequence}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} timeline\+Asset, Playable\+Director director, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} host\+Clip)
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state_a0887f76923b63e334e6ea9c158cb24cd}{Pop\+Sequences\+Until\+Count}} (int count)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ac4eb96b28f4d7defc21c97af710a5e64}\label{class_unity_editor_1_1_timeline_1_1_window_state_ac4eb96b28f4d7defc21c97af710a5e64}} 
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_path}{Sequence\+Path}} {\bfseries Get\+Current\+Sequence\+Path} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a076ec1ce0ab8d998269cda6d77037435}\label{class_unity_editor_1_1_timeline_1_1_window_state_a076ec1ce0ab8d998269cda6d77037435}} 
+void {\bfseries Set\+Current\+Sequence\+Path} (\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_path}{Sequence\+Path}} path, bool force\+Rebuild)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ae7251753a88c0e0fb0ea8f40d5027df9}\label{class_unity_editor_1_1_timeline_1_1_window_state_ae7251753a88c0e0fb0ea8f40d5027df9}} 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state}{ISequence\+State}} $>$ {\bfseries Get\+All\+Sequences} ()
+\item 
+IEnumerable$<$ \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} $>$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state_af09c92964880c2aacfd80392ec5d23dd}{Get\+Sub\+Sequences}} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a256e9227afd286a6e590f8749b27a30e}\label{class_unity_editor_1_1_timeline_1_1_window_state_a256e9227afd286a6e590f8749b27a30e}} 
+void {\bfseries Reset} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_af811297ac2af917cba3b9c2cb1a15cd0}\label{class_unity_editor_1_1_timeline_1_1_window_state_af811297ac2af917cba3b9c2cb1a15cd0}} 
+double {\bfseries Get\+Snapped\+Time\+At\+Mouse\+Position} (Vector2 mouse\+Pos)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_aaab68e6b6c1110ec5a75196b22d3852e}\label{class_unity_editor_1_1_timeline_1_1_window_state_aaab68e6b6c1110ec5a75196b22d3852e}} 
+void {\bfseries Set\+Time\+Area\+Transform} (Vector2 new\+Translation, Vector2 new\+Scale)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a94a4eb656945f98c6c57c6801b507b29}\label{class_unity_editor_1_1_timeline_1_1_window_state_a94a4eb656945f98c6c57c6801b507b29}} 
+void {\bfseries Set\+Time\+Area\+Shown\+Range} (float min, float max)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a910b7e3bef57fb88dc2aa9d1a0a15571}\label{class_unity_editor_1_1_timeline_1_1_window_state_a910b7e3bef57fb88dc2aa9d1a0a15571}} 
+void {\bfseries Reset\+Preview\+Mode} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_aead0cb33fc0a07cfa2fc68fe2defc603}\label{class_unity_editor_1_1_timeline_1_1_window_state_aead0cb33fc0a07cfa2fc68fe2defc603}} 
+bool {\bfseries Time\+Is\+In\+Range} (float value)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ab741dd4e048a097c43c5bafe6b66ad29}\label{class_unity_editor_1_1_timeline_1_1_window_state_ab741dd4e048a097c43c5bafe6b66ad29}} 
+bool {\bfseries Range\+Is\+Visible} (\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_range}{Range}} range)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ab85b38edb8da83b1867273ce79bd36a5}\label{class_unity_editor_1_1_timeline_1_1_window_state_ab85b38edb8da83b1867273ce79bd36a5}} 
+void {\bfseries Ensure\+Play\+Head\+Is\+Visible} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a63e22e0de474b9cbaf150f24694bd004}\label{class_unity_editor_1_1_timeline_1_1_window_state_a63e22e0de474b9cbaf150f24694bd004}} 
+void {\bfseries Set\+Play\+Head\+To\+Middle} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_af1e0a5f9a63a8aaa835f5ed772a25741}\label{class_unity_editor_1_1_timeline_1_1_window_state_af1e0a5f9a63a8aaa835f5ed772a25741}} 
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_window}{Timeline\+Window}} {\bfseries Get\+Window} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a25c1cc082546e22812ae8f5cf49d0284}\label{class_unity_editor_1_1_timeline_1_1_window_state_a25c1cc082546e22812ae8f5cf49d0284}} 
+void {\bfseries Play} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ab09a4c23a97f0a04be8425f769a35866}\label{class_unity_editor_1_1_timeline_1_1_window_state_ab09a4c23a97f0a04be8425f769a35866}} 
+void {\bfseries Pause} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a2a0854f3b0a2f92f741dde7cfeb024b8}\label{class_unity_editor_1_1_timeline_1_1_window_state_a2a0854f3b0a2f92f741dde7cfeb024b8}} 
+void {\bfseries Set\+Playing} (bool start)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a0f831c6de609701e8c38ceccde73121b}\label{class_unity_editor_1_1_timeline_1_1_window_state_a0f831c6de609701e8c38ceccde73121b}} 
+void {\bfseries Stop} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_abc3ec781f4a2e3a751a4f6c5c717a0b9}\label{class_unity_editor_1_1_timeline_1_1_window_state_abc3ec781f4a2e3a751a4f6c5c717a0b9}} 
+void {\bfseries Rebuild\+Playable\+Graph} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ab469068a54205d03f681a4ca66919395}\label{class_unity_editor_1_1_timeline_1_1_window_state_ab469068a54205d03f681a4ca66919395}} 
+void {\bfseries Evaluate} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a099f959958a82eb50ee7e35644888908}\label{class_unity_editor_1_1_timeline_1_1_window_state_a099f959958a82eb50ee7e35644888908}} 
+void {\bfseries Evaluate\+Immediate} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a773c3585d8ee2c63765f06afa6536990}\label{class_unity_editor_1_1_timeline_1_1_window_state_a773c3585d8ee2c63765f06afa6536990}} 
+void {\bfseries Refresh} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a3d8f49cac694d3bb6b012d52e2249f2f}\label{class_unity_editor_1_1_timeline_1_1_window_state_a3d8f49cac694d3bb6b012d52e2249f2f}} 
+void {\bfseries Update\+View\+State\+Hash} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ae086aef433dbe7bc582a5e174ee6ed32}\label{class_unity_editor_1_1_timeline_1_1_window_state_ae086aef433dbe7bc582a5e174ee6ed32}} 
+bool {\bfseries Is\+Editing\+ASub\+Timeline} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ab59853e41198216c7deb7b3f5c0b9af0}\label{class_unity_editor_1_1_timeline_1_1_window_state_ab59853e41198216c7deb7b3f5c0b9af0}} 
+bool {\bfseries Is\+Editing\+An\+Empty\+Timeline} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_abdb8d4bcf66232399e9fe17e7b3e5ff7}\label{class_unity_editor_1_1_timeline_1_1_window_state_abdb8d4bcf66232399e9fe17e7b3e5ff7}} 
+bool {\bfseries Is\+Editing\+APrefab\+Asset} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a6904fd1570b48a1f42e77c2afcb6f50a}\label{class_unity_editor_1_1_timeline_1_1_window_state_a6904fd1570b48a1f42e77c2afcb6f50a}} 
+bool {\bfseries Is\+Current\+Editing\+ASequencer\+Text\+Field} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_aa15d3559dce5405589480a136d870315}\label{class_unity_editor_1_1_timeline_1_1_window_state_aa15d3559dce5405589480a136d870315}} 
+float {\bfseries Time\+To\+Time\+Area\+Pixel} (double t)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ae7996f18ac15c589cd71d39318b70e91}\label{class_unity_editor_1_1_timeline_1_1_window_state_ae7996f18ac15c589cd71d39318b70e91}} 
+float {\bfseries Time\+To\+Screen\+Space\+Pixel} (double time)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_aaf2cb4fe0dedfd91a65ec94d1c3001b3}\label{class_unity_editor_1_1_timeline_1_1_window_state_aaf2cb4fe0dedfd91a65ec94d1c3001b3}} 
+float {\bfseries Time\+To\+Pixel} (double time)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a4f51264da0ea7a603a9d6efeecbe1f75}\label{class_unity_editor_1_1_timeline_1_1_window_state_a4f51264da0ea7a603a9d6efeecbe1f75}} 
+float {\bfseries Pixel\+To\+Time} (float pixel)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a931c9a7c353584119fd61853d88f561d}\label{class_unity_editor_1_1_timeline_1_1_window_state_a931c9a7c353584119fd61853d88f561d}} 
+float {\bfseries Pixel\+Delta\+To\+Delta\+Time} (float p)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a7f316d2cd49fe6eeec5c60a432dd4611}\label{class_unity_editor_1_1_timeline_1_1_window_state_a7f316d2cd49fe6eeec5c60a432dd4611}} 
+float {\bfseries Time\+Area\+Pixel\+To\+Time} (float pixel)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ac41637d39607827bf2d4ac1c3c066e6f}\label{class_unity_editor_1_1_timeline_1_1_window_state_ac41637d39607827bf2d4ac1c3c066e6f}} 
+float {\bfseries Screen\+Space\+Pixel\+To\+Time\+Area\+Time} (float p)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a0beea79158a44ba15b0deffa0a777e9c}\label{class_unity_editor_1_1_timeline_1_1_window_state_a0beea79158a44ba15b0deffa0a777e9c}} 
+float {\bfseries Track\+Space\+Pixel\+To\+Time\+Area\+Time} (float p)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a017a7093b7a63019920bca67e6b3687b}\label{class_unity_editor_1_1_timeline_1_1_window_state_a017a7093b7a63019920bca67e6b3687b}} 
+void {\bfseries Offset\+Time\+Area} (int pixels)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a3c034ec5c009f56975135e6b7815193f}\label{class_unity_editor_1_1_timeline_1_1_window_state_a3c034ec5c009f56975135e6b7815193f}} 
+Game\+Object {\bfseries Get\+Scene\+Reference} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} asset)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a781f9d8c37f97b30cbd21031ae0a863c}\label{class_unity_editor_1_1_timeline_1_1_window_state_a781f9d8c37f97b30cbd21031ae0a863c}} 
+void {\bfseries Calculate\+Row\+Rects} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a512c9c7166274feb83b0a8caf1a6f191}\label{class_unity_editor_1_1_timeline_1_1_window_state_a512c9c7166274feb83b0a8caf1a6f191}} 
+void {\bfseries Arm\+For\+Record} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a6d5f6973adc0083a67d3ca664a67724a}\label{class_unity_editor_1_1_timeline_1_1_window_state_a6d5f6973adc0083a67d3ca664a67724a}} 
+void {\bfseries Unarm\+For\+Record} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a1f53b410337deabb4366b20c41d4f8af}\label{class_unity_editor_1_1_timeline_1_1_window_state_a1f53b410337deabb4366b20c41d4f8af}} 
+void {\bfseries Update\+Recording\+State} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a3b879f9d05ee6125537fcc2580ad0071}\label{class_unity_editor_1_1_timeline_1_1_window_state_a3b879f9d05ee6125537fcc2580ad0071}} 
+bool {\bfseries Is\+Track\+Recordable} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ae175108ad2831c486eadbb74e0a536e1}\label{class_unity_editor_1_1_timeline_1_1_window_state_ae175108ad2831c486eadbb74e0a536e1}} 
+bool {\bfseries Is\+Armed\+For\+Record} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_aae6bf1fe75e9b2d331e969110c482b25}\label{class_unity_editor_1_1_timeline_1_1_window_state_aae6bf1fe75e9b2d331e969110c482b25}} 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} {\bfseries Get\+Armed\+Track} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a1f9998b0966727995f7fae56654ae710}\label{class_unity_editor_1_1_timeline_1_1_window_state_a1f9998b0966727995f7fae56654ae710}} 
+void {\bfseries Gather\+Properties} (Playable\+Director director)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ae1d1690aede6d0ca02c4db02f913814a}\label{class_unity_editor_1_1_timeline_1_1_window_state_ae1d1690aede6d0ca02c4db02f913814a}} 
+void {\bfseries Add\+Start\+Frame\+Delegate} (Pending\+Update\+Delegate update\+Delegate)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a3dfa8c48e81f9218f365fc461f1b99ec}\label{class_unity_editor_1_1_timeline_1_1_window_state_a3dfa8c48e81f9218f365fc461f1b99ec}} 
+void {\bfseries Add\+End\+Frame\+Delegate} (Pending\+Update\+Delegate update\+Delegate)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a4b447015292f373fa29dffdef4e4eb35}\label{class_unity_editor_1_1_timeline_1_1_window_state_a4b447015292f373fa29dffdef4e4eb35}} 
+void {\bfseries Update\+Root\+Playable\+Duration} (double duration)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a0a2f57d81a86d67e0c5bfa0fde4b2517}\label{class_unity_editor_1_1_timeline_1_1_window_state_a0a2f57d81a86d67e0c5bfa0fde4b2517}} 
+void {\bfseries Invoke\+Time\+Change\+Callback} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ac5686ed80b65af2c8e47d6d7d4a789e7}\label{class_unity_editor_1_1_timeline_1_1_window_state_ac5686ed80b65af2c8e47d6d7d4a789e7}} 
+bool {\bfseries Is\+Playable\+Graph\+Done} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ae55fa6430ee33dde809f97f5d71e9be3}\label{class_unity_editor_1_1_timeline_1_1_window_state_ae55fa6430ee33dde809f97f5d71e9be3}} 
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_window_analytics}{Timeline\+Window\+Analytics}} {\bfseries analytics} = new \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_window_analytics}{Timeline\+Window\+Analytics}}()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ac4aff2d5e32a86db775cec803089669f}\label{class_unity_editor_1_1_timeline_1_1_window_state_ac4aff2d5e32a86db775cec803089669f}} 
+static readonly float {\bfseries k\+Max\+Shown\+Time} = (float)Time\+Utility.\+k\+\_\+\+Max\+Timeline\+Duration\+In\+Seconds
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a6537448d4f9e27011201f296a36d9fde}\label{class_unity_editor_1_1_timeline_1_1_window_state_a6537448d4f9e27011201f296a36d9fde}} 
+static double {\bfseries k\+Time\+Epsilon}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a2528b7290b18de627d72a517c6bb65c0}\label{class_unity_editor_1_1_timeline_1_1_window_state_a2528b7290b18de627d72a517c6bb65c0}} 
+static Animation\+Mode\+Driver {\bfseries preview\+Driver}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ab9c410b0c9ce67215036ed9ac1f0cf64}\label{class_unity_editor_1_1_timeline_1_1_window_state_ab9c410b0c9ce67215036ed9ac1f0cf64}} 
+Editor\+Window {\bfseries editor\+Window}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state}{ISequence\+State}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state_a006919b74b71f9f6511d64b138264d4c}{edit\+Sequence}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state}{ISequence\+State}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state_a6a4700f6c32d922967fa0af6962b9a42}{master\+Sequence}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ab1e28ef166711b4749c92c74c40f7020}\label{class_unity_editor_1_1_timeline_1_1_window_state_ab1e28ef166711b4749c92c74c40f7020}} 
+\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state}{ISequence\+State}} {\bfseries reference\+Sequence}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state}{ISequence\+State}} $>$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state_a8d12b6766485cdc5e90a1308ed997404}{all\+Sequences}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a84f69ba57526dd769aa42bd60b11bbf9}\label{class_unity_editor_1_1_timeline_1_1_window_state_a84f69ba57526dd769aa42bd60b11bbf9}} 
+bool {\bfseries rebuild\+Graph}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_abebd387addbd644ab3aac7230acfd29c}\label{class_unity_editor_1_1_timeline_1_1_window_state_abebd387addbd644ab3aac7230acfd29c}} 
+float {\bfseries mouse\+Drag\+Lag}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ad59ddb64e61e454d87680beaf26e99dc}\label{class_unity_editor_1_1_timeline_1_1_window_state_ad59ddb64e61e454d87680beaf26e99dc}} 
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_space_partitioner}{Space\+Partitioner}} {\bfseries space\+Partitioner}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_aaf00df1911252b3d773fb8536f500914}\label{class_unity_editor_1_1_timeline_1_1_window_state_aaf00df1911252b3d773fb8536f500914}} 
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_space_partitioner}{Space\+Partitioner}} {\bfseries header\+Space\+Partitioner}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a4f8b9d70d513730cfa724bc3c70f76f1}\label{class_unity_editor_1_1_timeline_1_1_window_state_a4f8b9d70d513730cfa724bc3c70f76f1}} 
+List$<$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_manipulator}{Manipulator}} $>$ {\bfseries captured}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a1fe4805836c664f9dd390c7ae0fa8acf}\label{class_unity_editor_1_1_timeline_1_1_window_state_a1fe4805836c664f9dd390c7ae0fa8acf}} 
+bool {\bfseries is\+Jogging}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_adae2c75a0804ec7c468c5e2ba94bf5a5}\label{class_unity_editor_1_1_timeline_1_1_window_state_adae2c75a0804ec7c468c5e2ba94bf5a5}} 
+int {\bfseries view\+State\+Hash}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a343e70d6e2982b04a9b419dc0d083af3}\label{class_unity_editor_1_1_timeline_1_1_window_state_a343e70d6e2982b04a9b419dc0d083af3}} 
+float {\bfseries binding\+Area\+Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_aaef80e2b20eab558f8fe6462d2baed4f}\label{class_unity_editor_1_1_timeline_1_1_window_state_aaef80e2b20eab558f8fe6462d2baed4f}} 
+float {\bfseries sequencer\+Header\+Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a09e6f6d4dd531d24f696fa4ee3031103}\label{class_unity_editor_1_1_timeline_1_1_window_state_a09e6f6d4dd531d24f696fa4ee3031103}} 
+float {\bfseries main\+Area\+Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a20946986ad9c340791bfcf302f533685}\label{class_unity_editor_1_1_timeline_1_1_window_state_a20946986ad9c340791bfcf302f533685}} 
+float {\bfseries track\+Scale}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a7c2b33a7562f3d7a5b997a0ba770fdb9}\label{class_unity_editor_1_1_timeline_1_1_window_state_a7c2b33a7562f3d7a5b997a0ba770fdb9}} 
+int {\bfseries dirty\+Stamp}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a890e5011ededb93c0fd90310ee0e0b45}\label{class_unity_editor_1_1_timeline_1_1_window_state_a890e5011ededb93c0fd90310ee0e0b45}} 
+bool {\bfseries show\+Quad\+Tree}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a849db64bec71177efa304d076983e8d5}\label{class_unity_editor_1_1_timeline_1_1_window_state_a849db64bec71177efa304d076983e8d5}} 
+bool {\bfseries can\+Record}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_acaf4f97703828df2f088559163e03010}\label{class_unity_editor_1_1_timeline_1_1_window_state_acaf4f97703828df2f088559163e03010}} 
+bool {\bfseries recording}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a115b84fd8a2364aad5ac3d9dc8da2486}\label{class_unity_editor_1_1_timeline_1_1_window_state_a115b84fd8a2364aad5ac3d9dc8da2486}} 
+bool {\bfseries preview\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ae5f7a7a1d82104095574a6b63ea106e1}\label{class_unity_editor_1_1_timeline_1_1_window_state_ae5f7a7a1d82104095574a6b63ea106e1}} 
+bool {\bfseries playing}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_acc252f561041f58b1e184ed2741eb6ab}\label{class_unity_editor_1_1_timeline_1_1_window_state_acc252f561041f58b1e184ed2741eb6ab}} 
+float {\bfseries playback\+Speed}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_aa148735c6e32e55fe5bd3b1b35f641d4}\label{class_unity_editor_1_1_timeline_1_1_window_state_aa148735c6e32e55fe5bd3b1b35f641d4}} 
+bool {\bfseries frame\+Snap}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a8306bad2688d57658f9040cebd70c3cf}\label{class_unity_editor_1_1_timeline_1_1_window_state_a8306bad2688d57658f9040cebd70c3cf}} 
+bool {\bfseries edge\+Snaps}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a7a21ba351e579a11d431295074fa2c96}\label{class_unity_editor_1_1_timeline_1_1_window_state_a7a21ba351e579a11d431295074fa2c96}} 
+bool {\bfseries mute\+Audio\+Scrubbing}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_aef1b56b9319237a7a8bdd65df269483a}\label{class_unity_editor_1_1_timeline_1_1_window_state_aef1b56b9319237a7a8bdd65df269483a}} 
+Time\+Reference\+Mode {\bfseries time\+Reference\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a8b5f1df872136f27be6a91a419723842}\label{class_unity_editor_1_1_timeline_1_1_window_state_a8b5f1df872136f27be6a91a419723842}} 
+\mbox{\hyperlink{namespace_unity_editor_1_1_timeline_a70c693765681725af29e9342a937a6f6}{Time\+Format}} {\bfseries time\+Format}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a76c047bee8320fd018f00540693e1fa1}\label{class_unity_editor_1_1_timeline_1_1_window_state_a76c047bee8320fd018f00540693e1fa1}} 
+bool {\bfseries show\+Audio\+Waveform}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ab6565b6019493f5fed3699f2a174e3f5}\label{class_unity_editor_1_1_timeline_1_1_window_state_ab6565b6019493f5fed3699f2a174e3f5}} 
+Vector2 {\bfseries play\+Range}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_abf5c05960bb8b8838ac0f6723f79e60b}\label{class_unity_editor_1_1_timeline_1_1_window_state_abf5c05960bb8b8838ac0f6723f79e60b}} 
+bool {\bfseries show\+Marker\+Header}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_af097e1e497de9172f9bcf55e5fc00c68}\label{class_unity_editor_1_1_timeline_1_1_window_state_af097e1e497de9172f9bcf55e5fc00c68}} 
+Edit\+Mode.\+Edit\+Type {\bfseries edit\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a6e9f9c09c975d5a7fcf606e52e98da8c}\label{class_unity_editor_1_1_timeline_1_1_window_state_a6e9f9c09c975d5a7fcf606e52e98da8c}} 
+\mbox{\hyperlink{namespace_unity_editor_1_1_timeline_a91c84eececcade75bec4fb407dc1e74f}{Playback\+Scroll\+Mode}} {\bfseries auto\+Scroll\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a5142389644edb5687149c765399ec454}\label{class_unity_editor_1_1_timeline_1_1_window_state_a5142389644edb5687149c765399ec454}} 
+List$<$ Playable\+Director $>$ {\bfseries previewed\+Directors}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ad7cc22049de06731087eef3858dddbc2}\label{class_unity_editor_1_1_timeline_1_1_window_state_ad7cc22049de06731087eef3858dddbc2}} 
+Vector2 {\bfseries time\+Area\+Shown\+Range}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_aaf29cc494fee2ed3d42a1ebd2ca46133}\label{class_unity_editor_1_1_timeline_1_1_window_state_aaf29cc494fee2ed3d42a1ebd2ca46133}} 
+Vector2 {\bfseries time\+Area\+Translation}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_aa233d4c4bbf2972c9f6b0536470722c9}\label{class_unity_editor_1_1_timeline_1_1_window_state_aa233d4c4bbf2972c9f6b0536470722c9}} 
+Vector2 {\bfseries time\+Area\+Scale}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_af8aa305abfadd5a637a0b8572431c31e}\label{class_unity_editor_1_1_timeline_1_1_window_state_af8aa305abfadd5a637a0b8572431c31e}} 
+Rect {\bfseries time\+Area\+Rect}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a4d0472ec0f98e5dd3b60f6f6d78b270f}\label{class_unity_editor_1_1_timeline_1_1_window_state_a4d0472ec0f98e5dd3b60f6f6d78b270f}} 
+float {\bfseries window\+Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a1a75dbf17194f7947a680a54b25e0092}\label{class_unity_editor_1_1_timeline_1_1_window_state_a1a75dbf17194f7947a680a54b25e0092}} 
+bool {\bfseries play\+Range\+Enabled}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a8ed05c4a8c17504f45966f446307dd74}\label{class_unity_editor_1_1_timeline_1_1_window_state_a8ed05c4a8c17504f45966f446307dd74}} 
+bool {\bfseries ignore\+Preview}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a75b0e79f07bfb76ec8f13df876270218}\label{class_unity_editor_1_1_timeline_1_1_window_state_a75b0e79f07bfb76ec8f13df876270218}} 
+Action$<$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}}, Event $>$ {\bfseries window\+On\+Gui\+Started}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_acc6bd8cc0dd3c46bd77ac443328d7a27}\label{class_unity_editor_1_1_timeline_1_1_window_state_acc6bd8cc0dd3c46bd77ac443328d7a27}} 
+Action$<$ bool $>$ {\bfseries On\+Play\+State\+Change}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ae81e63dc75ef10d33a31cf7dac838dff}\label{class_unity_editor_1_1_timeline_1_1_window_state_ae81e63dc75ef10d33a31cf7dac838dff}} 
+System.\+Action {\bfseries On\+Dirty\+Stamp\+Change}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ae0f88ff6119f833cf75da04e42a4de70}\label{class_unity_editor_1_1_timeline_1_1_window_state_ae0f88ff6119f833cf75da04e42a4de70}} 
+System.\+Action {\bfseries On\+Rebuild\+Graph\+Change}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_aa9824713999e248a8e2148e978cd39ec}\label{class_unity_editor_1_1_timeline_1_1_window_state_aa9824713999e248a8e2148e978cd39ec}} 
+System.\+Action {\bfseries On\+Time\+Change}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_ae474d117f757763d7a13e81ab2e0cfb8}\label{class_unity_editor_1_1_timeline_1_1_window_state_ae474d117f757763d7a13e81ab2e0cfb8}} 
+System.\+Action {\bfseries On\+Recording\+Change}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a4e82cd44f595c212e1af5b70181122c0}\label{class_unity_editor_1_1_timeline_1_1_window_state_a4e82cd44f595c212e1af5b70181122c0}} 
+System.\+Action {\bfseries On\+Before\+Sequence\+Change}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a68ad2e048ffd20d4d2818172ffdd268a}\label{class_unity_editor_1_1_timeline_1_1_window_state_a68ad2e048ffd20d4d2818172ffdd268a}} 
+System.\+Action {\bfseries On\+After\+Sequence\+Change}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_af09c92964880c2aacfd80392ec5d23dd}\label{class_unity_editor_1_1_timeline_1_1_window_state_af09c92964880c2aacfd80392ec5d23dd}} 
+\index{UnityEditor.Timeline.WindowState@{UnityEditor.Timeline.WindowState}!GetSubSequences@{GetSubSequences}}
+\index{GetSubSequences@{GetSubSequences}!UnityEditor.Timeline.WindowState@{UnityEditor.Timeline.WindowState}}
+\doxysubsubsection{\texorpdfstring{GetSubSequences()}{GetSubSequences()}}
+{\footnotesize\ttfamily IEnumerable$<$ \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} $>$ Unity\+Editor.\+Timeline.\+Window\+State.\+Get\+Sub\+Sequences (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_window_state}{Unity\+Editor.\+Timeline.\+IWindow\+State}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a0887f76923b63e334e6ea9c158cb24cd}\label{class_unity_editor_1_1_timeline_1_1_window_state_a0887f76923b63e334e6ea9c158cb24cd}} 
+\index{UnityEditor.Timeline.WindowState@{UnityEditor.Timeline.WindowState}!PopSequencesUntilCount@{PopSequencesUntilCount}}
+\index{PopSequencesUntilCount@{PopSequencesUntilCount}!UnityEditor.Timeline.WindowState@{UnityEditor.Timeline.WindowState}}
+\doxysubsubsection{\texorpdfstring{PopSequencesUntilCount()}{PopSequencesUntilCount()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Window\+State.\+Pop\+Sequences\+Until\+Count (\begin{DoxyParamCaption}\item[{int}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_window_state}{Unity\+Editor.\+Timeline.\+IWindow\+State}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_af21f768e0dd8aad7acdc12b4b34d8309}\label{class_unity_editor_1_1_timeline_1_1_window_state_af21f768e0dd8aad7acdc12b4b34d8309}} 
+\index{UnityEditor.Timeline.WindowState@{UnityEditor.Timeline.WindowState}!SetCurrentSequence@{SetCurrentSequence}}
+\index{SetCurrentSequence@{SetCurrentSequence}!UnityEditor.Timeline.WindowState@{UnityEditor.Timeline.WindowState}}
+\doxysubsubsection{\texorpdfstring{SetCurrentSequence()}{SetCurrentSequence()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Window\+State.\+Set\+Current\+Sequence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}}}]{timeline\+Asset,  }\item[{Playable\+Director}]{director,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}}}]{host\+Clip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_window_state}{Unity\+Editor.\+Timeline.\+IWindow\+State}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a8d12b6766485cdc5e90a1308ed997404}\label{class_unity_editor_1_1_timeline_1_1_window_state_a8d12b6766485cdc5e90a1308ed997404}} 
+\index{UnityEditor.Timeline.WindowState@{UnityEditor.Timeline.WindowState}!allSequences@{allSequences}}
+\index{allSequences@{allSequences}!UnityEditor.Timeline.WindowState@{UnityEditor.Timeline.WindowState}}
+\doxysubsubsection{\texorpdfstring{allSequences}{allSequences}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state}{ISequence\+State}}$>$ Unity\+Editor.\+Timeline.\+Window\+State.\+all\+Sequences\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_window_state}{Unity\+Editor.\+Timeline.\+IWindow\+State}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a006919b74b71f9f6511d64b138264d4c}\label{class_unity_editor_1_1_timeline_1_1_window_state_a006919b74b71f9f6511d64b138264d4c}} 
+\index{UnityEditor.Timeline.WindowState@{UnityEditor.Timeline.WindowState}!editSequence@{editSequence}}
+\index{editSequence@{editSequence}!UnityEditor.Timeline.WindowState@{UnityEditor.Timeline.WindowState}}
+\doxysubsubsection{\texorpdfstring{editSequence}{editSequence}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state}{ISequence\+State}} Unity\+Editor.\+Timeline.\+Window\+State.\+edit\+Sequence\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_window_state}{Unity\+Editor.\+Timeline.\+IWindow\+State}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_window_state_a6a4700f6c32d922967fa0af6962b9a42}\label{class_unity_editor_1_1_timeline_1_1_window_state_a6a4700f6c32d922967fa0af6962b9a42}} 
+\index{UnityEditor.Timeline.WindowState@{UnityEditor.Timeline.WindowState}!masterSequence@{masterSequence}}
+\index{masterSequence@{masterSequence}!UnityEditor.Timeline.WindowState@{UnityEditor.Timeline.WindowState}}
+\doxysubsubsection{\texorpdfstring{masterSequence}{masterSequence}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state}{ISequence\+State}} Unity\+Editor.\+Timeline.\+Window\+State.\+master\+Sequence\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_window_state}{Unity\+Editor.\+Timeline.\+IWindow\+State}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Editor/\+State/Window\+State.\+cs\end{DoxyCompactItemize}

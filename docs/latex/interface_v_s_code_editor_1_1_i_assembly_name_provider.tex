@@ -1,0 +1,47 @@
+\hypertarget{interface_v_s_code_editor_1_1_i_assembly_name_provider}{}\doxysection{VSCode\+Editor.\+IAssembly\+Name\+Provider Interface Reference}
+\label{interface_v_s_code_editor_1_1_i_assembly_name_provider}\index{VSCodeEditor.IAssemblyNameProvider@{VSCodeEditor.IAssemblyNameProvider}}
+
+
+Inherited by VSCode\+Editor.\+Assembly\+Name\+Provider.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_v_s_code_editor_1_1_i_assembly_name_provider_aab612b9166e788e2ebcf427d82b03828}\label{interface_v_s_code_editor_1_1_i_assembly_name_provider_aab612b9166e788e2ebcf427d82b03828}} 
+string {\bfseries Get\+Assembly\+Name\+From\+Script\+Path} (string path)
+\item 
+\mbox{\Hypertarget{interface_v_s_code_editor_1_1_i_assembly_name_provider_a5e0942ef1db61226bd405ae0ad0d710f}\label{interface_v_s_code_editor_1_1_i_assembly_name_provider_a5e0942ef1db61226bd405ae0ad0d710f}} 
+IEnumerable$<$ Assembly $>$ {\bfseries Get\+Assemblies} (Func$<$ string, bool $>$ should\+File\+Be\+Part\+Of\+Solution)
+\item 
+\mbox{\Hypertarget{interface_v_s_code_editor_1_1_i_assembly_name_provider_a5f545a06200347f6923bfa1f8c85c5cb}\label{interface_v_s_code_editor_1_1_i_assembly_name_provider_a5f545a06200347f6923bfa1f8c85c5cb}} 
+IEnumerable$<$ string $>$ {\bfseries Get\+All\+Asset\+Paths} ()
+\item 
+\mbox{\Hypertarget{interface_v_s_code_editor_1_1_i_assembly_name_provider_af0c0acb000e24fa99cad8a39fe20bbe7}\label{interface_v_s_code_editor_1_1_i_assembly_name_provider_af0c0acb000e24fa99cad8a39fe20bbe7}} 
+IEnumerable$<$ string $>$ {\bfseries Get\+Roslyn\+Analyzer\+Paths} ()
+\item 
+\mbox{\Hypertarget{interface_v_s_code_editor_1_1_i_assembly_name_provider_a1cd285886a513c1fbd937b9279830206}\label{interface_v_s_code_editor_1_1_i_assembly_name_provider_a1cd285886a513c1fbd937b9279830206}} 
+Unity\+Editor.\+Package\+Manager.\+Package\+Info {\bfseries Find\+For\+Asset\+Path} (string asset\+Path)
+\item 
+\mbox{\Hypertarget{interface_v_s_code_editor_1_1_i_assembly_name_provider_aca561cb4c72e087095e455fb52e09c05}\label{interface_v_s_code_editor_1_1_i_assembly_name_provider_aca561cb4c72e087095e455fb52e09c05}} 
+Response\+File\+Data {\bfseries Parse\+Response\+File} (string response\+File\+Path, string project\+Directory, string\mbox{[}$\,$\mbox{]} system\+Reference\+Directories)
+\item 
+\mbox{\Hypertarget{interface_v_s_code_editor_1_1_i_assembly_name_provider_ad7c8781a23757bd36be475efc363cf04}\label{interface_v_s_code_editor_1_1_i_assembly_name_provider_ad7c8781a23757bd36be475efc363cf04}} 
+bool {\bfseries Is\+Internalized\+Package\+Path} (string path)
+\item 
+\mbox{\Hypertarget{interface_v_s_code_editor_1_1_i_assembly_name_provider_a1db9d9d13521384e5aeb771797dff4e4}\label{interface_v_s_code_editor_1_1_i_assembly_name_provider_a1db9d9d13521384e5aeb771797dff4e4}} 
+void {\bfseries Toggle\+Project\+Generation} (Project\+Generation\+Flag preference)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_v_s_code_editor_1_1_i_assembly_name_provider_af29283b448c382731a41b971967ee151}\label{interface_v_s_code_editor_1_1_i_assembly_name_provider_af29283b448c382731a41b971967ee151}} 
+string\mbox{[}$\,$\mbox{]} {\bfseries Project\+Supported\+Extensions}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{interface_v_s_code_editor_1_1_i_assembly_name_provider_afe2b4a11d62f0a6da7a1ffce183df782}\label{interface_v_s_code_editor_1_1_i_assembly_name_provider_afe2b4a11d62f0a6da7a1ffce183df782}} 
+Project\+Generation\+Flag {\bfseries Project\+Generation\+Flag}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ide.\+vscode@1.\+2.\+4/\+Editor/\+Project\+Generation/Assembly\+Name\+Provider.\+cs\end{DoxyCompactItemize}

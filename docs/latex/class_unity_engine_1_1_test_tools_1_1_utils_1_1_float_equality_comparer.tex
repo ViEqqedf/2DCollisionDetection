@@ -1,0 +1,120 @@
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_float_equality_comparer}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+Utils.\+Float\+Equality\+Comparer Class Reference}
+\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_float_equality_comparer}\index{UnityEngine.TestTools.Utils.FloatEqualityComparer@{UnityEngine.TestTools.Utils.FloatEqualityComparer}}
+
+
+Use this class to compare two float values for equality with NUnit constraints. Use \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_float_equality_comparer_ab3bdb34f985a9d144e6121320e972c7f}{Float\+Equality\+Comparer.\+Instance}} comparer to have the default error value set to 0.\+0001f. For any other error, use the one argument constructor to create a comparer.  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Tools.\+Utils.\+Float\+Equality\+Comparer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_test_tools_1_1_utils_1_1_float_equality_comparer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_float_equality_comparer_a1baa1c4d497f8a27e495b005765fb90e}{Float\+Equality\+Comparer}} (float allowed\+Error)
+\begin{DoxyCompactList}\small\item\em Initializes an instance of a \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_float_equality_comparer}{Float\+Equality\+Comparer}} with a custom error value instead of the default 0.\+0001f. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_float_equality_comparer_a1005da84956b738c826a845dbb077ead}{Equals}} (float expected, float actual)
+\begin{DoxyCompactList}\small\item\em Compares the actual and expected float values for equality using Utils.\+Are\+Floats\+Equal. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_float_equality_comparer_a3f0732645231ef50ec9a1c144cdcfe3e}{Get\+Hash\+Code}} (float value)
+\begin{DoxyCompactList}\small\item\em Serves as the default hash function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_float_equality_comparer_ab3bdb34f985a9d144e6121320e972c7f}\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_float_equality_comparer_ab3bdb34f985a9d144e6121320e972c7f}} 
+static \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_float_equality_comparer}{Float\+Equality\+Comparer}} {\bfseries Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A singleton instance of the comparer with a default error value set to 0.\+0001f. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Use this class to compare two float values for equality with NUnit constraints. Use \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_float_equality_comparer_ab3bdb34f985a9d144e6121320e972c7f}{Float\+Equality\+Comparer.\+Instance}} comparer to have the default error value set to 0.\+0001f. For any other error, use the one argument constructor to create a comparer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_float_equality_comparer_a1baa1c4d497f8a27e495b005765fb90e}\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_float_equality_comparer_a1baa1c4d497f8a27e495b005765fb90e}} 
+\index{UnityEngine.TestTools.Utils.FloatEqualityComparer@{UnityEngine.TestTools.Utils.FloatEqualityComparer}!FloatEqualityComparer@{FloatEqualityComparer}}
+\index{FloatEqualityComparer@{FloatEqualityComparer}!UnityEngine.TestTools.Utils.FloatEqualityComparer@{UnityEngine.TestTools.Utils.FloatEqualityComparer}}
+\doxysubsubsection{\texorpdfstring{FloatEqualityComparer()}{FloatEqualityComparer()}}
+{\footnotesize\ttfamily Unity\+Engine.\+Test\+Tools.\+Utils.\+Float\+Equality\+Comparer.\+Float\+Equality\+Comparer (\begin{DoxyParamCaption}\item[{float}]{allowed\+Error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes an instance of a \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_float_equality_comparer}{Float\+Equality\+Comparer}} with a custom error value instead of the default 0.\+0001f. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allowed\+Error} & The custom error value\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_float_equality_comparer_a1005da84956b738c826a845dbb077ead}\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_float_equality_comparer_a1005da84956b738c826a845dbb077ead}} 
+\index{UnityEngine.TestTools.Utils.FloatEqualityComparer@{UnityEngine.TestTools.Utils.FloatEqualityComparer}!Equals@{Equals}}
+\index{Equals@{Equals}!UnityEngine.TestTools.Utils.FloatEqualityComparer@{UnityEngine.TestTools.Utils.FloatEqualityComparer}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Utils.\+Float\+Equality\+Comparer.\+Equals (\begin{DoxyParamCaption}\item[{float}]{expected,  }\item[{float}]{actual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares the actual and expected float values for equality using Utils.\+Are\+Floats\+Equal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected} & The expected float value used to compare.\\
+\hline
+{\em actual} & The actual float value to test.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the values are equals, false otherwise.
+\end{DoxyReturn}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ [TestFixture]}
+\DoxyCodeLine{ \textcolor{keyword}{public} \textcolor{keyword}{class }FloatsTest}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    [Test]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} VerifyThat\_TwoFloatsAreEqual()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        var comparer = \textcolor{keyword}{new} FloatEqualityComparer(10e-\/6f);}
+\DoxyCodeLine{        var actual = -\/0.00009f;}
+\DoxyCodeLine{        var expected = 0.00009f;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Assert.That(actual, Is.EqualTo(expected).Using(comparer));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Default relative error 0.0001f}}
+\DoxyCodeLine{        actual = 10e-\/8f;}
+\DoxyCodeLine{        expected = 0f;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Assert.That(actual, Is.EqualTo(expected).Using(FloatEqualityComparer.Instance));}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_float_equality_comparer_a3f0732645231ef50ec9a1c144cdcfe3e}\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_float_equality_comparer_a3f0732645231ef50ec9a1c144cdcfe3e}} 
+\index{UnityEngine.TestTools.Utils.FloatEqualityComparer@{UnityEngine.TestTools.Utils.FloatEqualityComparer}!GetHashCode@{GetHashCode}}
+\index{GetHashCode@{GetHashCode}!UnityEngine.TestTools.Utils.FloatEqualityComparer@{UnityEngine.TestTools.Utils.FloatEqualityComparer}}
+\doxysubsubsection{\texorpdfstring{GetHashCode()}{GetHashCode()}}
+{\footnotesize\ttfamily int Unity\+Engine.\+Test\+Tools.\+Utils.\+Float\+Equality\+Comparer.\+Get\+Hash\+Code (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serves as the default hash function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & A not null float number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Engine.\+Test\+Runner/\+Utils/Float\+Equality\+Comparer.\+cs\end{DoxyCompactItemize}

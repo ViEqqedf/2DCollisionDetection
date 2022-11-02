@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PhysicsWorld: Physics.Collision.ICollisionObject接口 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PhysicsWorld
+   </div>
+   <div id="projectbrief">辅助阅读代码的文档</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('interface_physics_1_1_collision_1_1_i_collision_object.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="interface_physics_1_1_collision_1_1_i_collision_object-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Physics.Collision.ICollisionObject接口 参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 Physics.Collision.ICollisionObject 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interface_physics_1_1_collision_1_1_i_collision_object__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Physics.Collision.ICollisionObject 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="interface_physics_1_1_collision_1_1_i_collision_object__coll__graph.svg" width="216" height="367"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a749cf641375c96ea3341677f1752e029"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_physics_1_1_collision_1_1_i_collision_object.html#a749cf641375c96ea3341677f1752e029">InitCollisionObject</a> ()</td></tr>
+<tr class="separator:a749cf641375c96ea3341677f1752e029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fdee7207a37bbbe36e067838ac49e3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_physics_1_1_collision_1_1_projection_point.html">ProjectionPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_physics_1_1_collision_1_1_i_collision_object.html#a6fdee7207a37bbbe36e067838ac49e3b">GetProjectionPoint</a> (<a class="el" href="namespace_physics_1_1_collision_1_1_model.html#a536ffeeaef5a92e82e7cf53894167de1">AABBProjectionType</a> projectionType)</td></tr>
+<tr class="separator:a6fdee7207a37bbbe36e067838ac49e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b61463df5cc539d2de9dd4335ae3aef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_physics_1_1_collision_1_1_i_collision_object.html#a8b61463df5cc539d2de9dd4335ae3aef">Translate</a> (Vector3 diff)</td></tr>
+<tr class="separator:a8b61463df5cc539d2de9dd4335ae3aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af163e069811f2cc1f39862b96ed4f61c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_physics_1_1_collision_1_1_i_collision_object.html#af163e069811f2cc1f39862b96ed4f61c">TranslateTo</a> (Vector3 value)</td></tr>
+<tr class="separator:af163e069811f2cc1f39862b96ed4f61c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae162845c92c9a0603708e1f5f1d0c066"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_physics_1_1_collision_1_1_i_collision_object.html#ae162845c92c9a0603708e1f5f1d0c066">Rotate</a> (Vector3 diff)</td></tr>
+<tr class="separator:ae162845c92c9a0603708e1f5f1d0c066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b7de2c8f7b24b6163992a1596819b0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_physics_1_1_collision_1_1_i_collision_object.html#a6b7de2c8f7b24b6163992a1596819b0e">RotateTo</a> (Vector3 value)</td></tr>
+<tr class="separator:a6b7de2c8f7b24b6163992a1596819b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa69c7d1b74af5818b61b3311a1f65ff0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_physics_1_1_collision_1_1_i_collision_object.html#aa69c7d1b74af5818b61b3311a1f65ff0">Scale</a> (float diff)</td></tr>
+<tr class="separator:aa69c7d1b74af5818b61b3311a1f65ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d6f91d8f9d990c8bbfc78369cee94de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_physics_1_1_collision_1_1_i_collision_object.html#a7d6f91d8f9d990c8bbfc78369cee94de">ScaleTo</a> (float value)</td></tr>
+<tr class="separator:a7d6f91d8f9d990c8bbfc78369cee94de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6759d77207dfba132df1e0dc4439e9bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_physics_1_1_collision_1_1_i_collision_object.html#a6759d77207dfba132df1e0dc4439e9bc">AddVelocity</a> (Vector3 diff)</td></tr>
+<tr class="separator:a6759d77207dfba132df1e0dc4439e9bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a857415969e90dd0df7103722b21b905b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_physics_1_1_collision_1_1_i_collision_object.html#a857415969e90dd0df7103722b21b905b">AddAcceleration</a> (Vector3 diff)</td></tr>
+<tr class="separator:a857415969e90dd0df7103722b21b905b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a857415969e90dd0df7103722b21b905b" name="a857415969e90dd0df7103722b21b905b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a857415969e90dd0df7103722b21b905b">&#9670;&nbsp;</a></span>AddAcceleration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.Collision.ICollisionObject.AddAcceleration </td>
+          <td>(</td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>diff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_physics_1_1_collision_1_1_collision_object.html#a9705a53611c27dc2d8cadf5af3470f58">Physics.Collision.CollisionObject</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a6759d77207dfba132df1e0dc4439e9bc" name="a6759d77207dfba132df1e0dc4439e9bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6759d77207dfba132df1e0dc4439e9bc">&#9670;&nbsp;</a></span>AddVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.Collision.ICollisionObject.AddVelocity </td>
+          <td>(</td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>diff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_physics_1_1_collision_1_1_collision_object.html#a2158afaa00db6dc8fe254b6029b296bb">Physics.Collision.CollisionObject</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a6fdee7207a37bbbe36e067838ac49e3b" name="a6fdee7207a37bbbe36e067838ac49e3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fdee7207a37bbbe36e067838ac49e3b">&#9670;&nbsp;</a></span>GetProjectionPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_physics_1_1_collision_1_1_projection_point.html">ProjectionPoint</a> Physics.Collision.ICollisionObject.GetProjectionPoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_physics_1_1_collision_1_1_model.html#a536ffeeaef5a92e82e7cf53894167de1">AABBProjectionType</a>&#160;</td>
+          <td class="paramname"><em>projectionType</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_physics_1_1_collision_1_1_collision_object.html#aec20035d4ece9a46c457cd71761f6c16">Physics.Collision.CollisionObject</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a749cf641375c96ea3341677f1752e029" name="a749cf641375c96ea3341677f1752e029"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a749cf641375c96ea3341677f1752e029">&#9670;&nbsp;</a></span>InitCollisionObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.Collision.ICollisionObject.InitCollisionObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_physics_1_1_collision_1_1_collision_object.html#a8a0748fa64dc6f65374a9d61e7065da4">Physics.Collision.CollisionObject</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="ae162845c92c9a0603708e1f5f1d0c066" name="ae162845c92c9a0603708e1f5f1d0c066"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae162845c92c9a0603708e1f5f1d0c066">&#9670;&nbsp;</a></span>Rotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.Collision.ICollisionObject.Rotate </td>
+          <td>(</td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>diff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_physics_1_1_collision_1_1_collision_object.html#ae7ca75e378460be4294e71af9aa37001">Physics.Collision.CollisionObject</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a6b7de2c8f7b24b6163992a1596819b0e" name="a6b7de2c8f7b24b6163992a1596819b0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b7de2c8f7b24b6163992a1596819b0e">&#9670;&nbsp;</a></span>RotateTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.Collision.ICollisionObject.RotateTo </td>
+          <td>(</td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_physics_1_1_collision_1_1_collision_object.html#aadfcbb13752f3b48cee485d349a2580f">Physics.Collision.CollisionObject</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="aa69c7d1b74af5818b61b3311a1f65ff0" name="aa69c7d1b74af5818b61b3311a1f65ff0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa69c7d1b74af5818b61b3311a1f65ff0">&#9670;&nbsp;</a></span>Scale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.Collision.ICollisionObject.Scale </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>diff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_physics_1_1_collision_1_1_collision_object.html#a8318e2845f2f71cb8b5396a5e4f58c7f">Physics.Collision.CollisionObject</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a7d6f91d8f9d990c8bbfc78369cee94de" name="a7d6f91d8f9d990c8bbfc78369cee94de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d6f91d8f9d990c8bbfc78369cee94de">&#9670;&nbsp;</a></span>ScaleTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.Collision.ICollisionObject.ScaleTo </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_physics_1_1_collision_1_1_collision_object.html#a14aad5d8c4b1ac3883a2c44f1c05d5cb">Physics.Collision.CollisionObject</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a8b61463df5cc539d2de9dd4335ae3aef" name="a8b61463df5cc539d2de9dd4335ae3aef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b61463df5cc539d2de9dd4335ae3aef">&#9670;&nbsp;</a></span>Translate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.Collision.ICollisionObject.Translate </td>
+          <td>(</td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>diff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_physics_1_1_collision_1_1_collision_object.html#a1d619f33e85ae72c0cfa06fddbad7655">Physics.Collision.CollisionObject</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="af163e069811f2cc1f39862b96ed4f61c" name="af163e069811f2cc1f39862b96ed4f61c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af163e069811f2cc1f39862b96ed4f61c">&#9670;&nbsp;</a></span>TranslateTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Physics.Collision.ICollisionObject.TranslateTo </td>
+          <td>(</td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_physics_1_1_collision_1_1_collision_object.html#a4846199027ea91a2f9fcfbd67de5211a">Physics.Collision.CollisionObject</a> 内被实现.</p>
+
+</div>
+</div>
+<hr/>该接口的文档由以下文件生成:<ul>
+<li>/Users/zhuangshaokun/Documents/git/campfire/2dcollisiondetection/Assets/Scripts/Collision/<a class="el" href="_collision_object_8cs.html">CollisionObject.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_physics.html">Physics</a></li><li class="navelem"><a class="el" href="namespace_physics_1_1_collision.html">Collision</a></li><li class="navelem"><a class="el" href="interface_physics_1_1_collision_1_1_i_collision_object.html">ICollisionObject</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

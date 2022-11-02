@@ -1,0 +1,96 @@
+\hypertarget{class_nested_canvas}{}\doxysection{Nested\+Canvas Class Reference}
+\label{class_nested_canvas}\index{NestedCanvas@{NestedCanvas}}
+Inheritance diagram for Nested\+Canvas\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_nested_canvas}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_nested_canvas_a28ff7d962e6dafc1f0014b032e48b39f}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Implement this method to call actions automatically before the build process. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_nested_canvas_ac81266f2889695c570f79c13b1816135}\label{class_nested_canvas_ac81266f2889695c570f79c13b1816135}} 
+IEnumerator {\bfseries World\+Canvas\+\_\+\+Can\+Find\+Camera\+After\+Disabling\+And\+Enabling\+Root\+Canvas} ()
+\item 
+\mbox{\Hypertarget{class_nested_canvas_adec557fcbbb181d824562166bb1373b6}\label{class_nested_canvas_adec557fcbbb181d824562166bb1373b6}} 
+IEnumerator {\bfseries World\+Canvas\+\_\+\+Can\+Find\+The\+Same\+Camera\+After\+Disabling\+And\+Enabling\+Root\+Canvas} ()
+\item 
+\mbox{\Hypertarget{class_nested_canvas_a7eeb780d8aadb2654b1ca007a2c2feee}\label{class_nested_canvas_a7eeb780d8aadb2654b1ca007a2c2feee}} 
+IEnumerator {\bfseries Nested\+Canvas\+Has\+Proper\+Inherited\+Alpha} ()
+\item 
+\mbox{\Hypertarget{class_nested_canvas_a2ee5358037690609e08b92fd3be68246}\label{class_nested_canvas_a2ee5358037690609e08b92fd3be68246}} 
+void {\bfseries Tear\+Down} ()
+\item 
+\mbox{\Hypertarget{class_nested_canvas_a6fa5a04e8467a3f04dcd828c3fc9d5e8}\label{class_nested_canvas_a6fa5a04e8467a3f04dcd828c3fc9d5e8}} 
+void {\bfseries One\+Time\+Tear\+Down} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_nested_canvas_a28ff7d962e6dafc1f0014b032e48b39f}\label{class_nested_canvas_a28ff7d962e6dafc1f0014b032e48b39f}} 
+\index{NestedCanvas@{NestedCanvas}!Setup@{Setup}}
+\index{Setup@{Setup}!NestedCanvas@{NestedCanvas}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily void Nested\+Canvas.\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implement this method to call actions automatically before the build process. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }CreateSpriteTest : IPrebuildSetup}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    Texture2D m\_Texture;}
+\DoxyCodeLine{    Sprite m\_Sprite;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_nested_canvas_a28ff7d962e6dafc1f0014b032e48b39f}{Setup}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#if UNITY\_EDITOR}}
+\DoxyCodeLine{        var spritePath = \textcolor{stringliteral}{"{}Assets/Resources/Circle.png"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{        var ti = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.AssetImporter.GetAtPath(spritePath) as \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporter;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.textureCompression = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporterCompression.Uncompressed;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.SaveAndReimport();}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [SetUp]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} SetUpTest()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        m\_Texture = Resources.Load<Texture2D>(\textcolor{stringliteral}{"{}Circle"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [Test]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} WhenNullTextureIsPassed\_CreateShouldReturnNullSprite()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with Valid Texture.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        LogAssert.Expect(LogType.Log, \textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Sprite.Create(m\_Texture, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Debug.Log(\textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with NULL Texture. Should return NULL Sprite.}}
+\DoxyCodeLine{        m\_Sprite = Sprite.Create(\textcolor{keyword}{null}, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Assert.That(m\_Sprite, Is.Null, \textcolor{stringliteral}{"{}Sprite created with null texture should be null"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup_a9a9eaa928efe50645e61412528e84309}{Unity\+Engine.\+Test\+Tools.\+IPrebuild\+Setup}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Tests/\+Runtime/\+Canvas/Nested\+Canvas.\+cs\end{DoxyCompactItemize}

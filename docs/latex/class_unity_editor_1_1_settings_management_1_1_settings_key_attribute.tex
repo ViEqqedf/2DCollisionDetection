@@ -1,0 +1,68 @@
+\hypertarget{class_unity_editor_1_1_settings_management_1_1_settings_key_attribute}{}\doxysection{Unity\+Editor.\+Settings\+Management.\+Settings\+Key\+Attribute Class Reference}
+\label{class_unity_editor_1_1_settings_management_1_1_settings_key_attribute}\index{UnityEditor.SettingsManagement.SettingsKeyAttribute@{UnityEditor.SettingsManagement.SettingsKeyAttribute}}
+
+
+Register a field with \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}}, but do not automatically create a property field in the Settings\+Provider. Unlike \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute}{User\+Setting\+Attribute}}, this attribute is valid for instance properties as well as static. These values will not be shown in the Settings\+Provider, but will have their stored values cleared when \char`\"{}\+Reset All\char`\"{} is invoked.  
+
+
+Inheritance diagram for Unity\+Editor.\+Settings\+Management.\+Settings\+Key\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_settings_management_1_1_settings_key_attribute}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings_key_attribute_ac895fc4da1651524554475d25ea6013e}{Settings\+Key\+Attribute}} (string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings_key_attribute_a836b8de0269022749b2965fb06cdba43}{key}}, Settings\+Scope \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings_key_attribute_a39ce315775e6846dc7c6c1ba41cd8500}{scope}}=Settings\+Scope.\+Project)
+\begin{DoxyCompactList}\small\item\em Register a field as a setting. This allows the \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_settings_provider}{User\+Settings\+Provider}} to reset it\textquotesingle{}s value and display it\textquotesingle{}s value in debugging modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings_key_attribute_a836b8de0269022749b2965fb06cdba43}{key}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Settings\+Scope \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings_key_attribute_a39ce315775e6846dc7c6c1ba41cd8500}{scope}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Register a field with \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}}, but do not automatically create a property field in the Settings\+Provider. Unlike \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute}{User\+Setting\+Attribute}}, this attribute is valid for instance properties as well as static. These values will not be shown in the Settings\+Provider, but will have their stored values cleared when \char`\"{}\+Reset All\char`\"{} is invoked. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_settings_key_attribute_ac895fc4da1651524554475d25ea6013e}\label{class_unity_editor_1_1_settings_management_1_1_settings_key_attribute_ac895fc4da1651524554475d25ea6013e}} 
+\index{UnityEditor.SettingsManagement.SettingsKeyAttribute@{UnityEditor.SettingsManagement.SettingsKeyAttribute}!SettingsKeyAttribute@{SettingsKeyAttribute}}
+\index{SettingsKeyAttribute@{SettingsKeyAttribute}!UnityEditor.SettingsManagement.SettingsKeyAttribute@{UnityEditor.SettingsManagement.SettingsKeyAttribute}}
+\doxysubsubsection{\texorpdfstring{SettingsKeyAttribute()}{SettingsKeyAttribute()}}
+{\footnotesize\ttfamily Unity\+Editor.\+Settings\+Management.\+Settings\+Key\+Attribute.\+Settings\+Key\+Attribute (\begin{DoxyParamCaption}\item[{string}]{key,  }\item[{Settings\+Scope}]{scope = {\ttfamily SettingsScope.Project} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Register a field as a setting. This allows the \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_settings_provider}{User\+Settings\+Provider}} to reset it\textquotesingle{}s value and display it\textquotesingle{}s value in debugging modes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The setting key.\\
+\hline
+{\em scope} & The scope in which this setting is serialized.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_settings_key_attribute_a836b8de0269022749b2965fb06cdba43}\label{class_unity_editor_1_1_settings_management_1_1_settings_key_attribute_a836b8de0269022749b2965fb06cdba43}} 
+\index{UnityEditor.SettingsManagement.SettingsKeyAttribute@{UnityEditor.SettingsManagement.SettingsKeyAttribute}!key@{key}}
+\index{key@{key}!UnityEditor.SettingsManagement.SettingsKeyAttribute@{UnityEditor.SettingsManagement.SettingsKeyAttribute}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily string Unity\+Editor.\+Settings\+Management.\+Settings\+Key\+Attribute.\+key\hspace{0.3cm}{\ttfamily [get]}}
+
+The key for this value. \mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_settings_key_attribute_a39ce315775e6846dc7c6c1ba41cd8500}\label{class_unity_editor_1_1_settings_management_1_1_settings_key_attribute_a39ce315775e6846dc7c6c1ba41cd8500}} 
+\index{UnityEditor.SettingsManagement.SettingsKeyAttribute@{UnityEditor.SettingsManagement.SettingsKeyAttribute}!scope@{scope}}
+\index{scope@{scope}!UnityEditor.SettingsManagement.SettingsKeyAttribute@{UnityEditor.SettingsManagement.SettingsKeyAttribute}}
+\doxysubsubsection{\texorpdfstring{scope}{scope}}
+{\footnotesize\ttfamily Settings\+Scope Unity\+Editor.\+Settings\+Management.\+Settings\+Key\+Attribute.\+scope\hspace{0.3cm}{\ttfamily [get]}}
+
+Where this setting is serialized. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+settings-\/manager@1.\+0.\+3/\+Editor/Attributes.\+cs\end{DoxyCompactItemize}

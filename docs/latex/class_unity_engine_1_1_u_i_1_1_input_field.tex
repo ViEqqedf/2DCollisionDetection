@@ -1,0 +1,263 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_input_field}{}\doxysection{Unity\+Engine.\+UI.\+Input\+Field Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_input_field}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}
+
+
+Turn a simple label into a interactable input field.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Input\+Field\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=10.000000cm]{class_unity_engine_1_1_u_i_1_1_input_field}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_1_1_end_edit_event}{End\+Edit\+Event}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_unity}{Unity}} Event with a inputfield as a param. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_1_1_on_change_event}{On\+Change\+Event}}
+\begin{DoxyCompactList}\small\item\em The callback sent anytime the Inputfield is updated. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_1_1_submit_event}{Submit\+Event}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_unity}{Unity}} Event with a inputfield as a param. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2}{Content\+Type}} \{ \newline
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2aeb6d8ae6f20283755b339c0dc273988b}{Standard}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2aea80b4f3dde3ae14c3f07dd11b89a43b}{Autocorrected}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2a01c85075e3923cad28625320edba4610}{Integer\+Number}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2a0c0798d3ea517d2ebbb02ba0da8ab719}{Decimal\+Number}}
+, \newline
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2af47e3bc3b7558713220312ade618a80e}{Alphanumeric}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2a49ee3087348e8d44e1feda1917443987}{Name}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2a1e674f0dd1434f2bb3fe5d645b0f9cc3}{Email\+Address}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2adc647eb65e6711e155375218212b3964}{Password}}
+, \newline
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2ae78e14c5f18f793bdcd4726766f0fa44}{Pin}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2a90589c47f06eb971d548591f23c285af}{Custom}}
+ \}
+\begin{DoxyCompactList}\small\item\em Setting the content type acts as a shortcut for setting a combination of Input\+Type, Character\+Validation, Line\+Type, and Touch\+Screen\+Keyboard\+Type \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a6215c075a8f1105f0cc69189166897f0}{Input\+Type}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a6215c075a8f1105f0cc69189166897f0aeb6d8ae6f20283755b339c0dc273988b}{Standard}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a6215c075a8f1105f0cc69189166897f0ae336565230b923e35d5355a453a832a4}{Auto\+Correct}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a6215c075a8f1105f0cc69189166897f0adc647eb65e6711e155375218212b3964}{Password}}
+ \}
+\begin{DoxyCompactList}\small\item\em Type of data expected by the input field mobile keyboard. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48}{Character\+Validation}} \{ \newline
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48a6adf97f83acf6453d4a6a4b1070f3754}{None}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48aa0faef0851b4294c06f2b94bb1cb2044}{Integer}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48a937504f318f04eaf0f1d701df4c4d7f3}{Decimal}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48af47e3bc3b7558713220312ade618a80e}{Alphanumeric}}
+, \newline
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48a49ee3087348e8d44e1feda1917443987}{Name}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48a1e674f0dd1434f2bb3fe5d645b0f9cc3}{Email\+Address}}
+ \}
+\begin{DoxyCompactList}\small\item\em The type of characters that are allowed to be added to the string. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a5ae8b7dabd5aecdf0d19b79e0dbcd126}{Line\+Type}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a5ae8b7dabd5aecdf0d19b79e0dbcd126a3e5c1fb76b6543ac61af54b185f02af9}{Single\+Line}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a5ae8b7dabd5aecdf0d19b79e0dbcd126a870dd4fa8d51dddda55c9fa28ee55ecb}{Multi\+Line\+Submit}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a5ae8b7dabd5aecdf0d19b79e0dbcd126ab24c6b424e512ab6d84470840ccd1d1f}{Multi\+Line\+Newline}}
+ \}
+\begin{DoxyCompactList}\small\item\em The Line\+Type is used to describe the behavior of the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field}{Input\+Field}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a3b787395f6ddcc7aeb65d677ddf32220}\label{class_unity_engine_1_1_u_i_1_1_input_field_a3b787395f6ddcc7aeb65d677ddf32220}} 
+delegate char {\bfseries On\+Validate\+Input} (string text, int char\+Index, char added\+Char)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a2ad5256df020696a977a19c951120357}\label{class_unity_engine_1_1_u_i_1_1_input_field_a2ad5256df020696a977a19c951120357}} 
+Touch\+Screen\+Keyboard {\bfseries m\+\_\+\+Keyboard}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a80f72cab5a9fbc21f781f22016c1b3c9}\label{class_unity_engine_1_1_u_i_1_1_input_field_a80f72cab5a9fbc21f781f22016c1b3c9}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_text}{Text}} {\bfseries m\+\_\+\+Text\+Component}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_text}{Text}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_text}{Text}} used to display the input\textquotesingle{}s value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a10d2d8303f97396b27211652af753048}\label{class_unity_engine_1_1_u_i_1_1_input_field_a10d2d8303f97396b27211652af753048}} 
+Graphic {\bfseries m\+\_\+\+Placeholder}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_adadceb7f3c9f44c1d549688a065c3db2}\label{class_unity_engine_1_1_u_i_1_1_input_field_adadceb7f3c9f44c1d549688a065c3db2}} 
+string {\bfseries m\+\_\+\+Text} = string.\+Empty
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_af0d366fa3702507c3959a36cdcf6df06}\label{class_unity_engine_1_1_u_i_1_1_input_field_af0d366fa3702507c3959a36cdcf6df06}} 
+int {\bfseries m\+\_\+\+Caret\+Position} = 0
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a529aa205bd83ad7ca67b2b554b0e6758}\label{class_unity_engine_1_1_u_i_1_1_input_field_a529aa205bd83ad7ca67b2b554b0e6758}} 
+int {\bfseries m\+\_\+\+Caret\+Select\+Position} = 0
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a66f089b28b67d513637c75e67adb7b1a}\label{class_unity_engine_1_1_u_i_1_1_input_field_a66f089b28b67d513637c75e67adb7b1a}} 
+UIVertex\mbox{[}$\,$\mbox{]} {\bfseries m\+\_\+\+Cursor\+Verts} = null
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a51164a1f7308cc410d646311cb5a2ab7}\label{class_unity_engine_1_1_u_i_1_1_input_field_a51164a1f7308cc410d646311cb5a2ab7}} 
+Mesh {\bfseries m\+\_\+\+Mesh}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a1f52817f965595e54af5b4480d8c783d}\label{class_unity_engine_1_1_u_i_1_1_input_field_a1f52817f965595e54af5b4480d8c783d}} 
+bool {\bfseries m\+\_\+\+Caret\+Visible}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a8c6390453676c3e3593f4f33921640db}\label{class_unity_engine_1_1_u_i_1_1_input_field_a8c6390453676c3e3593f4f33921640db}} 
+int {\bfseries m\+\_\+\+Draw\+Start} = 0
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_aa144a80e9c2027232af073eb977e0199}\label{class_unity_engine_1_1_u_i_1_1_input_field_aa144a80e9c2027232af073eb977e0199}} 
+int {\bfseries m\+\_\+\+Draw\+End} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a53931085080a67f48ded1d553778adae}\label{class_unity_engine_1_1_u_i_1_1_input_field_a53931085080a67f48ded1d553778adae}} 
+Mesh {\bfseries mesh}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_aa50156be68b050c85f0181c7f08eda00}\label{class_unity_engine_1_1_u_i_1_1_input_field_aa50156be68b050c85f0181c7f08eda00}} 
+Text\+Generator {\bfseries cached\+Input\+Text\+Generator}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Turn a simple label into a interactable input field. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48}\label{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48}} 
+\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!CharacterValidation@{CharacterValidation}}
+\index{CharacterValidation@{CharacterValidation}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}
+\doxysubsubsection{\texorpdfstring{CharacterValidation}{CharacterValidation}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48}{Unity\+Engine.\+UI.\+Input\+Field.\+Character\+Validation}}}
+
+
+
+The type of characters that are allowed to be added to the string. 
+
+Note that the character validation does not validate the entire string as being valid or not. It only does validation on a per-\/character level, resulting in the typed character either being added to the string or not \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!None@{None}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48a6adf97f83acf6453d4a6a4b1070f3754}\label{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48a6adf97f83acf6453d4a6a4b1070f3754}} 
+None&No validation. Any input is valid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Integer@{Integer}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!Integer@{Integer}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48aa0faef0851b4294c06f2b94bb1cb2044}\label{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48aa0faef0851b4294c06f2b94bb1cb2044}} 
+Integer&Allow whole numbers (positive or negative). Characters 0-\/9 and -\/ (dash / minus sign) are allowed. The dash is only allowed as the first character. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Decimal@{Decimal}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!Decimal@{Decimal}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48a937504f318f04eaf0f1d701df4c4d7f3}\label{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48a937504f318f04eaf0f1d701df4c4d7f3}} 
+Decimal&Allows decimal numbers (positive or negative). Characters 0-\/9, . (dot), and -\/ (dash / minus sign) are allowed. The dash is only allowed as the first character. Only one dot in the string is allowed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Alphanumeric@{Alphanumeric}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!Alphanumeric@{Alphanumeric}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48af47e3bc3b7558713220312ade618a80e}\label{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48af47e3bc3b7558713220312ade618a80e}} 
+Alphanumeric&Allows letters A-\/Z, a-\/z and numbers 0-\/9. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Name@{Name}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!Name@{Name}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48a49ee3087348e8d44e1feda1917443987}\label{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48a49ee3087348e8d44e1feda1917443987}} 
+Name&Only allow names and enforces capitalization. Allows letters, spaces, and \textquotesingle{} (apostrophe). A character after a space is automatically made upper case. A character not after a space is automatically made lowercase. A character after an apostrophe can be either upper or lower case. Only one apostrophe in the string is allowed. More than one space in a row is not allowed.
+
+A characters is considered a letter if it is categorized as a Unicode letter, as implemented by the Char.\+Isletter method in .Net. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EmailAddress@{EmailAddress}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!EmailAddress@{EmailAddress}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48a1e674f0dd1434f2bb3fe5d645b0f9cc3}\label{class_unity_engine_1_1_u_i_1_1_input_field_a1ab8ee3dc9e7c82d1c598c61a9412f48a1e674f0dd1434f2bb3fe5d645b0f9cc3}} 
+Email\+Address&Allows the characters that are allowed in an email address. Allows characters A-\/Z, a.\+z, 0-\/9, @, . (dot), !, \#, \$, \%, \&, \textquotesingle{}, $\ast$, +, -\/, /, =, ?, $^\wedge$, \+\_\+, \`{}, \{, $\vert$, \}, and $\sim$.
+
+Only one @ is allowed in the string and more than one dot in a row are not allowed. Note that the character validation does not validate the entire string as being a valid email address since it only does validation on a per-\/character level, resulting in the typed character either being added to the string or not. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2}\label{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2}} 
+\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!ContentType@{ContentType}}
+\index{ContentType@{ContentType}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}
+\doxysubsubsection{\texorpdfstring{ContentType}{ContentType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2}{Unity\+Engine.\+UI.\+Input\+Field.\+Content\+Type}}}
+
+
+
+Setting the content type acts as a shortcut for setting a combination of Input\+Type, Character\+Validation, Line\+Type, and Touch\+Screen\+Keyboard\+Type 
+
+The Content\+Type affects character validation, keyboard type used (on platforms with on-\/screen keyboards), whether the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field}{Input\+Field}} accepts multiple lines, and whether the text is autocorrected (on platforms that offer input auto-\/correction) or is treated as a password where the characters are not shown directly. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Standard@{Standard}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!Standard@{Standard}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2aeb6d8ae6f20283755b339c0dc273988b}\label{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2aeb6d8ae6f20283755b339c0dc273988b}} 
+Standard&Allows all input. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Autocorrected@{Autocorrected}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!Autocorrected@{Autocorrected}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2aea80b4f3dde3ae14c3f07dd11b89a43b}\label{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2aea80b4f3dde3ae14c3f07dd11b89a43b}} 
+Autocorrected&Allows all input and performs auto-\/correction on platforms that support it. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IntegerNumber@{IntegerNumber}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!IntegerNumber@{IntegerNumber}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2a01c85075e3923cad28625320edba4610}\label{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2a01c85075e3923cad28625320edba4610}} 
+Integer\+Number&Allow whole numbers (positive or negative). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DecimalNumber@{DecimalNumber}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!DecimalNumber@{DecimalNumber}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2a0c0798d3ea517d2ebbb02ba0da8ab719}\label{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2a0c0798d3ea517d2ebbb02ba0da8ab719}} 
+Decimal\+Number&Allows decimal numbers (positive or negative). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Alphanumeric@{Alphanumeric}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!Alphanumeric@{Alphanumeric}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2af47e3bc3b7558713220312ade618a80e}\label{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2af47e3bc3b7558713220312ade618a80e}} 
+Alphanumeric&Allows letters A-\/Z, a-\/z and numbers 0-\/9. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Name@{Name}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!Name@{Name}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2a49ee3087348e8d44e1feda1917443987}\label{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2a49ee3087348e8d44e1feda1917443987}} 
+Name&The \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field}{Input\+Field}} is used for typing in a name, and enforces capitalization of the first letter of each word. Note that the user can circumvent the first letter capitalization rules by deleting automatically-\/capitalized letters. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EmailAddress@{EmailAddress}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!EmailAddress@{EmailAddress}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2a1e674f0dd1434f2bb3fe5d645b0f9cc3}\label{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2a1e674f0dd1434f2bb3fe5d645b0f9cc3}} 
+Email\+Address&The input is used for typing in an email address. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Password@{Password}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!Password@{Password}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2adc647eb65e6711e155375218212b3964}\label{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2adc647eb65e6711e155375218212b3964}} 
+Password&Allows all input and hides the typed characters by showing them as asterisks characters. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Pin@{Pin}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!Pin@{Pin}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2ae78e14c5f18f793bdcd4726766f0fa44}\label{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2ae78e14c5f18f793bdcd4726766f0fa44}} 
+Pin&Allows integer numbers and hides the typed characters by showing them as asterisks characters. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Custom@{Custom}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!Custom@{Custom}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2a90589c47f06eb971d548591f23c285af}\label{class_unity_engine_1_1_u_i_1_1_input_field_a7319ba6a2133beb3a3a3f78f59f592c2a90589c47f06eb971d548591f23c285af}} 
+Custom&Custom types that allows user-\/defined settings. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a6215c075a8f1105f0cc69189166897f0}\label{class_unity_engine_1_1_u_i_1_1_input_field_a6215c075a8f1105f0cc69189166897f0}} 
+\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!InputType@{InputType}}
+\index{InputType@{InputType}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}
+\doxysubsubsection{\texorpdfstring{InputType}{InputType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a6215c075a8f1105f0cc69189166897f0}{Unity\+Engine.\+UI.\+Input\+Field.\+Input\+Type}}}
+
+
+
+Type of data expected by the input field mobile keyboard. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Standard@{Standard}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!Standard@{Standard}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a6215c075a8f1105f0cc69189166897f0aeb6d8ae6f20283755b339c0dc273988b}\label{class_unity_engine_1_1_u_i_1_1_input_field_a6215c075a8f1105f0cc69189166897f0aeb6d8ae6f20283755b339c0dc273988b}} 
+Standard&The standard mobile keyboard \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AutoCorrect@{AutoCorrect}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!AutoCorrect@{AutoCorrect}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a6215c075a8f1105f0cc69189166897f0ae336565230b923e35d5355a453a832a4}\label{class_unity_engine_1_1_u_i_1_1_input_field_a6215c075a8f1105f0cc69189166897f0ae336565230b923e35d5355a453a832a4}} 
+Auto\+Correct&The mobile autocorrect keyboard. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Password@{Password}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!Password@{Password}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a6215c075a8f1105f0cc69189166897f0adc647eb65e6711e155375218212b3964}\label{class_unity_engine_1_1_u_i_1_1_input_field_a6215c075a8f1105f0cc69189166897f0adc647eb65e6711e155375218212b3964}} 
+Password&The mobile password keyboard. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a5ae8b7dabd5aecdf0d19b79e0dbcd126}\label{class_unity_engine_1_1_u_i_1_1_input_field_a5ae8b7dabd5aecdf0d19b79e0dbcd126}} 
+\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!LineType@{LineType}}
+\index{LineType@{LineType}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}
+\doxysubsubsection{\texorpdfstring{LineType}{LineType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field_a5ae8b7dabd5aecdf0d19b79e0dbcd126}{Unity\+Engine.\+UI.\+Input\+Field.\+Line\+Type}}}
+
+
+
+The Line\+Type is used to describe the behavior of the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field}{Input\+Field}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SingleLine@{SingleLine}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!SingleLine@{SingleLine}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a5ae8b7dabd5aecdf0d19b79e0dbcd126a3e5c1fb76b6543ac61af54b185f02af9}\label{class_unity_engine_1_1_u_i_1_1_input_field_a5ae8b7dabd5aecdf0d19b79e0dbcd126a3e5c1fb76b6543ac61af54b185f02af9}} 
+Single\+Line&Only allows 1 line to be entered. Has horizontal scrolling and no word wrap. Pressing enter will submit the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field}{Input\+Field}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MultiLineSubmit@{MultiLineSubmit}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!MultiLineSubmit@{MultiLineSubmit}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a5ae8b7dabd5aecdf0d19b79e0dbcd126a870dd4fa8d51dddda55c9fa28ee55ecb}\label{class_unity_engine_1_1_u_i_1_1_input_field_a5ae8b7dabd5aecdf0d19b79e0dbcd126a870dd4fa8d51dddda55c9fa28ee55ecb}} 
+Multi\+Line\+Submit&Is a multiline \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field}{Input\+Field}} with vertical scrolling and overflow. Pressing the return key will submit. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MultiLineNewline@{MultiLineNewline}!UnityEngine.UI.InputField@{UnityEngine.UI.InputField}}\index{UnityEngine.UI.InputField@{UnityEngine.UI.InputField}!MultiLineNewline@{MultiLineNewline}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_input_field_a5ae8b7dabd5aecdf0d19b79e0dbcd126ab24c6b424e512ab6d84470840ccd1d1f}\label{class_unity_engine_1_1_u_i_1_1_input_field_a5ae8b7dabd5aecdf0d19b79e0dbcd126ab24c6b424e512ab6d84470840ccd1d1f}} 
+Multi\+Line\+Newline&Is a multiline \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_input_field}{Input\+Field}} with vertical scrolling and overflow. Pressing the return key will insert a new line character. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/Input\+Field.\+cs\end{DoxyCompactItemize}

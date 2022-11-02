@@ -1,0 +1,73 @@
+\hypertarget{class_doc_code_examples_1_1_action_examples___hide_a_p_i_1_1_sample_clip_action}{}\doxysection{Doc\+Code\+Examples.\+Action\+Examples\+\_\+\+Hide\+API.\+Sample\+Clip\+Action Class Reference}
+\label{class_doc_code_examples_1_1_action_examples___hide_a_p_i_1_1_sample_clip_action}\index{DocCodeExamples.ActionExamples\_HideAPI.SampleClipAction@{DocCodeExamples.ActionExamples\_HideAPI.SampleClipAction}}
+Inheritance diagram for Doc\+Code\+Examples.\+Action\+Examples\+\_\+\+Hide\+API.\+Sample\+Clip\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doc_code_examples_1_1_action_examples___hide_a_p_i_1_1_sample_clip_action}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Action\+Validity}} \mbox{\hyperlink{class_doc_code_examples_1_1_action_examples___hide_a_p_i_1_1_sample_clip_action_a9e17a346619b0f67a70f66f6b2b433e7}{Validate}} (IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} $>$ clip)
+\begin{DoxyCompactList}\small\item\em Defines the validity of an Action for a given set of clips. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{class_doc_code_examples_1_1_action_examples___hide_a_p_i_1_1_sample_clip_action_a96ff62897fa4ef517afdd9a12ed93f03}{Execute}} (IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} $>$ items)
+\begin{DoxyCompactList}\small\item\em Execute the action based on clips. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doc_code_examples_1_1_action_examples___hide_a_p_i_1_1_sample_clip_action_a29c60442d3b6845fe7dab0b7c3fe9456}\label{class_doc_code_examples_1_1_action_examples___hide_a_p_i_1_1_sample_clip_action_a29c60442d3b6845fe7dab0b7c3fe9456}} 
+static void {\bfseries Handle\+Short\+Cut} (Shortcut\+Arguments args)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doc_code_examples_1_1_action_examples___hide_a_p_i_1_1_sample_clip_action_a96ff62897fa4ef517afdd9a12ed93f03}\label{class_doc_code_examples_1_1_action_examples___hide_a_p_i_1_1_sample_clip_action_a96ff62897fa4ef517afdd9a12ed93f03}} 
+\index{DocCodeExamples.ActionExamples\_HideAPI.SampleClipAction@{DocCodeExamples.ActionExamples\_HideAPI.SampleClipAction}!Execute@{Execute}}
+\index{Execute@{Execute}!DocCodeExamples.ActionExamples\_HideAPI.SampleClipAction@{DocCodeExamples.ActionExamples\_HideAPI.SampleClipAction}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily override bool Doc\+Code\+Examples.\+Action\+Examples\+\_\+\+Hide\+API.\+Sample\+Clip\+Action.\+Execute (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} $>$}]{clips }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Execute the action based on clips. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clips} & clips that the action will act on.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the action has been correctly executed, false otherwise.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action_aea36935688f8b5cc0196a3c55f34f891}{Unity\+Editor.\+Timeline.\+Actions.\+Clip\+Action}}.
+
+\mbox{\Hypertarget{class_doc_code_examples_1_1_action_examples___hide_a_p_i_1_1_sample_clip_action_a9e17a346619b0f67a70f66f6b2b433e7}\label{class_doc_code_examples_1_1_action_examples___hide_a_p_i_1_1_sample_clip_action_a9e17a346619b0f67a70f66f6b2b433e7}} 
+\index{DocCodeExamples.ActionExamples\_HideAPI.SampleClipAction@{DocCodeExamples.ActionExamples\_HideAPI.SampleClipAction}!Validate@{Validate}}
+\index{Validate@{Validate}!DocCodeExamples.ActionExamples\_HideAPI.SampleClipAction@{DocCodeExamples.ActionExamples\_HideAPI.SampleClipAction}}
+\doxysubsubsection{\texorpdfstring{Validate()}{Validate()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Action\+Validity}} Doc\+Code\+Examples.\+Action\+Examples\+\_\+\+Hide\+API.\+Sample\+Clip\+Action.\+Validate (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} $>$}]{clips }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Defines the validity of an Action for a given set of clips. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clips} & The clips that the action will act on.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The validity of the set of clips.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action_a16010aa6b99da1070781f78e0c0c1a2d}{Unity\+Editor.\+Timeline.\+Actions.\+Clip\+Action}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Doc\+Code\+Examples/Action\+Examples.\+cs\end{DoxyCompactItemize}

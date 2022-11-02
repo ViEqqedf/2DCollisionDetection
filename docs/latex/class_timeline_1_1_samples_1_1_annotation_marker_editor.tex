@@ -1,0 +1,74 @@
+\hypertarget{class_timeline_1_1_samples_1_1_annotation_marker_editor}{}\doxysection{Timeline.\+Samples.\+Annotation\+Marker\+Editor Class Reference}
+\label{class_timeline_1_1_samples_1_1_annotation_marker_editor}\index{Timeline.Samples.AnnotationMarkerEditor@{Timeline.Samples.AnnotationMarkerEditor}}
+Inheritance diagram for Timeline.\+Samples.\+Annotation\+Marker\+Editor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_timeline_1_1_samples_1_1_annotation_marker_editor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_timeline_1_1_samples_1_1_annotation_marker_editor_a573add77ac5c83d5be74da2cf1e1a0a5}{Draw\+Overlay}} (\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} marker, \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_aa1815b2a771f9839fb1df5fc94d1e41a}{Marker\+UIStates}} ui\+State, \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_marker_overlay_region}{Marker\+Overlay\+Region}} region)
+\begin{DoxyCompactList}\small\item\em Draws additional overlays for a marker. \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_marker_draw_options}{Marker\+Draw\+Options}} \mbox{\hyperlink{class_timeline_1_1_samples_1_1_annotation_marker_editor_adc78cd0029ca1337da95d3c78f8c3b9d}{Get\+Marker\+Options}} (\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} marker)
+\begin{DoxyCompactList}\small\item\em Implement this method to override the default options for drawing a marker. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_timeline_1_1_samples_1_1_annotation_marker_editor_a573add77ac5c83d5be74da2cf1e1a0a5}\label{class_timeline_1_1_samples_1_1_annotation_marker_editor_a573add77ac5c83d5be74da2cf1e1a0a5}} 
+\index{Timeline.Samples.AnnotationMarkerEditor@{Timeline.Samples.AnnotationMarkerEditor}!DrawOverlay@{DrawOverlay}}
+\index{DrawOverlay@{DrawOverlay}!Timeline.Samples.AnnotationMarkerEditor@{Timeline.Samples.AnnotationMarkerEditor}}
+\doxysubsubsection{\texorpdfstring{DrawOverlay()}{DrawOverlay()}}
+{\footnotesize\ttfamily override void Timeline.\+Samples.\+Annotation\+Marker\+Editor.\+Draw\+Overlay (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}}}]{marker,  }\item[{\mbox{\hyperlink{namespace_unity_editor_1_1_timeline_aa1815b2a771f9839fb1df5fc94d1e41a}{Marker\+UIStates}}}]{ui\+State,  }\item[{\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_marker_overlay_region}{Marker\+Overlay\+Region}}}]{region }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Draws additional overlays for a marker. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em marker} & The marker to draw.\\
+\hline
+{\em ui\+State} & The visual state of the marker.\\
+\hline
+{\em region} & The on-\/screen area where the marker is being drawn.\\
+\hline
+\end{DoxyParams}
+
+
+Notes\+:
+\begin{DoxyItemize}
+\item It is only called during Timeline\+Window\textquotesingle{}s Repaint step.
+\item If there are multiple markers on top of each other, only the topmost marker receives the Draw\+Overlay call. 
+\end{DoxyItemize}
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_marker_editor_a7303ada120f031d2360054b7049bd280}{Unity\+Editor.\+Timeline.\+Marker\+Editor}}.
+
+\mbox{\Hypertarget{class_timeline_1_1_samples_1_1_annotation_marker_editor_adc78cd0029ca1337da95d3c78f8c3b9d}\label{class_timeline_1_1_samples_1_1_annotation_marker_editor_adc78cd0029ca1337da95d3c78f8c3b9d}} 
+\index{Timeline.Samples.AnnotationMarkerEditor@{Timeline.Samples.AnnotationMarkerEditor}!GetMarkerOptions@{GetMarkerOptions}}
+\index{GetMarkerOptions@{GetMarkerOptions}!Timeline.Samples.AnnotationMarkerEditor@{Timeline.Samples.AnnotationMarkerEditor}}
+\doxysubsubsection{\texorpdfstring{GetMarkerOptions()}{GetMarkerOptions()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_marker_draw_options}{Marker\+Draw\+Options}} Timeline.\+Samples.\+Annotation\+Marker\+Editor.\+Get\+Marker\+Options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}}}]{marker }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implement this method to override the default options for drawing a marker. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em marker} & The marker to draw.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_marker_editor_ad9ca62cf989a9d817e343c6fbaa9a1e6}{Unity\+Editor.\+Timeline.\+Marker\+Editor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Samples$\sim$/\+Customization/\+Annotation/\+Editor/Annotation\+Marker\+Editor.\+cs\end{DoxyCompactItemize}

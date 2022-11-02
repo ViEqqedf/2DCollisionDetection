@@ -1,0 +1,93 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_mask}{}\doxysection{Unity\+Engine.\+UI.\+Mask Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_mask}\index{UnityEngine.UI.Mask@{UnityEngine.UI.Mask}}
+
+
+A component for masking children elements.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Mask\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.314050cm]{class_unity_engine_1_1_u_i_1_1_mask}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_mask_ad168f1833c9792a8b11938b2735e698b}\label{class_unity_engine_1_1_u_i_1_1_mask_ad168f1833c9792a8b11938b2735e698b}} 
+virtual bool {\bfseries Mask\+Enabled} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_mask_a09214157944e207026a9a642449db3b6}\label{class_unity_engine_1_1_u_i_1_1_mask_a09214157944e207026a9a642449db3b6}} 
+virtual void {\bfseries On\+Sibling\+Graphic\+Enabled\+Disabled} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_mask_a42ebe664524b76af222435515aca50eb}\label{class_unity_engine_1_1_u_i_1_1_mask_a42ebe664524b76af222435515aca50eb}} 
+virtual bool {\bfseries Is\+Raycast\+Location\+Valid} (Vector2 sp, Camera event\+Camera)
+\item 
+virtual Material \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_mask_a98c8adb07fbc3cf1e541f1110f8c3eeb}{Get\+Modified\+Material}} (Material base\+Material)
+\begin{DoxyCompactList}\small\item\em Stencil calculation time! \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_mask_af70d18f4a4a3070e02544ea41d922569}{On\+Enable}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_mask_abeaaaa27b9039fdbef4a3ed2ad1a6bf8}{On\+Disable}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_mask_ab7d052940476c03452c7c811f46e28ba}\label{class_unity_engine_1_1_u_i_1_1_mask_ab7d052940476c03452c7c811f46e28ba}} 
+Rect\+Transform {\bfseries rect\+Transform}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_mask_a5e152434a2a42a8bad75f025aa97836e}\label{class_unity_engine_1_1_u_i_1_1_mask_a5e152434a2a42a8bad75f025aa97836e}} 
+bool {\bfseries show\+Mask\+Graphic}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Show the graphic that is associated with the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_mask}{Mask}} render area. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_mask_a122adbf39cb794a9f095dd33970ebb77}\label{class_unity_engine_1_1_u_i_1_1_mask_a122adbf39cb794a9f095dd33970ebb77}} 
+Graphic {\bfseries graphic}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The graphic associated with the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_mask}{Mask}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A component for masking children elements. 
+
+By using this element any children elements that have masking enabled will mask where a sibling Graphic would write 0 to the stencil buffer. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_mask_a98c8adb07fbc3cf1e541f1110f8c3eeb}\label{class_unity_engine_1_1_u_i_1_1_mask_a98c8adb07fbc3cf1e541f1110f8c3eeb}} 
+\index{UnityEngine.UI.Mask@{UnityEngine.UI.Mask}!GetModifiedMaterial@{GetModifiedMaterial}}
+\index{GetModifiedMaterial@{GetModifiedMaterial}!UnityEngine.UI.Mask@{UnityEngine.UI.Mask}}
+\doxysubsubsection{\texorpdfstring{GetModifiedMaterial()}{GetModifiedMaterial()}}
+{\footnotesize\ttfamily virtual Material Unity\+Engine.\+UI.\+Mask.\+Get\+Modified\+Material (\begin{DoxyParamCaption}\item[{Material}]{base\+Material }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Stencil calculation time! 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_material_modifier_a9ea4d6fd09dad50499ee88c2da8e8c53}{Unity\+Engine.\+UI.\+IMaterial\+Modifier}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_mask_abeaaaa27b9039fdbef4a3ed2ad1a6bf8}\label{class_unity_engine_1_1_u_i_1_1_mask_abeaaaa27b9039fdbef4a3ed2ad1a6bf8}} 
+\index{UnityEngine.UI.Mask@{UnityEngine.UI.Mask}!OnDisable@{OnDisable}}
+\index{OnDisable@{OnDisable}!UnityEngine.UI.Mask@{UnityEngine.UI.Mask}}
+\doxysubsubsection{\texorpdfstring{OnDisable()}{OnDisable()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Mask.\+On\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_mask_af70d18f4a4a3070e02544ea41d922569}\label{class_unity_engine_1_1_u_i_1_1_mask_af70d18f4a4a3070e02544ea41d922569}} 
+\index{UnityEngine.UI.Mask@{UnityEngine.UI.Mask}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!UnityEngine.UI.Mask@{UnityEngine.UI.Mask}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Mask.\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/Mask.\+cs\end{DoxyCompactItemize}

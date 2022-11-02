@@ -1,0 +1,84 @@
+\hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action}{}\doxysection{Unity\+Editor.\+Timeline.\+Actions.\+Clip\+Action Class Reference}
+\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action}\index{UnityEditor.Timeline.Actions.ClipAction@{UnityEditor.Timeline.Actions.ClipAction}}
+
+
+Base class for a clip action. Inherit from this class to make an action that would react on selected clips after a menu click and/or a key shortcut.  
+
+
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Actions.\+Clip\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action_aea36935688f8b5cc0196a3c55f34f891}{Execute}} (IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} $>$ clips)
+\begin{DoxyCompactList}\small\item\em Execute the action based on clips. \end{DoxyCompactList}\item 
+abstract \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Action\+Validity}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action_a16010aa6b99da1070781f78e0c0c1a2d}{Validate}} (IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} $>$ clips)
+\begin{DoxyCompactList}\small\item\em Defines the validity of an Action for a given set of clips. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for a clip action. Inherit from this class to make an action that would react on selected clips after a menu click and/or a key shortcut. 
+
+Simple Clip Action example (with context menu and shortcut support).  
+
+To add an action as a menu item in the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} context menu, add \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_menu_entry_attribute}{Menu\+Entry\+Attribute}} on the action class. To make an action to react to a shortcut, use the Shortcut Manager API with \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_shortcut_attribute}{Timeline\+Shortcut\+Attribute}}. \begin{DoxySeeAlso}{See also}
+Unity\+Editor.\+Shortcut\+Management.\+Shortcut\+Attribute
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action_aea36935688f8b5cc0196a3c55f34f891}\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action_aea36935688f8b5cc0196a3c55f34f891}} 
+\index{UnityEditor.Timeline.Actions.ClipAction@{UnityEditor.Timeline.Actions.ClipAction}!Execute@{Execute}}
+\index{Execute@{Execute}!UnityEditor.Timeline.Actions.ClipAction@{UnityEditor.Timeline.Actions.ClipAction}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily abstract bool Unity\+Editor.\+Timeline.\+Actions.\+Clip\+Action.\+Execute (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} $>$}]{clips }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Execute the action based on clips. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clips} & clips that the action will act on.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the action has been correctly executed, false otherwise.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_edit_clip_in_animation_window_a9cf1e1ed2604d3858eb20b28569e7afe}{Unity\+Editor.\+Timeline.\+Edit\+Clip\+In\+Animation\+Window}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_edit_sub_timeline_a151dfcc5b408cb742283ec2036c63b57}{Unity\+Editor.\+Timeline.\+Edit\+Sub\+Timeline}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_trim_start_af795de14fc01bf56b38b632183e0d5c4}{Unity\+Editor.\+Timeline.\+Trim\+Start}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_trim_end_ab7490cb98e730d959a591b37526445b3}{Unity\+Editor.\+Timeline.\+Trim\+End}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_split_a0c6e4f3b99f0be95517d786b52640d12}{Unity\+Editor.\+Timeline.\+Split}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_complete_last_loop_a985392663c02cdab8e996f461d66996f}{Unity\+Editor.\+Timeline.\+Complete\+Last\+Loop}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_trim_last_loop_ab9381b32198898e9fa57125decaf2d66}{Unity\+Editor.\+Timeline.\+Trim\+Last\+Loop}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_match_duration_a6975f482f29b42cb43a7be0d23e2856a}{Unity\+Editor.\+Timeline.\+Match\+Duration}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_double_speed_a5129bdbbec2c526c22b8982edb979ed2}{Unity\+Editor.\+Timeline.\+Double\+Speed}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_half_speed_a333ae441687b0ffd443a3e3e4a6d0f76}{Unity\+Editor.\+Timeline.\+Half\+Speed}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_reset_duration_a8d30957b6ebe896dadee9e4820e6d28a}{Unity\+Editor.\+Timeline.\+Reset\+Duration}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_reset_speed_abd93e889fc0a2c7476daf5f9b38872ad}{Unity\+Editor.\+Timeline.\+Reset\+Speed}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_reset_all_aa283cfe40030e3ff8429e2b73ae5ce8a}{Unity\+Editor.\+Timeline.\+Reset\+All}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_tile_a270af8fa1a90e660b386bbf81b350c3e}{Unity\+Editor.\+Timeline.\+Tile}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_find_source_asset_a3d884db6dfbb314655dc10e12e33aed8}{Unity\+Editor.\+Timeline.\+Find\+Source\+Asset}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_copy_clips_to_clipboard_abbea1840383706caf86e6eb6bd596e93}{Unity\+Editor.\+Timeline.\+Copy\+Clips\+To\+Clipboard}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_match_offsets_previous_action_a03e28606c2b3997faebdafb22d79f0ee}{Unity\+Editor.\+Timeline.\+Match\+Offsets\+Previous\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_match_offsets_next_action_aba63a1af83e90718818fd12082a66edd}{Unity\+Editor.\+Timeline.\+Match\+Offsets\+Next\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_reset_offsets_a93f5aaedd192d5cf5e459ba10c972ea2}{Unity\+Editor.\+Timeline.\+Reset\+Offsets}}, and \mbox{\hyperlink{class_doc_code_examples_1_1_action_examples___hide_a_p_i_1_1_sample_clip_action_a96ff62897fa4ef517afdd9a12ed93f03}{Doc\+Code\+Examples.\+Action\+Examples\+\_\+\+Hide\+API.\+Sample\+Clip\+Action}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action_a16010aa6b99da1070781f78e0c0c1a2d}\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action_a16010aa6b99da1070781f78e0c0c1a2d}} 
+\index{UnityEditor.Timeline.Actions.ClipAction@{UnityEditor.Timeline.Actions.ClipAction}!Validate@{Validate}}
+\index{Validate@{Validate}!UnityEditor.Timeline.Actions.ClipAction@{UnityEditor.Timeline.Actions.ClipAction}}
+\doxysubsubsection{\texorpdfstring{Validate()}{Validate()}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Action\+Validity}} Unity\+Editor.\+Timeline.\+Actions.\+Clip\+Action.\+Validate (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} $>$}]{clips }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Defines the validity of an Action for a given set of clips. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clips} & The clips that the action will act on.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The validity of the set of clips.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doc_code_examples_1_1_action_examples___hide_a_p_i_1_1_sample_clip_action_a9e17a346619b0f67a70f66f6b2b433e7}{Doc\+Code\+Examples.\+Action\+Examples\+\_\+\+Hide\+API.\+Sample\+Clip\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_edit_clip_in_animation_window_aff245134a51260198410208bbb1608a2}{Unity\+Editor.\+Timeline.\+Edit\+Clip\+In\+Animation\+Window}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_edit_sub_timeline_ad852d82935d422c2197c5dbb7d9c8d52}{Unity\+Editor.\+Timeline.\+Edit\+Sub\+Timeline}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_trim_start_a119e42d29402cf7a5b8cc37d8611aadd}{Unity\+Editor.\+Timeline.\+Trim\+Start}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_trim_end_af81e11a713862f2d2dd8e9c24302c40f}{Unity\+Editor.\+Timeline.\+Trim\+End}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_split_a2780b19b940fa62e009db8252043db50}{Unity\+Editor.\+Timeline.\+Split}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_complete_last_loop_a58a0760ceb49f6a5fba59a882245666d}{Unity\+Editor.\+Timeline.\+Complete\+Last\+Loop}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_trim_last_loop_a6a38dd0d02749788fe16fe9edf0c7d31}{Unity\+Editor.\+Timeline.\+Trim\+Last\+Loop}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_match_duration_a5eb5558329fe736f30921fcdb1f0e30f}{Unity\+Editor.\+Timeline.\+Match\+Duration}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_double_speed_a8ae509a6d7035cf9035409bea14375d0}{Unity\+Editor.\+Timeline.\+Double\+Speed}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_half_speed_acbd51beda4856d6d333b901722e12e4c}{Unity\+Editor.\+Timeline.\+Half\+Speed}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_reset_duration_adb84b481f83b5e764475715c74f981cc}{Unity\+Editor.\+Timeline.\+Reset\+Duration}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_reset_speed_ac980d249e862401fb6d4a38d4ead4190}{Unity\+Editor.\+Timeline.\+Reset\+Speed}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_reset_all_a8ce835966dd4aa09462c85f98a765b16}{Unity\+Editor.\+Timeline.\+Reset\+All}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_tile_ae8301c86c916966d892366bc6e74050f}{Unity\+Editor.\+Timeline.\+Tile}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_find_source_asset_ad780318d37e063a6c71102a9c41cc920}{Unity\+Editor.\+Timeline.\+Find\+Source\+Asset}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_copy_clips_to_clipboard_aaf123c540dea7bf5e13e3cab0115a9c0}{Unity\+Editor.\+Timeline.\+Copy\+Clips\+To\+Clipboard}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_match_offsets_previous_action_a3a07101897a4959d0ee71268dec221cb}{Unity\+Editor.\+Timeline.\+Match\+Offsets\+Previous\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_match_offsets_next_action_ac2f4cacaf04e6c489af487959a631907}{Unity\+Editor.\+Timeline.\+Match\+Offsets\+Next\+Action}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_reset_offsets_a2c6bcbd51d59b416559985368adf3d55}{Unity\+Editor.\+Timeline.\+Reset\+Offsets}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Editor/\+Actions/Clip\+Action.\+cs\end{DoxyCompactItemize}

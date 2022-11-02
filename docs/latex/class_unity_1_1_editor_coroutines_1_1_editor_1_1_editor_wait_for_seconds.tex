@@ -1,0 +1,50 @@
+\hypertarget{class_unity_1_1_editor_coroutines_1_1_editor_1_1_editor_wait_for_seconds}{}\doxysection{Unity.\+Editor\+Coroutines.\+Editor.\+Editor\+Wait\+For\+Seconds Class Reference}
+\label{class_unity_1_1_editor_coroutines_1_1_editor_1_1_editor_wait_for_seconds}\index{Unity.EditorCoroutines.Editor.EditorWaitForSeconds@{Unity.EditorCoroutines.Editor.EditorWaitForSeconds}}
+
+
+Suspends the \mbox{\hyperlink{class_unity_1_1_editor_coroutines_1_1_editor_1_1_editor_coroutine}{Editor\+Coroutine}} execution for the given amount of seconds, using unscaled time. The coroutine execution continues after the specified time has elapsed.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_editor_coroutines_1_1_editor_1_1_editor_wait_for_seconds_a6ecbaae545ad2012347bb7f6d901306f}{Editor\+Wait\+For\+Seconds}} (float time)
+\begin{DoxyCompactList}\small\item\em Creates a instruction object for yielding inside a generator function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_editor_coroutines_1_1_editor_1_1_editor_wait_for_seconds_a8d6417d3326413f97966fea480a622a5}\label{class_unity_1_1_editor_coroutines_1_1_editor_1_1_editor_wait_for_seconds_a8d6417d3326413f97966fea480a622a5}} 
+float {\bfseries Wait\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time to wait in seconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Suspends the \mbox{\hyperlink{class_unity_1_1_editor_coroutines_1_1_editor_1_1_editor_coroutine}{Editor\+Coroutine}} execution for the given amount of seconds, using unscaled time. The coroutine execution continues after the specified time has elapsed. 
+
+{\ttfamily  using System.\+Collections; using \mbox{\hyperlink{namespace_unity_engine}{Unity\+Engine}}; using \mbox{\hyperlink{namespace_unity_1_1_editor_coroutines_1_1_editor}{Unity.\+Editor\+Coroutines.\+Editor}}; using \mbox{\hyperlink{namespace_unity_editor}{Unity\+Editor}};}
+
+{\ttfamily public class My\+Editor\+Window \+: Editor\+Window \{ IEnumerator Print\+Each\+Second() \{ var wait\+For\+One\+Second = new \mbox{\hyperlink{class_unity_1_1_editor_coroutines_1_1_editor_1_1_editor_wait_for_seconds}{Editor\+Wait\+For\+Seconds}}(1.\+0f);}
+
+{\ttfamily  while (true) \{ yield return wait\+For\+One\+Second; Debug.\+Log(\char`\"{}\+Printing each second\char`\"{}); \} \} \} } 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_1_1_editor_coroutines_1_1_editor_1_1_editor_wait_for_seconds_a6ecbaae545ad2012347bb7f6d901306f}\label{class_unity_1_1_editor_coroutines_1_1_editor_1_1_editor_wait_for_seconds_a6ecbaae545ad2012347bb7f6d901306f}} 
+\index{Unity.EditorCoroutines.Editor.EditorWaitForSeconds@{Unity.EditorCoroutines.Editor.EditorWaitForSeconds}!EditorWaitForSeconds@{EditorWaitForSeconds}}
+\index{EditorWaitForSeconds@{EditorWaitForSeconds}!Unity.EditorCoroutines.Editor.EditorWaitForSeconds@{Unity.EditorCoroutines.Editor.EditorWaitForSeconds}}
+\doxysubsubsection{\texorpdfstring{EditorWaitForSeconds()}{EditorWaitForSeconds()}}
+{\footnotesize\ttfamily Unity.\+Editor\+Coroutines.\+Editor.\+Editor\+Wait\+For\+Seconds.\+Editor\+Wait\+For\+Seconds (\begin{DoxyParamCaption}\item[{float}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a instruction object for yielding inside a generator function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & The amount of time to wait in seconds.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+editorcoroutines@1.\+0.\+0/\+Editor/Editor\+Wait\+For\+Seconds.\+cs\end{DoxyCompactItemize}

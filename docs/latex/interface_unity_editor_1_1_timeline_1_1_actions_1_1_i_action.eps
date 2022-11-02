@@ -1,0 +1,532 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: ClassName
+%%Creator: Doxygen
+%%CreationDate: Time
+%%For: 
+%Magnification: 1.00
+%%Orientation: Portrait
+%%BoundingBox: 0 0 500 198.072800
+%%Pages: 0
+%%BeginSetup
+%%EndSetup
+%%EndComments
+
+% ----- variables -----
+
+/boxwidth 0 def
+/boxheight 40 def
+/fontheight 24 def
+/marginwidth 10 def
+/distx 20 def
+/disty 40 def
+/boundaspect 2.524324 def  % aspect ratio of the BoundingBox (width/height)
+/boundx 500 def
+/boundy boundx boundaspect div def
+/xspacing 0 def
+/yspacing 0 def
+/rows 37 def
+/cols 8 def
+/scalefactor 0 def
+/boxfont /Times-Roman findfont fontheight scalefont def
+
+% ----- procedures -----
+
+/dotted { [1 4] 0 setdash } def
+/dashed { [5] 0 setdash } def
+/solid  { [] 0 setdash } def
+
+/max % result = MAX(arg1,arg2)
+{
+  /a exch def
+  /b exch def
+  a b gt {a} {b} ifelse
+} def
+
+/xoffset % result = MAX(0,(scalefactor-(boxwidth*cols+distx*(cols-1)))/2)
+{
+  0 scalefactor boxwidth cols mul distx cols 1 sub mul add sub 2 div max
+} def
+
+/cw % boxwidth = MAX(boxwidth, stringwidth(arg1))
+{
+  /str exch def
+  /boxwidth boxwidth str stringwidth pop max def
+} def
+
+/box % draws a box with text 'arg1' at grid pos (arg2,arg3)
+{ gsave
+  2 setlinewidth
+  newpath
+  exch xspacing mul xoffset add
+  exch yspacing mul
+  moveto
+  boxwidth 0 rlineto 
+  0 boxheight rlineto 
+  boxwidth neg 0 rlineto 
+  0 boxheight neg rlineto 
+  closepath
+  dup stringwidth pop neg boxwidth add 2 div
+  boxheight fontheight 2 div sub 2 div
+  rmoveto show stroke
+  grestore
+} def  
+
+/mark
+{ newpath
+  exch xspacing mul xoffset add boxwidth add
+  exch yspacing mul
+  moveto
+  0 boxheight 4 div rlineto
+  boxheight neg 4 div boxheight neg 4 div rlineto
+  closepath
+  eofill
+  stroke
+} def
+
+/arrow
+{ newpath
+  moveto
+  3 -8 rlineto
+  -6 0 rlineto
+  3 8 rlineto
+  closepath
+  eofill
+  stroke
+} def
+
+/out % draws an output connector for the block at (arg1,arg2)
+{
+  newpath
+  exch xspacing mul xoffset add boxwidth 2 div add
+  exch yspacing mul boxheight add
+  /y exch def
+  /x exch def
+  x y moveto
+  0 disty 2 div rlineto 
+  stroke
+  1 eq { x y disty 2 div add arrow } if
+} def
+
+/in % draws an input connector for the block at (arg1,arg2)
+{
+  newpath
+  exch xspacing mul xoffset add boxwidth 2 div add
+  exch yspacing mul disty 2 div sub
+  /y exch def
+  /x exch def
+  x y moveto
+  0 disty 2 div rlineto
+  stroke
+  1 eq { x y disty 2 div add arrow } if
+} def
+
+/hedge
+{
+  exch xspacing mul xoffset add boxwidth 2 div add
+  exch yspacing mul boxheight 2 div sub
+  /y exch def
+  /x exch def
+  newpath
+  x y moveto
+  boxwidth 2 div distx add 0 rlineto
+  stroke
+  1 eq
+  { newpath x boxwidth 2 div distx add add y moveto
+    -8 3 rlineto
+    0 -6 rlineto
+    8 3 rlineto
+    closepath
+    eofill
+    stroke
+  } if
+} def
+
+/vedge
+{
+  /ye exch def
+  /ys exch def
+  /xs exch def
+  newpath
+  xs xspacing mul xoffset add boxwidth 2 div add dup
+  ys yspacing mul boxheight 2 div sub
+  moveto
+  ye yspacing mul boxheight 2 div sub
+  lineto
+  stroke
+} def
+
+/conn % connections the blocks from col 'arg1' to 'arg2' of row 'arg3'
+{
+  /ys exch def
+  /xe exch def
+  /xs exch def
+  newpath
+  xs xspacing mul xoffset add boxwidth 2 div add
+  ys yspacing mul disty 2 div sub
+  moveto
+  xspacing xe xs sub mul 0
+  rlineto
+  stroke
+} def
+
+% ----- main ------
+
+boxfont setfont
+1 boundaspect scale
+(UnityEditor.Timeline.Actions.IAction) cw
+(UnityEditor.Timeline.Actions.ClipAction) cw
+(UnityEditor.Timeline.Actions.MarkerAction) cw
+(UnityEditor.Timeline.Actions.TimelineAction) cw
+(UnityEditor.Timeline.Actions.TrackAction) cw
+(DocCodeExamples.ActionExamples_HideAPI.SampleClipAction) cw
+(UnityEditor.Timeline.CompleteLastLoop) cw
+(UnityEditor.Timeline.CopyClipsToClipboard) cw
+(UnityEditor.Timeline.DoubleSpeed) cw
+(UnityEditor.Timeline.EditClipInAnimationWindow) cw
+(UnityEditor.Timeline.EditSubTimeline) cw
+(UnityEditor.Timeline.FindSourceAsset) cw
+(UnityEditor.Timeline.HalfSpeed) cw
+(UnityEditor.Timeline.MatchDuration) cw
+(UnityEditor.Timeline.MatchOffsetsNextAction) cw
+(UnityEditor.Timeline.MatchOffsetsPreviousAction) cw
+(UnityEditor.Timeline.ResetAll) cw
+(UnityEditor.Timeline.ResetDuration) cw
+(UnityEditor.Timeline.ResetOffsets) cw
+(UnityEditor.Timeline.ResetSpeed) cw
+(UnityEditor.Timeline.Split) cw
+(UnityEditor.Timeline.Tile) cw
+(UnityEditor.Timeline.TrimEnd) cw
+(UnityEditor.Timeline.TrimLastLoop) cw
+(UnityEditor.Timeline.TrimStart) cw
+(DocCodeExamples.ActionExamples_HideAPI.SampleMarkerAction) cw
+(Timeline.Samples.ReplaceAnnotationDescriptionAction) cw
+(UnityEditor.Timeline.CopyMarkersToClipboard) cw
+(DocCodeExamples.ActionExamples_HideAPI.SampleTimelineAction) cw
+(DocCodeExamples.TimelineAttributesExamples_HideAPI.ShortcutAction) cw
+(Timeline.Samples.CreateAnnotationAction) cw
+(UnityEditor.Timeline.CopyAction) cw
+(UnityEditor.Timeline.DeleteAction) cw
+(UnityEditor.Timeline.DuplicateAction) cw
+(UnityEditor.Timeline.FrameAllAction) cw
+(UnityEditor.Timeline.FrameSelectedAction) cw
+(UnityEditor.Timeline.GotoEndAction) cw
+(UnityEditor.Timeline.GotoStartAction) cw
+(UnityEditor.Timeline.KeyAllAnimated) cw
+(UnityEditor.Timeline.MatchContent) cw
+(UnityEditor.Timeline.MultiselectDownTrack) cw
+(UnityEditor.Timeline.MultiselectLeftClip) cw
+(UnityEditor.Timeline.MultiselectRightClip) cw
+(UnityEditor.Timeline.MultiselectUpTrack) cw
+(UnityEditor.Timeline.NavigateLeft) cw
+(UnityEditor.Timeline.NavigateRight) cw
+(UnityEditor.Timeline.NextFrameAction) cw
+(UnityEditor.Timeline.NextKeyAction) cw
+(UnityEditor.Timeline.PasteAction) cw
+(UnityEditor.Timeline.PlayTimelineAction) cw
+(UnityEditor.Timeline.PrevKeyAction) cw
+(UnityEditor.Timeline.PreviousFrameAction) cw
+(UnityEditor.Timeline.SelectAllAction) cw
+(UnityEditor.Timeline.SelectDownClip) cw
+(UnityEditor.Timeline.SelectDownTrack) cw
+(UnityEditor.Timeline.SelectLeftClip) cw
+(UnityEditor.Timeline.SelectRightClip) cw
+(UnityEditor.Timeline.SelectUpClip) cw
+(UnityEditor.Timeline.SelectUpTrack) cw
+(UnityEditor.Timeline.ToggleClipTrackArea) cw
+(UnityEditor.Timeline.ToggleCollapseGroup) cw
+(UnityEditor.Timeline.ZoomIn) cw
+(UnityEditor.Timeline.ZoomOut) cw
+(DocCodeExamples.ActionExamples_HideAPI.SampleTrackAction) cw
+(DocCodeExamples.TimelineAttributesExamples_HideAPI.SetNameToTypeAction) cw
+(UnityEditor.Timeline.AddOverrideTrackAction) cw
+(UnityEditor.Timeline.CollapseTrackAction) cw
+(UnityEditor.Timeline.ConvertFromClipTrackAction) cw
+(UnityEditor.Timeline.ConvertToClipModeAction) cw
+(UnityEditor.Timeline.CopyTracksToClipboard) cw
+(UnityEditor.Timeline.DeleteTracks) cw
+(UnityEditor.Timeline.DuplicateTracks) cw
+(UnityEditor.Timeline.EditTrackInAnimationWindow) cw
+(UnityEditor.Timeline.ExpandTrackAction) cw
+(UnityEditor.Timeline.LockSelectedTrack) cw
+(UnityEditor.Timeline.LockTrack) cw
+(UnityEditor.Timeline.MuteSelectedTrack) cw
+(UnityEditor.Timeline.MuteTrack) cw
+(UnityEditor.Timeline.RemoveInvalidMarkersAction) cw
+(UnityEditor.Timeline.ShowHideMarkers) cw
+(UnityEditor.Timeline.TrackOffsetBaseAction) cw
+/boxwidth boxwidth marginwidth 2 mul add def
+/xspacing boxwidth distx add def
+/yspacing boxheight disty add def
+/scalefactor 
+  boxwidth cols mul distx cols 1 sub mul add
+  boxheight rows mul disty rows 1 sub mul add boundaspect mul 
+  max def
+boundx scalefactor div boundy scalefactor div scale
+
+% ----- classes -----
+
+ (UnityEditor.Timeline.Actions.IAction) 3.000000 36.000000 box
+ (UnityEditor.Timeline.Actions.ClipAction) 0.000000 35.000000 box
+ (UnityEditor.Timeline.Actions.MarkerAction) 2.000000 35.000000 box
+ (UnityEditor.Timeline.Actions.TimelineAction) 4.000000 35.000000 box
+ (UnityEditor.Timeline.Actions.TrackAction) 6.000000 35.000000 box
+ (DocCodeExamples.ActionExamples_HideAPI.SampleClipAction) 1.000000 34.000000 box
+ (UnityEditor.Timeline.CompleteLastLoop) 1.000000 33.000000 box
+ (UnityEditor.Timeline.CopyClipsToClipboard) 1.000000 32.000000 box
+ (UnityEditor.Timeline.DoubleSpeed) 1.000000 31.000000 box
+ (UnityEditor.Timeline.EditClipInAnimationWindow) 1.000000 30.000000 box
+ (UnityEditor.Timeline.EditSubTimeline) 1.000000 29.000000 box
+ (UnityEditor.Timeline.FindSourceAsset) 1.000000 28.000000 box
+ (UnityEditor.Timeline.HalfSpeed) 1.000000 27.000000 box
+ (UnityEditor.Timeline.MatchDuration) 1.000000 26.000000 box
+ (UnityEditor.Timeline.MatchOffsetsNextAction) 1.000000 25.000000 box
+ (UnityEditor.Timeline.MatchOffsetsPreviousAction) 1.000000 24.000000 box
+ (UnityEditor.Timeline.ResetAll) 1.000000 23.000000 box
+ (UnityEditor.Timeline.ResetDuration) 1.000000 22.000000 box
+ (UnityEditor.Timeline.ResetOffsets) 1.000000 21.000000 box
+ (UnityEditor.Timeline.ResetSpeed) 1.000000 20.000000 box
+ (UnityEditor.Timeline.Split) 1.000000 19.000000 box
+ (UnityEditor.Timeline.Tile) 1.000000 18.000000 box
+ (UnityEditor.Timeline.TrimEnd) 1.000000 17.000000 box
+ (UnityEditor.Timeline.TrimLastLoop) 1.000000 16.000000 box
+ (UnityEditor.Timeline.TrimStart) 1.000000 15.000000 box
+ (DocCodeExamples.ActionExamples_HideAPI.SampleMarkerAction) 3.000000 34.000000 box
+ (Timeline.Samples.ReplaceAnnotationDescriptionAction) 3.000000 33.000000 box
+ (UnityEditor.Timeline.CopyMarkersToClipboard) 3.000000 32.000000 box
+ (DocCodeExamples.ActionExamples_HideAPI.SampleTimelineAction) 5.000000 34.000000 box
+ (DocCodeExamples.TimelineAttributesExamples_HideAPI.ShortcutAction) 5.000000 33.000000 box
+ (Timeline.Samples.CreateAnnotationAction) 5.000000 32.000000 box
+ (UnityEditor.Timeline.CopyAction) 5.000000 31.000000 box
+ (UnityEditor.Timeline.DeleteAction) 5.000000 30.000000 box
+ (UnityEditor.Timeline.DuplicateAction) 5.000000 29.000000 box
+ (UnityEditor.Timeline.FrameAllAction) 5.000000 28.000000 box
+ (UnityEditor.Timeline.FrameSelectedAction) 5.000000 27.000000 box
+ (UnityEditor.Timeline.GotoEndAction) 5.000000 26.000000 box
+ (UnityEditor.Timeline.GotoStartAction) 5.000000 25.000000 box
+ (UnityEditor.Timeline.KeyAllAnimated) 5.000000 24.000000 box
+ (UnityEditor.Timeline.MatchContent) 5.000000 23.000000 box
+ (UnityEditor.Timeline.MultiselectDownTrack) 5.000000 22.000000 box
+ (UnityEditor.Timeline.MultiselectLeftClip) 5.000000 21.000000 box
+ (UnityEditor.Timeline.MultiselectRightClip) 5.000000 20.000000 box
+ (UnityEditor.Timeline.MultiselectUpTrack) 5.000000 19.000000 box
+ (UnityEditor.Timeline.NavigateLeft) 5.000000 18.000000 box
+ (UnityEditor.Timeline.NavigateRight) 5.000000 17.000000 box
+ (UnityEditor.Timeline.NextFrameAction) 5.000000 16.000000 box
+ (UnityEditor.Timeline.NextKeyAction) 5.000000 15.000000 box
+ (UnityEditor.Timeline.PasteAction) 5.000000 14.000000 box
+ (UnityEditor.Timeline.PlayTimelineAction) 5.000000 13.000000 box
+ (UnityEditor.Timeline.PrevKeyAction) 5.000000 12.000000 box
+ (UnityEditor.Timeline.PreviousFrameAction) 5.000000 11.000000 box
+ (UnityEditor.Timeline.SelectAllAction) 5.000000 10.000000 box
+ (UnityEditor.Timeline.SelectDownClip) 5.000000 9.000000 box
+ (UnityEditor.Timeline.SelectDownTrack) 5.000000 8.000000 box
+ (UnityEditor.Timeline.SelectLeftClip) 5.000000 7.000000 box
+ (UnityEditor.Timeline.SelectRightClip) 5.000000 6.000000 box
+ (UnityEditor.Timeline.SelectUpClip) 5.000000 5.000000 box
+ (UnityEditor.Timeline.SelectUpTrack) 5.000000 4.000000 box
+ (UnityEditor.Timeline.ToggleClipTrackArea) 5.000000 3.000000 box
+ (UnityEditor.Timeline.ToggleCollapseGroup) 5.000000 2.000000 box
+ (UnityEditor.Timeline.ZoomIn) 5.000000 1.000000 box
+ (UnityEditor.Timeline.ZoomOut) 5.000000 0.000000 box
+ (DocCodeExamples.ActionExamples_HideAPI.SampleTrackAction) 7.000000 34.000000 box
+ (DocCodeExamples.TimelineAttributesExamples_HideAPI.SetNameToTypeAction) 7.000000 33.000000 box
+ (UnityEditor.Timeline.AddOverrideTrackAction) 7.000000 32.000000 box
+ (UnityEditor.Timeline.CollapseTrackAction) 7.000000 31.000000 box
+ (UnityEditor.Timeline.ConvertFromClipTrackAction) 7.000000 30.000000 box
+ (UnityEditor.Timeline.ConvertToClipModeAction) 7.000000 29.000000 box
+ (UnityEditor.Timeline.CopyTracksToClipboard) 7.000000 28.000000 box
+ (UnityEditor.Timeline.DeleteTracks) 7.000000 27.000000 box
+ (UnityEditor.Timeline.DuplicateTracks) 7.000000 26.000000 box
+ (UnityEditor.Timeline.EditTrackInAnimationWindow) 7.000000 25.000000 box
+ (UnityEditor.Timeline.ExpandTrackAction) 7.000000 24.000000 box
+ (UnityEditor.Timeline.LockSelectedTrack) 7.000000 23.000000 box
+ (UnityEditor.Timeline.LockTrack) 7.000000 22.000000 box
+ (UnityEditor.Timeline.MuteSelectedTrack) 7.000000 21.000000 box
+ (UnityEditor.Timeline.MuteTrack) 7.000000 20.000000 box
+ (UnityEditor.Timeline.RemoveInvalidMarkersAction) 7.000000 19.000000 box
+ (UnityEditor.Timeline.ShowHideMarkers) 7.000000 18.000000 box
+ (UnityEditor.Timeline.TrackOffsetBaseAction) 7.000000 17.000000 box
+7.000000 17.000000 mark
+
+% ----- relations -----
+
+solid
+1 3.000000 35.250000 out
+solid
+0.000000 6.000000 36.000000 conn
+solid
+0 0.000000 35.750000 in
+solid
+1 0.000000 34.250000 out
+solid
+0 2.000000 35.750000 in
+solid
+1 2.000000 34.250000 out
+solid
+0 4.000000 35.750000 in
+solid
+1 4.000000 34.250000 out
+solid
+0 6.000000 35.750000 in
+solid
+1 6.000000 34.250000 out
+solid
+0 0.000000 34.500000 hedge
+solid
+0 0.000000 33.500000 hedge
+solid
+0 0.000000 32.500000 hedge
+solid
+0 0.000000 31.500000 hedge
+solid
+0 0.000000 30.500000 hedge
+solid
+0 0.000000 29.500000 hedge
+solid
+0 0.000000 28.500000 hedge
+solid
+0 0.000000 27.500000 hedge
+solid
+0 0.000000 26.500000 hedge
+solid
+0 0.000000 25.500000 hedge
+solid
+0 0.000000 24.500000 hedge
+solid
+0 0.000000 23.500000 hedge
+solid
+0 0.000000 22.500000 hedge
+solid
+0 0.000000 21.500000 hedge
+solid
+0 0.000000 20.500000 hedge
+solid
+0 0.000000 19.500000 hedge
+solid
+0 0.000000 18.500000 hedge
+solid
+0 0.000000 17.500000 hedge
+solid
+0 0.000000 16.500000 hedge
+solid
+0 0.000000 15.500000 hedge
+solid
+0.000000 35.000000 15.500000 vedge
+solid
+0 2.000000 34.500000 hedge
+solid
+0 2.000000 33.500000 hedge
+solid
+0 2.000000 32.500000 hedge
+solid
+2.000000 35.000000 32.500000 vedge
+solid
+0 4.000000 34.500000 hedge
+solid
+0 4.000000 33.500000 hedge
+solid
+0 4.000000 32.500000 hedge
+solid
+0 4.000000 31.500000 hedge
+solid
+0 4.000000 30.500000 hedge
+solid
+0 4.000000 29.500000 hedge
+solid
+0 4.000000 28.500000 hedge
+solid
+0 4.000000 27.500000 hedge
+solid
+0 4.000000 26.500000 hedge
+solid
+0 4.000000 25.500000 hedge
+solid
+0 4.000000 24.500000 hedge
+solid
+0 4.000000 23.500000 hedge
+solid
+0 4.000000 22.500000 hedge
+solid
+0 4.000000 21.500000 hedge
+solid
+0 4.000000 20.500000 hedge
+solid
+0 4.000000 19.500000 hedge
+solid
+0 4.000000 18.500000 hedge
+solid
+0 4.000000 17.500000 hedge
+solid
+0 4.000000 16.500000 hedge
+solid
+0 4.000000 15.500000 hedge
+solid
+0 4.000000 14.500000 hedge
+solid
+0 4.000000 13.500000 hedge
+solid
+0 4.000000 12.500000 hedge
+solid
+0 4.000000 11.500000 hedge
+solid
+0 4.000000 10.500000 hedge
+solid
+0 4.000000 9.500000 hedge
+solid
+0 4.000000 8.500000 hedge
+solid
+0 4.000000 7.500000 hedge
+solid
+0 4.000000 6.500000 hedge
+solid
+0 4.000000 5.500000 hedge
+solid
+0 4.000000 4.500000 hedge
+solid
+0 4.000000 3.500000 hedge
+solid
+0 4.000000 2.500000 hedge
+solid
+0 4.000000 1.500000 hedge
+solid
+0 4.000000 0.500000 hedge
+solid
+4.000000 35.000000 0.500000 vedge
+solid
+0 6.000000 34.500000 hedge
+solid
+0 6.000000 33.500000 hedge
+solid
+0 6.000000 32.500000 hedge
+solid
+0 6.000000 31.500000 hedge
+solid
+0 6.000000 30.500000 hedge
+solid
+0 6.000000 29.500000 hedge
+solid
+0 6.000000 28.500000 hedge
+solid
+0 6.000000 27.500000 hedge
+solid
+0 6.000000 26.500000 hedge
+solid
+0 6.000000 25.500000 hedge
+solid
+0 6.000000 24.500000 hedge
+solid
+0 6.000000 23.500000 hedge
+solid
+0 6.000000 22.500000 hedge
+solid
+0 6.000000 21.500000 hedge
+solid
+0 6.000000 20.500000 hedge
+solid
+0 6.000000 19.500000 hedge
+solid
+0 6.000000 18.500000 hedge
+solid
+0 6.000000 17.500000 hedge
+solid
+6.000000 35.000000 17.500000 vedge

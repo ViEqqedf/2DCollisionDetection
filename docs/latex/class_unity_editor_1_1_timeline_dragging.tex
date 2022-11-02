@@ -1,0 +1,58 @@
+\hypertarget{class_unity_editor_1_1_timeline_dragging}{}\doxysection{Unity\+Editor.\+Timeline\+Dragging Class Reference}
+\label{class_unity_editor_1_1_timeline_dragging}\index{UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}}
+Inheritance diagram for Unity\+Editor.\+Timeline\+Dragging\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_timeline_dragging}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_dragging_a26891e76fe659669b06318ec633472cf}\label{class_unity_editor_1_1_timeline_dragging_a26891e76fe659669b06318ec633472cf}} 
+delegate bool {\bfseries Type\+Resolver} (IEnumerable$<$ Type $>$ types, Action$<$ Type $>$ on\+Complete, string format)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_dragging_a49aa8453019d09bab2eb96ba1cc2d748}\label{class_unity_editor_1_1_timeline_dragging_a49aa8453019d09bab2eb96ba1cc2d748}} 
+{\bfseries Timeline\+Dragging} (Tree\+View\+Controller tree\+View, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_window}{Timeline\+Window}} window, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} data)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_dragging_afc34f8ecac13a7e9bcaa03abccd6a05e}\label{class_unity_editor_1_1_timeline_dragging_afc34f8ecac13a7e9bcaa03abccd6a05e}} 
+override bool {\bfseries Can\+Start\+Drag} (Tree\+View\+Item target\+Item, List$<$ int $>$ dragged\+Item\+IDs, Vector2 mouse\+Down\+Position)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_dragging_a700b56cf3ab296134e03ecb65fe52548}\label{class_unity_editor_1_1_timeline_dragging_a700b56cf3ab296134e03ecb65fe52548}} 
+override void {\bfseries Start\+Drag} (Tree\+View\+Item dragged\+Node, List$<$ int $>$ dragged\+Item\+IDs)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_dragging_accfe75f5ed0c9312c7faceb63c34fcef}\label{class_unity_editor_1_1_timeline_dragging_accfe75f5ed0c9312c7faceb63c34fcef}} 
+override bool {\bfseries Drag\+Element} (Tree\+View\+Item target\+Item, Rect target\+Item\+Rect, int row)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_dragging_a4553779d4ca17b6903d161bccec38193}\label{class_unity_editor_1_1_timeline_dragging_a4553779d4ca17b6903d161bccec38193}} 
+override Drag\+And\+Drop\+Visual\+Mode {\bfseries Do\+Drag} (Tree\+View\+Item parent\+Item, Tree\+View\+Item target\+Item, bool perform, Drop\+Position drop\+Pos)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_dragging_a171a4bff35b807a16cd43d20030e907c}\label{class_unity_editor_1_1_timeline_dragging_a171a4bff35b807a16cd43d20030e907c}} 
+Drag\+And\+Drop\+Visual\+Mode {\bfseries Handle\+Track\+Drop} (Tree\+View\+Item parent\+Item, Tree\+View\+Item target\+Item, bool perform, Drop\+Position drop\+Pos)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_dragging_a70fa06925d28c9026db00e39bb9bf5cb}\label{class_unity_editor_1_1_timeline_dragging_a70fa06925d28c9026db00e39bb9bf5cb}} 
+static bool {\bfseries Resolve\+Type} (IEnumerable$<$ System.\+Type $>$ types, Action$<$ Type $>$ on\+Complete, string format\+String)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_dragging_a687c347694a64d20d8211ae692d0f18e}\label{class_unity_editor_1_1_timeline_dragging_a687c347694a64d20d8211ae692d0f18e}} 
+static Drag\+And\+Drop\+Visual\+Mode {\bfseries Handle\+Hierarchy\+Pane\+Drag\+And\+Drop} (IEnumerable$<$ Unity\+Object $>$ objects\+Being\+Dropped, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} target\+Track, bool perform, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} timeline, Playable\+Director director, Type\+Resolver type\+Resolver, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} insert\+Before=null)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_dragging_a1b8c0988cdfedd8d75c509d2dd2e75ea}\label{class_unity_editor_1_1_timeline_dragging_a1b8c0988cdfedd8d75c509d2dd2e75ea}} 
+static Drag\+And\+Drop\+Visual\+Mode {\bfseries Handle\+Clip\+Pane\+Object\+Drag\+And\+Drop} (IEnumerable$<$ Unity\+Object $>$ objects\+Being\+Dropped, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} target\+Track, bool perform, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} timeline, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} parent, Playable\+Director director, double candidate\+Time, Type\+Resolver type\+Resolver, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} insert\+Before=null)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_dragging_ab77ca13bf7a8e96a13d3c6c5c188fc47}\label{class_unity_editor_1_1_timeline_dragging_ab77ca13bf7a8e96a13d3c6c5c188fc47}} 
+static Drag\+And\+Drop\+Visual\+Mode {\bfseries Handle\+Clip\+Pane\+Mono\+Script\+Drag\+And\+Drop} (IEnumerable$<$ Mono\+Script $>$ scripts\+Being\+Dropped, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} target\+Track, bool perform, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} timeline, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} parent, Playable\+Director director, double candidate\+Time)
+\begin{DoxyCompactList}\small\item\em Handles drag and drop of a mono script. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_dragging_a5b8832c7ce70e10bbf74df506b4c216b}\label{class_unity_editor_1_1_timeline_dragging_a5b8832c7ce70e10bbf74df506b4c216b}} 
+static Drag\+And\+Drop\+Visual\+Mode {\bfseries Handle\+Clip\+Pane\+Playable\+Asset\+Drag\+And\+Drop} (IEnumerable$<$ IPlayable\+Asset $>$ assets\+Being\+Dropped, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} target\+Track, bool perform, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} timeline, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} parent, Playable\+Director director, double candidate\+Time, Type\+Resolver type\+Resolver)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_dragging_af9bfefb2a649c3ad348dd30003879a9b}\label{class_unity_editor_1_1_timeline_dragging_af9bfefb2a649c3ad348dd30003879a9b}} 
+static void {\bfseries On\+Track\+Binding\+Drag\+Update} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} drop\+Target)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Editor/treeview/Timeline\+Dragging.\+cs\end{DoxyCompactItemize}

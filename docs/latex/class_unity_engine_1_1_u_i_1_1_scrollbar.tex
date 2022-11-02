@@ -1,0 +1,305 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar}{}\doxysection{Unity\+Engine.\+UI.\+Scrollbar Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_scrollbar}\index{UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}}
+
+
+A standard scrollbar with a variable sized handle that can be dragged between 0 and 1.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Scrollbar\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.822526cm]{class_unity_engine_1_1_u_i_1_1_scrollbar}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_1_1_scroll_event}{Scroll\+Event}}
+\begin{DoxyCompactList}\small\item\em Unity\+Event callback for when a scrollbar is scrolled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a791928389a965ec4c068718c6fdafad4}{Direction}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a791928389a965ec4c068718c6fdafad4ad1e80c506f4c89e3c4fb1c1b4867a03c}{Left\+To\+Right}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a791928389a965ec4c068718c6fdafad4ab7b0ea3028791689ea070674776855e2}{Right\+To\+Left}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a791928389a965ec4c068718c6fdafad4a63dc349be51108dcfd197c7ab02b486a}{Bottom\+To\+Top}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a791928389a965ec4c068718c6fdafad4af2b1a19a8d0f523d042f9ede79a80804}{Top\+To\+Bottom}}
+ \}
+\begin{DoxyCompactList}\small\item\em Setting that indicates one of four directions the scrollbar will travel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a5c7462a642cc4dcf71bc7de0d94900bc}{Set\+Value\+Without\+Notify}} (float input)
+\begin{DoxyCompactList}\small\item\em Set the value of the scrollbar without invoking on\+Value\+Changed callback. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_ac16edbc71aaeb9ed3a2cbf4ed1bb4454}{Rebuild}} (\mbox{\hyperlink{namespace_unity_engine_1_1_u_i_a76b804cb1978e6dc1162615deaa710e9}{Canvas\+Update}} executing)
+\begin{DoxyCompactList}\small\item\em Rebuild the element for the given stage. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a4ff72e93363fceb7f6ccb82fe9b4d836}{Layout\+Complete}} ()
+\begin{DoxyCompactList}\small\item\em See \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a5f507a968983077ca1be60142513ab1e}{ICanvas\+Element.\+Layout\+Complete}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a63478e617c459979852ac66012abb598}{Graphic\+Update\+Complete}} ()
+\begin{DoxyCompactList}\small\item\em See \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a6a89ea41d304c5a96c16c37decee168a}{ICanvas\+Element.\+Graphic\+Update\+Complete}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_afbd8afa4f0b676c2943b49b468177e6d}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_afbd8afa4f0b676c2943b49b468177e6d}} 
+virtual void {\bfseries On\+Begin\+Drag} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\begin{DoxyCompactList}\small\item\em Handling for when the scrollbar value is begin being dragged. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a75746d60a324f7b80ed838a0e2c5e34f}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a75746d60a324f7b80ed838a0e2c5e34f}} 
+virtual void {\bfseries On\+Drag} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\begin{DoxyCompactList}\small\item\em Handling for when the scrollbar value is dragged. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a49ea68b2a540ab0072ee10bf06acc25e}{On\+Pointer\+Down}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\begin{DoxyCompactList}\small\item\em Event triggered when pointer is pressed down on the scrollbar. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_ab4029b2d1588fb5265899e3afeddd286}{On\+Pointer\+Up}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\begin{DoxyCompactList}\small\item\em Event triggered when pointer is released after pressing on the scrollbar. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a505dc37aa5bd1ac7e04f691b7af8bb26}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a505dc37aa5bd1ac7e04f691b7af8bb26}} 
+override void {\bfseries On\+Move} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_axis_event_data}{Axis\+Event\+Data}} event\+Data)
+\begin{DoxyCompactList}\small\item\em Handling for movement events. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_ad710d8afefca9b7e2fbbb55380a34db6}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_ad710d8afefca9b7e2fbbb55380a34db6}} 
+override \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}} {\bfseries Find\+Selectable\+On\+Left} ()
+\begin{DoxyCompactList}\small\item\em Prevents selection if we we move on the Horizontal axis. See Selectable.\+Find\+Selectable\+On\+Left. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a6d05c99f5700093067abc48b4f39c578}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a6d05c99f5700093067abc48b4f39c578}} 
+override \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}} {\bfseries Find\+Selectable\+On\+Right} ()
+\begin{DoxyCompactList}\small\item\em Prevents selection if we we move on the Horizontal axis. See Selectable.\+Find\+Selectable\+On\+Right. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a48b42c4302214ac7d06e7559a044ce1b}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a48b42c4302214ac7d06e7559a044ce1b}} 
+override \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}} {\bfseries Find\+Selectable\+On\+Up} ()
+\begin{DoxyCompactList}\small\item\em Prevents selection if we we move on the Vertical axis. See Selectable.\+Find\+Selectable\+On\+Up. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a885b16bf5820f714099bdb816acdba52}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a885b16bf5820f714099bdb816acdba52}} 
+override \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}} {\bfseries Find\+Selectable\+On\+Down} ()
+\begin{DoxyCompactList}\small\item\em Prevents selection if we we move on the Vertical axis. See Selectable.\+Find\+Selectable\+On\+Down. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a160120d0b4d7befb3fe8e972e702ce2f}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a160120d0b4d7befb3fe8e972e702ce2f}} 
+virtual void {\bfseries On\+Initialize\+Potential\+Drag} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\begin{DoxyCompactList}\small\item\em See\+: IInitialize\+Potential\+Drag\+Handler.\+On\+Initialize\+Potential\+Drag \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a5f6dcb5c78ce5b4477516d4a6dd174eb}{Set\+Direction}} (\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a791928389a965ec4c068718c6fdafad4}{Direction}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_adcd1657e8fdce59655c1afe21a4fde88}{direction}}, bool include\+Rect\+Layouts)
+\begin{DoxyCompactList}\small\item\em Set the direction of the scrollbar, optionally setting the layout as well. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a3ddf0ded5f9c320404ab9d9f53a7f70c}{On\+Enable}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a3ff93aa9f6c28167a60cfea23f851e52}{On\+Disable}} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a460fdb3bb6303fd23d1feb344425c48a}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a460fdb3bb6303fd23d1feb344425c48a}} 
+virtual void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Update the rect based on the delayed update visuals. Got around issue of calling send\+Message from on\+Validate. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a643d8d6ef4f0237b91e58d44490292da}{On\+Rect\+Transform\+Dimensions\+Change}} ()
+\begin{DoxyCompactList}\small\item\em This callback is called when the dimensions of an associated Rect\+Transform change. It is always called before Awake, On\+Enable, or Start. The call is also made to all child Rect\+Transforms, regardless of whether their dimensions change (which depends on how they are anchored). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a295bb45c1f19fa7ae9a610a4d88aa1f5}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a295bb45c1f19fa7ae9a610a4d88aa1f5}} 
+IEnumerator {\bfseries Click\+Repeat} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a3067516cf58950371b8072c14c3789f3}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a3067516cf58950371b8072c14c3789f3}} 
+IEnumerator {\bfseries Click\+Repeat} (Vector2 screen\+Position, Camera camera)
+\begin{DoxyCompactList}\small\item\em Coroutine function for handling continual press during \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a49ea68b2a540ab0072ee10bf06acc25e}{Scrollbar.\+On\+Pointer\+Down}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a6785dca78965eaa692767d24edf6130f}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a6785dca78965eaa692767d24edf6130f}} 
+Rect\+Transform {\bfseries handle\+Rect}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Rect\+Transform to use for the handle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_adcd1657e8fdce59655c1afe21a4fde88}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_adcd1657e8fdce59655c1afe21a4fde88}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a791928389a965ec4c068718c6fdafad4}{Direction}} {\bfseries direction}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The direction of the scrollbar from minimum to maximum value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_afac26b083fb243686c6bac8ef20f97a1}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_afac26b083fb243686c6bac8ef20f97a1}} 
+float {\bfseries value}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The current value of the scrollbar, between 0 and 1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_ae6958dfbce5a7335a990ac28b43014d1}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_ae6958dfbce5a7335a990ac28b43014d1}} 
+float {\bfseries size}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The size of the scrollbar handle where 1 means it fills the entire scrollbar. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a9af7eb7ce5dd090238c71695f3f8960e}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a9af7eb7ce5dd090238c71695f3f8960e}} 
+int {\bfseries number\+Of\+Steps}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of steps to use for the value. A value of 0 disables use of steps. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_1_1_scroll_event}{Scroll\+Event}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_aeb50949d32fc86736ea7cbbef757ff4c}{on\+Value\+Changed}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Handling for when the scrollbar value is changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A standard scrollbar with a variable sized handle that can be dragged between 0 and 1. 
+
+The slider component is a \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}} that controls a handle which follow the current value and is sized according to the size property. The anchors of the handle Rect\+Transforms are driven by the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar}{Scrollbar}}. The handle can be a direct child of the Game\+Object with the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar}{Scrollbar}}, or intermediary Rect\+Transforms can be placed in between for additional control. When a change to the scrollbar value occurs, a callback is sent to any registered listeners of on\+Value\+Changed. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a791928389a965ec4c068718c6fdafad4}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a791928389a965ec4c068718c6fdafad4}} 
+\index{UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}!Direction@{Direction}}
+\index{Direction@{Direction}!UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}}
+\doxysubsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a791928389a965ec4c068718c6fdafad4}{Unity\+Engine.\+UI.\+Scrollbar.\+Direction}}}
+
+
+
+Setting that indicates one of four directions the scrollbar will travel. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LeftToRight@{LeftToRight}!UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}}\index{UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}!LeftToRight@{LeftToRight}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a791928389a965ec4c068718c6fdafad4ad1e80c506f4c89e3c4fb1c1b4867a03c}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a791928389a965ec4c068718c6fdafad4ad1e80c506f4c89e3c4fb1c1b4867a03c}} 
+Left\+To\+Right&Starting position is the Left. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RightToLeft@{RightToLeft}!UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}}\index{UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}!RightToLeft@{RightToLeft}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a791928389a965ec4c068718c6fdafad4ab7b0ea3028791689ea070674776855e2}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a791928389a965ec4c068718c6fdafad4ab7b0ea3028791689ea070674776855e2}} 
+Right\+To\+Left&Starting position is the Right \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BottomToTop@{BottomToTop}!UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}}\index{UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}!BottomToTop@{BottomToTop}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a791928389a965ec4c068718c6fdafad4a63dc349be51108dcfd197c7ab02b486a}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a791928389a965ec4c068718c6fdafad4a63dc349be51108dcfd197c7ab02b486a}} 
+Bottom\+To\+Top&Starting position is the Bottom. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TopToBottom@{TopToBottom}!UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}}\index{UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}!TopToBottom@{TopToBottom}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a791928389a965ec4c068718c6fdafad4af2b1a19a8d0f523d042f9ede79a80804}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a791928389a965ec4c068718c6fdafad4af2b1a19a8d0f523d042f9ede79a80804}} 
+Top\+To\+Bottom&Starting position is the Top. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a63478e617c459979852ac66012abb598}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a63478e617c459979852ac66012abb598}} 
+\index{UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}!GraphicUpdateComplete@{GraphicUpdateComplete}}
+\index{GraphicUpdateComplete@{GraphicUpdateComplete}!UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}}
+\doxysubsubsection{\texorpdfstring{GraphicUpdateComplete()}{GraphicUpdateComplete()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+UI.\+Scrollbar.\+Graphic\+Update\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+See \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a6a89ea41d304c5a96c16c37decee168a}{ICanvas\+Element.\+Graphic\+Update\+Complete}}. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a6a89ea41d304c5a96c16c37decee168a}{Unity\+Engine.\+UI.\+ICanvas\+Element}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a4ff72e93363fceb7f6ccb82fe9b4d836}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a4ff72e93363fceb7f6ccb82fe9b4d836}} 
+\index{UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}!LayoutComplete@{LayoutComplete}}
+\index{LayoutComplete@{LayoutComplete}!UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}}
+\doxysubsubsection{\texorpdfstring{LayoutComplete()}{LayoutComplete()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+UI.\+Scrollbar.\+Layout\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+See \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a5f507a968983077ca1be60142513ab1e}{ICanvas\+Element.\+Layout\+Complete}}. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a5f507a968983077ca1be60142513ab1e}{Unity\+Engine.\+UI.\+ICanvas\+Element}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a3ff93aa9f6c28167a60cfea23f851e52}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a3ff93aa9f6c28167a60cfea23f851e52}} 
+\index{UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}!OnDisable@{OnDisable}}
+\index{OnDisable@{OnDisable}!UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}}
+\doxysubsubsection{\texorpdfstring{OnDisable()}{OnDisable()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Scrollbar.\+On\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a3ddf0ded5f9c320404ab9d9f53a7f70c}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a3ddf0ded5f9c320404ab9d9f53a7f70c}} 
+\index{UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Scrollbar.\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a49ea68b2a540ab0072ee10bf06acc25e}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a49ea68b2a540ab0072ee10bf06acc25e}} 
+\index{UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}!OnPointerDown@{OnPointerDown}}
+\index{OnPointerDown@{OnPointerDown}!UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}}
+\doxysubsubsection{\texorpdfstring{OnPointerDown()}{OnPointerDown()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Scrollbar.\+On\+Pointer\+Down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}}}]{event\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Event triggered when pointer is pressed down on the scrollbar. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_down_handler_a18d183648f495d70fdcf81467f0c3715}{Unity\+Engine.\+Event\+Systems.\+IPointer\+Down\+Handler}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_ab4029b2d1588fb5265899e3afeddd286}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_ab4029b2d1588fb5265899e3afeddd286}} 
+\index{UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}!OnPointerUp@{OnPointerUp}}
+\index{OnPointerUp@{OnPointerUp}!UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}}
+\doxysubsubsection{\texorpdfstring{OnPointerUp()}{OnPointerUp()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Scrollbar.\+On\+Pointer\+Up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}}}]{event\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Event triggered when pointer is released after pressing on the scrollbar. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_up_handler_a7fec90b677f1ca9648351c0e226d2c05}{Unity\+Engine.\+Event\+Systems.\+IPointer\+Up\+Handler}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a643d8d6ef4f0237b91e58d44490292da}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a643d8d6ef4f0237b91e58d44490292da}} 
+\index{UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}!OnRectTransformDimensionsChange@{OnRectTransformDimensionsChange}}
+\index{OnRectTransformDimensionsChange@{OnRectTransformDimensionsChange}!UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}}
+\doxysubsubsection{\texorpdfstring{OnRectTransformDimensionsChange()}{OnRectTransformDimensionsChange()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Scrollbar.\+On\+Rect\+Transform\+Dimensions\+Change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+This callback is called when the dimensions of an associated Rect\+Transform change. It is always called before Awake, On\+Enable, or Start. The call is also made to all child Rect\+Transforms, regardless of whether their dimensions change (which depends on how they are anchored). 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_acfb0bcf126b8ea0953525ebb20a87985}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_ac16edbc71aaeb9ed3a2cbf4ed1bb4454}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_ac16edbc71aaeb9ed3a2cbf4ed1bb4454}} 
+\index{UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}!Rebuild@{Rebuild}}
+\index{Rebuild@{Rebuild}!UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}}
+\doxysubsubsection{\texorpdfstring{Rebuild()}{Rebuild()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+UI.\+Scrollbar.\+Rebuild (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_u_i_a76b804cb1978e6dc1162615deaa710e9}{Canvas\+Update}}}]{executing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Rebuild the element for the given stage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em executing} & The current Canvas\+Update stage being rebuild.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a50a9583739ecd91674db5a81da1f0bd5}{Unity\+Engine.\+UI.\+ICanvas\+Element}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a5f6dcb5c78ce5b4477516d4a6dd174eb}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a5f6dcb5c78ce5b4477516d4a6dd174eb}} 
+\index{UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}!SetDirection@{SetDirection}}
+\index{SetDirection@{SetDirection}!UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}}
+\doxysubsubsection{\texorpdfstring{SetDirection()}{SetDirection()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Scrollbar.\+Set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_a791928389a965ec4c068718c6fdafad4}{Direction}}}]{direction,  }\item[{bool}]{include\+Rect\+Layouts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the direction of the scrollbar, optionally setting the layout as well. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & The direction of the scrollbar.\\
+\hline
+{\em include\+Rect\+Layouts} & Should the layout be flipped together with the direction?\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_a5c7462a642cc4dcf71bc7de0d94900bc}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_a5c7462a642cc4dcf71bc7de0d94900bc}} 
+\index{UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}!SetValueWithoutNotify@{SetValueWithoutNotify}}
+\index{SetValueWithoutNotify@{SetValueWithoutNotify}!UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}}
+\doxysubsubsection{\texorpdfstring{SetValueWithoutNotify()}{SetValueWithoutNotify()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+UI.\+Scrollbar.\+Set\+Value\+Without\+Notify (\begin{DoxyParamCaption}\item[{float}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the value of the scrollbar without invoking on\+Value\+Changed callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The new value for the scrollbar.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_scrollbar_aeb50949d32fc86736ea7cbbef757ff4c}\label{class_unity_engine_1_1_u_i_1_1_scrollbar_aeb50949d32fc86736ea7cbbef757ff4c}} 
+\index{UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}!onValueChanged@{onValueChanged}}
+\index{onValueChanged@{onValueChanged}!UnityEngine.UI.Scrollbar@{UnityEngine.UI.Scrollbar}}
+\doxysubsubsection{\texorpdfstring{onValueChanged}{onValueChanged}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_scrollbar_1_1_scroll_event}{Scroll\+Event}} Unity\+Engine.\+UI.\+Scrollbar.\+on\+Value\+Changed\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Handling for when the scrollbar value is changed. 
+
+Allow for delegate-\/based subscriptions for faster events than \textquotesingle{}event\+Receiver\textquotesingle{}, and allowing for multiple receivers. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/Scrollbar.\+cs\end{DoxyCompactItemize}

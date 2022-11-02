@@ -1,0 +1,85 @@
+\hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table}{}\doxysection{Unity\+Editor.\+Performance.\+Profile\+Analyzer.\+Thread\+Table Class Reference}
+\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table}\index{UnityEditor.Performance.ProfileAnalyzer.ThreadTable@{UnityEditor.Performance.ProfileAnalyzer.ThreadTable}}
+Inheritance diagram for Unity\+Editor.\+Performance.\+Profile\+Analyzer.\+Thread\+Table\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_a187f64e8f8a002e4d74f4cf13e30417d}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_a187f64e8f8a002e4d74f4cf13e30417d}} 
+enum {\bfseries My\+Columns} \{ {\bfseries Group\+Name}
+, {\bfseries Thread\+Name}
+, {\bfseries State}
+ \}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_a99130eaebf8106d840a2b90d767f9660}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_a99130eaebf8106d840a2b90d767f9660}} 
+enum {\bfseries Sort\+Option} \{ {\bfseries Group\+Name}
+, {\bfseries Thread\+Name}
+, {\bfseries State}
+ \}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_a8acf84b0866d0f8092c51e01b7db6a22}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_a8acf84b0866d0f8092c51e01b7db6a22}} 
+enum {\bfseries Thread\+Selected} \{ {\bfseries Selected}
+, {\bfseries Partial}
+, {\bfseries Not\+Selected}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_a9233c12894fadeb2de618d1bd635a6ee}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_a9233c12894fadeb2de618d1bd635a6ee}} 
+{\bfseries Thread\+Table} (Tree\+View\+State state, Multi\+Column\+Header multicolumn\+Header, List$<$ string $>$ thread\+Names, List$<$ string $>$ thread\+UINames, Thread\+Selection thread\+Selection)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_afc56353c90f85e26c6beb0e0f8517987}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_afc56353c90f85e26c6beb0e0f8517987}} 
+void {\bfseries Clear\+Thread\+Selection} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_ad48cdbdf7124d9bd6f86816050cbb4f6}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_ad48cdbdf7124d9bd6f86816050cbb4f6}} 
+void {\bfseries Select\+Main} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_a589887871c016374a7c4f9d5707e2408}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_a589887871c016374a7c4f9d5707e2408}} 
+void {\bfseries Select\+Common} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_aca5789c5b735013b20f3e904317193a8}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_aca5789c5b735013b20f3e904317193a8}} 
+Thread\+Selection {\bfseries Get\+Thread\+Selection} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_afb66be4ca14c0711a14c0a6731c345b3}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_afb66be4ca14c0711a14c0a6731c345b3}} 
+static Multi\+Column\+Header\+State {\bfseries Create\+Default\+Multi\+Column\+Header\+State} (float tree\+View\+Width)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_a332e07fc1b752f3617ab6e253c5d361b}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_a332e07fc1b752f3617ab6e253c5d361b}} 
+int {\bfseries Get\+Child\+Count} (Thread\+Identifier selected\+Thread\+Identifier, out int selected)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_af51e73cba0a21d38f8ba7f065656d04a}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_af51e73cba0a21d38f8ba7f065656d04a}} 
+override Tree\+View\+Item {\bfseries Build\+Root} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_a3a2da25585356d3198ebaceb366fee05}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_a3a2da25585356d3198ebaceb366fee05}} 
+override IList$<$ Tree\+View\+Item $>$ {\bfseries Build\+Rows} (Tree\+View\+Item root)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_aa9fca8216d90daebb35b0e8faa8c0a0e}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_aa9fca8216d90daebb35b0e8faa8c0a0e}} 
+override void {\bfseries Row\+GUI} (Row\+GUIArgs args)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_af66853c8adb770c0fa30ddbdfd63d611}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_af66853c8adb770c0fa30ddbdfd63d611}} 
+override bool {\bfseries Can\+Multi\+Select} (Tree\+View\+Item item)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_a9dc70d8286536bd9a718c2fdaa9919bc}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_a9dc70d8286536bd9a718c2fdaa9919bc}} 
+override void {\bfseries Selection\+Changed} (IList$<$ int $>$ selected\+Ids)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_ad54ebaa67e26fe94150e9e68344ce37c}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_thread_table_ad54ebaa67e26fe94150e9e68344ce37c}} 
+bool {\bfseries State\+Changed}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+performance.\+profile-\/analyzer@1.\+1.\+1/\+Editor/Thread\+Selection\+Window.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,143 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_registry}{}\doxysection{Unity\+Engine.\+UI.\+Graphic\+Registry Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_graphic_registry}\index{UnityEngine.UI.GraphicRegistry@{UnityEngine.UI.GraphicRegistry}}
+
+
+Registry which maps a Graphic to the canvas it belongs to.  
+
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_registry_a87e9449188a9932956fab08de0887934}{Register\+Graphic\+For\+Canvas}} (Canvas c, Graphic graphic)
+\begin{DoxyCompactList}\small\item\em Associates a Graphic with a Canvas and stores this association in the registry. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_registry_aa3abe9ce81d6157762833d9dc5eba737}{Register\+Raycast\+Graphic\+For\+Canvas}} (Canvas c, Graphic graphic)
+\begin{DoxyCompactList}\small\item\em Associates a raycastable Graphic with a Canvas and stores this association in the registry. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_registry_a869a84b5e3cba0988532ac2291bf98e8}{Unregister\+Graphic\+For\+Canvas}} (Canvas c, Graphic graphic)
+\begin{DoxyCompactList}\small\item\em Dissociates a Graphic from a Canvas, removing this association from the registry. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_registry_a1e285f5dd216def70e4b28f9fdea8c61}{Unregister\+Raycast\+Graphic\+For\+Canvas}} (Canvas c, Graphic graphic)
+\begin{DoxyCompactList}\small\item\em Dissociates a Graphic from a Canvas, removing this association from the registry. \end{DoxyCompactList}\item 
+static IList$<$ Graphic $>$ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_registry_a93b53c8e2ef1ffaff1f751bb4ab100c8}{Get\+Graphics\+For\+Canvas}} (Canvas canvas)
+\begin{DoxyCompactList}\small\item\em Retrieves the list of \mbox{\hyperlink{namespace_graphics}{Graphics}} associated with a Canvas. \end{DoxyCompactList}\item 
+static IList$<$ Graphic $>$ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_registry_a9fa769a41fe03b43e00e478d73ed0936}{Get\+Raycastable\+Graphics\+For\+Canvas}} (Canvas canvas)
+\begin{DoxyCompactList}\small\item\em Retrieves the list of \mbox{\hyperlink{namespace_graphics}{Graphics}} that are raycastable and associated with a Canvas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_registry_a80d80387765cb4241290f39952b810a6}\label{class_unity_engine_1_1_u_i_1_1_graphic_registry_a80d80387765cb4241290f39952b810a6}} 
+static \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_registry}{Graphic\+Registry}} {\bfseries instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The singleton instance of the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_graphic_registry}{Graphic\+Registry}}. Creates a new instance if it does not exist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Registry which maps a Graphic to the canvas it belongs to. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_registry_a93b53c8e2ef1ffaff1f751bb4ab100c8}\label{class_unity_engine_1_1_u_i_1_1_graphic_registry_a93b53c8e2ef1ffaff1f751bb4ab100c8}} 
+\index{UnityEngine.UI.GraphicRegistry@{UnityEngine.UI.GraphicRegistry}!GetGraphicsForCanvas@{GetGraphicsForCanvas}}
+\index{GetGraphicsForCanvas@{GetGraphicsForCanvas}!UnityEngine.UI.GraphicRegistry@{UnityEngine.UI.GraphicRegistry}}
+\doxysubsubsection{\texorpdfstring{GetGraphicsForCanvas()}{GetGraphicsForCanvas()}}
+{\footnotesize\ttfamily static IList$<$ Graphic $>$ Unity\+Engine.\+UI.\+Graphic\+Registry.\+Get\+Graphics\+For\+Canvas (\begin{DoxyParamCaption}\item[{Canvas}]{canvas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Retrieves the list of \mbox{\hyperlink{namespace_graphics}{Graphics}} associated with a Canvas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em canvas} & The Canvas to search\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a list of \mbox{\hyperlink{namespace_graphics}{Graphics}}. Returns an empty list if no \mbox{\hyperlink{namespace_graphics}{Graphics}} are associated with the specified Canvas.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_registry_a9fa769a41fe03b43e00e478d73ed0936}\label{class_unity_engine_1_1_u_i_1_1_graphic_registry_a9fa769a41fe03b43e00e478d73ed0936}} 
+\index{UnityEngine.UI.GraphicRegistry@{UnityEngine.UI.GraphicRegistry}!GetRaycastableGraphicsForCanvas@{GetRaycastableGraphicsForCanvas}}
+\index{GetRaycastableGraphicsForCanvas@{GetRaycastableGraphicsForCanvas}!UnityEngine.UI.GraphicRegistry@{UnityEngine.UI.GraphicRegistry}}
+\doxysubsubsection{\texorpdfstring{GetRaycastableGraphicsForCanvas()}{GetRaycastableGraphicsForCanvas()}}
+{\footnotesize\ttfamily static IList$<$ Graphic $>$ Unity\+Engine.\+UI.\+Graphic\+Registry.\+Get\+Raycastable\+Graphics\+For\+Canvas (\begin{DoxyParamCaption}\item[{Canvas}]{canvas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Retrieves the list of \mbox{\hyperlink{namespace_graphics}{Graphics}} that are raycastable and associated with a Canvas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em canvas} & The Canvas to search\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a list of \mbox{\hyperlink{namespace_graphics}{Graphics}}. Returns an empty list if no \mbox{\hyperlink{namespace_graphics}{Graphics}} are associated with the specified Canvas.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_registry_a87e9449188a9932956fab08de0887934}\label{class_unity_engine_1_1_u_i_1_1_graphic_registry_a87e9449188a9932956fab08de0887934}} 
+\index{UnityEngine.UI.GraphicRegistry@{UnityEngine.UI.GraphicRegistry}!RegisterGraphicForCanvas@{RegisterGraphicForCanvas}}
+\index{RegisterGraphicForCanvas@{RegisterGraphicForCanvas}!UnityEngine.UI.GraphicRegistry@{UnityEngine.UI.GraphicRegistry}}
+\doxysubsubsection{\texorpdfstring{RegisterGraphicForCanvas()}{RegisterGraphicForCanvas()}}
+{\footnotesize\ttfamily static void Unity\+Engine.\+UI.\+Graphic\+Registry.\+Register\+Graphic\+For\+Canvas (\begin{DoxyParamCaption}\item[{Canvas}]{c,  }\item[{Graphic}]{graphic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Associates a Graphic with a Canvas and stores this association in the registry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The canvas being associated with the Graphic.\\
+\hline
+{\em graphic} & The Graphic being associated with the Canvas.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_registry_aa3abe9ce81d6157762833d9dc5eba737}\label{class_unity_engine_1_1_u_i_1_1_graphic_registry_aa3abe9ce81d6157762833d9dc5eba737}} 
+\index{UnityEngine.UI.GraphicRegistry@{UnityEngine.UI.GraphicRegistry}!RegisterRaycastGraphicForCanvas@{RegisterRaycastGraphicForCanvas}}
+\index{RegisterRaycastGraphicForCanvas@{RegisterRaycastGraphicForCanvas}!UnityEngine.UI.GraphicRegistry@{UnityEngine.UI.GraphicRegistry}}
+\doxysubsubsection{\texorpdfstring{RegisterRaycastGraphicForCanvas()}{RegisterRaycastGraphicForCanvas()}}
+{\footnotesize\ttfamily static void Unity\+Engine.\+UI.\+Graphic\+Registry.\+Register\+Raycast\+Graphic\+For\+Canvas (\begin{DoxyParamCaption}\item[{Canvas}]{c,  }\item[{Graphic}]{graphic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Associates a raycastable Graphic with a Canvas and stores this association in the registry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The canvas being associated with the Graphic.\\
+\hline
+{\em graphic} & The Graphic being associated with the Canvas.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_registry_a869a84b5e3cba0988532ac2291bf98e8}\label{class_unity_engine_1_1_u_i_1_1_graphic_registry_a869a84b5e3cba0988532ac2291bf98e8}} 
+\index{UnityEngine.UI.GraphicRegistry@{UnityEngine.UI.GraphicRegistry}!UnregisterGraphicForCanvas@{UnregisterGraphicForCanvas}}
+\index{UnregisterGraphicForCanvas@{UnregisterGraphicForCanvas}!UnityEngine.UI.GraphicRegistry@{UnityEngine.UI.GraphicRegistry}}
+\doxysubsubsection{\texorpdfstring{UnregisterGraphicForCanvas()}{UnregisterGraphicForCanvas()}}
+{\footnotesize\ttfamily static void Unity\+Engine.\+UI.\+Graphic\+Registry.\+Unregister\+Graphic\+For\+Canvas (\begin{DoxyParamCaption}\item[{Canvas}]{c,  }\item[{Graphic}]{graphic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Dissociates a Graphic from a Canvas, removing this association from the registry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The Canvas to dissociate from the Graphic.\\
+\hline
+{\em graphic} & The Graphic to dissociate from the Canvas.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_graphic_registry_a1e285f5dd216def70e4b28f9fdea8c61}\label{class_unity_engine_1_1_u_i_1_1_graphic_registry_a1e285f5dd216def70e4b28f9fdea8c61}} 
+\index{UnityEngine.UI.GraphicRegistry@{UnityEngine.UI.GraphicRegistry}!UnregisterRaycastGraphicForCanvas@{UnregisterRaycastGraphicForCanvas}}
+\index{UnregisterRaycastGraphicForCanvas@{UnregisterRaycastGraphicForCanvas}!UnityEngine.UI.GraphicRegistry@{UnityEngine.UI.GraphicRegistry}}
+\doxysubsubsection{\texorpdfstring{UnregisterRaycastGraphicForCanvas()}{UnregisterRaycastGraphicForCanvas()}}
+{\footnotesize\ttfamily static void Unity\+Engine.\+UI.\+Graphic\+Registry.\+Unregister\+Raycast\+Graphic\+For\+Canvas (\begin{DoxyParamCaption}\item[{Canvas}]{c,  }\item[{Graphic}]{graphic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Dissociates a Graphic from a Canvas, removing this association from the registry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The Canvas to dissociate from the Graphic.\\
+\hline
+{\em graphic} & The Graphic to dissociate from the Canvas.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/Graphic\+Registry.\+cs\end{DoxyCompactItemize}

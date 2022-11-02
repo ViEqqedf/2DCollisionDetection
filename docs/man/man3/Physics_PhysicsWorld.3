@@ -1,0 +1,223 @@
+.TH "Physics.PhysicsWorld" 3 "2022年 十一月 2日 星期三" "PhysicsWorld" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Physics.PhysicsWorld
+.SH SYNOPSIS
+.br
+.PP
+.PP
+继承自 MonoBehaviour , 以及 \fBPhysics\&.IPhysicsWorld\fP \&.
+.SS "Public 成员函数"
+
+.in +1c
+.ti -1c
+.RI "void \fBCreateACustomShape\fP (Vector3[] vertices, Vector3 pos, int level)"
+.br
+.ti -1c
+.RI "GameObject \fBCreateMesh\fP (\fBCollisionObject\fP co)"
+.br
+.ti -1c
+.RI "void \fBCreateATestRect\fP (Vector3 pos, int level=0)"
+.br
+.ti -1c
+.RI "void \fBCreateATestCircle\fP (float radius, Vector3 pos)"
+.br
+.ti -1c
+.RI "Vector3 \fBFindFirstDirection\fP (\fBCollisionObject\fP a, \fBCollisionObject\fP b)"
+.br
+.ti -1c
+.RI "bool \fBAddCollisionObject\fP (\fBCollisionObject\fP collisionObject)"
+.br
+.ti -1c
+.RI "bool \fBRemoveCollisionObject\fP (\fBCollisionObject\fP collisionObject)"
+.br
+.in -1c
+.SS "Public 属性"
+
+.in +1c
+.ti -1c
+.RI "int \fBtickFrame\fP = 0"
+.br
+.ti -1c
+.RI "int \fBborderRadius\fP = 15"
+.br
+.ti -1c
+.RI "float \fBepsilon\fP = 0\&.0001f"
+.br
+.ti -1c
+.RI "int \fBmaxIterCount\fP = 10"
+.br
+.ti -1c
+.RI "List< \fBCollisionObject\fP > \fBcollisionList\fP"
+.br
+.in -1c
+.SS "Private 成员函数"
+
+.in +1c
+.ti -1c
+.RI "void \fBStart\fP ()"
+.br
+.ti -1c
+.RI "void \fBTest0\fP ()"
+.br
+.ti -1c
+.RI "void \fBTest1\fP ()"
+.br
+.ti -1c
+.RI "void \fBTest2\fP ()"
+.br
+.ti -1c
+.RI "void \fBTest3\fP ()"
+.br
+.ti -1c
+.RI "void \fBTest4\fP ()"
+.br
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.ti -1c
+.RI "void \fBTick\fP (float timeSpan)"
+.br
+.ti -1c
+.RI "void \fBCollisionDetection\fP (float timeSpan)"
+.br
+.ti -1c
+.RI "void \fBBroadPhase\fP ()"
+.br
+.ti -1c
+.RI "void \fBSweepAndPrune\fP ()"
+.br
+.ti -1c
+.RI "void \fBDynamicBVH\fP ()"
+.br
+.ti -1c
+.RI "void \fBNarrowPhase\fP ()"
+.br
+.ti -1c
+.RI "bool \fBGJK\fP (\fBCollisionObject\fP fst, \fBCollisionObject\fP snd, List< Vector3 > simplex)"
+.br
+.ti -1c
+.RI "Vector3 \fBEPA\fP (\fBCollisionObject\fP fst, \fBCollisionObject\fP snd, List< Vector3 > simplex)"
+.br
+.ti -1c
+.RI "Vector3 \fBFindNextDirection\fP (List< Vector3 > simplex)"
+.br
+.ti -1c
+.RI "Vector3 \fBSupport\fP (Vector3 dir, \fBCollisionObject\fP fst, \fBCollisionObject\fP snd)"
+.br
+.ti -1c
+.RI "void \fBApplyAcceleration\fP (float timeSpan)"
+.br
+.ti -1c
+.RI "void \fBResolve\fP (float timeSpan)"
+.br
+.ti -1c
+.RI "void \fBApplyVelocity\fP (float timeSpan)"
+.br
+.in -1c
+.SS "Private 属性"
+
+.in +1c
+.ti -1c
+.RI "List< \fBCollisionPair\fP > \fBcollisionPairs\fP"
+.br
+.ti -1c
+.RI "List< \fBProjectionPoint\fP > \fBbroadScanList\fP"
+.br
+.ti -1c
+.RI "Dictionary< int, \fBProjectionPoint\fP > \fBbroadStartPoints\fP"
+.br
+.ti -1c
+.RI "List< \fBProjectionPoint\fP > \fBhorAABBProjList\fP"
+.br
+.ti -1c
+.RI "List< Vector3 > \fBsimplexList\fP = new List<Vector3>()"
+.br
+.in -1c
+.SH "成员函数说明"
+.PP 
+.SS "bool Physics\&.PhysicsWorld\&.AddCollisionObject (\fBCollisionObject\fP collisionObject)\fC [inline]\fP"
+
+.PP
+实现了 \fBPhysics\&.IPhysicsWorld\fP\&.
+.SS "void Physics\&.PhysicsWorld\&.ApplyAcceleration (float timeSpan)\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void Physics\&.PhysicsWorld\&.ApplyVelocity (float timeSpan)\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void Physics\&.PhysicsWorld\&.BroadPhase ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void Physics\&.PhysicsWorld\&.CollisionDetection (float timeSpan)\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void Physics\&.PhysicsWorld\&.CreateACustomShape (Vector3[] vertices, Vector3 pos, int level)\fC [inline]\fP"
+
+.SS "void Physics\&.PhysicsWorld\&.CreateATestCircle (float radius, Vector3 pos)\fC [inline]\fP"
+
+.SS "void Physics\&.PhysicsWorld\&.CreateATestRect (Vector3 pos, int level = \fC0\fP)\fC [inline]\fP"
+
+.SS "GameObject Physics\&.PhysicsWorld\&.CreateMesh (\fBCollisionObject\fP co)\fC [inline]\fP"
+
+.SS "void Physics\&.PhysicsWorld\&.DynamicBVH ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "Vector3 Physics\&.PhysicsWorld\&.EPA (\fBCollisionObject\fP fst, \fBCollisionObject\fP snd, List< Vector3 > simplex)\fC [inline]\fP, \fC [private]\fP"
+
+.SS "Vector3 Physics\&.PhysicsWorld\&.FindFirstDirection (\fBCollisionObject\fP a, \fBCollisionObject\fP b)\fC [inline]\fP"
+
+.SS "Vector3 Physics\&.PhysicsWorld\&.FindNextDirection (List< Vector3 > simplex)\fC [inline]\fP, \fC [private]\fP"
+
+.SS "bool Physics\&.PhysicsWorld\&.GJK (\fBCollisionObject\fP fst, \fBCollisionObject\fP snd, List< Vector3 > simplex)\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void Physics\&.PhysicsWorld\&.NarrowPhase ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "bool Physics\&.PhysicsWorld\&.RemoveCollisionObject (\fBCollisionObject\fP collisionObject)\fC [inline]\fP"
+
+.PP
+实现了 \fBPhysics\&.IPhysicsWorld\fP\&.
+.SS "void Physics\&.PhysicsWorld\&.Resolve (float timeSpan)\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void Physics\&.PhysicsWorld\&.Start ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "Vector3 Physics\&.PhysicsWorld\&.Support (Vector3 dir, \fBCollisionObject\fP fst, \fBCollisionObject\fP snd)\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void Physics\&.PhysicsWorld\&.SweepAndPrune ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void Physics\&.PhysicsWorld\&.Test0 ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void Physics\&.PhysicsWorld\&.Test1 ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void Physics\&.PhysicsWorld\&.Test2 ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void Physics\&.PhysicsWorld\&.Test3 ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void Physics\&.PhysicsWorld\&.Test4 ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void Physics\&.PhysicsWorld\&.Tick (float timeSpan)\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void Physics\&.PhysicsWorld\&.Update ()\fC [inline]\fP, \fC [private]\fP"
+
+.SH "类成员变量说明"
+.PP 
+.SS "int Physics\&.PhysicsWorld\&.borderRadius = 15"
+
+.SS "List<\fBProjectionPoint\fP> Physics\&.PhysicsWorld\&.broadScanList\fC [private]\fP"
+
+.SS "Dictionary<int, \fBProjectionPoint\fP> Physics\&.PhysicsWorld\&.broadStartPoints\fC [private]\fP"
+
+.SS "List<\fBCollisionObject\fP> Physics\&.PhysicsWorld\&.collisionList"
+
+.SS "List<\fBCollisionPair\fP> Physics\&.PhysicsWorld\&.collisionPairs\fC [private]\fP"
+
+.SS "float Physics\&.PhysicsWorld\&.epsilon = 0\&.0001f"
+
+.SS "List<\fBProjectionPoint\fP> Physics\&.PhysicsWorld\&.horAABBProjList\fC [private]\fP"
+
+.SS "int Physics\&.PhysicsWorld\&.maxIterCount = 10"
+
+.SS "List<Vector3> Physics\&.PhysicsWorld\&.simplexList = new List<Vector3>()\fC [private]\fP"
+
+.SS "int Physics\&.PhysicsWorld\&.tickFrame = 0"
+
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 PhysicsWorld 的 源代码自动生成\&.

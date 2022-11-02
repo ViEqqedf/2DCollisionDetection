@@ -1,0 +1,132 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_cooldown}{}\doxysection{Unity.\+Visual\+Scripting.\+Cooldown Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_cooldown}\index{Unity.VisualScripting.Cooldown@{Unity.VisualScripting.Cooldown}}
+
+
+Runs a cooldown timer to throttle flow and outputs remaining measurements.  
+
+
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Cooldown\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.516129cm]{class_unity_1_1_visual_scripting_1_1_cooldown}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_cooldown_1_1_data}{Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_cooldown_a043f6d6519595a90f8d572bc2b8f48be}{Create\+Data}} ()
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_cooldown_a2667368ee9b59a2d262ebb99657e1b65}{Start\+Listening}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}} stack)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_cooldown_abae9719580ae3371269cbd17caff39f5}{Stop\+Listening}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}} stack)
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_cooldown_a2fb2bdb5c99b838ef957530b06762f27}{Is\+Listening}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Graph\+Pointer}} pointer)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_cooldown_a2b2219af119b96e75973da2354405052}\label{class_unity_1_1_visual_scripting_1_1_cooldown_a2b2219af119b96e75973da2354405052}} 
+void {\bfseries Update} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}} flow)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_cooldown_a94e5c61c73fe31b4bbfa755dc06ca143}{Definition}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_cooldown_ae180468f971182f14ce05d3acbfa4454}\label{class_unity_1_1_visual_scripting_1_1_cooldown_ae180468f971182f14ce05d3acbfa4454}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_input}{Control\+Input}} {\bfseries enter}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The moment at which to try using the cooldown. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_cooldown_a0071cf50043369ba807f61e00b1b1f5f}\label{class_unity_1_1_visual_scripting_1_1_cooldown_a0071cf50043369ba807f61e00b1b1f5f}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_input}{Control\+Input}} {\bfseries reset}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Trigger to force reset the cooldown. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_cooldown_a9171656ed93935faa0e5f5a4abd90bcb}\label{class_unity_1_1_visual_scripting_1_1_cooldown_a9171656ed93935faa0e5f5a4abd90bcb}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{Value\+Input}} {\bfseries duration}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The total duration of the cooldown. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_cooldown_a4cd95b3231be07ee8800fc85572ef723}\label{class_unity_1_1_visual_scripting_1_1_cooldown_a4cd95b3231be07ee8800fc85572ef723}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{Value\+Input}} {\bfseries unscaled\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether to ignore the time scale. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_cooldown_a522d86c5cd94420d07a69a3dc7048d2b}\label{class_unity_1_1_visual_scripting_1_1_cooldown_a522d86c5cd94420d07a69a3dc7048d2b}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{Control\+Output}} {\bfseries exit\+Ready}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Called upon entry when the cooldown is ready. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_cooldown_ade33228b5c40ab447042877426821fc0}\label{class_unity_1_1_visual_scripting_1_1_cooldown_ade33228b5c40ab447042877426821fc0}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{Control\+Output}} {\bfseries exit\+Not\+Ready}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Called upon entry when the cooldown is not yet ready. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_cooldown_af9b123ef594f643278b9208967d067a4}\label{class_unity_1_1_visual_scripting_1_1_cooldown_af9b123ef594f643278b9208967d067a4}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{Control\+Output}} {\bfseries tick}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Called each frame while the cooldown timer is active. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_cooldown_a652fae09ce29395fde050ba631261e98}\label{class_unity_1_1_visual_scripting_1_1_cooldown_a652fae09ce29395fde050ba631261e98}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{Control\+Output}} {\bfseries became\+Ready}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Called when the cooldown timer reaches zero. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_cooldown_ab0fef240756e298afe2f8dd830ea4988}\label{class_unity_1_1_visual_scripting_1_1_cooldown_ab0fef240756e298afe2f8dd830ea4988}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_output}{Value\+Output}} {\bfseries remaining\+Seconds}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of seconds remaining until the cooldown is ready. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_cooldown_a38c48d040b03789d2ff412038d8581f1}\label{class_unity_1_1_visual_scripting_1_1_cooldown_a38c48d040b03789d2ff412038d8581f1}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_output}{Value\+Output}} {\bfseries remaining\+Ratio}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The proportion of the duration remaining until the cooldown is ready (0-\/1). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Runs a cooldown timer to throttle flow and outputs remaining measurements. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_cooldown_a043f6d6519595a90f8d572bc2b8f48be}\label{class_unity_1_1_visual_scripting_1_1_cooldown_a043f6d6519595a90f8d572bc2b8f48be}} 
+\index{Unity.VisualScripting.Cooldown@{Unity.VisualScripting.Cooldown}!CreateData@{CreateData}}
+\index{CreateData@{CreateData}!Unity.VisualScripting.Cooldown@{Unity.VisualScripting.Cooldown}}
+\doxysubsubsection{\texorpdfstring{CreateData()}{CreateData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}} Unity.\+Visual\+Scripting.\+Cooldown.\+Create\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_with_data}{Unity.\+Visual\+Scripting.\+IGraph\+Element\+With\+Data}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_cooldown_a94e5c61c73fe31b4bbfa755dc06ca143}\label{class_unity_1_1_visual_scripting_1_1_cooldown_a94e5c61c73fe31b4bbfa755dc06ca143}} 
+\index{Unity.VisualScripting.Cooldown@{Unity.VisualScripting.Cooldown}!Definition@{Definition}}
+\index{Definition@{Definition}!Unity.VisualScripting.Cooldown@{Unity.VisualScripting.Cooldown}}
+\doxysubsubsection{\texorpdfstring{Definition()}{Definition()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+Cooldown.\+Definition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit}{Unity.\+Visual\+Scripting.\+Unit}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_cooldown_a2fb2bdb5c99b838ef957530b06762f27}\label{class_unity_1_1_visual_scripting_1_1_cooldown_a2fb2bdb5c99b838ef957530b06762f27}} 
+\index{Unity.VisualScripting.Cooldown@{Unity.VisualScripting.Cooldown}!IsListening@{IsListening}}
+\index{IsListening@{IsListening}!Unity.VisualScripting.Cooldown@{Unity.VisualScripting.Cooldown}}
+\doxysubsubsection{\texorpdfstring{IsListening()}{IsListening()}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Cooldown.\+Is\+Listening (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Graph\+Pointer}}}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_event_listener}{Unity.\+Visual\+Scripting.\+IGraph\+Event\+Listener}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_cooldown_a2667368ee9b59a2d262ebb99657e1b65}\label{class_unity_1_1_visual_scripting_1_1_cooldown_a2667368ee9b59a2d262ebb99657e1b65}} 
+\index{Unity.VisualScripting.Cooldown@{Unity.VisualScripting.Cooldown}!StartListening@{StartListening}}
+\index{StartListening@{StartListening}!Unity.VisualScripting.Cooldown@{Unity.VisualScripting.Cooldown}}
+\doxysubsubsection{\texorpdfstring{StartListening()}{StartListening()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Cooldown.\+Start\+Listening (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}}}]{stack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_event_listener}{Unity.\+Visual\+Scripting.\+IGraph\+Event\+Listener}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_cooldown_abae9719580ae3371269cbd17caff39f5}\label{class_unity_1_1_visual_scripting_1_1_cooldown_abae9719580ae3371269cbd17caff39f5}} 
+\index{Unity.VisualScripting.Cooldown@{Unity.VisualScripting.Cooldown}!StopListening@{StopListening}}
+\index{StopListening@{StopListening}!Unity.VisualScripting.Cooldown@{Unity.VisualScripting.Cooldown}}
+\doxysubsubsection{\texorpdfstring{StopListening()}{StopListening()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Cooldown.\+Stop\+Listening (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}}}]{stack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_event_listener}{Unity.\+Visual\+Scripting.\+IGraph\+Event\+Listener}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Flow/\+Framework/\+Time/Cooldown.\+cs\end{DoxyCompactItemize}

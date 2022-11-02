@@ -1,0 +1,84 @@
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+Unity\+Platform\+Attribute Class Reference}
+\label{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute}\index{UnityEngine.TestTools.UnityPlatformAttribute@{UnityEngine.TestTools.UnityPlatformAttribute}}
+
+
+Use this attribute to define a specific set of platforms you want or do not want your test(s) to run on.  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Tools.\+Unity\+Platform\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute_ae141643f6fa93a19f24cf2d05f1c7923}\label{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute_ae141643f6fa93a19f24cf2d05f1c7923}} 
+{\bfseries Unity\+Platform\+Attribute} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new instance of the \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute}{Unity\+Platform\+Attribute}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute_a9f0358a792282978f68e8605d3a8e571}{Unity\+Platform\+Attribute}} (params Runtime\+Platform\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute_a15ae2aca87c948413a056312978288ec}{include}})
+\begin{DoxyCompactList}\small\item\em Constructs a new instance of the \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute}{Unity\+Platform\+Attribute}} class with a list of platforms to include. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute_ad8c7a3e6a9166becfd5dca24260de72a}{Apply\+To\+Test}} (Test test)
+\begin{DoxyCompactList}\small\item\em Modifies a test as defined for the specific attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute_a15ae2aca87c948413a056312978288ec}\label{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute_a15ae2aca87c948413a056312978288ec}} 
+Runtime\+Platform\mbox{[}$\,$\mbox{]} {\bfseries include}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A subset of platforms you need to have your tests run on. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute_af29bd0e100e8e6b6a8995661b2e64fe3}\label{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute_af29bd0e100e8e6b6a8995661b2e64fe3}} 
+Runtime\+Platform\mbox{[}$\,$\mbox{]} {\bfseries exclude}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List the platforms you do not want to have your tests run on. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Use this attribute to define a specific set of platforms you want or do not want your test(s) to run on. 
+
+You can use this attribute on the test method, test class, or test assembly level. Use the supported Runtime\+Platform enumeration values to specify the platforms. You can also specify which platforms to test by passing one or more {\ttfamily Runtime\+Platform} values along with or without the include or exclude properties as parameters to the \href{https://github.com/nunit/docs/wiki/Platform-Attribute}{\texttt{ Platform}} attribute constructor.
+
+The test(s) skips if the current target platform is\+:
+\begin{DoxyItemize}
+\item Not explicitly specified in the included platforms list
+\item In the excluded platforms list 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute_a9f0358a792282978f68e8605d3a8e571}\label{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute_a9f0358a792282978f68e8605d3a8e571}} 
+\index{UnityEngine.TestTools.UnityPlatformAttribute@{UnityEngine.TestTools.UnityPlatformAttribute}!UnityPlatformAttribute@{UnityPlatformAttribute}}
+\index{UnityPlatformAttribute@{UnityPlatformAttribute}!UnityEngine.TestTools.UnityPlatformAttribute@{UnityEngine.TestTools.UnityPlatformAttribute}}
+\doxysubsubsection{\texorpdfstring{UnityPlatformAttribute()}{UnityPlatformAttribute()}}
+{\footnotesize\ttfamily Unity\+Engine.\+Test\+Tools.\+Unity\+Platform\+Attribute.\+Unity\+Platform\+Attribute (\begin{DoxyParamCaption}\item[{params Runtime\+Platform\mbox{[}$\,$\mbox{]}}]{include }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a new instance of the \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute}{Unity\+Platform\+Attribute}} class with a list of platforms to include. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em include} & The different Runtime\+Platform to run the test on.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute_ad8c7a3e6a9166becfd5dca24260de72a}\label{class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute_ad8c7a3e6a9166becfd5dca24260de72a}} 
+\index{UnityEngine.TestTools.UnityPlatformAttribute@{UnityEngine.TestTools.UnityPlatformAttribute}!ApplyToTest@{ApplyToTest}}
+\index{ApplyToTest@{ApplyToTest}!UnityEngine.TestTools.UnityPlatformAttribute@{UnityEngine.TestTools.UnityPlatformAttribute}}
+\doxysubsubsection{\texorpdfstring{ApplyToTest()}{ApplyToTest()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Test\+Tools.\+Unity\+Platform\+Attribute.\+Apply\+To\+Test (\begin{DoxyParamCaption}\item[{Test}]{test }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Modifies a test as defined for the specific attribute. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em test} & The test to modify\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Engine.\+Test\+Runner/\+NUnit\+Extensions/\+Attributes/Unity\+Platform\+Attribute.\+cs\end{DoxyCompactItemize}

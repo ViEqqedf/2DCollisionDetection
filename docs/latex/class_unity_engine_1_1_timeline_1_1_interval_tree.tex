@@ -1,0 +1,73 @@
+\hypertarget{class_unity_engine_1_1_timeline_1_1_interval_tree}{}\doxysection{Unity\+Engine.\+Timeline.\+Interval\+Tree\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_unity_engine_1_1_timeline_1_1_interval_tree}\index{UnityEngine.Timeline.IntervalTree$<$ T $>$@{UnityEngine.Timeline.IntervalTree$<$ T $>$}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries Entry}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_interval_tree_a12421db591e21123842a8a9b960da0f9}\label{class_unity_engine_1_1_timeline_1_1_interval_tree_a12421db591e21123842a8a9b960da0f9}} 
+void {\bfseries Add} (T item)
+\begin{DoxyCompactList}\small\item\em Add an \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_interval}{IInterval}} to the tree \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_interval_tree_acc9ccb26e1bca51dff02769748d38111}{Intersects\+With}} (Int64 value, List$<$ T $>$ results)
+\begin{DoxyCompactList}\small\item\em Query the tree at a particular time \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_interval_tree_aae40d9e2e77a75c1cfefcb9032a4ffe8}{Intersects\+With\+Range}} (Int64 start, Int64 end, List$<$ T $>$ results)
+\begin{DoxyCompactList}\small\item\em Query the tree at a particular range of time \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_interval_tree_a9d58d216b88db04ea3174489e3aaec56}\label{class_unity_engine_1_1_timeline_1_1_interval_tree_a9d58d216b88db04ea3174489e3aaec56}} 
+void {\bfseries Update\+Intervals} ()
+\begin{DoxyCompactList}\small\item\em Updates the intervals from their source. Use this to detect if the data in the tree has changed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_interval_tree_a7b53dd9d1311000c641a8a58101d8497}\label{class_unity_engine_1_1_timeline_1_1_interval_tree_a7b53dd9d1311000c641a8a58101d8497}} 
+void {\bfseries Clear} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_interval_tree_a1f02208a022524fa2aa11657f80a23c2}\label{class_unity_engine_1_1_timeline_1_1_interval_tree_a1f02208a022524fa2aa11657f80a23c2}} 
+bool {\bfseries dirty}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the tree will be rebuilt on the next query \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_interval_tree_acc9ccb26e1bca51dff02769748d38111}\label{class_unity_engine_1_1_timeline_1_1_interval_tree_acc9ccb26e1bca51dff02769748d38111}} 
+\index{UnityEngine.Timeline.IntervalTree$<$ T $>$@{UnityEngine.Timeline.IntervalTree$<$ T $>$}!IntersectsWith@{IntersectsWith}}
+\index{IntersectsWith@{IntersectsWith}!UnityEngine.Timeline.IntervalTree$<$ T $>$@{UnityEngine.Timeline.IntervalTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IntersectsWith()}{IntersectsWith()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_interval_tree}{Unity\+Engine.\+Timeline.\+Interval\+Tree}}$<$ T $>$.Intersects\+With (\begin{DoxyParamCaption}\item[{Int64}]{value,  }\item[{List$<$ T $>$}]{results }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Query the tree at a particular time 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+{\em results} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_interval_tree_aae40d9e2e77a75c1cfefcb9032a4ffe8}\label{class_unity_engine_1_1_timeline_1_1_interval_tree_aae40d9e2e77a75c1cfefcb9032a4ffe8}} 
+\index{UnityEngine.Timeline.IntervalTree$<$ T $>$@{UnityEngine.Timeline.IntervalTree$<$ T $>$}!IntersectsWithRange@{IntersectsWithRange}}
+\index{IntersectsWithRange@{IntersectsWithRange}!UnityEngine.Timeline.IntervalTree$<$ T $>$@{UnityEngine.Timeline.IntervalTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IntersectsWithRange()}{IntersectsWithRange()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_interval_tree}{Unity\+Engine.\+Timeline.\+Interval\+Tree}}$<$ T $>$.Intersects\+With\+Range (\begin{DoxyParamCaption}\item[{Int64}]{start,  }\item[{Int64}]{end,  }\item[{List$<$ T $>$}]{results }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Query the tree at a particular range of time 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & \\
+\hline
+{\em end} & \\
+\hline
+{\em results} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Evaluation/Interval\+Tree.\+cs\end{DoxyCompactItemize}

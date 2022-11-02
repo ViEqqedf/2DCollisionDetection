@@ -1,0 +1,132 @@
+\hypertarget{class_unity_engine_1_1_event_systems_1_1_physics_raycaster}{}\doxysection{Unity\+Engine.\+Event\+Systems.\+Physics\+Raycaster Class Reference}
+\label{class_unity_engine_1_1_event_systems_1_1_physics_raycaster}\index{UnityEngine.EventSystems.PhysicsRaycaster@{UnityEngine.EventSystems.PhysicsRaycaster}}
+
+
+Simple event system using physics raycasts.  
+
+
+Inheritance diagram for Unity\+Engine.\+Event\+Systems.\+Physics\+Raycaster\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_unity_engine_1_1_event_systems_1_1_physics_raycaster}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a1a105b0170a7ef07583aac2839d7a9f2}{Raycast}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data, List$<$ \mbox{\hyperlink{struct_unity_engine_1_1_event_systems_1_1_raycast_result}{Raycast\+Result}} $>$ result\+Append\+List)
+\begin{DoxyCompactList}\small\item\em Raycast against the scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a140b68f1598bdf9bf4bf04eaa1765ce9}{Compute\+Ray\+And\+Distance}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data, ref Ray ray, ref int event\+Display\+Index, ref float distance\+To\+Clip\+Plane)
+\begin{DoxyCompactList}\small\item\em Returns a ray going from camera through the event position and the distance between the near and far clipping planes along that ray. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a200cf914f1028f50e4c711b4c6660f7e}\label{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a200cf914f1028f50e4c711b4c6660f7e}} 
+Camera {\bfseries m\+\_\+\+Event\+Camera}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a2cfc5be50d46a5d6dcadddd525b194bf}\label{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a2cfc5be50d46a5d6dcadddd525b194bf}} 
+Layer\+Mask {\bfseries m\+\_\+\+Event\+Mask} = \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a078663dba9deb75ea9cbdaa1f26eeb9a}{k\+No\+Event\+Mask\+Set}}
+\begin{DoxyCompactList}\small\item\em Layer mask used to filter events. Always combined with the camera\textquotesingle{}s culling mask if a camera is used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_ab52026349051965ad0b93c4033d3ace4}\label{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_ab52026349051965ad0b93c4033d3ace4}} 
+int {\bfseries m\+\_\+\+Max\+Ray\+Intersections} = 0
+\begin{DoxyCompactList}\small\item\em The max number of intersections allowed. 0 = allocating version anything else is non alloc. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a56db3d7c0cfadc1bd7be81d5a97927e2}\label{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a56db3d7c0cfadc1bd7be81d5a97927e2}} 
+int {\bfseries m\+\_\+\+Last\+Max\+Ray\+Intersections} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a078663dba9deb75ea9cbdaa1f26eeb9a}\label{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a078663dba9deb75ea9cbdaa1f26eeb9a}} 
+const int {\bfseries k\+No\+Event\+Mask\+Set} = -\/1
+\begin{DoxyCompactList}\small\item\em Const to use for clarity when no event mask is set \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_ac7852b4bed1b3309cb021bb3c2e315db}\label{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_ac7852b4bed1b3309cb021bb3c2e315db}} 
+override Camera {\bfseries event\+Camera}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_ad28c42a88f03961efa12c4481f36f3fc}\label{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_ad28c42a88f03961efa12c4481f36f3fc}} 
+virtual int {\bfseries depth}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Depth used to determine the order of event processing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_acd6411249e8e81c39413adf63df6e985}\label{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_acd6411249e8e81c39413adf63df6e985}} 
+int {\bfseries final\+Event\+Mask}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Event mask used to determine which objects will receive events. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a8cd611af498a823e91c1af42e4ea668f}\label{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a8cd611af498a823e91c1af42e4ea668f}} 
+Layer\+Mask {\bfseries event\+Mask}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Layer mask used to filter events. Always combined with the camera\textquotesingle{}s culling mask if a camera is used. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a970e66dff954f029fae6b2f170044466}{max\+Ray\+Intersections}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Max number of ray intersection allowed to be found. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple event system using physics raycasts. 
+
+Raycaster for casting against 3D \mbox{\hyperlink{namespace_physics}{Physics}} components. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a140b68f1598bdf9bf4bf04eaa1765ce9}\label{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a140b68f1598bdf9bf4bf04eaa1765ce9}} 
+\index{UnityEngine.EventSystems.PhysicsRaycaster@{UnityEngine.EventSystems.PhysicsRaycaster}!ComputeRayAndDistance@{ComputeRayAndDistance}}
+\index{ComputeRayAndDistance@{ComputeRayAndDistance}!UnityEngine.EventSystems.PhysicsRaycaster@{UnityEngine.EventSystems.PhysicsRaycaster}}
+\doxysubsubsection{\texorpdfstring{ComputeRayAndDistance()}{ComputeRayAndDistance()}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Event\+Systems.\+Physics\+Raycaster.\+Compute\+Ray\+And\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}}}]{event\+Data,  }\item[{ref Ray}]{ray,  }\item[{ref int}]{event\+Display\+Index,  }\item[{ref float}]{distance\+To\+Clip\+Plane }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns a ray going from camera through the event position and the distance between the near and far clipping planes along that ray. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & The pointer event for which we will cast a ray.\\
+\hline
+{\em ray} & The ray to use.\\
+\hline
+{\em event\+Display\+Index} & The display index used.\\
+\hline
+{\em distance\+To\+Clip\+Plane} & The distance between the near and far clipping planes along the ray.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the operation was successful. false if it was not possible to compute, such as the event\+Position being outside of the view.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a1a105b0170a7ef07583aac2839d7a9f2}\label{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a1a105b0170a7ef07583aac2839d7a9f2}} 
+\index{UnityEngine.EventSystems.PhysicsRaycaster@{UnityEngine.EventSystems.PhysicsRaycaster}!Raycast@{Raycast}}
+\index{Raycast@{Raycast}!UnityEngine.EventSystems.PhysicsRaycaster@{UnityEngine.EventSystems.PhysicsRaycaster}}
+\doxysubsubsection{\texorpdfstring{Raycast()}{Raycast()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Event\+Systems.\+Physics\+Raycaster.\+Raycast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}}}]{event\+Data,  }\item[{List$<$ \mbox{\hyperlink{struct_unity_engine_1_1_event_systems_1_1_raycast_result}{Raycast\+Result}} $>$}]{result\+Append\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Raycast against the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & Current event data.\\
+\hline
+{\em result\+Append\+List} & List of hit Objects.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_raycaster_ac03b822ff3220ed496262a02ba2e36e8}{Unity\+Engine.\+Event\+Systems.\+Base\+Raycaster}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a970e66dff954f029fae6b2f170044466}\label{class_unity_engine_1_1_event_systems_1_1_physics_raycaster_a970e66dff954f029fae6b2f170044466}} 
+\index{UnityEngine.EventSystems.PhysicsRaycaster@{UnityEngine.EventSystems.PhysicsRaycaster}!maxRayIntersections@{maxRayIntersections}}
+\index{maxRayIntersections@{maxRayIntersections}!UnityEngine.EventSystems.PhysicsRaycaster@{UnityEngine.EventSystems.PhysicsRaycaster}}
+\doxysubsubsection{\texorpdfstring{maxRayIntersections}{maxRayIntersections}}
+{\footnotesize\ttfamily int Unity\+Engine.\+Event\+Systems.\+Physics\+Raycaster.\+max\+Ray\+Intersections\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Max number of ray intersection allowed to be found. 
+
+A value of zero will represent using the allocating version of the raycast function where as any other value will use the non allocating version. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+Event\+System/\+Raycasters/Physics\+Raycaster.\+cs\end{DoxyCompactItemize}

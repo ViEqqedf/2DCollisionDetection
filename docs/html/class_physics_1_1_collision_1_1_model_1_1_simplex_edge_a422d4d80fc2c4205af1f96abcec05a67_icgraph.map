@@ -1,0 +1,9 @@
+<map id="Physics.Collision.Model.SimplexEdge.Clear" name="Physics.Collision.Model.SimplexEdge.Clear">
+<area shape="rect" id="node1" title=" " alt="" coords="1451,5,1617,47"/>
+<area shape="rect" id="node2" href="$class_physics_1_1_physics_cache_pool.html#ad31fe94e7d5fc45379a922481b6f6739" title=" " alt="" coords="1215,5,1403,47"/>
+<area shape="rect" id="node3" href="$class_physics_1_1_physics_world.html#a981b90f47065fded56b0145083aac984" title=" " alt="" coords="984,13,1167,39"/>
+<area shape="rect" id="node4" href="$class_physics_1_1_physics_world.html#ab505479deb9b79c8d1c5edd3957c8e49" title=" " alt="" coords="737,5,936,47"/>
+<area shape="rect" id="node5" href="$class_physics_1_1_physics_world.html#a516968c71000684ea688d080074d0ec8" title=" " alt="" coords="483,5,689,47"/>
+<area shape="rect" id="node6" href="$class_physics_1_1_physics_world.html#adc2e766cfd2414718237d76064130c7f" title=" " alt="" coords="252,13,435,39"/>
+<area shape="rect" id="node7" href="$class_physics_1_1_physics_world.html#a21bcd3d27cec2fa8cf00d28be40ae413" title=" " alt="" coords="5,13,204,39"/>
+</map>

@@ -1,0 +1,90 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_element_adder_menu_command_attribute}{}\doxysection{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Element\+\_\+\+Adder\+\_\+\+Menu.\+Element\+Adder\+Menu\+Command\+Attribute Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_element_adder_menu_command_attribute}\index{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.ElementAdderMenuCommandAttribute@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.ElementAdderMenuCommandAttribute}}
+
+
+Annotate IElement\+Adder\+Menu\+Command$<$\+TContext$>$ implementations with a \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_element_adder_menu_command_attribute}{Element\+Adder\+Menu\+Command\+Attribute}} to associate it with the contract type of addable elements.  
+
+
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Element\+\_\+\+Adder\+\_\+\+Menu.\+Element\+Adder\+Menu\+Command\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.944445cm]{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_element_adder_menu_command_attribute}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_element_adder_menu_command_attribute_ac25a71332ee2f4287ee70fecf55107f0}{Element\+Adder\+Menu\+Command\+Attribute}} (Type contract\+Type)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_element_adder_menu_command_attribute}{Element\+Adder\+Menu\+Command\+Attribute}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_element_adder_menu_command_attribute_acce678641f12e6d931ad9f1744334c76}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_element_adder_menu_command_attribute_acce678641f12e6d931ad9f1744334c76}} 
+Type {\bfseries Contract\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the contract type of addable elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Annotate IElement\+Adder\+Menu\+Command$<$\+TContext$>$ implementations with a \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_element_adder_menu_command_attribute}{Element\+Adder\+Menu\+Command\+Attribute}} to associate it with the contract type of addable elements. 
+
+The following source code demonstrates how to add a helper menu command to the add element menu of a shopping list\+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[ElementAdderMenuCommand(typeof(ShoppingItem))]}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }AddFavoriteShoppingItemsCommand : IElementAdderMenuCommand\(\backslash\)<ShoppingList\(\backslash\)> \{}
+\DoxyCodeLine{    \textcolor{keyword}{public} AddFavoriteShoppingItemsCommand() \{}
+\DoxyCodeLine{        Content = \textcolor{keyword}{new} GUIContent(\textcolor{stringliteral}{"{}Add Favorite Items"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} GUIContent Content \{ \textcolor{keyword}{get}; \textcolor{keyword}{private} \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{bool} CanExecute(IElementAdder\(\backslash\)<ShoppingList\(\backslash\)> elementAdder) \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} Execute(IElementAdder\(\backslash\)<ShoppingList\(\backslash\)> elementAdder) \{}
+\DoxyCodeLine{        \textcolor{comment}{// xTODO: Add favorite items to the shopping list!}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{@ElementAdderMenuCommand(ShoppingItem)}
+\DoxyCodeLine{\textcolor{keyword}{class }AddFavoriteShoppingItemsCommand \textcolor{keyword}{extends} IElementAdderMenuCommand.\(\backslash\)<ShoppingList\(\backslash\)> \{}
+\DoxyCodeLine{    var \_content:GUIContent = \textcolor{keyword}{new} GUIContent(\textcolor{stringliteral}{'Add Favorite Items'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{function} \textcolor{keyword}{get} Content():GUIContent \{ return \_content; \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{function} CanExecute(elementAdder:IElementAdder.\(\backslash\)<ShoppingList\(\backslash\)>):boolean \{}
+\DoxyCodeLine{        return true;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keyword}{function} Execute(elementAdder:IElementAdder.\(\backslash\)<ShoppingList\(\backslash\)>) \{}
+\DoxyCodeLine{        \textcolor{comment}{// xTODO: Add favorite items to the shopping list!}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_element_adder_menu_command_attribute_ac25a71332ee2f4287ee70fecf55107f0}\label{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_element_adder_menu_command_attribute_ac25a71332ee2f4287ee70fecf55107f0}} 
+\index{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.ElementAdderMenuCommandAttribute@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.ElementAdderMenuCommandAttribute}!ElementAdderMenuCommandAttribute@{ElementAdderMenuCommandAttribute}}
+\index{ElementAdderMenuCommandAttribute@{ElementAdderMenuCommandAttribute}!Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.ElementAdderMenuCommandAttribute@{Unity.VisualScripting.ReorderableList.Element\_Adder\_Menu.ElementAdderMenuCommandAttribute}}
+\doxysubsubsection{\texorpdfstring{ElementAdderMenuCommandAttribute()}{ElementAdderMenuCommandAttribute()}}
+{\footnotesize\ttfamily Unity.\+Visual\+Scripting.\+Reorderable\+List.\+Element\+\_\+\+Adder\+\_\+\+Menu.\+Element\+Adder\+Menu\+Command\+Attribute.\+Element\+Adder\+Menu\+Command\+Attribute (\begin{DoxyParamCaption}\item[{Type}]{contract\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_element_adder_menu_command_attribute}{Element\+Adder\+Menu\+Command\+Attribute}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contract\+Type} & Contract type of addable elements.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Editor/\+Visual\+Scripting.\+Core/\+Dependencies/\+Reorderable\+List/\+Element\+Adder\+Menu/Element\+Adder\+Menu\+Command\+Attribute.\+cs\end{DoxyCompactItemize}

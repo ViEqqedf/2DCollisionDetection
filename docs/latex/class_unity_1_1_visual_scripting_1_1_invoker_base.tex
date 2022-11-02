@@ -1,0 +1,148 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_invoker_base}{}\doxysection{Unity.\+Visual\+Scripting.\+Invoker\+Base Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_invoker_base}\index{Unity.VisualScripting.InvokerBase@{Unity.VisualScripting.InvokerBase}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Invoker\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.013025cm]{class_unity_1_1_visual_scripting_1_1_invoker_base}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_invoker_base_a7e1f0fa17a33fe5676b9551738e2df11}{Compile}} ()
+\item 
+abstract object \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_invoker_base_ada316af5204a6ad4ddb5f5c2177fe929}{Invoke}} (object target, params object\mbox{[}$\,$\mbox{]} args)
+\item 
+virtual object \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_invoker_base_a604e97fda900abac605960468069c052}{Invoke}} (object target)
+\item 
+virtual object \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_invoker_base_a14ef5e93d078059e3187f106aebbe74f}{Invoke}} (object target, object arg0)
+\item 
+virtual object \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_invoker_base_a82a31d61093be0227dcc9e261e0e6047}{Invoke}} (object target, object arg0, object arg1)
+\item 
+virtual object \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_invoker_base_aa4d018053f61886b17ade28087f3ef76}{Invoke}} (object target, object arg0, object arg1, object arg2)
+\item 
+virtual object \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_invoker_base_a82758d0d6523b82bc12fdfcecb6c5482}{Invoke}} (object target, object arg0, object arg1, object arg2, object arg3)
+\item 
+virtual object \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_invoker_base_af9ad4c616d5b778c9cffb05a637a9e91}{Invoke}} (object target, object arg0, object arg1, object arg2, object arg3, object arg4)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_invoker_base_a7a85002097693c264fe0f175c2dd2f76}\label{class_unity_1_1_visual_scripting_1_1_invoker_base_a7a85002097693c264fe0f175c2dd2f76}} 
+{\bfseries Invoker\+Base} (Method\+Info method\+Info)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_invoker_base_af8b48c08672ec96cf4c92741ac3b094f}\label{class_unity_1_1_visual_scripting_1_1_invoker_base_af8b48c08672ec96cf4c92741ac3b094f}} 
+void {\bfseries Verify\+Argument$<$ TParam $>$} (Method\+Info method\+Info, int arg\+Index, object arg)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_invoker_base_ac3ed7f33acd2b9f51b46e74b5c2b10e8}\label{class_unity_1_1_visual_scripting_1_1_invoker_base_ac3ed7f33acd2b9f51b46e74b5c2b10e8}} 
+Parameter\+Expression\mbox{[}$\,$\mbox{]} {\bfseries Get\+Parameter\+Expressions} ()
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_invoker_base_a5ad1711420209e989a1bae5d2fcbcede}\label{class_unity_1_1_visual_scripting_1_1_invoker_base_a5ad1711420209e989a1bae5d2fcbcede}} 
+abstract Type\mbox{[}$\,$\mbox{]} {\bfseries Get\+Parameter\+Types} ()
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_invoker_base_ad2362de982d1225eda2cf2c264fef5a9}\label{class_unity_1_1_visual_scripting_1_1_invoker_base_ad2362de982d1225eda2cf2c264fef5a9}} 
+abstract void {\bfseries Compile\+Expression} ()
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_invoker_base_a63a8a4c3cc7168a5869a6e3b3e57b9af}\label{class_unity_1_1_visual_scripting_1_1_invoker_base_a63a8a4c3cc7168a5869a6e3b3e57b9af}} 
+abstract void {\bfseries Create\+Delegate} ()
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_invoker_base_a8c46f532bde4db1fedb0a141edb07dee}\label{class_unity_1_1_visual_scripting_1_1_invoker_base_a8c46f532bde4db1fedb0a141edb07dee}} 
+abstract void {\bfseries Verify\+Target} (object target)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_invoker_base_a9bad106cc7cb8a6a228e8c756d5f3f4b}\label{class_unity_1_1_visual_scripting_1_1_invoker_base_a9bad106cc7cb8a6a228e8c756d5f3f4b}} 
+readonly Type {\bfseries target\+Type}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_invoker_base_a8622e2eb28ad38e218ff6c39b56d6e32}\label{class_unity_1_1_visual_scripting_1_1_invoker_base_a8622e2eb28ad38e218ff6c39b56d6e32}} 
+readonly Method\+Info {\bfseries method\+Info}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_invoker_base_a7e1f0fa17a33fe5676b9551738e2df11}\label{class_unity_1_1_visual_scripting_1_1_invoker_base_a7e1f0fa17a33fe5676b9551738e2df11}} 
+\index{Unity.VisualScripting.InvokerBase@{Unity.VisualScripting.InvokerBase}!Compile@{Compile}}
+\index{Compile@{Compile}!Unity.VisualScripting.InvokerBase@{Unity.VisualScripting.InvokerBase}}
+\doxysubsubsection{\texorpdfstring{Compile()}{Compile()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Invoker\+Base.\+Compile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_optimized_invoker}{Unity.\+Visual\+Scripting.\+IOptimized\+Invoker}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_invoker_base_a604e97fda900abac605960468069c052}\label{class_unity_1_1_visual_scripting_1_1_invoker_base_a604e97fda900abac605960468069c052}} 
+\index{Unity.VisualScripting.InvokerBase@{Unity.VisualScripting.InvokerBase}!Invoke@{Invoke}}
+\index{Invoke@{Invoke}!Unity.VisualScripting.InvokerBase@{Unity.VisualScripting.InvokerBase}}
+\doxysubsubsection{\texorpdfstring{Invoke()}{Invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily virtual object Unity.\+Visual\+Scripting.\+Invoker\+Base.\+Invoke (\begin{DoxyParamCaption}\item[{object}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_optimized_invoker}{Unity.\+Visual\+Scripting.\+IOptimized\+Invoker}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_invoker_base_a14ef5e93d078059e3187f106aebbe74f}\label{class_unity_1_1_visual_scripting_1_1_invoker_base_a14ef5e93d078059e3187f106aebbe74f}} 
+\index{Unity.VisualScripting.InvokerBase@{Unity.VisualScripting.InvokerBase}!Invoke@{Invoke}}
+\index{Invoke@{Invoke}!Unity.VisualScripting.InvokerBase@{Unity.VisualScripting.InvokerBase}}
+\doxysubsubsection{\texorpdfstring{Invoke()}{Invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily virtual object Unity.\+Visual\+Scripting.\+Invoker\+Base.\+Invoke (\begin{DoxyParamCaption}\item[{object}]{target,  }\item[{object}]{arg0 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_optimized_invoker}{Unity.\+Visual\+Scripting.\+IOptimized\+Invoker}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_invoker_base_a82a31d61093be0227dcc9e261e0e6047}\label{class_unity_1_1_visual_scripting_1_1_invoker_base_a82a31d61093be0227dcc9e261e0e6047}} 
+\index{Unity.VisualScripting.InvokerBase@{Unity.VisualScripting.InvokerBase}!Invoke@{Invoke}}
+\index{Invoke@{Invoke}!Unity.VisualScripting.InvokerBase@{Unity.VisualScripting.InvokerBase}}
+\doxysubsubsection{\texorpdfstring{Invoke()}{Invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily virtual object Unity.\+Visual\+Scripting.\+Invoker\+Base.\+Invoke (\begin{DoxyParamCaption}\item[{object}]{target,  }\item[{object}]{arg0,  }\item[{object}]{arg1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_optimized_invoker}{Unity.\+Visual\+Scripting.\+IOptimized\+Invoker}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_invoker_base_aa4d018053f61886b17ade28087f3ef76}\label{class_unity_1_1_visual_scripting_1_1_invoker_base_aa4d018053f61886b17ade28087f3ef76}} 
+\index{Unity.VisualScripting.InvokerBase@{Unity.VisualScripting.InvokerBase}!Invoke@{Invoke}}
+\index{Invoke@{Invoke}!Unity.VisualScripting.InvokerBase@{Unity.VisualScripting.InvokerBase}}
+\doxysubsubsection{\texorpdfstring{Invoke()}{Invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily virtual object Unity.\+Visual\+Scripting.\+Invoker\+Base.\+Invoke (\begin{DoxyParamCaption}\item[{object}]{target,  }\item[{object}]{arg0,  }\item[{object}]{arg1,  }\item[{object}]{arg2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_optimized_invoker}{Unity.\+Visual\+Scripting.\+IOptimized\+Invoker}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_invoker_base_a82758d0d6523b82bc12fdfcecb6c5482}\label{class_unity_1_1_visual_scripting_1_1_invoker_base_a82758d0d6523b82bc12fdfcecb6c5482}} 
+\index{Unity.VisualScripting.InvokerBase@{Unity.VisualScripting.InvokerBase}!Invoke@{Invoke}}
+\index{Invoke@{Invoke}!Unity.VisualScripting.InvokerBase@{Unity.VisualScripting.InvokerBase}}
+\doxysubsubsection{\texorpdfstring{Invoke()}{Invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily virtual object Unity.\+Visual\+Scripting.\+Invoker\+Base.\+Invoke (\begin{DoxyParamCaption}\item[{object}]{target,  }\item[{object}]{arg0,  }\item[{object}]{arg1,  }\item[{object}]{arg2,  }\item[{object}]{arg3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_optimized_invoker}{Unity.\+Visual\+Scripting.\+IOptimized\+Invoker}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_invoker_base_af9ad4c616d5b778c9cffb05a637a9e91}\label{class_unity_1_1_visual_scripting_1_1_invoker_base_af9ad4c616d5b778c9cffb05a637a9e91}} 
+\index{Unity.VisualScripting.InvokerBase@{Unity.VisualScripting.InvokerBase}!Invoke@{Invoke}}
+\index{Invoke@{Invoke}!Unity.VisualScripting.InvokerBase@{Unity.VisualScripting.InvokerBase}}
+\doxysubsubsection{\texorpdfstring{Invoke()}{Invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily virtual object Unity.\+Visual\+Scripting.\+Invoker\+Base.\+Invoke (\begin{DoxyParamCaption}\item[{object}]{target,  }\item[{object}]{arg0,  }\item[{object}]{arg1,  }\item[{object}]{arg2,  }\item[{object}]{arg3,  }\item[{object}]{arg4 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_optimized_invoker}{Unity.\+Visual\+Scripting.\+IOptimized\+Invoker}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_invoker_base_ada316af5204a6ad4ddb5f5c2177fe929}\label{class_unity_1_1_visual_scripting_1_1_invoker_base_ada316af5204a6ad4ddb5f5c2177fe929}} 
+\index{Unity.VisualScripting.InvokerBase@{Unity.VisualScripting.InvokerBase}!Invoke@{Invoke}}
+\index{Invoke@{Invoke}!Unity.VisualScripting.InvokerBase@{Unity.VisualScripting.InvokerBase}}
+\doxysubsubsection{\texorpdfstring{Invoke()}{Invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily abstract object Unity.\+Visual\+Scripting.\+Invoker\+Base.\+Invoke (\begin{DoxyParamCaption}\item[{object}]{target,  }\item[{params object\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_optimized_invoker}{Unity.\+Visual\+Scripting.\+IOptimized\+Invoker}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Core/\+Reflection/\+Optimization/Invoker\+Base.\+cs\end{DoxyCompactItemize}

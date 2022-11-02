@@ -1,0 +1,117 @@
+\hypertarget{class_graphics_1_1_graphic_tests}{}\doxysection{Graphics.\+Graphic\+Tests Class Reference}
+\label{class_graphics_1_1_graphic_tests}\index{Graphics.GraphicTests@{Graphics.GraphicTests}}
+Inheritance diagram for Graphics.\+Graphic\+Tests\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_graphics_1_1_graphic_tests}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_graphics_1_1_graphic_tests_ac947f896ce708dcdeecab60df861f28e}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Implement this method to call actions automatically before the build process. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graphics_1_1_graphic_tests_a4a280deca909ef69b1741e3baf5a92b0}\label{class_graphics_1_1_graphic_tests_a4a280deca909ef69b1741e3baf5a92b0}} 
+void {\bfseries Test\+Setup} ()
+\item 
+\mbox{\Hypertarget{class_graphics_1_1_graphic_tests_a6ac57e3a4b96263b9ab63176e8ca1661}\label{class_graphics_1_1_graphic_tests_a6ac57e3a4b96263b9ab63176e8ca1661}} 
+void {\bfseries Tear\+Down} ()
+\item 
+\mbox{\Hypertarget{class_graphics_1_1_graphic_tests_ab61fca0eac41872618fbba318131fd23}\label{class_graphics_1_1_graphic_tests_ab61fca0eac41872618fbba318131fd23}} 
+void {\bfseries One\+Time\+Tear\+Down} ()
+\item 
+\mbox{\Hypertarget{class_graphics_1_1_graphic_tests_a43ab949d618922d5f2b5de05d4b74c01}\label{class_graphics_1_1_graphic_tests_a43ab949d618922d5f2b5de05d4b74c01}} 
+void {\bfseries Setting\+Dirty\+On\+Active\+Graphic\+Calls\+Callbacks} ()
+\item 
+\mbox{\Hypertarget{class_graphics_1_1_graphic_tests_a128bf8c2b1befcc34bad5ad58dcf99f5}\label{class_graphics_1_1_graphic_tests_a128bf8c2b1befcc34bad5ad58dcf99f5}} 
+void {\bfseries On\+Enable\+Leaves\+Graphic\+In\+Expected\+State} ()
+\item 
+\mbox{\Hypertarget{class_graphics_1_1_graphic_tests_ad647e094492745e0ba78944f671975b2}\label{class_graphics_1_1_graphic_tests_ad647e094492745e0ba78944f671975b2}} 
+void {\bfseries On\+Enable\+Twice\+Leaves\+Graphic\+In\+Expected\+State} ()
+\item 
+\mbox{\Hypertarget{class_graphics_1_1_graphic_tests_a27c3854783679c44f0e1e4a4fe17f7f4}\label{class_graphics_1_1_graphic_tests_a27c3854783679c44f0e1e4a4fe17f7f4}} 
+void {\bfseries On\+Disable\+Leaves\+Graphic\+In\+Expected\+State} ()
+\item 
+\mbox{\Hypertarget{class_graphics_1_1_graphic_tests_ad952af704cd9639135b2a3259b5f6246}\label{class_graphics_1_1_graphic_tests_ad952af704cd9639135b2a3259b5f6246}} 
+void {\bfseries On\+Populate\+Mesh\+Works\+As\+Expected} ()
+\item 
+\mbox{\Hypertarget{class_graphics_1_1_graphic_tests_af6bf28e5f15cbbbbc2fe5383fd0bf3e0}\label{class_graphics_1_1_graphic_tests_af6bf28e5f15cbbbbc2fe5383fd0bf3e0}} 
+void {\bfseries On\+Did\+Apply\+Animation\+Properties\+Sets\+All\+Dirty} ()
+\item 
+\mbox{\Hypertarget{class_graphics_1_1_graphic_tests_a2b2d40d1652ebfd89ef4f07768690eab}\label{class_graphics_1_1_graphic_tests_a2b2d40d1652ebfd89ef4f07768690eab}} 
+void {\bfseries Making\+Graphic\+Non\+Raycastable\+Removes\+Graphic\+From\+Proper\+Lists} ()
+\item 
+\mbox{\Hypertarget{class_graphics_1_1_graphic_tests_acfaccb316c596674d73b922112874325}\label{class_graphics_1_1_graphic_tests_acfaccb316c596674d73b922112874325}} 
+void {\bfseries On\+Enable\+Leaves\+Non\+Raycast\+Graphic\+In\+Expected\+State} ()
+\item 
+\mbox{\Hypertarget{class_graphics_1_1_graphic_tests_af4b319c87e6ce405044aae632dd59fd2}\label{class_graphics_1_1_graphic_tests_af4b319c87e6ce405044aae632dd59fd2}} 
+void {\bfseries Setting\+Raycast\+Target\+On\+Disabled\+Graphic\+Doesnt\+Add\+It\+Raycast\+List} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graphics_1_1_graphic_tests_ac947f896ce708dcdeecab60df861f28e}\label{class_graphics_1_1_graphic_tests_ac947f896ce708dcdeecab60df861f28e}} 
+\index{Graphics.GraphicTests@{Graphics.GraphicTests}!Setup@{Setup}}
+\index{Setup@{Setup}!Graphics.GraphicTests@{Graphics.GraphicTests}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily void Graphics.\+Graphic\+Tests.\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implement this method to call actions automatically before the build process. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }CreateSpriteTest : IPrebuildSetup}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    Texture2D m\_Texture;}
+\DoxyCodeLine{    Sprite m\_Sprite;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graphics_1_1_graphic_tests_ac947f896ce708dcdeecab60df861f28e}{Setup}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#if UNITY\_EDITOR}}
+\DoxyCodeLine{        var spritePath = \textcolor{stringliteral}{"{}Assets/Resources/Circle.png"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{        var ti = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.AssetImporter.GetAtPath(spritePath) as \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporter;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.textureCompression = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporterCompression.Uncompressed;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.SaveAndReimport();}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [SetUp]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} SetUpTest()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        m\_Texture = Resources.Load<Texture2D>(\textcolor{stringliteral}{"{}Circle"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [Test]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} WhenNullTextureIsPassed\_CreateShouldReturnNullSprite()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with Valid Texture.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        LogAssert.Expect(LogType.Log, \textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Sprite.Create(m\_Texture, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Debug.Log(\textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with NULL Texture. Should return NULL Sprite.}}
+\DoxyCodeLine{        m\_Sprite = Sprite.Create(\textcolor{keyword}{null}, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Assert.That(m\_Sprite, Is.Null, \textcolor{stringliteral}{"{}Sprite created with null texture should be null"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup_a9a9eaa928efe50645e61412528e84309}{Unity\+Engine.\+Test\+Tools.\+IPrebuild\+Setup}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Tests/\+Runtime/\+Graphic/Graphic\+Tests.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,1083 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection}{}\doxysection{Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection}\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+
+
+Represents an open connection to a SQLite database.  
+
+
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_1_1_column_info}{Column\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a67bd14cbc2a1aadccaba8137ff571170}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a67bd14cbc2a1aadccaba8137ff571170}} 
+delegate void {\bfseries Trace\+Handler} (string message)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a5d7b8b8d7ca59e7646475eec4e90b325}{SQLite\+Connection}} (string database\+Path, bool store\+Date\+Time\+As\+Ticks=false)
+\begin{DoxyCompactList}\small\item\em Constructs a new \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection}{SQLite\+Connection}} and opens a SQLite database specified by database\+Path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a5466236e22aa31dfc956c0c0818ef30a}{SQLite\+Connection}} (string database\+Path, SQLite\+Open\+Flags open\+Flags, bool store\+Date\+Time\+As\+Ticks=false)
+\begin{DoxyCompactList}\small\item\em Constructs a new \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection}{SQLite\+Connection}} and opens a SQLite database specified by database\+Path. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a424b6f207d4e7ce40cdd093e2189601e}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a424b6f207d4e7ce40cdd093e2189601e}} 
+void {\bfseries Enable\+Load\+Extension} (int onoff)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_table_mapping}{Table\+Mapping}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a29c42144baffedb7039d17405945e8f5}{Get\+Mapping}} (Type type, Create\+Flags create\+Flags=Create\+Flags.\+None)
+\begin{DoxyCompactList}\small\item\em Retrieves the mapping that is automatically generated for the given type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_table_mapping}{Table\+Mapping}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ad8ab38d30fb08c846d4cae7a1fa090e0}{Get\+Mapping$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the mapping that is automatically generated for the given type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_acfdf861aa695d569876409a8576a56c4}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_acfdf861aa695d569876409a8576a56c4}} 
+int {\bfseries Drop\+Table$<$ T $>$} ()
+\begin{DoxyCompactList}\small\item\em Executes a \char`\"{}drop table\char`\"{} on the database. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} is non-\/recoverable. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a5b15d1e7ad537877f85e11e2ce54c6f0}{Create\+Table$<$ T $>$}} (Create\+Flags create\+Flags=Create\+Flags.\+None)
+\begin{DoxyCompactList}\small\item\em Executes a \char`\"{}create table if not exists\char`\"{} on the database. It also creates any specified indexes on the columns of the table. It uses a schema automatically generated from the specified type. You can later access this schema by calling Get\+Mapping. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a4ea3e45b27f2a08384c43b1937fd9ae1}{Create\+Table}} (Type ty, Create\+Flags create\+Flags=Create\+Flags.\+None)
+\begin{DoxyCompactList}\small\item\em Executes a \char`\"{}create table if not exists\char`\"{} on the database. It also creates any specified indexes on the columns of the table. It uses a schema automatically generated from the specified type. You can later access this schema by calling Get\+Mapping. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ab66b22942fac1ed3b35b1ef672fed7cf}{Create\+Index}} (string index\+Name, string table\+Name, string\mbox{[}$\,$\mbox{]} column\+Names, bool unique=false)
+\begin{DoxyCompactList}\small\item\em Creates an index for the specified table and columns. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a67f1972767ec34ebb820a81046a645c3}{Create\+Index}} (string index\+Name, string table\+Name, string column\+Name, bool unique=false)
+\begin{DoxyCompactList}\small\item\em Creates an index for the specified table and column. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a6fd0c18e9dc854536c34445b31ee9727}{Create\+Index}} (string table\+Name, string column\+Name, bool unique=false)
+\begin{DoxyCompactList}\small\item\em Creates an index for the specified table and column. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a8328b557e218df9b4aee011e940a830c}{Create\+Index}} (string table\+Name, string\mbox{[}$\,$\mbox{]} column\+Names, bool unique=false)
+\begin{DoxyCompactList}\small\item\em Creates an index for the specified table and columns. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_abc38fe621da7a707c197bd663fbcec0f}{Create\+Index$<$ T $>$}} (Expression$<$ Func$<$ T, object $>$ $>$ property, bool unique=false)
+\begin{DoxyCompactList}\small\item\em Creates an index for the specified object property. e.\+g. Create\+Index$<$\+Client$>$(c =\texorpdfstring{$>$}{>} c.\+Name); \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_aacfc1056f39c1f7059453a9dd482cfa5}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_aacfc1056f39c1f7059453a9dd482cfa5}} 
+List$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_1_1_column_info}{Column\+Info}} $>$ {\bfseries Get\+Table\+Info} (string table\+Name)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a79ac964a21d84f1fff41838519ecefd0}{Create\+Command}} (string cmd\+Text, params object\mbox{[}$\,$\mbox{]} ps)
+\begin{DoxyCompactList}\small\item\em Creates a new \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}} given the command text with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_aa4f3f21cc65f1acff4394ee6c212cd72}{Execute}} (string query, params object\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. Use this method instead of Query when you don\textquotesingle{}t expect rows back. Such cases include INSERTs, UPDATEs, and DELETEs. You can set the Trace or Time\+Execution properties of the connection to profile execution. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a11f09da23ff6367f89d45e0982fe8569}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a11f09da23ff6367f89d45e0982fe8569}} 
+T {\bfseries Execute\+Scalar$<$ T $>$} (string query, params object\mbox{[}$\,$\mbox{]} args)
+\item 
+List$<$ T $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a5d58160fde0f101c65e4e2484de92d8c}{Query$<$ T $>$}} (string query, params object\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. It returns each row of the result using the mapping automatically generated for the given type. \end{DoxyCompactList}\item 
+IEnumerable$<$ T $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_af19ad8d5d4f3dc0e14ffb287a45dd003}{Deferred\+Query$<$ T $>$}} (string query, params object\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. It returns each row of the result using the mapping automatically generated for the given type. \end{DoxyCompactList}\item 
+List$<$ object $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a96a61d835a94e243b1966f9d8c64800f}{Query}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_table_mapping}{Table\+Mapping}} map, string query, params object\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. It returns each row of the result using the specified mapping. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} function is only used by libraries in order to query the database via introspection. It is normally not used. \end{DoxyCompactList}\item 
+IEnumerable$<$ object $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_afbf90ff526074841070bfd00b6465d4c}{Deferred\+Query}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_table_mapping}{Table\+Mapping}} map, string query, params object\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. It returns each row of the result using the specified mapping. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} function is only used by libraries in order to query the database via introspection. It is normally not used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_table_query}{Table\+Query}}$<$ T $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a42f067c9ad3cc0bead31cc7ffd676774}{Table$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Returns a queryable interface to the table represented by the given type. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a82bb8b92d8bcb71625d5980ab132145b}{Get$<$ T $>$}} (object pk)
+\begin{DoxyCompactList}\small\item\em Attempts to retrieve an object with the given primary key from the table associated with the specified type. Use of this method requires that the given type have a designated Primary\+Key (using the \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_primary_key_attribute}{Primary\+Key\+Attribute}}). \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a88eea9a7b71501040a8936279cfe56c9}{Get$<$ T $>$}} (Expression$<$ Func$<$ T, bool $>$ $>$ predicate)
+\begin{DoxyCompactList}\small\item\em Attempts to retrieve the first object that matches the predicate from the table associated with the specified type. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ae976148c3111478a9dda311eb10b3c6b}{Find$<$ T $>$}} (object pk)
+\begin{DoxyCompactList}\small\item\em Attempts to retrieve an object with the given primary key from the table associated with the specified type. Use of this method requires that the given type have a designated Primary\+Key (using the \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_primary_key_attribute}{Primary\+Key\+Attribute}}). \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_abacf0d75fc84a1695f1460d5f6e11475}{Find}} (object pk, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_table_mapping}{Table\+Mapping}} map)
+\begin{DoxyCompactList}\small\item\em Attempts to retrieve an object with the given primary key from the table associated with the specified type. Use of this method requires that the given type have a designated Primary\+Key (using the \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_primary_key_attribute}{Primary\+Key\+Attribute}}). \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_afd5eb33166d1d597fceec16155430242}{Find$<$ T $>$}} (Expression$<$ Func$<$ T, bool $>$ $>$ predicate)
+\begin{DoxyCompactList}\small\item\em Attempts to retrieve the first object that matches the predicate from the table associated with the specified type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ae1c56f6c7bd4b6f4990b46a1c0b0f7fc}{Begin\+Transaction}} ()
+\begin{DoxyCompactList}\small\item\em Begins a new transaction. Call \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a2d273447071aff5c57d2bd5d1b852a68}{Commit}} to end the transaction. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a15b6d638f2cd7acc084c5c6fd6724fdf}{Save\+Transaction\+Point}} ()
+\begin{DoxyCompactList}\small\item\em Creates a savepoint in the database at the current point in the transaction timeline. Begins a new transaction if one is not in progress. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ab41e0a2c0e2f53538d6772b60fa1bb77}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ab41e0a2c0e2f53538d6772b60fa1bb77}} 
+void {\bfseries Rollback} ()
+\begin{DoxyCompactList}\small\item\em Rolls back the transaction that was begun by \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ae1c56f6c7bd4b6f4990b46a1c0b0f7fc}{Begin\+Transaction}} or \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a15b6d638f2cd7acc084c5c6fd6724fdf}{Save\+Transaction\+Point}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ab809effb8ccd5e50aa3a90a63bc62ce8}{Rollback\+To}} (string savepoint)
+\begin{DoxyCompactList}\small\item\em Rolls back the savepoint created by \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ae1c56f6c7bd4b6f4990b46a1c0b0f7fc}{Begin\+Transaction}} or Save\+Transaction\+Point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ab53c27216035baa4917b4b6842cc49b6}{Release}} (string savepoint)
+\begin{DoxyCompactList}\small\item\em Releases a savepoint returned from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a15b6d638f2cd7acc084c5c6fd6724fdf}{Save\+Transaction\+Point}}. Releasing a savepoint makes changes since that savepoint permanent if the savepoint began the transaction, or otherwise the changes are permanent pending a call to \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a2d273447071aff5c57d2bd5d1b852a68}{Commit}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a2d273447071aff5c57d2bd5d1b852a68}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a2d273447071aff5c57d2bd5d1b852a68}} 
+void {\bfseries Commit} ()
+\begin{DoxyCompactList}\small\item\em Commits the transaction that was begun by \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ae1c56f6c7bd4b6f4990b46a1c0b0f7fc}{Begin\+Transaction}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a2a5b59e5392c41ad8cc69f8eb3212f0f}{Run\+In\+Transaction}} (Action action)
+\begin{DoxyCompactList}\small\item\em Executes 
+\begin{DoxyParams}{Parameters}
+{\em action} & within a (possibly nested) transaction by wrapping it in a SAVEPOINT. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} an exception occurs the whole transaction is rolled back, not just the current savepoint. The exception is rethrown. \\
+\hline
+\end{DoxyParams}
+\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a7d3f8293cc5281c7d1efb19e9c5fd531}{Run\+In\+Database\+Lock}} (Action action)
+\begin{DoxyCompactList}\small\item\em Executes 
+\begin{DoxyParams}{Parameters}
+{\em action} & while blocking other threads to access the same database. \\
+\hline
+\end{DoxyParams}
+\end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a513925b6f27133b274b2947f53e22159}{Insert\+All}} (System.\+Collections.\+IEnumerable objects)
+\begin{DoxyCompactList}\small\item\em Inserts all specified objects. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a5aaf60ecaff27b2fd324ad75e2730faa}{Insert\+All}} (System.\+Collections.\+IEnumerable objects, string extra)
+\begin{DoxyCompactList}\small\item\em Inserts all specified objects. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a2a55dbec31e83cf497dfbc749d18b884}{Insert\+All}} (System.\+Collections.\+IEnumerable objects, Type obj\+Type)
+\begin{DoxyCompactList}\small\item\em Inserts all specified objects. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a0317e8beecd9a16a87397f17b8ef8183}{Insert}} (object obj)
+\begin{DoxyCompactList}\small\item\em Inserts the given object and retrieves its auto incremented primary key if it has one. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a68207414be66445f6afae22338bff3a9}{Insert\+Or\+Replace}} (object obj)
+\begin{DoxyCompactList}\small\item\em Inserts the given object and retrieves its auto incremented primary key if it has one. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} a UNIQUE constraint violation occurs with some pre-\/existing object, this function deletes the old object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a28d4e1a177bf3b60d5efacfbd03c66a9}{Insert}} (object obj, Type obj\+Type)
+\begin{DoxyCompactList}\small\item\em Inserts the given object and retrieves its auto incremented primary key if it has one. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a8c1ac4945eab42120da51b1998d3d356}{Insert\+Or\+Replace}} (object obj, Type obj\+Type)
+\begin{DoxyCompactList}\small\item\em Inserts the given object and retrieves its auto incremented primary key if it has one. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} a UNIQUE constraint violation occurs with some pre-\/existing object, this function deletes the old object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a58fdf9cfc0ba31fe51696da9f85f7025}{Insert}} (object obj, string extra)
+\begin{DoxyCompactList}\small\item\em Inserts the given object and retrieves its auto incremented primary key if it has one. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a427b0ff9833c2b7e10822e1e2bff5d4e}{Insert}} (object obj, string extra, Type obj\+Type)
+\begin{DoxyCompactList}\small\item\em Inserts the given object and retrieves its auto incremented primary key if it has one. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a13bc035e03e5cd2e3bdd52dad30d4813}{Update}} (object obj)
+\begin{DoxyCompactList}\small\item\em Updates all of the columns of a table using the specified object except for its primary key. The object is required to have a primary key. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_aab301f08360d345941675bc135f00846}{Update}} (object obj, Type obj\+Type)
+\begin{DoxyCompactList}\small\item\em Updates all of the columns of a table using the specified object except for its primary key. The object is required to have a primary key. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ac060ce17409fba297b58c8d00fa22abf}{Update\+All}} (System.\+Collections.\+IEnumerable objects)
+\begin{DoxyCompactList}\small\item\em Updates all specified objects. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a058027a4e4dd611fb97bbf367f721561}{Delete}} (object object\+To\+Delete)
+\begin{DoxyCompactList}\small\item\em Deletes the given object from the database using its primary key. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_aaee67b862e1ed0b5b976d6df289a8b85}{Delete$<$ T $>$}} (object primary\+Key)
+\begin{DoxyCompactList}\small\item\em Deletes the object with the specified primary key. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ab97036dff69c987f2f91a1efa97e0215}{Delete\+All$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Deletes all the objects from the specified table. WARNING WARNING\+: Let me repeat. It deletes ALL the objects from the specified table. Do you really want to do that? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_abf2fef77e6f38e12c8db66c83229c7e0}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_abf2fef77e6f38e12c8db66c83229c7e0}} 
+void {\bfseries Dispose} ()
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a7c115a1f98b730c41c2c63d2d19ed321}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a7c115a1f98b730c41c2c63d2d19ed321}} 
+void {\bfseries Close} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a1f791810b685460fecc566fcceacf9cd}{New\+Command}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}}. Can be overridden to provide a sub-\/class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a80561568ec69b5910d505d53d23efa2c}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a80561568ec69b5910d505d53d23efa2c}} 
+virtual void {\bfseries Dispose} (bool disposing)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a68f5ea679d8bbc64c90eacdddeea26aa}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a68f5ea679d8bbc64c90eacdddeea26aa}} 
+Sqlite3\+Database\+Handle {\bfseries Handle}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a3dd5be271a3e2acb6b44f435c4905f87}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a3dd5be271a3e2acb6b44f435c4905f87}} 
+string {\bfseries Database\+Path}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ad14759956eaccdef37cd9e4aa4ebad78}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ad14759956eaccdef37cd9e4aa4ebad78}} 
+bool {\bfseries Time\+Execution}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a48785fb53f94ddad75689e7dc1eb37c0}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a48785fb53f94ddad75689e7dc1eb37c0}} 
+bool {\bfseries Trace}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a2054153b4ed24dcb55e3dbb02cbd0f58}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a2054153b4ed24dcb55e3dbb02cbd0f58}} 
+bool {\bfseries Store\+Date\+Time\+As\+Ticks}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+object \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ac1714d6693b5179b7f49dcdf1853ce19}{Sync\+Object}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the synchronous object, to be lock the database file for updating. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a93354a158d61bbf5139881aac1c6cd9b}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a93354a158d61bbf5139881aac1c6cd9b}} 
+Time\+Span {\bfseries Busy\+Timeout}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets a busy handler to sleep the specified amount of time when a table is locked. The handler will sleep multiple times until a total time of \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a93354a158d61bbf5139881aac1c6cd9b}{Busy\+Timeout}} has accumulated. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a8ccfa1dc7bc217f965a79bab28155958}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a8ccfa1dc7bc217f965a79bab28155958}} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_table_mapping}{Table\+Mapping}} $>$ {\bfseries Table\+Mappings}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the mappings from types to tables that the connection currently understands. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_aba3fe7fc3b8f5c439aa97340dab10c90}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_aba3fe7fc3b8f5c439aa97340dab10c90}} 
+bool {\bfseries Is\+In\+Transaction}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ae1c56f6c7bd4b6f4990b46a1c0b0f7fc}{Begin\+Transaction}} has been called and the database is waiting for a \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a2d273447071aff5c57d2bd5d1b852a68}{Commit}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a3208a1e29fdafe3474fcc52d58ba769f}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a3208a1e29fdafe3474fcc52d58ba769f}} 
+Trace\+Handler {\bfseries Trace\+Event}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an open connection to a SQLite database. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a5d7b8b8d7ca59e7646475eec4e90b325}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a5d7b8b8d7ca59e7646475eec4e90b325}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!SQLiteConnection@{SQLiteConnection}}
+\index{SQLiteConnection@{SQLiteConnection}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{SQLiteConnection()}{SQLiteConnection()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+SQLite\+Connection (\begin{DoxyParamCaption}\item[{string}]{database\+Path,  }\item[{bool}]{store\+Date\+Time\+As\+Ticks = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a new \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection}{SQLite\+Connection}} and opens a SQLite database specified by database\+Path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database\+Path} & Specifies the path to the database file. \\
+\hline
+{\em store\+Date\+Time\+As\+Ticks} & Specifies whether to store Date\+Time properties as ticks (true) or strings (false). You absolutely do want to store them as Ticks in all new projects. The default of false is only here for backwards compatibility. There is a {\itshape significant} speed advantage, with no down sides, when setting store\+Date\+Time\+As\+Ticks = true. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a5466236e22aa31dfc956c0c0818ef30a}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a5466236e22aa31dfc956c0c0818ef30a}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!SQLiteConnection@{SQLiteConnection}}
+\index{SQLiteConnection@{SQLiteConnection}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{SQLiteConnection()}{SQLiteConnection()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+SQLite\+Connection (\begin{DoxyParamCaption}\item[{string}]{database\+Path,  }\item[{SQLite\+Open\+Flags}]{open\+Flags,  }\item[{bool}]{store\+Date\+Time\+As\+Ticks = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a new \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection}{SQLite\+Connection}} and opens a SQLite database specified by database\+Path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database\+Path} & Specifies the path to the database file. \\
+\hline
+{\em store\+Date\+Time\+As\+Ticks} & Specifies whether to store Date\+Time properties as ticks (true) or strings (false). You absolutely do want to store them as Ticks in all new projects. The default of false is only here for backwards compatibility. There is a {\itshape significant} speed advantage, with no down sides, when setting store\+Date\+Time\+As\+Ticks = true. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ae1c56f6c7bd4b6f4990b46a1c0b0f7fc}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ae1c56f6c7bd4b6f4990b46a1c0b0f7fc}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!BeginTransaction@{BeginTransaction}}
+\index{BeginTransaction@{BeginTransaction}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{BeginTransaction()}{BeginTransaction()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Begin\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Begins a new transaction. Call \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a2d273447071aff5c57d2bd5d1b852a68}{Commit}} to end the transaction. 
+
+Throws if a transaction has already begun.\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a79ac964a21d84f1fff41838519ecefd0}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a79ac964a21d84f1fff41838519ecefd0}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!CreateCommand@{CreateCommand}}
+\index{CreateCommand@{CreateCommand}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{CreateCommand()}{CreateCommand()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}} Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Create\+Command (\begin{DoxyParamCaption}\item[{string}]{cmd\+Text,  }\item[{params object\mbox{[}$\,$\mbox{]}}]{ps }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}} given the command text with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+Text} & The fully escaped SQL. \\
+\hline
+{\em args} & Arguments to substitute for the occurences of \textquotesingle{}?\textquotesingle{} in the command text. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a67f1972767ec34ebb820a81046a645c3}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a67f1972767ec34ebb820a81046a645c3}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!CreateIndex@{CreateIndex}}
+\index{CreateIndex@{CreateIndex}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{CreateIndex()}{CreateIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Create\+Index (\begin{DoxyParamCaption}\item[{string}]{index\+Name,  }\item[{string}]{table\+Name,  }\item[{string}]{column\+Name,  }\item[{bool}]{unique = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an index for the specified table and column. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index\+Name} & Name of the index to create\\
+\hline
+{\em table\+Name} & Name of the database table\\
+\hline
+{\em column\+Name} & Name of the column to index\\
+\hline
+{\em unique} & Whether the index should be unique\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ab66b22942fac1ed3b35b1ef672fed7cf}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ab66b22942fac1ed3b35b1ef672fed7cf}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!CreateIndex@{CreateIndex}}
+\index{CreateIndex@{CreateIndex}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{CreateIndex()}{CreateIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Create\+Index (\begin{DoxyParamCaption}\item[{string}]{index\+Name,  }\item[{string}]{table\+Name,  }\item[{string\mbox{[}$\,$\mbox{]}}]{column\+Names,  }\item[{bool}]{unique = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an index for the specified table and columns. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index\+Name} & Name of the index to create\\
+\hline
+{\em table\+Name} & Name of the database table\\
+\hline
+{\em column\+Names} & An array of column names to index\\
+\hline
+{\em unique} & Whether the index should be unique\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a6fd0c18e9dc854536c34445b31ee9727}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a6fd0c18e9dc854536c34445b31ee9727}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!CreateIndex@{CreateIndex}}
+\index{CreateIndex@{CreateIndex}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{CreateIndex()}{CreateIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Create\+Index (\begin{DoxyParamCaption}\item[{string}]{table\+Name,  }\item[{string}]{column\+Name,  }\item[{bool}]{unique = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an index for the specified table and column. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Name} & Name of the database table\\
+\hline
+{\em column\+Name} & Name of the column to index\\
+\hline
+{\em unique} & Whether the index should be unique\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a8328b557e218df9b4aee011e940a830c}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a8328b557e218df9b4aee011e940a830c}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!CreateIndex@{CreateIndex}}
+\index{CreateIndex@{CreateIndex}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{CreateIndex()}{CreateIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Create\+Index (\begin{DoxyParamCaption}\item[{string}]{table\+Name,  }\item[{string\mbox{[}$\,$\mbox{]}}]{column\+Names,  }\item[{bool}]{unique = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an index for the specified table and columns. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Name} & Name of the database table\\
+\hline
+{\em column\+Names} & An array of column names to index\\
+\hline
+{\em unique} & Whether the index should be unique\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_abc38fe621da7a707c197bd663fbcec0f}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_abc38fe621da7a707c197bd663fbcec0f}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!CreateIndex$<$ T $>$@{CreateIndex$<$ T $>$}}
+\index{CreateIndex$<$ T $>$@{CreateIndex$<$ T $>$}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{CreateIndex$<$ T $>$()}{CreateIndex< T >()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ab66b22942fac1ed3b35b1ef672fed7cf}{Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Create\+Index}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ T, object $>$ $>$}]{property,  }\item[{bool}]{unique = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an index for the specified object property. e.\+g. Create\+Index$<$\+Client$>$(c =\texorpdfstring{$>$}{>} c.\+Name); 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type to reflect to a database table.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em property} & Property to index\\
+\hline
+{\em unique} & Whether the index should be unique\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a4ea3e45b27f2a08384c43b1937fd9ae1}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a4ea3e45b27f2a08384c43b1937fd9ae1}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!CreateTable@{CreateTable}}
+\index{CreateTable@{CreateTable}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{CreateTable()}{CreateTable()}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Create\+Table (\begin{DoxyParamCaption}\item[{Type}]{ty,  }\item[{Create\+Flags}]{create\+Flags = {\ttfamily CreateFlags.None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Executes a \char`\"{}create table if not exists\char`\"{} on the database. It also creates any specified indexes on the columns of the table. It uses a schema automatically generated from the specified type. You can later access this schema by calling Get\+Mapping. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ty} & Type to reflect to a database table.\\
+\hline
+{\em create\+Flags} & Optional flags allowing implicit PK and indexes based on naming conventions.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of entries added to the database schema. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a5b15d1e7ad537877f85e11e2ce54c6f0}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a5b15d1e7ad537877f85e11e2ce54c6f0}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!CreateTable$<$ T $>$@{CreateTable$<$ T $>$}}
+\index{CreateTable$<$ T $>$@{CreateTable$<$ T $>$}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{CreateTable$<$ T $>$()}{CreateTable< T >()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a4ea3e45b27f2a08384c43b1937fd9ae1}{Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Create\+Table}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{Create\+Flags}]{create\+Flags = {\ttfamily CreateFlags.None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Executes a \char`\"{}create table if not exists\char`\"{} on the database. It also creates any specified indexes on the columns of the table. It uses a schema automatically generated from the specified type. You can later access this schema by calling Get\+Mapping. 
+
+\begin{DoxyReturn}{Returns}
+The number of entries added to the database schema. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_afbf90ff526074841070bfd00b6465d4c}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_afbf90ff526074841070bfd00b6465d4c}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!DeferredQuery@{DeferredQuery}}
+\index{DeferredQuery@{DeferredQuery}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{DeferredQuery()}{DeferredQuery()}}
+{\footnotesize\ttfamily IEnumerable$<$ object $>$ Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Deferred\+Query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_table_mapping}{Table\+Mapping}}}]{map,  }\item[{string}]{query,  }\item[{params object\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. It returns each row of the result using the specified mapping. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} function is only used by libraries in order to query the database via introspection. It is normally not used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & A \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_table_mapping}{Table\+Mapping}} to use to convert the resulting rows into objects. \\
+\hline
+{\em query} & The fully escaped SQL. \\
+\hline
+{\em args} & Arguments to substitute for the occurences of \textquotesingle{}?\textquotesingle{} in the query. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An enumerable with one result for each row returned by the query. The enumerator will call sqlite3\+\_\+step on each call to Move\+Next, so the database connection must remain open for the lifetime of the enumerator. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_af19ad8d5d4f3dc0e14ffb287a45dd003}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_af19ad8d5d4f3dc0e14ffb287a45dd003}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!DeferredQuery$<$ T $>$@{DeferredQuery$<$ T $>$}}
+\index{DeferredQuery$<$ T $>$@{DeferredQuery$<$ T $>$}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{DeferredQuery$<$ T $>$()}{DeferredQuery< T >()}}
+{\footnotesize\ttfamily IEnumerable$<$ T $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_afbf90ff526074841070bfd00b6465d4c}{Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Deferred\+Query}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{query,  }\item[{params object\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. It returns each row of the result using the mapping automatically generated for the given type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & The fully escaped SQL. \\
+\hline
+{\em args} & Arguments to substitute for the occurences of \textquotesingle{}?\textquotesingle{} in the query. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An enumerable with one result for each row returned by the query. The enumerator will call sqlite3\+\_\+step on each call to Move\+Next, so the database connection must remain open for the lifetime of the enumerator. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a058027a4e4dd611fb97bbf367f721561}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a058027a4e4dd611fb97bbf367f721561}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!Delete@{Delete}}
+\index{Delete@{Delete}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Delete (\begin{DoxyParamCaption}\item[{object}]{object\+To\+Delete }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes the given object from the database using its primary key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+To\+Delete} & The object to delete. It must have a primary key designated using the \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_primary_key_attribute}{Primary\+Key\+Attribute}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows deleted. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_aaee67b862e1ed0b5b976d6df289a8b85}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_aaee67b862e1ed0b5b976d6df289a8b85}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!Delete$<$ T $>$@{Delete$<$ T $>$}}
+\index{Delete$<$ T $>$@{Delete$<$ T $>$}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Delete$<$ T $>$()}{Delete< T >()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a058027a4e4dd611fb97bbf367f721561}{Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Delete}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{object}]{primary\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes the object with the specified primary key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em primary\+Key} & The primary key of the object to delete. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of objects deleted. 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of object. \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ab97036dff69c987f2f91a1efa97e0215}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ab97036dff69c987f2f91a1efa97e0215}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!DeleteAll$<$ T $>$@{DeleteAll$<$ T $>$}}
+\index{DeleteAll$<$ T $>$@{DeleteAll$<$ T $>$}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{DeleteAll$<$ T $>$()}{DeleteAll< T >()}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Delete\+All$<$ T $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes all the objects from the specified table. WARNING WARNING\+: Let me repeat. It deletes ALL the objects from the specified table. Do you really want to do that? 
+
+\begin{DoxyReturn}{Returns}
+The number of objects deleted. 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of objects to delete. \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_aa4f3f21cc65f1acff4394ee6c212cd72}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_aa4f3f21cc65f1acff4394ee6c212cd72}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!Execute@{Execute}}
+\index{Execute@{Execute}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Execute (\begin{DoxyParamCaption}\item[{string}]{query,  }\item[{params object\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. Use this method instead of Query when you don\textquotesingle{}t expect rows back. Such cases include INSERTs, UPDATEs, and DELETEs. You can set the Trace or Time\+Execution properties of the connection to profile execution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & The fully escaped SQL. \\
+\hline
+{\em args} & Arguments to substitute for the occurences of \textquotesingle{}?\textquotesingle{} in the query. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows modified in the database as a result of this execution. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_abacf0d75fc84a1695f1460d5f6e11475}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_abacf0d75fc84a1695f1460d5f6e11475}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!Find@{Find}}
+\index{Find@{Find}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Find()}{Find()}}
+{\footnotesize\ttfamily object Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Find (\begin{DoxyParamCaption}\item[{object}]{pk,  }\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_table_mapping}{Table\+Mapping}}}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Attempts to retrieve an object with the given primary key from the table associated with the specified type. Use of this method requires that the given type have a designated Primary\+Key (using the \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_primary_key_attribute}{Primary\+Key\+Attribute}}). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pk} & The primary key. \\
+\hline
+{\em map} & The \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_table_mapping}{Table\+Mapping}} used to identify the object type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The object with the given primary key or null if the object is not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_afd5eb33166d1d597fceec16155430242}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_afd5eb33166d1d597fceec16155430242}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!Find$<$ T $>$@{Find$<$ T $>$}}
+\index{Find$<$ T $>$@{Find$<$ T $>$}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Find$<$ T $>$()}{Find< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_abacf0d75fc84a1695f1460d5f6e11475}{Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Find}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ T, bool $>$ $>$}]{predicate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Attempts to retrieve the first object that matches the predicate from the table associated with the specified type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em predicate} & A predicate for which object to find. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The object that matches the given predicate or null if the object is not found. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ae976148c3111478a9dda311eb10b3c6b}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ae976148c3111478a9dda311eb10b3c6b}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!Find$<$ T $>$@{Find$<$ T $>$}}
+\index{Find$<$ T $>$@{Find$<$ T $>$}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Find$<$ T $>$()}{Find< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_abacf0d75fc84a1695f1460d5f6e11475}{Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Find}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{object}]{pk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Attempts to retrieve an object with the given primary key from the table associated with the specified type. Use of this method requires that the given type have a designated Primary\+Key (using the \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_primary_key_attribute}{Primary\+Key\+Attribute}}). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pk} & The primary key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The object with the given primary key or null if the object is not found. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a88eea9a7b71501040a8936279cfe56c9}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a88eea9a7b71501040a8936279cfe56c9}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!Get$<$ T $>$@{Get$<$ T $>$}}
+\index{Get$<$ T $>$@{Get$<$ T $>$}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Get$<$ T $>$()}{Get< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily T Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Get$<$ T $>$ (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ T, bool $>$ $>$}]{predicate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Attempts to retrieve the first object that matches the predicate from the table associated with the specified type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em predicate} & A predicate for which object to find. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The object that matches the given predicate. Throws a not found exception if the object is not found. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a82bb8b92d8bcb71625d5980ab132145b}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a82bb8b92d8bcb71625d5980ab132145b}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!Get$<$ T $>$@{Get$<$ T $>$}}
+\index{Get$<$ T $>$@{Get$<$ T $>$}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Get$<$ T $>$()}{Get< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily T Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Get$<$ T $>$ (\begin{DoxyParamCaption}\item[{object}]{pk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Attempts to retrieve an object with the given primary key from the table associated with the specified type. Use of this method requires that the given type have a designated Primary\+Key (using the \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_primary_key_attribute}{Primary\+Key\+Attribute}}). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pk} & The primary key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The object with the given primary key. Throws a not found exception if the object is not found. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a29c42144baffedb7039d17405945e8f5}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a29c42144baffedb7039d17405945e8f5}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!GetMapping@{GetMapping}}
+\index{GetMapping@{GetMapping}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{GetMapping()}{GetMapping()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_table_mapping}{Table\+Mapping}} Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Get\+Mapping (\begin{DoxyParamCaption}\item[{Type}]{type,  }\item[{Create\+Flags}]{create\+Flags = {\ttfamily CreateFlags.None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the mapping that is automatically generated for the given type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type whose mapping to the database is returned. \\
+\hline
+{\em create\+Flags} & Optional flags allowing implicit PK and indexes based on naming conventions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The mapping represents the schema of the columns of the database and contains methods to set and get properties of objects. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ad8ab38d30fb08c846d4cae7a1fa090e0}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ad8ab38d30fb08c846d4cae7a1fa090e0}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!GetMapping$<$ T $>$@{GetMapping$<$ T $>$}}
+\index{GetMapping$<$ T $>$@{GetMapping$<$ T $>$}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{GetMapping$<$ T $>$()}{GetMapping< T >()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_table_mapping}{Table\+Mapping}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a29c42144baffedb7039d17405945e8f5}{Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Get\+Mapping}}$<$ T $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the mapping that is automatically generated for the given type. 
+
+\begin{DoxyReturn}{Returns}
+The mapping represents the schema of the columns of the database and contains methods to set and get properties of objects. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a0317e8beecd9a16a87397f17b8ef8183}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a0317e8beecd9a16a87397f17b8ef8183}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!Insert@{Insert}}
+\index{Insert@{Insert}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Insert (\begin{DoxyParamCaption}\item[{object}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts the given object and retrieves its auto incremented primary key if it has one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows added to the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a58fdf9cfc0ba31fe51696da9f85f7025}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a58fdf9cfc0ba31fe51696da9f85f7025}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!Insert@{Insert}}
+\index{Insert@{Insert}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Insert (\begin{DoxyParamCaption}\item[{object}]{obj,  }\item[{string}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts the given object and retrieves its auto incremented primary key if it has one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to insert. \\
+\hline
+{\em extra} & \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_literal}{Literal}} SQL code that gets placed into the command. INSERT \{extra\} INTO ... \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows added to the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a427b0ff9833c2b7e10822e1e2bff5d4e}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a427b0ff9833c2b7e10822e1e2bff5d4e}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!Insert@{Insert}}
+\index{Insert@{Insert}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Insert (\begin{DoxyParamCaption}\item[{object}]{obj,  }\item[{string}]{extra,  }\item[{Type}]{obj\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts the given object and retrieves its auto incremented primary key if it has one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to insert. \\
+\hline
+{\em extra} & \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_literal}{Literal}} SQL code that gets placed into the command. INSERT \{extra\} INTO ... \\
+\hline
+{\em obj\+Type} & The type of object to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows added to the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a28d4e1a177bf3b60d5efacfbd03c66a9}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a28d4e1a177bf3b60d5efacfbd03c66a9}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!Insert@{Insert}}
+\index{Insert@{Insert}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Insert (\begin{DoxyParamCaption}\item[{object}]{obj,  }\item[{Type}]{obj\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts the given object and retrieves its auto incremented primary key if it has one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to insert. \\
+\hline
+{\em obj\+Type} & The type of object to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows added to the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a513925b6f27133b274b2947f53e22159}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a513925b6f27133b274b2947f53e22159}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!InsertAll@{InsertAll}}
+\index{InsertAll@{InsertAll}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{InsertAll()}{InsertAll()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Insert\+All (\begin{DoxyParamCaption}\item[{System.\+Collections.\+IEnumerable}]{objects }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts all specified objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em objects} & An IEnumerable$<$\+T$>$ of the objects to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows added to the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a5aaf60ecaff27b2fd324ad75e2730faa}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a5aaf60ecaff27b2fd324ad75e2730faa}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!InsertAll@{InsertAll}}
+\index{InsertAll@{InsertAll}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{InsertAll()}{InsertAll()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Insert\+All (\begin{DoxyParamCaption}\item[{System.\+Collections.\+IEnumerable}]{objects,  }\item[{string}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts all specified objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em objects} & An IEnumerable$<$\+T$>$ of the objects to insert. \\
+\hline
+{\em extra} & \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_literal}{Literal}} SQL code that gets placed into the command. INSERT \{extra\} INTO ... \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows added to the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a2a55dbec31e83cf497dfbc749d18b884}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a2a55dbec31e83cf497dfbc749d18b884}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!InsertAll@{InsertAll}}
+\index{InsertAll@{InsertAll}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{InsertAll()}{InsertAll()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Insert\+All (\begin{DoxyParamCaption}\item[{System.\+Collections.\+IEnumerable}]{objects,  }\item[{Type}]{obj\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts all specified objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em objects} & An IEnumerable$<$\+T$>$ of the objects to insert. \\
+\hline
+{\em obj\+Type} & The type of object to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows added to the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a68207414be66445f6afae22338bff3a9}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a68207414be66445f6afae22338bff3a9}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!InsertOrReplace@{InsertOrReplace}}
+\index{InsertOrReplace@{InsertOrReplace}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{InsertOrReplace()}{InsertOrReplace()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Insert\+Or\+Replace (\begin{DoxyParamCaption}\item[{object}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts the given object and retrieves its auto incremented primary key if it has one. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} a UNIQUE constraint violation occurs with some pre-\/existing object, this function deletes the old object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows modified. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a8c1ac4945eab42120da51b1998d3d356}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a8c1ac4945eab42120da51b1998d3d356}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!InsertOrReplace@{InsertOrReplace}}
+\index{InsertOrReplace@{InsertOrReplace}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{InsertOrReplace()}{InsertOrReplace()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Insert\+Or\+Replace (\begin{DoxyParamCaption}\item[{object}]{obj,  }\item[{Type}]{obj\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts the given object and retrieves its auto incremented primary key if it has one. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} a UNIQUE constraint violation occurs with some pre-\/existing object, this function deletes the old object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to insert. \\
+\hline
+{\em obj\+Type} & The type of object to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows modified. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a1f791810b685460fecc566fcceacf9cd}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a1f791810b685460fecc566fcceacf9cd}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!NewCommand@{NewCommand}}
+\index{NewCommand@{NewCommand}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{NewCommand()}{NewCommand()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}} Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+New\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates a new \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}}. Can be overridden to provide a sub-\/class. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command_af3ba47a64af142adb6ba1d5f561e2b06}{SQLite\+Command.\+On\+Instance\+Created}}
+
+
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a96a61d835a94e243b1966f9d8c64800f}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a96a61d835a94e243b1966f9d8c64800f}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!Query@{Query}}
+\index{Query@{Query}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Query()}{Query()}}
+{\footnotesize\ttfamily List$<$ object $>$ Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_table_mapping}{Table\+Mapping}}}]{map,  }\item[{string}]{query,  }\item[{params object\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. It returns each row of the result using the specified mapping. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} function is only used by libraries in order to query the database via introspection. It is normally not used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & A \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_table_mapping}{Table\+Mapping}} to use to convert the resulting rows into objects. \\
+\hline
+{\em query} & The fully escaped SQL. \\
+\hline
+{\em args} & Arguments to substitute for the occurences of \textquotesingle{}?\textquotesingle{} in the query. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An enumerable with one result for each row returned by the query. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a5d58160fde0f101c65e4e2484de92d8c}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a5d58160fde0f101c65e4e2484de92d8c}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!Query$<$ T $>$@{Query$<$ T $>$}}
+\index{Query$<$ T $>$@{Query$<$ T $>$}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Query$<$ T $>$()}{Query< T >()}}
+{\footnotesize\ttfamily List$<$ T $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a96a61d835a94e243b1966f9d8c64800f}{Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Query}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{query,  }\item[{params object\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. It returns each row of the result using the mapping automatically generated for the given type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & The fully escaped SQL. \\
+\hline
+{\em args} & Arguments to substitute for the occurences of \textquotesingle{}?\textquotesingle{} in the query. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An enumerable with one result for each row returned by the query. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ab53c27216035baa4917b4b6842cc49b6}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ab53c27216035baa4917b4b6842cc49b6}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!Release@{Release}}
+\index{Release@{Release}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Release (\begin{DoxyParamCaption}\item[{string}]{savepoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Releases a savepoint returned from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a15b6d638f2cd7acc084c5c6fd6724fdf}{Save\+Transaction\+Point}}. Releasing a savepoint makes changes since that savepoint permanent if the savepoint began the transaction, or otherwise the changes are permanent pending a call to \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a2d273447071aff5c57d2bd5d1b852a68}{Commit}}. 
+
+The RELEASE command is like a COMMIT for a SAVEPOINT. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em savepoint} & The name of the savepoint to release. The string should be the result of a call to \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a15b6d638f2cd7acc084c5c6fd6724fdf}{Save\+Transaction\+Point}}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ab809effb8ccd5e50aa3a90a63bc62ce8}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ab809effb8ccd5e50aa3a90a63bc62ce8}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!RollbackTo@{RollbackTo}}
+\index{RollbackTo@{RollbackTo}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{RollbackTo()}{RollbackTo()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Rollback\+To (\begin{DoxyParamCaption}\item[{string}]{savepoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rolls back the savepoint created by \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ae1c56f6c7bd4b6f4990b46a1c0b0f7fc}{Begin\+Transaction}} or Save\+Transaction\+Point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em savepoint} & The name of the savepoint to roll back to, as returned by \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a15b6d638f2cd7acc084c5c6fd6724fdf}{Save\+Transaction\+Point}}. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} savepoint is null or empty, this method is equivalent to a call to \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ab41e0a2c0e2f53538d6772b60fa1bb77}{Rollback}}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a7d3f8293cc5281c7d1efb19e9c5fd531}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a7d3f8293cc5281c7d1efb19e9c5fd531}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!RunInDatabaseLock@{RunInDatabaseLock}}
+\index{RunInDatabaseLock@{RunInDatabaseLock}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{RunInDatabaseLock()}{RunInDatabaseLock()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Run\+In\+Database\+Lock (\begin{DoxyParamCaption}\item[{Action}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Executes 
+\begin{DoxyParams}{Parameters}
+{\em action} & while blocking other threads to access the same database. \\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The Action to perform within a lock. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a2a5b59e5392c41ad8cc69f8eb3212f0f}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a2a5b59e5392c41ad8cc69f8eb3212f0f}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!RunInTransaction@{RunInTransaction}}
+\index{RunInTransaction@{RunInTransaction}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{RunInTransaction()}{RunInTransaction()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Run\+In\+Transaction (\begin{DoxyParamCaption}\item[{Action}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Executes 
+\begin{DoxyParams}{Parameters}
+{\em action} & within a (possibly nested) transaction by wrapping it in a SAVEPOINT. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} an exception occurs the whole transaction is rolled back, not just the current savepoint. The exception is rethrown. \\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The Action to perform within a transaction. 
+\begin{DoxyParams}{Parameters}
+{\em action} & can contain any number of operations on the connection but should never call \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ae1c56f6c7bd4b6f4990b46a1c0b0f7fc}{Begin\+Transaction}} or \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a2d273447071aff5c57d2bd5d1b852a68}{Commit}}. \\
+\hline
+\end{DoxyParams}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a15b6d638f2cd7acc084c5c6fd6724fdf}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a15b6d638f2cd7acc084c5c6fd6724fdf}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!SaveTransactionPoint@{SaveTransactionPoint}}
+\index{SaveTransactionPoint@{SaveTransactionPoint}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{SaveTransactionPoint()}{SaveTransactionPoint()}}
+{\footnotesize\ttfamily string Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Save\+Transaction\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a savepoint in the database at the current point in the transaction timeline. Begins a new transaction if one is not in progress. 
+
+Call \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ab809effb8ccd5e50aa3a90a63bc62ce8}{Rollback\+To}} to undo transactions since the returned savepoint. Call \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ab53c27216035baa4917b4b6842cc49b6}{Release}} to commit transactions after the savepoint returned here. Call \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a2d273447071aff5c57d2bd5d1b852a68}{Commit}} to end the transaction, committing all changes. 
+
+\begin{DoxyReturn}{Returns}
+A string naming the savepoint.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a42f067c9ad3cc0bead31cc7ffd676774}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a42f067c9ad3cc0bead31cc7ffd676774}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!Table$<$ T $>$@{Table$<$ T $>$}}
+\index{Table$<$ T $>$@{Table$<$ T $>$}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Table$<$ T $>$()}{Table< T >()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_table_query}{Table\+Query}}$<$ T $>$ Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Table$<$ T $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a queryable interface to the table represented by the given type. 
+
+\begin{DoxyReturn}{Returns}
+A queryable object that is able to translate Where, Order\+By, and Take queries into native SQL. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a13bc035e03e5cd2e3bdd52dad30d4813}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_a13bc035e03e5cd2e3bdd52dad30d4813}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!Update@{Update}}
+\index{Update@{Update}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Update (\begin{DoxyParamCaption}\item[{object}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates all of the columns of a table using the specified object except for its primary key. The object is required to have a primary key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to update. It must have a primary key designated using the \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_primary_key_attribute}{Primary\+Key\+Attribute}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows updated. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_aab301f08360d345941675bc135f00846}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_aab301f08360d345941675bc135f00846}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!Update@{Update}}
+\index{Update@{Update}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Update (\begin{DoxyParamCaption}\item[{object}]{obj,  }\item[{Type}]{obj\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates all of the columns of a table using the specified object except for its primary key. The object is required to have a primary key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to update. It must have a primary key designated using the \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_primary_key_attribute}{Primary\+Key\+Attribute}}. \\
+\hline
+{\em obj\+Type} & The type of object to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows updated. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ac060ce17409fba297b58c8d00fa22abf}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ac060ce17409fba297b58c8d00fa22abf}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!UpdateAll@{UpdateAll}}
+\index{UpdateAll@{UpdateAll}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{UpdateAll()}{UpdateAll()}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Update\+All (\begin{DoxyParamCaption}\item[{System.\+Collections.\+IEnumerable}]{objects }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates all specified objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em objects} & An IEnumerable$<$\+T$>$ of the objects to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows modified. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ac1714d6693b5179b7f49dcdf1853ce19}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_ac1714d6693b5179b7f49dcdf1853ce19}} 
+\index{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}!SyncObject@{SyncObject}}
+\index{SyncObject@{SyncObject}!Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection@{Unity.VisualScripting.Dependencies.Sqlite.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{SyncObject}{SyncObject}}
+{\footnotesize\ttfamily object Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Connection.\+Sync\+Object\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the synchronous object, to be lock the database file for updating. 
+
+The sync object.
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Editor/\+Visual\+Scripting.\+Core/\+Dependencies/\+SQLite/SQLite.\+cs\end{DoxyCompactItemize}

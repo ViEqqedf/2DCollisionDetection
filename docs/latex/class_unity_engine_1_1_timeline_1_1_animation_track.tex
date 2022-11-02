@@ -1,0 +1,246 @@
+\hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track}{}\doxysection{Unity\+Engine.\+Timeline.\+Animation\+Track Class Reference}
+\label{class_unity_engine_1_1_timeline_1_1_animation_track}\index{UnityEngine.Timeline.AnimationTrack@{UnityEngine.Timeline.AnimationTrack}}
+
+
+A \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} track used for playing back animations on an Animator.  
+
+
+Inheritance diagram for Unity\+Engine.\+Timeline.\+Animation\+Track\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.757322cm]{class_unity_engine_1_1_timeline_1_1_animation_track}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_track_aefc9321cfccc75e488a4ea6cc7a8a9ae}{Create\+Clip}} (Animation\+Clip clip)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} on this track that uses an Animation\+Clip. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_track_ab0cee20b6007ee72fb34310e7fcaf4b0}{Create\+Infinite\+Clip}} (string infinite\+Clip\+Name)
+\begin{DoxyCompactList}\small\item\em Creates an Animation\+Clip that stores the data for an infinite track. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_track_ad32f07442ffee64b07211ee7936ad149}{Create\+Recordable\+Clip}} (string anim\+Clip\+Name)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}}, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_playable_asset}{Animation\+Playable\+Asset}} and an Animation\+Clip. Use this clip to record in a timeline. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_track_af5d148f0deb6794f31b1079582446c09}{Gather\+Properties}} (Playable\+Director director, \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_property_collector}{IProperty\+Collector}} driver)
+\begin{DoxyCompactList}\small\item\em Called by the \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} Editor to gather properties requiring preview. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_track_a086773479f57629d14b6204084b6a880}{On\+Create\+Clip}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} clip)
+\begin{DoxyCompactList}\small\item\em Used to initialize default values on a newly created clip \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_a4f3ade808e26546f80a57f2cf02cbdf5}\label{class_unity_engine_1_1_timeline_1_1_animation_track_a4f3ade808e26546f80a57f2cf02cbdf5}} 
+Vector3 {\bfseries position}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The translation offset of the entire track. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_aeaa0662d02f0e22e9d243a3829b47e5a}\label{class_unity_engine_1_1_timeline_1_1_animation_track_aeaa0662d02f0e22e9d243a3829b47e5a}} 
+Quaternion {\bfseries rotation}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The rotation offset of the entire track, expressed as a quaternion. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_a4be9f618d2c98303f18f9fe876cf3110}\label{class_unity_engine_1_1_timeline_1_1_animation_track_a4be9f618d2c98303f18f9fe876cf3110}} 
+Vector3 {\bfseries euler\+Angles}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The euler angle representation of the rotation offset of the entire track. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_track_a70be96dffce37ce4e57cede910e07d57}{apply\+Offsets}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies whether to apply track offsets to all clips on the track. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_engine_1_1_timeline_a7b9155ea6faa7fbeccc09dea7a347417}{Track\+Offset}} \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_track_aa32145aa4a1e469702ead7789b5c4b68}{track\+Offset}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies what is used to set the starting position and orientation of an Animation Track. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_ac81ca262ae72ec7be4447da185b4c954}\label{class_unity_engine_1_1_timeline_1_1_animation_track_ac81ca262ae72ec7be4447da185b4c954}} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_timeline_ad421deff44f1eab281f5f2a41665e2b2}{Match\+Target\+Fields}} {\bfseries match\+Target\+Fields}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies which fields to match when aligning offsets of clips. \end{DoxyCompactList}\item 
+Animation\+Clip \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_track_a509c42d901a0823adde4c587fc18978c}{infinite\+Clip}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An Animation\+Clip storing the data for an infinite track. \end{DoxyCompactList}\item 
+Avatar\+Mask \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_track_aa8c0000996d418c0da273bab36ed16c2}{avatar\+Mask}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the Avatar\+Mask to be applied to all clips on the track. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_ab0f1a5784fae6d7a12b0030403665d8b}\label{class_unity_engine_1_1_timeline_1_1_animation_track_ab0f1a5784fae6d7a12b0030403665d8b}} 
+bool {\bfseries apply\+Avatar\+Mask}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies whether to apply the Avatar\+Mask to the track. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_acf8d75c165e37fc02a7cc06f6ab8b7b0}\label{class_unity_engine_1_1_timeline_1_1_animation_track_acf8d75c165e37fc02a7cc06f6ab8b7b0}} 
+override IEnumerable$<$ Playable\+Binding $>$ {\bfseries outputs}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_aa1135c27853312d233b0b711e4b849c3}\label{class_unity_engine_1_1_timeline_1_1_animation_track_aa1135c27853312d233b0b711e4b849c3}} 
+bool {\bfseries in\+Clip\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies whether the Animation Track has clips, or is in infinite mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_ae709cd4c19441b453964cf3a58ac44a3}\label{class_unity_engine_1_1_timeline_1_1_animation_track_ae709cd4c19441b453964cf3a58ac44a3}} 
+Vector3 {\bfseries infinite\+Clip\+Offset\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The translation offset of a track in infinite mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_a89b5763872cff5d0c665c3e4e5618c63}\label{class_unity_engine_1_1_timeline_1_1_animation_track_a89b5763872cff5d0c665c3e4e5618c63}} 
+Quaternion {\bfseries infinite\+Clip\+Offset\+Rotation}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The rotation offset of a track in infinite mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_ac05e7162bee5bc6f939065f8b71d9bd3}\label{class_unity_engine_1_1_timeline_1_1_animation_track_ac05e7162bee5bc6f939065f8b71d9bd3}} 
+Vector3 {\bfseries infinite\+Clip\+Offset\+Euler\+Angles}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The euler angle representation of the rotation offset of the track when in infinite mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_a6206942c4435256d269089f0268114dc}\label{class_unity_engine_1_1_timeline_1_1_animation_track_a6206942c4435256d269089f0268114dc}} 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7}{Timeline\+Clip.\+Clip\+Extrapolation}} {\bfseries infinite\+Clip\+Pre\+Extrapolation}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The saved state of pre-\/extrapolation for clips converted to infinite mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_a43c4611c32dd6e5e012644ae4fbba3f0}\label{class_unity_engine_1_1_timeline_1_1_animation_track_a43c4611c32dd6e5e012644ae4fbba3f0}} 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7}{Timeline\+Clip.\+Clip\+Extrapolation}} {\bfseries infinite\+Clip\+Post\+Extrapolation}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The saved state of post-\/extrapolation for clips when converted to infinite mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_ac92d67a3279d53f45666ef1f995eb8de}\label{class_unity_engine_1_1_timeline_1_1_animation_track_ac92d67a3279d53f45666ef1f995eb8de}} 
+Vector3 {\bfseries open\+Clip\+Offset\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Translation offset of a track in infinite mode. This property is obsolete. Use \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_track_ae709cd4c19441b453964cf3a58ac44a3}{Unity\+Engine.\+Timeline.\+Animation\+Track.\+infinite\+Clip\+Offset\+Position}} instead. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_a286b8b069de081650b90d8a1dbc13bc5}\label{class_unity_engine_1_1_timeline_1_1_animation_track_a286b8b069de081650b90d8a1dbc13bc5}} 
+Quaternion {\bfseries open\+Clip\+Offset\+Rotation}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Rotation offset of a track in infinite mode. This property is obsolete. Use \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_track_a89b5763872cff5d0c665c3e4e5618c63}{Unity\+Engine.\+Timeline.\+Animation\+Track.\+infinite\+Clip\+Offset\+Rotation}} instead. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_a87571f666bd058880b07f5db6b15094f}\label{class_unity_engine_1_1_timeline_1_1_animation_track_a87571f666bd058880b07f5db6b15094f}} 
+Vector3 {\bfseries open\+Clip\+Offset\+Euler\+Angles}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Euler angle representation of the rotation offset of the track when in infinite mode. This property is obsolete. Use \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_track_ac05e7162bee5bc6f939065f8b71d9bd3}{Unity\+Engine.\+Timeline.\+Animation\+Track.\+infinite\+Clip\+Offset\+Euler\+Angles}} instead. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_af83ec5f3a2d5641149c1b3a62e2e4c65}\label{class_unity_engine_1_1_timeline_1_1_animation_track_af83ec5f3a2d5641149c1b3a62e2e4c65}} 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7}{Timeline\+Clip.\+Clip\+Extrapolation}} {\bfseries open\+Clip\+Pre\+Extrapolation}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Saved state of pre-\/extrapolation for clips converted to infinite mode. This property is obsolete. Use \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_track_a6206942c4435256d269089f0268114dc}{Unity\+Engine.\+Timeline.\+Animation\+Track.\+infinite\+Clip\+Pre\+Extrapolation}} instead. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_a7e0564955c59124c5df3f031bb9f02b1}\label{class_unity_engine_1_1_timeline_1_1_animation_track_a7e0564955c59124c5df3f031bb9f02b1}} 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7}{Timeline\+Clip.\+Clip\+Extrapolation}} {\bfseries open\+Clip\+Post\+Extrapolation}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Saved state of post-\/extrapolation for clips converted to infinite mode. This property is obsolete. Use \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_track_a43c4611c32dd6e5e012644ae4fbba3f0}{Unity\+Engine.\+Timeline.\+Animation\+Track.\+infinite\+Clip\+Post\+Extrapolation}} instead. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} track used for playing back animations on an Animator. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_aefc9321cfccc75e488a4ea6cc7a8a9ae}\label{class_unity_engine_1_1_timeline_1_1_animation_track_aefc9321cfccc75e488a4ea6cc7a8a9ae}} 
+\index{UnityEngine.Timeline.AnimationTrack@{UnityEngine.Timeline.AnimationTrack}!CreateClip@{CreateClip}}
+\index{CreateClip@{CreateClip}!UnityEngine.Timeline.AnimationTrack@{UnityEngine.Timeline.AnimationTrack}}
+\doxysubsubsection{\texorpdfstring{CreateClip()}{CreateClip()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} Unity\+Engine.\+Timeline.\+Animation\+Track.\+Create\+Clip (\begin{DoxyParamCaption}\item[{Animation\+Clip}]{clip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} on this track that uses an Animation\+Clip. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip} & Source animation clip of the resulting \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} which has an \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_playable_asset}{Animation\+Playable\+Asset}} asset attached.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_ab0cee20b6007ee72fb34310e7fcaf4b0}\label{class_unity_engine_1_1_timeline_1_1_animation_track_ab0cee20b6007ee72fb34310e7fcaf4b0}} 
+\index{UnityEngine.Timeline.AnimationTrack@{UnityEngine.Timeline.AnimationTrack}!CreateInfiniteClip@{CreateInfiniteClip}}
+\index{CreateInfiniteClip@{CreateInfiniteClip}!UnityEngine.Timeline.AnimationTrack@{UnityEngine.Timeline.AnimationTrack}}
+\doxysubsubsection{\texorpdfstring{CreateInfiniteClip()}{CreateInfiniteClip()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Timeline.\+Animation\+Track.\+Create\+Infinite\+Clip (\begin{DoxyParamCaption}\item[{string}]{infinite\+Clip\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an Animation\+Clip that stores the data for an infinite track. 
+
+If an infinite\+Clip already exists, this method produces no result, even if you provide a different value for infinite\+Clip\+Name. 
+
+This method can\textquotesingle{}t create an infinite clip for an \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_track}{Animation\+Track}} that contains one or more \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} clips. Use \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_track_aa1135c27853312d233b0b711e4b849c3}{Animation\+Track.\+in\+Clip\+Mode}} to determine whether it is possible to create an infinite clip on an \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_track}{Animation\+Track}}. 
+
+When used from the editor, this method attempts to save the created infinite clip to the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}}. The \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} must already exist in the Asset\+Database to save the infinite clip. If the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} does not exist, the infinite clip is still created but it is not saved. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em infinite\+Clip\+Name} & The name of the Animation\+Clip to create. This method does not ensure unique names. If you want a unique clip name, you must provide one. See Object\+Names.\+Get\+Unique\+Name for information on a method that creates unique names. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_ad32f07442ffee64b07211ee7936ad149}\label{class_unity_engine_1_1_timeline_1_1_animation_track_ad32f07442ffee64b07211ee7936ad149}} 
+\index{UnityEngine.Timeline.AnimationTrack@{UnityEngine.Timeline.AnimationTrack}!CreateRecordableClip@{CreateRecordableClip}}
+\index{CreateRecordableClip@{CreateRecordableClip}!UnityEngine.Timeline.AnimationTrack@{UnityEngine.Timeline.AnimationTrack}}
+\doxysubsubsection{\texorpdfstring{CreateRecordableClip()}{CreateRecordableClip()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} Unity\+Engine.\+Timeline.\+Animation\+Track.\+Create\+Recordable\+Clip (\begin{DoxyParamCaption}\item[{string}]{anim\+Clip\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}}, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_playable_asset}{Animation\+Playable\+Asset}} and an Animation\+Clip. Use this clip to record in a timeline. 
+
+When used from the editor, this method attempts to save the created recordable clip to the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}}. The \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} must already exist in the Asset\+Database to save the recordable clip. If the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} does not exist, the recordable clip is still created but it is not saved. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em anim\+Clip\+Name} & The name of the Animation\+Clip to create. This method does not ensure unique names. If you want a unique clip name, you must provide one. See Object\+Names.\+Get\+Unique\+Name for information on a method that creates unique names. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a new \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} with an \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_playable_asset}{Animation\+Playable\+Asset}} asset attached. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_af5d148f0deb6794f31b1079582446c09}\label{class_unity_engine_1_1_timeline_1_1_animation_track_af5d148f0deb6794f31b1079582446c09}} 
+\index{UnityEngine.Timeline.AnimationTrack@{UnityEngine.Timeline.AnimationTrack}!GatherProperties@{GatherProperties}}
+\index{GatherProperties@{GatherProperties}!UnityEngine.Timeline.AnimationTrack@{UnityEngine.Timeline.AnimationTrack}}
+\doxysubsubsection{\texorpdfstring{GatherProperties()}{GatherProperties()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Animation\+Track.\+Gather\+Properties (\begin{DoxyParamCaption}\item[{Playable\+Director}]{director,  }\item[{\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_property_collector}{IProperty\+Collector}}}]{driver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called by the \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} Editor to gather properties requiring preview. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em director} & The Playable\+Director invoking the preview\\
+\hline
+{\em driver} & Property\+Collector used to gather previewable properties\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset_a6a160f0771a5271317c914e98ff63c62}{Unity\+Engine.\+Timeline.\+Track\+Asset}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_a086773479f57629d14b6204084b6a880}\label{class_unity_engine_1_1_timeline_1_1_animation_track_a086773479f57629d14b6204084b6a880}} 
+\index{UnityEngine.Timeline.AnimationTrack@{UnityEngine.Timeline.AnimationTrack}!OnCreateClip@{OnCreateClip}}
+\index{OnCreateClip@{OnCreateClip}!UnityEngine.Timeline.AnimationTrack@{UnityEngine.Timeline.AnimationTrack}}
+\doxysubsubsection{\texorpdfstring{OnCreateClip()}{OnCreateClip()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+Timeline.\+Animation\+Track.\+On\+Create\+Clip (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}}}]{clip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Used to initialize default values on a newly created clip 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip} & The clip added to the track\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset_ae5e4c37007a1363730cad061b236080e}{Unity\+Engine.\+Timeline.\+Track\+Asset}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_a70be96dffce37ce4e57cede910e07d57}\label{class_unity_engine_1_1_timeline_1_1_animation_track_a70be96dffce37ce4e57cede910e07d57}} 
+\index{UnityEngine.Timeline.AnimationTrack@{UnityEngine.Timeline.AnimationTrack}!applyOffsets@{applyOffsets}}
+\index{applyOffsets@{applyOffsets}!UnityEngine.Timeline.AnimationTrack@{UnityEngine.Timeline.AnimationTrack}}
+\doxysubsubsection{\texorpdfstring{applyOffsets}{applyOffsets}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Timeline.\+Animation\+Track.\+apply\+Offsets\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies whether to apply track offsets to all clips on the track. 
+
+This can be used to offset all clips on a track, in addition to the clips individual offsets. \mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_aa8c0000996d418c0da273bab36ed16c2}\label{class_unity_engine_1_1_timeline_1_1_animation_track_aa8c0000996d418c0da273bab36ed16c2}} 
+\index{UnityEngine.Timeline.AnimationTrack@{UnityEngine.Timeline.AnimationTrack}!avatarMask@{avatarMask}}
+\index{avatarMask@{avatarMask}!UnityEngine.Timeline.AnimationTrack@{UnityEngine.Timeline.AnimationTrack}}
+\doxysubsubsection{\texorpdfstring{avatarMask}{avatarMask}}
+{\footnotesize\ttfamily Avatar\+Mask Unity\+Engine.\+Timeline.\+Animation\+Track.\+avatar\+Mask\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies the Avatar\+Mask to be applied to all clips on the track. 
+
+Applying an Avatar\+Mask to an animation track will allow discarding portions of the animation being applied on the track. \mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_a509c42d901a0823adde4c587fc18978c}\label{class_unity_engine_1_1_timeline_1_1_animation_track_a509c42d901a0823adde4c587fc18978c}} 
+\index{UnityEngine.Timeline.AnimationTrack@{UnityEngine.Timeline.AnimationTrack}!infiniteClip@{infiniteClip}}
+\index{infiniteClip@{infiniteClip}!UnityEngine.Timeline.AnimationTrack@{UnityEngine.Timeline.AnimationTrack}}
+\doxysubsubsection{\texorpdfstring{infiniteClip}{infiniteClip}}
+{\footnotesize\ttfamily Animation\+Clip Unity\+Engine.\+Timeline.\+Animation\+Track.\+infinite\+Clip\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+An Animation\+Clip storing the data for an infinite track. 
+
+The value of this property is null when the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_animation_track}{Animation\+Track}} is in Clip Mode. \mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_animation_track_aa32145aa4a1e469702ead7789b5c4b68}\label{class_unity_engine_1_1_timeline_1_1_animation_track_aa32145aa4a1e469702ead7789b5c4b68}} 
+\index{UnityEngine.Timeline.AnimationTrack@{UnityEngine.Timeline.AnimationTrack}!trackOffset@{trackOffset}}
+\index{trackOffset@{trackOffset}!UnityEngine.Timeline.AnimationTrack@{UnityEngine.Timeline.AnimationTrack}}
+\doxysubsubsection{\texorpdfstring{trackOffset}{trackOffset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_unity_engine_1_1_timeline_a7b9155ea6faa7fbeccc09dea7a347417}{Track\+Offset}} Unity\+Engine.\+Timeline.\+Animation\+Track.\+track\+Offset\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies what is used to set the starting position and orientation of an Animation Track. 
+
+Track Offset is only applied when the Animation Track contains animation that modifies the root Transform. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Animation/Animation\+Track.\+cs\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Asset\+Upgrade/Animation\+Track\+Upgrade.\+cs\end{DoxyCompactItemize}

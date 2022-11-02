@@ -1,0 +1,102 @@
+\hypertarget{class_dropdown_tests}{}\doxysection{Dropdown\+Tests Class Reference}
+\label{class_dropdown_tests}\index{DropdownTests@{DropdownTests}}
+Inheritance diagram for Dropdown\+Tests\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_dropdown_tests}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_dropdown_tests_a5f0c9cedd528726de6d3a68efa462274}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Implement this method to call actions automatically before the build process. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_dropdown_tests_a5f8fecdb9c92a6d586819b4dc828fdca}\label{class_dropdown_tests_a5f8fecdb9c92a6d586819b4dc828fdca}} 
+void {\bfseries Test\+Setup} ()
+\item 
+\mbox{\Hypertarget{class_dropdown_tests_aa428a351f01eda7dd58f2a9a1666e545}\label{class_dropdown_tests_aa428a351f01eda7dd58f2a9a1666e545}} 
+IEnumerator {\bfseries Dropdown\+\_\+\+Canvas} ()
+\item 
+\mbox{\Hypertarget{class_dropdown_tests_ab227bce04a370439e3484450cafd593f}\label{class_dropdown_tests_ab227bce04a370439e3484450cafd593f}} 
+IEnumerator {\bfseries Dropdown\+\_\+\+Canvas\+\_\+\+Already\+\_\+\+Exists} ()
+\item 
+\mbox{\Hypertarget{class_dropdown_tests_a43d1cfa817b0eb6c64053084655b83ee}\label{class_dropdown_tests_a43d1cfa817b0eb6c64053084655b83ee}} 
+IEnumerator {\bfseries Dropdown\+\_\+\+Disable} ()
+\item 
+\mbox{\Hypertarget{class_dropdown_tests_aa93dd39ce1d46219ca55e04df5111faa}\label{class_dropdown_tests_aa93dd39ce1d46219ca55e04df5111faa}} 
+IEnumerator {\bfseries Dropdown\+\_\+\+Reset\+And\+Clear} ()
+\item 
+\mbox{\Hypertarget{class_dropdown_tests_a3b288d0a04c96f2a4078f996aa991272}\label{class_dropdown_tests_a3b288d0a04c96f2a4078f996aa991272}} 
+void {\bfseries Tear\+Down} ()
+\item 
+\mbox{\Hypertarget{class_dropdown_tests_a7de3e630a1c68e624cf0e6e92c513bd9}\label{class_dropdown_tests_a7de3e630a1c68e624cf0e6e92c513bd9}} 
+void {\bfseries One\+Time\+Tear\+Down} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dropdown_tests_a5f0c9cedd528726de6d3a68efa462274}\label{class_dropdown_tests_a5f0c9cedd528726de6d3a68efa462274}} 
+\index{DropdownTests@{DropdownTests}!Setup@{Setup}}
+\index{Setup@{Setup}!DropdownTests@{DropdownTests}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily void Dropdown\+Tests.\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implement this method to call actions automatically before the build process. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }CreateSpriteTest : IPrebuildSetup}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    Texture2D m\_Texture;}
+\DoxyCodeLine{    Sprite m\_Sprite;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_dropdown_tests_a5f0c9cedd528726de6d3a68efa462274}{Setup}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#if UNITY\_EDITOR}}
+\DoxyCodeLine{        var spritePath = \textcolor{stringliteral}{"{}Assets/Resources/Circle.png"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{        var ti = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.AssetImporter.GetAtPath(spritePath) as \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporter;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.textureCompression = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporterCompression.Uncompressed;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.SaveAndReimport();}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [SetUp]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} SetUpTest()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        m\_Texture = Resources.Load<Texture2D>(\textcolor{stringliteral}{"{}Circle"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [Test]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} WhenNullTextureIsPassed\_CreateShouldReturnNullSprite()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with Valid Texture.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        LogAssert.Expect(LogType.Log, \textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Sprite.Create(m\_Texture, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Debug.Log(\textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with NULL Texture. Should return NULL Sprite.}}
+\DoxyCodeLine{        m\_Sprite = Sprite.Create(\textcolor{keyword}{null}, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Assert.That(m\_Sprite, Is.Null, \textcolor{stringliteral}{"{}Sprite created with null texture should be null"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup_a9a9eaa928efe50645e61412528e84309}{Unity\+Engine.\+Test\+Tools.\+IPrebuild\+Setup}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Tests/\+Runtime/\+Dropdown/Dropdown\+Tests.\+cs\end{DoxyCompactItemize}

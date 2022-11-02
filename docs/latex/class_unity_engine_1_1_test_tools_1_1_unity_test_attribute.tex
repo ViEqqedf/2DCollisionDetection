@@ -1,0 +1,61 @@
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_unity_test_attribute}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+Unity\+Test\+Attribute Class Reference}
+\label{class_unity_engine_1_1_test_tools_1_1_unity_test_attribute}\index{UnityEngine.TestTools.UnityTestAttribute@{UnityEngine.TestTools.UnityTestAttribute}}
+
+
+{\ttfamily Unity\+Test} attribute is the main addition to the standard \href{http://www.nunit.org/}{\texttt{ NUnit}} library for the \mbox{\hyperlink{namespace_unity}{Unity}} Test Framework. This type of unit test allows you to skip a frame from within a test (so background tasks can finish) or give certain commands to the \mbox{\hyperlink{namespace_unity}{Unity}} {\bfseries{Editor}}, such as performing a domain reload or entering {\bfseries{Play Mode}} from an {\bfseries{Edit Mode}} test. In Play Mode, the {\ttfamily Unity\+Test} attribute runs as a \href{https://docs.unity3d.com/Manual/Coroutines.html}{\texttt{ coroutine}}. Whereas Edit Mode tests run in the \href{https://docs.unity3d.com/ScriptReference/EditorApplication-update.html}{\texttt{ Editor\+Application.\+update}} callback loop. The {\ttfamily Unity\+Test} attribute is, in fact, an alternative to the {\ttfamily NUnit} \href{https://github.com/nunit/docs/wiki/Test-Attribute}{\texttt{ Test attribute}}, which allows yielding instructions back to the framework. Once the instruction is complete, the test run continues. If you {\ttfamily yield return null}, you skip a frame. That might be necessary to ensure that some changes do happen on the next iteration of either the {\ttfamily Editor\+Application.\+update} loop or the \href{https://docs.unity3d.com/Manual/ExecutionOrder.html}{\texttt{ game loop}}.  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Tools.\+Unity\+Test\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.517615cm]{class_unity_engine_1_1_test_tools_1_1_unity_test_attribute}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_unity_test_attribute_a12e00c742f3282349400794cad223bec}\label{class_unity_engine_1_1_test_tools_1_1_unity_test_attribute_a12e00c742f3282349400794cad223bec}} 
+{\bfseries Unity\+Test\+Attribute} ()
+\begin{DoxyCompactList}\small\item\em Initializes and returns an instance of \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_unity_test_attribute}{Unity\+Test\+Attribute}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+{\ttfamily Unity\+Test} attribute is the main addition to the standard \href{http://www.nunit.org/}{\texttt{ NUnit}} library for the \mbox{\hyperlink{namespace_unity}{Unity}} Test Framework. This type of unit test allows you to skip a frame from within a test (so background tasks can finish) or give certain commands to the \mbox{\hyperlink{namespace_unity}{Unity}} {\bfseries{Editor}}, such as performing a domain reload or entering {\bfseries{Play Mode}} from an {\bfseries{Edit Mode}} test. In Play Mode, the {\ttfamily Unity\+Test} attribute runs as a \href{https://docs.unity3d.com/Manual/Coroutines.html}{\texttt{ coroutine}}. Whereas Edit Mode tests run in the \href{https://docs.unity3d.com/ScriptReference/EditorApplication-update.html}{\texttt{ Editor\+Application.\+update}} callback loop. The {\ttfamily Unity\+Test} attribute is, in fact, an alternative to the {\ttfamily NUnit} \href{https://github.com/nunit/docs/wiki/Test-Attribute}{\texttt{ Test attribute}}, which allows yielding instructions back to the framework. Once the instruction is complete, the test run continues. If you {\ttfamily yield return null}, you skip a frame. That might be necessary to ensure that some changes do happen on the next iteration of either the {\ttfamily Editor\+Application.\+update} loop or the \href{https://docs.unity3d.com/Manual/ExecutionOrder.html}{\texttt{ game loop}}. 
+
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_unity_test_attribute_autotoc_md0}{}\doxysubsubsection{Edit Mode example}\label{class_unity_engine_1_1_test_tools_1_1_unity_test_attribute_autotoc_md0}
+The most simple example of an Edit Mode test could be the one that yields {\ttfamily null} to skip the current frame and then continues to run\+: {\ttfamily  \mbox{[}Unity\+Test\mbox{]} public IEnumerator Editor\+Utility\+\_\+\+When\+Executed\+\_\+\+Returns\+Success() \{ var utility = Run\+Editor\+Utility\+In\+The\+Background();}
+
+{\ttfamily  while (utility.\+is\+Running) \{ yield return null; \}}
+
+{\ttfamily  Assert.\+Is\+True(utility.\+is\+Success); \} ~\newline
+ } \hypertarget{class_unity_engine_1_1_test_tools_1_1_unity_test_attribute_autotoc_md1}{}\doxysubsubsection{Play Mode example}\label{class_unity_engine_1_1_test_tools_1_1_unity_test_attribute_autotoc_md1}
+In Play Mode, a test runs as a coroutine attached to a \href{https://docs.unity3d.com/ScriptReference/MonoBehaviour.html}{\texttt{ Mono\+Behaviour}}. So all the yield instructions available in coroutines, are also available in your test.
+
+From a Play Mode test you can use one of Unity’s \href{https://docs.unity3d.com/ScriptReference/YieldInstruction.html}{\texttt{ Yield Instructions}}\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://docs.unity3d.com/ScriptReference/WaitForFixedUpdate.html}{\texttt{ Wait\+For\+Fixed\+Update}}\+: to ensure changes expected within the next cycle of physics calculations.
+\item \href{https://docs.unity3d.com/ScriptReference/WaitForSeconds.html}{\texttt{ Wait\+For\+Seconds}}\+: if you want to pause your test coroutine for a fixed amount of time. Be careful about creating long-\/running tests.
+\end{DoxyItemize}
+
+The simplest example is to yield to {\ttfamily Wait\+For\+Fixed\+Update}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[UnityTest]}
+\DoxyCodeLine{\textcolor{keyword}{public} IEnumerator GameObject\_WithRigidBody\_WillBeAffectedByPhysics()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    var go = \textcolor{keyword}{new} GameObject();}
+\DoxyCodeLine{    go.AddComponent<Rigidbody>();}
+\DoxyCodeLine{    var originalPosition = go.transform.position.y;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForFixedUpdate();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    Assert.AreNotEqual(originalPosition, go.transform.position.y);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Engine.\+Test\+Runner/\+NUnit\+Extensions/\+Attributes/Unity\+Test\+Attribute.\+cs\end{DoxyCompactItemize}

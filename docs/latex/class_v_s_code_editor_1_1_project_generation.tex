@@ -1,0 +1,129 @@
+\hypertarget{class_v_s_code_editor_1_1_project_generation}{}\doxysection{VSCode\+Editor.\+Project\+Generation Class Reference}
+\label{class_v_s_code_editor_1_1_project_generation}\index{VSCodeEditor.ProjectGeneration@{VSCodeEditor.ProjectGeneration}}
+Inheritance diagram for VSCode\+Editor.\+Project\+Generation\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_v_s_code_editor_1_1_project_generation}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_v_s_code_editor_1_1_project_generation_ae385e6404a2d16774f1fbe47dfbb3fd0}{Generate\+All}} (bool generate\+All)
+\item 
+\mbox{\Hypertarget{class_v_s_code_editor_1_1_project_generation_a9157cac6ceb084ace4322f744f5c4b60}\label{class_v_s_code_editor_1_1_project_generation_a9157cac6ceb084ace4322f744f5c4b60}} 
+{\bfseries Project\+Generation} (string temp\+Directory)
+\item 
+\mbox{\Hypertarget{class_v_s_code_editor_1_1_project_generation_a5c4bfeff1944962fc33e00abca38bb20}\label{class_v_s_code_editor_1_1_project_generation_a5c4bfeff1944962fc33e00abca38bb20}} 
+{\bfseries Project\+Generation} (string temp\+Directory, \mbox{\hyperlink{interface_v_s_code_editor_1_1_i_assembly_name_provider}{IAssembly\+Name\+Provider}} assembly\+Name\+Provider, \mbox{\hyperlink{interface_v_s_code_editor_1_1_i_file_i_o}{IFile\+IO}} file\+IO, \mbox{\hyperlink{interface_v_s_code_editor_1_1_i_g_u_i_d_generator}{IGUIDGenerator}} guid\+Generator)
+\item 
+bool \mbox{\hyperlink{class_v_s_code_editor_1_1_project_generation_a2b1552956b45f8d60f4637c43de6f1eb}{Sync\+If\+Needed}} (List$<$ string $>$ affected\+Files, string\mbox{[}$\,$\mbox{]} reimported\+Files)
+\begin{DoxyCompactList}\small\item\em Syncs the scripting solution if any affected files are relevant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_v_s_code_editor_1_1_project_generation_a0b027bde77c5135f4bfdea3bf19b1a00}{Sync}} ()
+\item 
+bool \mbox{\hyperlink{class_v_s_code_editor_1_1_project_generation_ad3895e06fcd00a4aa29e456e912b82d8}{Solution\+Exists}} ()
+\item 
+\mbox{\Hypertarget{class_v_s_code_editor_1_1_project_generation_a77d414a214a1baad5fd71c4072fde9ed}\label{class_v_s_code_editor_1_1_project_generation_a77d414a214a1baad5fd71c4072fde9ed}} 
+void {\bfseries Generate\+And\+Write\+Solution\+And\+Projects} ()
+\item 
+\mbox{\Hypertarget{class_v_s_code_editor_1_1_project_generation_a3e952716e2f7ef0cebe161bb6dfc7f31}\label{class_v_s_code_editor_1_1_project_generation_a3e952716e2f7ef0cebe161bb6dfc7f31}} 
+string {\bfseries Project\+File} (Assembly assembly)
+\item 
+string \mbox{\hyperlink{class_v_s_code_editor_1_1_project_generation_a939ea1ad635f126eb182eff5e428af17}{Solution\+File}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_v_s_code_editor_1_1_project_generation_a7298565ba03ab47fe3ee64e34a8e0322}\label{class_v_s_code_editor_1_1_project_generation_a7298565ba03ab47fe3ee64e34a8e0322}} 
+static readonly string {\bfseries MSBuild\+Namespace\+Uri} = \char`\"{}http\+://schemas.\+microsoft.\+com/developer/msbuild/2003\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_v_s_code_editor_1_1_project_generation_a96dee7a0c503131a91a4a32f9cc3eb23}{Project\+Directory}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_v_s_code_editor_1_1_project_generation_ae385e6404a2d16774f1fbe47dfbb3fd0}\label{class_v_s_code_editor_1_1_project_generation_ae385e6404a2d16774f1fbe47dfbb3fd0}} 
+\index{VSCodeEditor.ProjectGeneration@{VSCodeEditor.ProjectGeneration}!GenerateAll@{GenerateAll}}
+\index{GenerateAll@{GenerateAll}!VSCodeEditor.ProjectGeneration@{VSCodeEditor.ProjectGeneration}}
+\doxysubsubsection{\texorpdfstring{GenerateAll()}{GenerateAll()}}
+{\footnotesize\ttfamily void VSCode\+Editor.\+Project\+Generation.\+Generate\+All (\begin{DoxyParamCaption}\item[{bool}]{generate\+All }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_v_s_code_editor_1_1_i_generator}{VSCode\+Editor.\+IGenerator}}.
+
+\mbox{\Hypertarget{class_v_s_code_editor_1_1_project_generation_ad3895e06fcd00a4aa29e456e912b82d8}\label{class_v_s_code_editor_1_1_project_generation_ad3895e06fcd00a4aa29e456e912b82d8}} 
+\index{VSCodeEditor.ProjectGeneration@{VSCodeEditor.ProjectGeneration}!SolutionExists@{SolutionExists}}
+\index{SolutionExists@{SolutionExists}!VSCodeEditor.ProjectGeneration@{VSCodeEditor.ProjectGeneration}}
+\doxysubsubsection{\texorpdfstring{SolutionExists()}{SolutionExists()}}
+{\footnotesize\ttfamily bool VSCode\+Editor.\+Project\+Generation.\+Solution\+Exists (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_v_s_code_editor_1_1_i_generator}{VSCode\+Editor.\+IGenerator}}.
+
+\mbox{\Hypertarget{class_v_s_code_editor_1_1_project_generation_a939ea1ad635f126eb182eff5e428af17}\label{class_v_s_code_editor_1_1_project_generation_a939ea1ad635f126eb182eff5e428af17}} 
+\index{VSCodeEditor.ProjectGeneration@{VSCodeEditor.ProjectGeneration}!SolutionFile@{SolutionFile}}
+\index{SolutionFile@{SolutionFile}!VSCodeEditor.ProjectGeneration@{VSCodeEditor.ProjectGeneration}}
+\doxysubsubsection{\texorpdfstring{SolutionFile()}{SolutionFile()}}
+{\footnotesize\ttfamily string VSCode\+Editor.\+Project\+Generation.\+Solution\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_v_s_code_editor_1_1_i_generator}{VSCode\+Editor.\+IGenerator}}.
+
+\mbox{\Hypertarget{class_v_s_code_editor_1_1_project_generation_a0b027bde77c5135f4bfdea3bf19b1a00}\label{class_v_s_code_editor_1_1_project_generation_a0b027bde77c5135f4bfdea3bf19b1a00}} 
+\index{VSCodeEditor.ProjectGeneration@{VSCodeEditor.ProjectGeneration}!Sync@{Sync}}
+\index{Sync@{Sync}!VSCodeEditor.ProjectGeneration@{VSCodeEditor.ProjectGeneration}}
+\doxysubsubsection{\texorpdfstring{Sync()}{Sync()}}
+{\footnotesize\ttfamily void VSCode\+Editor.\+Project\+Generation.\+Sync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_v_s_code_editor_1_1_i_generator}{VSCode\+Editor.\+IGenerator}}.
+
+\mbox{\Hypertarget{class_v_s_code_editor_1_1_project_generation_a2b1552956b45f8d60f4637c43de6f1eb}\label{class_v_s_code_editor_1_1_project_generation_a2b1552956b45f8d60f4637c43de6f1eb}} 
+\index{VSCodeEditor.ProjectGeneration@{VSCodeEditor.ProjectGeneration}!SyncIfNeeded@{SyncIfNeeded}}
+\index{SyncIfNeeded@{SyncIfNeeded}!VSCodeEditor.ProjectGeneration@{VSCodeEditor.ProjectGeneration}}
+\doxysubsubsection{\texorpdfstring{SyncIfNeeded()}{SyncIfNeeded()}}
+{\footnotesize\ttfamily bool VSCode\+Editor.\+Project\+Generation.\+Sync\+If\+Needed (\begin{DoxyParamCaption}\item[{List$<$ string $>$}]{affected\+Files,  }\item[{string\mbox{[}$\,$\mbox{]}}]{reimported\+Files }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Syncs the scripting solution if any affected files are relevant. 
+
+\begin{DoxyReturn}{Returns}
+Whether the solution was synced. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em affected\+Files} & A set of files whose status has changed \\
+\hline
+{\em reimported\+Files} & A set of files that got reimported \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_v_s_code_editor_1_1_i_generator}{VSCode\+Editor.\+IGenerator}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_v_s_code_editor_1_1_project_generation_a96dee7a0c503131a91a4a32f9cc3eb23}\label{class_v_s_code_editor_1_1_project_generation_a96dee7a0c503131a91a4a32f9cc3eb23}} 
+\index{VSCodeEditor.ProjectGeneration@{VSCodeEditor.ProjectGeneration}!ProjectDirectory@{ProjectDirectory}}
+\index{ProjectDirectory@{ProjectDirectory}!VSCodeEditor.ProjectGeneration@{VSCodeEditor.ProjectGeneration}}
+\doxysubsubsection{\texorpdfstring{ProjectDirectory}{ProjectDirectory}}
+{\footnotesize\ttfamily string VSCode\+Editor.\+Project\+Generation.\+Project\+Directory\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_v_s_code_editor_1_1_i_generator}{VSCode\+Editor.\+IGenerator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ide.\+vscode@1.\+2.\+4/\+Editor/\+Project\+Generation/Project\+Generation.\+cs\end{DoxyCompactItemize}

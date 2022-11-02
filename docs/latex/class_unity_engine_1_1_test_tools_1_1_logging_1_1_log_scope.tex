@@ -1,0 +1,68 @@
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope Class Reference}
+\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope}\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+
+
+Inherits Unity\+Engine.\+Test\+Tools.\+Logging.\+ILog\+Scope.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ad2407467c3df8379e723ec00ae45610f}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ad2407467c3df8379e723ec00ae45610f}} 
+void {\bfseries Add\+Log} (string message, string stacktrace, Log\+Type type)
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_acc4a06157d968648607a0c20226a7d2c}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_acc4a06157d968648607a0c20226a7d2c}} 
+void {\bfseries Dispose} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a54f3f911329608ab448c2145ddae51bb}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a54f3f911329608ab448c2145ddae51bb}} 
+bool {\bfseries Any\+Failing\+Logs} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_aa3a79260f9c661ea876c83c2fe2db0d4}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_aa3a79260f9c661ea876c83c2fe2db0d4}} 
+void {\bfseries Process\+Expected\+Logs} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a2f4224b64cb8367ed0037c9b0a717cbd}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a2f4224b64cb8367ed0037c9b0a717cbd}} 
+void {\bfseries No\+Unexpected\+Received} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ac3e2f042f2063eb187e22c31379a0713}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ac3e2f042f2063eb187e22c31379a0713}} 
+static bool {\bfseries Has\+Current\+Log\+Scope} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a0edd3277db8450ec2f683bda4f3525c3}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a0edd3277db8450ec2f683bda4f3525c3}} 
+Queue$<$ Log\+Match $>$ {\bfseries Expected\+Logs}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a684d506afa788dc6fc5e6d5e825614ea}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a684d506afa788dc6fc5e6d5e825614ea}} 
+List$<$ Log\+Event $>$ {\bfseries All\+Logs}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a29362b05459b92d6511170bdf7d3a078}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a29362b05459b92d6511170bdf7d3a078}} 
+List$<$ Log\+Event $>$ {\bfseries Failing\+Logs}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_afb4fd81fd49f385c71a987499965dd16}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_afb4fd81fd49f385c71a987499965dd16}} 
+bool {\bfseries Ignore\+Failing\+Messages}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a21eca13f4121ad10ac7b91af09d079d0}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a21eca13f4121ad10ac7b91af09d079d0}} 
+bool {\bfseries Is\+NUnit\+Exception}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_acd5db2df5e31fc5945c3de458fd52e1f}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_acd5db2df5e31fc5945c3de458fd52e1f}} 
+bool {\bfseries Is\+NUnit\+Success\+Exception}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_af9838674497b653e18fccbc69e80a7d3}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_af9838674497b653e18fccbc69e80a7d3}} 
+bool {\bfseries Is\+NUnit\+Inconclusive\+Exception}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a3fcb9fcfa8207d816a054bd95cb1ead2}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a3fcb9fcfa8207d816a054bd95cb1ead2}} 
+bool {\bfseries Is\+NUnit\+Ignore\+Exception}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a4679ea78aaf665c823d4383e417e3d2c}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a4679ea78aaf665c823d4383e417e3d2c}} 
+string {\bfseries NUnit\+Exception\+Message}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ad85c26f65b99666d125ec65ceabe25a2}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ad85c26f65b99666d125ec65ceabe25a2}} 
+static \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope}{Log\+Scope}} {\bfseries Current}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Engine.\+Test\+Runner/\+Assertions/\+Log\+Scope/Log\+Scope.\+cs\end{DoxyCompactItemize}

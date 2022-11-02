@@ -1,0 +1,120 @@
+\hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider}{}\doxysection{Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Settings\+Provider Class Reference}
+\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider}\index{Unity.Services.Core.Editor.EditorGameServiceSettingsProvider@{Unity.Services.Core.Editor.EditorGameServiceSettingsProvider}}
+
+
+Base class to extend for an external service settings provider to become an editor game service settings provider  
+
+
+Inheritance diagram for Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Settings\+Provider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract Visual\+Element \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider_a8c4ee3a521d0f219df8ae7f4d7a461e3}{Generate\+Service\+Detail\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Builds and return the \mbox{\hyperlink{namespace_unity_1_1_services}{Services}} specific UI as a Visual Element \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider_a80277288a71f3af96a2401ac9fa842c6}{Editor\+Game\+Service\+Settings\+Provider}} (string path, Settings\+Scope scopes, IEnumerable$<$ string $>$ keywords=null)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider}{Editor\+Game\+Service\+Settings\+Provider}} class. \end{DoxyCompactList}\item 
+virtual Visual\+Element \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider_ab36ce45bafbad5a336af0c773865b537}{Generate\+Unsupported\+Detail\+UI}} ()
+\begin{DoxyCompactList}\small\item\em The UI to show when the editor API does not support the \mbox{\hyperlink{namespace_unity_1_1_services}{Services}} SDK \mbox{\hyperlink{namespace_unity_1_1_services_1_1_core}{Core}} package \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider_abd65d9b746ecbb9f88583337614ca05a}{Generate\+Project\+Settings\+Path}} (string service\+Name)
+\begin{DoxyCompactList}\small\item\em Use this to standardize Service Project Settings path\+: usage example\+: var provider = new My\+Cloud\+Service\+Settings(Generate\+Project\+Settings\+Path(\char`\"{}\+My Cloud Service\char`\"{}), Settings\+Scope.\+Project); \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider_ae6d54aa5292a37c40a8b0f4cbceb42f1}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider_ae6d54aa5292a37c40a8b0f4cbceb42f1}} 
+abstract \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service}{IEditor\+Game\+Service}} {\bfseries Editor\+Game\+Service}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_unity_1_1_services_1_1_core_1_1_editor}{Editor}} game service for these project settings \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider_a34d41f69931996ad61c4d52875c3a38f}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider_a34d41f69931996ad61c4d52875c3a38f}} 
+abstract string {\bfseries Title}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Title of the service that will be displayed in the Project Settings \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider_a17e9cee6131981183679f73857dac22d}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider_a17e9cee6131981183679f73857dac22d}} 
+abstract string {\bfseries Description}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Description of the service that will be displayed in the Project Settings \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class to extend for an external service settings provider to become an editor game service settings provider 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider_a80277288a71f3af96a2401ac9fa842c6}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider_a80277288a71f3af96a2401ac9fa842c6}} 
+\index{Unity.Services.Core.Editor.EditorGameServiceSettingsProvider@{Unity.Services.Core.Editor.EditorGameServiceSettingsProvider}!EditorGameServiceSettingsProvider@{EditorGameServiceSettingsProvider}}
+\index{EditorGameServiceSettingsProvider@{EditorGameServiceSettingsProvider}!Unity.Services.Core.Editor.EditorGameServiceSettingsProvider@{Unity.Services.Core.Editor.EditorGameServiceSettingsProvider}}
+\doxysubsubsection{\texorpdfstring{EditorGameServiceSettingsProvider()}{EditorGameServiceSettingsProvider()}}
+{\footnotesize\ttfamily Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Settings\+Provider.\+Editor\+Game\+Service\+Settings\+Provider (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{Settings\+Scope}]{scopes,  }\item[{IEnumerable$<$ string $>$}]{keywords = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider}{Editor\+Game\+Service\+Settings\+Provider}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path to the settings. You SHOULD use \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider_abd65d9b746ecbb9f88583337614ca05a}{Generate\+Project\+Settings\+Path}} to provide it. \\
+\hline
+{\em scopes} & The scope of the provided settings. \\
+\hline
+{\em keywords} & Set of keywords for search purposes. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider_abd65d9b746ecbb9f88583337614ca05a}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider_abd65d9b746ecbb9f88583337614ca05a}} 
+\index{Unity.Services.Core.Editor.EditorGameServiceSettingsProvider@{Unity.Services.Core.Editor.EditorGameServiceSettingsProvider}!GenerateProjectSettingsPath@{GenerateProjectSettingsPath}}
+\index{GenerateProjectSettingsPath@{GenerateProjectSettingsPath}!Unity.Services.Core.Editor.EditorGameServiceSettingsProvider@{Unity.Services.Core.Editor.EditorGameServiceSettingsProvider}}
+\doxysubsubsection{\texorpdfstring{GenerateProjectSettingsPath()}{GenerateProjectSettingsPath()}}
+{\footnotesize\ttfamily static string Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Settings\+Provider.\+Generate\+Project\+Settings\+Path (\begin{DoxyParamCaption}\item[{string}]{service\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Use this to standardize Service Project Settings path\+: usage example\+: var provider = new My\+Cloud\+Service\+Settings(Generate\+Project\+Settings\+Path(\char`\"{}\+My Cloud Service\char`\"{}), Settings\+Scope.\+Project); 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service\+Name} & Name of the service to use in path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The path to pass as argument to Settings\+Provider
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider_a8c4ee3a521d0f219df8ae7f4d7a461e3}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider_a8c4ee3a521d0f219df8ae7f4d7a461e3}} 
+\index{Unity.Services.Core.Editor.EditorGameServiceSettingsProvider@{Unity.Services.Core.Editor.EditorGameServiceSettingsProvider}!GenerateServiceDetailUI@{GenerateServiceDetailUI}}
+\index{GenerateServiceDetailUI@{GenerateServiceDetailUI}!Unity.Services.Core.Editor.EditorGameServiceSettingsProvider@{Unity.Services.Core.Editor.EditorGameServiceSettingsProvider}}
+\doxysubsubsection{\texorpdfstring{GenerateServiceDetailUI()}{GenerateServiceDetailUI()}}
+{\footnotesize\ttfamily abstract Visual\+Element Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Settings\+Provider.\+Generate\+Service\+Detail\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Builds and return the \mbox{\hyperlink{namespace_unity_1_1_services}{Services}} specific UI as a Visual Element 
+
+\begin{DoxyReturn}{Returns}
+Return the parent node for this settings\textquotesingle{} detail UI. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_cloud_1_1_collaborate_1_1_editor_game_service_1_1_cloud_collab_settings_provider_afab2fbbd2301284af4940a1d34866fc2}{Unity.\+Cloud.\+Collaborate.\+Editor\+Game\+Service.\+Cloud\+Collab\+Settings\+Provider}}.
+
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider_ab36ce45bafbad5a336af0c773865b537}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_settings_provider_ab36ce45bafbad5a336af0c773865b537}} 
+\index{Unity.Services.Core.Editor.EditorGameServiceSettingsProvider@{Unity.Services.Core.Editor.EditorGameServiceSettingsProvider}!GenerateUnsupportedDetailUI@{GenerateUnsupportedDetailUI}}
+\index{GenerateUnsupportedDetailUI@{GenerateUnsupportedDetailUI}!Unity.Services.Core.Editor.EditorGameServiceSettingsProvider@{Unity.Services.Core.Editor.EditorGameServiceSettingsProvider}}
+\doxysubsubsection{\texorpdfstring{GenerateUnsupportedDetailUI()}{GenerateUnsupportedDetailUI()}}
+{\footnotesize\ttfamily virtual Visual\+Element Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Settings\+Provider.\+Generate\+Unsupported\+Detail\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+The UI to show when the editor API does not support the \mbox{\hyperlink{namespace_unity_1_1_services}{Services}} SDK \mbox{\hyperlink{namespace_unity_1_1_services_1_1_core}{Core}} package 
+
+\begin{DoxyReturn}{Returns}
+Custom UI to show when unsupported
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+services.\+core@1.\+0.\+1/\+Editor/\+Core/\+Editor\+Game\+Service/Editor\+Game\+Service\+Settings\+Provider.\+cs\end{DoxyCompactItemize}

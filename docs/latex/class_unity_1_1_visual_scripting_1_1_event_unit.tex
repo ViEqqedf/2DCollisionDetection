@@ -1,0 +1,164 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_event_unit}{}\doxysection{Unity.\+Visual\+Scripting.\+Event\+Unit\texorpdfstring{$<$}{<} TArgs \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_unity_1_1_visual_scripting_1_1_event_unit}\index{Unity.VisualScripting.EventUnit$<$ TArgs $>$@{Unity.VisualScripting.EventUnit$<$ TArgs $>$}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Event\+Unit\texorpdfstring{$<$}{<} TArgs \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.198339cm]{class_unity_1_1_visual_scripting_1_1_event_unit}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_unit_1_1_data}{Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_unit_afaff42bfc8aa6f3163d63bd9f68ee742}{Create\+Data}} ()
+\item 
+virtual \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_event_hook}{Event\+Hook}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_unit_a05ee563b769be3932f34d4f8f01b7dfd}{Get\+Hook}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} reference)
+\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_unit_af0daf14712d7725a9de7b206bb1827c7}{Start\+Listening}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}} stack)
+\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_unit_a252667d571f81ce1a0b35162289c4573}{Stop\+Listening}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}} stack)
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_unit_a617eb32cb7a4c19b9aedff1bbde2faf2}{Uninstantiate}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} instance)
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_unit_aeb57900178c756608dc7dcad22243cdd}{Is\+Listening}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Graph\+Pointer}} pointer)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_unit_a4f5d6261130dae19be649d521718d486}{Trigger}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} reference, TArgs args)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_unit_ae31751da04a2e1082f55201a1f1baff0}{Definition}} ()
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_event_unit_a3e1f4babf1ecc927269fb2daf892881b}\label{class_unity_1_1_visual_scripting_1_1_event_unit_a3e1f4babf1ecc927269fb2daf892881b}} 
+virtual bool {\bfseries Should\+Trigger} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}} flow, TArgs args)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_event_unit_a25c077c68767d855f6c6b54be31f2c07}\label{class_unity_1_1_visual_scripting_1_1_event_unit_a25c077c68767d855f6c6b54be31f2c07}} 
+virtual void {\bfseries Assign\+Arguments} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}} flow, TArgs args)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_event_unit_adca4916685b42cfb585eeebe2ee76db4}\label{class_unity_1_1_visual_scripting_1_1_event_unit_adca4916685b42cfb585eeebe2ee76db4}} 
+static bool {\bfseries Compare\+Names} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}} flow, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{Value\+Input}} name\+Port, string called\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_unit_a1ae3577374fabf9a3474e2e8390a8dd1}{coroutine}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Run this event in a coroutine, enabling asynchronous flow like wait nodes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_event_unit_a550c3692c3d797ceb8f44941443b097e}\label{class_unity_1_1_visual_scripting_1_1_event_unit_a550c3692c3d797ceb8f44941443b097e}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{Control\+Output}} {\bfseries trigger}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_event_unit_a223a269e4a2272929dc660cc717e8105}\label{class_unity_1_1_visual_scripting_1_1_event_unit_a223a269e4a2272929dc660cc717e8105}} 
+abstract bool {\bfseries register}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_event_unit_afaff42bfc8aa6f3163d63bd9f68ee742}\label{class_unity_1_1_visual_scripting_1_1_event_unit_afaff42bfc8aa6f3163d63bd9f68ee742}} 
+\index{Unity.VisualScripting.EventUnit$<$ TArgs $>$@{Unity.VisualScripting.EventUnit$<$ TArgs $>$}!CreateData@{CreateData}}
+\index{CreateData@{CreateData}!Unity.VisualScripting.EventUnit$<$ TArgs $>$@{Unity.VisualScripting.EventUnit$<$ TArgs $>$}}
+\doxysubsubsection{\texorpdfstring{CreateData()}{CreateData()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_unit}{Unity.\+Visual\+Scripting.\+Event\+Unit}}$<$ TArgs $>$.Create\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_with_data}{Unity.\+Visual\+Scripting.\+IGraph\+Element\+With\+Data}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_event_unit_ae31751da04a2e1082f55201a1f1baff0}\label{class_unity_1_1_visual_scripting_1_1_event_unit_ae31751da04a2e1082f55201a1f1baff0}} 
+\index{Unity.VisualScripting.EventUnit$<$ TArgs $>$@{Unity.VisualScripting.EventUnit$<$ TArgs $>$}!Definition@{Definition}}
+\index{Definition@{Definition}!Unity.VisualScripting.EventUnit$<$ TArgs $>$@{Unity.VisualScripting.EventUnit$<$ TArgs $>$}}
+\doxysubsubsection{\texorpdfstring{Definition()}{Definition()}}
+{\footnotesize\ttfamily override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_unit}{Unity.\+Visual\+Scripting.\+Event\+Unit}}$<$ TArgs $>$.Definition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit}{Unity.\+Visual\+Scripting.\+Unit}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_event_unit_a05ee563b769be3932f34d4f8f01b7dfd}\label{class_unity_1_1_visual_scripting_1_1_event_unit_a05ee563b769be3932f34d4f8f01b7dfd}} 
+\index{Unity.VisualScripting.EventUnit$<$ TArgs $>$@{Unity.VisualScripting.EventUnit$<$ TArgs $>$}!GetHook@{GetHook}}
+\index{GetHook@{GetHook}!Unity.VisualScripting.EventUnit$<$ TArgs $>$@{Unity.VisualScripting.EventUnit$<$ TArgs $>$}}
+\doxysubsubsection{\texorpdfstring{GetHook()}{GetHook()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_event_hook}{Event\+Hook}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_unit}{Unity.\+Visual\+Scripting.\+Event\+Unit}}$<$ TArgs $>$.Get\+Hook (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}}}]{reference }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_event_handler}{Unity.\+Visual\+Scripting.\+IGraph\+Event\+Handler$<$ TArgs $>$}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_event_unit_aeb57900178c756608dc7dcad22243cdd}\label{class_unity_1_1_visual_scripting_1_1_event_unit_aeb57900178c756608dc7dcad22243cdd}} 
+\index{Unity.VisualScripting.EventUnit$<$ TArgs $>$@{Unity.VisualScripting.EventUnit$<$ TArgs $>$}!IsListening@{IsListening}}
+\index{IsListening@{IsListening}!Unity.VisualScripting.EventUnit$<$ TArgs $>$@{Unity.VisualScripting.EventUnit$<$ TArgs $>$}}
+\doxysubsubsection{\texorpdfstring{IsListening()}{IsListening()}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_unit}{Unity.\+Visual\+Scripting.\+Event\+Unit}}$<$ TArgs $>$.Is\+Listening (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Graph\+Pointer}}}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_event_handler}{Unity.\+Visual\+Scripting.\+IGraph\+Event\+Handler$<$ TArgs $>$}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_event_unit_af0daf14712d7725a9de7b206bb1827c7}\label{class_unity_1_1_visual_scripting_1_1_event_unit_af0daf14712d7725a9de7b206bb1827c7}} 
+\index{Unity.VisualScripting.EventUnit$<$ TArgs $>$@{Unity.VisualScripting.EventUnit$<$ TArgs $>$}!StartListening@{StartListening}}
+\index{StartListening@{StartListening}!Unity.VisualScripting.EventUnit$<$ TArgs $>$@{Unity.VisualScripting.EventUnit$<$ TArgs $>$}}
+\doxysubsubsection{\texorpdfstring{StartListening()}{StartListening()}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_unit}{Unity.\+Visual\+Scripting.\+Event\+Unit}}$<$ TArgs $>$.Start\+Listening (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}}}]{stack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_event_listener}{Unity.\+Visual\+Scripting.\+IGraph\+Event\+Listener}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_event_unit_a252667d571f81ce1a0b35162289c4573}\label{class_unity_1_1_visual_scripting_1_1_event_unit_a252667d571f81ce1a0b35162289c4573}} 
+\index{Unity.VisualScripting.EventUnit$<$ TArgs $>$@{Unity.VisualScripting.EventUnit$<$ TArgs $>$}!StopListening@{StopListening}}
+\index{StopListening@{StopListening}!Unity.VisualScripting.EventUnit$<$ TArgs $>$@{Unity.VisualScripting.EventUnit$<$ TArgs $>$}}
+\doxysubsubsection{\texorpdfstring{StopListening()}{StopListening()}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_unit}{Unity.\+Visual\+Scripting.\+Event\+Unit}}$<$ TArgs $>$.Stop\+Listening (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}}}]{stack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_event_listener}{Unity.\+Visual\+Scripting.\+IGraph\+Event\+Listener}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_event_unit_a4f5d6261130dae19be649d521718d486}\label{class_unity_1_1_visual_scripting_1_1_event_unit_a4f5d6261130dae19be649d521718d486}} 
+\index{Unity.VisualScripting.EventUnit$<$ TArgs $>$@{Unity.VisualScripting.EventUnit$<$ TArgs $>$}!Trigger@{Trigger}}
+\index{Trigger@{Trigger}!Unity.VisualScripting.EventUnit$<$ TArgs $>$@{Unity.VisualScripting.EventUnit$<$ TArgs $>$}}
+\doxysubsubsection{\texorpdfstring{Trigger()}{Trigger()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_unit}{Unity.\+Visual\+Scripting.\+Event\+Unit}}$<$ TArgs $>$.Trigger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}}}]{reference,  }\item[{TArgs}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_event_handler}{Unity.\+Visual\+Scripting.\+IGraph\+Event\+Handler$<$ TArgs $>$}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_event_unit_a617eb32cb7a4c19b9aedff1bbde2faf2}\label{class_unity_1_1_visual_scripting_1_1_event_unit_a617eb32cb7a4c19b9aedff1bbde2faf2}} 
+\index{Unity.VisualScripting.EventUnit$<$ TArgs $>$@{Unity.VisualScripting.EventUnit$<$ TArgs $>$}!Uninstantiate@{Uninstantiate}}
+\index{Uninstantiate@{Uninstantiate}!Unity.VisualScripting.EventUnit$<$ TArgs $>$@{Unity.VisualScripting.EventUnit$<$ TArgs $>$}}
+\doxysubsubsection{\texorpdfstring{Uninstantiate()}{Uninstantiate()}}
+{\footnotesize\ttfamily override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_unit}{Unity.\+Visual\+Scripting.\+Event\+Unit}}$<$ TArgs $>$.Uninstantiate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}}}]{instance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element}{Unity.\+Visual\+Scripting.\+IGraph\+Element}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_event_unit_a1ae3577374fabf9a3474e2e8390a8dd1}\label{class_unity_1_1_visual_scripting_1_1_event_unit_a1ae3577374fabf9a3474e2e8390a8dd1}} 
+\index{Unity.VisualScripting.EventUnit$<$ TArgs $>$@{Unity.VisualScripting.EventUnit$<$ TArgs $>$}!coroutine@{coroutine}}
+\index{coroutine@{coroutine}!Unity.VisualScripting.EventUnit$<$ TArgs $>$@{Unity.VisualScripting.EventUnit$<$ TArgs $>$}}
+\doxysubsubsection{\texorpdfstring{coroutine}{coroutine}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_unit}{Unity.\+Visual\+Scripting.\+Event\+Unit}}$<$ TArgs $>$.coroutine = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Run this event in a coroutine, enabling asynchronous flow like wait nodes. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_event_unit}{Unity.\+Visual\+Scripting.\+IEvent\+Unit}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Flow/\+Framework/\+Events/Event\+Unit.\+cs\end{DoxyCompactItemize}

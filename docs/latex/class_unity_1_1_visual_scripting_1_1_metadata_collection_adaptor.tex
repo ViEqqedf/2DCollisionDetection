@@ -1,0 +1,399 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor}{}\doxysection{Unity.\+Visual\+Scripting.\+Metadata\+Collection\+Adaptor Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor}\index{Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Metadata\+Collection\+Adaptor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.264151cm]{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a1562101e46b59563acce0b05eff42959}{Begin\+GUI}} ()
+\begin{DoxyCompactList}\small\item\em Occurs before any list items are drawn. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a0dfd1c166d13bef31f8bb55046ac030b}{End\+GUI}} ()
+\begin{DoxyCompactList}\small\item\em Occurs after all list items have been drawn. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a82d136a1a374e49e8fcb637f00141b7b}{Draw\+Item\+Background}} (Rect position, int index)
+\begin{DoxyCompactList}\small\item\em Draws background of a list item. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a3116b9b0f04828b8409369a4b4810938}{Get\+Item\+Height}} (int index)
+\begin{DoxyCompactList}\small\item\em Gets height of list item in pixels. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_acb07efd739ae87a198196e068b75f97a}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_acb07efd739ae87a198196e068b75f97a}} 
+abstract float {\bfseries Get\+Item\+Height} (float width, int index)
+\item 
+abstract void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a379ddad9a3a84c8f61c541c63e439217}{Draw\+Item}} (Rect position, int index)
+\begin{DoxyCompactList}\small\item\em Draws main interface for a list item. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a8a2b4725989f56c373be3250eebe01a6}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a8a2b4725989f56c373be3250eebe01a6}} 
+abstract float {\bfseries Get\+Item\+Adaptive\+Width} (int index)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_ac83858847678a0a5dcd86fee2a739ef3}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_ac83858847678a0a5dcd86fee2a739ef3}} 
+float {\bfseries Get\+Adaptive\+Width} ()
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a8f270b313fc1be9b4e1f11af8761d05b}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a8f270b313fc1be9b4e1f11af8761d05b}} 
+float {\bfseries Get\+Height} (float width, GUIContent label)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_ac8c806a295b65348dcd948b8703e394b}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_ac8c806a295b65348dcd948b8703e394b}} 
+bool {\bfseries Field} (Rect position, GUIContent label)
+\item 
+abstract bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a1d61115fc8c93e47adcbea33e056122f}{Can\+Drag}} (int index)
+\begin{DoxyCompactList}\small\item\em Determines whether an item can be reordered by dragging mouse. \end{DoxyCompactList}\item 
+abstract bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a8a44f12ccb9c54d93944fcd7ab8545db}{Can\+Remove}} (int index)
+\begin{DoxyCompactList}\small\item\em Determines whether an item can be removed from list. \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_adbdc29a59d9387014aae24460f3068fb}{Add}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_add}{Add}} new element at end of list. \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a1c411a11a73f92140f24473cd89a0d7b}{Insert}} (int index)
+\begin{DoxyCompactList}\small\item\em Insert new element at specified index. \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a2e3ee87e4ed973d9be180e1d4ed76e72}{Duplicate}} (int index)
+\begin{DoxyCompactList}\small\item\em Duplicate existing element. \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a12145ebaeb0b17c8c8eecc072cf4db98}{Remove}} (int index)
+\begin{DoxyCompactList}\small\item\em Remove element at specified index. \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a5061e0bb581ef99a2bac74a7c7419aa3}{Move}} (int source\+Index, int dest\+Index)
+\begin{DoxyCompactList}\small\item\em Move element from source index to destination index. \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a2f637de97a927b05b25d515ec558a8b3}{Clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear all elements from list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_ae211880d4b74e88e44e26b01cd73bd34}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_ae211880d4b74e88e44e26b01cd73bd34}} 
+{\bfseries Metadata\+Collection\+Adaptor} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} metadata, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector}{Inspector}} parent\+Inspector)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a2f0df0a554c8d1d7c4fd60cbd8363c57}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a2f0df0a554c8d1d7c4fd60cbd8363c57}} 
+virtual float {\bfseries Get\+Title\+Height} (float width, GUIContent title)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a28448593de384f2530ed6af95b1a388b}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a28448593de384f2530ed6af95b1a388b}} 
+virtual void {\bfseries On\+Title\+GUI} (Rect position, GUIContent title)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a3c0b55626b914b97f2acf56934e3510d}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a3c0b55626b914b97f2acf56934e3510d}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector}{Inspector}} {\bfseries parent\+Inspector}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+abstract int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_ae36ccea8eb428bd80b5ae893ec48283b}{Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets count of elements in list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_adbdc29a59d9387014aae24460f3068fb}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_adbdc29a59d9387014aae24460f3068fb}} 
+\index{Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}!Add@{Add}}
+\index{Add@{Add}!Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily abstract void Unity.\+Visual\+Scripting.\+Metadata\+Collection\+Adaptor.\+Add (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_add}{Add}} new element at end of list. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a01062c6f0fe1a2613097183952ff0826}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_dictionary_adaptor_a612cb0eac42be776825ecec2ffd27693}{Unity.\+Visual\+Scripting.\+Metadata\+Dictionary\+Adaptor}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_list_adaptor_a38a2ca794938a654a85b549ec064e542}{Unity.\+Visual\+Scripting.\+Metadata\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a1562101e46b59563acce0b05eff42959}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a1562101e46b59563acce0b05eff42959}} 
+\index{Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}!BeginGUI@{BeginGUI}}
+\index{BeginGUI@{BeginGUI}!Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}}
+\doxysubsubsection{\texorpdfstring{BeginGUI()}{BeginGUI()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Metadata\+Collection\+Adaptor.\+Begin\+GUI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Occurs before any list items are drawn. 
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} method is only used to handle GUI repaint events.
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a0dfd1c166d13bef31f8bb55046ac030b}{End\+GUI()}} 
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_ac4f826536c55e82eb385009e58cfab12}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a1d61115fc8c93e47adcbea33e056122f}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a1d61115fc8c93e47adcbea33e056122f}} 
+\index{Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}!CanDrag@{CanDrag}}
+\index{CanDrag@{CanDrag}!Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}}
+\doxysubsubsection{\texorpdfstring{CanDrag()}{CanDrag()}}
+{\footnotesize\ttfamily abstract bool Unity.\+Visual\+Scripting.\+Metadata\+Collection\+Adaptor.\+Can\+Drag (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Determines whether an item can be reordered by dragging mouse. 
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} should be a light-\/weight method since it will be used to determine whether grab handle should be included for each item in a reorderable list. 
+
+Please note that returning a value of {\ttfamily false} does not prevent movement on list item since other draggable items can be moved around it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Zero-\/based index for list element.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value of {\ttfamily true} if item can be dragged; otherwise {\ttfamily false}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_aa7fbe9abc79c9aa671250ffc8bd548d3}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_dictionary_adaptor_a015f5536f7e164a2087a9bd2bc87f5d9}{Unity.\+Visual\+Scripting.\+Metadata\+Dictionary\+Adaptor}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_list_adaptor_a73d8af9a3902d66fb9c83c08f3deea63}{Unity.\+Visual\+Scripting.\+Metadata\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a8a44f12ccb9c54d93944fcd7ab8545db}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a8a44f12ccb9c54d93944fcd7ab8545db}} 
+\index{Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}!CanRemove@{CanRemove}}
+\index{CanRemove@{CanRemove}!Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}}
+\doxysubsubsection{\texorpdfstring{CanRemove()}{CanRemove()}}
+{\footnotesize\ttfamily abstract bool Unity.\+Visual\+Scripting.\+Metadata\+Collection\+Adaptor.\+Can\+Remove (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Determines whether an item can be removed from list. 
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} should be a light-\/weight method since it will be used to determine whether remove button should be included for each item in list. 
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} is redundant when Reorderable\+List\+Flags.\+Hide\+Remove\+Buttons is specified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Zero-\/based index for list element.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value of {\ttfamily true} if item can be removed; otherwise {\ttfamily false}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a22124e5ae377b9e4a7d1295d12f727ee}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_dictionary_adaptor_a22e3810daa2cf6f6f18dfaf55dbc3c53}{Unity.\+Visual\+Scripting.\+Metadata\+Dictionary\+Adaptor}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_list_adaptor_a2847357413e67cdcf5d6de625b0014a6}{Unity.\+Visual\+Scripting.\+Metadata\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a2f637de97a927b05b25d515ec558a8b3}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a2f637de97a927b05b25d515ec558a8b3}} 
+\index{Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}!Clear@{Clear}}
+\index{Clear@{Clear}!Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily abstract void Unity.\+Visual\+Scripting.\+Metadata\+Collection\+Adaptor.\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Clear all elements from list. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_ad1ee0f340786030525d3b7452f86c386}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_dictionary_adaptor_a97e266e3d77acd79dcaab2f907814a30}{Unity.\+Visual\+Scripting.\+Metadata\+Dictionary\+Adaptor}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_list_adaptor_ac76783b6be83fd0ff00dedda8bd2cd26}{Unity.\+Visual\+Scripting.\+Metadata\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a379ddad9a3a84c8f61c541c63e439217}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a379ddad9a3a84c8f61c541c63e439217}} 
+\index{Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}!DrawItem@{DrawItem}}
+\index{DrawItem@{DrawItem}!Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}}
+\doxysubsubsection{\texorpdfstring{DrawItem()}{DrawItem()}}
+{\footnotesize\ttfamily abstract void Unity.\+Visual\+Scripting.\+Metadata\+Collection\+Adaptor.\+Draw\+Item (\begin{DoxyParamCaption}\item[{Rect}]{position,  }\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Draws main interface for a list item. 
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} method is used to handle all GUI events.
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position in GUI.\\
+\hline
+{\em index} & Zero-\/based index of array element.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a6a4b8ea90f37a592df99b6268285433d}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_dictionary_adaptor_aef35310c698872f47008799065f2a0f6}{Unity.\+Visual\+Scripting.\+Metadata\+Dictionary\+Adaptor}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_list_adaptor_a32c90f07ffb598c8d51484b8ab6e2e8f}{Unity.\+Visual\+Scripting.\+Metadata\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a82d136a1a374e49e8fcb637f00141b7b}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a82d136a1a374e49e8fcb637f00141b7b}} 
+\index{Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}!DrawItemBackground@{DrawItemBackground}}
+\index{DrawItemBackground@{DrawItemBackground}!Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}}
+\doxysubsubsection{\texorpdfstring{DrawItemBackground()}{DrawItemBackground()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Metadata\+Collection\+Adaptor.\+Draw\+Item\+Background (\begin{DoxyParamCaption}\item[{Rect}]{position,  }\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Draws background of a list item. 
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} method is only used to handle GUI repaint events.
+
+Background of list item spans a slightly larger area than the main interface that is drawn by \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a379ddad9a3a84c8f61c541c63e439217}{Draw\+Item(\+Rect, int)}} since it is drawn behind the grab handle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Total position of list element in GUI.\\
+\hline
+{\em index} & Zero-\/based index of array element.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a06e39a84d45e61934e4130130459442c}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_list_adaptor_adfa365285f685fef7a7419f7b7500ac5}{Unity.\+Visual\+Scripting.\+Metadata\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a2e3ee87e4ed973d9be180e1d4ed76e72}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a2e3ee87e4ed973d9be180e1d4ed76e72}} 
+\index{Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}!Duplicate@{Duplicate}}
+\index{Duplicate@{Duplicate}!Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}}
+\doxysubsubsection{\texorpdfstring{Duplicate()}{Duplicate()}}
+{\footnotesize\ttfamily abstract void Unity.\+Visual\+Scripting.\+Metadata\+Collection\+Adaptor.\+Duplicate (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Duplicate existing element. 
+
+Consider using the System.\+ICloneable interface to duplicate list elements where appropriate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Zero-\/based index of list element.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a08abb5bea8ee62ae89892b259a21be29}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_dictionary_adaptor_a0ba5fe7087b3e8867e7c4a0cd685abfd}{Unity.\+Visual\+Scripting.\+Metadata\+Dictionary\+Adaptor}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_list_adaptor_ac1361dc894606f44ab7f11900c930035}{Unity.\+Visual\+Scripting.\+Metadata\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a0dfd1c166d13bef31f8bb55046ac030b}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a0dfd1c166d13bef31f8bb55046ac030b}} 
+\index{Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}!EndGUI@{EndGUI}}
+\index{EndGUI@{EndGUI}!Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}}
+\doxysubsubsection{\texorpdfstring{EndGUI()}{EndGUI()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Metadata\+Collection\+Adaptor.\+End\+GUI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Occurs after all list items have been drawn. 
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} method is only used to handle GUI repaint events.
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a1562101e46b59563acce0b05eff42959}{Begin\+GUI()}} 
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a5040cb430c745b1d855b09fd673131be}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a3116b9b0f04828b8409369a4b4810938}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a3116b9b0f04828b8409369a4b4810938}} 
+\index{Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}!GetItemHeight@{GetItemHeight}}
+\index{GetItemHeight@{GetItemHeight}!Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}}
+\doxysubsubsection{\texorpdfstring{GetItemHeight()}{GetItemHeight()}}
+{\footnotesize\ttfamily float Unity.\+Visual\+Scripting.\+Metadata\+Collection\+Adaptor.\+Get\+Item\+Height (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets height of list item in pixels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Zero-\/based index of array element.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Measurement in pixels. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_ad5942707f43e6001b07e2ea66b805715}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a1c411a11a73f92140f24473cd89a0d7b}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a1c411a11a73f92140f24473cd89a0d7b}} 
+\index{Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}!Insert@{Insert}}
+\index{Insert@{Insert}!Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily abstract void Unity.\+Visual\+Scripting.\+Metadata\+Collection\+Adaptor.\+Insert (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Insert new element at specified index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Zero-\/based index for list element.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a2d87e92402db877d3fef15fe43210618}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_dictionary_adaptor_a4c33444e65209f4fa733dbe664411707}{Unity.\+Visual\+Scripting.\+Metadata\+Dictionary\+Adaptor}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_list_adaptor_afc51ddaa86d853d9abb868b08d744664}{Unity.\+Visual\+Scripting.\+Metadata\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a5061e0bb581ef99a2bac74a7c7419aa3}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a5061e0bb581ef99a2bac74a7c7419aa3}} 
+\index{Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}!Move@{Move}}
+\index{Move@{Move}!Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily abstract void Unity.\+Visual\+Scripting.\+Metadata\+Collection\+Adaptor.\+Move (\begin{DoxyParamCaption}\item[{int}]{source\+Index,  }\item[{int}]{dest\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Move element from source index to destination index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source\+Index} & Zero-\/based index of source element.\\
+\hline
+{\em dest\+Index} & Zero-\/based index of destination element.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a462d71b0324807c5e29e74b541584131}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_dictionary_adaptor_aa79df2aa704209cdeb392b1068852c79}{Unity.\+Visual\+Scripting.\+Metadata\+Dictionary\+Adaptor}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_list_adaptor_a39a7c6dc35a714d08f701e408876318b}{Unity.\+Visual\+Scripting.\+Metadata\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a12145ebaeb0b17c8c8eecc072cf4db98}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_a12145ebaeb0b17c8c8eecc072cf4db98}} 
+\index{Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}!Remove@{Remove}}
+\index{Remove@{Remove}!Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily abstract void Unity.\+Visual\+Scripting.\+Metadata\+Collection\+Adaptor.\+Remove (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Remove element at specified index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Zero-\/based index of list element.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a06be726ab3faec949d507c1efe02c2cc}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_dictionary_adaptor_a95112a13ee56a29e16c2a76e12842b0c}{Unity.\+Visual\+Scripting.\+Metadata\+Dictionary\+Adaptor}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_list_adaptor_a6340818087387e8e33563202149fbdde}{Unity.\+Visual\+Scripting.\+Metadata\+List\+Adaptor}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_ae36ccea8eb428bd80b5ae893ec48283b}\label{class_unity_1_1_visual_scripting_1_1_metadata_collection_adaptor_ae36ccea8eb428bd80b5ae893ec48283b}} 
+\index{Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}!Count@{Count}}
+\index{Count@{Count}!Unity.VisualScripting.MetadataCollectionAdaptor@{Unity.VisualScripting.MetadataCollectionAdaptor}}
+\doxysubsubsection{\texorpdfstring{Count}{Count}}
+{\footnotesize\ttfamily abstract int Unity.\+Visual\+Scripting.\+Metadata\+Collection\+Adaptor.\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets count of elements in list. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor_a6c6a3651bc3d394c38927f54eb0ede9e}{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Adaptor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Editor/\+Visual\+Scripting.\+Core/\+Inspection/Metadata\+Collection\+Adaptor.\+cs\end{DoxyCompactItemize}

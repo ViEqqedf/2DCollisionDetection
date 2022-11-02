@@ -1,0 +1,82 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression}{}\doxysection{Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc.\+Expression Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression}\index{Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a8a7b66f08c1750faef51e50579529b01}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a8a7b66f08c1750faef51e50579529b01}} 
+{\bfseries Expression} (string expression, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393}{Evaluate\+Options}} options=\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393a6adf97f83acf6453d4a6a4b1070f3754}{Evaluate\+Options.\+None}})
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a114816538a5e54a509050417530881d0}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a114816538a5e54a509050417530881d0}} 
+{\bfseries Expression} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_logical_expression}{Logical\+Expression}} expression, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393}{Evaluate\+Options}} options=\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393a6adf97f83acf6453d4a6a4b1070f3754}{Evaluate\+Options.\+None}})
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a916552486e7ed317ec672b2d7fe9657e}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a916552486e7ed317ec672b2d7fe9657e}} 
+void {\bfseries Update\+Unity\+Time\+Parameters} ()
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_aeed2b7e84471a77ffec2f78466c17780}{Has\+Errors}} ()
+\begin{DoxyCompactList}\small\item\em Pre-\/compiles the expression in order to check syntax errors. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} errors are detected, the Error property contains the message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a776e921549f4175b9af86af3f049295b}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a776e921549f4175b9af86af3f049295b}} 
+object {\bfseries Evaluate} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}} flow)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_ae2677bd76874c64fae0fbce8a7f5b7ec}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_ae2677bd76874c64fae0fbce8a7f5b7ec}} 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_logical_expression}{Logical\+Expression}} {\bfseries Compile} (string expression, bool no\+Cache)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a098c3f0d764c989f8628fd7184952a07}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a098c3f0d764c989f8628fd7184952a07}} 
+readonly string {\bfseries Original\+Expression}
+\begin{DoxyCompactList}\small\item\em Textual representation of the expression to evaluate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a5c18acb0478934afd7d25c469149ce41}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a5c18acb0478934afd7d25c469149ce41}} 
+Dictionary$<$ string, IEnumerator $>$ {\bfseries Parameter\+Enumerators}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a5e871290cafaf7ae09b5324f1661e8e5}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a5e871290cafaf7ae09b5324f1661e8e5}} 
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393}{Evaluate\+Options}} {\bfseries Options}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_ac9f12a8e36a08999a2c476293d148977}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_ac9f12a8e36a08999a2c476293d148977}} 
+string {\bfseries Error}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a5b02f5779b57b1a73eded322734330fe}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a5b02f5779b57b1a73eded322734330fe}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_logical_expression}{Logical\+Expression}} {\bfseries Parsed\+Expression}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_af5dfa5d7fd6ac292fbebf4eb733b9637}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_af5dfa5d7fd6ac292fbebf4eb733b9637}} 
+Dictionary$<$ string, object $>$ {\bfseries Parameters}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a28baab5536ab85e95869109705b8e12f}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a28baab5536ab85e95869109705b8e12f}} 
+static bool {\bfseries Cache\+Enabled}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a35e4dc0e93c20115682a2ad69aa08a03}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a35e4dc0e93c20115682a2ad69aa08a03}} 
+Evaluate\+Function\+Handler {\bfseries Evaluate\+Function}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a81d08097608118d081b0b450d9f4ac1a}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a81d08097608118d081b0b450d9f4ac1a}} 
+Evaluate\+Parameter\+Handler {\bfseries Evaluate\+Parameter}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_aeed2b7e84471a77ffec2f78466c17780}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_aeed2b7e84471a77ffec2f78466c17780}} 
+\index{Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}!HasErrors@{HasErrors}}
+\index{HasErrors@{HasErrors}!Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}}
+\doxysubsubsection{\texorpdfstring{HasErrors()}{HasErrors()}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc.\+Expression.\+Has\+Errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pre-\/compiles the expression in order to check syntax errors. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} errors are detected, the Error property contains the message. 
+
+\begin{DoxyReturn}{Returns}
+True if the expression syntax is correct, otherwise false
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Flow/\+Dependencies/\+NCalc/Expression.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,133 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_type_option_tree}{}\doxysection{Unity.\+Visual\+Scripting.\+Type\+Option\+Tree Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_type_option_tree}\index{Unity.VisualScripting.TypeOptionTree@{Unity.VisualScripting.TypeOptionTree}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Type\+Option\+Tree\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_1_1_visual_scripting_1_1_type_option_tree}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_type_option_tree_ab31cbe54b452d257390b73bbc4161d33}\label{class_unity_1_1_visual_scripting_1_1_type_option_tree_ab31cbe54b452d257390b73bbc4161d33}} 
+enum {\bfseries Root\+Mode} \{ {\bfseries Types}
+, {\bfseries Namespaces}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option}{IFuzzy\+Option}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_type_option_tree_acf16cb96c772523b2f27a2060a88d5ea}{Option}} (object item)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_type_option_tree_a5d09da4e05f84ad259213d179ed99381}\label{class_unity_1_1_visual_scripting_1_1_type_option_tree_a5d09da4e05f84ad259213d179ed99381}} 
+{\bfseries Type\+Option\+Tree} (IEnumerable$<$ Type $>$ types)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_type_option_tree_a78e1566102b195ca21dc61e84ada18dd}\label{class_unity_1_1_visual_scripting_1_1_type_option_tree_a78e1566102b195ca21dc61e84ada18dd}} 
+{\bfseries Type\+Option\+Tree} (IEnumerable$<$ Type $>$ type\+Set, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_type_filter}{Type\+Filter}} filter)
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_type_option_tree_ac88cf9c5f54ba62e585e524274f6d3a1}{Prewarm}} ()
+\item 
+override IEnumerable$<$ object $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_type_option_tree_a8521643614a6daa1004cc887fcfa4bfb}{Root}} ()
+\item 
+override IEnumerable$<$ object $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_type_option_tree_a7f566b1b54908ce9553dbbb929bbb049}{Children}} (object parent)
+\item 
+override IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_search_result}{ISearch\+Result}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_type_option_tree_a2f68df5b1be9d3b69865432e8be5917f}{Search\+Results}} (string query, Cancellation\+Token cancellation)
+\item 
+override string \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_type_option_tree_abce3fa28d7c5d9db73ee8b982182c813}{Search\+Result\+Label}} (object item, string query)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_type_option_tree_aa8a8e5398cae0a2310e6238d5fb93038}\label{class_unity_1_1_visual_scripting_1_1_type_option_tree_aa8a8e5398cae0a2310e6238d5fb93038}} 
+Root\+Mode {\bfseries root\+Mode} = Root\+Mode.\+Namespaces\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_type_option_tree_a8f7db70a1053a49abeb4e93b8eb18cf0}\label{class_unity_1_1_visual_scripting_1_1_type_option_tree_a8f7db70a1053a49abeb4e93b8eb18cf0}} 
+bool {\bfseries group\+Enums} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_type_option_tree_adc53d0592f370390c98242aa4a8ed4e9}\label{class_unity_1_1_visual_scripting_1_1_type_option_tree_adc53d0592f370390c98242aa4a8ed4e9}} 
+bool {\bfseries surface\+Common\+Types} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+override bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_type_option_tree_a0b5cf803319d619d6626bd840c0e07d8}{searchable}} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_type_option_tree_a7f566b1b54908ce9553dbbb929bbb049}\label{class_unity_1_1_visual_scripting_1_1_type_option_tree_a7f566b1b54908ce9553dbbb929bbb049}} 
+\index{Unity.VisualScripting.TypeOptionTree@{Unity.VisualScripting.TypeOptionTree}!Children@{Children}}
+\index{Children@{Children}!Unity.VisualScripting.TypeOptionTree@{Unity.VisualScripting.TypeOptionTree}}
+\doxysubsubsection{\texorpdfstring{Children()}{Children()}}
+{\footnotesize\ttfamily override IEnumerable$<$ object $>$ Unity.\+Visual\+Scripting.\+Type\+Option\+Tree.\+Children (\begin{DoxyParamCaption}\item[{object}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_type_option_tree_acf16cb96c772523b2f27a2060a88d5ea}\label{class_unity_1_1_visual_scripting_1_1_type_option_tree_acf16cb96c772523b2f27a2060a88d5ea}} 
+\index{Unity.VisualScripting.TypeOptionTree@{Unity.VisualScripting.TypeOptionTree}!Option@{Option}}
+\index{Option@{Option}!Unity.VisualScripting.TypeOptionTree@{Unity.VisualScripting.TypeOptionTree}}
+\doxysubsubsection{\texorpdfstring{Option()}{Option()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option}{IFuzzy\+Option}} Unity.\+Visual\+Scripting.\+Type\+Option\+Tree.\+Option (\begin{DoxyParamCaption}\item[{object}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_type_option_tree_ac88cf9c5f54ba62e585e524274f6d3a1}\label{class_unity_1_1_visual_scripting_1_1_type_option_tree_ac88cf9c5f54ba62e585e524274f6d3a1}} 
+\index{Unity.VisualScripting.TypeOptionTree@{Unity.VisualScripting.TypeOptionTree}!Prewarm@{Prewarm}}
+\index{Prewarm@{Prewarm}!Unity.VisualScripting.TypeOptionTree@{Unity.VisualScripting.TypeOptionTree}}
+\doxysubsubsection{\texorpdfstring{Prewarm()}{Prewarm()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+Type\+Option\+Tree.\+Prewarm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_type_option_tree_a8521643614a6daa1004cc887fcfa4bfb}\label{class_unity_1_1_visual_scripting_1_1_type_option_tree_a8521643614a6daa1004cc887fcfa4bfb}} 
+\index{Unity.VisualScripting.TypeOptionTree@{Unity.VisualScripting.TypeOptionTree}!Root@{Root}}
+\index{Root@{Root}!Unity.VisualScripting.TypeOptionTree@{Unity.VisualScripting.TypeOptionTree}}
+\doxysubsubsection{\texorpdfstring{Root()}{Root()}}
+{\footnotesize\ttfamily override IEnumerable$<$ object $>$ Unity.\+Visual\+Scripting.\+Type\+Option\+Tree.\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_type_option_tree_abce3fa28d7c5d9db73ee8b982182c813}\label{class_unity_1_1_visual_scripting_1_1_type_option_tree_abce3fa28d7c5d9db73ee8b982182c813}} 
+\index{Unity.VisualScripting.TypeOptionTree@{Unity.VisualScripting.TypeOptionTree}!SearchResultLabel@{SearchResultLabel}}
+\index{SearchResultLabel@{SearchResultLabel}!Unity.VisualScripting.TypeOptionTree@{Unity.VisualScripting.TypeOptionTree}}
+\doxysubsubsection{\texorpdfstring{SearchResultLabel()}{SearchResultLabel()}}
+{\footnotesize\ttfamily override string Unity.\+Visual\+Scripting.\+Type\+Option\+Tree.\+Search\+Result\+Label (\begin{DoxyParamCaption}\item[{object}]{item,  }\item[{string}]{query }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_type_option_tree_a2f68df5b1be9d3b69865432e8be5917f}\label{class_unity_1_1_visual_scripting_1_1_type_option_tree_a2f68df5b1be9d3b69865432e8be5917f}} 
+\index{Unity.VisualScripting.TypeOptionTree@{Unity.VisualScripting.TypeOptionTree}!SearchResults@{SearchResults}}
+\index{SearchResults@{SearchResults}!Unity.VisualScripting.TypeOptionTree@{Unity.VisualScripting.TypeOptionTree}}
+\doxysubsubsection{\texorpdfstring{SearchResults()}{SearchResults()}}
+{\footnotesize\ttfamily override IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_search_result}{ISearch\+Result}} $>$ Unity.\+Visual\+Scripting.\+Type\+Option\+Tree.\+Search\+Results (\begin{DoxyParamCaption}\item[{string}]{query,  }\item[{Cancellation\+Token}]{cancellation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+Fuzzy\+Option\+Tree}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_type_option_tree_a0b5cf803319d619d6626bd840c0e07d8}\label{class_unity_1_1_visual_scripting_1_1_type_option_tree_a0b5cf803319d619d6626bd840c0e07d8}} 
+\index{Unity.VisualScripting.TypeOptionTree@{Unity.VisualScripting.TypeOptionTree}!searchable@{searchable}}
+\index{searchable@{searchable}!Unity.VisualScripting.TypeOptionTree@{Unity.VisualScripting.TypeOptionTree}}
+\doxysubsubsection{\texorpdfstring{searchable}{searchable}}
+{\footnotesize\ttfamily override bool Unity.\+Visual\+Scripting.\+Type\+Option\+Tree.\+searchable = true\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option_tree}{Unity.\+Visual\+Scripting.\+IFuzzy\+Option\+Tree}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Editor/\+Visual\+Scripting.\+Core/\+Reflection/Type\+Option\+Tree.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,75 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_shadow}{}\doxysection{Unity\+Engine.\+UI.\+Shadow Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_shadow}\index{UnityEngine.UI.Shadow@{UnityEngine.UI.Shadow}}
+
+
+Adds an outline to a graphic using \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_vertex_modifier}{IVertex\+Modifier}}.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Shadow\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_engine_1_1_u_i_1_1_shadow}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_shadow_afd11b7450230d23baa4caf07a90f5c01}\label{class_unity_engine_1_1_u_i_1_1_shadow_afd11b7450230d23baa4caf07a90f5c01}} 
+override void {\bfseries Modify\+Mesh} (Vertex\+Helper vh)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_shadow_a0492d4673b17683053515df63c20dd57}\label{class_unity_engine_1_1_u_i_1_1_shadow_a0492d4673b17683053515df63c20dd57}} 
+void {\bfseries Apply\+Shadow\+Zero\+Alloc} (List$<$ UIVertex $>$ verts, Color32 color, int start, int end, float x, float y)
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_shadow_afe442dfc3dd4af6939ad7b51662f7fae}{Apply\+Shadow}} (List$<$ UIVertex $>$ verts, Color32 color, int start, int end, float x, float y)
+\begin{DoxyCompactList}\small\item\em Duplicate vertices from start to end and turn them into shadows with the given offset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_shadow_a11356a78006b8f152870aeb810df589c}\label{class_unity_engine_1_1_u_i_1_1_shadow_a11356a78006b8f152870aeb810df589c}} 
+Color {\bfseries effect\+Color}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Color for the effect \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_shadow_af44aff007bed0a755ee66ae325582f09}\label{class_unity_engine_1_1_u_i_1_1_shadow_af44aff007bed0a755ee66ae325582f09}} 
+Vector2 {\bfseries effect\+Distance}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em How far is the shadow from the graphic. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_shadow_aaca7edd636da6468f238a1f8bf7db17d}\label{class_unity_engine_1_1_u_i_1_1_shadow_aaca7edd636da6468f238a1f8bf7db17d}} 
+bool {\bfseries use\+Graphic\+Alpha}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Should the shadow inherit the alpha from the graphic? \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Adds an outline to a graphic using \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_vertex_modifier}{IVertex\+Modifier}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_shadow_afe442dfc3dd4af6939ad7b51662f7fae}\label{class_unity_engine_1_1_u_i_1_1_shadow_afe442dfc3dd4af6939ad7b51662f7fae}} 
+\index{UnityEngine.UI.Shadow@{UnityEngine.UI.Shadow}!ApplyShadow@{ApplyShadow}}
+\index{ApplyShadow@{ApplyShadow}!UnityEngine.UI.Shadow@{UnityEngine.UI.Shadow}}
+\doxysubsubsection{\texorpdfstring{ApplyShadow()}{ApplyShadow()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Shadow.\+Apply\+Shadow (\begin{DoxyParamCaption}\item[{List$<$ UIVertex $>$}]{verts,  }\item[{Color32}]{color,  }\item[{int}]{start,  }\item[{int}]{end,  }\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Duplicate vertices from start to end and turn them into shadows with the given offset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em verts} & Vert list to copy\\
+\hline
+{\em color} & \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_shadow}{Shadow}} color\\
+\hline
+{\em start} & The start index in the verts list\\
+\hline
+{\em end} & The end index in the vers list\\
+\hline
+{\em x} & The shadows x offset\\
+\hline
+{\em y} & The shadows y offset\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/\+Vertex\+Modifiers/Shadow.\+cs\end{DoxyCompactItemize}

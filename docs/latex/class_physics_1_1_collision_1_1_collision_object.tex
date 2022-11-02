@@ -1,0 +1,479 @@
+\hypertarget{class_physics_1_1_collision_1_1_collision_object}{}\doxysection{Physics.\+Collision.\+Collision\+Object类 参考}
+\label{class_physics_1_1_collision_1_1_collision_object}\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+
+
+类 Physics.\+Collision.\+Collision\+Object 继承关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_physics_1_1_collision_1_1_collision_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Physics.\+Collision.\+Collision\+Object 的协作图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_physics_1_1_collision_1_1_collision_object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a8c7eb894c40afa08ee8791424f5007c3}{Collision\+Object}} (\mbox{\hyperlink{class_physics_1_1_collision_1_1_shape_1_1_collision_shape}{Collision\+Shape}} \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a0ac013c381cc638f83335affb2344c15}{shape}}, \mbox{\hyperlink{_collision_object_8cs_a5b2c8b05b9a357906d7f9e5b2c1e154d}{Object}} \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a39e9e00b1717b4c5ced03174a90d7226}{context\+Object}}, Vector3 start\+Pos, float start\+Rotation=0, int \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a6a70ecc9a8888c8e177dd2722ffc35a3}{level}}=0)
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a08bb2ab0fee9cf7f7b6af438d3b2d1db}{Apply\+Position}} ()
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_afaeabc5afd6bdda46db3ab9e3bbfec9f}{Apply\+Rotation}} (Vector3 new\+Rotation)
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_acb5f4239562994def280e100e8fb416b}{Apply\+Scale}} (float new\+Scale)
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a8a0748fa64dc6f65374a9d61e7065da4}{Init\+Collision\+Object}} ()
+\item 
+\mbox{\hyperlink{class_physics_1_1_collision_1_1_projection_point}{Projection\+Point}} \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_aec20035d4ece9a46c457cd71761f6c16}{Get\+Projection\+Point}} (\mbox{\hyperlink{namespace_physics_1_1_collision_1_1_model_a536ffeeaef5a92e82e7cf53894167de1}{AABBProjection\+Type}} projection\+Type)
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a1d619f33e85ae72c0cfa06fddbad7655}{Translate}} (Vector3 diff)
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a4846199027ea91a2f9fcfbd67de5211a}{Translate\+To}} (Vector3 value)
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_ae7ca75e378460be4294e71af9aa37001}{Rotate}} (Vector3 diff)
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_aadfcbb13752f3b48cee485d349a2580f}{Rotate\+To}} (Vector3 value)
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a8318e2845f2f71cb8b5396a5e4f58c7f}{Scale}} (float diff)
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a14aad5d8c4b1ac3883a2c44f1c05d5cb}{Scale\+To}} (float value)
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a2158afaa00db6dc8fe254b6029b296bb}{Add\+Velocity}} (Vector3 diff)
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a9705a53611c27dc2d8cadf5af3470f58}{Add\+Acceleration}} (Vector3 diff)
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_abe594e0f6703f8bce366fe6a5607cb37}{Set\+Velocity}} (Vector3 final\+Velocity)
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a59b7fc26e50ecaed3ae0e73260c17056}{Add\+Resolve\+Velocity}} (Vector3 diff)
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a7a805a42fc5c86aff1715e9ce7f77d48}{Clean\+Resolve\+Velocity}} ()
+\item 
+Vector3 \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a28cc343d91add7b15402133b83d76b27}{Get\+Farthest\+Point\+In\+Dir}} (Vector3 dir)
+\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a8469ae556dd1868315a5bb8b2dcf0d9f}{Is\+Same\+Collision\+Object}} (\mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object}{Collision\+Object}} obj1, \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object}{Collision\+Object}} obj2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a07a3bedeecfb1732aaca4f39cf861d6f}{id}}
+\item 
+\mbox{\hyperlink{class_physics_1_1_collision_1_1_shape_1_1_collision_shape}{Collision\+Shape}} \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a0ac013c381cc638f83335affb2344c15}{shape}}
+\item 
+\mbox{\hyperlink{namespace_physics_1_1_collision_a09600d3518d3aa259f075a6935f8e254}{Collision\+Flags}} \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a77c6fa684ab88ea217aa59391dd5b997}{flags}} = \mbox{\hyperlink{namespace_physics_1_1_collision_a09600d3518d3aa259f075a6935f8e254a7a1920d61156abc05a60135aefe8bc67}{Collision\+Flags.\+Default}}
+\item 
+\mbox{\hyperlink{_collision_object_8cs_a5b2c8b05b9a357906d7f9e5b2c1e154d}{Object}} \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a39e9e00b1717b4c5ced03174a90d7226}{context\+Object}}
+\item 
+Vector3 \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a2bbabef758a2acb9e9e526afa1dc199a}{position}}
+\item 
+Vector3 \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a197c5fcdb3ec22e2402e9df2910803af}{next\+Position}}
+\item 
+Vector3 \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a099fcbb0cbdb2d6d71ecb23a349cc87f}{rotation}}
+\item 
+float \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a87556cefc2f449f4602a70fbe329e2c8}{scale}} = 1
+\item 
+int \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a6a70ecc9a8888c8e177dd2722ffc35a3}{level}} = 0
+\item 
+Vector3 \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a42fb16a0c36f8dbd683decf15aaa585e}{acceleration}}
+\item 
+Vector3 \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a2d40d0d339916cb93ad34d275ac94eea}{velocity}}
+\item 
+Vector3 \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a2533bcd28fe27dc623b05621a9940754}{resolve\+Velocity}}
+\end{DoxyCompactItemize}
+\doxysubsection*{静态 Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object_a3e61444100db48484c6c7bd8a6c66a21}{public\+Id}} = 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a8c7eb894c40afa08ee8791424f5007c3}\label{class_physics_1_1_collision_1_1_collision_object_a8c7eb894c40afa08ee8791424f5007c3}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!CollisionObject@{CollisionObject}}
+\index{CollisionObject@{CollisionObject}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{CollisionObject()}{CollisionObject()}}
+{\footnotesize\ttfamily Physics.\+Collision.\+Collision\+Object.\+Collision\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_physics_1_1_collision_1_1_shape_1_1_collision_shape}{Collision\+Shape}}}]{shape,  }\item[{\mbox{\hyperlink{_collision_object_8cs_a5b2c8b05b9a357906d7f9e5b2c1e154d}{Object}}}]{context\+Object,  }\item[{Vector3}]{start\+Pos,  }\item[{float}]{start\+Rotation = {\ttfamily 0},  }\item[{int}]{level = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a9705a53611c27dc2d8cadf5af3470f58}\label{class_physics_1_1_collision_1_1_collision_object_a9705a53611c27dc2d8cadf5af3470f58}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!AddAcceleration@{AddAcceleration}}
+\index{AddAcceleration@{AddAcceleration}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{AddAcceleration()}{AddAcceleration()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Collision\+Object.\+Add\+Acceleration (\begin{DoxyParamCaption}\item[{Vector3}]{diff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+实现了 \mbox{\hyperlink{interface_physics_1_1_collision_1_1_i_collision_object_a857415969e90dd0df7103722b21b905b}{Physics.\+Collision.\+ICollision\+Object}}.
+
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a59b7fc26e50ecaed3ae0e73260c17056}\label{class_physics_1_1_collision_1_1_collision_object_a59b7fc26e50ecaed3ae0e73260c17056}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!AddResolveVelocity@{AddResolveVelocity}}
+\index{AddResolveVelocity@{AddResolveVelocity}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{AddResolveVelocity()}{AddResolveVelocity()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Collision\+Object.\+Add\+Resolve\+Velocity (\begin{DoxyParamCaption}\item[{Vector3}]{diff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_collision_object_a59b7fc26e50ecaed3ae0e73260c17056_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a2158afaa00db6dc8fe254b6029b296bb}\label{class_physics_1_1_collision_1_1_collision_object_a2158afaa00db6dc8fe254b6029b296bb}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!AddVelocity@{AddVelocity}}
+\index{AddVelocity@{AddVelocity}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{AddVelocity()}{AddVelocity()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Collision\+Object.\+Add\+Velocity (\begin{DoxyParamCaption}\item[{Vector3}]{diff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+实现了 \mbox{\hyperlink{interface_physics_1_1_collision_1_1_i_collision_object_a6759d77207dfba132df1e0dc4439e9bc}{Physics.\+Collision.\+ICollision\+Object}}.
+
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_collision_object_a2158afaa00db6dc8fe254b6029b296bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a08bb2ab0fee9cf7f7b6af438d3b2d1db}\label{class_physics_1_1_collision_1_1_collision_object_a08bb2ab0fee9cf7f7b6af438d3b2d1db}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!ApplyPosition@{ApplyPosition}}
+\index{ApplyPosition@{ApplyPosition}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{ApplyPosition()}{ApplyPosition()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Collision\+Object.\+Apply\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_collision_object_a08bb2ab0fee9cf7f7b6af438d3b2d1db_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_collision_object_a08bb2ab0fee9cf7f7b6af438d3b2d1db_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_afaeabc5afd6bdda46db3ab9e3bbfec9f}\label{class_physics_1_1_collision_1_1_collision_object_afaeabc5afd6bdda46db3ab9e3bbfec9f}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!ApplyRotation@{ApplyRotation}}
+\index{ApplyRotation@{ApplyRotation}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{ApplyRotation()}{ApplyRotation()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Collision\+Object.\+Apply\+Rotation (\begin{DoxyParamCaption}\item[{Vector3}]{new\+Rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_collision_object_afaeabc5afd6bdda46db3ab9e3bbfec9f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_acb5f4239562994def280e100e8fb416b}\label{class_physics_1_1_collision_1_1_collision_object_acb5f4239562994def280e100e8fb416b}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!ApplyScale@{ApplyScale}}
+\index{ApplyScale@{ApplyScale}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{ApplyScale()}{ApplyScale()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Collision\+Object.\+Apply\+Scale (\begin{DoxyParamCaption}\item[{float}]{new\+Scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_collision_object_acb5f4239562994def280e100e8fb416b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a7a805a42fc5c86aff1715e9ce7f77d48}\label{class_physics_1_1_collision_1_1_collision_object_a7a805a42fc5c86aff1715e9ce7f77d48}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!CleanResolveVelocity@{CleanResolveVelocity}}
+\index{CleanResolveVelocity@{CleanResolveVelocity}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{CleanResolveVelocity()}{CleanResolveVelocity()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Collision\+Object.\+Clean\+Resolve\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_collision_object_a7a805a42fc5c86aff1715e9ce7f77d48_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a28cc343d91add7b15402133b83d76b27}\label{class_physics_1_1_collision_1_1_collision_object_a28cc343d91add7b15402133b83d76b27}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!GetFarthestPointInDir@{GetFarthestPointInDir}}
+\index{GetFarthestPointInDir@{GetFarthestPointInDir}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{GetFarthestPointInDir()}{GetFarthestPointInDir()}}
+{\footnotesize\ttfamily Vector3 Physics.\+Collision.\+Collision\+Object.\+Get\+Farthest\+Point\+In\+Dir (\begin{DoxyParamCaption}\item[{Vector3}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_collision_object_a28cc343d91add7b15402133b83d76b27_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_aec20035d4ece9a46c457cd71761f6c16}\label{class_physics_1_1_collision_1_1_collision_object_aec20035d4ece9a46c457cd71761f6c16}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!GetProjectionPoint@{GetProjectionPoint}}
+\index{GetProjectionPoint@{GetProjectionPoint}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{GetProjectionPoint()}{GetProjectionPoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_physics_1_1_collision_1_1_projection_point}{Projection\+Point}} Physics.\+Collision.\+Collision\+Object.\+Get\+Projection\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_physics_1_1_collision_1_1_model_a536ffeeaef5a92e82e7cf53894167de1}{AABBProjection\+Type}}}]{projection\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+实现了 \mbox{\hyperlink{interface_physics_1_1_collision_1_1_i_collision_object_a6fdee7207a37bbbe36e067838ac49e3b}{Physics.\+Collision.\+ICollision\+Object}}.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_collision_object_aec20035d4ece9a46c457cd71761f6c16_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a8a0748fa64dc6f65374a9d61e7065da4}\label{class_physics_1_1_collision_1_1_collision_object_a8a0748fa64dc6f65374a9d61e7065da4}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!InitCollisionObject@{InitCollisionObject}}
+\index{InitCollisionObject@{InitCollisionObject}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{InitCollisionObject()}{InitCollisionObject()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Collision\+Object.\+Init\+Collision\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+实现了 \mbox{\hyperlink{interface_physics_1_1_collision_1_1_i_collision_object_a749cf641375c96ea3341677f1752e029}{Physics.\+Collision.\+ICollision\+Object}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_collision_object_a8a0748fa64dc6f65374a9d61e7065da4_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_collision_object_a8a0748fa64dc6f65374a9d61e7065da4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a8469ae556dd1868315a5bb8b2dcf0d9f}\label{class_physics_1_1_collision_1_1_collision_object_a8469ae556dd1868315a5bb8b2dcf0d9f}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!IsSameCollisionObject@{IsSameCollisionObject}}
+\index{IsSameCollisionObject@{IsSameCollisionObject}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{IsSameCollisionObject()}{IsSameCollisionObject()}}
+{\footnotesize\ttfamily static bool Physics.\+Collision.\+Collision\+Object.\+Is\+Same\+Collision\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object}{Collision\+Object}}}]{obj1,  }\item[{\mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object}{Collision\+Object}}}]{obj2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_ae7ca75e378460be4294e71af9aa37001}\label{class_physics_1_1_collision_1_1_collision_object_ae7ca75e378460be4294e71af9aa37001}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Collision\+Object.\+Rotate (\begin{DoxyParamCaption}\item[{Vector3}]{diff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+实现了 \mbox{\hyperlink{interface_physics_1_1_collision_1_1_i_collision_object_ae162845c92c9a0603708e1f5f1d0c066}{Physics.\+Collision.\+ICollision\+Object}}.
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_collision_object_ae7ca75e378460be4294e71af9aa37001_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_collision_object_ae7ca75e378460be4294e71af9aa37001_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_aadfcbb13752f3b48cee485d349a2580f}\label{class_physics_1_1_collision_1_1_collision_object_aadfcbb13752f3b48cee485d349a2580f}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!RotateTo@{RotateTo}}
+\index{RotateTo@{RotateTo}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{RotateTo()}{RotateTo()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Collision\+Object.\+Rotate\+To (\begin{DoxyParamCaption}\item[{Vector3}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+实现了 \mbox{\hyperlink{interface_physics_1_1_collision_1_1_i_collision_object_a6b7de2c8f7b24b6163992a1596819b0e}{Physics.\+Collision.\+ICollision\+Object}}.
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_collision_object_aadfcbb13752f3b48cee485d349a2580f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a8318e2845f2f71cb8b5396a5e4f58c7f}\label{class_physics_1_1_collision_1_1_collision_object_a8318e2845f2f71cb8b5396a5e4f58c7f}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!Scale@{Scale}}
+\index{Scale@{Scale}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{Scale()}{Scale()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Collision\+Object.\+Scale (\begin{DoxyParamCaption}\item[{float}]{diff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+实现了 \mbox{\hyperlink{interface_physics_1_1_collision_1_1_i_collision_object_aa69c7d1b74af5818b61b3311a1f65ff0}{Physics.\+Collision.\+ICollision\+Object}}.
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_collision_object_a8318e2845f2f71cb8b5396a5e4f58c7f_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_collision_object_a8318e2845f2f71cb8b5396a5e4f58c7f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a14aad5d8c4b1ac3883a2c44f1c05d5cb}\label{class_physics_1_1_collision_1_1_collision_object_a14aad5d8c4b1ac3883a2c44f1c05d5cb}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!ScaleTo@{ScaleTo}}
+\index{ScaleTo@{ScaleTo}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{ScaleTo()}{ScaleTo()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Collision\+Object.\+Scale\+To (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+实现了 \mbox{\hyperlink{interface_physics_1_1_collision_1_1_i_collision_object_a7d6f91d8f9d990c8bbfc78369cee94de}{Physics.\+Collision.\+ICollision\+Object}}.
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_collision_object_a14aad5d8c4b1ac3883a2c44f1c05d5cb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_abe594e0f6703f8bce366fe6a5607cb37}\label{class_physics_1_1_collision_1_1_collision_object_abe594e0f6703f8bce366fe6a5607cb37}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!SetVelocity@{SetVelocity}}
+\index{SetVelocity@{SetVelocity}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{SetVelocity()}{SetVelocity()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Collision\+Object.\+Set\+Velocity (\begin{DoxyParamCaption}\item[{Vector3}]{final\+Velocity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_collision_object_abe594e0f6703f8bce366fe6a5607cb37_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a1d619f33e85ae72c0cfa06fddbad7655}\label{class_physics_1_1_collision_1_1_collision_object_a1d619f33e85ae72c0cfa06fddbad7655}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!Translate@{Translate}}
+\index{Translate@{Translate}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{Translate()}{Translate()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Collision\+Object.\+Translate (\begin{DoxyParamCaption}\item[{Vector3}]{diff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+实现了 \mbox{\hyperlink{interface_physics_1_1_collision_1_1_i_collision_object_a8b61463df5cc539d2de9dd4335ae3aef}{Physics.\+Collision.\+ICollision\+Object}}.
+
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_collision_object_a1d619f33e85ae72c0cfa06fddbad7655_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a4846199027ea91a2f9fcfbd67de5211a}\label{class_physics_1_1_collision_1_1_collision_object_a4846199027ea91a2f9fcfbd67de5211a}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!TranslateTo@{TranslateTo}}
+\index{TranslateTo@{TranslateTo}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{TranslateTo()}{TranslateTo()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Collision\+Object.\+Translate\+To (\begin{DoxyParamCaption}\item[{Vector3}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+实现了 \mbox{\hyperlink{interface_physics_1_1_collision_1_1_i_collision_object_af163e069811f2cc1f39862b96ed4f61c}{Physics.\+Collision.\+ICollision\+Object}}.
+
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a42fb16a0c36f8dbd683decf15aaa585e}\label{class_physics_1_1_collision_1_1_collision_object_a42fb16a0c36f8dbd683decf15aaa585e}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!acceleration@{acceleration}}
+\index{acceleration@{acceleration}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{acceleration}{acceleration}}
+{\footnotesize\ttfamily Vector3 Physics.\+Collision.\+Collision\+Object.\+acceleration}
+
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a39e9e00b1717b4c5ced03174a90d7226}\label{class_physics_1_1_collision_1_1_collision_object_a39e9e00b1717b4c5ced03174a90d7226}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!contextObject@{contextObject}}
+\index{contextObject@{contextObject}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{contextObject}{contextObject}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_collision_object_8cs_a5b2c8b05b9a357906d7f9e5b2c1e154d}{Object}} Physics.\+Collision.\+Collision\+Object.\+context\+Object}
+
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a77c6fa684ab88ea217aa59391dd5b997}\label{class_physics_1_1_collision_1_1_collision_object_a77c6fa684ab88ea217aa59391dd5b997}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!flags@{flags}}
+\index{flags@{flags}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_physics_1_1_collision_a09600d3518d3aa259f075a6935f8e254}{Collision\+Flags}} Physics.\+Collision.\+Collision\+Object.\+flags = \mbox{\hyperlink{namespace_physics_1_1_collision_a09600d3518d3aa259f075a6935f8e254a7a1920d61156abc05a60135aefe8bc67}{Collision\+Flags.\+Default}}}
+
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a07a3bedeecfb1732aaca4f39cf861d6f}\label{class_physics_1_1_collision_1_1_collision_object_a07a3bedeecfb1732aaca4f39cf861d6f}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!id@{id}}
+\index{id@{id}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int Physics.\+Collision.\+Collision\+Object.\+id}
+
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a6a70ecc9a8888c8e177dd2722ffc35a3}\label{class_physics_1_1_collision_1_1_collision_object_a6a70ecc9a8888c8e177dd2722ffc35a3}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!level@{level}}
+\index{level@{level}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{level}{level}}
+{\footnotesize\ttfamily int Physics.\+Collision.\+Collision\+Object.\+level = 0}
+
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a197c5fcdb3ec22e2402e9df2910803af}\label{class_physics_1_1_collision_1_1_collision_object_a197c5fcdb3ec22e2402e9df2910803af}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!nextPosition@{nextPosition}}
+\index{nextPosition@{nextPosition}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{nextPosition}{nextPosition}}
+{\footnotesize\ttfamily Vector3 Physics.\+Collision.\+Collision\+Object.\+next\+Position}
+
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a2bbabef758a2acb9e9e526afa1dc199a}\label{class_physics_1_1_collision_1_1_collision_object_a2bbabef758a2acb9e9e526afa1dc199a}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!position@{position}}
+\index{position@{position}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily Vector3 Physics.\+Collision.\+Collision\+Object.\+position}
+
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a3e61444100db48484c6c7bd8a6c66a21}\label{class_physics_1_1_collision_1_1_collision_object_a3e61444100db48484c6c7bd8a6c66a21}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!publicId@{publicId}}
+\index{publicId@{publicId}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{publicId}{publicId}}
+{\footnotesize\ttfamily int Physics.\+Collision.\+Collision\+Object.\+public\+Id = 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a2533bcd28fe27dc623b05621a9940754}\label{class_physics_1_1_collision_1_1_collision_object_a2533bcd28fe27dc623b05621a9940754}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!resolveVelocity@{resolveVelocity}}
+\index{resolveVelocity@{resolveVelocity}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{resolveVelocity}{resolveVelocity}}
+{\footnotesize\ttfamily Vector3 Physics.\+Collision.\+Collision\+Object.\+resolve\+Velocity}
+
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a099fcbb0cbdb2d6d71ecb23a349cc87f}\label{class_physics_1_1_collision_1_1_collision_object_a099fcbb0cbdb2d6d71ecb23a349cc87f}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!rotation@{rotation}}
+\index{rotation@{rotation}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{rotation}{rotation}}
+{\footnotesize\ttfamily Vector3 Physics.\+Collision.\+Collision\+Object.\+rotation}
+
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a87556cefc2f449f4602a70fbe329e2c8}\label{class_physics_1_1_collision_1_1_collision_object_a87556cefc2f449f4602a70fbe329e2c8}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!scale@{scale}}
+\index{scale@{scale}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily float Physics.\+Collision.\+Collision\+Object.\+scale = 1}
+
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a0ac013c381cc638f83335affb2344c15}\label{class_physics_1_1_collision_1_1_collision_object_a0ac013c381cc638f83335affb2344c15}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!shape@{shape}}
+\index{shape@{shape}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{shape}{shape}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_physics_1_1_collision_1_1_shape_1_1_collision_shape}{Collision\+Shape}} Physics.\+Collision.\+Collision\+Object.\+shape}
+
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_collision_object_a2d40d0d339916cb93ad34d275ac94eea}\label{class_physics_1_1_collision_1_1_collision_object_a2d40d0d339916cb93ad34d275ac94eea}} 
+\index{Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}!velocity@{velocity}}
+\index{velocity@{velocity}!Physics.Collision.CollisionObject@{Physics.Collision.CollisionObject}}
+\doxysubsubsection{\texorpdfstring{velocity}{velocity}}
+{\footnotesize\ttfamily Vector3 Physics.\+Collision.\+Collision\+Object.\+velocity}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Assets/\+Scripts/\+Collision/\mbox{\hyperlink{_collision_object_8cs}{Collision\+Object.\+cs}}\end{DoxyCompactItemize}

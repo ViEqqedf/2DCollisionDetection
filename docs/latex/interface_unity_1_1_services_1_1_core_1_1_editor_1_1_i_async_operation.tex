@@ -1,0 +1,138 @@
+\hypertarget{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}{}\doxysection{Unity.\+Services.\+Core.\+Editor.\+IAsync\+Operation\texorpdfstring{$<$}{<} out T \texorpdfstring{$>$}{>} Interface Template Reference}
+\label{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}\index{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$@{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$}}
+
+
+Contract for an asynchronous operation with no result.  
+
+
+Inheritance diagram for Unity.\+Services.\+Core.\+Editor.\+IAsync\+Operation\texorpdfstring{$<$}{<} out T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.600619cm]{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}
+\end{center}
+\end{figure}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_a2d1a6439948d2d53e7737a612014e6b9}{Is\+Done}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, this operation either succeeded, failed, or has been canceled. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23}{Async\+Operation\+Status}} \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_a759ee99f0e1c11afd1fd3966b2cc6605}{Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The current status of this operation. \end{DoxyCompactList}\item 
+Exception \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_a87bd676d16d2b5c9689fc30dbdcf04b3}{Exception}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The exception that occured during the operation if it failed. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_ab80ec3ac388a557fd705002129b7087d}{Result}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The result of this operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Action$<$ \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}{IAsync\+Operation}} $>$ \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_a24947bd3968124f57c9e9bae8bc76573}{Completed}}
+\begin{DoxyCompactList}\small\item\em Event raised when the operation succeeded or failed. The argument is the operation that raised the event. \end{DoxyCompactList}\item 
+Action$<$ \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}{IAsync\+Operation}}$<$ T $>$ $>$ \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_ac31457bb2ce59cf8002709b302eea52e}{Completed}}
+\begin{DoxyCompactList}\small\item\em Event raised when the operation succeeded or failed. The argument is the operation that raised the event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contract for an asynchronous operation with no result. 
+
+Contract for an asynchronous operation returning a result. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The result\textquotesingle{}s type of this operation. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_a87bd676d16d2b5c9689fc30dbdcf04b3}\label{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_a87bd676d16d2b5c9689fc30dbdcf04b3}} 
+\index{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$@{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$}!Exception@{Exception}}
+\index{Exception@{Exception}!Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$@{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$}}
+\doxysubsubsection{\texorpdfstring{Exception}{Exception}}
+{\footnotesize\ttfamily Exception \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}{Unity.\+Services.\+Core.\+Editor.\+IAsync\+Operation}}$<$ out T $>$.Exception\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The exception that occured during the operation if it failed. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_async_operation_a892c671582885ba0579a928bc3660081}{Unity.\+Services.\+Core.\+Editor.\+Async\+Operation$<$ T $>$}}.
+
+\mbox{\Hypertarget{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_a2d1a6439948d2d53e7737a612014e6b9}\label{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_a2d1a6439948d2d53e7737a612014e6b9}} 
+\index{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$@{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$}!IsDone@{IsDone}}
+\index{IsDone@{IsDone}!Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$@{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$}}
+\doxysubsubsection{\texorpdfstring{IsDone}{IsDone}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}{Unity.\+Services.\+Core.\+Editor.\+IAsync\+Operation}}$<$ out T $>$.Is\+Done\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+If true, this operation either succeeded, failed, or has been canceled. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_async_operation_a30241d671eb914f6a7e0952802a08d3e}{Unity.\+Services.\+Core.\+Editor.\+Async\+Operation$<$ T $>$}}.
+
+\mbox{\Hypertarget{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_ab80ec3ac388a557fd705002129b7087d}\label{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_ab80ec3ac388a557fd705002129b7087d}} 
+\index{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$@{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$}!Result@{Result}}
+\index{Result@{Result}!Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$@{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$}}
+\doxysubsubsection{\texorpdfstring{Result}{Result}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}{Unity.\+Services.\+Core.\+Editor.\+IAsync\+Operation}}$<$ out T $>$.Result\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The result of this operation. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_async_operation_aa7eac402aa5558e666beee0f438b2c5a}{Unity.\+Services.\+Core.\+Editor.\+Async\+Operation$<$ T $>$}}.
+
+\mbox{\Hypertarget{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_a759ee99f0e1c11afd1fd3966b2cc6605}\label{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_a759ee99f0e1c11afd1fd3966b2cc6605}} 
+\index{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$@{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$}!Status@{Status}}
+\index{Status@{Status}!Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$@{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$}}
+\doxysubsubsection{\texorpdfstring{Status}{Status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_unity_1_1_services_1_1_core_1_1_editor_aa43966c0287480ae3a01501db80e9a23}{Async\+Operation\+Status}} \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}{Unity.\+Services.\+Core.\+Editor.\+IAsync\+Operation}}$<$ out T $>$.Status\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The current status of this operation. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_async_operation_a128d4472961ec7dd1bb1b78656619eb3}{Unity.\+Services.\+Core.\+Editor.\+Async\+Operation$<$ T $>$}}.
+
+
+
+\doxysubsection{Event Documentation}
+\mbox{\Hypertarget{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_a24947bd3968124f57c9e9bae8bc76573}\label{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_a24947bd3968124f57c9e9bae8bc76573}} 
+\index{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$@{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$}!Completed@{Completed}}
+\index{Completed@{Completed}!Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$@{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$}}
+\doxysubsubsection{\texorpdfstring{Completed}{Completed}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Action$<$\mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}{IAsync\+Operation}}$>$ \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}{Unity.\+Services.\+Core.\+Editor.\+IAsync\+Operation}}$<$ out T $>$.Completed}
+
+
+
+Event raised when the operation succeeded or failed. The argument is the operation that raised the event. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_async_operation_a9f86613de9225d04e810e09e553ac09d}{Unity.\+Services.\+Core.\+Editor.\+Async\+Operation$<$ T $>$}}, and \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_async_operation_aed182ceab783da218de3d239e398cee9}{Unity.\+Services.\+Core.\+Editor.\+Async\+Operation$<$ T $>$}}.
+
+\mbox{\Hypertarget{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_ac31457bb2ce59cf8002709b302eea52e}\label{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation_ac31457bb2ce59cf8002709b302eea52e}} 
+\index{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$@{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$}!Completed@{Completed}}
+\index{Completed@{Completed}!Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$@{Unity.Services.Core.Editor.IAsyncOperation$<$ out T $>$}}
+\doxysubsubsection{\texorpdfstring{Completed}{Completed}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Action$<$\mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}{IAsync\+Operation}}$<$T$>$ $>$ \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_async_operation}{Unity.\+Services.\+Core.\+Editor.\+IAsync\+Operation}}$<$ out T $>$.Completed}
+
+
+
+Event raised when the operation succeeded or failed. The argument is the operation that raised the event. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_async_operation_a9f86613de9225d04e810e09e553ac09d}{Unity.\+Services.\+Core.\+Editor.\+Async\+Operation$<$ T $>$}}, and \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_async_operation_aed182ceab783da218de3d239e398cee9}{Unity.\+Services.\+Core.\+Editor.\+Async\+Operation$<$ T $>$}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+services.\+core@1.\+0.\+1/\+Editor/\+Core/\+Async\+Operation/IAsync\+Operation.\+cs\end{DoxyCompactItemize}

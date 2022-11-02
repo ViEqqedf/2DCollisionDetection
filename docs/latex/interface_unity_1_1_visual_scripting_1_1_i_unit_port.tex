@@ -1,0 +1,67 @@
+\hypertarget{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{}\doxysection{Unity.\+Visual\+Scripting.\+IUnit\+Port Interface Reference}
+\label{interface_unity_1_1_visual_scripting_1_1_i_unit_port}\index{Unity.VisualScripting.IUnitPort@{Unity.VisualScripting.IUnitPort}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+IUnit\+Port\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.688525cm]{interface_unity_1_1_visual_scripting_1_1_i_unit_port}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a14476042c101910b8ed4bf9ec7101993}\label{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a14476042c101910b8ed4bf9ec7101993}} 
+bool {\bfseries Can\+Invalidly\+Connect\+To} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnit\+Port}} port)
+\item 
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a8fdc9ea9601ba6e9eaf16dde8da40e7f}\label{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a8fdc9ea9601ba6e9eaf16dde8da40e7f}} 
+bool {\bfseries Can\+Validly\+Connect\+To} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnit\+Port}} port)
+\item 
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_unit_port_ad259c6388a54b73965ecc212d10d7bdc}\label{interface_unity_1_1_visual_scripting_1_1_i_unit_port_ad259c6388a54b73965ecc212d10d7bdc}} 
+void {\bfseries Invalidly\+Connect\+To} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnit\+Port}} port)
+\item 
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a66dea324aa637e5e358560c7b589943c}\label{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a66dea324aa637e5e358560c7b589943c}} 
+void {\bfseries Validly\+Connect\+To} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnit\+Port}} port)
+\item 
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a34a8fbac80fc6dd7e2c4c0dd24725b7f}\label{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a34a8fbac80fc6dd7e2c4c0dd24725b7f}} 
+void {\bfseries Disconnect} ()
+\item 
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a2434475fdf3e299ba792a0d0d9de8168}\label{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a2434475fdf3e299ba792a0d0d9de8168}} 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnit\+Port}} {\bfseries Compatible\+Port} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit}{IUnit}} unit)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a7924ef068267a8b290149d9c0b81e611}\label{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a7924ef068267a8b290149d9c0b81e611}} 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit}{IUnit}} {\bfseries unit}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a8a8be5cf6dcf54240f55d840924372eb}\label{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a8a8be5cf6dcf54240f55d840924372eb}} 
+string {\bfseries key}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a6312b0ced919b0298b2fcfcfa76790de}\label{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a6312b0ced919b0298b2fcfcfa76790de}} 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_relation}{IUnit\+Relation}} $>$ {\bfseries relations}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_unit_port_ace7cfae54c1d5d8b9daa08d305a8a9a7}\label{interface_unity_1_1_visual_scripting_1_1_i_unit_port_ace7cfae54c1d5d8b9daa08d305a8a9a7}} 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_connection}{IUnit\+Connection}} $>$ {\bfseries valid\+Connections}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a5f8273a5276b58bcd01eef1d173b55ed}\label{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a5f8273a5276b58bcd01eef1d173b55ed}} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_invalid_connection}{Invalid\+Connection}} $>$ {\bfseries invalid\+Connections}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a3202d959fa60d3d79887d7ffa64a3eda}\label{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a3202d959fa60d3d79887d7ffa64a3eda}} 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_connection}{IUnit\+Connection}} $>$ {\bfseries connections}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_unit_port_aee696bd5cc87095a44d5ad88763a3649}\label{interface_unity_1_1_visual_scripting_1_1_i_unit_port_aee696bd5cc87095a44d5ad88763a3649}} 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnit\+Port}} $>$ {\bfseries connected\+Ports}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_unit_port_afda485c9efe96f94fdc47d40cd461801}\label{interface_unity_1_1_visual_scripting_1_1_i_unit_port_afda485c9efe96f94fdc47d40cd461801}} 
+bool {\bfseries has\+Any\+Connection}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_unit_port_ab46997dccf93663c4f417c6d1ebb98bb}\label{interface_unity_1_1_visual_scripting_1_1_i_unit_port_ab46997dccf93663c4f417c6d1ebb98bb}} 
+bool {\bfseries has\+Valid\+Connection}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a36e30c44eeab3f2df7702a3c63b25002}\label{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a36e30c44eeab3f2df7702a3c63b25002}} 
+bool {\bfseries has\+Invalid\+Connection}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Flow/\+Ports/IUnit\+Port.\+cs\end{DoxyCompactItemize}

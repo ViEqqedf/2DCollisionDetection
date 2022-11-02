@@ -1,0 +1,82 @@
+\hypertarget{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_drop_target}{}\doxysection{Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Drop\+Target Interface Reference}
+\label{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_drop_target}\index{Unity.VisualScripting.ReorderableList.IReorderableListDropTarget@{Unity.VisualScripting.ReorderableList.IReorderableListDropTarget}}
+
+
+Can be implemented along with \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} when drop insertion or ordering is desired.  
+
+
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Drop\+Target\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_drop_target}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_drop_target_a2f8634af3225699b00c5a26239ec73ce}{Can\+Drop\+Insert}} (int insertion\+Index)
+\begin{DoxyCompactList}\small\item\em Determines whether an item is being dragged and that it can be inserted or moved by dropping somewhere into the reorderable list control. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_drop_target_a7bdaef825efe01186f829185f186182f}{Process\+Drop\+Insertion}} (int insertion\+Index)
+\begin{DoxyCompactList}\small\item\em Processes the current drop insertion operation when \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_drop_target_a2f8634af3225699b00c5a26239ec73ce}{Can\+Drop\+Insert(int)}} returns a value of {\ttfamily true} to process, accept or cancel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Can be implemented along with \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} when drop insertion or ordering is desired. 
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} type of \char`\"{}drop\char`\"{} functionality can occur when the \char`\"{}drag\char`\"{} phase of the drag and drop operation was initiated elsewhere. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_for}{For}} example, a custom \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} could insert entirely new items by dragging and dropping from the \mbox{\hyperlink{namespace_unity}{Unity}} \char`\"{}\+Project\char`\"{} window. 
+
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_adaptor}{IReorderable\+List\+Adaptor}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_drop_target_a2f8634af3225699b00c5a26239ec73ce}\label{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_drop_target_a2f8634af3225699b00c5a26239ec73ce}} 
+\index{Unity.VisualScripting.ReorderableList.IReorderableListDropTarget@{Unity.VisualScripting.ReorderableList.IReorderableListDropTarget}!CanDropInsert@{CanDropInsert}}
+\index{CanDropInsert@{CanDropInsert}!Unity.VisualScripting.ReorderableList.IReorderableListDropTarget@{Unity.VisualScripting.ReorderableList.IReorderableListDropTarget}}
+\doxysubsubsection{\texorpdfstring{CanDropInsert()}{CanDropInsert()}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Drop\+Target.\+Can\+Drop\+Insert (\begin{DoxyParamCaption}\item[{int}]{insertion\+Index }\end{DoxyParamCaption})}
+
+
+
+Determines whether an item is being dragged and that it can be inserted or moved by dropping somewhere into the reorderable list control. 
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} method is always called whilst drawing an editor GUI.
+
+
+\begin{DoxyParams}{Parameters}
+{\em insertion\+Index} & Zero-\/based index of insertion.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value of {\ttfamily true} if item can be dropped; otherwise {\ttfamily false}. 
+\end{DoxyReturn}
+Unity\+Editor.\+Drag\+And\+Drop 
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_list_adaptor_a074210fec48f1d06d80c01df11c5ae3c}{Unity.\+Visual\+Scripting.\+Metadata\+List\+Adaptor}}.
+
+\mbox{\Hypertarget{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_drop_target_a7bdaef825efe01186f829185f186182f}\label{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_drop_target_a7bdaef825efe01186f829185f186182f}} 
+\index{Unity.VisualScripting.ReorderableList.IReorderableListDropTarget@{Unity.VisualScripting.ReorderableList.IReorderableListDropTarget}!ProcessDropInsertion@{ProcessDropInsertion}}
+\index{ProcessDropInsertion@{ProcessDropInsertion}!Unity.VisualScripting.ReorderableList.IReorderableListDropTarget@{Unity.VisualScripting.ReorderableList.IReorderableListDropTarget}}
+\doxysubsubsection{\texorpdfstring{ProcessDropInsertion()}{ProcessDropInsertion()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Reorderable\+List.\+IReorderable\+List\+Drop\+Target.\+Process\+Drop\+Insertion (\begin{DoxyParamCaption}\item[{int}]{insertion\+Index }\end{DoxyParamCaption})}
+
+
+
+Processes the current drop insertion operation when \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_drop_target_a2f8634af3225699b00c5a26239ec73ce}{Can\+Drop\+Insert(int)}} returns a value of {\ttfamily true} to process, accept or cancel. 
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} method is always called whilst drawing an editor GUI.
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} method is only called when \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_i_reorderable_list_drop_target_a2f8634af3225699b00c5a26239ec73ce}{Can\+Drop\+Insert(int)}} returns a value of {\ttfamily true}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em insertion\+Index} & Zero-\/based index of insertion.\\
+\hline
+\end{DoxyParams}
+Reorderable\+List\+GUI.\+Current\+List\+Control\+ID Unity\+Editor.\+Drag\+And\+Drop 
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_list_adaptor_a6e707ef16df60e847c67f12255bd58e2}{Unity.\+Visual\+Scripting.\+Metadata\+List\+Adaptor}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Editor/\+Visual\+Scripting.\+Core/\+Dependencies/\+Reorderable\+List/IReorderable\+List\+Drop\+Target.\+cs\end{DoxyCompactItemize}

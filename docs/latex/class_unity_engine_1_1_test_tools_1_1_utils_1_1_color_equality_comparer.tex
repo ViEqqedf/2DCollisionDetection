@@ -1,0 +1,103 @@
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_color_equality_comparer}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+Utils.\+Color\+Equality\+Comparer Class Reference}
+\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_color_equality_comparer}\index{UnityEngine.TestTools.Utils.ColorEqualityComparer@{UnityEngine.TestTools.Utils.ColorEqualityComparer}}
+
+
+Use this class to compare two Color objects. \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_color_equality_comparer_a8ed768e0ce031f510ff4c9436faeaacb}{Color\+Equality\+Comparer.\+Instance}} has default calculation error value set to 0.\+01f. To set a test specific error value instantiate a comparer instance using the one argument constructor.  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Tools.\+Utils.\+Color\+Equality\+Comparer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_test_tools_1_1_utils_1_1_color_equality_comparer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_color_equality_comparer_a9e3ec8795846c657139a46c7b6970f3e}{Color\+Equality\+Comparer}} (float error)
+\begin{DoxyCompactList}\small\item\em Creates an instance of the comparer with a custom error value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_color_equality_comparer_a575af2fc8b11d7c1ba2c79c86775e663}{Equals}} (Color expected, Color actual)
+\begin{DoxyCompactList}\small\item\em Compares the actual and expected Color objects for equality using Utils.\+Are\+Floats\+Equal\+Absolute\+Error to compare the RGB and Alpha attributes of Color. Returns true if expected and actual objects are equal otherwise, it returns false. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_color_equality_comparer_a4c6290326a0dcbae130a40e9f771e662}{Get\+Hash\+Code}} (Color color)
+\begin{DoxyCompactList}\small\item\em Serves as the default hash function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_color_equality_comparer_a8ed768e0ce031f510ff4c9436faeaacb}\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_color_equality_comparer_a8ed768e0ce031f510ff4c9436faeaacb}} 
+static \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_color_equality_comparer}{Color\+Equality\+Comparer}} {\bfseries Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A singleton instance of the comparer with a default error value set to 0.\+01f. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Use this class to compare two Color objects. \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_color_equality_comparer_a8ed768e0ce031f510ff4c9436faeaacb}{Color\+Equality\+Comparer.\+Instance}} has default calculation error value set to 0.\+01f. To set a test specific error value instantiate a comparer instance using the one argument constructor. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_color_equality_comparer_a9e3ec8795846c657139a46c7b6970f3e}\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_color_equality_comparer_a9e3ec8795846c657139a46c7b6970f3e}} 
+\index{UnityEngine.TestTools.Utils.ColorEqualityComparer@{UnityEngine.TestTools.Utils.ColorEqualityComparer}!ColorEqualityComparer@{ColorEqualityComparer}}
+\index{ColorEqualityComparer@{ColorEqualityComparer}!UnityEngine.TestTools.Utils.ColorEqualityComparer@{UnityEngine.TestTools.Utils.ColorEqualityComparer}}
+\doxysubsubsection{\texorpdfstring{ColorEqualityComparer()}{ColorEqualityComparer()}}
+{\footnotesize\ttfamily Unity\+Engine.\+Test\+Tools.\+Utils.\+Color\+Equality\+Comparer.\+Color\+Equality\+Comparer (\begin{DoxyParamCaption}\item[{float}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an instance of the comparer with a custom error value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & The custom error value.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_color_equality_comparer_a575af2fc8b11d7c1ba2c79c86775e663}\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_color_equality_comparer_a575af2fc8b11d7c1ba2c79c86775e663}} 
+\index{UnityEngine.TestTools.Utils.ColorEqualityComparer@{UnityEngine.TestTools.Utils.ColorEqualityComparer}!Equals@{Equals}}
+\index{Equals@{Equals}!UnityEngine.TestTools.Utils.ColorEqualityComparer@{UnityEngine.TestTools.Utils.ColorEqualityComparer}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Utils.\+Color\+Equality\+Comparer.\+Equals (\begin{DoxyParamCaption}\item[{Color}]{expected,  }\item[{Color}]{actual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares the actual and expected Color objects for equality using Utils.\+Are\+Floats\+Equal\+Absolute\+Error to compare the RGB and Alpha attributes of Color. Returns true if expected and actual objects are equal otherwise, it returns false. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected} & The expected Color value used to compare.\\
+\hline
+{\em actual} & The actual Color value to test.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if actual and expected are equal, false otherwise
+\end{DoxyReturn}
+
+
+code\texorpdfstring{$>$}{>} \mbox{[}Test\+Fixture\mbox{]} public class Color\+Equality\+Test \{ \mbox{[}Test\mbox{]} public void Given\+Colors\+Are\+Equal\+\_\+\+With\+Allowed\+Calculation\+Error() \{ // Using default error var first\+Color = new Color(0f, 0f, 0f, 0f); var second\+Color = new Color(0f, 0f, 0f, 0f);
+
+Assert.\+That(first\+Color, Is.\+Equal\+To(second\+Color).Using(\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_color_equality_comparer_a8ed768e0ce031f510ff4c9436faeaacb}{Color\+Equality\+Comparer.\+Instance}}));
+
+// Allowed error 10e-\/5f var comparer = new \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_color_equality_comparer}{Color\+Equality\+Comparer}}(10e-\/5f); first\+Color = new Color(0f, 0f, 0f, 1f); second\+Color = new Color(10e-\/6f, 0f, 0f, 1f);
+
+Assert.\+That(first\+Color, Is.\+Equal\+To(second\+Color).Using(comparer)); \} \}  \mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_color_equality_comparer_a4c6290326a0dcbae130a40e9f771e662}\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_color_equality_comparer_a4c6290326a0dcbae130a40e9f771e662}} 
+\index{UnityEngine.TestTools.Utils.ColorEqualityComparer@{UnityEngine.TestTools.Utils.ColorEqualityComparer}!GetHashCode@{GetHashCode}}
+\index{GetHashCode@{GetHashCode}!UnityEngine.TestTools.Utils.ColorEqualityComparer@{UnityEngine.TestTools.Utils.ColorEqualityComparer}}
+\doxysubsubsection{\texorpdfstring{GetHashCode()}{GetHashCode()}}
+{\footnotesize\ttfamily int Unity\+Engine.\+Test\+Tools.\+Utils.\+Color\+Equality\+Comparer.\+Get\+Hash\+Code (\begin{DoxyParamCaption}\item[{Color}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serves as the default hash function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & A not null Color object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Engine.\+Test\+Runner/\+Utils/Color\+Equality\+Comparer.\+cs\end{DoxyCompactItemize}

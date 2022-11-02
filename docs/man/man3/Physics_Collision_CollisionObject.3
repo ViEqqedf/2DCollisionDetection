@@ -1,0 +1,216 @@
+.TH "Physics.Collision.CollisionObject" 3 "2022年 十一月 2日 星期三" "PhysicsWorld" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Physics.Collision.CollisionObject
+.SH SYNOPSIS
+.br
+.PP
+.PP
+继承自 \fBPhysics\&.Collision\&.ICollisionObject\fP \&.
+.SS "Public 成员函数"
+
+.in +1c
+.ti -1c
+.RI "\fBCollisionObject\fP (\fBCollisionShape\fP \fBshape\fP, \fBObject\fP \fBcontextObject\fP, Vector3 startPos, float startRotation=0, int \fBlevel\fP=0)"
+.br
+.ti -1c
+.RI "void \fBApplyPosition\fP ()"
+.br
+.ti -1c
+.RI "void \fBApplyRotation\fP (Vector3 newRotation)"
+.br
+.ti -1c
+.RI "void \fBApplyScale\fP (float newScale)"
+.br
+.ti -1c
+.RI "void \fBInitCollisionObject\fP ()"
+.br
+.ti -1c
+.RI "\fBProjectionPoint\fP \fBGetProjectionPoint\fP (\fBAABBProjectionType\fP projectionType)"
+.br
+.ti -1c
+.RI "void \fBTranslate\fP (Vector3 diff)"
+.br
+.ti -1c
+.RI "void \fBTranslateTo\fP (Vector3 value)"
+.br
+.ti -1c
+.RI "void \fBRotate\fP (Vector3 diff)"
+.br
+.ti -1c
+.RI "void \fBRotateTo\fP (Vector3 value)"
+.br
+.ti -1c
+.RI "void \fBScale\fP (float diff)"
+.br
+.ti -1c
+.RI "void \fBScaleTo\fP (float value)"
+.br
+.ti -1c
+.RI "void \fBAddVelocity\fP (Vector3 diff)"
+.br
+.ti -1c
+.RI "void \fBAddAcceleration\fP (Vector3 diff)"
+.br
+.ti -1c
+.RI "void \fBSetVelocity\fP (Vector3 finalVelocity)"
+.br
+.ti -1c
+.RI "void \fBAddResolveVelocity\fP (Vector3 diff)"
+.br
+.ti -1c
+.RI "void \fBCleanResolveVelocity\fP ()"
+.br
+.ti -1c
+.RI "Vector3 \fBGetFarthestPointInDir\fP (Vector3 dir)"
+.br
+.in -1c
+.SS "静态 Public 成员函数"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBIsSameCollisionObject\fP (\fBCollisionObject\fP obj1, \fBCollisionObject\fP obj2)"
+.br
+.in -1c
+.SS "Public 属性"
+
+.in +1c
+.ti -1c
+.RI "int \fBid\fP"
+.br
+.ti -1c
+.RI "\fBCollisionShape\fP \fBshape\fP"
+.br
+.ti -1c
+.RI "\fBCollisionFlags\fP \fBflags\fP = \fBCollisionFlags\&.Default\fP"
+.br
+.ti -1c
+.RI "\fBObject\fP \fBcontextObject\fP"
+.br
+.ti -1c
+.RI "Vector3 \fBposition\fP"
+.br
+.ti -1c
+.RI "Vector3 \fBnextPosition\fP"
+.br
+.ti -1c
+.RI "Vector3 \fBrotation\fP"
+.br
+.ti -1c
+.RI "float \fBscale\fP = 1"
+.br
+.ti -1c
+.RI "int \fBlevel\fP = 0"
+.br
+.ti -1c
+.RI "Vector3 \fBacceleration\fP"
+.br
+.ti -1c
+.RI "Vector3 \fBvelocity\fP"
+.br
+.ti -1c
+.RI "Vector3 \fBresolveVelocity\fP"
+.br
+.in -1c
+.SS "静态 Private 属性"
+
+.in +1c
+.ti -1c
+.RI "static int \fBpublicId\fP = 1"
+.br
+.in -1c
+.SH "构造及析构函数说明"
+.PP 
+.SS "Physics\&.Collision\&.CollisionObject\&.CollisionObject (\fBCollisionShape\fP shape, \fBObject\fP contextObject, Vector3 startPos, float startRotation = \fC0\fP, int level = \fC0\fP)\fC [inline]\fP"
+
+.SH "成员函数说明"
+.PP 
+.SS "void Physics\&.Collision\&.CollisionObject\&.AddAcceleration (Vector3 diff)\fC [inline]\fP"
+
+.PP
+实现了 \fBPhysics\&.Collision\&.ICollisionObject\fP\&.
+.SS "void Physics\&.Collision\&.CollisionObject\&.AddResolveVelocity (Vector3 diff)\fC [inline]\fP"
+
+.SS "void Physics\&.Collision\&.CollisionObject\&.AddVelocity (Vector3 diff)\fC [inline]\fP"
+
+.PP
+实现了 \fBPhysics\&.Collision\&.ICollisionObject\fP\&.
+.SS "void Physics\&.Collision\&.CollisionObject\&.ApplyPosition ()\fC [inline]\fP"
+
+.SS "void Physics\&.Collision\&.CollisionObject\&.ApplyRotation (Vector3 newRotation)\fC [inline]\fP"
+
+.SS "void Physics\&.Collision\&.CollisionObject\&.ApplyScale (float newScale)\fC [inline]\fP"
+
+.SS "void Physics\&.Collision\&.CollisionObject\&.CleanResolveVelocity ()\fC [inline]\fP"
+
+.SS "Vector3 Physics\&.Collision\&.CollisionObject\&.GetFarthestPointInDir (Vector3 dir)\fC [inline]\fP"
+
+.SS "\fBProjectionPoint\fP Physics\&.Collision\&.CollisionObject\&.GetProjectionPoint (\fBAABBProjectionType\fP projectionType)\fC [inline]\fP"
+
+.PP
+实现了 \fBPhysics\&.Collision\&.ICollisionObject\fP\&.
+.SS "void Physics\&.Collision\&.CollisionObject\&.InitCollisionObject ()\fC [inline]\fP"
+
+.PP
+实现了 \fBPhysics\&.Collision\&.ICollisionObject\fP\&.
+.SS "static bool Physics\&.Collision\&.CollisionObject\&.IsSameCollisionObject (\fBCollisionObject\fP obj1, \fBCollisionObject\fP obj2)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "void Physics\&.Collision\&.CollisionObject\&.Rotate (Vector3 diff)\fC [inline]\fP"
+
+.PP
+实现了 \fBPhysics\&.Collision\&.ICollisionObject\fP\&.
+.SS "void Physics\&.Collision\&.CollisionObject\&.RotateTo (Vector3 value)\fC [inline]\fP"
+
+.PP
+实现了 \fBPhysics\&.Collision\&.ICollisionObject\fP\&.
+.SS "void Physics\&.Collision\&.CollisionObject\&.Scale (float diff)\fC [inline]\fP"
+
+.PP
+实现了 \fBPhysics\&.Collision\&.ICollisionObject\fP\&.
+.SS "void Physics\&.Collision\&.CollisionObject\&.ScaleTo (float value)\fC [inline]\fP"
+
+.PP
+实现了 \fBPhysics\&.Collision\&.ICollisionObject\fP\&.
+.SS "void Physics\&.Collision\&.CollisionObject\&.SetVelocity (Vector3 finalVelocity)\fC [inline]\fP"
+
+.SS "void Physics\&.Collision\&.CollisionObject\&.Translate (Vector3 diff)\fC [inline]\fP"
+
+.PP
+实现了 \fBPhysics\&.Collision\&.ICollisionObject\fP\&.
+.SS "void Physics\&.Collision\&.CollisionObject\&.TranslateTo (Vector3 value)\fC [inline]\fP"
+
+.PP
+实现了 \fBPhysics\&.Collision\&.ICollisionObject\fP\&.
+.SH "类成员变量说明"
+.PP 
+.SS "Vector3 Physics\&.Collision\&.CollisionObject\&.acceleration"
+
+.SS "\fBObject\fP Physics\&.Collision\&.CollisionObject\&.contextObject"
+
+.SS "\fBCollisionFlags\fP Physics\&.Collision\&.CollisionObject\&.flags = \fBCollisionFlags\&.Default\fP"
+
+.SS "int Physics\&.Collision\&.CollisionObject\&.id"
+
+.SS "int Physics\&.Collision\&.CollisionObject\&.level = 0"
+
+.SS "Vector3 Physics\&.Collision\&.CollisionObject\&.nextPosition"
+
+.SS "Vector3 Physics\&.Collision\&.CollisionObject\&.position"
+
+.SS "int Physics\&.Collision\&.CollisionObject\&.publicId = 1\fC [static]\fP, \fC [private]\fP"
+
+.SS "Vector3 Physics\&.Collision\&.CollisionObject\&.resolveVelocity"
+
+.SS "Vector3 Physics\&.Collision\&.CollisionObject\&.rotation"
+
+.SS "float Physics\&.Collision\&.CollisionObject\&.scale = 1"
+
+.SS "\fBCollisionShape\fP Physics\&.Collision\&.CollisionObject\&.shape"
+
+.SS "Vector3 Physics\&.Collision\&.CollisionObject\&.velocity"
+
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 PhysicsWorld 的 源代码自动生成\&.

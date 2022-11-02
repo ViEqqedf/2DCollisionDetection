@@ -1,0 +1,357 @@
+\hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting}{}\doxysection{Unity\+Editor.\+Settings\+Management.\+User\+Setting\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_unity_editor_1_1_settings_management_1_1_user_setting}\index{UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}}
+
+
+A generic implementation of \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting}{IUser\+Setting}} to be used with a \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}} instance. This default implementation assumes the \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}} instance contains two \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository}{ISettings\+Repository}}, one for Settings\+Scope.\+Project and one for Settings\+Scope.\+User.  
+
+
+Inheritance diagram for Unity\+Editor.\+Settings\+Management.\+User\+Setting\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_editor_1_1_settings_management_1_1_user_setting}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a8d801af821a9a9c6ad03759a350415c4}{User\+Setting}} (\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}} \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a2eca35be2e4dca3e06cf713e7bd3e36b}{settings}}, string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a3855f99bfe1fbb02b4addafe3e017dfd}{key}}, T \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a2582c385e52193358717afaef5f08b38}{value}}, Settings\+Scope \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_aea6c661cb919e62e6f0c0c2c5a522565}{scope}}=Settings\+Scope.\+Project)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{User\+Setting}}\{T\} type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a08bd0280dd28868ef790fbf633da8757}{User\+Setting}} (\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}} \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a2eca35be2e4dca3e06cf713e7bd3e36b}{settings}}, string repository, string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a3855f99bfe1fbb02b4addafe3e017dfd}{key}}, T \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a2582c385e52193358717afaef5f08b38}{value}}, Settings\+Scope \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_aea6c661cb919e62e6f0c0c2c5a522565}{scope}}=Settings\+Scope.\+Project)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{User\+Setting}}\{T\} type. \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a0eda131ac93fc868b36e949eec39c1b7}{Get\+Default\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Get a copy of the default value. \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a81102184483c0b177afb7e365b3caf57}{Get\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Get the currently stored value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a51f6c0399ef3deb35151ed650b27312c}{Set\+Value}} (object \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a2582c385e52193358717afaef5f08b38}{value}}, bool save\+Project\+Settings\+Immediately=false)
+\begin{DoxyCompactList}\small\item\em Set the value for this setting. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a7aeb08a132738adab71f3fb77d28a061}{Set\+Value}} (T \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a2582c385e52193358717afaef5f08b38}{value}}, bool save\+Project\+Settings\+Immediately=false)
+\begin{DoxyCompactList}\small\item\em Set the value for this setting. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a3061437486e369aabd11867b9daf4f7f}{Delete}} (bool save\+Project\+Settings\+Immediately=false)
+\begin{DoxyCompactList}\small\item\em Delete the saved setting. Does not clear the current value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_afd54c589b111aa6c9f584041bcfefc6a}{Apply\+Modified\+Properties}} ()
+\begin{DoxyCompactList}\small\item\em When the inspected type is a reference value, it is possible to change properties without affecting the backing setting. Apply\+Modified\+Properties provides a method to force serialize these changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a32a5633cbb273f24fbe99fcc5c371a96}{Reset}} (bool save\+Project\+Settings\+Immediately=false)
+\begin{DoxyCompactList}\small\item\em Set the current value back to the default. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_ad0f30b72cf7c4ec13c3b27d1c433f594}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Get a summary of this setting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static implicit \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a26a0fca48952fa899e82c66ab0669755}{operator T}} (\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{User\+Setting}}$<$ T $>$ pref)
+\begin{DoxyCompactList}\small\item\em Implicit cast to backing type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a3855f99bfe1fbb02b4addafe3e017dfd}{key}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a7b8aedfcf1533e93c6fbae0dde301cbb}{settings\+Repository\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Type \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_ae115f3ea8dfc2d4e3efd2a2804f15078}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Settings\+Scope \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_aea6c661cb919e62e6f0c0c2c5a522565}{scope}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The scope affects which \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository}{ISettings\+Repository}} the \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a2eca35be2e4dca3e06cf713e7bd3e36b}{settings}} instance will save it\textquotesingle{}s data to. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}} \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a2eca35be2e4dca3e06cf713e7bd3e36b}{settings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+T \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a1e1659358d185080e01ce3af3ad754d8}{default\+Value}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+T \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a2582c385e52193358717afaef5f08b38}{value}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A generic implementation of \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting}{IUser\+Setting}} to be used with a \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}} instance. This default implementation assumes the \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}} instance contains two \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository}{ISettings\+Repository}}, one for Settings\+Scope.\+Project and one for Settings\+Scope.\+User. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_a8d801af821a9a9c6ad03759a350415c4}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_a8d801af821a9a9c6ad03759a350415c4}} 
+\index{UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}!UserSetting@{UserSetting}}
+\index{UserSetting@{UserSetting}!UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{UserSetting()}{UserSetting()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{Unity\+Editor.\+Settings\+Management.\+User\+Setting}}$<$ T $>$.\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{User\+Setting}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}}}]{settings,  }\item[{string}]{key,  }\item[{T}]{value,  }\item[{Settings\+Scope}]{scope = {\ttfamily SettingsScope.Project} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{User\+Setting}}\{T\} type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & The \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}} instance that this setting should be saved and loaded from.\\
+\hline
+{\em key} & The key for this value.\\
+\hline
+{\em value} & The default value for this key.\\
+\hline
+{\em scope} & The scope at which to save this setting.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_a08bd0280dd28868ef790fbf633da8757}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_a08bd0280dd28868ef790fbf633da8757}} 
+\index{UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}!UserSetting@{UserSetting}}
+\index{UserSetting@{UserSetting}!UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{UserSetting()}{UserSetting()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{Unity\+Editor.\+Settings\+Management.\+User\+Setting}}$<$ T $>$.\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{User\+Setting}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}}}]{settings,  }\item[{string}]{repository,  }\item[{string}]{key,  }\item[{T}]{value,  }\item[{Settings\+Scope}]{scope = {\ttfamily SettingsScope.Project} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{User\+Setting}}\{T\} type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & The \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}} instance that this setting should be saved and loaded from.\\
+\hline
+{\em repository} & The \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository}{ISettings\+Repository}} name that this setting should be saved and loaded from. Pass null to save to first available instance.\\
+\hline
+{\em key} & The key for this value.\\
+\hline
+{\em value} & The default value for this key.\\
+\hline
+{\em scope} & The scope at which to save this setting.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_afd54c589b111aa6c9f584041bcfefc6a}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_afd54c589b111aa6c9f584041bcfefc6a}} 
+\index{UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}!ApplyModifiedProperties@{ApplyModifiedProperties}}
+\index{ApplyModifiedProperties@{ApplyModifiedProperties}!UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ApplyModifiedProperties()}{ApplyModifiedProperties()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{Unity\+Editor.\+Settings\+Management.\+User\+Setting}}$<$ T $>$.Apply\+Modified\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+When the inspected type is a reference value, it is possible to change properties without affecting the backing setting. Apply\+Modified\+Properties provides a method to force serialize these changes. 
+
+When the inspected type is a reference value, it is possible to change properties without affecting the backing setting. Apply\+Modified\+Properties provides a method to force serialize these changes.  
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting_aca79a0764bdf7dde6a17e4865cf31407}{Unity\+Editor.\+Settings\+Management.\+IUser\+Setting}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_a3061437486e369aabd11867b9daf4f7f}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_a3061437486e369aabd11867b9daf4f7f}} 
+\index{UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}!Delete@{Delete}}
+\index{Delete@{Delete}!UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{Unity\+Editor.\+Settings\+Management.\+User\+Setting}}$<$ T $>$.Delete (\begin{DoxyParamCaption}\item[{bool}]{save\+Project\+Settings\+Immediately = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Delete the saved setting. Does not clear the current value. 
+
+M\+:\+Unity\+Editor.\+Settings\+Management.\+User\+Setting\`{}1.\+Reset(\+System.\+Boolean) 
+\begin{DoxyParams}{Parameters}
+{\em save\+Project\+Settings\+Immediately} & True to immediately re-\/serialize project settings.\\
+\hline
+\end{DoxyParams}
+Delete the saved setting. Does not clear the current value.  
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting_a7887a815e4564a4796c84a88f4ae6010}{Unity\+Editor.\+Settings\+Management.\+IUser\+Setting}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_a0eda131ac93fc868b36e949eec39c1b7}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_a0eda131ac93fc868b36e949eec39c1b7}} 
+\index{UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}!GetDefaultValue@{GetDefaultValue}}
+\index{GetDefaultValue@{GetDefaultValue}!UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetDefaultValue()}{GetDefaultValue()}}
+{\footnotesize\ttfamily object \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{Unity\+Editor.\+Settings\+Management.\+User\+Setting}}$<$ T $>$.Get\+Default\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a copy of the default value. 
+
+\begin{DoxyReturn}{Returns}
+The default value. 
+\end{DoxyReturn}
+Get the default value for this setting.  
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting_ac0af9d54747a6696b80155f348d9b96c}{Unity\+Editor.\+Settings\+Management.\+IUser\+Setting}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_a81102184483c0b177afb7e365b3caf57}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_a81102184483c0b177afb7e365b3caf57}} 
+\index{UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily object \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{Unity\+Editor.\+Settings\+Management.\+User\+Setting}}$<$ T $>$.Get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the currently stored value. 
+
+\begin{DoxyReturn}{Returns}
+The value that is currently set. 
+\end{DoxyReturn}
+Get the stored value. If you are implementing \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting}{IUser\+Setting}} it is recommended that you cache this value.  
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting_aa7c3fe7c8978e306bf1809c13caccbbf}{Unity\+Editor.\+Settings\+Management.\+IUser\+Setting}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_a26a0fca48952fa899e82c66ab0669755}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_a26a0fca48952fa899e82c66ab0669755}} 
+\index{UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}!operator T@{operator T}}
+\index{operator T@{operator T}!UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator T()}{operator T()}}
+{\footnotesize\ttfamily static implicit \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{Unity\+Editor.\+Settings\+Management.\+User\+Setting}}$<$ T $>$.operator T (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{User\+Setting}}$<$ T $>$}]{pref }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Implicit cast to backing type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pref} & The \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{User\+Setting}}\{T\} to cast to \{T\}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The currently stored \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a2582c385e52193358717afaef5f08b38}{value}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_a32a5633cbb273f24fbe99fcc5c371a96}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_a32a5633cbb273f24fbe99fcc5c371a96}} 
+\index{UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}!Reset@{Reset}}
+\index{Reset@{Reset}!UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{Unity\+Editor.\+Settings\+Management.\+User\+Setting}}$<$ T $>$.Reset (\begin{DoxyParamCaption}\item[{bool}]{save\+Project\+Settings\+Immediately = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the current value back to the default. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em save\+Project\+Settings\+Immediately} & True to immediately re-\/serialize project settings.\\
+\hline
+\end{DoxyParams}
+Set the current value back to the default.  
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting_a05f3edf3f850d0c434db36bdf3678ca6}{Unity\+Editor.\+Settings\+Management.\+IUser\+Setting}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_a51f6c0399ef3deb35151ed650b27312c}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_a51f6c0399ef3deb35151ed650b27312c}} 
+\index{UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}!SetValue@{SetValue}}
+\index{SetValue@{SetValue}!UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetValue()}{SetValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{Unity\+Editor.\+Settings\+Management.\+User\+Setting}}$<$ T $>$.Set\+Value (\begin{DoxyParamCaption}\item[{object}]{value,  }\item[{bool}]{save\+Project\+Settings\+Immediately = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the value for this setting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The new value.\\
+\hline
+{\em save\+Project\+Settings\+Immediately} & True to immediately serialize the \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository}{ISettings\+Repository}} that is backing this value, or false to postpone. If not serializing immediately, be sure to call \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings_acdd5c478cd1903ba5f2b571fd8051f70}{Settings.\+Save}}. \\
+\hline
+\end{DoxyParams}
+Set the value for this setting.  
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting_a48cb9f47a1ec700d7923afcf02febc8c}{Unity\+Editor.\+Settings\+Management.\+IUser\+Setting}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_a7aeb08a132738adab71f3fb77d28a061}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_a7aeb08a132738adab71f3fb77d28a061}} 
+\index{UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}!SetValue@{SetValue}}
+\index{SetValue@{SetValue}!UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetValue()}{SetValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{Unity\+Editor.\+Settings\+Management.\+User\+Setting}}$<$ T $>$.Set\+Value (\begin{DoxyParamCaption}\item[{T}]{value,  }\item[{bool}]{save\+Project\+Settings\+Immediately = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the value for this setting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The new value.\\
+\hline
+{\em save\+Project\+Settings\+Immediately} & True to immediately serialize the \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository}{ISettings\+Repository}} that is backing this value, or false to postpone. If not serializing immediately, be sure to call \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings_acdd5c478cd1903ba5f2b571fd8051f70}{Settings.\+Save}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_ad0f30b72cf7c4ec13c3b27d1c433f594}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_ad0f30b72cf7c4ec13c3b27d1c433f594}} 
+\index{UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}!ToString@{ToString}}
+\index{ToString@{ToString}!UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{Unity\+Editor.\+Settings\+Management.\+User\+Setting}}$<$ T $>$.To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a summary of this setting. 
+
+\begin{DoxyReturn}{Returns}
+A string summary of this setting.
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_a1e1659358d185080e01ce3af3ad754d8}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_a1e1659358d185080e01ce3af3ad754d8}} 
+\index{UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}!defaultValue@{defaultValue}}
+\index{defaultValue@{defaultValue}!UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{defaultValue}{defaultValue}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{Unity\+Editor.\+Settings\+Management.\+User\+Setting}}$<$ T $>$.default\+Value\hspace{0.3cm}{\ttfamily [get]}}
+
+The default value for this setting. \mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_a3855f99bfe1fbb02b4addafe3e017dfd}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_a3855f99bfe1fbb02b4addafe3e017dfd}} 
+\index{UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}!key@{key}}
+\index{key@{key}!UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{Unity\+Editor.\+Settings\+Management.\+User\+Setting}}$<$ T $>$.key\hspace{0.3cm}{\ttfamily [get]}}
+
+The key for this value. 
+
+The key for this value.  
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting_a265a52f906d9f69cd64b1be4d750567c}{Unity\+Editor.\+Settings\+Management.\+IUser\+Setting}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_aea6c661cb919e62e6f0c0c2c5a522565}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_aea6c661cb919e62e6f0c0c2c5a522565}} 
+\index{UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}!scope@{scope}}
+\index{scope@{scope}!UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{scope}{scope}}
+{\footnotesize\ttfamily Settings\+Scope \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{Unity\+Editor.\+Settings\+Management.\+User\+Setting}}$<$ T $>$.scope\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The scope affects which \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository}{ISettings\+Repository}} the \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_a2eca35be2e4dca3e06cf713e7bd3e36b}{settings}} instance will save it\textquotesingle{}s data to. 
+
+The scope at which to save this key and value. 
+
+At which scope this setting is saved.  
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting_a596985b5b0f405edad8e79eb178e39d5}{Unity\+Editor.\+Settings\+Management.\+IUser\+Setting}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_a2eca35be2e4dca3e06cf713e7bd3e36b}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_a2eca35be2e4dca3e06cf713e7bd3e36b}} 
+\index{UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}!settings@{settings}}
+\index{settings@{settings}!UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{settings}{settings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}} \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{Unity\+Editor.\+Settings\+Management.\+User\+Setting}}$<$ T $>$.settings\hspace{0.3cm}{\ttfamily [get]}}
+
+The \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}} instance that this setting will be read from and saved to. 
+
+The \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}} instance that this setting should be saved and loaded from.  
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting_a8078077eb81f931359c7f2ffbfff8feb}{Unity\+Editor.\+Settings\+Management.\+IUser\+Setting}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_a7b8aedfcf1533e93c6fbae0dde301cbb}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_a7b8aedfcf1533e93c6fbae0dde301cbb}} 
+\index{UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}!settingsRepositoryName@{settingsRepositoryName}}
+\index{settingsRepositoryName@{settingsRepositoryName}!UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{settingsRepositoryName}{settingsRepositoryName}}
+{\footnotesize\ttfamily string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{Unity\+Editor.\+Settings\+Management.\+User\+Setting}}$<$ T $>$.settings\+Repository\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+The name of the repository that this setting is saved in. 
+
+The name of the \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository}{ISettings\+Repository}} that this setting should be associated with. If null, the first repository matching the \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting_a596985b5b0f405edad8e79eb178e39d5}{scope}} will be used.  
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting_a899085efffa8d3e775b7c9c0e997e9a1}{Unity\+Editor.\+Settings\+Management.\+IUser\+Setting}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_ae115f3ea8dfc2d4e3efd2a2804f15078}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_ae115f3ea8dfc2d4e3efd2a2804f15078}} 
+\index{UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}!type@{type}}
+\index{type@{type}!UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily Type \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{Unity\+Editor.\+Settings\+Management.\+User\+Setting}}$<$ T $>$.type\hspace{0.3cm}{\ttfamily [get]}}
+
+The type that this setting represents (\{T\}). 
+
+The type of the stored value.  
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_user_setting_a704fc6f098a74121e26a322f5256a19a}{Unity\+Editor.\+Settings\+Management.\+IUser\+Setting}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_a2582c385e52193358717afaef5f08b38}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_a2582c385e52193358717afaef5f08b38}} 
+\index{UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}!value@{value}}
+\index{value@{value}!UnityEditor.SettingsManagement.UserSetting$<$ T $>$@{UnityEditor.SettingsManagement.UserSetting$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting}{Unity\+Editor.\+Settings\+Management.\+User\+Setting}}$<$ T $>$.value\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+The currently stored value. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+settings-\/manager@1.\+0.\+3/\+Editor/User\+Setting.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,141 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_timer}{}\doxysection{Unity.\+Visual\+Scripting.\+Timer Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_timer}\index{Unity.VisualScripting.Timer@{Unity.VisualScripting.Timer}}
+
+
+Runs a timer and outputs elapsed and remaining measurements.  
+
+
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Timer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.516129cm]{class_unity_1_1_visual_scripting_1_1_timer}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_timer_1_1_data}{Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_timer_a83300eca8948aee95ff0db031312636d}{Create\+Data}} ()
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_timer_ab1aaa31d3adf8f57f6a5e5914804a78d}{Start\+Listening}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}} stack)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_timer_ac670748a5cc718cbf505195c91b7652d}{Stop\+Listening}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}} stack)
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_timer_a09ebd1e10d5c1a1820cd3e7687f2fe1f}{Is\+Listening}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Graph\+Pointer}} pointer)
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_timer_a0b9085964c364044e3bf054ebdbbae0b}\label{class_unity_1_1_visual_scripting_1_1_timer_a0b9085964c364044e3bf054ebdbbae0b}} 
+void {\bfseries Update} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}} flow)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_timer_a8aaa1a436a926a092e4bb7bf37ed778f}{Definition}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_timer_a2f68b821afbf49154721e0f1137cd8b3}\label{class_unity_1_1_visual_scripting_1_1_timer_a2f68b821afbf49154721e0f1137cd8b3}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_input}{Control\+Input}} {\bfseries start}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The moment at which to start the timer. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} the timer is already started, this will reset it. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} the timer is paused, this will resume it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_timer_a1d8f947e4032b49237c6d1a45ce8ece0}\label{class_unity_1_1_visual_scripting_1_1_timer_a1d8f947e4032b49237c6d1a45ce8ece0}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_input}{Control\+Input}} {\bfseries pause}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Trigger to pause the timer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_timer_ab8474693539dfecea6ed8ab9bd54947d}\label{class_unity_1_1_visual_scripting_1_1_timer_ab8474693539dfecea6ed8ab9bd54947d}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_input}{Control\+Input}} {\bfseries resume}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Trigger to resume the timer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_timer_a68012ec4896447338a9d5433c1cb4800}\label{class_unity_1_1_visual_scripting_1_1_timer_a68012ec4896447338a9d5433c1cb4800}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_input}{Control\+Input}} {\bfseries toggle}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Trigger to toggle the timer. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} it is idle, it will start. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} it is active, it will pause. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} it is paused, it will resume. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_timer_ac790a28bc287faacad377abc4c31442f}\label{class_unity_1_1_visual_scripting_1_1_timer_ac790a28bc287faacad377abc4c31442f}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{Value\+Input}} {\bfseries duration}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The total duration of the timer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_timer_a382d40f86590178f43aaf287c3319d85}\label{class_unity_1_1_visual_scripting_1_1_timer_a382d40f86590178f43aaf287c3319d85}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{Value\+Input}} {\bfseries unscaled\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether to ignore the time scale. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_timer_ab79f1e43a92bcc1446a4db0cd69a017e}\label{class_unity_1_1_visual_scripting_1_1_timer_ab79f1e43a92bcc1446a4db0cd69a017e}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{Control\+Output}} {\bfseries started}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Called when the timer is started.\+co \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_timer_a87d4a7c65a7c784f2d91c7e82a7868c2}\label{class_unity_1_1_visual_scripting_1_1_timer_a87d4a7c65a7c784f2d91c7e82a7868c2}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{Control\+Output}} {\bfseries tick}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Called each frame while the timer is active. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_timer_ac43a5df9b67c883fd23f3611d1561dd2}\label{class_unity_1_1_visual_scripting_1_1_timer_ac43a5df9b67c883fd23f3611d1561dd2}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{Control\+Output}} {\bfseries completed}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Called when the timer completes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_timer_a0dab7aeceacf05bce7ece484ec8ff49e}\label{class_unity_1_1_visual_scripting_1_1_timer_a0dab7aeceacf05bce7ece484ec8ff49e}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_output}{Value\+Output}} {\bfseries elapsed\+Seconds}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of seconds elapsed since the timer started. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_timer_a1b838e01266cdc20e32dee72d8776d13}\label{class_unity_1_1_visual_scripting_1_1_timer_a1b838e01266cdc20e32dee72d8776d13}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_output}{Value\+Output}} {\bfseries elapsed\+Ratio}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The proportion of the duration that has elapsed (0-\/1). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_timer_aaa3a4d0411f6a0f1ad9fcd0c0610ef36}\label{class_unity_1_1_visual_scripting_1_1_timer_aaa3a4d0411f6a0f1ad9fcd0c0610ef36}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_output}{Value\+Output}} {\bfseries remaining\+Seconds}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of seconds remaining until the timer is elapsed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_timer_a02bf60c4ee4608a0b46e8d434964351d}\label{class_unity_1_1_visual_scripting_1_1_timer_a02bf60c4ee4608a0b46e8d434964351d}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_output}{Value\+Output}} {\bfseries remaining\+Ratio}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The proportion of the duration remaining until the timer is elapsed (0-\/1). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Runs a timer and outputs elapsed and remaining measurements. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_timer_a83300eca8948aee95ff0db031312636d}\label{class_unity_1_1_visual_scripting_1_1_timer_a83300eca8948aee95ff0db031312636d}} 
+\index{Unity.VisualScripting.Timer@{Unity.VisualScripting.Timer}!CreateData@{CreateData}}
+\index{CreateData@{CreateData}!Unity.VisualScripting.Timer@{Unity.VisualScripting.Timer}}
+\doxysubsubsection{\texorpdfstring{CreateData()}{CreateData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}} Unity.\+Visual\+Scripting.\+Timer.\+Create\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_with_data}{Unity.\+Visual\+Scripting.\+IGraph\+Element\+With\+Data}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_timer_a8aaa1a436a926a092e4bb7bf37ed778f}\label{class_unity_1_1_visual_scripting_1_1_timer_a8aaa1a436a926a092e4bb7bf37ed778f}} 
+\index{Unity.VisualScripting.Timer@{Unity.VisualScripting.Timer}!Definition@{Definition}}
+\index{Definition@{Definition}!Unity.VisualScripting.Timer@{Unity.VisualScripting.Timer}}
+\doxysubsubsection{\texorpdfstring{Definition()}{Definition()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+Timer.\+Definition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit}{Unity.\+Visual\+Scripting.\+Unit}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_timer_a09ebd1e10d5c1a1820cd3e7687f2fe1f}\label{class_unity_1_1_visual_scripting_1_1_timer_a09ebd1e10d5c1a1820cd3e7687f2fe1f}} 
+\index{Unity.VisualScripting.Timer@{Unity.VisualScripting.Timer}!IsListening@{IsListening}}
+\index{IsListening@{IsListening}!Unity.VisualScripting.Timer@{Unity.VisualScripting.Timer}}
+\doxysubsubsection{\texorpdfstring{IsListening()}{IsListening()}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Timer.\+Is\+Listening (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Graph\+Pointer}}}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_event_listener}{Unity.\+Visual\+Scripting.\+IGraph\+Event\+Listener}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_timer_ab1aaa31d3adf8f57f6a5e5914804a78d}\label{class_unity_1_1_visual_scripting_1_1_timer_ab1aaa31d3adf8f57f6a5e5914804a78d}} 
+\index{Unity.VisualScripting.Timer@{Unity.VisualScripting.Timer}!StartListening@{StartListening}}
+\index{StartListening@{StartListening}!Unity.VisualScripting.Timer@{Unity.VisualScripting.Timer}}
+\doxysubsubsection{\texorpdfstring{StartListening()}{StartListening()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Timer.\+Start\+Listening (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}}}]{stack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_event_listener}{Unity.\+Visual\+Scripting.\+IGraph\+Event\+Listener}}.
+
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_timer_ac670748a5cc718cbf505195c91b7652d}\label{class_unity_1_1_visual_scripting_1_1_timer_ac670748a5cc718cbf505195c91b7652d}} 
+\index{Unity.VisualScripting.Timer@{Unity.VisualScripting.Timer}!StopListening@{StopListening}}
+\index{StopListening@{StopListening}!Unity.VisualScripting.Timer@{Unity.VisualScripting.Timer}}
+\doxysubsubsection{\texorpdfstring{StopListening()}{StopListening()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Timer.\+Stop\+Listening (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}}}]{stack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_event_listener}{Unity.\+Visual\+Scripting.\+IGraph\+Event\+Listener}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Flow/\+Framework/\+Time/Timer.\+cs\end{DoxyCompactItemize}

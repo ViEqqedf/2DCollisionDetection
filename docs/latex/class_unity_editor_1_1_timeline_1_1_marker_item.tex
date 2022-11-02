@@ -1,0 +1,157 @@
+\hypertarget{class_unity_editor_1_1_timeline_1_1_marker_item}{}\doxysection{Unity\+Editor.\+Timeline.\+Marker\+Item Class Reference}
+\label{class_unity_editor_1_1_timeline_1_1_marker_item}\index{UnityEditor.Timeline.MarkerItem@{UnityEditor.Timeline.MarkerItem}}
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Marker\+Item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_editor_1_1_timeline_1_1_marker_item}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_item_a214eed0e8751aa48aec2077ac2c11b15}\label{class_unity_editor_1_1_timeline_1_1_marker_item_a214eed0e8751aa48aec2077ac2c11b15}} 
+{\bfseries Marker\+Item} (\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} marker)
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_marker_item_ae1743875c446eadadac068a4aa144118}{Is\+Compatible\+With\+Track}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track)
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_marker_item_ae7b358f2f1fd85795e93e57edc37aed7}{Push\+Undo}} (string operation)
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_marker_item_ae331b0fa6eaf2ebc760cff69f703e4e2}{Delete}} ()
+\item 
+\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{ITimeline\+Item}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_marker_item_ab2901584b5b33755b5af58d62fd8bdaa}{Clone\+To}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} parent, double time)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_item_aa32b5353187ed95f8ea4c8037a33ac85}\label{class_unity_editor_1_1_timeline_1_1_marker_item_aa32b5353187ed95f8ea4c8037a33ac85}} 
+override int {\bfseries Get\+Hash\+Code} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_item_a1aa847a362b73a0ee13275008309c1ea}\label{class_unity_editor_1_1_timeline_1_1_marker_item_a1aa847a362b73a0ee13275008309c1ea}} 
+override string {\bfseries To\+String} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_item_a3ccba049f47b3f12350782438a439958}\label{class_unity_editor_1_1_timeline_1_1_marker_item_a3ccba049f47b3f12350782438a439958}} 
+bool {\bfseries Equals} (\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{ITimeline\+Item}} other)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_item_a4f491ded68ff89424f6d951913fcd3b3}\label{class_unity_editor_1_1_timeline_1_1_marker_item_a4f491ded68ff89424f6d951913fcd3b3}} 
+override bool {\bfseries Equals} (object obj)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_item_af5c414231cb538ee1442b565494d4e61}\label{class_unity_editor_1_1_timeline_1_1_marker_item_af5c414231cb538ee1442b565494d4e61}} 
+bool {\bfseries Equals} (\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_marker_item}{Marker\+Item}} other\+Marker)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_item_ab108c3326693a72e4327d50e9c3a13c5}\label{class_unity_editor_1_1_timeline_1_1_marker_item_ab108c3326693a72e4327d50e9c3a13c5}} 
+\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} {\bfseries marker}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_marker_item_a307703e241129d46663bf10b7800858b}{parent\+Track}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+double \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_marker_item_a9a11597f6e667693a14cc4792735ca80}{start}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+double \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_marker_item_a4c1f873a8266510b30c544806bb88f1c}{end}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+double \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_marker_item_aa1fcc4817d34825d617daad950a2f03a}{duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i}{Timeline\+Item\+GUI}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_marker_item_aa3ac2c462895080a0e9a905a0d06f85a}{gui}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_item_ab2901584b5b33755b5af58d62fd8bdaa}\label{class_unity_editor_1_1_timeline_1_1_marker_item_ab2901584b5b33755b5af58d62fd8bdaa}} 
+\index{UnityEditor.Timeline.MarkerItem@{UnityEditor.Timeline.MarkerItem}!CloneTo@{CloneTo}}
+\index{CloneTo@{CloneTo}!UnityEditor.Timeline.MarkerItem@{UnityEditor.Timeline.MarkerItem}}
+\doxysubsubsection{\texorpdfstring{CloneTo()}{CloneTo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{ITimeline\+Item}} Unity\+Editor.\+Timeline.\+Marker\+Item.\+Clone\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{parent,  }\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{Unity\+Editor.\+Timeline.\+ITimeline\+Item}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_item_ae331b0fa6eaf2ebc760cff69f703e4e2}\label{class_unity_editor_1_1_timeline_1_1_marker_item_ae331b0fa6eaf2ebc760cff69f703e4e2}} 
+\index{UnityEditor.Timeline.MarkerItem@{UnityEditor.Timeline.MarkerItem}!Delete@{Delete}}
+\index{Delete@{Delete}!UnityEditor.Timeline.MarkerItem@{UnityEditor.Timeline.MarkerItem}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Marker\+Item.\+Delete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{Unity\+Editor.\+Timeline.\+ITimeline\+Item}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_item_ae1743875c446eadadac068a4aa144118}\label{class_unity_editor_1_1_timeline_1_1_marker_item_ae1743875c446eadadac068a4aa144118}} 
+\index{UnityEditor.Timeline.MarkerItem@{UnityEditor.Timeline.MarkerItem}!IsCompatibleWithTrack@{IsCompatibleWithTrack}}
+\index{IsCompatibleWithTrack@{IsCompatibleWithTrack}!UnityEditor.Timeline.MarkerItem@{UnityEditor.Timeline.MarkerItem}}
+\doxysubsubsection{\texorpdfstring{IsCompatibleWithTrack()}{IsCompatibleWithTrack()}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+Marker\+Item.\+Is\+Compatible\+With\+Track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{track }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{Unity\+Editor.\+Timeline.\+ITimeline\+Item}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_item_ae7b358f2f1fd85795e93e57edc37aed7}\label{class_unity_editor_1_1_timeline_1_1_marker_item_ae7b358f2f1fd85795e93e57edc37aed7}} 
+\index{UnityEditor.Timeline.MarkerItem@{UnityEditor.Timeline.MarkerItem}!PushUndo@{PushUndo}}
+\index{PushUndo@{PushUndo}!UnityEditor.Timeline.MarkerItem@{UnityEditor.Timeline.MarkerItem}}
+\doxysubsubsection{\texorpdfstring{PushUndo()}{PushUndo()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Marker\+Item.\+Push\+Undo (\begin{DoxyParamCaption}\item[{string}]{operation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{Unity\+Editor.\+Timeline.\+ITimeline\+Item}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_item_aa1fcc4817d34825d617daad950a2f03a}\label{class_unity_editor_1_1_timeline_1_1_marker_item_aa1fcc4817d34825d617daad950a2f03a}} 
+\index{UnityEditor.Timeline.MarkerItem@{UnityEditor.Timeline.MarkerItem}!duration@{duration}}
+\index{duration@{duration}!UnityEditor.Timeline.MarkerItem@{UnityEditor.Timeline.MarkerItem}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily double Unity\+Editor.\+Timeline.\+Marker\+Item.\+duration\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{Unity\+Editor.\+Timeline.\+ITimeline\+Item}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_item_a4c1f873a8266510b30c544806bb88f1c}\label{class_unity_editor_1_1_timeline_1_1_marker_item_a4c1f873a8266510b30c544806bb88f1c}} 
+\index{UnityEditor.Timeline.MarkerItem@{UnityEditor.Timeline.MarkerItem}!end@{end}}
+\index{end@{end}!UnityEditor.Timeline.MarkerItem@{UnityEditor.Timeline.MarkerItem}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily double Unity\+Editor.\+Timeline.\+Marker\+Item.\+end\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{Unity\+Editor.\+Timeline.\+ITimeline\+Item}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_item_aa3ac2c462895080a0e9a905a0d06f85a}\label{class_unity_editor_1_1_timeline_1_1_marker_item_aa3ac2c462895080a0e9a905a0d06f85a}} 
+\index{UnityEditor.Timeline.MarkerItem@{UnityEditor.Timeline.MarkerItem}!gui@{gui}}
+\index{gui@{gui}!UnityEditor.Timeline.MarkerItem@{UnityEditor.Timeline.MarkerItem}}
+\doxysubsubsection{\texorpdfstring{gui}{gui}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i}{Timeline\+Item\+GUI}} Unity\+Editor.\+Timeline.\+Marker\+Item.\+gui\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{Unity\+Editor.\+Timeline.\+ITimeline\+Item}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_item_a307703e241129d46663bf10b7800858b}\label{class_unity_editor_1_1_timeline_1_1_marker_item_a307703e241129d46663bf10b7800858b}} 
+\index{UnityEditor.Timeline.MarkerItem@{UnityEditor.Timeline.MarkerItem}!parentTrack@{parentTrack}}
+\index{parentTrack@{parentTrack}!UnityEditor.Timeline.MarkerItem@{UnityEditor.Timeline.MarkerItem}}
+\doxysubsubsection{\texorpdfstring{parentTrack}{parentTrack}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} Unity\+Editor.\+Timeline.\+Marker\+Item.\+parent\+Track\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{Unity\+Editor.\+Timeline.\+ITimeline\+Item}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_marker_item_a9a11597f6e667693a14cc4792735ca80}\label{class_unity_editor_1_1_timeline_1_1_marker_item_a9a11597f6e667693a14cc4792735ca80}} 
+\index{UnityEditor.Timeline.MarkerItem@{UnityEditor.Timeline.MarkerItem}!start@{start}}
+\index{start@{start}!UnityEditor.Timeline.MarkerItem@{UnityEditor.Timeline.MarkerItem}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily double Unity\+Editor.\+Timeline.\+Marker\+Item.\+start\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{Unity\+Editor.\+Timeline.\+ITimeline\+Item}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Editor/\+Items/Marker\+Item.\+cs\end{DoxyCompactItemize}

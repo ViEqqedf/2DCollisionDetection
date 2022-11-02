@@ -1,0 +1,96 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_tests_1_1_rect_mask2_d_clipping}{}\doxysection{Unity\+Engine.\+UI.\+Tests.\+Rect\+Mask2\+DClipping Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_tests_1_1_rect_mask2_d_clipping}\index{UnityEngine.UI.Tests.RectMask2DClipping@{UnityEngine.UI.Tests.RectMask2DClipping}}
+Inheritance diagram for Unity\+Engine.\+UI.\+Tests.\+Rect\+Mask2\+DClipping\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_u_i_1_1_tests_1_1_rect_mask2_d_clipping}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_tests_1_1_rect_mask2_d_clipping_a9bebc3303a81ad3ef202b7b3ddccb48b}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Implement this method to call actions automatically before the build process. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_tests_1_1_rect_mask2_d_clipping_a84a39be36732b9fc3a5c773da7104709}\label{class_unity_engine_1_1_u_i_1_1_tests_1_1_rect_mask2_d_clipping_a84a39be36732b9fc3a5c773da7104709}} 
+void {\bfseries Test\+Setup} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_tests_1_1_rect_mask2_d_clipping_ac4cebde2ed54efa83453ed2c811c56dd}\label{class_unity_engine_1_1_u_i_1_1_tests_1_1_rect_mask2_d_clipping_ac4cebde2ed54efa83453ed2c811c56dd}} 
+IEnumerator {\bfseries Mask2\+DRect\+\_\+\+Correct\+Clipping} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_tests_1_1_rect_mask2_d_clipping_abedc6ff9ea993d6176402df3bd88a20d}\label{class_unity_engine_1_1_u_i_1_1_tests_1_1_rect_mask2_d_clipping_abedc6ff9ea993d6176402df3bd88a20d}} 
+void {\bfseries Mask2\+DRect\+\_\+\+Non\+Zero\+Padding\+Masks\+Properly} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_tests_1_1_rect_mask2_d_clipping_af8cd6c7aaf20dc8ad1f3ef82664071fc}\label{class_unity_engine_1_1_u_i_1_1_tests_1_1_rect_mask2_d_clipping_af8cd6c7aaf20dc8ad1f3ef82664071fc}} 
+void {\bfseries Tear\+Down} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_tests_1_1_rect_mask2_d_clipping_ad40c39a29f910165fa388436527dd28e}\label{class_unity_engine_1_1_u_i_1_1_tests_1_1_rect_mask2_d_clipping_ad40c39a29f910165fa388436527dd28e}} 
+void {\bfseries One\+Time\+Tear\+Down} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_tests_1_1_rect_mask2_d_clipping_a9bebc3303a81ad3ef202b7b3ddccb48b}\label{class_unity_engine_1_1_u_i_1_1_tests_1_1_rect_mask2_d_clipping_a9bebc3303a81ad3ef202b7b3ddccb48b}} 
+\index{UnityEngine.UI.Tests.RectMask2DClipping@{UnityEngine.UI.Tests.RectMask2DClipping}!Setup@{Setup}}
+\index{Setup@{Setup}!UnityEngine.UI.Tests.RectMask2DClipping@{UnityEngine.UI.Tests.RectMask2DClipping}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Tests.\+Rect\+Mask2\+DClipping.\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implement this method to call actions automatically before the build process. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }CreateSpriteTest : IPrebuildSetup}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    Texture2D m\_Texture;}
+\DoxyCodeLine{    Sprite m\_Sprite;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_tests_1_1_rect_mask2_d_clipping_a9bebc3303a81ad3ef202b7b3ddccb48b}{Setup}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#if UNITY\_EDITOR}}
+\DoxyCodeLine{        var spritePath = \textcolor{stringliteral}{"{}Assets/Resources/Circle.png"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{        var ti = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.AssetImporter.GetAtPath(spritePath) as \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporter;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.textureCompression = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporterCompression.Uncompressed;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.SaveAndReimport();}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [SetUp]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} SetUpTest()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        m\_Texture = Resources.Load<Texture2D>(\textcolor{stringliteral}{"{}Circle"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [Test]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} WhenNullTextureIsPassed\_CreateShouldReturnNullSprite()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with Valid Texture.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        LogAssert.Expect(LogType.Log, \textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Sprite.Create(m\_Texture, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Debug.Log(\textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with NULL Texture. Should return NULL Sprite.}}
+\DoxyCodeLine{        m\_Sprite = Sprite.Create(\textcolor{keyword}{null}, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Assert.That(m\_Sprite, Is.Null, \textcolor{stringliteral}{"{}Sprite created with null texture should be null"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup_a9a9eaa928efe50645e61412528e84309}{Unity\+Engine.\+Test\+Tools.\+IPrebuild\+Setup}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Tests/\+Runtime/\+Mask\+Clipping/Rect\+Mask2\+DClipping.\+cs\end{DoxyCompactItemize}

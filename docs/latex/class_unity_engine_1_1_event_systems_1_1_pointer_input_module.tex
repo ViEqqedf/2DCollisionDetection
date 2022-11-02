@@ -1,0 +1,174 @@
+\hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module}{}\doxysection{Unity\+Engine.\+Event\+Systems.\+Pointer\+Input\+Module Class Reference}
+\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module}\index{UnityEngine.EventSystems.PointerInputModule@{UnityEngine.EventSystems.PointerInputModule}}
+
+
+A Base\+Input\+Module for pointer input.  
+
+
+Inheritance diagram for Unity\+Engine.\+Event\+Systems.\+Pointer\+Input\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.754098cm]{class_unity_engine_1_1_event_systems_1_1_pointer_input_module}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_1_1_button_state}{Button\+State}}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_1_1_mouse_button_event_data}{Mouse\+Button\+Event\+Data}}
+\begin{DoxyCompactList}\small\item\em Information about a mouse button event. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_1_1_mouse_state}{Mouse\+State}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_aa96698ff32c65f6f0e69b2792bf805b2}\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_aa96698ff32c65f6f0e69b2792bf805b2}} 
+override bool {\bfseries Is\+Pointer\+Over\+Game\+Object} (int pointer\+Id)
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_aae3f02ee179264dce7357b13c2b2da80}\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_aae3f02ee179264dce7357b13c2b2da80}} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_ae4e656130ce1ebc6fe7e114b497715f6}\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_ae4e656130ce1ebc6fe7e114b497715f6}} 
+const int {\bfseries k\+Mouse\+Left\+Id} = -\/1
+\begin{DoxyCompactList}\small\item\em Id of the cached left mouse pointer event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a711d8048ab2893dd750ba0f7c3151a1c}\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a711d8048ab2893dd750ba0f7c3151a1c}} 
+const int {\bfseries k\+Mouse\+Right\+Id} = -\/2
+\begin{DoxyCompactList}\small\item\em Id of the cached right mouse pointer event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_aa42f0837f989b553a12487b14481b7b0}\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_aa42f0837f989b553a12487b14481b7b0}} 
+const int {\bfseries k\+Mouse\+Middle\+Id} = -\/3
+\begin{DoxyCompactList}\small\item\em Id of the cached middle mouse pointer event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a6adad39ade045f32e8eca9f0e5e49952}\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a6adad39ade045f32e8eca9f0e5e49952}} 
+const int {\bfseries k\+Fake\+Touches\+Id} = -\/4
+\begin{DoxyCompactList}\small\item\em Touch id for when simulating touches on a non touch device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a9bfbf3091dc432b4223a52d7d277381d}{Get\+Pointer\+Data}} (int id, out \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} data, bool create)
+\begin{DoxyCompactList}\small\item\em Search the cache for currently active pointers, return true if found. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a437195f2801f495b0f383d41f2471b11}\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a437195f2801f495b0f383d41f2471b11}} 
+void {\bfseries Remove\+Pointer\+Data} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} data)
+\begin{DoxyCompactList}\small\item\em Remove the \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} from the cache. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a1aebc2278bab5233e88ef1cf8c95b133}{Get\+Touch\+Pointer\+Event\+Data}} (Touch input, out bool pressed, out bool released)
+\begin{DoxyCompactList}\small\item\em Given a touch populate the \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} and return if we are pressed or released. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a00b5a0bea1bec8754efa05bc196304f1}\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a00b5a0bea1bec8754efa05bc196304f1}} 
+void {\bfseries Copy\+From\+To} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} @from, \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} @to)
+\begin{DoxyCompactList}\small\item\em Copy one \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} to another. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a3ab46f72d7d579d52715612ab3e73611}{Pointer\+Event\+Data.\+Frame\+Press\+State}} \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a184d4ce30fa7ec925f00524edacfc89f}{State\+For\+Mouse\+Button}} (int button\+Id)
+\begin{DoxyCompactList}\small\item\em Given a mouse button return the current state for the frame. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a887fadebfc9f196d0976b4afcb6bf3fd}\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a887fadebfc9f196d0976b4afcb6bf3fd}} 
+virtual \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_1_1_mouse_state}{Mouse\+State}} {\bfseries Get\+Mouse\+Pointer\+Event\+Data} ()
+\begin{DoxyCompactList}\small\item\em Return the current \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_1_1_mouse_state}{Mouse\+State}}. Using the default pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_ab7c4b103d471dc44136aa8a847cf51f7}\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_ab7c4b103d471dc44136aa8a847cf51f7}} 
+virtual \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_1_1_mouse_state}{Mouse\+State}} {\bfseries Get\+Mouse\+Pointer\+Event\+Data} (int id)
+\begin{DoxyCompactList}\small\item\em Return the current \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_1_1_mouse_state}{Mouse\+State}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_aaa53d235a87024846ba18b6612eace20}\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_aaa53d235a87024846ba18b6612eace20}} 
+\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} {\bfseries Get\+Last\+Pointer\+Event\+Data} (int id)
+\begin{DoxyCompactList}\small\item\em Return the last \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} for the given touch / mouse id. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_aee98d7e4472040a411060d5fad6879aa}\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_aee98d7e4472040a411060d5fad6879aa}} 
+virtual void {\bfseries Process\+Move} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} pointer\+Event)
+\begin{DoxyCompactList}\small\item\em Process movement for the current frame with the given pointer event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a4b97f07c0cfc1a97896d4251a5ddf73d}\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a4b97f07c0cfc1a97896d4251a5ddf73d}} 
+virtual void {\bfseries Process\+Drag} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} pointer\+Event)
+\begin{DoxyCompactList}\small\item\em Process the drag for the current frame with the given pointer event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a456f895ba9a26b607a65c04a09a5c796}\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a456f895ba9a26b607a65c04a09a5c796}} 
+void {\bfseries Clear\+Selection} ()
+\begin{DoxyCompactList}\small\item\em Clear all pointers and deselect any selected objects in the \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_event_system}{Event\+System}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a3e6cff25c91b6e54cd64717c9c7339e1}{Deselect\+If\+Selection\+Changed}} (Game\+Object current\+Over\+Go, \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_event_data}{Base\+Event\+Data}} pointer\+Event)
+\begin{DoxyCompactList}\small\item\em Deselect the current selected Game\+Object if the currently pointed-\/at Game\+Object is different. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a7a0c0fa1f02f53b05bee60f0a3503aa2}\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a7a0c0fa1f02f53b05bee60f0a3503aa2}} 
+Dictionary$<$ int, \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} $>$ {\bfseries m\+\_\+\+Pointer\+Data} = new Dictionary$<$int, \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}}$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Base\+Input\+Module for pointer input. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a3e6cff25c91b6e54cd64717c9c7339e1}\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a3e6cff25c91b6e54cd64717c9c7339e1}} 
+\index{UnityEngine.EventSystems.PointerInputModule@{UnityEngine.EventSystems.PointerInputModule}!DeselectIfSelectionChanged@{DeselectIfSelectionChanged}}
+\index{DeselectIfSelectionChanged@{DeselectIfSelectionChanged}!UnityEngine.EventSystems.PointerInputModule@{UnityEngine.EventSystems.PointerInputModule}}
+\doxysubsubsection{\texorpdfstring{DeselectIfSelectionChanged()}{DeselectIfSelectionChanged()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Event\+Systems.\+Pointer\+Input\+Module.\+Deselect\+If\+Selection\+Changed (\begin{DoxyParamCaption}\item[{Game\+Object}]{current\+Over\+Go,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_event_data}{Base\+Event\+Data}}}]{pointer\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Deselect the current selected Game\+Object if the currently pointed-\/at Game\+Object is different. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Over\+Go} & The Game\+Object the pointer is currently over.\\
+\hline
+{\em pointer\+Event} & Current event data.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a9bfbf3091dc432b4223a52d7d277381d}\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a9bfbf3091dc432b4223a52d7d277381d}} 
+\index{UnityEngine.EventSystems.PointerInputModule@{UnityEngine.EventSystems.PointerInputModule}!GetPointerData@{GetPointerData}}
+\index{GetPointerData@{GetPointerData}!UnityEngine.EventSystems.PointerInputModule@{UnityEngine.EventSystems.PointerInputModule}}
+\doxysubsubsection{\texorpdfstring{GetPointerData()}{GetPointerData()}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Event\+Systems.\+Pointer\+Input\+Module.\+Get\+Pointer\+Data (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{out \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}}}]{data,  }\item[{bool}]{create }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Search the cache for currently active pointers, return true if found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Touch ID\\
+\hline
+{\em data} & Found data\\
+\hline
+{\em create} & If not found should it be created\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if pointer is found.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a1aebc2278bab5233e88ef1cf8c95b133}\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a1aebc2278bab5233e88ef1cf8c95b133}} 
+\index{UnityEngine.EventSystems.PointerInputModule@{UnityEngine.EventSystems.PointerInputModule}!GetTouchPointerEventData@{GetTouchPointerEventData}}
+\index{GetTouchPointerEventData@{GetTouchPointerEventData}!UnityEngine.EventSystems.PointerInputModule@{UnityEngine.EventSystems.PointerInputModule}}
+\doxysubsubsection{\texorpdfstring{GetTouchPointerEventData()}{GetTouchPointerEventData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} Unity\+Engine.\+Event\+Systems.\+Pointer\+Input\+Module.\+Get\+Touch\+Pointer\+Event\+Data (\begin{DoxyParamCaption}\item[{Touch}]{input,  }\item[{out bool}]{pressed,  }\item[{out bool}]{released }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Given a touch populate the \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} and return if we are pressed or released. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Touch being processed\\
+\hline
+{\em pressed} & Are we pressed this frame\\
+\hline
+{\em released} & Are we released this frame\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a184d4ce30fa7ec925f00524edacfc89f}\label{class_unity_engine_1_1_event_systems_1_1_pointer_input_module_a184d4ce30fa7ec925f00524edacfc89f}} 
+\index{UnityEngine.EventSystems.PointerInputModule@{UnityEngine.EventSystems.PointerInputModule}!StateForMouseButton@{StateForMouseButton}}
+\index{StateForMouseButton@{StateForMouseButton}!UnityEngine.EventSystems.PointerInputModule@{UnityEngine.EventSystems.PointerInputModule}}
+\doxysubsubsection{\texorpdfstring{StateForMouseButton()}{StateForMouseButton()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data_a3ab46f72d7d579d52715612ab3e73611}{Pointer\+Event\+Data.\+Frame\+Press\+State}} Unity\+Engine.\+Event\+Systems.\+Pointer\+Input\+Module.\+State\+For\+Mouse\+Button (\begin{DoxyParamCaption}\item[{int}]{button\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Given a mouse button return the current state for the frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button\+Id} & Mouse button ID\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+Event\+System/\+Input\+Modules/Pointer\+Input\+Module.\+cs\end{DoxyCompactItemize}

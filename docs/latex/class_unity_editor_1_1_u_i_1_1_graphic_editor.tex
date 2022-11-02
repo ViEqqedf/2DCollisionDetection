@@ -1,0 +1,94 @@
+\hypertarget{class_unity_editor_1_1_u_i_1_1_graphic_editor}{}\doxysection{Unity\+Editor.\+UI.\+Graphic\+Editor Class Reference}
+\label{class_unity_editor_1_1_u_i_1_1_graphic_editor}\index{UnityEditor.UI.GraphicEditor@{UnityEditor.UI.GraphicEditor}}
+
+
+Editor class used to edit \mbox{\hyperlink{namespace_unity_editor_1_1_u_i}{UI}} \mbox{\hyperlink{namespace_graphics}{Graphics}}. Extend this class to write your own graphic editor.  
+
+
+Inheritance diagram for Unity\+Editor.\+UI.\+Graphic\+Editor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.947368cm]{class_unity_editor_1_1_u_i_1_1_graphic_editor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_graphic_editor_a248a3f1bafe251a618b5e550f60be1e1}\label{class_unity_editor_1_1_u_i_1_1_graphic_editor_a248a3f1bafe251a618b5e550f60be1e1}} 
+override void {\bfseries On\+Inspector\+GUI} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_graphic_editor_abab86194b526413459e9ef1d2cbb7b2c}\label{class_unity_editor_1_1_u_i_1_1_graphic_editor_abab86194b526413459e9ef1d2cbb7b2c}} 
+virtual void {\bfseries On\+Disable} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_graphic_editor_ae58e7938bbd77fea4679ae392dd9e614}\label{class_unity_editor_1_1_u_i_1_1_graphic_editor_ae58e7938bbd77fea4679ae392dd9e614}} 
+virtual void {\bfseries On\+Enable} ()
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_u_i_1_1_graphic_editor_a49c1ea6a6d3eada7ebb1605b9be246e3}{Set\+Show\+Native\+Size}} (bool show, bool instant)
+\begin{DoxyCompactList}\small\item\em Set if the \textquotesingle{}Set Native Size\textquotesingle{} button should be visible for this editor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_graphic_editor_af20ddcdaaaeb7f67adf7493a00d26d71}\label{class_unity_editor_1_1_u_i_1_1_graphic_editor_af20ddcdaaaeb7f67adf7493a00d26d71}} 
+void {\bfseries Native\+Size\+Button\+GUI} ()
+\begin{DoxyCompactList}\small\item\em GUI for showing a button that sets the size of the Rect\+Transform to the native size for this Graphic. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_graphic_editor_ab515cbefb5f3a5fdc30db0655f3e872b}\label{class_unity_editor_1_1_u_i_1_1_graphic_editor_ab515cbefb5f3a5fdc30db0655f3e872b}} 
+void {\bfseries Maskable\+Controls\+GUI} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_graphic_editor_a2e366355d0b3e50f48e78a0ac3e3739f}\label{class_unity_editor_1_1_u_i_1_1_graphic_editor_a2e366355d0b3e50f48e78a0ac3e3739f}} 
+void {\bfseries Appearance\+Controls\+GUI} ()
+\begin{DoxyCompactList}\small\item\em GUI related to the appearance of the Graphic. Color and Material properties appear here. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_graphic_editor_a927a8bb929a1f5b891300de317be6596}\label{class_unity_editor_1_1_u_i_1_1_graphic_editor_a927a8bb929a1f5b891300de317be6596}} 
+void {\bfseries Raycast\+Controls\+GUI} ()
+\begin{DoxyCompactList}\small\item\em GUI related to the Raycasting settings for the graphic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_graphic_editor_aa12813acd4d641ce3bd8c1f26a3c17e8}\label{class_unity_editor_1_1_u_i_1_1_graphic_editor_aa12813acd4d641ce3bd8c1f26a3c17e8}} 
+Serialized\+Property {\bfseries m\+\_\+\+Script}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_graphic_editor_a07682769692fec29f7bbd40876cb3985}\label{class_unity_editor_1_1_u_i_1_1_graphic_editor_a07682769692fec29f7bbd40876cb3985}} 
+Serialized\+Property {\bfseries m\+\_\+\+Color}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_graphic_editor_a300e621d2368f1b61d71282730efa986}\label{class_unity_editor_1_1_u_i_1_1_graphic_editor_a300e621d2368f1b61d71282730efa986}} 
+Serialized\+Property {\bfseries m\+\_\+\+Material}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_graphic_editor_a3cee291a09d1ddd420816fef3047054a}\label{class_unity_editor_1_1_u_i_1_1_graphic_editor_a3cee291a09d1ddd420816fef3047054a}} 
+Serialized\+Property {\bfseries m\+\_\+\+Raycast\+Target}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_graphic_editor_a55b5de202e4e6e132ca7ab25055b1c63}\label{class_unity_editor_1_1_u_i_1_1_graphic_editor_a55b5de202e4e6e132ca7ab25055b1c63}} 
+Serialized\+Property {\bfseries m\+\_\+\+Raycast\+Padding}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_graphic_editor_ab72469688376571061476140c05f5130}\label{class_unity_editor_1_1_u_i_1_1_graphic_editor_ab72469688376571061476140c05f5130}} 
+Serialized\+Property {\bfseries m\+\_\+\+Maskable}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_graphic_editor_a4ab36e0178336236f1c6d23498584348}\label{class_unity_editor_1_1_u_i_1_1_graphic_editor_a4ab36e0178336236f1c6d23498584348}} 
+Anim\+Bool {\bfseries m\+\_\+\+Show\+Native\+Size}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Editor class used to edit \mbox{\hyperlink{namespace_unity_editor_1_1_u_i}{UI}} \mbox{\hyperlink{namespace_graphics}{Graphics}}. Extend this class to write your own graphic editor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_u_i_1_1_graphic_editor_a49c1ea6a6d3eada7ebb1605b9be246e3}\label{class_unity_editor_1_1_u_i_1_1_graphic_editor_a49c1ea6a6d3eada7ebb1605b9be246e3}} 
+\index{UnityEditor.UI.GraphicEditor@{UnityEditor.UI.GraphicEditor}!SetShowNativeSize@{SetShowNativeSize}}
+\index{SetShowNativeSize@{SetShowNativeSize}!UnityEditor.UI.GraphicEditor@{UnityEditor.UI.GraphicEditor}}
+\doxysubsubsection{\texorpdfstring{SetShowNativeSize()}{SetShowNativeSize()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+UI.\+Graphic\+Editor.\+Set\+Show\+Native\+Size (\begin{DoxyParamCaption}\item[{bool}]{show,  }\item[{bool}]{instant }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Set if the \textquotesingle{}Set Native Size\textquotesingle{} button should be visible for this editor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em show} & Are we showing or hiding the Anim\+Bool for the size.\\
+\hline
+{\em instant} & Should the size Anim\+Bool change instantly.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Editor/\+UI/Graphic\+Editor.\+cs\end{DoxyCompactItemize}

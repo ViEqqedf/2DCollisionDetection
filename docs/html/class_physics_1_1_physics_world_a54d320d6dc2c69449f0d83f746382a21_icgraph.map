@@ -1,0 +1,6 @@
+<map id="Physics.PhysicsWorld.CreateATestRect" name="Physics.PhysicsWorld.CreateATestRect">
+<area shape="rect" id="node1" title=" " alt="" coords="243,49,439,90"/>
+<area shape="rect" id="node2" href="$class_physics_1_1_physics_world.html#adf5c68828b28299a9d85e6dd326a1653" title=" " alt="" coords="5,5,195,32"/>
+<area shape="rect" id="node3" href="$class_physics_1_1_physics_world.html#a00da1d0a80a537bf0f30ec9a1f00cbd6" title=" " alt="" coords="5,56,195,83"/>
+<area shape="rect" id="node4" href="$class_physics_1_1_physics_world.html#a23a499269c2dba922ca4a81579b244ae" title=" " alt="" coords="5,107,195,133"/>
+</map>

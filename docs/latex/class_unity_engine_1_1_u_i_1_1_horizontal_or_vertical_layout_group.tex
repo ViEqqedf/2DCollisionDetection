@@ -1,0 +1,154 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group}{}\doxysection{Unity\+Engine.\+UI.\+Horizontal\+Or\+Vertical\+Layout\+Group Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group}\index{UnityEngine.UI.HorizontalOrVerticalLayoutGroup@{UnityEngine.UI.HorizontalOrVerticalLayoutGroup}}
+
+
+Abstract base class for \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_horizontal_layout_group}{Horizontal\+Layout\+Group}} and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_vertical_layout_group}{Vertical\+Layout\+Group}} to generalize common functionality.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Horizontal\+Or\+Vertical\+Layout\+Group\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.163842cm]{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_abb73fa42e5a49092401cf3c7780a02e8}{Calc\+Along\+Axis}} (int axis, bool is\+Vertical)
+\begin{DoxyCompactList}\small\item\em Calculate the layout element properties for this layout element along the given axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a570037a65f7088099d020e74c426dc87}{Set\+Children\+Along\+Axis}} (int axis, bool is\+Vertical)
+\begin{DoxyCompactList}\small\item\em Set the positions and sizes of the child layout elements for the given axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_ac54744be15af10ad045457e85c491c02}\label{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_ac54744be15af10ad045457e85c491c02}} 
+float {\bfseries m\+\_\+\+Spacing} = 0
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a8cb2287d473916cfa8a10da9d71a025f}\label{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a8cb2287d473916cfa8a10da9d71a025f}} 
+bool {\bfseries m\+\_\+\+Child\+Force\+Expand\+Width} = true
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a8e3d95784b61254ddd71f0f8764f8ce9}\label{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a8e3d95784b61254ddd71f0f8764f8ce9}} 
+bool {\bfseries m\+\_\+\+Child\+Force\+Expand\+Height} = true
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a42407c52bd261fb422b21df4aee89a95}\label{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a42407c52bd261fb422b21df4aee89a95}} 
+bool {\bfseries m\+\_\+\+Child\+Control\+Width} = true
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a0abc6876499a943a5fd07b7feb00e65a}\label{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a0abc6876499a943a5fd07b7feb00e65a}} 
+bool {\bfseries m\+\_\+\+Child\+Control\+Height} = true
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a1eebbe4a7ea3dca691ac918b0715800a}\label{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a1eebbe4a7ea3dca691ac918b0715800a}} 
+bool {\bfseries m\+\_\+\+Child\+Scale\+Width} = false
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a9c0caf571c4f341ab1a9deef250d5e13}\label{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a9c0caf571c4f341ab1a9deef250d5e13}} 
+bool {\bfseries m\+\_\+\+Child\+Scale\+Height} = false
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_aa0b1a3f12db0202484f5f45c37aced40}\label{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_aa0b1a3f12db0202484f5f45c37aced40}} 
+bool {\bfseries m\+\_\+\+Reverse\+Arrangement} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_aa1de51a30b99c3fabe88c0e747c24cca}\label{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_aa1de51a30b99c3fabe88c0e747c24cca}} 
+float {\bfseries spacing}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The spacing to use between layout elements in the layout group. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_ab27d0c689848b43d99e6d38a1cf98ae0}\label{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_ab27d0c689848b43d99e6d38a1cf98ae0}} 
+bool {\bfseries child\+Force\+Expand\+Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether to force the children to expand to fill additional available horizontal space. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a55909efd8ceb5b44537cc3a12e09683d}\label{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a55909efd8ceb5b44537cc3a12e09683d}} 
+bool {\bfseries child\+Force\+Expand\+Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether to force the children to expand to fill additional available vertical space. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_af1ddad2b7e329980472ec8bff79d4e99}{child\+Control\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if the Layout Group controls the widths of its children. Returns false if children control their own widths. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a07fe130ef472c18f6141fbc5e74f1cf8}{child\+Control\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if the Layout Group controls the heights of its children. Returns false if children control their own heights. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a5ed1ec5d0d0b6ef5da5c3ff3ebf9e792}\label{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a5ed1ec5d0d0b6ef5da5c3ff3ebf9e792}} 
+bool {\bfseries child\+Scale\+Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether to use the x scale of each child when calculating its width. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a130663ee6a4459b8fecc3aedec793b26}\label{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a130663ee6a4459b8fecc3aedec793b26}} 
+bool {\bfseries child\+Scale\+Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether to use the y scale of each child when calculating its height. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a9b19a00e5d9d614c505a9aff6adb5349}{reverse\+Arrangement}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the order of children objects should be sorted in reverse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_horizontal_layout_group}{Horizontal\+Layout\+Group}} and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_vertical_layout_group}{Vertical\+Layout\+Group}} to generalize common functionality. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_abb73fa42e5a49092401cf3c7780a02e8}\label{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_abb73fa42e5a49092401cf3c7780a02e8}} 
+\index{UnityEngine.UI.HorizontalOrVerticalLayoutGroup@{UnityEngine.UI.HorizontalOrVerticalLayoutGroup}!CalcAlongAxis@{CalcAlongAxis}}
+\index{CalcAlongAxis@{CalcAlongAxis}!UnityEngine.UI.HorizontalOrVerticalLayoutGroup@{UnityEngine.UI.HorizontalOrVerticalLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{CalcAlongAxis()}{CalcAlongAxis()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Horizontal\+Or\+Vertical\+Layout\+Group.\+Calc\+Along\+Axis (\begin{DoxyParamCaption}\item[{int}]{axis,  }\item[{bool}]{is\+Vertical }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Calculate the layout element properties for this layout element along the given axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis to calculate for. 0 is horizontal and 1 is vertical.\\
+\hline
+{\em is\+Vertical} & Is this group a vertical group?\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a570037a65f7088099d020e74c426dc87}\label{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a570037a65f7088099d020e74c426dc87}} 
+\index{UnityEngine.UI.HorizontalOrVerticalLayoutGroup@{UnityEngine.UI.HorizontalOrVerticalLayoutGroup}!SetChildrenAlongAxis@{SetChildrenAlongAxis}}
+\index{SetChildrenAlongAxis@{SetChildrenAlongAxis}!UnityEngine.UI.HorizontalOrVerticalLayoutGroup@{UnityEngine.UI.HorizontalOrVerticalLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{SetChildrenAlongAxis()}{SetChildrenAlongAxis()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Horizontal\+Or\+Vertical\+Layout\+Group.\+Set\+Children\+Along\+Axis (\begin{DoxyParamCaption}\item[{int}]{axis,  }\item[{bool}]{is\+Vertical }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Set the positions and sizes of the child layout elements for the given axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis to handle. 0 is horizontal and 1 is vertical.\\
+\hline
+{\em is\+Vertical} & Is this group a vertical group?\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a07fe130ef472c18f6141fbc5e74f1cf8}\label{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a07fe130ef472c18f6141fbc5e74f1cf8}} 
+\index{UnityEngine.UI.HorizontalOrVerticalLayoutGroup@{UnityEngine.UI.HorizontalOrVerticalLayoutGroup}!childControlHeight@{childControlHeight}}
+\index{childControlHeight@{childControlHeight}!UnityEngine.UI.HorizontalOrVerticalLayoutGroup@{UnityEngine.UI.HorizontalOrVerticalLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{childControlHeight}{childControlHeight}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+UI.\+Horizontal\+Or\+Vertical\+Layout\+Group.\+child\+Control\+Height\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Returns true if the Layout Group controls the heights of its children. Returns false if children control their own heights. 
+
+If set to false, the layout group will only affect the positions of the children while leaving the heights untouched. The heights of the children can be set via the respective Rect\+Transforms in this case.
+
+If set to true, the heights of the children are automatically driven by the layout group according to their respective minimum, preferred, and flexible heights. This is useful if the heights of the children should change depending on how much space is available.\+In this case the height of each child cannot be set manually in the Rect\+Transform, but the minimum, preferred and flexible height for each child can be controlled by adding a \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_element}{Layout\+Element}} component to it. \mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_af1ddad2b7e329980472ec8bff79d4e99}\label{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_af1ddad2b7e329980472ec8bff79d4e99}} 
+\index{UnityEngine.UI.HorizontalOrVerticalLayoutGroup@{UnityEngine.UI.HorizontalOrVerticalLayoutGroup}!childControlWidth@{childControlWidth}}
+\index{childControlWidth@{childControlWidth}!UnityEngine.UI.HorizontalOrVerticalLayoutGroup@{UnityEngine.UI.HorizontalOrVerticalLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{childControlWidth}{childControlWidth}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+UI.\+Horizontal\+Or\+Vertical\+Layout\+Group.\+child\+Control\+Width\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Returns true if the Layout Group controls the widths of its children. Returns false if children control their own widths. 
+
+If set to false, the layout group will only affect the positions of the children while leaving the widths untouched. The widths of the children can be set via the respective Rect\+Transforms in this case.
+
+If set to true, the widths of the children are automatically driven by the layout group according to their respective minimum, preferred, and flexible widths. This is useful if the widths of the children should change depending on how much space is available.\+In this case the width of each child cannot be set manually in the Rect\+Transform, but the minimum, preferred and flexible width for each child can be controlled by adding a \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_element}{Layout\+Element}} component to it. \mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a9b19a00e5d9d614c505a9aff6adb5349}\label{class_unity_engine_1_1_u_i_1_1_horizontal_or_vertical_layout_group_a9b19a00e5d9d614c505a9aff6adb5349}} 
+\index{UnityEngine.UI.HorizontalOrVerticalLayoutGroup@{UnityEngine.UI.HorizontalOrVerticalLayoutGroup}!reverseArrangement@{reverseArrangement}}
+\index{reverseArrangement@{reverseArrangement}!UnityEngine.UI.HorizontalOrVerticalLayoutGroup@{UnityEngine.UI.HorizontalOrVerticalLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{reverseArrangement}{reverseArrangement}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+UI.\+Horizontal\+Or\+Vertical\+Layout\+Group.\+reverse\+Arrangement\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether the order of children objects should be sorted in reverse. 
+
+If False the first child object will be positioned first. If True the last child object will be positioned first. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/\+Layout/Horizontal\+Or\+Vertical\+Layout\+Group.\+cs\end{DoxyCompactItemize}

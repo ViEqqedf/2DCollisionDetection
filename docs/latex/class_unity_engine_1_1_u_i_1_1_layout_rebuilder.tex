@@ -1,0 +1,183 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_layout_rebuilder}{}\doxysection{Unity\+Engine.\+UI.\+Layout\+Rebuilder Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_layout_rebuilder}\index{UnityEngine.UI.LayoutRebuilder@{UnityEngine.UI.LayoutRebuilder}}
+
+
+Wrapper class for managing layout rebuilding of Canvas\+Element.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Layout\+Rebuilder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_u_i_1_1_layout_rebuilder}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_aa54afc1a4efec44cb124ca159b377309}{Is\+Destroyed}} ()
+\begin{DoxyCompactList}\small\item\em Has the native representation of this \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_rebuilder}{Layout\+Rebuilder}} been destroyed? \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_af2162431006d577f9641560c1df0ee06}{Rebuild}} (\mbox{\hyperlink{namespace_unity_engine_1_1_u_i_a76b804cb1978e6dc1162615deaa710e9}{Canvas\+Update}} executing)
+\begin{DoxyCompactList}\small\item\em Rebuild the element for the given stage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a78327fa629776c991229e9f3182c2365}{Layout\+Complete}} ()
+\begin{DoxyCompactList}\small\item\em Callback sent when this \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}} has completed layout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a6fda2a62782c6505e59d83fb14d49521}{Graphic\+Update\+Complete}} ()
+\begin{DoxyCompactList}\small\item\em Callback sent when this \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}} has completed Graphic rebuild. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a4d5f452917d46de1c88afb03fc9a8ed8}\label{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a4d5f452917d46de1c88afb03fc9a8ed8}} 
+override int {\bfseries Get\+Hash\+Code} ()
+\item 
+override bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_adabbb2a5eb33cbe9264b6fce1fb27af8}{Equals}} (object obj)
+\begin{DoxyCompactList}\small\item\em Does the passed rebuilder point to the same Canvas\+Element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_aa61f125004ce5fbd1e5bab1108dd1cd3}\label{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_aa61f125004ce5fbd1e5bab1108dd1cd3}} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a4b0ac0f77d2e8c228412c13b989a6053}{Force\+Rebuild\+Layout\+Immediate}} (Rect\+Transform layout\+Root)
+\begin{DoxyCompactList}\small\item\em Forces an immediate rebuild of the layout element and child layout elements affected by the calculations. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a5771703d95c79ac33cdef58949d74e34}{Mark\+Layout\+For\+Rebuild}} (Rect\+Transform rect)
+\begin{DoxyCompactList}\small\item\em Mark the given Rect\+Transform as needing it\textquotesingle{}s layout to be recalculated during the next layout pass. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Transform \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a420edc180b976f1aafbf45684e20cecc}{transform}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the transform associated with the \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wrapper class for managing layout rebuilding of Canvas\+Element. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_adabbb2a5eb33cbe9264b6fce1fb27af8}\label{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_adabbb2a5eb33cbe9264b6fce1fb27af8}} 
+\index{UnityEngine.UI.LayoutRebuilder@{UnityEngine.UI.LayoutRebuilder}!Equals@{Equals}}
+\index{Equals@{Equals}!UnityEngine.UI.LayoutRebuilder@{UnityEngine.UI.LayoutRebuilder}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}}
+{\footnotesize\ttfamily override bool Unity\+Engine.\+UI.\+Layout\+Rebuilder.\+Equals (\begin{DoxyParamCaption}\item[{object}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Does the passed rebuilder point to the same Canvas\+Element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The other object to compare\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Are they equal
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a4b0ac0f77d2e8c228412c13b989a6053}\label{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a4b0ac0f77d2e8c228412c13b989a6053}} 
+\index{UnityEngine.UI.LayoutRebuilder@{UnityEngine.UI.LayoutRebuilder}!ForceRebuildLayoutImmediate@{ForceRebuildLayoutImmediate}}
+\index{ForceRebuildLayoutImmediate@{ForceRebuildLayoutImmediate}!UnityEngine.UI.LayoutRebuilder@{UnityEngine.UI.LayoutRebuilder}}
+\doxysubsubsection{\texorpdfstring{ForceRebuildLayoutImmediate()}{ForceRebuildLayoutImmediate()}}
+{\footnotesize\ttfamily static void Unity\+Engine.\+UI.\+Layout\+Rebuilder.\+Force\+Rebuild\+Layout\+Immediate (\begin{DoxyParamCaption}\item[{Rect\+Transform}]{layout\+Root }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Forces an immediate rebuild of the layout element and child layout elements affected by the calculations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layout\+Root} & The layout element to perform the layout rebuild on.\\
+\hline
+\end{DoxyParams}
+
+
+Normal use of the layout system should not use this method. Instead Mark\+Layout\+For\+Rebuild should be used instead, which triggers a delayed layout rebuild during the next layout pass. The delayed rebuild automatically handles objects in the entire layout hierarchy in the correct order, and prevents multiple recalculations for the same layout elements. However, for special layout calculation needs, \+::ref\+::\+Force\+Rebuild\+Layout\+Immediate can be used to get the layout of a sub-\/tree resolved immediately. This can even be done from inside layout calculation methods such as \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_controller_a95b624c7b7e9cc77de533391420aef66}{ILayout\+Controller.\+Set\+Layout\+Horizontal}} or\+ILayout\+Controller.\+Set\+Layout\+Vertical. Usage should be restricted to cases where multiple layout passes are unavaoidable despite the extra cost in performance. \mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a6fda2a62782c6505e59d83fb14d49521}\label{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a6fda2a62782c6505e59d83fb14d49521}} 
+\index{UnityEngine.UI.LayoutRebuilder@{UnityEngine.UI.LayoutRebuilder}!GraphicUpdateComplete@{GraphicUpdateComplete}}
+\index{GraphicUpdateComplete@{GraphicUpdateComplete}!UnityEngine.UI.LayoutRebuilder@{UnityEngine.UI.LayoutRebuilder}}
+\doxysubsubsection{\texorpdfstring{GraphicUpdateComplete()}{GraphicUpdateComplete()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Layout\+Rebuilder.\+Graphic\+Update\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Callback sent when this \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}} has completed Graphic rebuild. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a6a89ea41d304c5a96c16c37decee168a}{Unity\+Engine.\+UI.\+ICanvas\+Element}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_aa54afc1a4efec44cb124ca159b377309}\label{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_aa54afc1a4efec44cb124ca159b377309}} 
+\index{UnityEngine.UI.LayoutRebuilder@{UnityEngine.UI.LayoutRebuilder}!IsDestroyed@{IsDestroyed}}
+\index{IsDestroyed@{IsDestroyed}!UnityEngine.UI.LayoutRebuilder@{UnityEngine.UI.LayoutRebuilder}}
+\doxysubsubsection{\texorpdfstring{IsDestroyed()}{IsDestroyed()}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+UI.\+Layout\+Rebuilder.\+Is\+Destroyed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Has the native representation of this \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_rebuilder}{Layout\+Rebuilder}} been destroyed? 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_ace7615de0f5825f86400662d1d9ef8ac}{Unity\+Engine.\+UI.\+ICanvas\+Element}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a78327fa629776c991229e9f3182c2365}\label{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a78327fa629776c991229e9f3182c2365}} 
+\index{UnityEngine.UI.LayoutRebuilder@{UnityEngine.UI.LayoutRebuilder}!LayoutComplete@{LayoutComplete}}
+\index{LayoutComplete@{LayoutComplete}!UnityEngine.UI.LayoutRebuilder@{UnityEngine.UI.LayoutRebuilder}}
+\doxysubsubsection{\texorpdfstring{LayoutComplete()}{LayoutComplete()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Layout\+Rebuilder.\+Layout\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Callback sent when this \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}} has completed layout. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a5f507a968983077ca1be60142513ab1e}{Unity\+Engine.\+UI.\+ICanvas\+Element}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a5771703d95c79ac33cdef58949d74e34}\label{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a5771703d95c79ac33cdef58949d74e34}} 
+\index{UnityEngine.UI.LayoutRebuilder@{UnityEngine.UI.LayoutRebuilder}!MarkLayoutForRebuild@{MarkLayoutForRebuild}}
+\index{MarkLayoutForRebuild@{MarkLayoutForRebuild}!UnityEngine.UI.LayoutRebuilder@{UnityEngine.UI.LayoutRebuilder}}
+\doxysubsubsection{\texorpdfstring{MarkLayoutForRebuild()}{MarkLayoutForRebuild()}}
+{\footnotesize\ttfamily static void Unity\+Engine.\+UI.\+Layout\+Rebuilder.\+Mark\+Layout\+For\+Rebuild (\begin{DoxyParamCaption}\item[{Rect\+Transform}]{rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Mark the given Rect\+Transform as needing it\textquotesingle{}s layout to be recalculated during the next layout pass. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rect} & Rect to rebuild.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_af2162431006d577f9641560c1df0ee06}\label{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_af2162431006d577f9641560c1df0ee06}} 
+\index{UnityEngine.UI.LayoutRebuilder@{UnityEngine.UI.LayoutRebuilder}!Rebuild@{Rebuild}}
+\index{Rebuild@{Rebuild}!UnityEngine.UI.LayoutRebuilder@{UnityEngine.UI.LayoutRebuilder}}
+\doxysubsubsection{\texorpdfstring{Rebuild()}{Rebuild()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Layout\+Rebuilder.\+Rebuild (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_u_i_a76b804cb1978e6dc1162615deaa710e9}{Canvas\+Update}}}]{executing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rebuild the element for the given stage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em executing} & The current Canvas\+Update stage being rebuild.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a50a9583739ecd91674db5a81da1f0bd5}{Unity\+Engine.\+UI.\+ICanvas\+Element}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a420edc180b976f1aafbf45684e20cecc}\label{class_unity_engine_1_1_u_i_1_1_layout_rebuilder_a420edc180b976f1aafbf45684e20cecc}} 
+\index{UnityEngine.UI.LayoutRebuilder@{UnityEngine.UI.LayoutRebuilder}!transform@{transform}}
+\index{transform@{transform}!UnityEngine.UI.LayoutRebuilder@{UnityEngine.UI.LayoutRebuilder}}
+\doxysubsubsection{\texorpdfstring{transform}{transform}}
+{\footnotesize\ttfamily Transform Unity\+Engine.\+UI.\+Layout\+Rebuilder.\+transform\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Get the transform associated with the \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{ICanvas\+Element}}. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_afe4001ee5dddadf8b253270f5302d017}{Unity\+Engine.\+UI.\+ICanvas\+Element}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/\+Layout/Layout\+Rebuilder.\+cs\end{DoxyCompactItemize}

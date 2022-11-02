@@ -1,0 +1,54 @@
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_test_must_expect_all_logs_attribute}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+Test\+Must\+Expect\+All\+Logs\+Attribute Class Reference}
+\label{class_unity_engine_1_1_test_tools_1_1_test_must_expect_all_logs_attribute}\index{UnityEngine.TestTools.TestMustExpectAllLogsAttribute@{UnityEngine.TestTools.TestMustExpectAllLogsAttribute}}
+
+
+The presence of this attribute will cause the test runner to require that every single log is expected. By default, the runner will only automatically fail on any error logs, so this adds warnings and infos as well. It is the same as calling {\ttfamily Log\+Assert.\+No\+Unexpected\+Received()} at the bottom of every affected test.  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Tools.\+Test\+Must\+Expect\+All\+Logs\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_test_tools_1_1_test_must_expect_all_logs_attribute}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_test_must_expect_all_logs_attribute_abd60ca94144431ec5c483bb9250de037}{Test\+Must\+Expect\+All\+Logs\+Attribute}} (bool must\+Expect=true)
+\begin{DoxyCompactList}\small\item\em Initializes and returns an instance of \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_test_must_expect_all_logs_attribute}{Test\+Must\+Expect\+All\+Logs\+Attribute}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_test_must_expect_all_logs_attribute_a23afaf046864932632774fd19a0f8636}\label{class_unity_engine_1_1_test_tools_1_1_test_must_expect_all_logs_attribute_a23afaf046864932632774fd19a0f8636}} 
+bool {\bfseries Must\+Expect}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the flag of whether the test must expect all logs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The presence of this attribute will cause the test runner to require that every single log is expected. By default, the runner will only automatically fail on any error logs, so this adds warnings and infos as well. It is the same as calling {\ttfamily Log\+Assert.\+No\+Unexpected\+Received()} at the bottom of every affected test. 
+
+This attribute can be applied to test assemblies (will affect every test in the assembly), fixtures (will affect every test in the fixture), or on individual test methods. It is also automatically inherited from base fixtures.
+
+The Must\+Expect property (on by default) lets you selectively enable or disable the higher level value. For example when migrating an assembly to this more strict checking method, you might attach {\ttfamily \mbox{[}assembly\+:Test\+Must\+Expect\+All\+Logs\mbox{]}} to the assembly itself, but then whitelist failing fixtures and test methods with {\ttfamily \mbox{[}Test\+Must\+Expect\+All\+Logs(Must\+Expect=false)\mbox{]}} until they can be migrated. This also means new tests in that assembly would be required to have the more strict checking. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_test_must_expect_all_logs_attribute_abd60ca94144431ec5c483bb9250de037}\label{class_unity_engine_1_1_test_tools_1_1_test_must_expect_all_logs_attribute_abd60ca94144431ec5c483bb9250de037}} 
+\index{UnityEngine.TestTools.TestMustExpectAllLogsAttribute@{UnityEngine.TestTools.TestMustExpectAllLogsAttribute}!TestMustExpectAllLogsAttribute@{TestMustExpectAllLogsAttribute}}
+\index{TestMustExpectAllLogsAttribute@{TestMustExpectAllLogsAttribute}!UnityEngine.TestTools.TestMustExpectAllLogsAttribute@{UnityEngine.TestTools.TestMustExpectAllLogsAttribute}}
+\doxysubsubsection{\texorpdfstring{TestMustExpectAllLogsAttribute()}{TestMustExpectAllLogsAttribute()}}
+{\footnotesize\ttfamily Unity\+Engine.\+Test\+Tools.\+Test\+Must\+Expect\+All\+Logs\+Attribute.\+Test\+Must\+Expect\+All\+Logs\+Attribute (\begin{DoxyParamCaption}\item[{bool}]{must\+Expect = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Initializes and returns an instance of \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_test_must_expect_all_logs_attribute}{Test\+Must\+Expect\+All\+Logs\+Attribute}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em must\+Expect} & A value indicating whether the test must expect all logs. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Engine.\+Test\+Runner/\+NUnit\+Extensions/\+Attributes/Test\+Must\+Expect\+All\+Logs\+Attribute.\+cs\end{DoxyCompactItemize}

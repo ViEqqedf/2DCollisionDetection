@@ -1,0 +1,135 @@
+\hypertarget{class_unity_engine_1_1_timeline_1_1_control_playable_asset}{}\doxysection{Unity\+Engine.\+Timeline.\+Control\+Playable\+Asset Class Reference}
+\label{class_unity_engine_1_1_timeline_1_1_control_playable_asset}\index{UnityEngine.Timeline.ControlPlayableAsset@{UnityEngine.Timeline.ControlPlayableAsset}}
+
+
+Playable Asset that generates playables for controlling time-\/related elements on a Game\+Object.  
+
+
+Inheritance diagram for Unity\+Engine.\+Timeline.\+Control\+Playable\+Asset\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.424936cm]{class_unity_engine_1_1_timeline_1_1_control_playable_asset}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a51b07edda04d5792bf8abc9ab571ef9f}\label{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a51b07edda04d5792bf8abc9ab571ef9f}} 
+void {\bfseries On\+Enable} ()
+\begin{DoxyCompactList}\small\item\em This function is called when the object is loaded. \end{DoxyCompactList}\item 
+override Playable \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a87c954a9c943e648eb2adfab74400ebb}{Create\+Playable}} (Playable\+Graph graph, Game\+Object go)
+\begin{DoxyCompactList}\small\item\em Creates the root of a Playable subgraph to control the contents of the game object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a56ee156f040a4606f873e2580b305512}{Gather\+Properties}} (Playable\+Director director, \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_property_collector}{IProperty\+Collector}} driver)
+\begin{DoxyCompactList}\small\item\em Called by the \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} Editor to gather properties requiring preview.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a0cfea1ea61823e2b3a7287ff101435a9}\label{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a0cfea1ea61823e2b3a7287ff101435a9}} 
+Exposed\+Reference$<$ Game\+Object $>$ {\bfseries source\+Game\+Object}
+\begin{DoxyCompactList}\small\item\em Game\+Object in the scene to control, or the parent of the instantiated prefab. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_control_playable_asset_ab0f9eaf4eea078f2a48131ac3a4e8c6e}\label{class_unity_engine_1_1_timeline_1_1_control_playable_asset_ab0f9eaf4eea078f2a48131ac3a4e8c6e}} 
+Game\+Object {\bfseries prefab\+Game\+Object}
+\begin{DoxyCompactList}\small\item\em Prefab object that will be instantiated. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a4938dee2f23a6d5cb8c6de6bec215b3a}\label{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a4938dee2f23a6d5cb8c6de6bec215b3a}} 
+bool {\bfseries update\+Particle} = true
+\begin{DoxyCompactList}\small\item\em Indicates whether Particle Systems will be controlled. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a65fa63256c73a23905ade5c9d4205b6f}{particle\+Random\+Seed}}
+\begin{DoxyCompactList}\small\item\em Random seed to supply particle systems that are set to use auto\+Random\+Seed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a37408636f4557858239e4319d9f15003}\label{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a37408636f4557858239e4319d9f15003}} 
+bool {\bfseries update\+Director} = true
+\begin{DoxyCompactList}\small\item\em Indicates whether playable\+Directors are controlled. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_control_playable_asset_af8045dd849ee985357c8335cca02dc7c}\label{class_unity_engine_1_1_timeline_1_1_control_playable_asset_af8045dd849ee985357c8335cca02dc7c}} 
+bool {\bfseries update\+ITime\+Control} = true
+\begin{DoxyCompactList}\small\item\em Indicates whether Monobehaviours implementing \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_time_control}{ITime\+Control}} will be controlled. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_control_playable_asset_aa7c6456057e7cbe12c0318bf6c414d65}\label{class_unity_engine_1_1_timeline_1_1_control_playable_asset_aa7c6456057e7cbe12c0318bf6c414d65}} 
+bool {\bfseries search\+Hierarchy} = false
+\begin{DoxyCompactList}\small\item\em Indicates whether to search the entire hierarchy for controllable components. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a607cb05213fd968e6765442ec13aca51}\label{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a607cb05213fd968e6765442ec13aca51}} 
+bool {\bfseries active} = true
+\begin{DoxyCompactList}\small\item\em Indicate whether Game\+Object activation is controlled \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_control_playable_asset_abdcaceb8e33a8eb95095b928ce8d530f}\label{class_unity_engine_1_1_timeline_1_1_control_playable_asset_abdcaceb8e33a8eb95095b928ce8d530f}} 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a228073fb9829bd4bc24a2a43978683b0}{Activation\+Control\+Playable.\+Post\+Playback\+State}} {\bfseries post\+Playback} = \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_activation_control_playable_a228073fb9829bd4bc24a2a43978683b0a5289bf157522a5cd34676f2777d27048}{Activation\+Control\+Playable.\+Post\+Playback\+State.\+Revert}}
+\begin{DoxyCompactList}\small\item\em Indicates the active state of the Game\+Object when \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} is stopped. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a7098167483aed67e74a455afad8e0d85}\label{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a7098167483aed67e74a455afad8e0d85}} 
+override double {\bfseries duration}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the duration in seconds needed to play the underlying director or particle system exactly once. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_engine_1_1_timeline_af0b68b9529bda08f212a5aefa79e7e03}{Clip\+Caps}} \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_control_playable_asset_aae2f54dfeae41c556a2156ea71d02db7}{clip\+Caps}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the capabilities of Timeline\+Clips that contain a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_control_playable_asset}{Control\+Playable\+Asset}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Playable Asset that generates playables for controlling time-\/related elements on a Game\+Object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a87c954a9c943e648eb2adfab74400ebb}\label{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a87c954a9c943e648eb2adfab74400ebb}} 
+\index{UnityEngine.Timeline.ControlPlayableAsset@{UnityEngine.Timeline.ControlPlayableAsset}!CreatePlayable@{CreatePlayable}}
+\index{CreatePlayable@{CreatePlayable}!UnityEngine.Timeline.ControlPlayableAsset@{UnityEngine.Timeline.ControlPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{CreatePlayable()}{CreatePlayable()}}
+{\footnotesize\ttfamily override Playable Unity\+Engine.\+Timeline.\+Control\+Playable\+Asset.\+Create\+Playable (\begin{DoxyParamCaption}\item[{Playable\+Graph}]{graph,  }\item[{Game\+Object}]{go }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates the root of a Playable subgraph to control the contents of the game object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & Playable\+Graph that will own the playable\\
+\hline
+{\em go} & The Game\+Object that triggered the graph build\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The root playable of the subgraph
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a56ee156f040a4606f873e2580b305512}\label{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a56ee156f040a4606f873e2580b305512}} 
+\index{UnityEngine.Timeline.ControlPlayableAsset@{UnityEngine.Timeline.ControlPlayableAsset}!GatherProperties@{GatherProperties}}
+\index{GatherProperties@{GatherProperties}!UnityEngine.Timeline.ControlPlayableAsset@{UnityEngine.Timeline.ControlPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{GatherProperties()}{GatherProperties()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Timeline.\+Control\+Playable\+Asset.\+Gather\+Properties (\begin{DoxyParamCaption}\item[{Playable\+Director}]{director,  }\item[{\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_property_collector}{IProperty\+Collector}}}]{driver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Called by the \mbox{\hyperlink{namespace_unity_engine_1_1_timeline}{Timeline}} Editor to gather properties requiring preview.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_property_preview_a7b234535daf06a0dd380c4994e1f2c63}{Unity\+Engine.\+Timeline.\+IProperty\+Preview}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a65fa63256c73a23905ade5c9d4205b6f}\label{class_unity_engine_1_1_timeline_1_1_control_playable_asset_a65fa63256c73a23905ade5c9d4205b6f}} 
+\index{UnityEngine.Timeline.ControlPlayableAsset@{UnityEngine.Timeline.ControlPlayableAsset}!particleRandomSeed@{particleRandomSeed}}
+\index{particleRandomSeed@{particleRandomSeed}!UnityEngine.Timeline.ControlPlayableAsset@{UnityEngine.Timeline.ControlPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{particleRandomSeed}{particleRandomSeed}}
+{\footnotesize\ttfamily uint Unity\+Engine.\+Timeline.\+Control\+Playable\+Asset.\+particle\+Random\+Seed}
+
+
+
+Random seed to supply particle systems that are set to use auto\+Random\+Seed 
+
+This is used to maintain determinism when playing back in timeline. Sub emitters will be assigned incrementing random seeds to maintain determinism and distinction. 
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_control_playable_asset_aae2f54dfeae41c556a2156ea71d02db7}\label{class_unity_engine_1_1_timeline_1_1_control_playable_asset_aae2f54dfeae41c556a2156ea71d02db7}} 
+\index{UnityEngine.Timeline.ControlPlayableAsset@{UnityEngine.Timeline.ControlPlayableAsset}!clipCaps@{clipCaps}}
+\index{clipCaps@{clipCaps}!UnityEngine.Timeline.ControlPlayableAsset@{UnityEngine.Timeline.ControlPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{clipCaps}{clipCaps}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_unity_engine_1_1_timeline_af0b68b9529bda08f212a5aefa79e7e03}{Clip\+Caps}} Unity\+Engine.\+Timeline.\+Control\+Playable\+Asset.\+clip\+Caps\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the capabilities of Timeline\+Clips that contain a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_control_playable_asset}{Control\+Playable\+Asset}} 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset_ad73af6af3aa5b1f06545740d9da4db2c}{Unity\+Engine.\+Timeline.\+ITimeline\+Clip\+Asset}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Control/Control\+Playable\+Asset.\+cs\end{DoxyCompactItemize}

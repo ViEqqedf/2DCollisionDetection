@@ -1,0 +1,79 @@
+\hypertarget{class_text_editor_tests}{}\doxysection{Text\+Editor\+Tests Class Reference}
+\label{class_text_editor_tests}\index{TextEditorTests@{TextEditorTests}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_aec8891fce2733393437b08959008c0e2}\label{class_text_editor_tests_aec8891fce2733393437b08959008c0e2}} 
+void {\bfseries Test\+Setup} ()
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_aab40f0342d4687f8fa8d55001abec0b1}\label{class_text_editor_tests_aab40f0342d4687f8fa8d55001abec0b1}} 
+void {\bfseries Set\+Text\+\_\+\+Moves\+Cursor\+And\+Select\+Indices\+To\+Next\+Code\+Point\+Index\+If\+Invalid} ()
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_a08c57a63bad868ddb339de8b44746821}\label{class_text_editor_tests_a08c57a63bad868ddb339de8b44746821}} 
+void {\bfseries Set\+Cursor\+And\+Select\+Indices\+\_\+\+Moves\+To\+Next\+Code\+Point\+Index\+If\+Invalid} (string text, int\mbox{[}$\,$\mbox{]} code\+Point\+Indices)
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_a574ce128c974c9e858c7272849e80853}\label{class_text_editor_tests_a574ce128c974c9e858c7272849e80853}} 
+void {\bfseries Delete\+Word\+Back\+\_\+\+Deletes\+Back\+To\+Previous\+Word\+Start} (string text, int\mbox{[}$\,$\mbox{]} word\+Start\+Indices, int\mbox{[}$\,$\mbox{]} word\+End\+Indices)
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_a07b9824e54350a1da26eadbda88d9300}\label{class_text_editor_tests_a07b9824e54350a1da26eadbda88d9300}} 
+void {\bfseries Delete\+Word\+Forward\+\_\+\+Deletes\+Forward\+To\+Next\+Word\+Start} (string text, int\mbox{[}$\,$\mbox{]} word\+Start\+Indices, int\mbox{[}$\,$\mbox{]} word\+End\+Indices)
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_ae048b4dea1618fe2601478b48be8f335}\label{class_text_editor_tests_ae048b4dea1618fe2601478b48be8f335}} 
+void {\bfseries Delete\+\_\+\+Removes\+Code\+Point\+Right\+Of\+Cursor} (string text, int\mbox{[}$\,$\mbox{]} code\+Point\+Indices)
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_a13fcbaf7baf006f1369f7c0cbc806afa}\label{class_text_editor_tests_a13fcbaf7baf006f1369f7c0cbc806afa}} 
+void {\bfseries Backspace\+\_\+\+Removes\+Code\+Point\+Left\+Of\+Cursor} (string text, int\mbox{[}$\,$\mbox{]} code\+Point\+Indices)
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_ad1cafef5b589a642b86a8fea793d24f6}\label{class_text_editor_tests_ad1cafef5b589a642b86a8fea793d24f6}} 
+void {\bfseries Move\+Right\+\_\+\+Skips\+Invalid\+Code\+Point\+Indices} (string text, int\mbox{[}$\,$\mbox{]} code\+Point\+Indices)
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_a95abde38088fe2b8252f27c50232cbf4}\label{class_text_editor_tests_a95abde38088fe2b8252f27c50232cbf4}} 
+void {\bfseries Move\+Left\+\_\+\+Skips\+Invalid\+Code\+Point\+Indices} (string text, int\mbox{[}$\,$\mbox{]} code\+Point\+Indices)
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_aaea6055c2c1217357f99d10031b3ac9a}\label{class_text_editor_tests_aaea6055c2c1217357f99d10031b3ac9a}} 
+void {\bfseries Move\+Line\+Start\+\_\+\+Moves\+Cursor\+After\+Previous\+Line\+Feed} (string text, int\mbox{[}$\,$\mbox{]} line\+Start\+Indices)
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_a57ba82c071831a18c1248f0cd7abdf7e}\label{class_text_editor_tests_a57ba82c071831a18c1248f0cd7abdf7e}} 
+void {\bfseries Move\+Line\+End\+\_\+\+Moves\+Cursor\+Before\+Next\+Line\+Feed} (string text, int\mbox{[}$\,$\mbox{]} line\+End\+Indices)
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_af731a07d37ecb7cc4139a21f51bbaf43}\label{class_text_editor_tests_af731a07d37ecb7cc4139a21f51bbaf43}} 
+void {\bfseries Move\+Text\+Start\+\_\+\+Moves\+Cursor\+To\+Start\+Of\+Text} ()
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_a640ea00013e667a7bf544b8a7d44a798}\label{class_text_editor_tests_a640ea00013e667a7bf544b8a7d44a798}} 
+void {\bfseries Move\+Text\+End\+\_\+\+Moves\+Cursor\+To\+End\+Of\+Text} ()
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_a60dca95d3da8f934c2d0a6a9e8eab343}\label{class_text_editor_tests_a60dca95d3da8f934c2d0a6a9e8eab343}} 
+void {\bfseries Select\+Left\+\_\+\+Expand\+Selection\+To\+Previous\+Code\+Point} (string text, int\mbox{[}$\,$\mbox{]} code\+Point\+Indices)
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_a5db4b8bb945b1b1ad0f1290a42b65604}\label{class_text_editor_tests_a5db4b8bb945b1b1ad0f1290a42b65604}} 
+void {\bfseries Select\+Right\+\_\+\+Expand\+Selection\+To\+Next\+Code\+Point} (string text, int\mbox{[}$\,$\mbox{]} code\+Point\+Indices)
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_a34197905a88b424326f0b0c757b13366}\label{class_text_editor_tests_a34197905a88b424326f0b0c757b13366}} 
+void {\bfseries Move\+Word\+Right\+\_\+\+Moves\+Cursor\+To\+Next\+Word\+End} (string text, int\mbox{[}$\,$\mbox{]} word\+Start\+Indices, int\mbox{[}$\,$\mbox{]} word\+End\+Indices)
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_ad6dd3cb9bd12843f63621a96e5183cbc}\label{class_text_editor_tests_ad6dd3cb9bd12843f63621a96e5183cbc}} 
+void {\bfseries Move\+To\+Start\+Of\+Next\+Word\+\_\+\+Moves\+Cursor\+To\+Next\+Word\+Start} (string text, int\mbox{[}$\,$\mbox{]} word\+Start\+Indices, int\mbox{[}$\,$\mbox{]} word\+End\+Indices)
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_aa917d664a07092378b1852756d5e446f}\label{class_text_editor_tests_aa917d664a07092378b1852756d5e446f}} 
+void {\bfseries Move\+To\+End\+Of\+Previous\+Word\+\_\+\+Moves\+Cursor\+To\+Previous\+Word\+Start} (string text, int\mbox{[}$\,$\mbox{]} word\+Start\+Indices, int\mbox{[}$\,$\mbox{]} word\+End\+Indices)
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_ab57d0e5ef66caa7488ea23b4b2fcf886}\label{class_text_editor_tests_ab57d0e5ef66caa7488ea23b4b2fcf886}} 
+void {\bfseries Find\+Start\+Of\+Next\+Word\+\_\+\+Returns\+Index\+Of\+Next\+Word\+Start} (string text, int\mbox{[}$\,$\mbox{]} word\+Start\+Indices, int\mbox{[}$\,$\mbox{]} word\+End\+Indices)
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_acd686b078b6e3b69f437a60a5bec96ff}\label{class_text_editor_tests_acd686b078b6e3b69f437a60a5bec96ff}} 
+void {\bfseries Move\+Word\+Left\+\_\+\+Moves\+Cursor\+To\+Previous\+Word\+Start} (string text, int\mbox{[}$\,$\mbox{]} word\+Start\+Indices, int\mbox{[}$\,$\mbox{]} word\+End\+Indices)
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_aace7691d774c462d7639c8ce17e064b7}\label{class_text_editor_tests_aace7691d774c462d7639c8ce17e064b7}} 
+void {\bfseries Select\+Current\+Word} (string text, int\mbox{[}$\,$\mbox{]} expected\+Cursor\+Indices, int\mbox{[}$\,$\mbox{]} expected\+Select\+Indices)
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_a26e7b79ee6abca3286a5a0a756ae2be3}\label{class_text_editor_tests_a26e7b79ee6abca3286a5a0a756ae2be3}} 
+void {\bfseries Handle\+Key\+Event\+\_\+\+With\+Control\+AKey\+Down\+Event\+\_\+\+Moves\+Cursor\+To\+Start\+Of\+Line\+On\+Mac\+OS\+\_\+\+Selects\+All\+Elsewhere} ()
+\item 
+\mbox{\Hypertarget{class_text_editor_tests_a35da6eff4a9a6bff36efc7292d64d42f}\label{class_text_editor_tests_a35da6eff4a9a6bff36efc7292d64d42f}} 
+void {\bfseries Handle\+Key\+Event\+\_\+\+With\+Command\+AKey\+Down\+Event\+\_\+\+Selects\+All\+On\+Mac\+OS} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Tests/\+Runtime/\+Text\+Editor/Text\+Editor\+Tests.\+cs\end{DoxyCompactItemize}

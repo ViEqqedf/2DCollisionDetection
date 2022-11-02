@@ -1,0 +1,115 @@
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector3_equality_comparer}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+Utils.\+Vector3\+Equality\+Comparer Class Reference}
+\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector3_equality_comparer}\index{UnityEngine.TestTools.Utils.Vector3EqualityComparer@{UnityEngine.TestTools.Utils.Vector3EqualityComparer}}
+
+
+Use this class to compare two Vector3 objects for equality with NUnit constraints. Call \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector3_equality_comparer_a367dae681edb1b8b83a0da9e216f634e}{Vector3\+Equality\+Comparer.\+Instance}} comparer to perform a comparison with the default calculation error value 0.\+0001f. To specify a different error value, use the one argument constructor to instantiate a new comparer.  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Tools.\+Utils.\+Vector3\+Equality\+Comparer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector3_equality_comparer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector3_equality_comparer_a883a96226e3f26dc7af6ed9600aa4c14}{Vector3\+Equality\+Comparer}} (float allowed\+Error)
+\begin{DoxyCompactList}\small\item\em Initializes an instance of Vector3\+Equality comparer with custom allowed calculation error. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector3_equality_comparer_ab3a65ca956e5f4152a09a33cd6383cb6}\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector3_equality_comparer_ab3a65ca956e5f4152a09a33cd6383cb6}} 
+bool {\bfseries Equals} (Vector3 expected, Vector3 actual)
+\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector3_equality_comparer_ab0f296cb11d5d98cd69f5298246d21ce}{Get\+Hash\+Code}} (Vector3 vec3)
+\begin{DoxyCompactList}\small\item\em Serves as the default hash function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector3_equality_comparer_a367dae681edb1b8b83a0da9e216f634e}\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector3_equality_comparer_a367dae681edb1b8b83a0da9e216f634e}} 
+static \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector3_equality_comparer}{Vector3\+Equality\+Comparer}} {\bfseries Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A comparer instance with the default calculation error value equal to 0.\+0001f. /summary\texorpdfstring{$>$}{>} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Use this class to compare two Vector3 objects for equality with NUnit constraints. Call \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector3_equality_comparer_a367dae681edb1b8b83a0da9e216f634e}{Vector3\+Equality\+Comparer.\+Instance}} comparer to perform a comparison with the default calculation error value 0.\+0001f. To specify a different error value, use the one argument constructor to instantiate a new comparer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector3_equality_comparer_a883a96226e3f26dc7af6ed9600aa4c14}\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector3_equality_comparer_a883a96226e3f26dc7af6ed9600aa4c14}} 
+\index{UnityEngine.TestTools.Utils.Vector3EqualityComparer@{UnityEngine.TestTools.Utils.Vector3EqualityComparer}!Vector3EqualityComparer@{Vector3EqualityComparer}}
+\index{Vector3EqualityComparer@{Vector3EqualityComparer}!UnityEngine.TestTools.Utils.Vector3EqualityComparer@{UnityEngine.TestTools.Utils.Vector3EqualityComparer}}
+\doxysubsubsection{\texorpdfstring{Vector3EqualityComparer()}{Vector3EqualityComparer()}}
+{\footnotesize\ttfamily Unity\+Engine.\+Test\+Tools.\+Utils.\+Vector3\+Equality\+Comparer.\+Vector3\+Equality\+Comparer (\begin{DoxyParamCaption}\item[{float}]{allowed\+Error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes an instance of Vector3\+Equality comparer with custom allowed calculation error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allowed\+Error} & This value identifies the calculation error allowed.\\
+\hline
+\end{DoxyParams}
+summary\texorpdfstring{$>$}{>} Compares the actual and expected Vector3 objects for equality using Utils.\+Are\+Floats\+Equal to compare the x, y, and z attributes of Vector3. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected} & The expected Vector3 used for comparison\\
+\hline
+{\em actual} & The actual Vector3 to test\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the vectors are equals, false otherwise.
+\end{DoxyReturn}
+
+
+The following example shows how to verify if two Vector3 are equals 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{            [TestFixture]}
+\DoxyCodeLine{            \textcolor{keyword}{public} \textcolor{keyword}{class }Vector3Test}
+\DoxyCodeLine{            \{}
+\DoxyCodeLine{                [Test]}
+\DoxyCodeLine{                \textcolor{keyword}{public} \textcolor{keywordtype}{void} VerifyThat\_TwoVector3ObjectsAreEqual()}
+\DoxyCodeLine{                \{}
+\DoxyCodeLine{                \textcolor{comment}{//Custom error 10e-\/6f}}
+\DoxyCodeLine{                var actual = \textcolor{keyword}{new} Vector3(10e-\/8f, 10e-\/8f, 10e-\/8f);}
+\DoxyCodeLine{                var expected = \textcolor{keyword}{new} Vector3(0f, 0f, 0f);}
+\DoxyCodeLine{                var comparer = \textcolor{keyword}{new} Vector3EqualityComparer(10e-\/6f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{@verbatim }
+\DoxyCodeLine{ Assert.That(actual, Is.EqualTo(expected).Using(comparer));}
+\DoxyCodeLine{}
+\DoxyCodeLine{ \textcolor{comment}{//Default error 0.0001f}}
+\DoxyCodeLine{ actual = \textcolor{keyword}{new} Vector3(0.01f, 0.01f, 0f);}
+\DoxyCodeLine{ expected = \textcolor{keyword}{new} Vector3(0.01f, 0.01f, 0f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{ Assert.That(actual, Is.EqualTo(expected).Using(Vector3EqualityComparer.Instance));}
+\DoxyCodeLine{ \}}
+\DoxyCodeLine{\textcolor{keyword}{@end}verbatim             \}}
+
+\end{DoxyCode}
+ /example\texorpdfstring{$>$}{>} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector3_equality_comparer_ab0f296cb11d5d98cd69f5298246d21ce}\label{class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector3_equality_comparer_ab0f296cb11d5d98cd69f5298246d21ce}} 
+\index{UnityEngine.TestTools.Utils.Vector3EqualityComparer@{UnityEngine.TestTools.Utils.Vector3EqualityComparer}!GetHashCode@{GetHashCode}}
+\index{GetHashCode@{GetHashCode}!UnityEngine.TestTools.Utils.Vector3EqualityComparer@{UnityEngine.TestTools.Utils.Vector3EqualityComparer}}
+\doxysubsubsection{\texorpdfstring{GetHashCode()}{GetHashCode()}}
+{\footnotesize\ttfamily int Unity\+Engine.\+Test\+Tools.\+Utils.\+Vector3\+Equality\+Comparer.\+Get\+Hash\+Code (\begin{DoxyParamCaption}\item[{Vector3}]{vec3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serves as the default hash function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec3} & A not null Vector3\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Engine.\+Test\+Runner/\+Utils/Vector3\+Equality\+Comparer.\+cs\end{DoxyCompactItemize}

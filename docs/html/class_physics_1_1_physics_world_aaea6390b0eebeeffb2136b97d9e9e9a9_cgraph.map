@@ -1,0 +1,9 @@
+<map id="Physics.PhysicsWorld.AddCollisionObject" name="Physics.PhysicsWorld.AddCollisionObject">
+<area shape="rect" id="node1" title=" " alt="" coords="5,39,185,80"/>
+<area shape="rect" id="node2" href="$class_physics_1_1_collision_1_1_collision_object.html#aec20035d4ece9a46c457cd71761f6c16" title=" " alt="" coords="233,5,411,47"/>
+<area shape="rect" id="node3" href="$class_physics_1_1_collision_1_1_collision_object.html#a8a0748fa64dc6f65374a9d61e7065da4" title=" " alt="" coords="233,71,411,112"/>
+<area shape="rect" id="node4" href="$class_physics_1_1_collision_1_1_shape_1_1_collision_shape.html#aa2888c2955c43fcd2adb654e88db7183" title=" " alt="" coords="459,41,685,83"/>
+<area shape="rect" id="node5" href="$class_physics_1_1_collision_1_1_shape_1_1_collision_shape.html#ab236eb056356a1dd7e657c4154a58441" title=" " alt="" coords="733,71,925,112"/>
+<area shape="rect" id="node6" href="$class_physics_1_1_collision_1_1_model_1_1_a_a_b_b.html#aab605aa58d0da2a571db877bb277f9dc" title=" " alt="" coords="975,37,1142,79"/>
+<area shape="rect" id="node7" href="$class_physics_1_1_collision_1_1_shape_1_1_collision_shape.html#af5247f1c8125a229c2be17f898608269" title=" " alt="" coords="973,103,1144,144"/>
+</map>

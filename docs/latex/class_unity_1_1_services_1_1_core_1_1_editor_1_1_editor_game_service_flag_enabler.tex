@@ -1,0 +1,126 @@
+\hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler}{}\doxysection{Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Flag\+Enabler Class Reference}
+\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler}\index{Unity.Services.Core.Editor.EditorGameServiceFlagEnabler@{Unity.Services.Core.Editor.EditorGameServiceFlagEnabler}}
+
+
+Base class for services which require service flag handling when toggling.  
+
+
+Inheritance diagram for Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Flag\+Enabler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler_aba7d89a2aa4f60f80a782e0c589106ea}{Enable}} ()
+\begin{DoxyCompactList}\small\item\em Enables the service  Also sends an API request to disable the service on the dashboard. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler_adde01eb0b4aebdeb52bfc68ae85e9628}{Disable}} ()
+\begin{DoxyCompactList}\small\item\em Disables service.  Also sends an API request to disable the service on the dashboard. \end{DoxyCompactList}\item 
+abstract bool \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler_ae7ca7123ca8637e93221d90af561e69a}{Is\+Enabled}} ()
+\begin{DoxyCompactList}\small\item\em Gets the enablement status of the service  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract void \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler_ac2d293e5fa6603dfb87f2bc9a5f19a06}{Enable\+Local\+Settings}} ()
+\item 
+abstract void \mbox{\hyperlink{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler_aa52e5d2e577e22360b3c22419b00e642}{Disable\+Local\+Settings}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler_a7ea510b1a74037b2cde9ff96ad441222}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler_a7ea510b1a74037b2cde9ff96ad441222}} 
+abstract string {\bfseries Flag\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Name of the service in the services flags API \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler_a1a5cd19961dc78359a2c3f8b9e47d6d6}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler_a1a5cd19961dc78359a2c3f8b9e47d6d6}} 
+Action {\bfseries Service\+Flag\+Request\+Complete}
+\begin{DoxyCompactList}\small\item\em The event fired when the web request that handles setting the service flag is complete \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for services which require service flag handling when toggling. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler_adde01eb0b4aebdeb52bfc68ae85e9628}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler_adde01eb0b4aebdeb52bfc68ae85e9628}} 
+\index{Unity.Services.Core.Editor.EditorGameServiceFlagEnabler@{Unity.Services.Core.Editor.EditorGameServiceFlagEnabler}!Disable@{Disable}}
+\index{Disable@{Disable}!Unity.Services.Core.Editor.EditorGameServiceFlagEnabler@{Unity.Services.Core.Editor.EditorGameServiceFlagEnabler}}
+\doxysubsubsection{\texorpdfstring{Disable()}{Disable()}}
+{\footnotesize\ttfamily void Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Flag\+Enabler.\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Disables service.  Also sends an API request to disable the service on the dashboard. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_enabler_a1aba212c0f9c7926c0ebb4c55e381081}{Unity.\+Services.\+Core.\+Editor.\+IEditor\+Game\+Service\+Enabler}}.
+
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler_aa52e5d2e577e22360b3c22419b00e642}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler_aa52e5d2e577e22360b3c22419b00e642}} 
+\index{Unity.Services.Core.Editor.EditorGameServiceFlagEnabler@{Unity.Services.Core.Editor.EditorGameServiceFlagEnabler}!DisableLocalSettings@{DisableLocalSettings}}
+\index{DisableLocalSettings@{DisableLocalSettings}!Unity.Services.Core.Editor.EditorGameServiceFlagEnabler@{Unity.Services.Core.Editor.EditorGameServiceFlagEnabler}}
+\doxysubsubsection{\texorpdfstring{DisableLocalSettings()}{DisableLocalSettings()}}
+{\footnotesize\ttfamily abstract void Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Flag\+Enabler.\+Disable\+Local\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_cloud_1_1_collaborate_1_1_editor_game_service_1_1_cloud_collab_enabler_a490925819139d679f1996bf937660533}{Unity.\+Cloud.\+Collaborate.\+Editor\+Game\+Service.\+Cloud\+Collab\+Enabler}}.
+
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler_aba7d89a2aa4f60f80a782e0c589106ea}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler_aba7d89a2aa4f60f80a782e0c589106ea}} 
+\index{Unity.Services.Core.Editor.EditorGameServiceFlagEnabler@{Unity.Services.Core.Editor.EditorGameServiceFlagEnabler}!Enable@{Enable}}
+\index{Enable@{Enable}!Unity.Services.Core.Editor.EditorGameServiceFlagEnabler@{Unity.Services.Core.Editor.EditorGameServiceFlagEnabler}}
+\doxysubsubsection{\texorpdfstring{Enable()}{Enable()}}
+{\footnotesize\ttfamily void Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Flag\+Enabler.\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enables the service  Also sends an API request to disable the service on the dashboard. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_enabler_a8332240dde64a35cda24ca657ba6296b}{Unity.\+Services.\+Core.\+Editor.\+IEditor\+Game\+Service\+Enabler}}.
+
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler_ac2d293e5fa6603dfb87f2bc9a5f19a06}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler_ac2d293e5fa6603dfb87f2bc9a5f19a06}} 
+\index{Unity.Services.Core.Editor.EditorGameServiceFlagEnabler@{Unity.Services.Core.Editor.EditorGameServiceFlagEnabler}!EnableLocalSettings@{EnableLocalSettings}}
+\index{EnableLocalSettings@{EnableLocalSettings}!Unity.Services.Core.Editor.EditorGameServiceFlagEnabler@{Unity.Services.Core.Editor.EditorGameServiceFlagEnabler}}
+\doxysubsubsection{\texorpdfstring{EnableLocalSettings()}{EnableLocalSettings()}}
+{\footnotesize\ttfamily abstract void Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Flag\+Enabler.\+Enable\+Local\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_cloud_1_1_collaborate_1_1_editor_game_service_1_1_cloud_collab_enabler_a0a756ea1fec773043db90a36c3659a9a}{Unity.\+Cloud.\+Collaborate.\+Editor\+Game\+Service.\+Cloud\+Collab\+Enabler}}.
+
+\mbox{\Hypertarget{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler_ae7ca7123ca8637e93221d90af561e69a}\label{class_unity_1_1_services_1_1_core_1_1_editor_1_1_editor_game_service_flag_enabler_ae7ca7123ca8637e93221d90af561e69a}} 
+\index{Unity.Services.Core.Editor.EditorGameServiceFlagEnabler@{Unity.Services.Core.Editor.EditorGameServiceFlagEnabler}!IsEnabled@{IsEnabled}}
+\index{IsEnabled@{IsEnabled}!Unity.Services.Core.Editor.EditorGameServiceFlagEnabler@{Unity.Services.Core.Editor.EditorGameServiceFlagEnabler}}
+\doxysubsubsection{\texorpdfstring{IsEnabled()}{IsEnabled()}}
+{\footnotesize\ttfamily abstract bool Unity.\+Services.\+Core.\+Editor.\+Editor\+Game\+Service\+Flag\+Enabler.\+Is\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the enablement status of the service  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_services_1_1_core_1_1_editor_1_1_i_editor_game_service_enabler_aa6c50b934d6b4a1d74f0a3e7d930788e}{Unity.\+Services.\+Core.\+Editor.\+IEditor\+Game\+Service\+Enabler}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_cloud_1_1_collaborate_1_1_editor_game_service_1_1_cloud_collab_enabler_ad30338c5681a9d8eede3d133fe970e24}{Unity.\+Cloud.\+Collaborate.\+Editor\+Game\+Service.\+Cloud\+Collab\+Enabler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+services.\+core@1.\+0.\+1/\+Editor/\+Core/\+Editor\+Game\+Service/Editor\+Game\+Service\+Flag\+Enabler.\+cs\end{DoxyCompactItemize}

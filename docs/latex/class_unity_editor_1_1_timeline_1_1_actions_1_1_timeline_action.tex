@@ -1,0 +1,84 @@
+\hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action}{}\doxysection{Unity\+Editor.\+Timeline.\+Actions.\+Timeline\+Action Class Reference}
+\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action}\index{UnityEditor.Timeline.Actions.TimelineAction@{UnityEditor.Timeline.Actions.TimelineAction}}
+
+
+Base class for a timeline action. Inherit from this class to make an action on a timeline after a menu click and/or a key shortcut.  
+
+
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Actions.\+Timeline\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action_a22e77a5546afb4b72f548a68f79a6c1c}{Execute}} (\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context}{Action\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Execute the action. \end{DoxyCompactList}\item 
+abstract \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Action\+Validity}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action_a973c37f44794c3012aad16695470cd8c}{Validate}} (\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context}{Action\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Defines the validity of an Action based on the context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for a timeline action. Inherit from this class to make an action on a timeline after a menu click and/or a key shortcut. 
+
+To add an action as a menu item in the \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} context menu, add \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_menu_entry_attribute}{Menu\+Entry\+Attribute}} on the action class. To make an action to react to a shortcut, use the Shortcut Manager API with \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_shortcut_attribute}{Timeline\+Shortcut\+Attribute}}. \begin{DoxySeeAlso}{See also}
+Unity\+Editor.\+Shortcut\+Management.\+Shortcut\+Attribute, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_active_in_mode_attribute}{Active\+In\+Mode\+Attribute}}
+
+
+\end{DoxySeeAlso}
+
+
+Simple \mbox{\hyperlink{namespace_unity_editor_1_1_timeline}{Timeline}} Action example (with context menu and shortcut support).  
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action_a22e77a5546afb4b72f548a68f79a6c1c}\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action_a22e77a5546afb4b72f548a68f79a6c1c}} 
+\index{UnityEditor.Timeline.Actions.TimelineAction@{UnityEditor.Timeline.Actions.TimelineAction}!Execute@{Execute}}
+\index{Execute@{Execute}!UnityEditor.Timeline.Actions.TimelineAction@{UnityEditor.Timeline.Actions.TimelineAction}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily abstract bool Unity\+Editor.\+Timeline.\+Actions.\+Timeline\+Action.\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context}{Action\+Context}}}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Execute the action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Context for the action.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the action has been executed. false otherwise
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doc_code_examples_1_1_timeline_attributes_examples___hide_a_p_i_1_1_shortcut_action_adeee9924c0a5fbaca03494d1cce3a625}{Doc\+Code\+Examples.\+Timeline\+Attributes\+Examples\+\_\+\+Hide\+API.\+Shortcut\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_match_content_aad21aedc395f3dc96e8886e550b20a57}{Unity\+Editor.\+Timeline.\+Match\+Content}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_play_timeline_action_aa26c4bd0675efb13b8a5114c656760df}{Unity\+Editor.\+Timeline.\+Play\+Timeline\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_select_all_action_a3e8fa133743c1af2a212c12ce2b9ce62}{Unity\+Editor.\+Timeline.\+Select\+All\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_previous_frame_action_aa68f7ce01ef6897442b25d40f75cc1f8}{Unity\+Editor.\+Timeline.\+Previous\+Frame\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_next_frame_action_a72f0b43de90ee7cafe68f4acf712f8c1}{Unity\+Editor.\+Timeline.\+Next\+Frame\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_frame_all_action_ad69c3e1c189ce4f3eedf8007fc63fd74}{Unity\+Editor.\+Timeline.\+Frame\+All\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_frame_selected_action_ae18cdcff57510e0ce168d37da9ee7c05}{Unity\+Editor.\+Timeline.\+Frame\+Selected\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_prev_key_action_a7aa76e7d0c46c53425b99f1ba3c3c05f}{Unity\+Editor.\+Timeline.\+Prev\+Key\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_next_key_action_ae05b14cd3ea52537b2be9746e0b795b3}{Unity\+Editor.\+Timeline.\+Next\+Key\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_goto_start_action_a9b6fb2fe1b796ac91a0f26819698cc64}{Unity\+Editor.\+Timeline.\+Goto\+Start\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_goto_end_action_a2b58cca7894c5633f56cf34b2046a6b2}{Unity\+Editor.\+Timeline.\+Goto\+End\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_zoom_in_a69edd7c63c87c5bec043404dd6ab8186}{Unity\+Editor.\+Timeline.\+Zoom\+In}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_zoom_out_ab3f2b36cccea9c2c731a93623ee93e54}{Unity\+Editor.\+Timeline.\+Zoom\+Out}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_navigate_left_a180a9b42d0da26f735aefd9c8b993711}{Unity\+Editor.\+Timeline.\+Navigate\+Left}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_navigate_right_a16b67b08dfadcf3abcaabd56d2a0e323}{Unity\+Editor.\+Timeline.\+Navigate\+Right}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_toggle_collapse_group_a72b63c2e75363ad2e23ee6eaed21bd2f}{Unity\+Editor.\+Timeline.\+Toggle\+Collapse\+Group}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_select_left_clip_ac5c064f32994ab2e8455fd5771579393}{Unity\+Editor.\+Timeline.\+Select\+Left\+Clip}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_select_right_clip_aeae2d39a3e24271720d2e6698a370eda}{Unity\+Editor.\+Timeline.\+Select\+Right\+Clip}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_select_up_clip_a5cfe350fe6f7a4dad2c01c60e2c5929f}{Unity\+Editor.\+Timeline.\+Select\+Up\+Clip}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_select_up_track_ab07e32e986a1e02f0674a56619a59121}{Unity\+Editor.\+Timeline.\+Select\+Up\+Track}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_select_down_clip_a734b19a5331911300e038a2320614560}{Unity\+Editor.\+Timeline.\+Select\+Down\+Clip}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_select_down_track_ab4dfead22960a98f9f59c86af9e7d625}{Unity\+Editor.\+Timeline.\+Select\+Down\+Track}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_multiselect_left_clip_a5ecc4ffc303addc1c5d1e7e7cf4cadec}{Unity\+Editor.\+Timeline.\+Multiselect\+Left\+Clip}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_multiselect_right_clip_a69b826ae6333b4dffd6c1bea4d88a5e7}{Unity\+Editor.\+Timeline.\+Multiselect\+Right\+Clip}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_multiselect_up_track_ab49733752055f613340bf149e817d298}{Unity\+Editor.\+Timeline.\+Multiselect\+Up\+Track}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_multiselect_down_track_a4edf97ad980eb8b0b448472ae810497e}{Unity\+Editor.\+Timeline.\+Multiselect\+Down\+Track}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_toggle_clip_track_area_acc02ed81a8e3c23dccb8238b98cf7635}{Unity\+Editor.\+Timeline.\+Toggle\+Clip\+Track\+Area}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_key_all_animated_acb8c7f76f2a5ddf87b3c72a8bfb54240}{Unity\+Editor.\+Timeline.\+Key\+All\+Animated}}, \mbox{\hyperlink{class_doc_code_examples_1_1_action_examples___hide_a_p_i_1_1_sample_timeline_action_aefe157554ccedeb1076dff32e8917081}{Doc\+Code\+Examples.\+Action\+Examples\+\_\+\+Hide\+API.\+Sample\+Timeline\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_copy_action_a62e8ba2a23138efd43523957a12aaecf}{Unity\+Editor.\+Timeline.\+Copy\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_paste_action_a33a2064dab5e7a81d354ace87af1e7eb}{Unity\+Editor.\+Timeline.\+Paste\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_duplicate_action_a9ad3a284c4c9ab46b682ab5eb509a6f6}{Unity\+Editor.\+Timeline.\+Duplicate\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_delete_action_ade4e00117775602b35f2d5c2eee5d689}{Unity\+Editor.\+Timeline.\+Delete\+Action}}, and \mbox{\hyperlink{class_timeline_1_1_samples_1_1_create_annotation_action_ad57533dc70bee1772c2f66361b32934b}{Timeline.\+Samples.\+Create\+Annotation\+Action}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action_a973c37f44794c3012aad16695470cd8c}\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action_a973c37f44794c3012aad16695470cd8c}} 
+\index{UnityEditor.Timeline.Actions.TimelineAction@{UnityEditor.Timeline.Actions.TimelineAction}!Validate@{Validate}}
+\index{Validate@{Validate}!UnityEditor.Timeline.Actions.TimelineAction@{UnityEditor.Timeline.Actions.TimelineAction}}
+\doxysubsubsection{\texorpdfstring{Validate()}{Validate()}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Action\+Validity}} Unity\+Editor.\+Timeline.\+Actions.\+Timeline\+Action.\+Validate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context}{Action\+Context}}}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Defines the validity of an Action based on the context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Context for the action.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Visual state of the menu for the action.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doc_code_examples_1_1_timeline_attributes_examples___hide_a_p_i_1_1_shortcut_action_a3fa4d79b0053d81cc29c48cdc79c6120}{Doc\+Code\+Examples.\+Timeline\+Attributes\+Examples\+\_\+\+Hide\+API.\+Shortcut\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_match_content_a26fabdf290b3f68b2f0724bf8056132e}{Unity\+Editor.\+Timeline.\+Match\+Content}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_key_all_animated_a31bc70e442c97bd012a10471a85937e3}{Unity\+Editor.\+Timeline.\+Key\+All\+Animated}}, \mbox{\hyperlink{class_doc_code_examples_1_1_action_examples___hide_a_p_i_1_1_sample_timeline_action_a8e95d473edb6a0e9d853ff8f38263414}{Doc\+Code\+Examples.\+Action\+Examples\+\_\+\+Hide\+API.\+Sample\+Timeline\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_copy_action_a4e3841cab71214c336353d8570b34926}{Unity\+Editor.\+Timeline.\+Copy\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_paste_action_ae4e02c6a2a6794ec7df2263f21892504}{Unity\+Editor.\+Timeline.\+Paste\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_duplicate_action_a76e6e872264a417aea99989b15e07810}{Unity\+Editor.\+Timeline.\+Duplicate\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_delete_action_a79d6f9db5d47c3a6523ecd359ece4358}{Unity\+Editor.\+Timeline.\+Delete\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_play_timeline_action_a5b324ded5827e68a87302075bdd30510}{Unity\+Editor.\+Timeline.\+Play\+Timeline\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_select_all_action_ac2d3458d9b334ad926ed29b424678bba}{Unity\+Editor.\+Timeline.\+Select\+All\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_previous_frame_action_a76a958523c36220ee98e837e43fa9c0f}{Unity\+Editor.\+Timeline.\+Previous\+Frame\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_next_frame_action_afd774563bdfa401093cc6503c0487e29}{Unity\+Editor.\+Timeline.\+Next\+Frame\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_frame_all_action_a5c89e2b514599b72accdd66c7d7d660b}{Unity\+Editor.\+Timeline.\+Frame\+All\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_frame_selected_action_ac6f9e9010b8091954128cc38bc2581d3}{Unity\+Editor.\+Timeline.\+Frame\+Selected\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_prev_key_action_ae2a4375805eb4bd651df9ff963296988}{Unity\+Editor.\+Timeline.\+Prev\+Key\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_next_key_action_a0ad7235e368851b6bf187b7ab6f930ac}{Unity\+Editor.\+Timeline.\+Next\+Key\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_goto_start_action_a38a5b91a2c139253c5df2c38e209af0e}{Unity\+Editor.\+Timeline.\+Goto\+Start\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_goto_end_action_a08f6e8cc82f329be37e5b8db3ced5f71}{Unity\+Editor.\+Timeline.\+Goto\+End\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_zoom_in_a9b5a2f1b50035611ae85063d329b1129}{Unity\+Editor.\+Timeline.\+Zoom\+In}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_zoom_out_a70032fe8797c1e3b7667fbb045f121be}{Unity\+Editor.\+Timeline.\+Zoom\+Out}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_navigate_left_a4078e701b3246815e17b346315964a05}{Unity\+Editor.\+Timeline.\+Navigate\+Left}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_navigate_right_a354c90ba3f2d25919ab17bc59b86eb34}{Unity\+Editor.\+Timeline.\+Navigate\+Right}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_toggle_collapse_group_a3d203b56341a0b07f1e7a2ef4488f68d}{Unity\+Editor.\+Timeline.\+Toggle\+Collapse\+Group}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_select_left_clip_a9c0b93336ea7d30f558e90825561d9d7}{Unity\+Editor.\+Timeline.\+Select\+Left\+Clip}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_select_right_clip_a5b001c8e1ad6a14c9b11f3389ee9b818}{Unity\+Editor.\+Timeline.\+Select\+Right\+Clip}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_select_up_clip_a2e53435de05cefecccc3e6c924b64346}{Unity\+Editor.\+Timeline.\+Select\+Up\+Clip}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_select_up_track_a455a3e5b22229abdd12789556061a49c}{Unity\+Editor.\+Timeline.\+Select\+Up\+Track}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_select_down_clip_ae96f286fe812b72ec88e5a82e03e39dc}{Unity\+Editor.\+Timeline.\+Select\+Down\+Clip}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_select_down_track_a199125cf71c21dfe76cf1851db6beda4}{Unity\+Editor.\+Timeline.\+Select\+Down\+Track}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_multiselect_left_clip_a7cd542893be6f6403073dbc55286e50f}{Unity\+Editor.\+Timeline.\+Multiselect\+Left\+Clip}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_multiselect_right_clip_a9a527009c126de95c41590be89622bd7}{Unity\+Editor.\+Timeline.\+Multiselect\+Right\+Clip}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_multiselect_up_track_ab1a7e035c3880384f45e764606a1f357}{Unity\+Editor.\+Timeline.\+Multiselect\+Up\+Track}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_multiselect_down_track_a501ae7255dc66f95638ec5b668f02377}{Unity\+Editor.\+Timeline.\+Multiselect\+Down\+Track}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_toggle_clip_track_area_a7bc5512665df2afa1549990e2e27d04a}{Unity\+Editor.\+Timeline.\+Toggle\+Clip\+Track\+Area}}, and \mbox{\hyperlink{class_timeline_1_1_samples_1_1_create_annotation_action_ad6c6d4804539a659773de1627deed1a6}{Timeline.\+Samples.\+Create\+Annotation\+Action}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Editor/\+Actions/Timeline\+Action.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,102 @@
+\hypertarget{class_layout_tests_1_1_vertical_layout_group_tests}{}\doxysection{Layout\+Tests.\+Vertical\+Layout\+Group\+Tests Class Reference}
+\label{class_layout_tests_1_1_vertical_layout_group_tests}\index{LayoutTests.VerticalLayoutGroupTests@{LayoutTests.VerticalLayoutGroupTests}}
+Inheritance diagram for Layout\+Tests.\+Vertical\+Layout\+Group\+Tests\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_layout_tests_1_1_vertical_layout_group_tests}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_layout_tests_1_1_vertical_layout_group_tests_a3058f59169948b09167d269d3c2c799e}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Implement this method to call actions automatically before the build process. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_layout_tests_1_1_vertical_layout_group_tests_a0442a69526bf8a05fe252aae743dadef}\label{class_layout_tests_1_1_vertical_layout_group_tests_a0442a69526bf8a05fe252aae743dadef}} 
+void {\bfseries Test\+Setup} ()
+\item 
+\mbox{\Hypertarget{class_layout_tests_1_1_vertical_layout_group_tests_aea1572a721acc32f5557c378d536bd58}\label{class_layout_tests_1_1_vertical_layout_group_tests_aea1572a721acc32f5557c378d536bd58}} 
+void {\bfseries Tear\+Down} ()
+\item 
+\mbox{\Hypertarget{class_layout_tests_1_1_vertical_layout_group_tests_ac6cb9571eb15f0118befefb1aec8e69d}\label{class_layout_tests_1_1_vertical_layout_group_tests_ac6cb9571eb15f0118befefb1aec8e69d}} 
+void {\bfseries One\+Time\+Tear\+Down} ()
+\item 
+\mbox{\Hypertarget{class_layout_tests_1_1_vertical_layout_group_tests_a629f3ff21e1b6b6699c1cfcf9a990974}\label{class_layout_tests_1_1_vertical_layout_group_tests_a629f3ff21e1b6b6699c1cfcf9a990974}} 
+void {\bfseries Test\+Calculate\+Layout\+Input\+Horizontal} ()
+\item 
+\mbox{\Hypertarget{class_layout_tests_1_1_vertical_layout_group_tests_ab73fa69642facc707ceeee01aab8c23e}\label{class_layout_tests_1_1_vertical_layout_group_tests_ab73fa69642facc707ceeee01aab8c23e}} 
+void {\bfseries Test\+Calculate\+Layout\+Input\+Vertical} ()
+\item 
+\mbox{\Hypertarget{class_layout_tests_1_1_vertical_layout_group_tests_a15ea23bf4ace0c6e333c3981589d8944}\label{class_layout_tests_1_1_vertical_layout_group_tests_a15ea23bf4ace0c6e333c3981589d8944}} 
+void {\bfseries Test\+Calculate\+Layout\+Vertical} ()
+\item 
+\mbox{\Hypertarget{class_layout_tests_1_1_vertical_layout_group_tests_ae9fc3dc5e9afc28a33dd897dec430f0f}\label{class_layout_tests_1_1_vertical_layout_group_tests_ae9fc3dc5e9afc28a33dd897dec430f0f}} 
+void {\bfseries Test\+Calculate\+Layout\+Vertical\+Reversed} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_layout_tests_1_1_vertical_layout_group_tests_a3058f59169948b09167d269d3c2c799e}\label{class_layout_tests_1_1_vertical_layout_group_tests_a3058f59169948b09167d269d3c2c799e}} 
+\index{LayoutTests.VerticalLayoutGroupTests@{LayoutTests.VerticalLayoutGroupTests}!Setup@{Setup}}
+\index{Setup@{Setup}!LayoutTests.VerticalLayoutGroupTests@{LayoutTests.VerticalLayoutGroupTests}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily void Layout\+Tests.\+Vertical\+Layout\+Group\+Tests.\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implement this method to call actions automatically before the build process. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }CreateSpriteTest : IPrebuildSetup}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    Texture2D m\_Texture;}
+\DoxyCodeLine{    Sprite m\_Sprite;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_layout_tests_1_1_vertical_layout_group_tests_a3058f59169948b09167d269d3c2c799e}{Setup}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#if UNITY\_EDITOR}}
+\DoxyCodeLine{        var spritePath = \textcolor{stringliteral}{"{}Assets/Resources/Circle.png"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{        var ti = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.AssetImporter.GetAtPath(spritePath) as \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporter;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.textureCompression = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporterCompression.Uncompressed;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.SaveAndReimport();}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [SetUp]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} SetUpTest()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        m\_Texture = Resources.Load<Texture2D>(\textcolor{stringliteral}{"{}Circle"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [Test]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} WhenNullTextureIsPassed\_CreateShouldReturnNullSprite()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with Valid Texture.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        LogAssert.Expect(LogType.Log, \textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Sprite.Create(m\_Texture, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Debug.Log(\textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with NULL Texture. Should return NULL Sprite.}}
+\DoxyCodeLine{        m\_Sprite = Sprite.Create(\textcolor{keyword}{null}, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Assert.That(m\_Sprite, Is.Null, \textcolor{stringliteral}{"{}Sprite created with null texture should be null"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup_a9a9eaa928efe50645e61412528e84309}{Unity\+Engine.\+Test\+Tools.\+IPrebuild\+Setup}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Tests/\+Runtime/\+Layout/Vertical\+Layout\+Group\+Tests.\+cs\end{DoxyCompactItemize}

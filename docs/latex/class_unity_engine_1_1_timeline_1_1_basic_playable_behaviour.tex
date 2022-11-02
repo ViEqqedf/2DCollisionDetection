@@ -1,0 +1,220 @@
+\hypertarget{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour}{}\doxysection{Unity\+Engine.\+Timeline.\+Basic\+Playable\+Behaviour Class Reference}
+\label{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour}\index{UnityEngine.Timeline.BasicPlayableBehaviour@{UnityEngine.Timeline.BasicPlayableBehaviour}}
+
+
+This class is deprecated. It is recommended to use Playable Asset and Playable Behaviour derived classes instead.  
+
+
+Inheritance diagram for Unity\+Engine.\+Timeline.\+Basic\+Playable\+Behaviour\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.338112cm]{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_a6e211dff82fd3ca14592f6a27af32a9c}{On\+Graph\+Start}} (Playable playable)
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_ad6780e9e8a964ff1a28117324cb1b481}{On\+Graph\+Stop}} (Playable playable)
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_afca489055970925e3b3a3ed0c98297ac}{On\+Playable\+Create}} (Playable playable)
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_a5ae66ee082c4adb40e83f1d9ad7107c2}{On\+Playable\+Destroy}} (Playable playable)
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_a5d941b646b313813b808c46d70b8eb6e}{On\+Behaviour\+Play}} (Playable playable, Frame\+Data info)
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_ad150db51396b4651949ff8cc30705d2d}{On\+Behaviour\+Pause}} (Playable playable, Frame\+Data info)
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_ac40478db5412fa6e736c5a9315d9d93a}{Prepare\+Frame}} (Playable playable, Frame\+Data info)
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_afe9386547424afe5dcdb41548eb2b2ff}{Process\+Frame}} (Playable playable, Frame\+Data info, object player\+Data)
+\item 
+virtual Playable \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_a14e61969e97a009a242dc6cc80f876be}{Create\+Playable}} (Playable\+Graph graph, Game\+Object owner)
+\begin{DoxyCompactList}\small\item\em Implement this method to have your asset inject playables into the given graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_acdb1a788c0a0a02350b0b404ca55e4c9}\label{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_acdb1a788c0a0a02350b0b404ca55e4c9}} 
+virtual double {\bfseries duration}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The playback duration in seconds of the instantiated Playable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_a5af3daa0cbfda3656164e5291bad0df9}\label{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_a5af3daa0cbfda3656164e5291bad0df9}} 
+virtual IEnumerable$<$ Playable\+Binding $>$ {\bfseries outputs}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A description of the outputs of the instantiated Playable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is deprecated. It is recommended to use Playable Asset and Playable Behaviour derived classes instead. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_a14e61969e97a009a242dc6cc80f876be}\label{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_a14e61969e97a009a242dc6cc80f876be}} 
+\index{UnityEngine.Timeline.BasicPlayableBehaviour@{UnityEngine.Timeline.BasicPlayableBehaviour}!CreatePlayable@{CreatePlayable}}
+\index{CreatePlayable@{CreatePlayable}!UnityEngine.Timeline.BasicPlayableBehaviour@{UnityEngine.Timeline.BasicPlayableBehaviour}}
+\doxysubsubsection{\texorpdfstring{CreatePlayable()}{CreatePlayable()}}
+{\footnotesize\ttfamily virtual Playable Unity\+Engine.\+Timeline.\+Basic\+Playable\+Behaviour.\+Create\+Playable (\begin{DoxyParamCaption}\item[{Playable\+Graph}]{graph,  }\item[{Game\+Object}]{owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implement this method to have your asset inject playables into the given graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & The graph to inject playables into.\\
+\hline
+{\em owner} & The game object which initiated the build.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The playable injected into the graph, or the root playable if multiple playables are injected.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_ad150db51396b4651949ff8cc30705d2d}\label{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_ad150db51396b4651949ff8cc30705d2d}} 
+\index{UnityEngine.Timeline.BasicPlayableBehaviour@{UnityEngine.Timeline.BasicPlayableBehaviour}!OnBehaviourPause@{OnBehaviourPause}}
+\index{OnBehaviourPause@{OnBehaviourPause}!UnityEngine.Timeline.BasicPlayableBehaviour@{UnityEngine.Timeline.BasicPlayableBehaviour}}
+\doxysubsubsection{\texorpdfstring{OnBehaviourPause()}{OnBehaviourPause()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+Timeline.\+Basic\+Playable\+Behaviour.\+On\+Behaviour\+Pause (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+This function is called when the Playable play state is changed to Playables.\+Play\+State.\+Paused.
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The Playable that owns the current Playable\+Behaviour.\\
+\hline
+{\em info} & A Frame\+Data structure that contains information about the current frame context.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_a5d941b646b313813b808c46d70b8eb6e}\label{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_a5d941b646b313813b808c46d70b8eb6e}} 
+\index{UnityEngine.Timeline.BasicPlayableBehaviour@{UnityEngine.Timeline.BasicPlayableBehaviour}!OnBehaviourPlay@{OnBehaviourPlay}}
+\index{OnBehaviourPlay@{OnBehaviourPlay}!UnityEngine.Timeline.BasicPlayableBehaviour@{UnityEngine.Timeline.BasicPlayableBehaviour}}
+\doxysubsubsection{\texorpdfstring{OnBehaviourPlay()}{OnBehaviourPlay()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+Timeline.\+Basic\+Playable\+Behaviour.\+On\+Behaviour\+Play (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+This function is called when the Playable play state is changed to Playables.\+Play\+State.\+Playing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The Playable that owns the current Playable\+Behaviour.\\
+\hline
+{\em info} & A Frame\+Data structure that contains information about the current frame context.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_a6e211dff82fd3ca14592f6a27af32a9c}\label{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_a6e211dff82fd3ca14592f6a27af32a9c}} 
+\index{UnityEngine.Timeline.BasicPlayableBehaviour@{UnityEngine.Timeline.BasicPlayableBehaviour}!OnGraphStart@{OnGraphStart}}
+\index{OnGraphStart@{OnGraphStart}!UnityEngine.Timeline.BasicPlayableBehaviour@{UnityEngine.Timeline.BasicPlayableBehaviour}}
+\doxysubsubsection{\texorpdfstring{OnGraphStart()}{OnGraphStart()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+Timeline.\+Basic\+Playable\+Behaviour.\+On\+Graph\+Start (\begin{DoxyParamCaption}\item[{Playable}]{playable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+This function is called when the Playable\+Graph that owns this Playable\+Behaviour starts.
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The Playable that owns the current Playable\+Behaviour.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_ad6780e9e8a964ff1a28117324cb1b481}\label{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_ad6780e9e8a964ff1a28117324cb1b481}} 
+\index{UnityEngine.Timeline.BasicPlayableBehaviour@{UnityEngine.Timeline.BasicPlayableBehaviour}!OnGraphStop@{OnGraphStop}}
+\index{OnGraphStop@{OnGraphStop}!UnityEngine.Timeline.BasicPlayableBehaviour@{UnityEngine.Timeline.BasicPlayableBehaviour}}
+\doxysubsubsection{\texorpdfstring{OnGraphStop()}{OnGraphStop()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+Timeline.\+Basic\+Playable\+Behaviour.\+On\+Graph\+Stop (\begin{DoxyParamCaption}\item[{Playable}]{playable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+This function is called when the Playable\+Graph that owns this Playable\+Behaviour stops.
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The Playable that owns the current Playable\+Behaviour.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_afca489055970925e3b3a3ed0c98297ac}\label{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_afca489055970925e3b3a3ed0c98297ac}} 
+\index{UnityEngine.Timeline.BasicPlayableBehaviour@{UnityEngine.Timeline.BasicPlayableBehaviour}!OnPlayableCreate@{OnPlayableCreate}}
+\index{OnPlayableCreate@{OnPlayableCreate}!UnityEngine.Timeline.BasicPlayableBehaviour@{UnityEngine.Timeline.BasicPlayableBehaviour}}
+\doxysubsubsection{\texorpdfstring{OnPlayableCreate()}{OnPlayableCreate()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+Timeline.\+Basic\+Playable\+Behaviour.\+On\+Playable\+Create (\begin{DoxyParamCaption}\item[{Playable}]{playable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+This function is called when the Playable that owns the Playable\+Behaviour is created.
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The Playable that owns the current Playable\+Behaviour.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_a5ae66ee082c4adb40e83f1d9ad7107c2}\label{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_a5ae66ee082c4adb40e83f1d9ad7107c2}} 
+\index{UnityEngine.Timeline.BasicPlayableBehaviour@{UnityEngine.Timeline.BasicPlayableBehaviour}!OnPlayableDestroy@{OnPlayableDestroy}}
+\index{OnPlayableDestroy@{OnPlayableDestroy}!UnityEngine.Timeline.BasicPlayableBehaviour@{UnityEngine.Timeline.BasicPlayableBehaviour}}
+\doxysubsubsection{\texorpdfstring{OnPlayableDestroy()}{OnPlayableDestroy()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+Timeline.\+Basic\+Playable\+Behaviour.\+On\+Playable\+Destroy (\begin{DoxyParamCaption}\item[{Playable}]{playable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+This function is called when the Playable that owns the Playable\+Behaviour is destroyed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The Playable that owns the current Playable\+Behaviour.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_ac40478db5412fa6e736c5a9315d9d93a}\label{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_ac40478db5412fa6e736c5a9315d9d93a}} 
+\index{UnityEngine.Timeline.BasicPlayableBehaviour@{UnityEngine.Timeline.BasicPlayableBehaviour}!PrepareFrame@{PrepareFrame}}
+\index{PrepareFrame@{PrepareFrame}!UnityEngine.Timeline.BasicPlayableBehaviour@{UnityEngine.Timeline.BasicPlayableBehaviour}}
+\doxysubsubsection{\texorpdfstring{PrepareFrame()}{PrepareFrame()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+Timeline.\+Basic\+Playable\+Behaviour.\+Prepare\+Frame (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+This function is called during the Prepare\+Frame phase of the Playable\+Graph.
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The Playable that owns the current Playable\+Behaviour.\\
+\hline
+{\em info} & A Frame\+Data structure that contains information about the current frame context.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_afe9386547424afe5dcdb41548eb2b2ff}\label{class_unity_engine_1_1_timeline_1_1_basic_playable_behaviour_afe9386547424afe5dcdb41548eb2b2ff}} 
+\index{UnityEngine.Timeline.BasicPlayableBehaviour@{UnityEngine.Timeline.BasicPlayableBehaviour}!ProcessFrame@{ProcessFrame}}
+\index{ProcessFrame@{ProcessFrame}!UnityEngine.Timeline.BasicPlayableBehaviour@{UnityEngine.Timeline.BasicPlayableBehaviour}}
+\doxysubsubsection{\texorpdfstring{ProcessFrame()}{ProcessFrame()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+Timeline.\+Basic\+Playable\+Behaviour.\+Process\+Frame (\begin{DoxyParamCaption}\item[{Playable}]{playable,  }\item[{Frame\+Data}]{info,  }\item[{object}]{player\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+This function is called during the Process\+Frame phase of the Playable\+Graph.
+
+
+\begin{DoxyParams}{Parameters}
+{\em playable} & The Playable that owns the current Playable\+Behaviour.\\
+\hline
+{\em info} & A Frame\+Data structure that contains information about the current frame context.\\
+\hline
+{\em player\+Data} & The user data of the Script\+Playable\+Output that initiated the process pass.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Playables/Basic\+Script\+Playable.\+cs\end{DoxyCompactItemize}

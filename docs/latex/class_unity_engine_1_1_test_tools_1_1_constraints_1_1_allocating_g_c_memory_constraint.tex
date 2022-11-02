@@ -1,0 +1,115 @@
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_constraints_1_1_allocating_g_c_memory_constraint}{}\doxysection{Unity\+Engine.\+Test\+Tools.\+Constraints.\+Allocating\+GCMemory\+Constraint Class Reference}
+\label{class_unity_engine_1_1_test_tools_1_1_constraints_1_1_allocating_g_c_memory_constraint}\index{UnityEngine.TestTools.Constraints.AllocatingGCMemoryConstraint@{UnityEngine.TestTools.Constraints.AllocatingGCMemoryConstraint}}
+
+
+An NUnit test constraint class to test whether a given block of code makes any GC allocations.  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Tools.\+Constraints.\+Allocating\+GCMemory\+Constraint\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_test_tools_1_1_constraints_1_1_allocating_g_c_memory_constraint}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override Constraint\+Result \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_constraints_1_1_allocating_g_c_memory_constraint_a83c0e18779abff5c4eb84bf561fe7a35}{Apply\+To}} (object obj)
+\begin{DoxyCompactList}\small\item\em Applies GC memory constraint to the test. \end{DoxyCompactList}\item 
+override Constraint\+Result \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_constraints_1_1_allocating_g_c_memory_constraint_a3dd26ab87f75c0f968a8bc50a6bed5dd}{Apply\+To$<$ TActual $>$}} (Actual\+Value\+Delegate$<$ TActual $>$ del)
+\begin{DoxyCompactList}\small\item\em Test whether the constraint is satisfied by a given reference. The default implementation simply dereferences the value but derived classes may override it to provide for delayed processing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_constraints_1_1_allocating_g_c_memory_constraint_a7f5b4749e4875e411d60f1138c655f26}\label{class_unity_engine_1_1_test_tools_1_1_constraints_1_1_allocating_g_c_memory_constraint_a7f5b4749e4875e411d60f1138c655f26}} 
+override string {\bfseries Description}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Description of what this constraint tests, for to use in messages and in the Constraint\+Result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An NUnit test constraint class to test whether a given block of code makes any GC allocations. 
+
+Use this class with NUnit\textquotesingle{}s Assert.\+That() method to make assertions about the GC behaviour of your code. The constraint executes the delegate you provide, and checks if it has caused any GC memory to be allocated. If any GC memory was allocated, the constraint passes; otherwise, the constraint fails.
+
+Usually you negate this constraint to make sure that your delegate does not allocate any GC memory. This is easy to do using the \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_constraints_1_1_is}{Is}} class\+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{using }NUnit.Framework;}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{namespace_unity_engine_1_1_test_tools_1_1_constraints}{UnityEngine.TestTools.Constraints}};}
+\DoxyCodeLine{\textcolor{keyword}{using }\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_constraints_1_1_is}{Is}} = \mbox{\hyperlink{namespace_unity_engine}{UnityEngine}}.\mbox{\hyperlink{namespace_unity_engine_1_1_test_tools}{TestTools}}.\mbox{\hyperlink{namespace_unity_engine_1_1_test_tools_1_1_constraints}{Constraints}}.\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_constraints_1_1_is}{Is}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }MyTestClass}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    [Test]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} SettingAVariableDoesNotAllocate()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        Assert.That(() => \{}
+\DoxyCodeLine{            \textcolor{keywordtype}{int} a = 0;}
+\DoxyCodeLine{            a = 1;}
+\DoxyCodeLine{        \}, \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_constraints_1_1_is}{Is}}.Not.\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_constraints_1_1_is_acdd3810d3e952029d6ee87316a68106b}{AllocatingGCMemory}}());}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_constraints_1_1_allocating_g_c_memory_constraint_a83c0e18779abff5c4eb84bf561fe7a35}\label{class_unity_engine_1_1_test_tools_1_1_constraints_1_1_allocating_g_c_memory_constraint_a83c0e18779abff5c4eb84bf561fe7a35}} 
+\index{UnityEngine.TestTools.Constraints.AllocatingGCMemoryConstraint@{UnityEngine.TestTools.Constraints.AllocatingGCMemoryConstraint}!ApplyTo@{ApplyTo}}
+\index{ApplyTo@{ApplyTo}!UnityEngine.TestTools.Constraints.AllocatingGCMemoryConstraint@{UnityEngine.TestTools.Constraints.AllocatingGCMemoryConstraint}}
+\doxysubsubsection{\texorpdfstring{ApplyTo()}{ApplyTo()}}
+{\footnotesize\ttfamily override Constraint\+Result Unity\+Engine.\+Test\+Tools.\+Constraints.\+Allocating\+GCMemory\+Constraint.\+Apply\+To (\begin{DoxyParamCaption}\item[{object}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Applies GC memory constraint to the test. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & An object to apply the GC constraint to. Should be a Test\+Delegate.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Constraint\+Result
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Throws a Argument\+Null\+Exception if the provided object is null.\\
+\hline
+{\em Argument\+Exception} & Throws a Argument\+Exception if the provided object is not a Test\+Delegate.\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_unity_engine_1_1_test_tools_1_1_constraints_1_1_allocating_g_c_memory_constraint_a3dd26ab87f75c0f968a8bc50a6bed5dd}\label{class_unity_engine_1_1_test_tools_1_1_constraints_1_1_allocating_g_c_memory_constraint_a3dd26ab87f75c0f968a8bc50a6bed5dd}} 
+\index{UnityEngine.TestTools.Constraints.AllocatingGCMemoryConstraint@{UnityEngine.TestTools.Constraints.AllocatingGCMemoryConstraint}!ApplyTo$<$ TActual $>$@{ApplyTo$<$ TActual $>$}}
+\index{ApplyTo$<$ TActual $>$@{ApplyTo$<$ TActual $>$}!UnityEngine.TestTools.Constraints.AllocatingGCMemoryConstraint@{UnityEngine.TestTools.Constraints.AllocatingGCMemoryConstraint}}
+\doxysubsubsection{\texorpdfstring{ApplyTo$<$ TActual $>$()}{ApplyTo< TActual >()}}
+{\footnotesize\ttfamily override Constraint\+Result Unity\+Engine.\+Test\+Tools.\+Constraints.\+Allocating\+GCMemory\+Constraint.\+Apply\+To$<$ TActual $>$ (\begin{DoxyParamCaption}\item[{Actual\+Value\+Delegate$<$ TActual $>$}]{del }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Test whether the constraint is satisfied by a given reference. The default implementation simply dereferences the value but derived classes may override it to provide for delayed processing. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TActual} & The type of the actual value delegate to be tested.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em del} & A reference to the value delegate to be tested\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Constraint\+Result
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Throws a Argument\+Null\+Exception if the provided delegate is null.\\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+29/\+Unity\+Engine.\+Test\+Runner/\+Assertions/Allocating\+GCMemory\+Constraint.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,452 @@
+\hypertarget{class_t_m_pro_1_1_t_m_p___font_asset}{}\doxysection{TMPro.\+TMP\+\_\+\+Font\+Asset Class Reference}
+\label{class_t_m_pro_1_1_t_m_p___font_asset}\index{TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}}
+Inheritance diagram for TMPro.\+TMP\+\_\+\+Font\+Asset\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_t_m_pro_1_1_t_m_p___font_asset}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_ade90a42615b002bb0c31b06d497df510}\label{class_t_m_pro_1_1_t_m_p___font_asset_ade90a42615b002bb0c31b06d497df510}} 
+void {\bfseries Read\+Font\+Asset\+Definition} ()
+\item 
+bool \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_a10751e4fd6f455aa72ae50f688d0698a}{Has\+Character}} (int character)
+\begin{DoxyCompactList}\small\item\em Function to check if a certain character exists in the font asset. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_af9bf0b22f0d6c1bd975723007170647c}{Has\+Character}} (char character, bool search\+Fallbacks=false, bool try\+Add\+Character=false)
+\begin{DoxyCompactList}\small\item\em Function to check if a character is contained in the font asset with the option to also check potential local fallbacks. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_a8db6e186c97502bee308dfc32f82aa92}{Has\+Characters}} (string text, out List$<$ char $>$ missing\+Characters)
+\begin{DoxyCompactList}\small\item\em Function to check if certain characters exists in the font asset. Function returns a list of missing characters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_ac34a1e5e756233491e66d73fb7072d2d}{Has\+Characters}} (string text, out uint\mbox{[}$\,$\mbox{]} missing\+Characters, bool search\+Fallbacks=false, bool try\+Add\+Character=false)
+\begin{DoxyCompactList}\small\item\em Function to check if the characters in the given string are contained in the font asset with the option to also check its potential local fallbacks. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_a6432ab839d799b8e91d1c279946c03cf}{Has\+Characters}} (string text)
+\begin{DoxyCompactList}\small\item\em Function to check if certain characters exists in the font asset. Function returns false if any characters are missing. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_a2fe31dce7a5f9b3202a1c794ea6e698a}{Try\+Add\+Characters}} (uint\mbox{[}$\,$\mbox{]} unicodes, bool include\+Font\+Features=false)
+\begin{DoxyCompactList}\small\item\em Try adding the characters from the provided string to the font asset. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_a84696ac330200bc56ea91856c422ae06}{Try\+Add\+Characters}} (uint\mbox{[}$\,$\mbox{]} unicodes, out uint\mbox{[}$\,$\mbox{]} missing\+Unicodes, bool include\+Font\+Features=false)
+\begin{DoxyCompactList}\small\item\em Try adding the characters from the provided string to the font asset. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_acc07d15982d247c0644c7fbb1ea2a938}{Try\+Add\+Characters}} (string characters, bool include\+Font\+Features=false)
+\begin{DoxyCompactList}\small\item\em Try adding the characters from the provided string to the font asset. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_a628a14946951b1585d4571f07cb3cbe9}{Try\+Add\+Characters}} (string characters, out string missing\+Characters, bool include\+Font\+Features=false)
+\begin{DoxyCompactList}\small\item\em Try adding the characters from the provided string to the font asset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_a5dd445cf935c5dc8d48b2e4f4dcd12a3}{Clear\+Font\+Asset\+Data}} (bool set\+Atlas\+Size\+To\+Zero=false)
+\begin{DoxyCompactList}\small\item\em Clears font asset data including the glyph and character tables and textures. Function might be changed to Internal and only used in tests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_a2aaa02b48db78a0f758f9c53e6f1a200}{Create\+Font\+Asset}} (Font font)
+\begin{DoxyCompactList}\small\item\em Create new instance of a font asset using default settings. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_a3763c422ed1d1ccdea665d862bcee7ca}{Create\+Font\+Asset}} (Font font, int sampling\+Point\+Size, int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_a10ea3cba57114687428dcaf11aa8416d}{atlas\+Padding}}, Glyph\+Render\+Mode render\+Mode, int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_a712350fcdd17a12e79ecc49924c53d83}{atlas\+Width}}, int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_aa8cc3b0d4ef6c8f6db402828c82aa439}{atlas\+Height}}, Atlas\+Population\+Mode atlas\+Population\+Mode=Atlas\+Population\+Mode.\+Dynamic, bool enable\+Multi\+Atlas\+Support=true)
+\begin{DoxyCompactList}\small\item\em Create new instance of a font asset. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_a41da35d4c071829fecb1c8af92076969}{Get\+Characters}} (\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} font\+Asset)
+\begin{DoxyCompactList}\small\item\em Function to extract all the characters from a font asset. \end{DoxyCompactList}\item 
+static int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_a6a03085549975180b0c97ff795c068fe}{Get\+Characters\+Array}} (\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} font\+Asset)
+\begin{DoxyCompactList}\small\item\em Function which returns an array that contains all the characters from a font asset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Texture2D \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_a498534bae36d4dd9080e7ac93af657e0}{atlas}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a5e537de3b95199926e373e61b27fc197}\label{class_t_m_pro_1_1_t_m_p___font_asset_a5e537de3b95199926e373e61b27fc197}} 
+float {\bfseries normal\+Style} = 0
+\begin{DoxyCompactList}\small\item\em Defines the dilation of the text when using regular style. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_ae58293c90d5a5e0de8545dd9da02e369}\label{class_t_m_pro_1_1_t_m_p___font_asset_ae58293c90d5a5e0de8545dd9da02e369}} 
+float {\bfseries normal\+Spacing\+Offset} = 0
+\begin{DoxyCompactList}\small\item\em The spacing between characters when using regular style. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a16dbe5f4d6f79766b9cd9745c94bbc9c}\label{class_t_m_pro_1_1_t_m_p___font_asset_a16dbe5f4d6f79766b9cd9745c94bbc9c}} 
+float {\bfseries bold\+Style} = 0.\+75f
+\begin{DoxyCompactList}\small\item\em Defines the dilation of the text when using bold style. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a0a4fbd91f8b10c17a222c4b56a586c50}\label{class_t_m_pro_1_1_t_m_p___font_asset_a0a4fbd91f8b10c17a222c4b56a586c50}} 
+float {\bfseries bold\+Spacing} = 7f
+\begin{DoxyCompactList}\small\item\em The spacing between characters when using regular style. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_aa444303f26f16cd2435a4dee25b9f9d5}\label{class_t_m_pro_1_1_t_m_p___font_asset_aa444303f26f16cd2435a4dee25b9f9d5}} 
+byte {\bfseries italic\+Style} = 35
+\begin{DoxyCompactList}\small\item\em Defines the slant of the text when using italic style. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_ac1e563b82e8b03679c9c1c21f2eaf579}\label{class_t_m_pro_1_1_t_m_p___font_asset_ac1e563b82e8b03679c9c1c21f2eaf579}} 
+byte {\bfseries tab\+Size} = 10
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_abd8857b27602339ef52ee928df174447}\label{class_t_m_pro_1_1_t_m_p___font_asset_abd8857b27602339ef52ee928df174447}} 
+string {\bfseries version}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The version of the font asset class. Version 1.\+1.\+0 adds support for the new Text\+Core.\+Font\+Engine and Dynamic SDF system. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a02d8bdefe8ea24739f9c0d4699ae2619}\label{class_t_m_pro_1_1_t_m_p___font_asset_a02d8bdefe8ea24739f9c0d4699ae2619}} 
+Font {\bfseries source\+Font\+File}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Source font file when atlas population mode is set to dynamic. Null when the atlas population mode is set to static. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a9344aef93974f7097591e0040ad7780b}\label{class_t_m_pro_1_1_t_m_p___font_asset_a9344aef93974f7097591e0040ad7780b}} 
+Atlas\+Population\+Mode {\bfseries atlas\+Population\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a42eafee651621d6645ea8c424faa2f1a}\label{class_t_m_pro_1_1_t_m_p___font_asset_a42eafee651621d6645ea8c424faa2f1a}} 
+Face\+Info {\bfseries face\+Info}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Information about the font\textquotesingle{}s face. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a2f6fb970b445707bcb07871aceca1d0d}\label{class_t_m_pro_1_1_t_m_p___font_asset_a2f6fb970b445707bcb07871aceca1d0d}} 
+List$<$ Glyph $>$ {\bfseries glyph\+Table}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of glyphs contained in the font asset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_ae479d9a3f8788cabcf689c2bebee35d2}\label{class_t_m_pro_1_1_t_m_p___font_asset_ae479d9a3f8788cabcf689c2bebee35d2}} 
+Dictionary$<$ uint, Glyph $>$ {\bfseries glyph\+Lookup\+Table}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Dictionary used to lookup glyphs contained in the font asset by their index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a26ec969da60abda09e7a4c573805dfea}\label{class_t_m_pro_1_1_t_m_p___font_asset_a26ec969da60abda09e7a4c573805dfea}} 
+List$<$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___character}{TMP\+\_\+\+Character}} $>$ {\bfseries character\+Table}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List containing the characters of the given font asset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_aa1ca0b68db11064bd7f1ebc7278509b1}\label{class_t_m_pro_1_1_t_m_p___font_asset_aa1ca0b68db11064bd7f1ebc7278509b1}} 
+Dictionary$<$ uint, \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___character}{TMP\+\_\+\+Character}} $>$ {\bfseries character\+Lookup\+Table}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Dictionary used to lookup characters contained in the font asset by their unicode values. \end{DoxyCompactList}\item 
+Texture2D \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset_a94f7e3c3d030339b7d81e73f8c61dd13}{atlas\+Texture}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines if the font asset is using a shared atlas texture(s) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_ac59bb522cd9a07608104b362e94509e3}\label{class_t_m_pro_1_1_t_m_p___font_asset_ac59bb522cd9a07608104b362e94509e3}} 
+Texture2D\mbox{[}$\,$\mbox{]} {\bfseries atlas\+Textures}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Array of atlas textures that contain the glyphs used by this font asset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a5f9794653613fb8869039dfa38dfecee}\label{class_t_m_pro_1_1_t_m_p___font_asset_a5f9794653613fb8869039dfa38dfecee}} 
+int {\bfseries atlas\+Texture\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of atlas textures used by this font asset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a1d87ad2b872f5d9b2273092cddfa7025}\label{class_t_m_pro_1_1_t_m_p___font_asset_a1d87ad2b872f5d9b2273092cddfa7025}} 
+bool {\bfseries is\+Multi\+Atlas\+Textures\+Enabled}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enables the font asset to create additional atlas textures as needed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a516bade05e7096e2abf3999e30dbb133}\label{class_t_m_pro_1_1_t_m_p___font_asset_a516bade05e7096e2abf3999e30dbb133}} 
+\mbox{\hyperlink{class_t_m_pro_1_1_face_info___legacy}{Face\+Info\+\_\+\+Legacy}} {\bfseries font\+Info}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The general information about the font. This property and \mbox{\hyperlink{class_t_m_pro_1_1_face_info___legacy}{Face\+Info\+\_\+\+Legacy}} type are no longer used in version 1.\+1.\+0 of the font asset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a712350fcdd17a12e79ecc49924c53d83}\label{class_t_m_pro_1_1_t_m_p___font_asset_a712350fcdd17a12e79ecc49924c53d83}} 
+int {\bfseries atlas\+Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The width of the atlas texture(s) used by this font asset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_aa8cc3b0d4ef6c8f6db402828c82aa439}\label{class_t_m_pro_1_1_t_m_p___font_asset_aa8cc3b0d4ef6c8f6db402828c82aa439}} 
+int {\bfseries atlas\+Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The height of the atlas texture(s) used by this font asset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a10ea3cba57114687428dcaf11aa8416d}\label{class_t_m_pro_1_1_t_m_p___font_asset_a10ea3cba57114687428dcaf11aa8416d}} 
+int {\bfseries atlas\+Padding}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The padding used between glyphs contained in the atlas texture(s) used by this font asset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a02dbb30284fafaab27013502060d1cbb}\label{class_t_m_pro_1_1_t_m_p___font_asset_a02dbb30284fafaab27013502060d1cbb}} 
+Glyph\+Render\+Mode {\bfseries atlas\+Render\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a388aed95251fb6732c0d8681a141f6d1}\label{class_t_m_pro_1_1_t_m_p___font_asset_a388aed95251fb6732c0d8681a141f6d1}} 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_feature_table}{TMP\+\_\+\+Font\+Feature\+Table}} {\bfseries font\+Feature\+Table}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Table containing the various font features of this font asset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a661dea6c739ddd010568738de57e275c}\label{class_t_m_pro_1_1_t_m_p___font_asset_a661dea6c739ddd010568738de57e275c}} 
+List$<$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} $>$ {\bfseries fallback\+Font\+Asset\+Table}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List containing the Fallback font assets for this font. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a5add1fb1c5ac1afb72c1f6c5b64f9d8a}\label{class_t_m_pro_1_1_t_m_p___font_asset_a5add1fb1c5ac1afb72c1f6c5b64f9d8a}} 
+\mbox{\hyperlink{struct_t_m_pro_1_1_font_asset_creation_settings}{Font\+Asset\+Creation\+Settings}} {\bfseries creation\+Settings}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The settings used in the Font Asset Creator when this font asset was created or edited. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_aff13034ac2e0a2114317a68bcaaa08f0}\label{class_t_m_pro_1_1_t_m_p___font_asset_aff13034ac2e0a2114317a68bcaaa08f0}} 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___font_weight_pair}{TMP\+\_\+\+Font\+Weight\+Pair}}\mbox{[}$\,$\mbox{]} {\bfseries font\+Weight\+Table}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Array containing font assets to be used as alternative typefaces for the various potential font weights of this font asset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a5dd445cf935c5dc8d48b2e4f4dcd12a3}\label{class_t_m_pro_1_1_t_m_p___font_asset_a5dd445cf935c5dc8d48b2e4f4dcd12a3}} 
+\index{TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}!ClearFontAssetData@{ClearFontAssetData}}
+\index{ClearFontAssetData@{ClearFontAssetData}!TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}}
+\doxysubsubsection{\texorpdfstring{ClearFontAssetData()}{ClearFontAssetData()}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Font\+Asset.\+Clear\+Font\+Asset\+Data (\begin{DoxyParamCaption}\item[{bool}]{set\+Atlas\+Size\+To\+Zero = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clears font asset data including the glyph and character tables and textures. Function might be changed to Internal and only used in tests. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set\+Atlas\+Size\+To\+Zero} & Will set the atlas texture size to zero width and height if true.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a2aaa02b48db78a0f758f9c53e6f1a200}\label{class_t_m_pro_1_1_t_m_p___font_asset_a2aaa02b48db78a0f758f9c53e6f1a200}} 
+\index{TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}!CreateFontAsset@{CreateFontAsset}}
+\index{CreateFontAsset@{CreateFontAsset}!TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}}
+\doxysubsubsection{\texorpdfstring{CreateFontAsset()}{CreateFontAsset()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} TMPro.\+TMP\+\_\+\+Font\+Asset.\+Create\+Font\+Asset (\begin{DoxyParamCaption}\item[{Font}]{font }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Create new instance of a font asset using default settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em font} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a3763c422ed1d1ccdea665d862bcee7ca}\label{class_t_m_pro_1_1_t_m_p___font_asset_a3763c422ed1d1ccdea665d862bcee7ca}} 
+\index{TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}!CreateFontAsset@{CreateFontAsset}}
+\index{CreateFontAsset@{CreateFontAsset}!TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}}
+\doxysubsubsection{\texorpdfstring{CreateFontAsset()}{CreateFontAsset()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} TMPro.\+TMP\+\_\+\+Font\+Asset.\+Create\+Font\+Asset (\begin{DoxyParamCaption}\item[{Font}]{font,  }\item[{int}]{sampling\+Point\+Size,  }\item[{int}]{atlas\+Padding,  }\item[{Glyph\+Render\+Mode}]{render\+Mode,  }\item[{int}]{atlas\+Width,  }\item[{int}]{atlas\+Height,  }\item[{Atlas\+Population\+Mode}]{atlas\+Population\+Mode = {\ttfamily AtlasPopulationMode.Dynamic},  }\item[{bool}]{enable\+Multi\+Atlas\+Support = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Create new instance of a font asset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em font} & The source font file.\\
+\hline
+{\em sampling\+Point\+Size} & The sampling point size.\\
+\hline
+{\em atlas\+Padding} & The padding / spread between individual glyphs in the font asset.\\
+\hline
+{\em render\+Mode} & \\
+\hline
+{\em atlas\+Width} & The atlas texture width.\\
+\hline
+{\em atlas\+Height} & The atlas texture height.\\
+\hline
+{\em atlas\+Population\+Mode} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a41da35d4c071829fecb1c8af92076969}\label{class_t_m_pro_1_1_t_m_p___font_asset_a41da35d4c071829fecb1c8af92076969}} 
+\index{TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}!GetCharacters@{GetCharacters}}
+\index{GetCharacters@{GetCharacters}!TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}}
+\doxysubsubsection{\texorpdfstring{GetCharacters()}{GetCharacters()}}
+{\footnotesize\ttfamily static string TMPro.\+TMP\+\_\+\+Font\+Asset.\+Get\+Characters (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}}}]{font\+Asset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Function to extract all the characters from a font asset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em font\+Asset} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a6a03085549975180b0c97ff795c068fe}\label{class_t_m_pro_1_1_t_m_p___font_asset_a6a03085549975180b0c97ff795c068fe}} 
+\index{TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}!GetCharactersArray@{GetCharactersArray}}
+\index{GetCharactersArray@{GetCharactersArray}!TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}}
+\doxysubsubsection{\texorpdfstring{GetCharactersArray()}{GetCharactersArray()}}
+{\footnotesize\ttfamily static int\mbox{[}$\,$\mbox{]} TMPro.\+TMP\+\_\+\+Font\+Asset.\+Get\+Characters\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}}}]{font\+Asset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Function which returns an array that contains all the characters from a font asset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em font\+Asset} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_af9bf0b22f0d6c1bd975723007170647c}\label{class_t_m_pro_1_1_t_m_p___font_asset_af9bf0b22f0d6c1bd975723007170647c}} 
+\index{TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}!HasCharacter@{HasCharacter}}
+\index{HasCharacter@{HasCharacter}!TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}}
+\doxysubsubsection{\texorpdfstring{HasCharacter()}{HasCharacter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool TMPro.\+TMP\+\_\+\+Font\+Asset.\+Has\+Character (\begin{DoxyParamCaption}\item[{char}]{character,  }\item[{bool}]{search\+Fallbacks = {\ttfamily false},  }\item[{bool}]{try\+Add\+Character = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to check if a character is contained in the font asset with the option to also check potential local fallbacks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & \\
+\hline
+{\em search\+Fallbacks} & \\
+\hline
+{\em try\+Add\+Character} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a10751e4fd6f455aa72ae50f688d0698a}\label{class_t_m_pro_1_1_t_m_p___font_asset_a10751e4fd6f455aa72ae50f688d0698a}} 
+\index{TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}!HasCharacter@{HasCharacter}}
+\index{HasCharacter@{HasCharacter}!TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}}
+\doxysubsubsection{\texorpdfstring{HasCharacter()}{HasCharacter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool TMPro.\+TMP\+\_\+\+Font\+Asset.\+Has\+Character (\begin{DoxyParamCaption}\item[{int}]{character }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to check if a certain character exists in the font asset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a6432ab839d799b8e91d1c279946c03cf}\label{class_t_m_pro_1_1_t_m_p___font_asset_a6432ab839d799b8e91d1c279946c03cf}} 
+\index{TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}!HasCharacters@{HasCharacters}}
+\index{HasCharacters@{HasCharacters}!TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}}
+\doxysubsubsection{\texorpdfstring{HasCharacters()}{HasCharacters()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool TMPro.\+TMP\+\_\+\+Font\+Asset.\+Has\+Characters (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to check if certain characters exists in the font asset. Function returns false if any characters are missing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & String containing the characters to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a8db6e186c97502bee308dfc32f82aa92}\label{class_t_m_pro_1_1_t_m_p___font_asset_a8db6e186c97502bee308dfc32f82aa92}} 
+\index{TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}!HasCharacters@{HasCharacters}}
+\index{HasCharacters@{HasCharacters}!TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}}
+\doxysubsubsection{\texorpdfstring{HasCharacters()}{HasCharacters()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool TMPro.\+TMP\+\_\+\+Font\+Asset.\+Has\+Characters (\begin{DoxyParamCaption}\item[{string}]{text,  }\item[{out List$<$ char $>$}]{missing\+Characters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to check if certain characters exists in the font asset. Function returns a list of missing characters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & String containing the characters to check.\\
+\hline
+{\em missing\+Characters} & List of missing characters.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_ac34a1e5e756233491e66d73fb7072d2d}\label{class_t_m_pro_1_1_t_m_p___font_asset_ac34a1e5e756233491e66d73fb7072d2d}} 
+\index{TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}!HasCharacters@{HasCharacters}}
+\index{HasCharacters@{HasCharacters}!TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}}
+\doxysubsubsection{\texorpdfstring{HasCharacters()}{HasCharacters()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool TMPro.\+TMP\+\_\+\+Font\+Asset.\+Has\+Characters (\begin{DoxyParamCaption}\item[{string}]{text,  }\item[{out uint\mbox{[}$\,$\mbox{]}}]{missing\+Characters,  }\item[{bool}]{search\+Fallbacks = {\ttfamily false},  }\item[{bool}]{try\+Add\+Character = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to check if the characters in the given string are contained in the font asset with the option to also check its potential local fallbacks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & String containing the characters to check.\\
+\hline
+{\em missing\+Characters} & Array containing the unicode values of the missing characters.\\
+\hline
+{\em search\+Fallbacks} & Determines if fallback font assets assigned to this font asset should be searched.\\
+\hline
+{\em try\+Add\+Character} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_acc07d15982d247c0644c7fbb1ea2a938}\label{class_t_m_pro_1_1_t_m_p___font_asset_acc07d15982d247c0644c7fbb1ea2a938}} 
+\index{TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}!TryAddCharacters@{TryAddCharacters}}
+\index{TryAddCharacters@{TryAddCharacters}!TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}}
+\doxysubsubsection{\texorpdfstring{TryAddCharacters()}{TryAddCharacters()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bool TMPro.\+TMP\+\_\+\+Font\+Asset.\+Try\+Add\+Characters (\begin{DoxyParamCaption}\item[{string}]{characters,  }\item[{bool}]{include\+Font\+Features = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Try adding the characters from the provided string to the font asset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em characters} & String containing the characters to add to the font asset.\\
+\hline
+{\em include\+Font\+Features} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if all the characters were successfully added to the font asset. Return false otherwise.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a628a14946951b1585d4571f07cb3cbe9}\label{class_t_m_pro_1_1_t_m_p___font_asset_a628a14946951b1585d4571f07cb3cbe9}} 
+\index{TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}!TryAddCharacters@{TryAddCharacters}}
+\index{TryAddCharacters@{TryAddCharacters}!TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}}
+\doxysubsubsection{\texorpdfstring{TryAddCharacters()}{TryAddCharacters()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily bool TMPro.\+TMP\+\_\+\+Font\+Asset.\+Try\+Add\+Characters (\begin{DoxyParamCaption}\item[{string}]{characters,  }\item[{out string}]{missing\+Characters,  }\item[{bool}]{include\+Font\+Features = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Try adding the characters from the provided string to the font asset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em characters} & String containing the characters to add to the font asset.\\
+\hline
+{\em missing\+Characters} & String containing the characters that could not be added to the font asset.\\
+\hline
+{\em include\+Font\+Features} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if all the characters were successfully added to the font asset. Return false otherwise.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a2fe31dce7a5f9b3202a1c794ea6e698a}\label{class_t_m_pro_1_1_t_m_p___font_asset_a2fe31dce7a5f9b3202a1c794ea6e698a}} 
+\index{TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}!TryAddCharacters@{TryAddCharacters}}
+\index{TryAddCharacters@{TryAddCharacters}!TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}}
+\doxysubsubsection{\texorpdfstring{TryAddCharacters()}{TryAddCharacters()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily bool TMPro.\+TMP\+\_\+\+Font\+Asset.\+Try\+Add\+Characters (\begin{DoxyParamCaption}\item[{uint\mbox{[}$\,$\mbox{]}}]{unicodes,  }\item[{bool}]{include\+Font\+Features = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Try adding the characters from the provided string to the font asset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unicodes} & Array that contains the characters to add to the font asset.\\
+\hline
+{\em include\+Font\+Features} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if all the characters were successfully added to the font asset. Return false otherwise.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a84696ac330200bc56ea91856c422ae06}\label{class_t_m_pro_1_1_t_m_p___font_asset_a84696ac330200bc56ea91856c422ae06}} 
+\index{TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}!TryAddCharacters@{TryAddCharacters}}
+\index{TryAddCharacters@{TryAddCharacters}!TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}}
+\doxysubsubsection{\texorpdfstring{TryAddCharacters()}{TryAddCharacters()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily bool TMPro.\+TMP\+\_\+\+Font\+Asset.\+Try\+Add\+Characters (\begin{DoxyParamCaption}\item[{uint\mbox{[}$\,$\mbox{]}}]{unicodes,  }\item[{out uint\mbox{[}$\,$\mbox{]}}]{missing\+Unicodes,  }\item[{bool}]{include\+Font\+Features = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Try adding the characters from the provided string to the font asset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unicodes} & Array that contains the characters to add to the font asset.\\
+\hline
+{\em missing\+Unicodes} & Array containing the characters that could not be added to the font asset.\\
+\hline
+{\em include\+Font\+Features} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if all the characters were successfully added to the font asset. Return false otherwise.
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a498534bae36d4dd9080e7ac93af657e0}\label{class_t_m_pro_1_1_t_m_p___font_asset_a498534bae36d4dd9080e7ac93af657e0}} 
+\index{TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}!atlas@{atlas}}
+\index{atlas@{atlas}!TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}}
+\doxysubsubsection{\texorpdfstring{atlas}{atlas}}
+{\footnotesize\ttfamily Texture2D TMPro.\+TMP\+\_\+\+Font\+Asset.\+atlas}
+
+
+
+
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_t_m_pro_1_1_t_m_p___font_asset_a94f7e3c3d030339b7d81e73f8c61dd13}\label{class_t_m_pro_1_1_t_m_p___font_asset_a94f7e3c3d030339b7d81e73f8c61dd13}} 
+\index{TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}!atlasTexture@{atlasTexture}}
+\index{atlasTexture@{atlasTexture}!TMPro.TMP\_FontAsset@{TMPro.TMP\_FontAsset}}
+\doxysubsubsection{\texorpdfstring{atlasTexture}{atlasTexture}}
+{\footnotesize\ttfamily Texture2D TMPro.\+TMP\+\_\+\+Font\+Asset.\+atlas\+Texture\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Determines if the font asset is using a shared atlas texture(s) 
+
+The font atlas used by this font asset. This is always the texture at index \mbox{[}0\mbox{]} of the font\+Atlas\+Textures. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+textmeshpro@3.\+0.\+6/\+Scripts/\+Runtime/TMP\+\_\+\+Font\+Asset.\+cs\end{DoxyCompactItemize}

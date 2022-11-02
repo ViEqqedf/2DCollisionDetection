@@ -1,0 +1,74 @@
+\hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics}{}\doxysection{Unity\+Editor.\+Performance.\+Profile\+Analyzer.\+Profile\+Analyzer\+Analytics Class Reference}
+\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileAnalyzerAnalytics@{UnityEditor.Performance.ProfileAnalyzer.ProfileAnalyzerAnalytics}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Analytic}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_a762654dfe3fffc88ef1c6b9771a606bc}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_a762654dfe3fffc88ef1c6b9771a606bc}} 
+enum {\bfseries UIButton} \{ \newline
+{\bfseries Pull}
+, {\bfseries Open\+Profiler}
+, {\bfseries Close\+Profiler}
+, {\bfseries Jump\+To\+Frame}
+, \newline
+{\bfseries Export\+Single\+Frames}
+, {\bfseries Export\+Comparison\+Frames}
+ \}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_a99112fe2cc49190c77e9233fdd100a54}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_a99112fe2cc49190c77e9233fdd100a54}} 
+enum {\bfseries UIUsage\+Mode} \{ {\bfseries Single}
+, {\bfseries Comparison}
+ \}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_a904db36cdfcb75cc69491b60ff654304}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_a904db36cdfcb75cc69491b60ff654304}} 
+enum {\bfseries UIVisibility} \{ \newline
+{\bfseries Frame\+Time\+Context\+Menu}
+, {\bfseries Filters}
+, {\bfseries Top\+Ten}
+, {\bfseries Frames}
+, \newline
+{\bfseries Threads}
+, {\bfseries Markers}
+ \}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_af19f9afa5a10e9bffdb1848deee50193}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_af19f9afa5a10e9bffdb1848deee50193}} 
+enum {\bfseries UIResize\+View} \{ {\bfseries Single}
+, {\bfseries Comparison}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_ac8f93651627dd3576550ab0f813b5ec1}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_ac8f93651627dd3576550ab0f813b5ec1}} 
+static void {\bfseries Enable\+Analytics} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_ac9571b72ae49246180648e94a6216c76}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_ac9571b72ae49246180648e94a6216c76}} 
+static bool {\bfseries Send\+UIButton\+Event} (UIButton ui\+Button, float duration\+In\+Seconds)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_ae7a4c5c76b73b0bc4065c8638b78e9ea}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_ae7a4c5c76b73b0bc4065c8638b78e9ea}} 
+static bool {\bfseries Send\+UIUsage\+Mode\+Event} (UIUsage\+Mode ui\+Usage\+Mode, float duration\+In\+Seconds)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_a387b8c96f895939cebb57ed563e00f3e}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_a387b8c96f895939cebb57ed563e00f3e}} 
+static bool {\bfseries Send\+UIVisibility\+Event} (UIVisibility ui\+Visibility, float duration\+In\+Seconds, bool show)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_a4123bdff9be4031da61daa97ea892c29}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_a4123bdff9be4031da61daa97ea892c29}} 
+static bool {\bfseries Send\+UIResize\+Event} (UIResize\+View ui\+Resize\+View, float duration\+In\+Seconds, float width, float height, bool is\+Docked)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_aa13c0c14343ec4a97d434cd0b8afba0f}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_aa13c0c14343ec4a97d434cd0b8afba0f}} 
+static Analytic {\bfseries Begin\+Analytic} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_a93e9647ea3fb15bbb825cb49a6ce7a99}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_a93e9647ea3fb15bbb825cb49a6ce7a99}} 
+static void {\bfseries Send\+UIButton\+Event} (UIButton ui\+Button, Analytic instance)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_ac8829c36c0f3b8c8245c39395fca36fc}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_analytics_ac8829c36c0f3b8c8245c39395fca36fc}} 
+static void {\bfseries Send\+UIUsage\+Mode\+Event} (UIUsage\+Mode ui\+Usage\+Mode, Analytic instance)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+performance.\+profile-\/analyzer@1.\+1.\+1/\+Editor/Analytics.\+cs\end{DoxyCompactItemize}

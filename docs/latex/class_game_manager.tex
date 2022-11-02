@@ -1,0 +1,94 @@
+\hypertarget{class_game_manager}{}\doxysection{Game\+Manager Class Reference}
+\label{class_game_manager}\index{GameManager@{GameManager}}
+Inheritance diagram for Game\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_manager_ae957c645ab6cc9808573717e02cba133}\label{class_game_manager_ae957c645ab6cc9808573717e02cba133}} 
+void {\bfseries Respawn\+Ship} (float delay=SPACESHIP\+\_\+\+RESPAWN\+\_\+\+DELAY)
+\item 
+\mbox{\Hypertarget{class_game_manager_a0c126c79db6380d515b345de6d4a0422}\label{class_game_manager_a0c126c79db6380d515b345de6d4a0422}} 
+IEnumerator {\bfseries Respawn\+Ship\+Coroutine} (float delay)
+\item 
+\mbox{\Hypertarget{class_game_manager_a67f14334e45723eb79ef1f159e585c4f}\label{class_game_manager_a67f14334e45723eb79ef1f159e585c4f}} 
+void {\bfseries Spawn\+Asteroids} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_manager_a9f8964977defd603d13ff7d596aa531f}\label{class_game_manager_a9f8964977defd603d13ff7d596aa531f}} 
+static void {\bfseries Initialize\+Testing\+Environment} (bool start, bool update, bool effects, bool asteroids, bool paused)
+\item 
+\mbox{\Hypertarget{class_game_manager_a1a9290acb68d36e266cee58730b065d6}\label{class_game_manager_a1a9290acb68d36e266cee58730b065d6}} 
+static bool {\bfseries Spaceship\+Is\+Active} ()
+\item 
+\mbox{\Hypertarget{class_game_manager_ad603d02824ae664ef12f652f04780e47}\label{class_game_manager_ad603d02824ae664ef12f652f04780e47}} 
+static void {\bfseries Add\+To\+Score} (int split\+Count)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_manager_a68185522873bd220b2aedf63990fd12d}\label{class_game_manager_a68185522873bd220b2aedf63990fd12d}} 
+Game\+Object {\bfseries spaceship\+Prefab}
+\item 
+\mbox{\Hypertarget{class_game_manager_a9c54f9397e296ea0c24028ef43f0eb34}\label{class_game_manager_a9c54f9397e296ea0c24028ef43f0eb34}} 
+Game\+Object {\bfseries asteroid\+Prefab}
+\item 
+\mbox{\Hypertarget{class_game_manager_ae825260a29aada2919b61454c5eca62e}\label{class_game_manager_ae825260a29aada2919b61454c5eca62e}} 
+float {\bfseries asteroid\+Spawn\+Delay} = 1.\+0f
+\item 
+\mbox{\Hypertarget{class_game_manager_aab77f84b93fc7b36915537844e2e7f63}\label{class_game_manager_aab77f84b93fc7b36915537844e2e7f63}} 
+float {\bfseries asteroid\+Spawn\+Timer} = 0.\+0f
+\item 
+\mbox{\Hypertarget{class_game_manager_a47e41c32ec36d63384f694791a20822f}\label{class_game_manager_a47e41c32ec36d63384f694791a20822f}} 
+int {\bfseries deaths} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_manager_a8843c00166920ad59b3a976e4b0faf2e}\label{class_game_manager_a8843c00166920ad59b3a976e4b0faf2e}} 
+static bool {\bfseries effects\+Enabled} = true
+\item 
+\mbox{\Hypertarget{class_game_manager_a81e40a57f696824f167e03a6b6fed0cb}\label{class_game_manager_a81e40a57f696824f167e03a6b6fed0cb}} 
+static bool {\bfseries start\+Enabled} = true
+\item 
+\mbox{\Hypertarget{class_game_manager_aa6faba9c6ff8a093b3ce652ff452ff73}\label{class_game_manager_aa6faba9c6ff8a093b3ce652ff452ff73}} 
+static bool {\bfseries update\+Enabled} = true
+\item 
+\mbox{\Hypertarget{class_game_manager_a968b6e67c31b9b5a5c059250457c3f41}\label{class_game_manager_a968b6e67c31b9b5a5c059250457c3f41}} 
+static bool {\bfseries asteroids\+Enabled} = true
+\item 
+\mbox{\Hypertarget{class_game_manager_a7666e8468dac197b9eb32dd32128524f}\label{class_game_manager_a7666e8468dac197b9eb32dd32128524f}} 
+static \mbox{\hyperlink{class_game_manager}{Game\+Manager}} {\bfseries instance}
+\item 
+\mbox{\Hypertarget{class_game_manager_a21bfb1fdbd8869fedec22b55841e3499}\label{class_game_manager_a21bfb1fdbd8869fedec22b55841e3499}} 
+static \mbox{\hyperlink{class_spaceship_controller}{Spaceship\+Controller}} {\bfseries spaceship}
+\item 
+\mbox{\Hypertarget{class_game_manager_ae9711122c3e5251d8f9ff4e02283af09}\label{class_game_manager_ae9711122c3e5251d8f9ff4e02283af09}} 
+static int {\bfseries score}
+\item 
+\mbox{\Hypertarget{class_game_manager_aabd43349ea192dc30603c45ad3050be5}\label{class_game_manager_aabd43349ea192dc30603c45ad3050be5}} 
+static int {\bfseries score\+Since\+Last\+Death}
+\item 
+\mbox{\Hypertarget{class_game_manager_a5852d218d63bbcd6076f1e890ddc3c65}\label{class_game_manager_a5852d218d63bbcd6076f1e890ddc3c65}} 
+const float {\bfseries SPACESHIP\+\_\+\+RESPAWN\+\_\+\+DELAY} = 1.\+0f
+\item 
+\mbox{\Hypertarget{class_game_manager_a7e3b1d21a2930f7ce9d10f50be513ff9}\label{class_game_manager_a7e3b1d21a2930f7ce9d10f50be513ff9}} 
+const float {\bfseries RELOAD\+\_\+\+SCENE\+\_\+\+DELAY} = 3.\+0f
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_manager_a504d119ddb7d4b1daadb6516eefd51ca}\label{class_game_manager_a504d119ddb7d4b1daadb6516eefd51ca}} 
+static bool {\bfseries Is\+Paused}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+testtools.\+codecoverage@1.\+0.\+1/\+Samples$\sim$/\+Tutorial/\+Asteroids/\+Scripts/\+Managers/Game\+Manager.\+cs\end{DoxyCompactItemize}

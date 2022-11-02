@@ -1,0 +1,68 @@
+.TH "Physics.Collision.Model.SimplexEdge" 3 "2022年 十一月 2日 星期三" "PhysicsWorld" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Physics.Collision.Model.SimplexEdge
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public 成员函数"
+
+.in +1c
+.ti -1c
+.RI "void \fBClear\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitEdges\fP (List< Vector3 > simplex)"
+.br
+.ti -1c
+.RI "\fBEdge\fP \fBFindClosestEdge\fP ()"
+.br
+.ti -1c
+.RI "void \fBInsertEdgePoint\fP (\fBEdge\fP e, Vector3 point)"
+.br
+.ti -1c
+.RI "void \fBUpdateEdgeIndex\fP ()"
+.br
+.ti -1c
+.RI "\fBEdge\fP \fBCreateEdge\fP (Vector3 a, Vector3 b)"
+.br
+.in -1c
+.SS "Public 属性"
+
+.in +1c
+.ti -1c
+.RI "List< \fBEdge\fP > \fBedges\fP = new List<\fBEdge\fP>()"
+.br
+.in -1c
+.SS "Private 成员函数"
+
+.in +1c
+.ti -1c
+.RI "\fBEdge\fP \fBCreateInitEdge\fP (Vector3 a, Vector3 b)"
+.br
+.in -1c
+.SH "成员函数说明"
+.PP 
+.SS "void Physics\&.Collision\&.Model\&.SimplexEdge\&.Clear ()\fC [inline]\fP"
+
+.SS "\fBEdge\fP Physics\&.Collision\&.Model\&.SimplexEdge\&.CreateEdge (Vector3 a, Vector3 b)\fC [inline]\fP"
+
+.SS "\fBEdge\fP Physics\&.Collision\&.Model\&.SimplexEdge\&.CreateInitEdge (Vector3 a, Vector3 b)\fC [inline]\fP, \fC [private]\fP"
+
+.SS "\fBEdge\fP Physics\&.Collision\&.Model\&.SimplexEdge\&.FindClosestEdge ()\fC [inline]\fP"
+
+.SS "void Physics\&.Collision\&.Model\&.SimplexEdge\&.InitEdges (List< Vector3 > simplex)\fC [inline]\fP"
+
+.SS "void Physics\&.Collision\&.Model\&.SimplexEdge\&.InsertEdgePoint (\fBEdge\fP e, Vector3 point)\fC [inline]\fP"
+
+.SS "void Physics\&.Collision\&.Model\&.SimplexEdge\&.UpdateEdgeIndex ()\fC [inline]\fP"
+
+.SH "类成员变量说明"
+.PP 
+.SS "List<\fBEdge\fP> Physics\&.Collision\&.Model\&.SimplexEdge\&.edges = new List<\fBEdge\fP>()"
+
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 PhysicsWorld 的 源代码自动生成\&.

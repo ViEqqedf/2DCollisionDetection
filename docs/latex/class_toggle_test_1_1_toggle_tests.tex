@@ -1,0 +1,114 @@
+\hypertarget{class_toggle_test_1_1_toggle_tests}{}\doxysection{Toggle\+Test.\+Toggle\+Tests Class Reference}
+\label{class_toggle_test_1_1_toggle_tests}\index{ToggleTest.ToggleTests@{ToggleTest.ToggleTests}}
+Inheritance diagram for Toggle\+Test.\+Toggle\+Tests\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_toggle_test_1_1_toggle_tests}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_toggle_test_1_1_toggle_tests_af2e59be04dd7fa9713b3664773208b11}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Implement this method to call actions automatically before the build process. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_toggle_test_1_1_toggle_tests_aadb5e4de5d6caa3d520341c820b1aaa7}\label{class_toggle_test_1_1_toggle_tests_aadb5e4de5d6caa3d520341c820b1aaa7}} 
+virtual void {\bfseries Test\+Setup} ()
+\item 
+\mbox{\Hypertarget{class_toggle_test_1_1_toggle_tests_ad281c563d788930907661a41b01d3692}\label{class_toggle_test_1_1_toggle_tests_ad281c563d788930907661a41b01d3692}} 
+virtual void {\bfseries Tear\+Down} ()
+\item 
+\mbox{\Hypertarget{class_toggle_test_1_1_toggle_tests_a378a9dfcc0d81b5de5c4ffbcfc1fed99}\label{class_toggle_test_1_1_toggle_tests_a378a9dfcc0d81b5de5c4ffbcfc1fed99}} 
+void {\bfseries One\+Time\+Tear\+Down} ()
+\item 
+\mbox{\Hypertarget{class_toggle_test_1_1_toggle_tests_a8cc42494c4a99668a5193caa57030a88}\label{class_toggle_test_1_1_toggle_tests_a8cc42494c4a99668a5193caa57030a88}} 
+void {\bfseries Set\+Is\+On\+Without\+Notify\+Will\+Not\+Notify} ()
+\item 
+\mbox{\Hypertarget{class_toggle_test_1_1_toggle_tests_a6f5d56fb50c04057b4a7b0e7cd5c8563}\label{class_toggle_test_1_1_toggle_tests_a6f5d56fb50c04057b4a7b0e7cd5c8563}} 
+void {\bfseries Non\+Interactable\+Cant\+Be\+Toggled} ()
+\item 
+\mbox{\Hypertarget{class_toggle_test_1_1_toggle_tests_a915fe9623b6d9f80e13bb35aca609487}\label{class_toggle_test_1_1_toggle_tests_a915fe9623b6d9f80e13bb35aca609487}} 
+void {\bfseries Inactive\+Cant\+Be\+Toggled} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_toggle_test_1_1_toggle_tests_a4801522d3bf96b928adf209bfd40c5c7}\label{class_toggle_test_1_1_toggle_tests_a4801522d3bf96b928adf209bfd40c5c7}} 
+Game\+Object {\bfseries m\+\_\+\+Prefab\+Root}
+\item 
+\mbox{\Hypertarget{class_toggle_test_1_1_toggle_tests_ae35ae0f4db819d1f3817948cf0592ee2}\label{class_toggle_test_1_1_toggle_tests_ae35ae0f4db819d1f3817948cf0592ee2}} 
+List$<$ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} $>$ {\bfseries m\+\_\+toggle} = new List$<$\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}}$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_toggle_test_1_1_toggle_tests_af26bfd74a1e2856abf63178384117e66}\label{class_toggle_test_1_1_toggle_tests_af26bfd74a1e2856abf63178384117e66}} 
+static int {\bfseries nb\+Toggle\+In\+Group} = 2
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_toggle_test_1_1_toggle_tests_af2e59be04dd7fa9713b3664773208b11}\label{class_toggle_test_1_1_toggle_tests_af2e59be04dd7fa9713b3664773208b11}} 
+\index{ToggleTest.ToggleTests@{ToggleTest.ToggleTests}!Setup@{Setup}}
+\index{Setup@{Setup}!ToggleTest.ToggleTests@{ToggleTest.ToggleTests}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily void Toggle\+Test.\+Toggle\+Tests.\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implement this method to call actions automatically before the build process. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }CreateSpriteTest : IPrebuildSetup}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    Texture2D m\_Texture;}
+\DoxyCodeLine{    Sprite m\_Sprite;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_toggle_test_1_1_toggle_tests_af2e59be04dd7fa9713b3664773208b11}{Setup}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#if UNITY\_EDITOR}}
+\DoxyCodeLine{        var spritePath = \textcolor{stringliteral}{"{}Assets/Resources/Circle.png"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{        var ti = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.AssetImporter.GetAtPath(spritePath) as \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporter;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.textureCompression = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporterCompression.Uncompressed;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.SaveAndReimport();}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [SetUp]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} SetUpTest()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        m\_Texture = Resources.Load<Texture2D>(\textcolor{stringliteral}{"{}Circle"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [Test]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} WhenNullTextureIsPassed\_CreateShouldReturnNullSprite()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with Valid Texture.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        LogAssert.Expect(LogType.Log, \textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Sprite.Create(m\_Texture, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Debug.Log(\textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with NULL Texture. Should return NULL Sprite.}}
+\DoxyCodeLine{        m\_Sprite = Sprite.Create(\textcolor{keyword}{null}, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Assert.That(m\_Sprite, Is.Null, \textcolor{stringliteral}{"{}Sprite created with null texture should be null"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup_a9a9eaa928efe50645e61412528e84309}{Unity\+Engine.\+Test\+Tools.\+IPrebuild\+Setup}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Tests/\+Runtime/\+Toggle/Toggle\+Tests.\+cs\end{DoxyCompactItemize}

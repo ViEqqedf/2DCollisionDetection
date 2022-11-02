@@ -1,0 +1,164 @@
+\hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i}{}\doxysection{Unity\+Editor.\+Timeline.\+Timeline\+Marker\+GUI Class Reference}
+\label{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i}\index{UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}}
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Timeline\+Marker\+GUI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.085400cm]{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a11fea001ba44a20283e31729c46732b8}{Select}} ()
+\item 
+override bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a2c449fa6227f238f87230f44c3fffe74}{Is\+Selected}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a4794002d73a4ce35c5ec38d95eded252}{Deselect}} ()
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_ad3127d8e45fbe58eac6fb893cb989682}\label{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_ad3127d8e45fbe58eac6fb893cb989682}} 
+{\bfseries Timeline\+Marker\+GUI} (\mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} the\+Marker, \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i}{IRow\+GUI}} parent, \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_z_order_provider}{IZOrder\+Provider}} provider)
+\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_af1a7dbb45ab73a42770f5c17c27a1776}{Draw}} (Rect track\+Rect, bool track\+Rect\+Changed, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}} state)
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a3dc52cce934e959f526f8a206ad4a4e7}\label{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a3dc52cce934e959f526f8a206ad4a4e7}} 
+void {\bfseries Queue\+Overlay} (Rect rect, bool is\+Selected, bool is\+Collapsed)
+\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_ab3d618ca9be0707de4e1caeead734d83}{Start\+Drag}} ()
+\item 
+override Rect \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a0a1c4fdfdb668cab167f27e3d8c2901b}{Rect\+To\+Timeline}} (Rect track\+Rect, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}} state)
+\item 
+IEnumerable$<$ \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_edge}{Edge}} $>$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_ac1a940691126830fe6be00f3c2ee5108}{Snappable\+Edges\+For}} (\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_attractable}{IAttractable}} attractable, Manipulate\+Edges manipulate\+Edges)
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_aed94abcd19e2bab07511607a02007a72}{Should\+Snap\+To}} (\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_snappable}{ISnappable}} snappable)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a77ba02bfade59f2fa66be702ab1318d0}\label{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a77ba02bfade59f2fa66be702ab1318d0}} 
+double {\bfseries time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+override double \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a1a81cec484a25ae7e3fdebc63b1d5e35}{start}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+override double \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a3bccb1d4667203b8554d1092541abd70}{end}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_af26ab526295b617f6f3e30b779a4db16}\label{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_af26ab526295b617f6f3e30b779a4db16}} 
+override \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{ITimeline\+Item}} {\bfseries item}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a48dc9ff770f8cd0a5fdb11ae618ae846}\label{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a48dc9ff770f8cd0a5fdb11ae618ae846}} 
+System.\+Action {\bfseries on\+Start\+Drag}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a4794002d73a4ce35c5ec38d95eded252}\label{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a4794002d73a4ce35c5ec38d95eded252}} 
+\index{UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}!Deselect@{Deselect}}
+\index{Deselect@{Deselect}!UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}}
+\doxysubsubsection{\texorpdfstring{Deselect()}{Deselect()}}
+{\footnotesize\ttfamily override void Unity\+Editor.\+Timeline.\+Timeline\+Marker\+GUI.\+Deselect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i}{Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_af1a7dbb45ab73a42770f5c17c27a1776}\label{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_af1a7dbb45ab73a42770f5c17c27a1776}} 
+\index{UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}!Draw@{Draw}}
+\index{Draw@{Draw}!UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily override void Unity\+Editor.\+Timeline.\+Timeline\+Marker\+GUI.\+Draw (\begin{DoxyParamCaption}\item[{Rect}]{track\+Rect,  }\item[{bool}]{track\+Rect\+Changed,  }\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}}}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i}{Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a2c449fa6227f238f87230f44c3fffe74}\label{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a2c449fa6227f238f87230f44c3fffe74}} 
+\index{UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}!IsSelected@{IsSelected}}
+\index{IsSelected@{IsSelected}!UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}}
+\doxysubsubsection{\texorpdfstring{IsSelected()}{IsSelected()}}
+{\footnotesize\ttfamily override bool Unity\+Editor.\+Timeline.\+Timeline\+Marker\+GUI.\+Is\+Selected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i}{Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a0a1c4fdfdb668cab167f27e3d8c2901b}\label{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a0a1c4fdfdb668cab167f27e3d8c2901b}} 
+\index{UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}!RectToTimeline@{RectToTimeline}}
+\index{RectToTimeline@{RectToTimeline}!UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}}
+\doxysubsubsection{\texorpdfstring{RectToTimeline()}{RectToTimeline()}}
+{\footnotesize\ttfamily override Rect Unity\+Editor.\+Timeline.\+Timeline\+Marker\+GUI.\+Rect\+To\+Timeline (\begin{DoxyParamCaption}\item[{Rect}]{track\+Rect,  }\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}}}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i}{Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a11fea001ba44a20283e31729c46732b8}\label{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a11fea001ba44a20283e31729c46732b8}} 
+\index{UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}!Select@{Select}}
+\index{Select@{Select}!UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}}
+\doxysubsubsection{\texorpdfstring{Select()}{Select()}}
+{\footnotesize\ttfamily override void Unity\+Editor.\+Timeline.\+Timeline\+Marker\+GUI.\+Select (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i}{Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_aed94abcd19e2bab07511607a02007a72}\label{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_aed94abcd19e2bab07511607a02007a72}} 
+\index{UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}!ShouldSnapTo@{ShouldSnapTo}}
+\index{ShouldSnapTo@{ShouldSnapTo}!UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}}
+\doxysubsubsection{\texorpdfstring{ShouldSnapTo()}{ShouldSnapTo()}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+Timeline\+Marker\+GUI.\+Should\+Snap\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_snappable}{ISnappable}}}]{snappable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_attractable}{Unity\+Editor.\+Timeline.\+IAttractable}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_ac1a940691126830fe6be00f3c2ee5108}\label{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_ac1a940691126830fe6be00f3c2ee5108}} 
+\index{UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}!SnappableEdgesFor@{SnappableEdgesFor}}
+\index{SnappableEdgesFor@{SnappableEdgesFor}!UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}}
+\doxysubsubsection{\texorpdfstring{SnappableEdgesFor()}{SnappableEdgesFor()}}
+{\footnotesize\ttfamily IEnumerable$<$ \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_edge}{Edge}} $>$ Unity\+Editor.\+Timeline.\+Timeline\+Marker\+GUI.\+Snappable\+Edges\+For (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_attractable}{IAttractable}}}]{attractable,  }\item[{Manipulate\+Edges}]{manipulate\+Edges }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_snappable}{Unity\+Editor.\+Timeline.\+ISnappable}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_ab3d618ca9be0707de4e1caeead734d83}\label{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_ab3d618ca9be0707de4e1caeead734d83}} 
+\index{UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}!StartDrag@{StartDrag}}
+\index{StartDrag@{StartDrag}!UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}}
+\doxysubsubsection{\texorpdfstring{StartDrag()}{StartDrag()}}
+{\footnotesize\ttfamily override void Unity\+Editor.\+Timeline.\+Timeline\+Marker\+GUI.\+Start\+Drag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i}{Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a3bccb1d4667203b8554d1092541abd70}\label{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a3bccb1d4667203b8554d1092541abd70}} 
+\index{UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}!end@{end}}
+\index{end@{end}!UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily override double Unity\+Editor.\+Timeline.\+Timeline\+Marker\+GUI.\+end\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_attractable}{Unity\+Editor.\+Timeline.\+IAttractable}}.
+
+\mbox{\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a1a81cec484a25ae7e3fdebc63b1d5e35}\label{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a1a81cec484a25ae7e3fdebc63b1d5e35}} 
+\index{UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}!start@{start}}
+\index{start@{start}!UnityEditor.Timeline.TimelineMarkerGUI@{UnityEditor.Timeline.TimelineMarkerGUI}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily override double Unity\+Editor.\+Timeline.\+Timeline\+Marker\+GUI.\+start\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_attractable}{Unity\+Editor.\+Timeline.\+IAttractable}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Editor/treeview/\+Item\+Gui/Timeline\+Marker\+GUI.\+cs\end{DoxyCompactItemize}

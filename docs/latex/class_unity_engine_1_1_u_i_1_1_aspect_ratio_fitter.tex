@@ -1,0 +1,168 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter}{}\doxysection{Unity\+Engine.\+UI.\+Aspect\+Ratio\+Fitter Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter}\index{UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}}
+
+
+Resizes a Rect\+Transform to fit a specified aspect ratio.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Aspect\+Ratio\+Fitter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1}{Aspect\+Mode}} \{ \newline
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1a6adf97f83acf6453d4a6a4b1070f3754}{None}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1a61ac85123b25b3d78618f7bab2eda00e}{Width\+Controls\+Height}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1af9e843f5dce3d163ff227419fcf7f8bc}{Height\+Controls\+Width}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1a191652c0f04740da8935e81a5f898935}{Fit\+In\+Parent}}
+, \newline
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1ae84ac20dc3c60c5b55e16ddc2c9f65a6}{Envelope\+Parent}}
+ \}
+\begin{DoxyCompactList}\small\item\em Specifies a mode to use to enforce an aspect ratio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_afe1acf4f394df9a2145c171c26b5e864}\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_afe1acf4f394df9a2145c171c26b5e864}} 
+virtual void {\bfseries Set\+Layout\+Horizontal} ()
+\begin{DoxyCompactList}\small\item\em Method called by the layout system. Has no effect \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a4a36fae8d596d701085a23a5f4af33cf}\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a4a36fae8d596d701085a23a5f4af33cf}} 
+virtual void {\bfseries Set\+Layout\+Vertical} ()
+\begin{DoxyCompactList}\small\item\em Method called by the layout system. Has no effect \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a2dc589cd7d3c92f227b3a57e37057183}\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a2dc589cd7d3c92f227b3a57e37057183}} 
+bool {\bfseries Is\+Component\+Valid\+On\+Object} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a6feda9e7a17aa1bf79ada8647492a9f7}\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a6feda9e7a17aa1bf79ada8647492a9f7}} 
+bool {\bfseries Is\+Aspect\+Mode\+Valid} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a1716232f2adde94e9c4982c75e64742e}{On\+Enable}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_ab1b884a5a13f741210b6cadeed4344e8}{Start}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_ab155c29478dfb89842310b0e3e499b02}{On\+Disable}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a9a5f61f4c934b70c2583aa2e466059c3}{On\+Transform\+Parent\+Changed}} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_aadb59eb216791db1e0b41d5f5a03e43b}\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_aadb59eb216791db1e0b41d5f5a03e43b}} 
+virtual void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Update the rect based on the delayed dirty. Got around issue of calling on\+Validate from On\+Enable function. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a75dc042f53ed88a8002af380a4c91b9f}{On\+Rect\+Transform\+Dimensions\+Change}} ()
+\begin{DoxyCompactList}\small\item\em Function called when this Rect\+Transform or parent Rect\+Transform has changed dimensions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_ae891e93b500d27546b3937e4e4939dd7}\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_ae891e93b500d27546b3937e4e4939dd7}} 
+void {\bfseries Set\+Dirty} ()
+\begin{DoxyCompactList}\small\item\em Mark the \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter}{Aspect\+Ratio\+Fitter}} as dirty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a9e9215cfa6bd3a4bf0538e9c99e0de86}\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a9e9215cfa6bd3a4bf0538e9c99e0de86}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1}{Aspect\+Mode}} {\bfseries aspect\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The mode to use to enforce the aspect ratio. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_ac1321b3e792bc415d7dbff6cd5350e0a}\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_ac1321b3e792bc415d7dbff6cd5350e0a}} 
+float {\bfseries aspect\+Ratio}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The aspect ratio to enforce. This means width divided by height. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Resizes a Rect\+Transform to fit a specified aspect ratio. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1}\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1}} 
+\index{UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}!AspectMode@{AspectMode}}
+\index{AspectMode@{AspectMode}!UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}}
+\doxysubsubsection{\texorpdfstring{AspectMode}{AspectMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1}{Unity\+Engine.\+UI.\+Aspect\+Ratio\+Fitter.\+Aspect\+Mode}}}
+
+
+
+Specifies a mode to use to enforce an aspect ratio. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}}\index{UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}!None@{None}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1a6adf97f83acf6453d4a6a4b1070f3754}\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1a6adf97f83acf6453d4a6a4b1070f3754}} 
+None&The aspect ratio is not enforced \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WidthControlsHeight@{WidthControlsHeight}!UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}}\index{UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}!WidthControlsHeight@{WidthControlsHeight}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1a61ac85123b25b3d78618f7bab2eda00e}\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1a61ac85123b25b3d78618f7bab2eda00e}} 
+Width\+Controls\+Height&Changes the height of the rectangle to match the aspect ratio. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HeightControlsWidth@{HeightControlsWidth}!UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}}\index{UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}!HeightControlsWidth@{HeightControlsWidth}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1af9e843f5dce3d163ff227419fcf7f8bc}\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1af9e843f5dce3d163ff227419fcf7f8bc}} 
+Height\+Controls\+Width&Changes the width of the rectangle to match the aspect ratio. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FitInParent@{FitInParent}!UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}}\index{UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}!FitInParent@{FitInParent}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1a191652c0f04740da8935e81a5f898935}\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1a191652c0f04740da8935e81a5f898935}} 
+Fit\+In\+Parent&Sizes the rectangle such that it\textquotesingle{}s fully contained within the parent rectangle. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EnvelopeParent@{EnvelopeParent}!UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}}\index{UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}!EnvelopeParent@{EnvelopeParent}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1ae84ac20dc3c60c5b55e16ddc2c9f65a6}\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a87fd30bb5580951d7579695d2a0a19a1ae84ac20dc3c60c5b55e16ddc2c9f65a6}} 
+Envelope\+Parent&Sizes the rectangle such that the parent rectangle is fully contained within. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_ab155c29478dfb89842310b0e3e499b02}\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_ab155c29478dfb89842310b0e3e499b02}} 
+\index{UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}!OnDisable@{OnDisable}}
+\index{OnDisable@{OnDisable}!UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}}
+\doxysubsubsection{\texorpdfstring{OnDisable()}{OnDisable()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Aspect\+Ratio\+Fitter.\+On\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a1716232f2adde94e9c4982c75e64742e}\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a1716232f2adde94e9c4982c75e64742e}} 
+\index{UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Aspect\+Ratio\+Fitter.\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a75dc042f53ed88a8002af380a4c91b9f}\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a75dc042f53ed88a8002af380a4c91b9f}} 
+\index{UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}!OnRectTransformDimensionsChange@{OnRectTransformDimensionsChange}}
+\index{OnRectTransformDimensionsChange@{OnRectTransformDimensionsChange}!UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}}
+\doxysubsubsection{\texorpdfstring{OnRectTransformDimensionsChange()}{OnRectTransformDimensionsChange()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Aspect\+Ratio\+Fitter.\+On\+Rect\+Transform\+Dimensions\+Change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Function called when this Rect\+Transform or parent Rect\+Transform has changed dimensions. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_acfb0bcf126b8ea0953525ebb20a87985}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a9a5f61f4c934b70c2583aa2e466059c3}\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_a9a5f61f4c934b70c2583aa2e466059c3}} 
+\index{UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}!OnTransformParentChanged@{OnTransformParentChanged}}
+\index{OnTransformParentChanged@{OnTransformParentChanged}!UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}}
+\doxysubsubsection{\texorpdfstring{OnTransformParentChanged()}{OnTransformParentChanged()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Aspect\+Ratio\+Fitter.\+On\+Transform\+Parent\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_ab1b884a5a13f741210b6cadeed4344e8}\label{class_unity_engine_1_1_u_i_1_1_aspect_ratio_fitter_ab1b884a5a13f741210b6cadeed4344e8}} 
+\index{UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}!Start@{Start}}
+\index{Start@{Start}!UnityEngine.UI.AspectRatioFitter@{UnityEngine.UI.AspectRatioFitter}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Aspect\+Ratio\+Fitter.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/\+Layout/Aspect\+Ratio\+Fitter.\+cs\end{DoxyCompactItemize}

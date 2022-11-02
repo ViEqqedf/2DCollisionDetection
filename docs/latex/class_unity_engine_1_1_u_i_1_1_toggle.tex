@@ -1,0 +1,74 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_toggle}{}\doxysection{Unity\+Engine.\+UI.\+Toggle Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_toggle}\index{UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}}
+
+
+A standard toggle that has an on / off state.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Toggle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.778157cm]{class_unity_engine_1_1_u_i_1_1_toggle}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_1_1_toggle_event}{Toggle\+Event}}
+\begin{DoxyCompactList}\small\item\em Unity\+Event callback for when a toggle is toggled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eb}{Toggle\+Transition}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eba6adf97f83acf6453d4a6a4b1070f3754}{None}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eba04e0385c10aefee8e4681617d2f3ef40}{Fade}}
+ \}
+\begin{DoxyCompactList}\small\item\em Display settings for when a toggle is activated or deactivated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_a786d8f8355acd97123f5451352c9dc19}\label{class_unity_engine_1_1_u_i_1_1_toggle_a786d8f8355acd97123f5451352c9dc19}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eb}{Toggle\+Transition}} {\bfseries toggle\+Transition} = \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eba04e0385c10aefee8e4681617d2f3ef40}{Toggle\+Transition.\+Fade}}
+\begin{DoxyCompactList}\small\item\em Transition mode for the toggle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_ae744ea1c7a3642f297ecdcae823f24f6}\label{class_unity_engine_1_1_u_i_1_1_toggle_ae744ea1c7a3642f297ecdcae823f24f6}} 
+Graphic {\bfseries graphic}
+\begin{DoxyCompactList}\small\item\em Graphic the toggle should be working with. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_ae593bf2e88c25e359d84501d5cdcf7e3}\label{class_unity_engine_1_1_u_i_1_1_toggle_ae593bf2e88c25e359d84501d5cdcf7e3}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group}{Toggle\+Group}} {\bfseries group}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Group the toggle belongs to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A standard toggle that has an on / off state. 
+
+The toggle component is a \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}} that controls a child graphic which displays the on / off state. When a toggle event occurs a callback is sent to any registered listeners of UI.\+Toggle.\+\_\+on\+Value\+Changed. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eb}\label{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eb}} 
+\index{UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}!ToggleTransition@{ToggleTransition}}
+\index{ToggleTransition@{ToggleTransition}!UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}}
+\doxysubsubsection{\texorpdfstring{ToggleTransition}{ToggleTransition}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eb}{Unity\+Engine.\+UI.\+Toggle.\+Toggle\+Transition}}}
+
+
+
+Display settings for when a toggle is activated or deactivated. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}}\index{UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}!None@{None}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eba6adf97f83acf6453d4a6a4b1070f3754}\label{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eba6adf97f83acf6453d4a6a4b1070f3754}} 
+None&Show / hide the toggle instantly \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fade@{Fade}!UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}}\index{UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}!Fade@{Fade}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eba04e0385c10aefee8e4681617d2f3ef40}\label{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eba04e0385c10aefee8e4681617d2f3ef40}} 
+Fade&Fade the toggle in / out smoothly. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/Toggle.\+cs\end{DoxyCompactItemize}

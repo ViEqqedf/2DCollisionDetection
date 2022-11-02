@@ -1,0 +1,102 @@
+\hypertarget{class_layout_tests_1_1_horizontal_layout_group_tests}{}\doxysection{Layout\+Tests.\+Horizontal\+Layout\+Group\+Tests Class Reference}
+\label{class_layout_tests_1_1_horizontal_layout_group_tests}\index{LayoutTests.HorizontalLayoutGroupTests@{LayoutTests.HorizontalLayoutGroupTests}}
+Inheritance diagram for Layout\+Tests.\+Horizontal\+Layout\+Group\+Tests\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_layout_tests_1_1_horizontal_layout_group_tests}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_layout_tests_1_1_horizontal_layout_group_tests_a27a54a1a9558e92688113585eee92f7b}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Implement this method to call actions automatically before the build process. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_layout_tests_1_1_horizontal_layout_group_tests_ae69c09f0d19b7b2acde681c2cfa13fc5}\label{class_layout_tests_1_1_horizontal_layout_group_tests_ae69c09f0d19b7b2acde681c2cfa13fc5}} 
+void {\bfseries Test\+Setup} ()
+\item 
+\mbox{\Hypertarget{class_layout_tests_1_1_horizontal_layout_group_tests_aaf4e810fa84c30e8e77513fb1b0c33ff}\label{class_layout_tests_1_1_horizontal_layout_group_tests_aaf4e810fa84c30e8e77513fb1b0c33ff}} 
+void {\bfseries Tear\+Down} ()
+\item 
+\mbox{\Hypertarget{class_layout_tests_1_1_horizontal_layout_group_tests_ae6a5d32ab53f2d85c09c60bd19828c39}\label{class_layout_tests_1_1_horizontal_layout_group_tests_ae6a5d32ab53f2d85c09c60bd19828c39}} 
+void {\bfseries One\+Time\+Tear\+Down} ()
+\item 
+\mbox{\Hypertarget{class_layout_tests_1_1_horizontal_layout_group_tests_a9d0173a0a506ca321f6724445be53751}\label{class_layout_tests_1_1_horizontal_layout_group_tests_a9d0173a0a506ca321f6724445be53751}} 
+void {\bfseries Test\+Calculate\+Layout\+Input\+Horizontal} ()
+\item 
+\mbox{\Hypertarget{class_layout_tests_1_1_horizontal_layout_group_tests_a113178f9a74b43acca8021175de9a74f}\label{class_layout_tests_1_1_horizontal_layout_group_tests_a113178f9a74b43acca8021175de9a74f}} 
+void {\bfseries Test\+Calculate\+Layout\+Input\+Vertical} ()
+\item 
+\mbox{\Hypertarget{class_layout_tests_1_1_horizontal_layout_group_tests_a16df61327aed3ae00bd5a952d4619c47}\label{class_layout_tests_1_1_horizontal_layout_group_tests_a16df61327aed3ae00bd5a952d4619c47}} 
+void {\bfseries Test\+Calculate\+Layout\+Horizontal} ()
+\item 
+\mbox{\Hypertarget{class_layout_tests_1_1_horizontal_layout_group_tests_ad19a031b0ea120482efea37d90128d93}\label{class_layout_tests_1_1_horizontal_layout_group_tests_ad19a031b0ea120482efea37d90128d93}} 
+void {\bfseries Test\+Calculate\+Layout\+Horizontal\+Reversed} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_layout_tests_1_1_horizontal_layout_group_tests_a27a54a1a9558e92688113585eee92f7b}\label{class_layout_tests_1_1_horizontal_layout_group_tests_a27a54a1a9558e92688113585eee92f7b}} 
+\index{LayoutTests.HorizontalLayoutGroupTests@{LayoutTests.HorizontalLayoutGroupTests}!Setup@{Setup}}
+\index{Setup@{Setup}!LayoutTests.HorizontalLayoutGroupTests@{LayoutTests.HorizontalLayoutGroupTests}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily void Layout\+Tests.\+Horizontal\+Layout\+Group\+Tests.\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implement this method to call actions automatically before the build process. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public} \textcolor{keyword}{class }CreateSpriteTest : IPrebuildSetup}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    Texture2D m\_Texture;}
+\DoxyCodeLine{    Sprite m\_Sprite;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_layout_tests_1_1_horizontal_layout_group_tests_a27a54a1a9558e92688113585eee92f7b}{Setup}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#if UNITY\_EDITOR}}
+\DoxyCodeLine{        var spritePath = \textcolor{stringliteral}{"{}Assets/Resources/Circle.png"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{        var ti = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.AssetImporter.GetAtPath(spritePath) as \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporter;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.textureCompression = \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporterCompression.Uncompressed;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ti.SaveAndReimport();}
+\DoxyCodeLine{\textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [SetUp]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} SetUpTest()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        m\_Texture = Resources.Load<Texture2D>(\textcolor{stringliteral}{"{}Circle"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    [Test]}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keywordtype}{void} WhenNullTextureIsPassed\_CreateShouldReturnNullSprite()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with Valid Texture.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        LogAssert.Expect(LogType.Log, \textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Sprite.Create(m\_Texture, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Debug.Log(\textcolor{stringliteral}{"{}Circle Sprite Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Check with NULL Texture. Should return NULL Sprite.}}
+\DoxyCodeLine{        m\_Sprite = Sprite.Create(\textcolor{keyword}{null}, \textcolor{keyword}{new} Rect(0, 0, m\_Texture.width, m\_Texture.height), \textcolor{keyword}{new} Vector2(0.5f, 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Assert.That(m\_Sprite, Is.Null, \textcolor{stringliteral}{"{}Sprite created with null texture should be null"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup_a9a9eaa928efe50645e61412528e84309}{Unity\+Engine.\+Test\+Tools.\+IPrebuild\+Setup}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Tests/\+Runtime/\+Layout/Horizonal\+Layout\+Group\+Tests.\+cs\end{DoxyCompactItemize}

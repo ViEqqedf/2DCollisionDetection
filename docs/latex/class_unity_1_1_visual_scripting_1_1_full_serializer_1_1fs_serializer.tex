@@ -1,0 +1,133 @@
+\hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer}{}\doxysection{Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Serializer Class Reference}
+\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer}\index{Unity.VisualScripting.FullSerializer.fsSerializer@{Unity.VisualScripting.FullSerializer.fsSerializer}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries fs\+Lazy\+Cycle\+Definition\+Writer}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} manages instance writing so that we do not write unnecessary \$id fields. We only need to write out an \$id field when there is a corresponding \$ref field. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} is able to write \$id references lazily because the \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} instance is not actually written out to text until we have entirely finished serializing it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_a08d94c4c32f754a8650c4d5b77f756c4}{Add\+Processor}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_processor}{fs\+Object\+Processor}} processor)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_add}{Add}} a new processor to the serializer. Multiple processors can run at the same time in the same order they were added in. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_af3ee3e60712e8f1c740e4f6ff0ab5fb3}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_af3ee3e60712e8f1c740e4f6ff0ab5fb3}} 
+void {\bfseries Remove\+Processor$<$ TProcessor $>$} ()
+\begin{DoxyCompactList}\small\item\em Remove all processors which derive from TProcessor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_a1afe74931aee029f547596bcadf8e03a}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_a1afe74931aee029f547596bcadf8e03a}} 
+void {\bfseries Set\+Default\+Storage\+Type} (Type abstract\+Type, Type default\+Storage\+Type)
+\begin{DoxyCompactList}\small\item\em Provide a default storage type for the given abstract or interface type. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} a type is deserialized which contains an interface/abstract field type and a mapping is provided, the mapped type will be used by default. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_for}{For}} example, IList\{T\} =\texorpdfstring{$>$}{>} List\{T\} or IDictionary\{TKey, TValue\} =\texorpdfstring{$>$}{>} Dictionary\{TKey, TValue\}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_aa4ae24922e46beaea9d4c51aaa485d3f}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_aa4ae24922e46beaea9d4c51aaa485d3f}} 
+void {\bfseries Add\+Converter} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter}{fs\+Base\+Converter}} converter)
+\begin{DoxyCompactList}\small\item\em Adds a new converter that can be used to customize how an object is serialized and deserialized. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_ab3d3c73d74caf14df7da87b6d2af8051}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_ab3d3c73d74caf14df7da87b6d2af8051}} 
+\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} {\bfseries Try\+Serialize$<$ T $>$} (T instance, out \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} data)
+\begin{DoxyCompactList}\small\item\em Helper method that simply forwards the call to Try\+Serialize(typeof(\+T), instance, out data); \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_aa7a8f7edf94ddb4241343a255fda8ef0}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_aa7a8f7edf94ddb4241343a255fda8ef0}} 
+\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} {\bfseries Try\+Deserialize$<$ T $>$} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} data, ref T instance)
+\begin{DoxyCompactList}\small\item\em Generic wrapper around Try\+Deserialize that simply forwards the call. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_af6a98c07b5b1004bb6a7bca7f928c356}{Try\+Serialize}} (Type storage\+Type, object instance, out \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} data)
+\begin{DoxyCompactList}\small\item\em Serialize the given value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_a3e1d38967037f1d5435c581f3703a8e7}{Try\+Serialize}} (Type storage\+Type, Type override\+Converter\+Type, object instance, out \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} data)
+\begin{DoxyCompactList}\small\item\em Serialize the given value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_a7b2a5c46b898f07af3c8608cba4449a2}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_a7b2a5c46b898f07af3c8608cba4449a2}} 
+\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} {\bfseries Try\+Deserialize} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} data, Type storage\+Type, ref object result)
+\begin{DoxyCompactList}\small\item\em Attempts to deserialize a value from a serialized state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_a9789a2aead5a34da0c9b75f485ef6257}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_a9789a2aead5a34da0c9b75f485ef6257}} 
+\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} {\bfseries Try\+Deserialize} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} data, Type storage\+Type, Type override\+Converter\+Type, ref object result)
+\begin{DoxyCompactList}\small\item\em Attempts to deserialize a value from a serialized state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_a434993e4445bf25b8f5adcb9c858d95c}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_a434993e4445bf25b8f5adcb9c858d95c}} 
+static bool {\bfseries Is\+Reserved\+Keyword} (string key)
+\begin{DoxyCompactList}\small\item\em Returns true if the given key is a special keyword that full serializer uses to add additional metadata on top of the emitted JSON. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_a4592fdb4dbd3ed73886c3df7b7a4adf4}{Strip\+Deserialization\+Metadata}} (ref \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}} data)
+\begin{DoxyCompactList}\small\item\em Strips all deserialization metadata from the object, like \$type and \$content fields. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_a6d72fcc002d83d3bae47a4c3f5287036}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_a6d72fcc002d83d3bae47a4c3f5287036}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_context}{fs\+Context}} {\bfseries Context}
+\begin{DoxyCompactList}\small\item\em A context object that fs\+Converters can use to customize how they operate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_af38eec6f2965d93b7a020b47cae28e67}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_af38eec6f2965d93b7a020b47cae28e67}} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_config}{fs\+Config}} {\bfseries Config}
+\begin{DoxyCompactList}\small\item\em Configuration options. Also see fs\+Global\+Config. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_a08d94c4c32f754a8650c4d5b77f756c4}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_a08d94c4c32f754a8650c4d5b77f756c4}} 
+\index{Unity.VisualScripting.FullSerializer.fsSerializer@{Unity.VisualScripting.FullSerializer.fsSerializer}!AddProcessor@{AddProcessor}}
+\index{AddProcessor@{AddProcessor}!Unity.VisualScripting.FullSerializer.fsSerializer@{Unity.VisualScripting.FullSerializer.fsSerializer}}
+\doxysubsubsection{\texorpdfstring{AddProcessor()}{AddProcessor()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Serializer.\+Add\+Processor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_object_processor}{fs\+Object\+Processor}}}]{processor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_add}{Add}} a new processor to the serializer. Multiple processors can run at the same time in the same order they were added in. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em processor} & The processor to add.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_a4592fdb4dbd3ed73886c3df7b7a4adf4}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_a4592fdb4dbd3ed73886c3df7b7a4adf4}} 
+\index{Unity.VisualScripting.FullSerializer.fsSerializer@{Unity.VisualScripting.FullSerializer.fsSerializer}!StripDeserializationMetadata@{StripDeserializationMetadata}}
+\index{StripDeserializationMetadata@{StripDeserializationMetadata}!Unity.VisualScripting.FullSerializer.fsSerializer@{Unity.VisualScripting.FullSerializer.fsSerializer}}
+\doxysubsubsection{\texorpdfstring{StripDeserializationMetadata()}{StripDeserializationMetadata()}}
+{\footnotesize\ttfamily static void Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Serializer.\+Strip\+Deserialization\+Metadata (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Strips all deserialization metadata from the object, like \$type and \$content fields. 
+
+After making this call, you will {\itshape not} be able to deserialize the same object instance. The metadata is strictly necessary for deserialization! \mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_af6a98c07b5b1004bb6a7bca7f928c356}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_af6a98c07b5b1004bb6a7bca7f928c356}} 
+\index{Unity.VisualScripting.FullSerializer.fsSerializer@{Unity.VisualScripting.FullSerializer.fsSerializer}!TrySerialize@{TrySerialize}}
+\index{TrySerialize@{TrySerialize}!Unity.VisualScripting.FullSerializer.fsSerializer@{Unity.VisualScripting.FullSerializer.fsSerializer}}
+\doxysubsubsection{\texorpdfstring{TrySerialize()}{TrySerialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Serializer.\+Try\+Serialize (\begin{DoxyParamCaption}\item[{Type}]{storage\+Type,  }\item[{object}]{instance,  }\item[{out \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize the given value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em storage\+Type} & The type of field/property that stores the object instance. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} is important particularly for inheritance, as a field storing an IInterface instance should have type information included. \\
+\hline
+{\em instance} & The actual object instance to serialize. \\
+\hline
+{\em data} & The serialized state of the object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} serialization was successful.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_a3e1d38967037f1d5435c581f3703a8e7}\label{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_serializer_a3e1d38967037f1d5435c581f3703a8e7}} 
+\index{Unity.VisualScripting.FullSerializer.fsSerializer@{Unity.VisualScripting.FullSerializer.fsSerializer}!TrySerialize@{TrySerialize}}
+\index{TrySerialize@{TrySerialize}!Unity.VisualScripting.FullSerializer.fsSerializer@{Unity.VisualScripting.FullSerializer.fsSerializer}}
+\doxysubsubsection{\texorpdfstring{TrySerialize()}{TrySerialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_result}{fs\+Result}} Unity.\+Visual\+Scripting.\+Full\+Serializer.\+fs\+Serializer.\+Try\+Serialize (\begin{DoxyParamCaption}\item[{Type}]{storage\+Type,  }\item[{Type}]{override\+Converter\+Type,  }\item[{object}]{instance,  }\item[{out \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_data}{fs\+Data}}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize the given value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em storage\+Type} & The type of field/property that stores the object instance. \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_this}{This}} is important particularly for inheritance, as a field storing an IInterface instance should have type information included. \\
+\hline
+{\em override\+Converter\+Type} & An \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_full_serializer_1_1fs_base_converter}{fs\+Base\+Converter}} derived type that will be used to serialize the object instead of the converter found via the normal discovery mechanisms. \\
+\hline
+{\em instance} & The actual object instance to serialize. \\
+\hline
+{\em data} & The serialized state of the object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_if}{If}} serialization was successful.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+7.\+6/\+Runtime/\+Visual\+Scripting.\+Core/\+Dependencies/\+Full\+Serializer/fs\+Serializer.\+cs\end{DoxyCompactItemize}

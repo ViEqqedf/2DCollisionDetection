@@ -1,0 +1,165 @@
+\hypertarget{class_physics_1_1_collision_1_1_shape_1_1_collision_shape}{}\doxysection{Physics.\+Collision.\+Shape.\+Collision\+Shape类 参考}
+\label{class_physics_1_1_collision_1_1_shape_1_1_collision_shape}\index{Physics.Collision.Shape.CollisionShape@{Physics.Collision.Shape.CollisionShape}}
+
+
+类 Physics.\+Collision.\+Shape.\+Collision\+Shape 继承关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_shape_1_1_collision_shape__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Physics.\+Collision.\+Shape.\+Collision\+Shape 的协作图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{class_physics_1_1_collision_1_1_shape_1_1_collision_shape__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_ae618ea08464f911b67659e156d5a86ef}{Collision\+Shape}} (\mbox{\hyperlink{namespace_physics_1_1_collision_1_1_shape_a64832f1a67d361124e5ed3f73a0227f8}{Shape\+Type}} \mbox{\hyperlink{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_acc3cb968ff209ce742d95f2150896d67}{shape\+Type}})
+\item 
+\mbox{\hyperlink{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_a5e2fc9c65d657e5b627d290aebc163dc}{Collision\+Shape}} (\mbox{\hyperlink{namespace_physics_1_1_collision_1_1_shape_a64832f1a67d361124e5ed3f73a0227f8}{Shape\+Type}} \mbox{\hyperlink{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_acc3cb968ff209ce742d95f2150896d67}{shape\+Type}}, Vector3\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_a1cb62bb28753376dc076eff2dcb59741}{local\+Vertices}})
+\item 
+virtual void \mbox{\hyperlink{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_ab236eb056356a1dd7e657c4154a58441}{Update\+Shape}} ()
+\item 
+void \mbox{\hyperlink{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_aa2888c2955c43fcd2adb654e88db7183}{Apply\+World\+Vertices}} (Vector3 origin, Vector3 rotate, float scale)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{namespace_physics_1_1_collision_1_1_shape_a64832f1a67d361124e5ed3f73a0227f8}{Shape\+Type}} \mbox{\hyperlink{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_acc3cb968ff209ce742d95f2150896d67}{shape\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+abstract void \mbox{\hyperlink{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_af5247f1c8125a229c2be17f898608269}{Get\+Bound}} (out Vector3 lower\+Bound, out Vector3 upper\+Bound)
+\end{DoxyCompactItemize}
+\doxysubsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ Vector3 $>$ \mbox{\hyperlink{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_a1cb62bb28753376dc076eff2dcb59741}{local\+Vertices}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+List$<$ Vector3 $>$ \mbox{\hyperlink{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_a017364149a4dcba170eb7ddbdc25cc95}{vertices}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_a_a_b_b}{AABB}} \mbox{\hyperlink{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_a2aad05d3959b3b440021f1c06d5cd764}{aabb}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_ae618ea08464f911b67659e156d5a86ef}\label{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_ae618ea08464f911b67659e156d5a86ef}} 
+\index{Physics.Collision.Shape.CollisionShape@{Physics.Collision.Shape.CollisionShape}!CollisionShape@{CollisionShape}}
+\index{CollisionShape@{CollisionShape}!Physics.Collision.Shape.CollisionShape@{Physics.Collision.Shape.CollisionShape}}
+\doxysubsubsection{\texorpdfstring{CollisionShape()}{CollisionShape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Physics.\+Collision.\+Shape.\+Collision\+Shape.\+Collision\+Shape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_physics_1_1_collision_1_1_shape_a64832f1a67d361124e5ed3f73a0227f8}{Shape\+Type}}}]{shape\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_a5e2fc9c65d657e5b627d290aebc163dc}\label{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_a5e2fc9c65d657e5b627d290aebc163dc}} 
+\index{Physics.Collision.Shape.CollisionShape@{Physics.Collision.Shape.CollisionShape}!CollisionShape@{CollisionShape}}
+\index{CollisionShape@{CollisionShape}!Physics.Collision.Shape.CollisionShape@{Physics.Collision.Shape.CollisionShape}}
+\doxysubsubsection{\texorpdfstring{CollisionShape()}{CollisionShape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Physics.\+Collision.\+Shape.\+Collision\+Shape.\+Collision\+Shape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_physics_1_1_collision_1_1_shape_a64832f1a67d361124e5ed3f73a0227f8}{Shape\+Type}}}]{shape\+Type,  }\item[{Vector3\mbox{[}$\,$\mbox{]}}]{local\+Vertices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_aa2888c2955c43fcd2adb654e88db7183}\label{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_aa2888c2955c43fcd2adb654e88db7183}} 
+\index{Physics.Collision.Shape.CollisionShape@{Physics.Collision.Shape.CollisionShape}!ApplyWorldVertices@{ApplyWorldVertices}}
+\index{ApplyWorldVertices@{ApplyWorldVertices}!Physics.Collision.Shape.CollisionShape@{Physics.Collision.Shape.CollisionShape}}
+\doxysubsubsection{\texorpdfstring{ApplyWorldVertices()}{ApplyWorldVertices()}}
+{\footnotesize\ttfamily void Physics.\+Collision.\+Shape.\+Collision\+Shape.\+Apply\+World\+Vertices (\begin{DoxyParamCaption}\item[{Vector3}]{origin,  }\item[{Vector3}]{rotate,  }\item[{float}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_aa2888c2955c43fcd2adb654e88db7183_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_aa2888c2955c43fcd2adb654e88db7183_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_af5247f1c8125a229c2be17f898608269}\label{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_af5247f1c8125a229c2be17f898608269}} 
+\index{Physics.Collision.Shape.CollisionShape@{Physics.Collision.Shape.CollisionShape}!GetBound@{GetBound}}
+\index{GetBound@{GetBound}!Physics.Collision.Shape.CollisionShape@{Physics.Collision.Shape.CollisionShape}}
+\doxysubsubsection{\texorpdfstring{GetBound()}{GetBound()}}
+{\footnotesize\ttfamily abstract void Physics.\+Collision.\+Shape.\+Collision\+Shape.\+Get\+Bound (\begin{DoxyParamCaption}\item[{out Vector3}]{lower\+Bound,  }\item[{out Vector3}]{upper\+Bound }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+在 \mbox{\hyperlink{class_physics_1_1_collision_1_1_shape_1_1_circle_a9c80f035b97a772c04979c9811e06ad7}{Physics.\+Collision.\+Shape.\+Circle}}, \mbox{\hyperlink{class_physics_1_1_collision_1_1_shape_1_1_custom_shape_aa353ede45c570b197246b0f2b1586b7f}{Physics.\+Collision.\+Shape.\+Custom\+Shape}} , 以及 \mbox{\hyperlink{class_physics_1_1_collision_1_1_shape_1_1_rect_a81e453bf9df1d24b43de39689a8b1684}{Physics.\+Collision.\+Shape.\+Rect}} 内被实现.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_af5247f1c8125a229c2be17f898608269_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_ab236eb056356a1dd7e657c4154a58441}\label{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_ab236eb056356a1dd7e657c4154a58441}} 
+\index{Physics.Collision.Shape.CollisionShape@{Physics.Collision.Shape.CollisionShape}!UpdateShape@{UpdateShape}}
+\index{UpdateShape@{UpdateShape}!Physics.Collision.Shape.CollisionShape@{Physics.Collision.Shape.CollisionShape}}
+\doxysubsubsection{\texorpdfstring{UpdateShape()}{UpdateShape()}}
+{\footnotesize\ttfamily virtual void Physics.\+Collision.\+Shape.\+Collision\+Shape.\+Update\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_ab236eb056356a1dd7e657c4154a58441_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_ab236eb056356a1dd7e657c4154a58441_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_acc3cb968ff209ce742d95f2150896d67}\label{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_acc3cb968ff209ce742d95f2150896d67}} 
+\index{Physics.Collision.Shape.CollisionShape@{Physics.Collision.Shape.CollisionShape}!shapeType@{shapeType}}
+\index{shapeType@{shapeType}!Physics.Collision.Shape.CollisionShape@{Physics.Collision.Shape.CollisionShape}}
+\doxysubsubsection{\texorpdfstring{shapeType}{shapeType}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{namespace_physics_1_1_collision_1_1_shape_a64832f1a67d361124e5ed3f73a0227f8}{Shape\+Type}} Physics.\+Collision.\+Shape.\+Collision\+Shape.\+shape\+Type}
+
+
+
+\doxysubsection{属性说明}
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_a2aad05d3959b3b440021f1c06d5cd764}\label{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_a2aad05d3959b3b440021f1c06d5cd764}} 
+\index{Physics.Collision.Shape.CollisionShape@{Physics.Collision.Shape.CollisionShape}!aabb@{aabb}}
+\index{aabb@{aabb}!Physics.Collision.Shape.CollisionShape@{Physics.Collision.Shape.CollisionShape}}
+\doxysubsubsection{\texorpdfstring{aabb}{aabb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_a_a_b_b}{AABB}} Physics.\+Collision.\+Shape.\+Collision\+Shape.\+aabb\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_a1cb62bb28753376dc076eff2dcb59741}\label{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_a1cb62bb28753376dc076eff2dcb59741}} 
+\index{Physics.Collision.Shape.CollisionShape@{Physics.Collision.Shape.CollisionShape}!localVertices@{localVertices}}
+\index{localVertices@{localVertices}!Physics.Collision.Shape.CollisionShape@{Physics.Collision.Shape.CollisionShape}}
+\doxysubsubsection{\texorpdfstring{localVertices}{localVertices}}
+{\footnotesize\ttfamily List$<$Vector3$>$ Physics.\+Collision.\+Shape.\+Collision\+Shape.\+local\+Vertices\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+\mbox{\Hypertarget{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_a017364149a4dcba170eb7ddbdc25cc95}\label{class_physics_1_1_collision_1_1_shape_1_1_collision_shape_a017364149a4dcba170eb7ddbdc25cc95}} 
+\index{Physics.Collision.Shape.CollisionShape@{Physics.Collision.Shape.CollisionShape}!vertices@{vertices}}
+\index{vertices@{vertices}!Physics.Collision.Shape.CollisionShape@{Physics.Collision.Shape.CollisionShape}}
+\doxysubsubsection{\texorpdfstring{vertices}{vertices}}
+{\footnotesize\ttfamily List$<$Vector3$>$ Physics.\+Collision.\+Shape.\+Collision\+Shape.\+vertices\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Assets/\+Scripts/\+Collision/\+Shape/\mbox{\hyperlink{_collision_shape_8cs}{Collision\+Shape.\+cs}}\end{DoxyCompactItemize}

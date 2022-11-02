@@ -1,0 +1,496 @@
+\hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip}{}\doxysection{Unity\+Engine.\+Timeline.\+Timeline\+Clip Class Reference}
+\label{class_unity_engine_1_1_timeline_1_1_timeline_clip}\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}
+
+
+Represents a clip on the timeline.  
+
+
+Inheritance diagram for Unity\+Engine.\+Timeline.\+Timeline\+Clip\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_timeline_1_1_timeline_clip}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7}{Clip\+Extrapolation}} \{ \newline
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7a6adf97f83acf6453d4a6a4b1070f3754}{None}}
+, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7abcd8db575b47c838e5d551e3973db4ac}{Hold}}
+, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7a89d7b10cb4238977d2b523dfd9ea7745}{Loop}}
+, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7a99e52704462d3580db3528cad7ea9660}{Ping\+Pong}}
+, \newline
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7aa0bfb8e59e6c13fc8d990781f77694fe}{Continue}}
+ \}
+\begin{DoxyCompactList}\small\item\em How the clip handles time outside its start and end range. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_aa6d5786b6df3859bcf16be89d799ebc0}{Blend\+Curve\+Mode}} \{ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_aa6d5786b6df3859bcf16be89d799ebc0a06b9281e396db002010bde1de57262eb}{Auto}}
+, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_aa6d5786b6df3859bcf16be89d799ebc0ae1ba155a9f2e8c3be94020eef32a0301}{Manual}}
+ \}
+\begin{DoxyCompactList}\small\item\em How blend curves are treated in an overlap \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_abbaa8f73f61309320a146c0af4ab517a}{Get\+Parent\+Track}} ()
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} to which this clip is attached. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a2f40592786d437df0032d9b318947220}{Evaluate\+Mix\+Out}} (double time)
+\begin{DoxyCompactList}\small\item\em Given a time, returns the weight from the mix out \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_ab3ed921d48ee9b5b49a2a8577ce3c513}{Evaluate\+Mix\+In}} (double time)
+\begin{DoxyCompactList}\small\item\em Given a time, returns the weight from the mix in \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a0e93badf4d11e12235eec8e938263184}{To\+Local\+Time}} (double time)
+\begin{DoxyCompactList}\small\item\em Converts from global time to a clips local time. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a5a65196511de2353627a38bd9e6e09e2}{To\+Local\+Time\+Unbound}} (double time)
+\begin{DoxyCompactList}\small\item\em Converts from global time to local time of the clip \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a84c4571aaaeaa6cac8587c0f48086c44}{Is\+Extrapolated\+Time}} (double sequence\+Time)
+\begin{DoxyCompactList}\small\item\em Given a time, returns whether it falls within the clip\textquotesingle{}s extrapolation \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a9b9ff4aba84f327c2822983ac3cdf50b}{Is\+Pre\+Extrapolated\+Time}} (double sequence\+Time)
+\begin{DoxyCompactList}\small\item\em Given a time, returns whether it falls within the clip\textquotesingle{}s pre-\/extrapolation \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a7f54df7e4c0accdefa6dfbc83068083e}{Is\+Post\+Extrapolated\+Time}} (double sequence\+Time)
+\begin{DoxyCompactList}\small\item\em Given a time, returns whether it falls within the clip\textquotesingle{}s post-\/extrapolation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a9f8b220fef702dc3ef6edc95d9ece498}{Create\+Curves}} (string curves\+Clip\+Name)
+\begin{DoxyCompactList}\small\item\em Creates an Animation\+Clip to store animated properties for the attached Playable\+Asset. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a33767afb7266c2dfa4eaaeb1fd5a8bfe}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Outputs a more readable representation of the timeline clip as a string \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_ab4bfa5367cbb396b4cb25163ba40fe05}{Conform\+Ease\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Use this method to adjust ease in and ease out values to avoid overlapping. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a719cf9469a3a685dc502df910b45fb00}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a719cf9469a3a685dc502df910b45fb00}} 
+static readonly \mbox{\hyperlink{namespace_unity_engine_1_1_timeline_af0b68b9529bda08f212a5aefa79e7e03}{Clip\+Caps}} {\bfseries k\+Default\+Clip\+Caps} = \mbox{\hyperlink{namespace_unity_engine_1_1_timeline_af0b68b9529bda08f212a5aefa79e7e03a84e358c0cfad27b29c41c888167828f3}{Clip\+Caps.\+Blending}}
+\begin{DoxyCompactList}\small\item\em The default capabilities for a clip \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_afe98af86c914b296c429f0684cab0804}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_afe98af86c914b296c429f0684cab0804}} 
+static readonly float {\bfseries k\+Default\+Clip\+Duration\+In\+Seconds} = 5
+\begin{DoxyCompactList}\small\item\em The default length of a clip in seconds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_af0ae30ff18802c1df6826d93b6f7df19}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_af0ae30ff18802c1df6826d93b6f7df19}} 
+static readonly double {\bfseries k\+Time\+Scale\+Min} = 1.\+0 / 1000
+\begin{DoxyCompactList}\small\item\em The minimum timescale allowed on a clip \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a8b3d15c3e42efd378e951f0e08729172}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a8b3d15c3e42efd378e951f0e08729172}} 
+static readonly double {\bfseries k\+Time\+Scale\+Max} = 1000
+\begin{DoxyCompactList}\small\item\em The maximum timescale allowed on a clip \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a4bd93387d38a05ab818552b358781e07}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a4bd93387d38a05ab818552b358781e07}} 
+bool {\bfseries has\+Pre\+Extrapolation}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is the clip being extrapolated before its start time? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_aacc8649e3ac2eb7946d086d48a335566}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_aacc8649e3ac2eb7946d086d48a335566}} 
+bool {\bfseries has\+Post\+Extrapolation}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is the clip being extrapolated past its end time? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a712e808bd29b4ea5e906353a12e733ce}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a712e808bd29b4ea5e906353a12e733ce}} 
+double {\bfseries time\+Scale}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A speed multiplier for the clip; \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_ac847d1affde0438d85a8fdc5af4f644f}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_ac847d1affde0438d85a8fdc5af4f644f}} 
+double {\bfseries start}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The start time, in seconds, of the clip \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a9438ddf54af828cacfc0f16fcc87e7ce}{duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The length, in seconds, of the clip \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a397cab8b8496d8ffbb62feafad8ce720}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a397cab8b8496d8ffbb62feafad8ce720}} 
+double {\bfseries end}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The end time, in seconds of the clip \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a4b5805d1f833658b85625437328ccd24}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a4b5805d1f833658b85625437328ccd24}} 
+double {\bfseries clip\+In}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Local offset time of the clip. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a2868e2d17cc2c3cb3ae3afad8f8712d8}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a2868e2d17cc2c3cb3ae3afad8f8712d8}} 
+string {\bfseries display\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name displayed on the clip \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a2157a21f9cc6af97747825c08ba7a5fd}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a2157a21f9cc6af97747825c08ba7a5fd}} 
+double {\bfseries clip\+Asset\+Duration}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The length, in seconds, of the Playable\+Asset attached to the clip. \end{DoxyCompactList}\item 
+Animation\+Clip \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a7c4922742bb044dbd4270829393d1b14}{curves}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An animation clip containing animated properties of the attached Playable\+Asset \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a38ef83ba4243f939f2dbf6aae8133651}{has\+Curves}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether this clip contains animated properties for the attached Playable\+Asset. \end{DoxyCompactList}\item 
+Object \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a2c0e553887357327987faff3f3b06dac}{asset}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Playable\+Asset attached to the clip. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a82eb9e557b3e7b3f24e3bca0a82f2b81}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a82eb9e557b3e7b3f24e3bca0a82f2b81}} 
+Object {\bfseries underlying\+Asset}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em underlying\+Asset property is obsolete. Use asset property instead \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a2a489fc03b313f4b5a9134620e94bbaf}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a2a489fc03b313f4b5a9134620e94bbaf}} 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} {\bfseries parent\+Track}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} to which this clip is attached. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_ab3cd3606936b31a041bd56b8abcdb541}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_ab3cd3606936b31a041bd56b8abcdb541}} 
+double {\bfseries ease\+In\+Duration}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The ease in duration of the timeline clip in seconds. This only applies if the start of the clip is not overlapping. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a1858701f2310f8b6db4affca3957eb0f}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a1858701f2310f8b6db4affca3957eb0f}} 
+double {\bfseries ease\+Out\+Duration}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The ease out duration of the timeline clip in seconds. This only applies if the end of the clip is not overlapping. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a297f7bd7873593d65818cbc8fe4945ab}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a297f7bd7873593d65818cbc8fe4945ab}} 
+double {\bfseries east\+Out\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em east\+Out\+Time property is obsolete use ease\+Out\+Time property instead \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a3006f3263128dd652d3cf0333b6a6808}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a3006f3263128dd652d3cf0333b6a6808}} 
+double {\bfseries ease\+Out\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time in seconds that the ease out begins \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_ad43f21068267ec0c062a6605e6ee98c6}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_ad43f21068267ec0c062a6605e6ee98c6}} 
+double {\bfseries blend\+In\+Duration}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The amount of overlap in seconds on the start of a clip. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_ac0c3c352b096260855294ac71c3befdf}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_ac0c3c352b096260855294ac71c3befdf}} 
+double {\bfseries blend\+Out\+Duration}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The amount of overlap in seconds at the end of a clip. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a43850d1fd7075d3f61001bfde502c3c5}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a43850d1fd7075d3f61001bfde502c3c5}} 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_aa6d5786b6df3859bcf16be89d799ebc0}{Blend\+Curve\+Mode}} {\bfseries blend\+In\+Curve\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The mode for calculating the blend curve of the overlap at the start of the clip \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a217794754fab883dd0b738fe19e74933}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a217794754fab883dd0b738fe19e74933}} 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_aa6d5786b6df3859bcf16be89d799ebc0}{Blend\+Curve\+Mode}} {\bfseries blend\+Out\+Curve\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The mode for calculating the blend curve of the overlap at the end of the clip \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a07dcb68c250896eaec01d5be9b66a7fb}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a07dcb68c250896eaec01d5be9b66a7fb}} 
+bool {\bfseries has\+Blend\+In}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns whether the clip is blending in \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a6c977dd3d3cb998a6196305d60f67fac}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a6c977dd3d3cb998a6196305d60f67fac}} 
+bool {\bfseries has\+Blend\+Out}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns whether the clip is blending out \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_aaabd810813745f27181baeb4abb6d197}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_aaabd810813745f27181baeb4abb6d197}} 
+Animation\+Curve {\bfseries mix\+In\+Curve}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The animation curve used for calculating weights during an ease in or a blend in. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a5dac4c1434693b06c0c7b57298b3ac8c}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a5dac4c1434693b06c0c7b57298b3ac8c}} 
+float {\bfseries mix\+In\+Percentage}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The amount of the clip being used for ease or blend in as a percentage \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a0d5f22b8aa3ab100e2584e8a52b15cdf}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a0d5f22b8aa3ab100e2584e8a52b15cdf}} 
+double {\bfseries mix\+In\+Duration}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The amount of the clip blending or easing in, in seconds \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_aa60948cb2774df6f4c4e68e16b93435d}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_aa60948cb2774df6f4c4e68e16b93435d}} 
+Animation\+Curve {\bfseries mix\+Out\+Curve}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The animation curve used for calculating weights during an ease out or a blend out. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a5f1e580de3dcbc255654f7f001a3480c}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a5f1e580de3dcbc255654f7f001a3480c}} 
+double {\bfseries mix\+Out\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time in seconds that an ease out or blend out starts \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a2dfc0aa2096ffaa715b0d4952e122411}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a2dfc0aa2096ffaa715b0d4952e122411}} 
+double {\bfseries mix\+Out\+Duration}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The amount of the clip blending or easing out, in seconds \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a0f3ecf967ff372bd448c256978ec0c2d}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a0f3ecf967ff372bd448c256978ec0c2d}} 
+float {\bfseries mix\+Out\+Percentage}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The amount of the clip being used for ease or blend out as a percentage \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_ac0e7fe2586994c2fcd88155fd96c2832}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_ac0e7fe2586994c2fcd88155fd96c2832}} 
+bool {\bfseries recordable}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns whether this clip is recordable in editor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_ad1756c2ea0b8e9c84d4ef1fc6688758b}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_ad1756c2ea0b8e9c84d4ef1fc6688758b}} 
+List$<$ string $>$ {\bfseries exposed\+Parameters}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em exposed\+Parameter is deprecated and will be removed in a future release \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_aabbb0474ab15817016cf04e09b2f18b5}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_aabbb0474ab15817016cf04e09b2f18b5}} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_timeline_af0b68b9529bda08f212a5aefa79e7e03}{Clip\+Caps}} {\bfseries clip\+Caps}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the capabilities supported by this clip. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a06f2a996dccd69d4babddd9eaac27153}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a06f2a996dccd69d4babddd9eaac27153}} 
+Animation\+Clip {\bfseries animation\+Clip}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If this contains an animation asset, returns the animation clip attached. Otherwise returns null. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_aca2e36aa15f071d4e96640c7cfc1f9ff}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_aca2e36aa15f071d4e96640c7cfc1f9ff}} 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7}{Clip\+Extrapolation}} {\bfseries post\+Extrapolation\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns whether the clip is being extrapolated past the end time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a7fa523b5cfd49bce31cadf33695cc644}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a7fa523b5cfd49bce31cadf33695cc644}} 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7}{Clip\+Extrapolation}} {\bfseries pre\+Extrapolation\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns whether the clip is being extrapolated before the start time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a22adf658f79c7fe23862c33ba9947bac}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a22adf658f79c7fe23862c33ba9947bac}} 
+double {\bfseries extrapolated\+Start}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The start time of the clip, accounting for pre-\/extrapolation \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a70408e35d63b451caf35afc06d1693cc}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a70408e35d63b451caf35afc06d1693cc}} 
+double {\bfseries extrapolated\+Duration}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The length of the clip in seconds, including extrapolation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a clip on the timeline. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_aa6d5786b6df3859bcf16be89d799ebc0}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_aa6d5786b6df3859bcf16be89d799ebc0}} 
+\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!BlendCurveMode@{BlendCurveMode}}
+\index{BlendCurveMode@{BlendCurveMode}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}
+\doxysubsubsection{\texorpdfstring{BlendCurveMode}{BlendCurveMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_aa6d5786b6df3859bcf16be89d799ebc0}{Unity\+Engine.\+Timeline.\+Timeline\+Clip.\+Blend\+Curve\+Mode}}}
+
+
+
+How blend curves are treated in an overlap 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Auto@{Auto}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!Auto@{Auto}}}\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_aa6d5786b6df3859bcf16be89d799ebc0a06b9281e396db002010bde1de57262eb}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_aa6d5786b6df3859bcf16be89d799ebc0a06b9281e396db002010bde1de57262eb}} 
+Auto&The curve is normalized against the opposing clip \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Manual@{Manual}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!Manual@{Manual}}}\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_aa6d5786b6df3859bcf16be89d799ebc0ae1ba155a9f2e8c3be94020eef32a0301}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_aa6d5786b6df3859bcf16be89d799ebc0ae1ba155a9f2e8c3be94020eef32a0301}} 
+Manual&The blend curve is fixed. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7}} 
+\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!ClipExtrapolation@{ClipExtrapolation}}
+\index{ClipExtrapolation@{ClipExtrapolation}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}
+\doxysubsubsection{\texorpdfstring{ClipExtrapolation}{ClipExtrapolation}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7}{Unity\+Engine.\+Timeline.\+Timeline\+Clip.\+Clip\+Extrapolation}}}
+
+
+
+How the clip handles time outside its start and end range. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!None@{None}}}\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7a6adf97f83acf6453d4a6a4b1070f3754}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7a6adf97f83acf6453d4a6a4b1070f3754}} 
+None&No extrapolation is applied. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hold@{Hold}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!Hold@{Hold}}}\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7abcd8db575b47c838e5d551e3973db4ac}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7abcd8db575b47c838e5d551e3973db4ac}} 
+Hold&Hold the time at the end value of the clip. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Loop@{Loop}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!Loop@{Loop}}}\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7a89d7b10cb4238977d2b523dfd9ea7745}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7a89d7b10cb4238977d2b523dfd9ea7745}} 
+Loop&Repeat time values outside the start/end range. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PingPong@{PingPong}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!PingPong@{PingPong}}}\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7a99e52704462d3580db3528cad7ea9660}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7a99e52704462d3580db3528cad7ea9660}} 
+Ping\+Pong&Repeat time values outside the start/end range, reversing direction at each loop \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Continue@{Continue}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!Continue@{Continue}}}\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7aa0bfb8e59e6c13fc8d990781f77694fe}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a54ae9314c0572ffde0c52930cd7fa7a7aa0bfb8e59e6c13fc8d990781f77694fe}} 
+Continue&Time values are passed in without modification, extending beyond the clips range \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_ab4bfa5367cbb396b4cb25163ba40fe05}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_ab4bfa5367cbb396b4cb25163ba40fe05}} 
+\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!ConformEaseValues@{ConformEaseValues}}
+\index{ConformEaseValues@{ConformEaseValues}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}
+\doxysubsubsection{\texorpdfstring{ConformEaseValues()}{ConformEaseValues()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Timeline.\+Timeline\+Clip.\+Conform\+Ease\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Use this method to adjust ease in and ease out values to avoid overlapping. 
+
+Ease values will be adjusted to respect the ratio between ease in and ease out. \mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a9f8b220fef702dc3ef6edc95d9ece498}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a9f8b220fef702dc3ef6edc95d9ece498}} 
+\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!CreateCurves@{CreateCurves}}
+\index{CreateCurves@{CreateCurves}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}
+\doxysubsubsection{\texorpdfstring{CreateCurves()}{CreateCurves()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Timeline.\+Timeline\+Clip.\+Create\+Curves (\begin{DoxyParamCaption}\item[{string}]{curves\+Clip\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an Animation\+Clip to store animated properties for the attached Playable\+Asset. 
+
+If curves already exists for this clip, this method produces no result regardless of the value specified for curves\+Clip\+Name. 
+
+When used from the editor, this method attempts to save the created curves clip to the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}}. The \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} must already exist in the Asset\+Database to save the curves clip. If the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} does not exist, the curves clip is still created but it is not saved. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em curves\+Clip\+Name} & The name of the Animation\+Clip to create. This method does not ensure unique names. If you want a unique clip name, you must provide one. See Object\+Names.\+Get\+Unique\+Name for information on a method that creates unique names. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_curves_owner}{Unity\+Engine.\+Timeline.\+ICurves\+Owner}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_ab3ed921d48ee9b5b49a2a8577ce3c513}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_ab3ed921d48ee9b5b49a2a8577ce3c513}} 
+\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!EvaluateMixIn@{EvaluateMixIn}}
+\index{EvaluateMixIn@{EvaluateMixIn}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}
+\doxysubsubsection{\texorpdfstring{EvaluateMixIn()}{EvaluateMixIn()}}
+{\footnotesize\ttfamily float Unity\+Engine.\+Timeline.\+Timeline\+Clip.\+Evaluate\+Mix\+In (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Given a time, returns the weight from the mix in 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time (relative to the timeline)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a2f40592786d437df0032d9b318947220}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a2f40592786d437df0032d9b318947220}} 
+\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!EvaluateMixOut@{EvaluateMixOut}}
+\index{EvaluateMixOut@{EvaluateMixOut}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}
+\doxysubsubsection{\texorpdfstring{EvaluateMixOut()}{EvaluateMixOut()}}
+{\footnotesize\ttfamily float Unity\+Engine.\+Timeline.\+Timeline\+Clip.\+Evaluate\+Mix\+Out (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Given a time, returns the weight from the mix out 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time (relative to the timeline)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_abbaa8f73f61309320a146c0af4ab517a}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_abbaa8f73f61309320a146c0af4ab517a}} 
+\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!GetParentTrack@{GetParentTrack}}
+\index{GetParentTrack@{GetParentTrack}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}
+\doxysubsubsection{\texorpdfstring{GetParentTrack()}{GetParentTrack()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} Unity\+Engine.\+Timeline.\+Timeline\+Clip.\+Get\+Parent\+Track (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} to which this clip is attached. 
+
+\begin{DoxyReturn}{Returns}
+the parent \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a84c4571aaaeaa6cac8587c0f48086c44}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a84c4571aaaeaa6cac8587c0f48086c44}} 
+\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!IsExtrapolatedTime@{IsExtrapolatedTime}}
+\index{IsExtrapolatedTime@{IsExtrapolatedTime}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}
+\doxysubsubsection{\texorpdfstring{IsExtrapolatedTime()}{IsExtrapolatedTime()}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Timeline.\+Timeline\+Clip.\+Is\+Extrapolated\+Time (\begin{DoxyParamCaption}\item[{double}]{sequence\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Given a time, returns whether it falls within the clip\textquotesingle{}s extrapolation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sequence\+Time} & The time relative to the timeline\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if {\itshape sequence\+Time}  is within the clip extrapolation
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a7f54df7e4c0accdefa6dfbc83068083e}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a7f54df7e4c0accdefa6dfbc83068083e}} 
+\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!IsPostExtrapolatedTime@{IsPostExtrapolatedTime}}
+\index{IsPostExtrapolatedTime@{IsPostExtrapolatedTime}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}
+\doxysubsubsection{\texorpdfstring{IsPostExtrapolatedTime()}{IsPostExtrapolatedTime()}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Timeline.\+Timeline\+Clip.\+Is\+Post\+Extrapolated\+Time (\begin{DoxyParamCaption}\item[{double}]{sequence\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Given a time, returns whether it falls within the clip\textquotesingle{}s post-\/extrapolation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sequence\+Time} & The time relative to the timeline\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if {\itshape sequence\+Time}  is within the clip post-\/extrapolation
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a9b9ff4aba84f327c2822983ac3cdf50b}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a9b9ff4aba84f327c2822983ac3cdf50b}} 
+\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!IsPreExtrapolatedTime@{IsPreExtrapolatedTime}}
+\index{IsPreExtrapolatedTime@{IsPreExtrapolatedTime}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}
+\doxysubsubsection{\texorpdfstring{IsPreExtrapolatedTime()}{IsPreExtrapolatedTime()}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Timeline.\+Timeline\+Clip.\+Is\+Pre\+Extrapolated\+Time (\begin{DoxyParamCaption}\item[{double}]{sequence\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Given a time, returns whether it falls within the clip\textquotesingle{}s pre-\/extrapolation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sequence\+Time} & The time relative to the timeline\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if {\itshape sequence\+Time}  is within the clip pre-\/extrapolation
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a0e93badf4d11e12235eec8e938263184}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a0e93badf4d11e12235eec8e938263184}} 
+\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!ToLocalTime@{ToLocalTime}}
+\index{ToLocalTime@{ToLocalTime}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}
+\doxysubsubsection{\texorpdfstring{ToLocalTime()}{ToLocalTime()}}
+{\footnotesize\ttfamily double Unity\+Engine.\+Timeline.\+Timeline\+Clip.\+To\+Local\+Time (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Converts from global time to a clips local time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & time relative to the timeline\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The local time with extrapolation applied 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a5a65196511de2353627a38bd9e6e09e2}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a5a65196511de2353627a38bd9e6e09e2}} 
+\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!ToLocalTimeUnbound@{ToLocalTimeUnbound}}
+\index{ToLocalTimeUnbound@{ToLocalTimeUnbound}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}
+\doxysubsubsection{\texorpdfstring{ToLocalTimeUnbound()}{ToLocalTimeUnbound()}}
+{\footnotesize\ttfamily double Unity\+Engine.\+Timeline.\+Timeline\+Clip.\+To\+Local\+Time\+Unbound (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Converts from global time to local time of the clip 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & The time relative to the timeline\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The local time, ignoring any extrapolation or bounds
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a33767afb7266c2dfa4eaaeb1fd5a8bfe}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a33767afb7266c2dfa4eaaeb1fd5a8bfe}} 
+\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!ToString@{ToString}}
+\index{ToString@{ToString}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string Unity\+Engine.\+Timeline.\+Timeline\+Clip.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Outputs a more readable representation of the timeline clip as a string 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a2c0e553887357327987faff3f3b06dac}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a2c0e553887357327987faff3f3b06dac}} 
+\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!asset@{asset}}
+\index{asset@{asset}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}
+\doxysubsubsection{\texorpdfstring{asset}{asset}}
+{\footnotesize\ttfamily Object Unity\+Engine.\+Timeline.\+Timeline\+Clip.\+asset\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The Playable\+Asset attached to the clip. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_curves_owner}{Unity\+Engine.\+Timeline.\+ICurves\+Owner}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a7c4922742bb044dbd4270829393d1b14}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a7c4922742bb044dbd4270829393d1b14}} 
+\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!curves@{curves}}
+\index{curves@{curves}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}
+\doxysubsubsection{\texorpdfstring{curves}{curves}}
+{\footnotesize\ttfamily Animation\+Clip Unity\+Engine.\+Timeline.\+Timeline\+Clip.\+curves\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+An animation clip containing animated properties of the attached Playable\+Asset 
+
+This is where animated clip properties are stored. 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_curves_owner}{Unity\+Engine.\+Timeline.\+ICurves\+Owner}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a9438ddf54af828cacfc0f16fcc87e7ce}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a9438ddf54af828cacfc0f16fcc87e7ce}} 
+\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!duration@{duration}}
+\index{duration@{duration}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily double Unity\+Engine.\+Timeline.\+Timeline\+Clip.\+duration\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The length, in seconds, of the clip 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_curves_owner}{Unity\+Engine.\+Timeline.\+ICurves\+Owner}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_timeline_1_1_timeline_clip_a38ef83ba4243f939f2dbf6aae8133651}\label{class_unity_engine_1_1_timeline_1_1_timeline_clip_a38ef83ba4243f939f2dbf6aae8133651}} 
+\index{UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}!hasCurves@{hasCurves}}
+\index{hasCurves@{hasCurves}!UnityEngine.Timeline.TimelineClip@{UnityEngine.Timeline.TimelineClip}}
+\doxysubsubsection{\texorpdfstring{hasCurves}{hasCurves}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Timeline.\+Timeline\+Clip.\+has\+Curves\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Whether this clip contains animated properties for the attached Playable\+Asset. 
+
+This property is false if the curves property is null or if it contains no information. 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_curves_owner}{Unity\+Engine.\+Timeline.\+ICurves\+Owner}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/\+Asset\+Upgrade/Clip\+Upgrade.\+cs\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/Timeline\+Clip.\+cs\end{DoxyCompactItemize}

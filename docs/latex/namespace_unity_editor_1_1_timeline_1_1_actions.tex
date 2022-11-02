@@ -1,0 +1,70 @@
+\hypertarget{namespace_unity_editor_1_1_timeline_1_1_actions}{}\doxysection{Unity\+Editor.\+Timeline.\+Actions Namespace Reference}
+\label{namespace_unity_editor_1_1_timeline_1_1_actions}\index{UnityEditor.Timeline.Actions@{UnityEditor.Timeline.Actions}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context}{Action\+Context}}
+\begin{DoxyCompactList}\small\item\em Action context to be used by actions. \end{DoxyCompactList}\item 
+class {\bfseries Action\+Extensions}
+\begin{DoxyCompactList}\small\item\em extension methods for IActions \end{DoxyCompactList}\item 
+class {\bfseries Action\+Manager}
+\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_active_in_mode_attribute}{Active\+In\+Mode\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Define the activeness of an action depending on its timeline mode. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_apply_default_undo_attribute}{Apply\+Default\+Undo\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Use this attribute on action classes (\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action}{Timeline\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action}{Clip\+Action}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_marker_action}{Marker\+Action}} and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_track_action}{Track\+Action}}) to have the default undo behaviour applied. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action}{Clip\+Action}}
+\begin{DoxyCompactList}\small\item\em Base class for a clip action. Inherit from this class to make an action that would react on selected clips after a menu click and/or a key shortcut. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_actions_1_1_i_action}{IAction}}
+\begin{DoxyCompactList}\small\item\em interface indicating an Action class \end{DoxyCompactList}\item 
+class {\bfseries Invoker}
+\begin{DoxyCompactList}\small\item\em Class containing methods to invoke actions. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_marker_action}{Marker\+Action}}
+\begin{DoxyCompactList}\small\item\em Base class for a marker action. Inherit from this class to make an action that would react on selected markers after a menu click and/or a key shortcut. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_actions_1_1_menu_action_item}{Menu\+Action\+Item}}
+\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_menu_entry_attribute}{Menu\+Entry\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Use this attribute to add a menu item to a context menu. Used to indicate path and priority that are auto added to the menu (examples can be found on ). \end{DoxyCompactList}\item 
+class {\bfseries Menu\+Priority}
+\begin{DoxyCompactList}\small\item\em Priorities for menu item ordering. See \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_menu_entry_attribute}{Menu\+Entry\+Attribute}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action}{Timeline\+Action}}
+\begin{DoxyCompactList}\small\item\em Base class for a timeline action. Inherit from this class to make an action on a timeline after a menu click and/or a key shortcut. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_shortcut_attribute}{Timeline\+Shortcut\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Use this attribute to make an action work with the shortcut system. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_track_action}{Track\+Action}}
+\begin{DoxyCompactList}\small\item\em Base class for a track action. Inherit from this class to make an action that would react on selected tracks after a menu click and/or a key shortcut. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Action\+Validity}} \{ \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10a3ac705f2acd51a4613f9188c05c91d0d}{Valid}}
+, \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10a7599922e28b6009660de5e67f8ce210c}{Not\+Applicable}}
+, \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10a4bbb8f967da6d1a610596d7257179c2b}{Invalid}}
+ \}
+\begin{DoxyCompactList}\small\item\em Indicates the validity of an action for a given data set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}\label{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}} 
+\index{UnityEditor.Timeline.Actions@{UnityEditor.Timeline.Actions}!ActionValidity@{ActionValidity}}
+\index{ActionValidity@{ActionValidity}!UnityEditor.Timeline.Actions@{UnityEditor.Timeline.Actions}}
+\doxysubsubsection{\texorpdfstring{ActionValidity}{ActionValidity}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Unity\+Editor.\+Timeline.\+Actions.\+Action\+Validity}}}
+
+
+
+Indicates the validity of an action for a given data set. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Valid@{Valid}!UnityEditor.Timeline.Actions@{UnityEditor.Timeline.Actions}}\index{UnityEditor.Timeline.Actions@{UnityEditor.Timeline.Actions}!Valid@{Valid}}}\mbox{\Hypertarget{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10a3ac705f2acd51a4613f9188c05c91d0d}\label{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10a3ac705f2acd51a4613f9188c05c91d0d}} 
+Valid&Action is valid in the provided context. If the action is linked to a menu item, the menu item will be visible. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NotApplicable@{NotApplicable}!UnityEditor.Timeline.Actions@{UnityEditor.Timeline.Actions}}\index{UnityEditor.Timeline.Actions@{UnityEditor.Timeline.Actions}!NotApplicable@{NotApplicable}}}\mbox{\Hypertarget{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10a7599922e28b6009660de5e67f8ce210c}\label{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10a7599922e28b6009660de5e67f8ce210c}} 
+Not\+Applicable&Action is not applicable in the current context. If the action is linked to a menu item, the menu item will not be shown. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Invalid@{Invalid}!UnityEditor.Timeline.Actions@{UnityEditor.Timeline.Actions}}\index{UnityEditor.Timeline.Actions@{UnityEditor.Timeline.Actions}!Invalid@{Invalid}}}\mbox{\Hypertarget{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10a4bbb8f967da6d1a610596d7257179c2b}\label{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10a4bbb8f967da6d1a610596d7257179c2b}} 
+Invalid&Action is not valid in the current context. If the action is linked to a menu item, the menu item will be shown but grayed out. \\
+\hline
+
+\end{DoxyEnumFields}

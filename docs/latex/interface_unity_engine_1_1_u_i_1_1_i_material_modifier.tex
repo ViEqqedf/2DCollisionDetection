@@ -1,0 +1,53 @@
+\hypertarget{interface_unity_engine_1_1_u_i_1_1_i_material_modifier}{}\doxysection{Unity\+Engine.\+UI.\+IMaterial\+Modifier Interface Reference}
+\label{interface_unity_engine_1_1_u_i_1_1_i_material_modifier}\index{UnityEngine.UI.IMaterialModifier@{UnityEngine.UI.IMaterialModifier}}
+
+
+Use this interface to modify a Material that renders a Graphic. The Material is modified before the it is passed to the Canvas\+Renderer.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+IMaterial\+Modifier\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.214092cm]{interface_unity_engine_1_1_u_i_1_1_i_material_modifier}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Material \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_material_modifier_a9ea4d6fd09dad50499ee88c2da8e8c53}{Get\+Modified\+Material}} (Material base\+Material)
+\begin{DoxyCompactList}\small\item\em Perform material modification in this function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Use this interface to modify a Material that renders a Graphic. The Material is modified before the it is passed to the Canvas\+Renderer. 
+
+When a Graphic sets a material that is passed (in order) to any components on the Game\+Object that implement \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_material_modifier}{IMaterial\+Modifier}}. This component can modify the material to be used for rendering. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_unity_engine_1_1_u_i_1_1_i_material_modifier_a9ea4d6fd09dad50499ee88c2da8e8c53}\label{interface_unity_engine_1_1_u_i_1_1_i_material_modifier_a9ea4d6fd09dad50499ee88c2da8e8c53}} 
+\index{UnityEngine.UI.IMaterialModifier@{UnityEngine.UI.IMaterialModifier}!GetModifiedMaterial@{GetModifiedMaterial}}
+\index{GetModifiedMaterial@{GetModifiedMaterial}!UnityEngine.UI.IMaterialModifier@{UnityEngine.UI.IMaterialModifier}}
+\doxysubsubsection{\texorpdfstring{GetModifiedMaterial()}{GetModifiedMaterial()}}
+{\footnotesize\ttfamily Material Unity\+Engine.\+UI.\+IMaterial\+Modifier.\+Get\+Modified\+Material (\begin{DoxyParamCaption}\item[{Material}]{base\+Material }\end{DoxyParamCaption})}
+
+
+
+Perform material modification in this function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Material} & The material that is to be modified\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The modified material.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ad9e0ee518fca96a5879709f7e2c378f1}{TMPro.\+Text\+Mesh\+Pro\+UGUI}}, \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sub_mesh_u_i_a687aa0d711bf32e50c11a403493c2667}{TMPro.\+TMP\+\_\+\+Sub\+Mesh\+UI}}, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_mask_a98c8adb07fbc3cf1e541f1110f8c3eeb}{Unity\+Engine.\+UI.\+Mask}}, and \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a08cdd6ba228d1c72132a5c7dbdfa4958}{Unity\+Engine.\+UI.\+Maskable\+Graphic}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/\+Material\+Modifiers/IMaterial\+Modifier.\+cs\end{DoxyCompactItemize}

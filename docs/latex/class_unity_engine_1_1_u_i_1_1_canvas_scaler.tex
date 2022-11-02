@@ -1,0 +1,333 @@
+\hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler}{}\doxysection{Unity\+Engine.\+UI.\+Canvas\+Scaler Class Reference}
+\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler}\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}
+
+
+The Canvas Scaler component is used for controlling the overall scale and pixel density of \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} elements in the Canvas. This scaling affects everything under the Canvas, including font sizes and image borders.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Canvas\+Scaler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_engine_1_1_u_i_1_1_canvas_scaler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a2b7a899b4d84a54f47c77ec915ebd1b9}{Scale\+Mode}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a2b7a899b4d84a54f47c77ec915ebd1b9aa07993906b341f3f90d4c0e59ac7c8fd}{Constant\+Pixel\+Size}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a2b7a899b4d84a54f47c77ec915ebd1b9a2ac0fab43627f997005598024f98fd05}{Scale\+With\+Screen\+Size}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a2b7a899b4d84a54f47c77ec915ebd1b9a2fa55cd002a02000f4f94810f6ea3f04}{Constant\+Physical\+Size}}
+ \}
+\begin{DoxyCompactList}\small\item\em Determines how \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} elements in the Canvas are scaled. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a0710454d02cf5385685fafe2bb730884}{Screen\+Match\+Mode}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a0710454d02cf5385685fafe2bb730884afbe252ad29f6b85783be98340d9793b8}{Match\+Width\+Or\+Height}} = 0
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a0710454d02cf5385685fafe2bb730884a8098b34f582537833b36b58273c3545b}{Expand}} = 1
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a0710454d02cf5385685fafe2bb730884a1bb54971ab41a5a931b23159019fd73f}{Shrink}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Scale the canvas area with the width as reference, the height as reference, or something in between. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5}{Unit}} \{ \newline
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5a3040cc6624f5c309963dee141936b299}{Centimeters}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5a3be6521a73bcafce5b38459ec548bd11}{Millimeters}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5ad73325cdb1cb4f9a1ed11bdab879321d}{Inches}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5a75dd5f1160a3f02b6fae89c54361a1b3}{Points}}
+, \newline
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5a87f77e575f5cc4a838eb75067569a0a6}{Picas}}
+ \}
+\begin{DoxyCompactList}\small\item\em The possible physical unit types \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_ae9ce740fd32b415f343fe665153e4c49}{On\+Enable}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a4ec70651819b490554edadf01344ce26}{On\+Disable}} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_aaec0a78f85486708d7a89fd454d71c76}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_aaec0a78f85486708d7a89fd454d71c76}} 
+virtual void {\bfseries Handle} ()
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a95212c352f63154076e3c306ff386012}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a95212c352f63154076e3c306ff386012}} 
+virtual void {\bfseries Handle\+World\+Canvas} ()
+\begin{DoxyCompactList}\small\item\em Handles canvas scaling for world canvas. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a25ff6be72813f4389344a4c193ff040b}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a25ff6be72813f4389344a4c193ff040b}} 
+virtual void {\bfseries Handle\+Constant\+Pixel\+Size} ()
+\begin{DoxyCompactList}\small\item\em Handles canvas scaling for a constant pixel size. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_aafe8a62171cac7fe80eedcc5a6b87798}{Handle\+Scale\+With\+Screen\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Handles canvas scaling that scales with the screen size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a92321ecbcd86fa3bc014e78381912fad}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a92321ecbcd86fa3bc014e78381912fad}} 
+virtual void {\bfseries Handle\+Constant\+Physical\+Size} ()
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a508a82268e876c7056c0f824f30492f9}{Set\+Scale\+Factor}} (float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_af11961bd4b25668f1f47261478a79ce5}{scale\+Factor}})
+\begin{DoxyCompactList}\small\item\em Sets the scale factor on the canvas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a4cad7a6bc77afa5cf79f059c9705c3fe}{Set\+Reference\+Pixels\+Per\+Unit}} (float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a4947abda96bc094d4a62265f80d08368}{reference\+Pixels\+Per\+Unit}})
+\begin{DoxyCompactList}\small\item\em Sets the reference\+Pixels\+Per\+Unit on the Canvas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_ae1453587cfb6bd5a403679527c8ca900}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_ae1453587cfb6bd5a403679527c8ca900}} 
+float {\bfseries m\+\_\+\+Reference\+Pixels\+Per\+Unit} = 100
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a1f6e2e4df22d89b41d92fced1703864e}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a1f6e2e4df22d89b41d92fced1703864e}} 
+float {\bfseries m\+\_\+\+Scale\+Factor} = 1
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a5179c8a3128aa472c01d0d81f33aee50}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a5179c8a3128aa472c01d0d81f33aee50}} 
+Vector2 {\bfseries m\+\_\+\+Reference\+Resolution} = new Vector2(800, 600)
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a74ea1320e86aed056c8d91d00cb35d08}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a74ea1320e86aed056c8d91d00cb35d08}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a0710454d02cf5385685fafe2bb730884}{Screen\+Match\+Mode}} {\bfseries m\+\_\+\+Screen\+Match\+Mode} = \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a0710454d02cf5385685fafe2bb730884afbe252ad29f6b85783be98340d9793b8}{Screen\+Match\+Mode.\+Match\+Width\+Or\+Height}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a3bfcb6e03b92bbb87560c34a1c179d2b}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a3bfcb6e03b92bbb87560c34a1c179d2b}} 
+float {\bfseries m\+\_\+\+Match\+Width\+Or\+Height} = 0
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a32654ad25b869ed7f48c861d6bf68604}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a32654ad25b869ed7f48c861d6bf68604}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5}{Unit}} {\bfseries m\+\_\+\+Physical\+Unit} = \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5a75dd5f1160a3f02b6fae89c54361a1b3}{Unit.\+Points}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a6d3c4c7891b7688fbcfda5714f0ae078}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a6d3c4c7891b7688fbcfda5714f0ae078}} 
+float {\bfseries m\+\_\+\+Fallback\+Screen\+DPI} = 96
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a623e6098114e1c1d1befc5dfe2d5fe5d}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a623e6098114e1c1d1befc5dfe2d5fe5d}} 
+float {\bfseries m\+\_\+\+Default\+Sprite\+DPI} = 96
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a89c1e3ec9866e1e7ad84db4be13be912}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a89c1e3ec9866e1e7ad84db4be13be912}} 
+float {\bfseries m\+\_\+\+Dynamic\+Pixels\+Per\+Unit} = 1
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a22a6bf4db4fc6a4a7151174c58f327b7}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a22a6bf4db4fc6a4a7151174c58f327b7}} 
+bool {\bfseries m\+\_\+\+Preset\+Info\+Is\+World} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_aa648cd4cae1dfb3c62f5954ca8d97621}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_aa648cd4cae1dfb3c62f5954ca8d97621}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a2b7a899b4d84a54f47c77ec915ebd1b9}{Scale\+Mode}} {\bfseries ui\+Scale\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a4947abda96bc094d4a62265f80d08368}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a4947abda96bc094d4a62265f80d08368}} 
+float {\bfseries reference\+Pixels\+Per\+Unit}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If a sprite has this \textquotesingle{}Pixels Per Unit\textquotesingle{} setting, then one pixel in the sprite will cover one unit in the \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_af11961bd4b25668f1f47261478a79ce5}{scale\+Factor}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Scales all \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} elements in the Canvas by this factor. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a8ac4c6951b59f68f00bfa4ff5de08690}{reference\+Resolution}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The resolution the \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} layout is designed for. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a94d6974fb724336d32ad5f825cb0fb9b}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a94d6974fb724336d32ad5f825cb0fb9b}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a0710454d02cf5385685fafe2bb730884}{Screen\+Match\+Mode}} {\bfseries screen\+Match\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A mode used to scale the canvas area if the aspect ratio of the current resolution doesn\textquotesingle{}t fit the reference resolution. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a6df914b423fabce4e44d3a9647cac552}{match\+Width\+Or\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Setting to scale the Canvas to match the width or height of the reference resolution, or a combination. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a05fe6b6d5d4025beb2c80417331c890e}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a05fe6b6d5d4025beb2c80417331c890e}} 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5}{Unit}} {\bfseries physical\+Unit}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The physical unit to specify positions and sizes in. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a1940b0117391abe9c45b1784e705a0b8}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a1940b0117391abe9c45b1784e705a0b8}} 
+float {\bfseries fallback\+Screen\+DPI}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The DPI to assume if the screen DPI is not known. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_aa0fe289fc299ef01fe1f649a7309f824}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_aa0fe289fc299ef01fe1f649a7309f824}} 
+float {\bfseries default\+Sprite\+DPI}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The pixels per inch to use for sprites that have a \textquotesingle{}Pixels Per Unit\textquotesingle{} setting that matches the \textquotesingle{}Reference Pixels Per Unit\textquotesingle{} setting. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a0b276a6257f99c79c595c263c8b0dcd0}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a0b276a6257f99c79c595c263c8b0dcd0}} 
+float {\bfseries dynamic\+Pixels\+Per\+Unit}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The amount of pixels per unit to use for dynamically created bitmaps in the \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}}, such as \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_text}{Text}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The Canvas Scaler component is used for controlling the overall scale and pixel density of \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} elements in the Canvas. This scaling affects everything under the Canvas, including font sizes and image borders. 
+
+For a Canvas set to \textquotesingle{}Screen Space -\/ Overlay\textquotesingle{} or \textquotesingle{}Screen Space -\/ Camera\textquotesingle{}, the Canvas Scaler \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} Scale Mode can be set to Constant Pixel Size, Scale With Screen Size, or Constant Physical Size.
+
+Using the Constant Pixel Size mode, positions and sizes of \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} elements are specified in pixels on the screen. This is also the default functionality of the Canvas when no Canvas Scaler is attached. However, With the Scale Factor setting in the Canvas Scaler, a constant scaling can be applied to all \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} elements in the Canvas.
+
+Using the Scale With Screen Size mode, positions and sizes can be specified according to the pixels of a specified reference resolution. If the current screen resolution is larger than the reference resolution, the Canvas will keep having only the resolution of the reference resolution, but will scale up in order to fit the screen. If the current screen resolution is smaller than the reference resolution, the Canvas will similarly be scaled down to fit. If the current screen resolution has a different aspect ratio than the reference resolution, scaling each axis individually to fit the screen would result in non-\/uniform scaling, which is generally undesirable. Instead of this, the Reference\+Resolution component will make the Canvas resolution deviate from the reference resolution in order to respect the aspect ratio of the screen. It is possible to control how this deviation should behave using the \+::ref\+::screen\+Match\+Mode setting.
+
+Using the Constant Physical Size mode, positions and sizes of \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} elements are specified in physical units, such as millimeters, points, or picas. This mode relies on the device reporting its screen DPI correctly. You can specify a fallback DPI to use for devices that do not report a DPI.
+
+For a Canvas set to \textquotesingle{}World Space\textquotesingle{} the Canvas Scaler can be used to control the pixel density of \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} elements in the Canvas. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a2b7a899b4d84a54f47c77ec915ebd1b9}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a2b7a899b4d84a54f47c77ec915ebd1b9}} 
+\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!ScaleMode@{ScaleMode}}
+\index{ScaleMode@{ScaleMode}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}
+\doxysubsubsection{\texorpdfstring{ScaleMode}{ScaleMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a2b7a899b4d84a54f47c77ec915ebd1b9}{Unity\+Engine.\+UI.\+Canvas\+Scaler.\+Scale\+Mode}}}
+
+
+
+Determines how \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} elements in the Canvas are scaled. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ConstantPixelSize@{ConstantPixelSize}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!ConstantPixelSize@{ConstantPixelSize}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a2b7a899b4d84a54f47c77ec915ebd1b9aa07993906b341f3f90d4c0e59ac7c8fd}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a2b7a899b4d84a54f47c77ec915ebd1b9aa07993906b341f3f90d4c0e59ac7c8fd}} 
+Constant\+Pixel\+Size&Using the Constant Pixel Size mode, positions and sizes of \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} elements are specified in pixels on the screen. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ScaleWithScreenSize@{ScaleWithScreenSize}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!ScaleWithScreenSize@{ScaleWithScreenSize}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a2b7a899b4d84a54f47c77ec915ebd1b9a2ac0fab43627f997005598024f98fd05}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a2b7a899b4d84a54f47c77ec915ebd1b9a2ac0fab43627f997005598024f98fd05}} 
+Scale\+With\+Screen\+Size&Using the Scale With Screen Size mode, positions and sizes can be specified according to the pixels of a specified reference resolution. If the current screen resolution is larger than the reference resolution, the Canvas will keep having only the resolution of the reference resolution, but will scale up in order to fit the screen. If the current screen resolution is smaller than the reference resolution, the Canvas will similarly be scaled down to fit. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ConstantPhysicalSize@{ConstantPhysicalSize}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!ConstantPhysicalSize@{ConstantPhysicalSize}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a2b7a899b4d84a54f47c77ec915ebd1b9a2fa55cd002a02000f4f94810f6ea3f04}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a2b7a899b4d84a54f47c77ec915ebd1b9a2fa55cd002a02000f4f94810f6ea3f04}} 
+Constant\+Physical\+Size&Using the Constant Physical Size mode, positions and sizes of \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} elements are specified in physical units, such as millimeters, points, or picas. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a0710454d02cf5385685fafe2bb730884}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a0710454d02cf5385685fafe2bb730884}} 
+\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!ScreenMatchMode@{ScreenMatchMode}}
+\index{ScreenMatchMode@{ScreenMatchMode}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}
+\doxysubsubsection{\texorpdfstring{ScreenMatchMode}{ScreenMatchMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a0710454d02cf5385685fafe2bb730884}{Unity\+Engine.\+UI.\+Canvas\+Scaler.\+Screen\+Match\+Mode}}}
+
+
+
+Scale the canvas area with the width as reference, the height as reference, or something in between. 
+
+Scale the canvas area with the width as reference, the height as reference, or something in between. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MatchWidthOrHeight@{MatchWidthOrHeight}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!MatchWidthOrHeight@{MatchWidthOrHeight}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a0710454d02cf5385685fafe2bb730884afbe252ad29f6b85783be98340d9793b8}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a0710454d02cf5385685fafe2bb730884afbe252ad29f6b85783be98340d9793b8}} 
+Match\+Width\+Or\+Height&Scale the canvas area with the width as reference, the height as reference, or something in between. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Expand@{Expand}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!Expand@{Expand}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a0710454d02cf5385685fafe2bb730884a8098b34f582537833b36b58273c3545b}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a0710454d02cf5385685fafe2bb730884a8098b34f582537833b36b58273c3545b}} 
+Expand&Expand the canvas area either horizontally or vertically, so the size of the canvas will never be smaller than the reference. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Shrink@{Shrink}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!Shrink@{Shrink}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a0710454d02cf5385685fafe2bb730884a1bb54971ab41a5a931b23159019fd73f}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a0710454d02cf5385685fafe2bb730884a1bb54971ab41a5a931b23159019fd73f}} 
+Shrink&Crop the canvas area either horizontally or vertically, so the size of the canvas will never be larger than the reference. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5}} 
+\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!Unit@{Unit}}
+\index{Unit@{Unit}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}
+\doxysubsubsection{\texorpdfstring{Unit}{Unit}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5}{Unity\+Engine.\+UI.\+Canvas\+Scaler.\+Unit}}}
+
+
+
+The possible physical unit types 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Centimeters@{Centimeters}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!Centimeters@{Centimeters}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5a3040cc6624f5c309963dee141936b299}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5a3040cc6624f5c309963dee141936b299}} 
+Centimeters&Use centimeters. A centimeter is 1/100 of a meter \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Millimeters@{Millimeters}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!Millimeters@{Millimeters}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5a3be6521a73bcafce5b38459ec548bd11}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5a3be6521a73bcafce5b38459ec548bd11}} 
+Millimeters&Use millimeters. A millimeter is 1/10 of a centimeter, and 1/1000 of a meter. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Inches@{Inches}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!Inches@{Inches}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5ad73325cdb1cb4f9a1ed11bdab879321d}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5ad73325cdb1cb4f9a1ed11bdab879321d}} 
+Inches&Use inches. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Points@{Points}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!Points@{Points}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5a75dd5f1160a3f02b6fae89c54361a1b3}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5a75dd5f1160a3f02b6fae89c54361a1b3}} 
+Points&Use points. One point is 1/12 of a pica, and 1/72 of an inch. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Picas@{Picas}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!Picas@{Picas}}}\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5a87f77e575f5cc4a838eb75067569a0a6}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a93b23d678bc87ca91c4ca135abcf54f5a87f77e575f5cc4a838eb75067569a0a6}} 
+Picas&Use picas. One pica is 1/6 of an inch. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_aafe8a62171cac7fe80eedcc5a6b87798}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_aafe8a62171cac7fe80eedcc5a6b87798}} 
+\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!HandleScaleWithScreenSize@{HandleScaleWithScreenSize}}
+\index{HandleScaleWithScreenSize@{HandleScaleWithScreenSize}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}
+\doxysubsubsection{\texorpdfstring{HandleScaleWithScreenSize()}{HandleScaleWithScreenSize()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+UI.\+Canvas\+Scaler.\+Handle\+Scale\+With\+Screen\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Handles canvas scaling that scales with the screen size. 
+
+summary\texorpdfstring{$>$}{>} Handles canvas scaling for a constant physical size. /summary\texorpdfstring{$>$}{>} \mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a4ec70651819b490554edadf01344ce26}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a4ec70651819b490554edadf01344ce26}} 
+\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!OnDisable@{OnDisable}}
+\index{OnDisable@{OnDisable}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}
+\doxysubsubsection{\texorpdfstring{OnDisable()}{OnDisable()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Canvas\+Scaler.\+On\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+summary\texorpdfstring{$>$}{>} Method that handles calculations of canvas scaling. /summary\texorpdfstring{$>$}{>} 
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_ae9ce740fd32b415f343fe665153e4c49}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_ae9ce740fd32b415f343fe665153e4c49}} 
+\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Canvas\+Scaler.\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}.
+
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a4cad7a6bc77afa5cf79f059c9705c3fe}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a4cad7a6bc77afa5cf79f059c9705c3fe}} 
+\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!SetReferencePixelsPerUnit@{SetReferencePixelsPerUnit}}
+\index{SetReferencePixelsPerUnit@{SetReferencePixelsPerUnit}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}
+\doxysubsubsection{\texorpdfstring{SetReferencePixelsPerUnit()}{SetReferencePixelsPerUnit()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Canvas\+Scaler.\+Set\+Reference\+Pixels\+Per\+Unit (\begin{DoxyParamCaption}\item[{float}]{reference\+Pixels\+Per\+Unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the reference\+Pixels\+Per\+Unit on the Canvas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reference\+Pixels\+Per\+Unit} & The new reference pixels per \mbox{\hyperlink{namespace_unity}{Unity}} value\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a508a82268e876c7056c0f824f30492f9}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a508a82268e876c7056c0f824f30492f9}} 
+\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!SetScaleFactor@{SetScaleFactor}}
+\index{SetScaleFactor@{SetScaleFactor}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}
+\doxysubsubsection{\texorpdfstring{SetScaleFactor()}{SetScaleFactor()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Canvas\+Scaler.\+Set\+Scale\+Factor (\begin{DoxyParamCaption}\item[{float}]{scale\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the scale factor on the canvas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale\+Factor} & The scale factor to use.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a6df914b423fabce4e44d3a9647cac552}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a6df914b423fabce4e44d3a9647cac552}} 
+\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!matchWidthOrHeight@{matchWidthOrHeight}}
+\index{matchWidthOrHeight@{matchWidthOrHeight}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}
+\doxysubsubsection{\texorpdfstring{matchWidthOrHeight}{matchWidthOrHeight}}
+{\footnotesize\ttfamily float Unity\+Engine.\+UI.\+Canvas\+Scaler.\+match\+Width\+Or\+Height\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Setting to scale the Canvas to match the width or height of the reference resolution, or a combination. 
+
+If the setting is set to 0, the Canvas is scaled according to the difference between the current screen resolution width and the reference resolution width. If the setting is set to 1, the Canvas is scaled according to the difference between the current screen resolution height and the reference resolution height.
+
+For values in between 0 and 1, the scaling is based on a combination of the relative width and height.
+
+Consider an example where the reference resolution of 640x480, and the current screen resolution is a landscape mode of 480x640.
+
+If the scale\+Width\+Or\+Height setting is set to 0, the Canvas is scaled by 0.\+75 because the current resolution width of 480 is 0.\+75 times the reference resolution width of 640. The Canvas resolution gets a resolution of 640x853.\+33. This resolution has the same width as the reference resolution width, but has the aspect ratio of the current screen resolution. Note that the Canvas resolution of 640x853.\+33 is the current screen resolution divided by the scale factor of 0.\+75.
+
+If the scale\+Width\+Or\+Height setting is set to 1, the Canvas is scaled by 1.\+33 because the current resolution height of 640 is 1.\+33 times the reference resolution height of 480. The Canvas resolution gets a resolution of 360x480. This resolution has the same height as the reference resolution width, but has the aspect ratio of the current screen resolution. Note that the Canvas resolution of 360x480 is the current screen resolution divided by the scale factor of 1.\+33.
+
+If the scale\+Width\+Or\+Height setting is set to 0.\+5, we find the horizontal scaling needed (0.\+75) and the vertical scaling needed (1.\+33) and find the average. However, we do the average in logarithmic space. A regular average of 0.\+75 and 1.\+33 would produce a result of 1.\+04. However, since multiplying by 1.\+33 is the same as diving by 0.\+75, the two scale factor really corresponds to multiplying by 0.\+75 versus dividing by 0.\+75, and the average of those two things should even out and produce a neutral result. The average in logarithmic space of 0.\+75 and 1.\+33 is exactly 1.\+0, which is what we want. The Canvas resolution hence ends up being 480x640 which is the current resolution divided by the scale factor of 1.\+0.
+
+The logic works the same for all values. The average between the horizontal and vertical scale factor is a weighted average based on the match\+Width\+Or\+Height value. \mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a8ac4c6951b59f68f00bfa4ff5de08690}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_a8ac4c6951b59f68f00bfa4ff5de08690}} 
+\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!referenceResolution@{referenceResolution}}
+\index{referenceResolution@{referenceResolution}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}
+\doxysubsubsection{\texorpdfstring{referenceResolution}{referenceResolution}}
+{\footnotesize\ttfamily Vector2 Unity\+Engine.\+UI.\+Canvas\+Scaler.\+reference\+Resolution\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The resolution the \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} layout is designed for. 
+
+If the screen resolution is larger, the \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} will be scaled up, and if it\textquotesingle{}s smaller, the \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} will be scaled down. This is done in accordance with the Screen Match Mode. \mbox{\Hypertarget{class_unity_engine_1_1_u_i_1_1_canvas_scaler_af11961bd4b25668f1f47261478a79ce5}\label{class_unity_engine_1_1_u_i_1_1_canvas_scaler_af11961bd4b25668f1f47261478a79ce5}} 
+\index{UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}!scaleFactor@{scaleFactor}}
+\index{scaleFactor@{scaleFactor}!UnityEngine.UI.CanvasScaler@{UnityEngine.UI.CanvasScaler}}
+\doxysubsubsection{\texorpdfstring{scaleFactor}{scaleFactor}}
+{\footnotesize\ttfamily float Unity\+Engine.\+UI.\+Canvas\+Scaler.\+scale\+Factor\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Scales all \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} elements in the Canvas by this factor. 
+
+Scales all \mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UI}} elements in the Canvas by this factor. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/\+Layout/Canvas\+Scaler.\+cs\end{DoxyCompactItemize}

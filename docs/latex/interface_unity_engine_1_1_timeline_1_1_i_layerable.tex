@@ -1,0 +1,51 @@
+\hypertarget{interface_unity_engine_1_1_timeline_1_1_i_layerable}{}\doxysection{Unity\+Engine.\+Timeline.\+ILayerable Interface Reference}
+\label{interface_unity_engine_1_1_timeline_1_1_i_layerable}\index{UnityEngine.Timeline.ILayerable@{UnityEngine.Timeline.ILayerable}}
+
+
+Implement this interface on a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} derived class to support layers  
+
+
+Inheritance diagram for Unity\+Engine.\+Timeline.\+ILayerable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_unity_engine_1_1_timeline_1_1_i_layerable}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Playable \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_layerable_acf8b4b40e1294ad06091d6d3c766f5d5}{Create\+Layer\+Mixer}} (Playable\+Graph graph, Game\+Object go, int input\+Count)
+\begin{DoxyCompactList}\small\item\em Creates a mixer that blends track mixers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implement this interface on a \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} derived class to support layers 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_unity_engine_1_1_timeline_1_1_i_layerable_acf8b4b40e1294ad06091d6d3c766f5d5}\label{interface_unity_engine_1_1_timeline_1_1_i_layerable_acf8b4b40e1294ad06091d6d3c766f5d5}} 
+\index{UnityEngine.Timeline.ILayerable@{UnityEngine.Timeline.ILayerable}!CreateLayerMixer@{CreateLayerMixer}}
+\index{CreateLayerMixer@{CreateLayerMixer}!UnityEngine.Timeline.ILayerable@{UnityEngine.Timeline.ILayerable}}
+\doxysubsubsection{\texorpdfstring{CreateLayerMixer()}{CreateLayerMixer()}}
+{\footnotesize\ttfamily Playable Unity\+Engine.\+Timeline.\+ILayerable.\+Create\+Layer\+Mixer (\begin{DoxyParamCaption}\item[{Playable\+Graph}]{graph,  }\item[{Game\+Object}]{go,  }\item[{int}]{input\+Count }\end{DoxyParamCaption})}
+
+
+
+Creates a mixer that blends track mixers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & The graph where the mixer playable will be added.\\
+\hline
+{\em go} & The Game\+Object that requested the graph.\\
+\hline
+{\em input\+Count} & The number of inputs on the mixer. There should be an input for each playable from each clip.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a playable that is used as a mixer. If this method returns Playable.\+Null, it indicates that a layer mixer is not needed. In this case, a single track mixer blends all playables generated from all layers.
+\end{DoxyReturn}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/zhuangshaokun/\+Documents/git/campfire/2dcollisiondetection/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+6.\+3/\+Runtime/ILayerable.\+cs\end{DoxyCompactItemize}
