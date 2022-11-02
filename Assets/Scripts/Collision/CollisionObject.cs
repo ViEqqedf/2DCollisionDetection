@@ -18,8 +18,8 @@ namespace Physics.Collision {
         public void Translate(Vector3 diff);
         public void Rotate(Vector3 diff);
         public void RotateTo(Vector3 value);
-        public void Scale(Vector3 diff);
-        public void ScaleTo(Vector3 value);
+        public void Scale(float diff);
+        public void ScaleTo(float value);
         public void AddVelocity(Vector3 diff);
         public void AddAcceleration(Vector3 diff);
     }
@@ -33,7 +33,7 @@ namespace Physics.Collision {
         public Vector3 position;
         public Vector3 nextPosition;
         public Vector3 rotation;
-        public Vector3 scale = Vector3.one;
+        public float scale = 1;
         public int level = 0;
 
         public Vector3 acceleration;
@@ -66,7 +66,7 @@ namespace Physics.Collision {
             this.rotation = newRotation;
         }
 
-        public void ApplyScale(Vector3 newScale) {
+        public void ApplyScale(float newScale) {
             this.scale = newScale;
         }
 
@@ -108,11 +108,11 @@ namespace Physics.Collision {
             ApplyRotation(rotation);
         }
 
-        public void Scale(Vector3 diff) {
+        public void Scale(float diff) {
             ApplyScale(scale + diff);
         }
 
-        public void ScaleTo(Vector3 value) {
+        public void ScaleTo(float value) {
             ApplyScale(value);
         }
 
