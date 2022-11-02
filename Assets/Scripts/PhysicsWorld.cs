@@ -39,10 +39,10 @@ namespace Physics {
             horAABBProjList = new List<ProjectionPoint>();
             // verAABBProjList = new List<ProjectionPoint>();
 
-            // Test0();
+            Test0();
             // Test1();
             // Test2();
-            Test3();
+            // Test3();
             // Test4();
         }
 
@@ -55,7 +55,7 @@ namespace Physics {
             // }
 
             CreateATestRect(Vector3.zero);
-            CreateATestRect(new Vector3(1f, 0, 0f), 2);
+            CreateATestRect(new Vector3(0.25f, 0, 0.25f));
             // CreateATestRect(new Vector3(-1f, 0, 0f), 1);
             // CreateATestRect(new Vector3(0f, 0, 1f), 1);
             // CreateATestRect(new Vector3(0f, 0, -1f), 1);
@@ -428,20 +428,46 @@ namespace Physics {
                 Vector3 penetrateDir = pair.penetrateVec.normalized;
                 Vector3 resolveVec = rate * penetrateDir;
 
-                if (pair.first.level >= pair.second.level) {
+                if (pair.first.level > pair.second.level) {
                     pair.second.AddResolveVelocity(resolveVec);
                     float externalRate = Vector3.Dot(pair.second.velocity, -penetrateDir) * timeSpan;
                     float resolveRate = Vector3.Dot(pair.second.resolveVelocity, penetrateDir);
                     if (externalRate > resolveRate) {
                         pair.second.AddResolveVelocity((externalRate - resolveRate) * penetrateDir);
                     }
-                }
-                if(pair.first.level <= pair.second.level) {
+                } else if(pair.first.level < pair.second.level) {
                     pair.first.AddResolveVelocity(-resolveVec);
                     float externalRate = Vector3.Dot(pair.first.velocity, penetrateDir) * timeSpan;
                     float resolveRate = Vector3.Dot(pair.first.resolveVelocity, -penetrateDir);
                     if (externalRate > resolveRate) {
                         pair.first.AddResolveVelocity(-(externalRate - resolveRate) * penetrateDir);
+                    }
+                } else {
+                    float fstExternalRate = Vector3.Dot(pair.first.velocity, penetrateDir) * timeSpan;
+                    float fstResolveRate = Vector3.Dot(pair.first.resolveVelocity, -penetrateDir);
+                    float sndExternalRate = Vector3.Dot(pair.second.velocity, -penetrateDir) * timeSpan;
+                    float sndResolveRate = Vector3.Dot(pair.second.resolveVelocity, penetrateDir);
+
+                    bool fstMoving = fstExternalRate > epsilon;
+                    bool sndMoving = sndExternalRate > epsilon;
+                    if (fstMoving != sndMoving) {
+                        if (fstMoving) {
+                            pair.first.AddResolveVelocity(-resolveVec);
+                            pair.first.AddResolveVelocity(-(fstExternalRate - fstResolveRate) * penetrateDir);
+                        }
+                        if (sndMoving) {
+                            pair.second.AddResolveVelocity(resolveVec);
+                            pair.second.AddResolveVelocity((sndExternalRate - sndResolveRate) * penetrateDir);
+                        }
+                    } else {
+                        pair.first.AddResolveVelocity(-resolveVec);
+                        pair.second.AddResolveVelocity(resolveVec);
+
+                        if (Vector3.Dot(pair.first.velocity, penetrateDir) >= 0 &&
+                            Vector3.Dot(pair.second.velocity, -penetrateDir) >= 0) {
+                            pair.first.AddResolveVelocity(-(fstExternalRate - fstResolveRate) * penetrateDir);
+                            pair.second.AddResolveVelocity((sndExternalRate - sndResolveRate) * penetrateDir);
+                        }
                     }
                 }
             }
