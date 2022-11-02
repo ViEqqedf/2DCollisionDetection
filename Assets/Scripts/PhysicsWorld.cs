@@ -6,6 +6,7 @@ using Physics.Collision.Model;
 using Physics.Collision.Shape;
 using UnityEngine;
 using UnityEngine.Profiling;
+using CollisionFlags = Physics.Collision.CollisionFlags;
 using Random = UnityEngine.Random;
 
 namespace Physics {
@@ -16,6 +17,7 @@ namespace Physics {
 
     public class PhysicsWorld : MonoBehaviour, IPhysicsWorld {
         public static int tickFrame = 0;
+        public int borderRadius = 15;
         public float epsilon = 0.0001f;
         public int maxIterCount = 10;
         public List<CollisionObject> collisionList;
@@ -39,9 +41,9 @@ namespace Physics {
             horAABBProjList = new List<ProjectionPoint>();
             // verAABBProjList = new List<ProjectionPoint>();
 
-            // Test0();
+            Test0();
             // Test1();
-            Test2();
+            // Test2();
             // Test3();
             // Test4();
         }
@@ -55,7 +57,7 @@ namespace Physics {
             // }
 
             CreateATestRect(Vector3.zero);
-            CreateATestRect(new Vector3(0.25f, 0, 0.25f));
+            // CreateATestRect(new Vector3(0.25f, 0, 0.25f));
             // CreateATestRect(new Vector3(-1f, 0, 0f), 1);
             // CreateATestRect(new Vector3(0f, 0, 1f), 1);
             // CreateATestRect(new Vector3(0f, 0, -1f), 1);
@@ -504,6 +506,17 @@ namespace Physics {
 
                 Vector3 resultantVelocity = co.velocity * timeSpan + co.resolveVelocity;
                 co.Translate(resultantVelocity);
+
+                // 处理空气墙
+                if (!co.flags.HasFlag(CollisionFlags.StaticObject)) {
+                    float curDis = Vector3.Distance(co.position, Vector3.zero);
+                    float nextDis = Vector3.Distance(co.nextPosition, Vector3.zero);
+                    bool curCoInRange = curDis <= borderRadius;
+                    bool nextCoInRange = nextDis < borderRadius;
+                    if (curCoInRange && !nextCoInRange) {
+                        co.nextPosition = (borderRadius - 0.01f) * co.nextPosition.normalized;
+                    }
+                }
 
                 co.ApplyPosition();
 

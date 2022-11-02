@@ -16,6 +16,7 @@ namespace Physics.Collision {
         public void InitCollisionObject();
         public ProjectionPoint GetProjectionPoint(AABBProjectionType projectionType);
         public void Translate(Vector3 diff);
+        public void TranslateTo(Vector3 value);
         public void Rotate(Vector3 diff);
         public void RotateTo(Vector3 value);
         public void Scale(float diff);
@@ -98,6 +99,10 @@ namespace Physics.Collision {
 
         public void Translate(Vector3 diff) {
             nextPosition += diff;
+        }
+
+        public void TranslateTo(Vector3 value) {
+            nextPosition = value;
         }
 
         public void Rotate(Vector3 diff) {
