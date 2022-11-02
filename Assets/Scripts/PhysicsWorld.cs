@@ -41,9 +41,9 @@ namespace Physics {
             horAABBProjList = new List<ProjectionPoint>();
             // verAABBProjList = new List<ProjectionPoint>();
 
-            Test0();
+            // Test0();
             // Test1();
-            // Test2();
+            Test2();
             // Test3();
             // Test4();
         }
@@ -51,12 +51,12 @@ namespace Physics {
         #region Test
 
         private void Test0() {
-            // int range = 50;
-            // for (int i = 0; i < range; i++) {
+            int range = 50;
+            for (int i = 0; i < range; i++) {
                 // CreateATestRect(new Vector3(Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
-            // }
+                CreateATestRect(Vector3.zero);
+            }
 
-            CreateATestRect(Vector3.zero);
             // CreateATestRect(new Vector3(0.25f, 0, 0.25f));
             // CreateATestRect(new Vector3(-1f, 0, 0f), 1);
             // CreateATestRect(new Vector3(0f, 0, 1f), 1);
@@ -82,15 +82,15 @@ namespace Physics {
         }
 
         private void Test2() {
-            // int range = 30;
-            // for (int i = 0; i < range; i++) {
-                // Vector3 spawnPos = new Vector3(
-                    // Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
-                // CreateATestCircle(1, spawnPos);
-            // }
+            int range = 30;
+            for (int i = 0; i < range; i++) {
+                Vector3 spawnPos = new Vector3(
+                    Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
+                CreateATestCircle(1, spawnPos);
+            }
 
-            CreateATestCircle(1, Vector3.zero);
-            CreateATestCircle(1, Vector3.right);
+            // CreateATestCircle(1, Vector3.zero);
+            // CreateATestCircle(1, Vector3.right);
         }
 
         private void Test3() {
@@ -170,25 +170,29 @@ namespace Physics {
 
         void Update()
         {
-            Profiler.BeginSample("[ViE]");
             Tick(Time.deltaTime);
-            Profiler.EndSample();
         }
 
         private void Tick(float timeSpan) {
             tickFrame++;
 
+            Profiler.BeginSample("[ViE] CollisionDetection");
             CollisionDetection(timeSpan);
+            Profiler.EndSample();
             ApplyAcceleration(timeSpan);
-            Resolve(timeSpan);
+            // Resolve(timeSpan);
             ApplyVelocity(timeSpan);
         }
 
         #region Collision
 
         private void CollisionDetection(float timeSpan) {
+            Profiler.BeginSample("[ViE] BroadPhase");
             BroadPhase();
+            Profiler.EndSample();
+            Profiler.BeginSample("[ViE] NarrowPhase");
             NarrowPhase();
+            Profiler.EndSample();
         }
 
         private void BroadPhase() {
@@ -261,21 +265,21 @@ namespace Physics {
             }
 
             // 在竖直方向上检查已确定的对
-            // for (int i = broadphasePair.Count - 1; i >= 0; i--) {
-                // CollisionPair pair = broadphasePair[i];
-                // CollisionObject first = pair.first;
-                // CollisionObject second = pair.second;
-                // float fstStart = first.GetProjectionPoint(AABBProjectionType.VerticalStart).value;
-                // float fstEnd = first.GetProjectionPoint(AABBProjectionType.VerticalEnd).value;
-                // float sndStart = second.GetProjectionPoint(AABBProjectionType.VerticalStart).value;
-                // float sndEnd = second.GetProjectionPoint(AABBProjectionType.VerticalEnd).value;
-                // if (fstStart <= sndStart && sndStart <= fstEnd ||
-                    // sndStart <= fstStart && fstStart <= sndEnd) {
-                    //// 在垂直方向上重叠
-                    // continue;
-                // } else {
-                    // broadphasePair.Remove(pair);
-                // }
+            // for (int i = collisionPairs.Count - 1; i >= 0; i--) {
+            //     CollisionPair pair = collisionPairs[i];
+            //     CollisionObject first = pair.first;
+            //     CollisionObject second = pair.second;
+            //     float fstStart = first.GetProjectionPoint(AABBProjectionType.VerticalStart).value;
+            //     float fstEnd = first.GetProjectionPoint(AABBProjectionType.VerticalEnd).value;
+            //     float sndStart = second.GetProjectionPoint(AABBProjectionType.VerticalStart).value;
+            //     float sndEnd = second.GetProjectionPoint(AABBProjectionType.VerticalEnd).value;
+            //     if (fstStart <= sndStart && sndStart <= fstEnd ||
+            //         sndStart <= fstStart && fstStart <= sndEnd) {
+            //        // 在垂直方向上重叠
+            //         continue;
+            //     } else {
+            //         collisionPairs.Remove(pair);
+            //     }
             // }
 
             // for (int i = 0, count = collisionPairs.Count; i < count; i++) {

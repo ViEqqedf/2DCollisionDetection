@@ -99,7 +99,10 @@ namespace Physics {
             }
 
             float projection = Vector3.Dot(ab, ao) / sqrLength;
-            return a + ab * projection;
+
+            // return a + ab * projection;
+            return new Vector3(a.x + projection * ab.x, a.y + projection * ab.y,
+                a.z + projection * ab.z);
         }
 
         public static Vector3 GetClosestPointToOrigin(Vector3 a, Vector3 b) {
@@ -121,7 +124,8 @@ namespace Physics {
                 return b;
             }
             else {
-                return a + ab * projection;
+                return new Vector3(a.x + projection * ab.x, a.y + projection * ab.y,
+                    a.z + projection * ab.z);
             }
         }
     }
