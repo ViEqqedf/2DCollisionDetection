@@ -9,6 +9,7 @@ using Physics.Tool;
 using UnityEngine;
 using UnityEngine.Profiling;
 using CollisionFlags = Physics.Collision.CollisionFlags;
+using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
 
 namespace Physics {
@@ -43,9 +44,9 @@ namespace Physics {
             // horAABBProjList = new List<ProjectionPoint>();
             verAABBProjList = new List<ProjectionPoint>();
 
-            // Test0();
+            Test0();
             // Test1();
-            Test2();
+            // Test2();
             // Test3();
             // Test4();
         }
@@ -53,10 +54,15 @@ namespace Physics {
         #region Test
 
         private void Test0() {
-            int range = 50;
+            int range = 10;
             for (int i = 0; i < range; i++) {
                 // CreateATestRect(new Vector3(Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
                 CreateATestRect(Vector3.zero);
+                // CreateACustomShape(new Vector3[] {
+                    // new Vector3(-2, 0, 0), new Vector3(0, 0, 1), new Vector3(1, 0, 1),
+                    // new Vector3(2, 0, 0), new Vector3(2, 0, -2), new Vector3(0, 0, -5),
+                    // new Vector3(-1, 0, -6), new Vector3(-2, 0, -3)},
+                    // Vector3.zero, 0);
             }
 
             // CreateATestRect(new Vector3(0f, 0, 0f));
@@ -84,7 +90,7 @@ namespace Physics {
         }
 
         private void Test2() {
-            int range = 30;
+            int range = 140;
             for (int i = 0; i < range; i++) {
                 // Vector3 spawnPos = new Vector3(
                     // Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
@@ -187,7 +193,7 @@ namespace Physics {
             ApplyAcceleration(timeSpan);
             Profiler.EndSample();
             Profiler.BeginSample("[ViE] Resolve");
-            Resolve(timeSpan);
+            // Resolve(timeSpan);
             Profiler.EndSample();
             Profiler.BeginSample("[ViE] ApplyVelocity");
             ApplyVelocity(timeSpan);
@@ -302,6 +308,8 @@ namespace Physics {
         }
 
         private void NarrowPhase() {
+            // Stopwatch stopwatch = new Stopwatch();
+            // stopwatch.Restart();
             for (int i = collisionPairs.Count - 1; i >= 0; i--) {
                 CollisionPair pair = collisionPairs[i];
                 CollisionObject fst = pair.first;
@@ -347,6 +355,9 @@ namespace Physics {
                     // Debug.Log($"{tickFrame} {fst.id}与{snd.id}窄检测碰撞，穿透向量为{pair.penetrateVec}，长度为{pair.penetrateVec.magnitude}");
                 }
             }
+
+            // stopwatch.Stop();
+            // UnityEngine.Debug.Log("times " + stopwatch.ElapsedMilliseconds);
         }
 
         private bool GJK(CollisionObject fst, CollisionObject snd, List<Vector3> simplex) {
@@ -566,6 +577,7 @@ namespace Physics {
         }
 
         public bool RemoveCollisionObject(CollisionObject collisionObject) {
+
             collisionList.Remove(collisionObject);
             return true;
         }
