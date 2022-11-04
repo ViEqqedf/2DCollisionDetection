@@ -2,7 +2,7 @@
 using Physics.Collision;
 using UnityEngine;
 
-namespace Physics {
+namespace Physics.Tool {
     public static class PhysicsTool {
         #region Old
 

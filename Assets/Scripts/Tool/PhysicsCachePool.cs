@@ -3,7 +3,7 @@ using Physics.Collision;
 using Physics.Collision.Model;
 using UnityEngine;
 
-namespace Physics {
+namespace Physics.Tool {
     public static class PhysicsCachePool {
         public static Stack<CollisionPair> collisionPairPool = new Stack<CollisionPair>();
         public static Stack<SimplexEdge> simplexEdgePool = new Stack<SimplexEdge>();
@@ -22,6 +22,11 @@ namespace Physics {
             } else {
                 return new CollisionPair();
             }
+        }
+
+        public static void RecycleCollisionPair(CollisionPair pair) {
+            collisionPairPool.Push(pair);
+            collisionPairCacheCount++;
         }
 
         public static void RecycleCollisionPair(List<CollisionPair> pairs) {
