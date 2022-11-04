@@ -33,8 +33,8 @@ var class_physics_1_1_physics_world =
     [ "collisionList", "class_physics_1_1_physics_world.html#ac105e4ff292de64393142193747a739b", null ],
     [ "collisionPairs", "class_physics_1_1_physics_world.html#a7ba329785d133103a5413fbe51252840", null ],
     [ "epsilon", "class_physics_1_1_physics_world.html#ab867c8bcfe9a9f359aac6f7fb70ffabb", null ],
-    [ "horAABBProjList", "class_physics_1_1_physics_world.html#a11a1ef8cca87da54b8ef6233fdadf60e", null ],
     [ "maxIterCount", "class_physics_1_1_physics_world.html#a2661091d8cbac4f98bc8a69fab74d2ef", null ],
     [ "simplexList", "class_physics_1_1_physics_world.html#aff0d4eaa68bab96dc8e9c2dd192c9563", null ],
-    [ "tickFrame", "class_physics_1_1_physics_world.html#a4ff760625979980505e432ad8acdc499", null ]
+    [ "tickFrame", "class_physics_1_1_physics_world.html#a4ff760625979980505e432ad8acdc499", null ],
+    [ "verAABBProjList", "class_physics_1_1_physics_world.html#a59424344c6e5db82562af5fd2c2322e8", null ]
 ];

@@ -1,0 +1,8 @@
+<map id="Physics.Tool.PhysicsCachePool.RecycleCollisionPair" name="Physics.Tool.PhysicsCachePool.RecycleCollisionPair">
+<area shape="rect" id="node1" title=" " alt="" coords="984,39,1171,80"/>
+<area shape="rect" id="node2" href="$class_physics_1_1_physics_world.html#a9fb900baebfc430f003c9810c5ffb676" title=" " alt="" coords="741,5,932,47"/>
+<area shape="rect" id="node6" href="$class_physics_1_1_physics_world.html#ab505479deb9b79c8d1c5edd3957c8e49" title=" " alt="" coords="737,71,936,112"/>
+<area shape="rect" id="node3" href="$class_physics_1_1_physics_world.html#a516968c71000684ea688d080074d0ec8" title=" " alt="" coords="483,39,689,80"/>
+<area shape="rect" id="node4" href="$class_physics_1_1_physics_world.html#adc2e766cfd2414718237d76064130c7f" title=" " alt="" coords="252,46,435,73"/>
+<area shape="rect" id="node5" href="$class_physics_1_1_physics_world.html#a21bcd3d27cec2fa8cf00d28be40ae413" title=" " alt="" coords="5,46,204,73"/>
+</map>

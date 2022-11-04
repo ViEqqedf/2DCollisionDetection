@@ -1,4 +1,4 @@
-.TH "Physics.PhysicsWorld" 3 "2022年 十一月 2日 星期三" "PhysicsWorld" \" -*- nroff -*-
+.TH "Physics.PhysicsWorld" 3 "2022年 十一月 4日 星期五" "PhysicsWorld" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -129,7 +129,7 @@ Physics.PhysicsWorld
 .RI "Dictionary< int, \fBProjectionPoint\fP > \fBbroadStartPoints\fP"
 .br
 .ti -1c
-.RI "List< \fBProjectionPoint\fP > \fBhorAABBProjList\fP"
+.RI "List< \fBProjectionPoint\fP > \fBverAABBProjList\fP"
 .br
 .ti -1c
 .RI "List< Vector3 > \fBsimplexList\fP = new List<Vector3>()"
@@ -209,13 +209,13 @@ Physics.PhysicsWorld
 
 .SS "float Physics\&.PhysicsWorld\&.epsilon = 0\&.0001f"
 
-.SS "List<\fBProjectionPoint\fP> Physics\&.PhysicsWorld\&.horAABBProjList\fC [private]\fP"
-
 .SS "int Physics\&.PhysicsWorld\&.maxIterCount = 10"
 
 .SS "List<Vector3> Physics\&.PhysicsWorld\&.simplexList = new List<Vector3>()\fC [private]\fP"
 
 .SS "int Physics\&.PhysicsWorld\&.tickFrame = 0"
+
+.SS "List<\fBProjectionPoint\fP> Physics\&.PhysicsWorld\&.verAABBProjList\fC [private]\fP"
 
 
 .SH "作者"

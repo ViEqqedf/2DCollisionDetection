@@ -1,6 +1,6 @@
 <map id="Physics.Collision.CollisionObject.ApplyRotation" name="Physics.Collision.CollisionObject.ApplyRotation">
-<area shape="rect" id="node1" title=" " alt="" coords="476,39,653,80"/>
-<area shape="rect" id="node2" href="$class_physics_1_1_collision_1_1_collision_object.html#ae7ca75e378460be4294e71af9aa37001" title=" " alt="" coords="251,5,428,47"/>
-<area shape="rect" id="node4" href="$class_physics_1_1_collision_1_1_collision_object.html#aadfcbb13752f3b48cee485d349a2580f" title=" " alt="" coords="251,71,428,112"/>
-<area shape="rect" id="node3" href="$class_physics_1_1_collision_object_proxy.html#aa424c4b24d967e4236bd6c16168d563d" title=" " alt="" coords="5,5,203,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="469,39,647,80"/>
+<area shape="rect" id="node2" href="$class_physics_1_1_collision_1_1_collision_object.html#ae7ca75e378460be4294e71af9aa37001" title=" " alt="" coords="244,5,421,47"/>
+<area shape="rect" id="node4" href="$class_physics_1_1_collision_1_1_collision_object.html#aadfcbb13752f3b48cee485d349a2580f" title=" " alt="" coords="244,71,421,112"/>
+<area shape="rect" id="node3" href="$class_physics_1_1_test_1_1_collision_object_proxy.html#a709916799de5f459f7278cbfb24daf34" title=" " alt="" coords="5,5,196,47"/>
 </map>

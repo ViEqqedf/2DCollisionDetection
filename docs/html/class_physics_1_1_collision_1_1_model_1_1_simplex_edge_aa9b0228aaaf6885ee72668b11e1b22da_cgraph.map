@@ -1,5 +1,5 @@
 <map id="Physics.Collision.Model.SimplexEdge.CreateInitEdge" name="Physics.Collision.Model.SimplexEdge.CreateInitEdge">
 <area shape="rect" id="node1" title=" " alt="" coords="5,39,196,80"/>
-<area shape="rect" id="node2" href="$class_physics_1_1_physics_cache_pool.html#a68b6244567d48376ad3a2e5188e73241" title=" " alt="" coords="274,5,462,47"/>
-<area shape="rect" id="node3" href="$class_physics_1_1_physics_tool.html#a2b923d3cf606c6980a6b26c5b7bfc80f" title=" " alt="" coords="244,71,492,112"/>
+<area shape="rect" id="node2" href="$class_physics_1_1_tool_1_1_physics_cache_pool.html#a5632346a5a6c8029427ce1ec41cc1edc" title=" " alt="" coords="244,5,431,47"/>
+<area shape="rect" id="node3" href="$class_physics_1_1_tool_1_1_physics_tool.html#ae7347b7ed11fb2a7a4e78afe07d8a4d2" title=" " alt="" coords="249,71,425,112"/>
 </map>

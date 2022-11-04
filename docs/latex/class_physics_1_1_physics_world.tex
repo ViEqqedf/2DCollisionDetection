@@ -96,13 +96,13 @@ void \mbox{\hyperlink{class_physics_1_1_physics_world_ab2cb96f774604513627f530a7
 \doxysubsection*{Private 属性}
 \begin{DoxyCompactItemize}
 \item 
-List$<$ \mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_pair}{Collision\+Pair}} $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_a7ba329785d133103a5413fbe51252840}{collision\+Pairs}}
+List$<$ \mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_collision_pair}{Collision\+Pair}} $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_a7ba329785d133103a5413fbe51252840}{collision\+Pairs}}
 \item 
 List$<$ \mbox{\hyperlink{class_physics_1_1_collision_1_1_projection_point}{Projection\+Point}} $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_a832131ca70d01cbcd70ac6c9df20ae23}{broad\+Scan\+List}}
 \item 
 Dictionary$<$ int, \mbox{\hyperlink{class_physics_1_1_collision_1_1_projection_point}{Projection\+Point}} $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_a218564a397a81e1d45c56fc006bc530a}{broad\+Start\+Points}}
 \item 
-List$<$ \mbox{\hyperlink{class_physics_1_1_collision_1_1_projection_point}{Projection\+Point}} $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_a11a1ef8cca87da54b8ef6233fdadf60e}{hor\+AABBProj\+List}}
+List$<$ \mbox{\hyperlink{class_physics_1_1_collision_1_1_projection_point}{Projection\+Point}} $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_a59424344c6e5db82562af5fd2c2322e8}{ver\+AABBProj\+List}}
 \item 
 List$<$ Vector3 $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_aff0d4eaa68bab96dc8e9c2dd192c9563}{simplex\+List}} = new List$<$Vector3$>$()
 \end{DoxyCompactItemize}
@@ -119,8 +119,7 @@ List$<$ Vector3 $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_aff0d4eaa68
 
 实现了 \mbox{\hyperlink{interface_physics_1_1_i_physics_world_a2f350fc5331b14dac969f58ddaeb7c10}{Physics.\+IPhysics\+World}}.
 
-函数调用图\+:
-\nopagebreak
+函数调用图\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -154,8 +153,7 @@ List$<$ Vector3 $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_aff0d4eaa68
 \doxysubsubsection{\texorpdfstring{ApplyVelocity()}{ApplyVelocity()}}
 {\footnotesize\ttfamily void Physics.\+Physics\+World.\+Apply\+Velocity (\begin{DoxyParamCaption}\item[{float}]{time\+Span }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
-函数调用图\+:
-\nopagebreak
+函数调用图\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -175,7 +173,8 @@ List$<$ Vector3 $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_aff0d4eaa68
 \doxysubsubsection{\texorpdfstring{BroadPhase()}{BroadPhase()}}
 {\footnotesize\ttfamily void Physics.\+Physics\+World.\+Broad\+Phase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
-函数调用图\+:\nopagebreak
+函数调用图\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -216,8 +215,7 @@ List$<$ Vector3 $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_aff0d4eaa68
 \doxysubsubsection{\texorpdfstring{CreateACustomShape()}{CreateACustomShape()}}
 {\footnotesize\ttfamily void Physics.\+Physics\+World.\+Create\+ACustom\+Shape (\begin{DoxyParamCaption}\item[{Vector3\mbox{[}$\,$\mbox{]}}]{vertices,  }\item[{Vector3}]{pos,  }\item[{int}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-函数调用图\+:
-\nopagebreak
+函数调用图\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -237,8 +235,7 @@ List$<$ Vector3 $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_aff0d4eaa68
 \doxysubsubsection{\texorpdfstring{CreateATestCircle()}{CreateATestCircle()}}
 {\footnotesize\ttfamily void Physics.\+Physics\+World.\+Create\+ATest\+Circle (\begin{DoxyParamCaption}\item[{float}]{radius,  }\item[{Vector3}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-函数调用图\+:
-\nopagebreak
+函数调用图\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -259,8 +256,7 @@ List$<$ Vector3 $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_aff0d4eaa68
 \doxysubsubsection{\texorpdfstring{CreateATestRect()}{CreateATestRect()}}
 {\footnotesize\ttfamily void Physics.\+Physics\+World.\+Create\+ATest\+Rect (\begin{DoxyParamCaption}\item[{Vector3}]{pos,  }\item[{int}]{level = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-函数调用图\+:
-\nopagebreak
+函数调用图\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -335,7 +331,8 @@ List$<$ Vector3 $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_aff0d4eaa68
 \doxysubsubsection{\texorpdfstring{FindNextDirection()}{FindNextDirection()}}
 {\footnotesize\ttfamily Vector3 Physics.\+Physics\+World.\+Find\+Next\+Direction (\begin{DoxyParamCaption}\item[{List$<$ Vector3 $>$}]{simplex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
-函数调用图\+:\nopagebreak
+函数调用图\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -355,7 +352,8 @@ List$<$ Vector3 $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_aff0d4eaa68
 \doxysubsubsection{\texorpdfstring{GJK()}{GJK()}}
 {\footnotesize\ttfamily bool Physics.\+Physics\+World.\+GJK (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object}{Collision\+Object}}}]{fst,  }\item[{\mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_object}{Collision\+Object}}}]{snd,  }\item[{List$<$ Vector3 $>$}]{simplex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
-函数调用图\+:\nopagebreak
+函数调用图\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -413,13 +411,6 @@ List$<$ Vector3 $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_aff0d4eaa68
 \includegraphics[width=350pt]{class_physics_1_1_physics_world_a9cb8b9d6d48d80e26976deb605e14295_cgraph}
 \end{center}
 \end{figure}
-这是这个函数的调用关系图\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_physics_1_1_physics_world_a9cb8b9d6d48d80e26976deb605e14295_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_physics_1_1_physics_world_a8604509cc962bc5d9c3f4089b06f94b2}\label{class_physics_1_1_physics_world_a8604509cc962bc5d9c3f4089b06f94b2}} 
 \index{Physics.PhysicsWorld@{Physics.PhysicsWorld}!Start@{Start}}
 \index{Start@{Start}!Physics.PhysicsWorld@{Physics.PhysicsWorld}}
@@ -460,7 +451,8 @@ List$<$ Vector3 $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_aff0d4eaa68
 \doxysubsubsection{\texorpdfstring{SweepAndPrune()}{SweepAndPrune()}}
 {\footnotesize\ttfamily void Physics.\+Physics\+World.\+Sweep\+And\+Prune (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
-函数调用图\+:\nopagebreak
+函数调用图\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -480,12 +472,18 @@ List$<$ Vector3 $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_aff0d4eaa68
 \doxysubsubsection{\texorpdfstring{Test0()}{Test0()}}
 {\footnotesize\ttfamily void Physics.\+Physics\+World.\+Test0 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
-函数调用图\+:
-\nopagebreak
+函数调用图\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_physics_1_1_physics_world_adf5c68828b28299a9d85e6dd326a1653_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_physics_1_1_physics_world_adf5c68828b28299a9d85e6dd326a1653_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_physics_1_1_physics_world_a00da1d0a80a537bf0f30ec9a1f00cbd6}\label{class_physics_1_1_physics_world_a00da1d0a80a537bf0f30ec9a1f00cbd6}} 
@@ -494,8 +492,7 @@ List$<$ Vector3 $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_aff0d4eaa68
 \doxysubsubsection{\texorpdfstring{Test1()}{Test1()}}
 {\footnotesize\ttfamily void Physics.\+Physics\+World.\+Test1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
-函数调用图\+:
-\nopagebreak
+函数调用图\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -508,20 +505,11 @@ List$<$ Vector3 $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_aff0d4eaa68
 \doxysubsubsection{\texorpdfstring{Test2()}{Test2()}}
 {\footnotesize\ttfamily void Physics.\+Physics\+World.\+Test2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
-函数调用图\+:
-\nopagebreak
+函数调用图\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_physics_1_1_physics_world_a3e682ad39d73a462476dcc8cf707b4b7_cgraph}
-\end{center}
-\end{figure}
-这是这个函数的调用关系图\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_physics_1_1_physics_world_a3e682ad39d73a462476dcc8cf707b4b7_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_physics_1_1_physics_world_a23a499269c2dba922ca4a81579b244ae}\label{class_physics_1_1_physics_world_a23a499269c2dba922ca4a81579b244ae}} 
@@ -544,8 +532,7 @@ List$<$ Vector3 $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_aff0d4eaa68
 \doxysubsubsection{\texorpdfstring{Test4()}{Test4()}}
 {\footnotesize\ttfamily void Physics.\+Physics\+World.\+Test4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
-函数调用图\+:
-\nopagebreak
+函数调用图\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -618,19 +605,13 @@ List$<$ Vector3 $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_aff0d4eaa68
 \index{Physics.PhysicsWorld@{Physics.PhysicsWorld}!collisionPairs@{collisionPairs}}
 \index{collisionPairs@{collisionPairs}!Physics.PhysicsWorld@{Physics.PhysicsWorld}}
 \doxysubsubsection{\texorpdfstring{collisionPairs}{collisionPairs}}
-{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_physics_1_1_collision_1_1_collision_pair}{Collision\+Pair}}$>$ Physics.\+Physics\+World.\+collision\+Pairs\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_physics_1_1_collision_1_1_model_1_1_collision_pair}{Collision\+Pair}}$>$ Physics.\+Physics\+World.\+collision\+Pairs\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{class_physics_1_1_physics_world_ab867c8bcfe9a9f359aac6f7fb70ffabb}\label{class_physics_1_1_physics_world_ab867c8bcfe9a9f359aac6f7fb70ffabb}} 
 \index{Physics.PhysicsWorld@{Physics.PhysicsWorld}!epsilon@{epsilon}}
 \index{epsilon@{epsilon}!Physics.PhysicsWorld@{Physics.PhysicsWorld}}
 \doxysubsubsection{\texorpdfstring{epsilon}{epsilon}}
 {\footnotesize\ttfamily float Physics.\+Physics\+World.\+epsilon = 0.\+0001f}
-
-\mbox{\Hypertarget{class_physics_1_1_physics_world_a11a1ef8cca87da54b8ef6233fdadf60e}\label{class_physics_1_1_physics_world_a11a1ef8cca87da54b8ef6233fdadf60e}} 
-\index{Physics.PhysicsWorld@{Physics.PhysicsWorld}!horAABBProjList@{horAABBProjList}}
-\index{horAABBProjList@{horAABBProjList}!Physics.PhysicsWorld@{Physics.PhysicsWorld}}
-\doxysubsubsection{\texorpdfstring{horAABBProjList}{horAABBProjList}}
-{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_physics_1_1_collision_1_1_projection_point}{Projection\+Point}}$>$ Physics.\+Physics\+World.\+hor\+AABBProj\+List\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{class_physics_1_1_physics_world_a2661091d8cbac4f98bc8a69fab74d2ef}\label{class_physics_1_1_physics_world_a2661091d8cbac4f98bc8a69fab74d2ef}} 
 \index{Physics.PhysicsWorld@{Physics.PhysicsWorld}!maxIterCount@{maxIterCount}}
@@ -649,6 +630,12 @@ List$<$ Vector3 $>$ \mbox{\hyperlink{class_physics_1_1_physics_world_aff0d4eaa68
 \index{tickFrame@{tickFrame}!Physics.PhysicsWorld@{Physics.PhysicsWorld}}
 \doxysubsubsection{\texorpdfstring{tickFrame}{tickFrame}}
 {\footnotesize\ttfamily int Physics.\+Physics\+World.\+tick\+Frame = 0}
+
+\mbox{\Hypertarget{class_physics_1_1_physics_world_a59424344c6e5db82562af5fd2c2322e8}\label{class_physics_1_1_physics_world_a59424344c6e5db82562af5fd2c2322e8}} 
+\index{Physics.PhysicsWorld@{Physics.PhysicsWorld}!verAABBProjList@{verAABBProjList}}
+\index{verAABBProjList@{verAABBProjList}!Physics.PhysicsWorld@{Physics.PhysicsWorld}}
+\doxysubsubsection{\texorpdfstring{verAABBProjList}{verAABBProjList}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_physics_1_1_collision_1_1_projection_point}{Projection\+Point}}$>$ Physics.\+Physics\+World.\+ver\+AABBProj\+List\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

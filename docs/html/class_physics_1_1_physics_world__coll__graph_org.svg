@@ -29,7 +29,7 @@
 <text text-anchor="start" x="30.5" y="-565.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; Dictionary&lt; int, Projection</text>
 <text text-anchor="start" x="30.5" y="-554.5" font-family="Helvetica,sans-Serif" font-size="10.00">Point &gt; broadStartPoints</text>
 <text text-anchor="start" x="30.5" y="-543.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; List&lt; ProjectionPoint</text>
-<text text-anchor="start" x="30.5" y="-532.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &gt; horAABBProjList</text>
+<text text-anchor="start" x="30.5" y="-532.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &gt; verAABBProjList</text>
 <text text-anchor="start" x="30.5" y="-521.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; List&lt; Vector3 &gt; simplexList</text>
 <polyline fill="none" stroke="black" points="22.5,-514.5 199.5,-514.5 "/>
 <text text-anchor="start" x="30.5" y="-502.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ void CreateACustomShape</text>
