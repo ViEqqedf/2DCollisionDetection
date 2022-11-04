@@ -1,0 +1,93 @@
+.TH "Physics.Tool.PhysicsTool" 3 "2022年 十一月 4日 星期五" "PhysicsWorld" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Physics.Tool.PhysicsTool
+.SH SYNOPSIS
+.br
+.PP
+.SS "静态 Public 成员函数"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBIsPointInPolygon\fP (List< Vector3 > vertices, Vector3 point)"
+.br
+.RI "检查点是否在一个多边形中 "
+.ti -1c
+.RI "static bool \fBIsPointOnSegment\fP (Vector3 lineStart, Vector3 lineEnd, Vector3 point)"
+.br
+.RI "点是否在线段上 "
+.ti -1c
+.RI "static bool \fBIsPointInTriangle\fP (List< Vector3 > points, Vector3 point)"
+.br
+.RI "检查点是否在三角形内 "
+.ti -1c
+.RI "static Vector3 \fBGetPerpendicularToOrigin\fP (Vector3 a, Vector3 b)"
+.br
+.ti -1c
+.RI "static Vector3 \fBGetClosestPointToOrigin\fP (Vector3 a, Vector3 b)"
+.br
+.in -1c
+.SH "成员函数说明"
+.PP 
+.SS "static Vector3 Physics\&.Tool\&.PhysicsTool\&.GetClosestPointToOrigin (Vector3 a, Vector3 b)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "static Vector3 Physics\&.Tool\&.PhysicsTool\&.GetPerpendicularToOrigin (Vector3 a, Vector3 b)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "static bool Physics\&.Tool\&.PhysicsTool\&.IsPointInPolygon (List< Vector3 > vertices, Vector3 point)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+检查点是否在一个多边形中 
+.PP
+\fB参数\fP
+.RS 4
+\fIvertices\fP 点集，顺序要求能够从头到尾连接闭环
+.br
+\fIpoint\fP 要检查的点
+.RE
+.PP
+\fB返回\fP
+.RS 4
+.RE
+.PP
+
+.SS "static bool Physics\&.Tool\&.PhysicsTool\&.IsPointInTriangle (List< Vector3 > points, Vector3 point)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+检查点是否在三角形内 
+.PP
+\fB参数\fP
+.RS 4
+\fIpoints\fP 点集
+.br
+\fIpoint\fP 要检查的点
+.RE
+.PP
+\fB返回\fP
+.RS 4
+.RE
+.PP
+
+.SS "static bool Physics\&.Tool\&.PhysicsTool\&.IsPointOnSegment (Vector3 lineStart, Vector3 lineEnd, Vector3 point)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+点是否在线段上 
+.PP
+\fB参数\fP
+.RS 4
+\fIlineStart\fP 线段起点
+.br
+\fIlineEnd\fP 线段终点
+.br
+\fIpoint\fP 检查点
+.RE
+.PP
+\fB返回\fP
+.RS 4
+.RE
+.PP
+
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 PhysicsWorld 的 源代码自动生成\&.

@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 1217;
+var viewWidth = 1216;
 var viewHeight = 39;
 var sectionId = 'dynsection-2';
 </script>
@@ -54,32 +54,32 @@ var sectionId = 'dynsection-2';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>Physics.Collision.Model.SimplexEdge.Clear</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-35 1213,-35 1213,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-35 1212,-35 1212,4 -4,4"/>
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="1084,-0.5 1084,-30.5 1209,-30.5 1209,-0.5 1084,-0.5"/>
-<text text-anchor="start" x="1092" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">Physics.Collision.Model.</text>
-<text text-anchor="middle" x="1146.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">SimplexEdge.Clear</text>
+<polygon fill="#bfbfbf" stroke="black" points="1083,-0.5 1083,-30.5 1208,-30.5 1208,-0.5 1083,-0.5"/>
+<text text-anchor="start" x="1091" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">Physics.Collision.Model.</text>
+<text text-anchor="middle" x="1145.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">SimplexEdge.Clear</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="class_physics_1_1_physics_cache_pool.html#ad31fe94e7d5fc45379a922481b6f6739" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="907,-0.5 907,-30.5 1048,-30.5 1048,-0.5 907,-0.5"/>
-<text text-anchor="start" x="915" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">Physics.PhysicsCachePool.</text>
-<text text-anchor="middle" x="977.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">RecycleSimplexEdge</text>
+<g id="a_node2"><a xlink:href="class_physics_1_1_tool_1_1_physics_cache_pool.html#adb2db95c9b826ec9e9b3a31025adc8c6" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="907,-0.5 907,-30.5 1047,-30.5 1047,-0.5 907,-0.5"/>
+<text text-anchor="start" x="915" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">Physics.Tool.PhysicsCache</text>
+<text text-anchor="middle" x="977" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Pool.RecycleSimplexEdge</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M1073.59,-15.5C1065.14,-15.5 1056.54,-15.5 1048.12,-15.5"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1073.79,-19 1083.79,-15.5 1073.79,-12 1073.79,-19"/>
+<path fill="none" stroke="midnightblue" d="M1072.72,-15.5C1064.23,-15.5 1055.58,-15.5 1047.13,-15.5"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1072.97,-19 1082.97,-15.5 1072.97,-12 1072.97,-19"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
@@ -93,8 +93,8 @@ var sectionId = 'dynsection-2';
 <!-- Node2&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M896.38,-15.5C887.93,-15.5 879.39,-15.5 871.1,-15.5"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="896.63,-19 906.63,-15.5 896.63,-12 896.63,-19"/>
+<path fill="none" stroke="midnightblue" d="M896.58,-15.5C888.13,-15.5 879.58,-15.5 871.28,-15.5"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="896.83,-19 906.83,-15.5 896.83,-12 896.83,-19"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">

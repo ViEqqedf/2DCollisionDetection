@@ -1,0 +1,9 @@
+<map id="Physics.Test.CollisionObjectProxy" name="Physics.Test.CollisionObjectProxy">
+<area shape="rect" id="node1" title=" " alt="" coords="167,1239,358,1375"/>
+<area shape="rect" id="node2" title=" " alt="" coords="185,754,297,831"/>
+<area shape="rect" id="node3" href="$class_physics_1_1_collision_1_1_collision_object.html" title=" " alt="" coords="322,409,558,1176"/>
+<area shape="rect" id="node4" href="$interface_physics_1_1_collision_1_1_i_collision_object.html" title=" " alt="" coords="5,5,211,347"/>
+<area shape="rect" id="node5" href="$class_physics_1_1_collision_1_1_shape_1_1_collision_shape.html" title=" " alt="" coords="235,27,469,325"/>
+<area shape="rect" id="node6" title=" " alt="" coords="493,137,565,215"/>
+<area shape="rect" id="node7" title=" " alt="" coords="589,137,656,215"/>
+</map>

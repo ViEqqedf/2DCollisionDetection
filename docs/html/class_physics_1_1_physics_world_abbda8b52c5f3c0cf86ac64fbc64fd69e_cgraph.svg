@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 530;
+var viewWidth = 512;
 var viewHeight = 220;
 var sectionId = 'dynsection-23';
 </script>
@@ -54,7 +54,7 @@ var sectionId = 'dynsection-23';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>Physics.PhysicsWorld.GJK</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-216 526,-216 526,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-216 508,-216 508,4 -4,4"/>
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
@@ -99,26 +99,26 @@ var sectionId = 'dynsection-23';
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="class_physics_1_1_physics_tool.html#a76623f29e2f14991ed006a429914f55a" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="361,-110.5 361,-140.5 522,-140.5 522,-110.5 361,-110.5"/>
-<text text-anchor="start" x="369" y="-128.5" font-family="Helvetica,sans-Serif" font-size="10.00">Physics.PhysicsTool.GetClosest</text>
-<text text-anchor="middle" x="441.5" y="-117.5" font-family="Helvetica,sans-Serif" font-size="10.00">PointToOrigin</text>
+<g id="a_node4"><a xlink:href="class_physics_1_1_tool_1_1_physics_tool.html#a7b559484401a2cc211847f49cff64dbc" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="366.5,-110.5 366.5,-140.5 498.5,-140.5 498.5,-110.5 366.5,-110.5"/>
+<text text-anchor="start" x="374.5" y="-128.5" font-family="Helvetica,sans-Serif" font-size="10.00">Physics.Tool.PhysicsTool.</text>
+<text text-anchor="middle" x="432.5" y="-117.5" font-family="Helvetica,sans-Serif" font-size="10.00">GetClosestPointToOrigin</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge4" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M137.12,-107.51C196.93,-111.06 284.67,-116.26 350.42,-120.16"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="350.59,-123.67 360.78,-120.77 351,-116.69 350.59,-123.67"/>
+<path fill="none" stroke="midnightblue" d="M137.16,-107.61C199.42,-111.4 291.61,-117 356.18,-120.92"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="356.11,-124.42 366.3,-121.54 356.53,-117.44 356.11,-124.42"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="class_physics_1_1_physics_tool.html#a87ade42d134664139753a2fe7da7e7a9" target="_top" xlink:title="检查点是否在三角形内">
-<polygon fill="white" stroke="black" points="178,-44.5 178,-74.5 320,-74.5 320,-44.5 178,-44.5"/>
-<text text-anchor="start" x="186" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">Physics.PhysicsTool.IsPoint</text>
-<text text-anchor="middle" x="249" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">InTriangle</text>
+<g id="a_node5"><a xlink:href="class_physics_1_1_tool_1_1_physics_tool.html#a0945b739fb0d3bb8376e85574a4bc981" target="_top" xlink:title="检查点是否在三角形内">
+<polygon fill="white" stroke="black" points="183,-44.5 183,-74.5 315,-74.5 315,-44.5 183,-44.5"/>
+<text text-anchor="start" x="191" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">Physics.Tool.PhysicsTool.</text>
+<text text-anchor="middle" x="249" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">IsPointInTriangle</text>
 </a>
 </g>
 </g>
@@ -146,24 +146,24 @@ var sectionId = 'dynsection-23';
 <!-- Node3&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node3&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M317.7,-139.68C328.43,-138.44 339.66,-137.15 350.8,-135.86"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="351.44,-139.31 360.98,-134.68 350.64,-132.35 351.44,-139.31"/>
+<path fill="none" stroke="midnightblue" d="M317.58,-139.31C330.15,-137.78 343.35,-136.18 356.13,-134.64"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="356.76,-138.08 366.27,-133.41 355.92,-131.14 356.76,-138.08"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
 <g id="a_node7"><a xlink:href="class_physics_1_1_collision_1_1_collision_object.html#a28cc343d91add7b15402133b83d76b27" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="370,-0.5 370,-30.5 513,-30.5 513,-0.5 370,-0.5"/>
-<text text-anchor="start" x="378" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">Physics.Collision.Collision</text>
-<text text-anchor="middle" x="441.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Object.GetFarthestPointInDir</text>
+<polygon fill="white" stroke="black" points="361,-0.5 361,-30.5 504,-30.5 504,-0.5 361,-0.5"/>
+<text text-anchor="start" x="369" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">Physics.Collision.Collision</text>
+<text text-anchor="middle" x="432.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Object.GetFarthestPointInDir</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node7 -->
 <g id="edge7" class="edge">
 <title>Node6&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M325.02,-15.5C336.45,-15.5 348.3,-15.5 359.85,-15.5"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="359.9,-19 369.9,-15.5 359.9,-12 359.9,-19"/>
+<path fill="none" stroke="midnightblue" d="M325.13,-15.5C333.52,-15.5 342.1,-15.5 350.55,-15.5"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="350.79,-19 360.79,-15.5 350.79,-12 350.79,-19"/>
 </g>
 </g>
 </svg>

@@ -1,6 +1,7 @@
 var namespace_physics_1_1_collision_1_1_model =
 [
     [ "AABB", "class_physics_1_1_collision_1_1_model_1_1_a_a_b_b.html", "class_physics_1_1_collision_1_1_model_1_1_a_a_b_b" ],
+    [ "CollisionPair", "class_physics_1_1_collision_1_1_model_1_1_collision_pair.html", "class_physics_1_1_collision_1_1_model_1_1_collision_pair" ],
     [ "Edge", "class_physics_1_1_collision_1_1_model_1_1_edge.html", "class_physics_1_1_collision_1_1_model_1_1_edge" ],
     [ "SimplexEdge", "class_physics_1_1_collision_1_1_model_1_1_simplex_edge.html", "class_physics_1_1_collision_1_1_model_1_1_simplex_edge" ],
     [ "AABBProjectionType", "namespace_physics_1_1_collision_1_1_model.html#a536ffeeaef5a92e82e7cf53894167de1", [
