@@ -3,7 +3,7 @@ using Physics.Collision;
 using Physics.Collision.Shape;
 using UnityEngine;
 
-namespace Physics {
+namespace Physics.Test {
     public class CollisionObjectProxy : MonoBehaviour {
         public CollisionObject target;
         public ShapeType shape;
@@ -44,9 +44,17 @@ namespace Physics {
                         target.Scale(-1);
                     }
 
-                    if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) ||
-                        Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S)) {
-                        target.SetVelocity(Vector3.zero);
+                    if (Input.GetKeyUp(KeyCode.A)) {
+                        target.AddVelocity(-velocity * Vector3.left);
+                    }
+                    if (Input.GetKeyUp(KeyCode.D)) {
+                        target.AddVelocity(-velocity * Vector3.right);
+                    }
+                    if (Input.GetKeyUp(KeyCode.W)) {
+                        target.AddVelocity(-velocity * Vector3.forward);
+                    }
+                    if (Input.GetKeyUp(KeyCode.S)) {
+                        target.AddVelocity(-velocity * Vector3.back);
                     }
                 } else if (nP == 2) {
                     if (Input.GetKeyDown(KeyCode.LeftArrow)) {
@@ -60,6 +68,19 @@ namespace Physics {
                     }
                     if (Input.GetKeyDown(KeyCode.DownArrow)) {
                         target.AddVelocity(velocity * Vector3.back);
+                    }
+
+                    if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+                        target.AddVelocity(-velocity * Vector3.left);
+                    }
+                    if (Input.GetKeyDown(KeyCode.RightArrow)) {
+                        target.AddVelocity(-velocity * Vector3.right);
+                    }
+                    if (Input.GetKeyDown(KeyCode.UpArrow)) {
+                        target.AddVelocity(-velocity * Vector3.forward);
+                    }
+                    if (Input.GetKeyDown(KeyCode.DownArrow)) {
+                        target.AddVelocity(-velocity * Vector3.back);
                     }
 
                     if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.DownArrow) ||
