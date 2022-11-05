@@ -56,23 +56,8 @@ namespace CustomPhysics {
         private void Test0() {
             int range = 10;
             for (int i = 0; i < range; i++) {
-                // CreateATestRect(new Vector3(Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
                 CreateATestRect(Vector3.zero);
-                // CreateACustomShape(new Vector3[] {
-                    // new Vector3(-2, 0, 0), new Vector3(0, 0, 1), new Vector3(1, 0, 1),
-                    // new Vector3(2, 0, 0), new Vector3(2, 0, -2), new Vector3(0, 0, -5),
-                    // new Vector3(-1, 0, -6), new Vector3(-2, 0, -3)},
-                    // Vector3.zero, 0);
             }
-
-            // CreateATestRect(new Vector3(0f, 0, 0f));
-            // CreateATestRect(new Vector3(-0.1f, 0, -0.1f), 1);
-            // CreateATestRect(new Vector3(0f, 0, 1f), -1);
-            // CreateATestRect(new Vector3(0f, 0, -1f));
-            // CreateATestRect(new Vector3(0.2f, 0, 0.3f));
-            // CreateATestRect(new Vector3(0.3f, 0, -0.2f));
-            // CreateATestRect(new Vector3(-0.2f, 0, 0.3f));
-            // CreateATestRect(new Vector3(-0.3f, 0, -0.2f));
         }
 
         private void Test1() {
