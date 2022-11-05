@@ -1,18 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Physics.Collision;
-using Physics.Collision.Model;
-using Physics.Collision.Shape;
-using Physics.Test;
-using Physics.Tool;
+using CustomPhysics.Collision;
+using CustomPhysics.Collision.Model;
+using CustomPhysics.Collision.Shape;
+using CustomPhysics.Test;
+using CustomPhysics.Tool;
 using UnityEngine;
 using UnityEngine.Profiling;
-using CollisionFlags = Physics.Collision.CollisionFlags;
+using CollisionFlags = CustomPhysics.Collision.CollisionFlags;
 using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
 
-namespace Physics {
+namespace CustomPhysics {
     public interface IPhysicsWorld {
         public bool AddCollisionObject(CollisionObject collisionObject);
         public bool RemoveCollisionObject(CollisionObject collisionObject);
@@ -134,7 +134,7 @@ namespace Physics {
         }
 
         public void CreateACustomShape(Vector3[] vertices, Vector3 pos, int level) {
-            CollisionShape shape = new Physics.Collision.Shape.CustomShape(vertices);
+            CollisionShape shape = new CustomPhysics.Collision.Shape.CustomShape(vertices);
             CollisionObject co = new CollisionObject(shape, null, pos, 0, level);
             AddCollisionObject(co);
             GameObject go = CreateMesh(co);
@@ -163,14 +163,14 @@ namespace Physics {
         }
 
         public void CreateATestRect(Vector3 pos, int level = 0) {
-            CollisionShape shape = new Physics.Collision.Shape.Rect(1, 1);
+            CollisionShape shape = new CustomPhysics.Collision.Shape.Rect(1, 1);
             CollisionObject co = new CollisionObject(shape, null, pos, 0, level);
             AddCollisionObject(co);
             GameObject go = CreateMesh(co);
         }
 
         public void CreateATestCircle(float radius, Vector3 pos) {
-            CollisionShape shape = new Physics.Collision.Shape.Circle(radius);
+            CollisionShape shape = new CustomPhysics.Collision.Shape.Circle(radius);
             CollisionObject co = new CollisionObject(shape, null, pos);
             AddCollisionObject(co);
             GameObject go = CreateMesh(co);
@@ -193,7 +193,7 @@ namespace Physics {
             ApplyAcceleration(timeSpan);
             Profiler.EndSample();
             Profiler.BeginSample("[ViE] Resolve");
-            // Resolve(timeSpan);
+            Resolve(timeSpan);
             Profiler.EndSample();
             Profiler.BeginSample("[ViE] ApplyVelocity");
             ApplyVelocity(timeSpan);

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Physics.Collision.Model {
+namespace CustomPhysics.Collision.Model {
     public class Edge {
         public Vector3 a;
         public Vector3 b;

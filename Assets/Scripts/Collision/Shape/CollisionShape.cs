@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using Physics.Collision.Model;
+using CustomPhysics.Collision.Model;
+using Unity.Mathematics;
 using UnityEngine;
 
-namespace Physics.Collision.Shape {
+namespace CustomPhysics.Collision.Shape {
     public enum ShapeType {
         Undefined,
         Rect,
@@ -11,8 +12,15 @@ namespace Physics.Collision.Shape {
         Custom,
     }
 
+    public struct TestShape {
+        public ShapeType shapeType;
+        public List<Vector3> localVertices;
+        public List<Vector3> vertices;
+        public AABB aabb;
+    }
+
     public abstract class CollisionShape {
-        public readonly ShapeType shapeType;
+        public ShapeType shapeType { get; protected set; }
         public List<Vector3> localVertices { get; protected set; }
         public List<Vector3> vertices { get; protected set; }
         public AABB aabb { get; protected set; }
@@ -34,7 +42,7 @@ namespace Physics.Collision.Shape {
             this.aabb = new AABB(Vector3.zero, Vector3.zero);
         }
 
-        public virtual void UpdateShape() {
+        public void UpdateShape() {
             GetBound(out Vector3 lowerBound, out Vector3 upperBound);
             this.aabb.Apply(lowerBound, upperBound);
         }

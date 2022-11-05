@@ -1,8 +1,8 @@
 ﻿using System;
-using Physics.Collision.Model;
-using Physics.Collision.Shape;
+using CustomPhysics.Collision.Model;
+using CustomPhysics.Collision.Shape;
 
-namespace Physics.Collision {
+namespace CustomPhysics.Collision {
     public class ProjectionPoint {
         public CollisionObject collisionObject;
         public AABBProjectionType projectionType;

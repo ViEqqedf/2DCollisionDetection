@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Physics.Collision;
+using CustomPhysics.Collision;
 using UnityEngine;
 
-namespace Physics.Tool {
+namespace CustomPhysics.Tool {
     public static class PhysicsTool {
         #region Old
 
