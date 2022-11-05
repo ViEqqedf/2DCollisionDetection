@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Physics.Collision.Shape {
+namespace CustomPhysics.Collision.Shape {
     public class CustomShape : CollisionShape {
         public CustomShape(Vector3[] localVertices) : base(ShapeType.Custom, localVertices) {
         }

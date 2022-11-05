@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Physics.Collision;
-using Physics.Collision.Model;
+using CustomPhysics.Collision;
+using CustomPhysics.Collision.Model;
 using UnityEngine;
 
-namespace Physics.Tool {
+namespace CustomPhysics.Tool {
     public static class PhysicsCachePool {
         public static Stack<CollisionPair> collisionPairPool = new Stack<CollisionPair>();
         public static Stack<SimplexEdge> simplexEdgePool = new Stack<SimplexEdge>();

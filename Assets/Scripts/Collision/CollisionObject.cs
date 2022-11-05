@@ -1,10 +1,10 @@
 ﻿using System;
-using Physics.Collision.Model;
-using Physics.Collision.Shape;
+using CustomPhysics.Collision.Model;
+using CustomPhysics.Collision.Shape;
 using UnityEngine;
 using Object = System.Object;
 
-namespace Physics.Collision {
+namespace CustomPhysics.Collision {
     [Flags]
     public enum CollisionFlags {
         Default = 0,

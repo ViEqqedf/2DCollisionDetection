@@ -1,9 +1,9 @@
 ﻿using System;
-using Physics.Collision;
-using Physics.Collision.Shape;
+using CustomPhysics.Collision;
+using CustomPhysics.Collision.Shape;
 using UnityEngine;
 
-namespace Physics.Test {
+namespace CustomPhysics.Test {
     public class CollisionObjectProxy : MonoBehaviour {
         public CollisionObject target;
         public ShapeType shape;

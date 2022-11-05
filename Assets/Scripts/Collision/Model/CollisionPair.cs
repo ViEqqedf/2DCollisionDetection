@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Physics.Collision.Model {
+namespace CustomPhysics.Collision.Model {
     public class CollisionPair {
         public CollisionObject first;
         public CollisionObject second;

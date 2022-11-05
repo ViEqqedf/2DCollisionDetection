@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using Physics.Tool;
+using CustomPhysics.Tool;
 using UnityEngine;
 
-namespace Physics.Collision.Model {
+namespace CustomPhysics.Collision.Model {
     public class SimplexEdge {
         public List<Edge> edges = new List<Edge>();
 

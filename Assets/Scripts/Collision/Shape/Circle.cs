@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Physics.Collision.Shape {
+namespace CustomPhysics.Collision.Shape {
     public class Circle : CollisionShape {
         private int resolution = 2;
         public readonly float radius;

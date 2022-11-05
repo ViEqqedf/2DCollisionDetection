@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Physics.Collision.Shape {
+namespace CustomPhysics.Collision.Shape {
     public class Rect : CollisionShape {
         private float horizontalWidth = 0;
         private float verticalWidth = 0;
