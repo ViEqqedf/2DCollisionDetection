@@ -6,20 +6,19 @@ using CustomPhysics.Collision.Shape;
 using CustomPhysics.Test;
 using CustomPhysics.Tool;
 using UnityEngine;
-using UnityEngine.Profiling;
 using CollisionFlags = CustomPhysics.Collision.CollisionFlags;
 using Random = UnityEngine.Random;
 
 namespace CustomPhysics {
     public interface IPhysicsWorld {
         public void Init();
-        public void Tick(float timeTickSpan);
+        public void Tick(float timeTickSpan, CollisionObject independentTarget = null);
         public bool AddCollisionObject(CollisionObject collisionObject);
         public bool RemoveCollisionObject(CollisionObject collisionObject);
     }
 
     public class PhysicsWorld : IPhysicsWorld {
-        public static float epsilon = 0.0001f;
+        public static float epsilon = 0.00001f;
         public int tickFrame = 0;
         public int borderRadius = 15;
         public int maxIterCount = 10;
@@ -31,17 +30,6 @@ namespace CustomPhysics {
         // private List<ProjectionPoint> horAABBProjList;
         private List<ProjectionPoint> verAABBProjList;
         private List<Vector3> simplexList = new List<Vector3>();
-
-        public PhysicsWorld() {
-            collisionList = new List<CollisionObject>();
-            collisionPairs = new List<CollisionPair>();
-
-            broadScanList = new List<ProjectionPoint>();
-            broadStartPoints = new Dictionary<int, ProjectionPoint>();
-            // horAABBProjList = new List<ProjectionPoint>();
-            verAABBProjList = new List<ProjectionPoint>();
-
-        }
 
         #region Test
 
@@ -157,13 +145,13 @@ namespace CustomPhysics {
 
         #region Collision
 
-        private void CollisionDetection(float timeSpan) {
-            Profiler.BeginSample("[ViE] BroadPhase");
+        private void CollisionDetection(float timeSpan, CollisionObject independentTarget) {
+            // Profiler.BeginSample("[ViE] BroadPhase");
             BroadPhase();
-            Profiler.EndSample();
-            Profiler.BeginSample("[ViE] NarrowPhase");
-            NarrowPhase();
-            Profiler.EndSample();
+            // Profiler.EndSample();
+            // Profiler.BeginSample("[ViE] NarrowPhase");
+            NarrowPhase(independentTarget);
+            // Profiler.EndSample();
         }
 
         private void BroadPhase() {
@@ -262,7 +250,7 @@ namespace CustomPhysics {
         private void DynamicBVH() {
         }
 
-        private void NarrowPhase() {
+        private void NarrowPhase(CollisionObject independentTarget) {
             // Stopwatch stopwatch = new Stopwatch();
             // stopwatch.Restart();
             for (int i = collisionPairs.Count - 1; i >= 0; i--) {
@@ -270,36 +258,46 @@ namespace CustomPhysics {
                 CollisionObject fst = pair.first;
                 CollisionObject snd = pair.second;
 
-                simplexList.Clear();
+                if (independentTarget != null &&
+                    !(CollisionObject.IsSameCollisionObject(pair.first, independentTarget) ||
+                      CollisionObject.IsSameCollisionObject(pair.second, independentTarget))) {
+                    continue;
+                }
 
                 bool isCollided = false;
-                bool isAllCircle = fst.shape.shapeType == ShapeType.Circle &&
-                        snd.shape.shapeType == ShapeType.Circle;
-
-                if (isAllCircle) {
-                    // 圆碰撞对的计算简单且常用，单独处理以加速
-                    float fstRadius = ((Circle) fst.shape).radius * fst.scale;
-                    float sndRadius = ((Circle) snd.shape).radius * snd.scale;
-                    float radiusDis = fstRadius + sndRadius;
-                    isCollided = Vector3.Distance(fst.position, snd.position) - radiusDis <= 0;
-                    if (isCollided && !fst.flags.HasFlag(CollisionFlags.NoContactResponse) &&
-                        !snd.flags.HasFlag(CollisionFlags.NoContactResponse)) {
-                        Vector3 oriVec = snd.position - fst.position;
-                        float oriDis = oriVec.magnitude;
-                        if (oriDis < epsilon) {
-                            float separation = Mathf.Max(fstRadius, sndRadius);
-                            oriVec = separation * new Vector3(
-                                i * tickFrame % 7, 0, i * tickFrame % 17).normalized;
-                        } else {
-                            oriVec = oriVec.normalized;
-                        }
-                        pair.penetrateVec = (radiusDis - oriDis) * oriVec;
-                    }
+                if (!fst.isActive || !snd.isActive) {
+                    isCollided = false;
                 } else {
-                    isCollided = GJK(fst, snd, simplexList);
-                    if (isCollided && !fst.flags.HasFlag(CollisionFlags.NoContactResponse) &&
-                        !snd.flags.HasFlag(CollisionFlags.NoContactResponse)) {
-                        pair.penetrateVec = EPA(fst, snd, simplexList);
+                    simplexList.Clear();
+
+                    bool isAllCircle = fst.shape.shapeType == ShapeType.Circle &&
+                            snd.shape.shapeType == ShapeType.Circle;
+
+                    if (isAllCircle) {
+                        // 圆碰撞对的计算简单且常用，单独处理以加速
+                        float fstRadius = ((Circle) fst.shape).radius * fst.scale;
+                        float sndRadius = ((Circle) snd.shape).radius * snd.scale;
+                        float radiusDis = fstRadius + sndRadius;
+                        isCollided = Vector3.Distance(fst.position, snd.position) - radiusDis <= 0;
+                        if (isCollided && !fst.flags.HasFlag(CollisionFlags.NoContactResponse) &&
+                            !snd.flags.HasFlag(CollisionFlags.NoContactResponse)) {
+                            Vector3 oriVec = snd.position - fst.position;
+                            float oriDis = oriVec.magnitude;
+                            if (oriDis < epsilon) {
+                                float separation = Mathf.Max(fstRadius, sndRadius);
+                                oriVec = separation * new Vector3(
+                                    i * tickFrame % 7, 0, i * tickFrame % 17).normalized;
+                            } else {
+                                oriVec = oriVec.normalized;
+                            }
+                            pair.penetrateVec = (radiusDis - oriDis) * oriVec;
+                        }
+                    } else {
+                        isCollided = GJK(fst, snd, simplexList);
+                        if (isCollided && !fst.flags.HasFlag(CollisionFlags.NoContactResponse) &&
+                            !snd.flags.HasFlag(CollisionFlags.NoContactResponse)) {
+                            pair.penetrateVec = EPA(fst, snd, simplexList);
+                        }
                     }
                 }
 
@@ -427,7 +425,11 @@ namespace CustomPhysics {
 
         #endregion
 
-        private void ApplyAcceleration(float timeSpan) {
+        private void ApplyAcceleration(float timeSpan, CollisionObject independentTarget) {
+            if (independentTarget != null) {
+                return;
+            }
+
             for (int i = 0, count = collisionList.Count; i < count; i++) {
                 CollisionObject curCo = collisionList[i];
 
@@ -443,9 +445,15 @@ namespace CustomPhysics {
             }
         }
 
-        private void Resolve(float timeSpan) {
+        private void Resolve(float timeSpan, CollisionObject independentTarget) {
             for (int i = 0, count = collisionPairs.Count; i < count; i++) {
                 CollisionPair pair = collisionPairs[i];
+
+                if (independentTarget != null &&
+                    !(CollisionObject.IsSameCollisionObject(pair.first, independentTarget) ||
+                      CollisionObject.IsSameCollisionObject(pair.second, independentTarget))) {
+                    continue;
+                }
 
                 if (pair.first.HasFlag(CollisionFlags.NoContactResponse) ||
                     pair.second.HasFlag(CollisionFlags.NoContactResponse)) {
@@ -455,7 +463,7 @@ namespace CustomPhysics {
                 Vector3 fstActiveVelocity = pair.first.GetActiveVelocity();
                 Vector3 sndActiveVelocity = pair.second.GetActiveVelocity();
                 float depth = pair.penetrateVec.magnitude;
-                float coefficient = 0.4f;
+                float coefficient = 0.7f;
                 float tolerance = 0.01f;
                 float rate = coefficient * Mathf.Max(0, depth - tolerance);
                 Vector3 penetrateDir = pair.penetrateVec.normalized;
@@ -493,8 +501,8 @@ namespace CustomPhysics {
                             pair.second.AddResolveVelocity((sndExternalRate - sndResolveRate) * penetrateDir);
                         }
                     } else {
-                        pair.first.AddResolveVelocity(-resolveVec);
-                        pair.second.AddResolveVelocity(resolveVec);
+                        pair.first.AddResolveVelocity(-resolveVec / 2f);
+                        pair.second.AddResolveVelocity(resolveVec / 2f);
 
                         if (Vector3.Dot(fstActiveVelocity, penetrateDir) > 0 &&
                             Vector3.Dot(sndActiveVelocity, -penetrateDir) > 0) {
@@ -506,55 +514,70 @@ namespace CustomPhysics {
             }
         }
 
-        private void ApplyVelocity(float timeSpan) {
+        private void ApplyVelocity(float timeSpan, CollisionObject independentTarget) {
             // 最后一步
-            for (int i = 0, count = collisionList.Count; i < count; i++) {
-                CollisionObject co = collisionList[i];
-
-                Vector3 resultantVelocity = co.GetActiveVelocity() * timeSpan + co.resolveVelocity;
-                co.Translate(resultantVelocity);
-
-                // 处理空气墙
-                if (!co.flags.HasFlag(CollisionFlags.StaticObject)) {
-                    float curDis = Vector3.Distance(co.position, Vector3.zero);
-                    float nextDis = Vector3.Distance(co.nextPosition, Vector3.zero);
-                    bool curCoInRange = curDis <= borderRadius;
-                    bool nextCoInRange = nextDis < borderRadius;
-                    if (curCoInRange && !nextCoInRange) {
-                        co.nextPosition = (borderRadius - 0.01f) * co.nextPosition.normalized;
-                    }
+            if (independentTarget == null) {
+                for (int i = 0, count = collisionList.Count; i < count; i++) {
+                    CollisionObject co = collisionList[i];
+                    ApplyVelocityOnAObject(co, timeSpan);
                 }
-
-                co.ApplyPosition();
-
-                co.CleanVelocity();
+            } else {
+                ApplyVelocityOnAObject(independentTarget, timeSpan);
             }
+        }
+
+        private void ApplyVelocityOnAObject(CollisionObject co, float timeSpan) {
+            Vector3 resultantVelocity = co.GetActiveVelocity() * timeSpan + co.resolveVelocity;
+            co.Translate(resultantVelocity);
+
+            // 处理空气墙
+            if (!co.flags.HasFlag(CollisionFlags.StaticObject)) {
+                float curDis = Vector3.Distance(co.position, Vector3.zero);
+                float nextDis = Vector3.Distance(co.nextPosition, Vector3.zero);
+                bool curCoInRange = curDis <= borderRadius;
+                bool nextCoInRange = nextDis < borderRadius;
+                if (curCoInRange && !nextCoInRange) {
+                    co.nextPosition = (borderRadius - 0.01f) * co.nextPosition.normalized;
+                }
+            }
+
+            co.ApplyPosition();
+
+            co.CleanVelocity();
         }
 
         #region Interface
 
         public void Init() {
-            Test0();
+            collisionList = new List<CollisionObject>();
+            collisionPairs = new List<CollisionPair>();
+
+            broadScanList = new List<ProjectionPoint>();
+            broadStartPoints = new Dictionary<int, ProjectionPoint>();
+            // horAABBProjList = new List<ProjectionPoint>();
+            verAABBProjList = new List<ProjectionPoint>();
+
+            // Test0();
             // Test1();
             // Test2();
             // Test3();
             // Test4();
         }
 
-        public void Tick(float timeSpan) {
+        public void Tick(float timeSpan, CollisionObject independentTarget = null) {
             tickFrame++;
 
             // Profiler.BeginSample("[ViE] CollisionDetection");
-            CollisionDetection(timeSpan);
+            CollisionDetection(timeSpan, independentTarget);
             // Profiler.EndSample();
             // Profiler.BeginSample("[ViE] ApplyAcceleration");
-            ApplyAcceleration(timeSpan);
+            ApplyAcceleration(timeSpan, independentTarget);
             // Profiler.EndSample();
             // Profiler.BeginSample("[ViE] Resolve");
-            Resolve(timeSpan);
+            Resolve(timeSpan, independentTarget);
             // Profiler.EndSample();
             // Profiler.BeginSample("[ViE] ApplyVelocity");
-            ApplyVelocity(timeSpan);
+            ApplyVelocity(timeSpan, independentTarget);
             // Profiler.EndSample();
         }
 
