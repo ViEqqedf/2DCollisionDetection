@@ -18,17 +18,17 @@ namespace CustomPhysics.Test {
 
             if (isInControl) {
                 if (nP == 1) {
-                    if (Input.GetKeyDown(KeyCode.A)) {
-                        target.AddExternalVelocity(velocity * Vector3.left);
+                    if (Input.GetKey(KeyCode.A)) {
+                        target.SetInputMoveVelocity(velocity * Vector3.left);
                     }
-                    if (Input.GetKeyDown(KeyCode.D)) {
-                        target.AddExternalVelocity(velocity * Vector3.right);
+                    if (Input.GetKey(KeyCode.D)) {
+                        target.SetInputMoveVelocity(velocity * Vector3.right);
                     }
-                    if (Input.GetKeyDown(KeyCode.W)) {
-                        target.AddExternalVelocity(velocity * Vector3.forward);
+                    if (Input.GetKey(KeyCode.W)) {
+                        target.SetInputMoveVelocity(velocity * Vector3.forward);
                     }
-                    if (Input.GetKeyDown(KeyCode.S)) {
-                        target.AddExternalVelocity(velocity * Vector3.back);
+                    if (Input.GetKey(KeyCode.S)) {
+                        target.SetInputMoveVelocity(velocity * Vector3.back);
                     }
                     if (Input.GetKey(KeyCode.G)) {
                         target.Rotate(new Vector3(0, -1, 0));
@@ -42,49 +42,18 @@ namespace CustomPhysics.Test {
                     if (Input.GetKeyDown(KeyCode.N)) {
                         target.Scale(-1);
                     }
-
-                    if (Input.GetKeyUp(KeyCode.A)) {
-                        target.AddExternalVelocity(-velocity * Vector3.left);
-                    }
-                    if (Input.GetKeyUp(KeyCode.D)) {
-                        target.AddExternalVelocity(-velocity * Vector3.right);
-                    }
-                    if (Input.GetKeyUp(KeyCode.W)) {
-                        target.AddExternalVelocity(-velocity * Vector3.forward);
-                    }
-                    if (Input.GetKeyUp(KeyCode.S)) {
-                        target.AddExternalVelocity(-velocity * Vector3.back);
-                    }
                 } else if (nP == 2) {
-                    if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-                        target.AddExternalVelocity(velocity * Vector3.left);
+                    if (Input.GetKey(KeyCode.LeftArrow)) {
+                        target.SetInputMoveVelocity(velocity * Vector3.left);
                     }
-                    if (Input.GetKeyDown(KeyCode.RightArrow)) {
-                        target.AddExternalVelocity(velocity * Vector3.right);
+                    if (Input.GetKey(KeyCode.RightArrow)) {
+                        target.SetInputMoveVelocity(velocity * Vector3.right);
                     }
-                    if (Input.GetKeyDown(KeyCode.UpArrow)) {
-                        target.AddExternalVelocity(velocity * Vector3.forward);
+                    if (Input.GetKey(KeyCode.UpArrow)) {
+                        target.SetInputMoveVelocity(velocity * Vector3.forward);
                     }
-                    if (Input.GetKeyDown(KeyCode.DownArrow)) {
-                        target.AddExternalVelocity(velocity * Vector3.back);
-                    }
-
-                    if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-                        target.AddExternalVelocity(-velocity * Vector3.left);
-                    }
-                    if (Input.GetKeyDown(KeyCode.RightArrow)) {
-                        target.AddExternalVelocity(-velocity * Vector3.right);
-                    }
-                    if (Input.GetKeyDown(KeyCode.UpArrow)) {
-                        target.AddExternalVelocity(-velocity * Vector3.forward);
-                    }
-                    if (Input.GetKeyDown(KeyCode.DownArrow)) {
-                        target.AddExternalVelocity(-velocity * Vector3.back);
-                    }
-
-                    if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.DownArrow) ||
-                        Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.RightArrow)) {
-                        target.SetExternalVelocity(Vector3.zero);
+                    if (Input.GetKey(KeyCode.DownArrow)) {
+                        target.SetInputMoveVelocity(velocity * Vector3.back);
                     }
                 }
             }
