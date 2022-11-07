@@ -16,11 +16,14 @@ namespace CustomPhysics.Collision {
     public interface ICollisionObject {
         public void InitCollisionObject();
         public ProjectionPoint GetProjectionPoint(AABBProjectionType projectionType);
+        public void SetActive(bool value);
         public bool HasFlag(CollisionFlags flag);
         public void AddFlag(CollisionFlags flag);
         public void RemoveFlag(CollisionFlags flag);
         public Vector3 GetCurPosition();
+        public Vector3 GetNextPosition();
         public float GetCurRotation();
+        public void SetCurPos(Vector3 value);
         public void Translate(Vector3 diff);
         public void TranslateTo(Vector3 value);
         public void Rotate(Vector3 diff);
@@ -28,6 +31,7 @@ namespace CustomPhysics.Collision {
         public void Scale(float diff);
         public void ScaleTo(float value);
         public Vector3 GetActiveVelocity();
+        public Vector3 GetInputMoveVelocity();
         public void SetInputMoveVelocity(Vector3 value);
         public void AddExternalVelocity(Vector3 diff);
         public void SetExternalVelocity(Vector3 value);
@@ -39,6 +43,7 @@ namespace CustomPhysics.Collision {
         private static int publicId = 1;
         public int id;
         public CollisionShape shape;
+        public bool isActive = true;
         public CollisionFlags flags = CollisionFlags.Default;
         public Object contextObject;
         public Vector3 position;
@@ -89,6 +94,10 @@ namespace CustomPhysics.Collision {
             return new ProjectionPoint(this, projectionType);
         }
 
+        public void SetActive(bool value) {
+            this.isActive = value;
+        }
+
         public bool HasFlag(CollisionFlags flag) {
             return flags.HasFlag(flag);
         }
@@ -105,8 +114,16 @@ namespace CustomPhysics.Collision {
             return position;
         }
 
+        public Vector3 GetNextPosition() {
+            return nextPosition;
+        }
+
         public float GetCurRotation() {
             return rotation.y;
+        }
+
+        public void SetCurPos(Vector3 value) {
+            position = nextPosition = value;
         }
 
         public void Translate(Vector3 diff) {
@@ -140,6 +157,10 @@ namespace CustomPhysics.Collision {
             }
 
             return result;
+        }
+
+        public Vector3 GetInputMoveVelocity() {
+            return inputMoveVelocity;
         }
 
         public void AddExternalVelocity(Vector3 diff) {
