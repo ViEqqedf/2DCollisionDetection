@@ -25,9 +25,10 @@ namespace CustomPhysics.Collision {
     public class AccelerationForAWhile : Acceleration {
         public float remainingTime = 0;
 
-        public AccelerationForAWhile(float duration, Vector3 acceleration, Vector3 initVelocity) :
-            base(AccelerationType.ForAWhile, acceleration, initVelocity) {
+        public AccelerationForAWhile(float duration, Vector3 acceleration, float initVelocity) :
+            base(AccelerationType.ForAWhile, acceleration) {
             this.remainingTime = duration;
+            this.curVelocity = initVelocity * acceleration.normalized;
         }
 
         public override void Tick(float timeSpan) {
