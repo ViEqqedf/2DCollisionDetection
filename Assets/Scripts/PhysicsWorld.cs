@@ -6,6 +6,7 @@ using CustomPhysics.Collision.Shape;
 using CustomPhysics.Test;
 using CustomPhysics.Tool;
 using UnityEngine;
+using UnityEngine.Profiling;
 using CollisionFlags = CustomPhysics.Collision.CollisionFlags;
 using Random = UnityEngine.Random;
 
@@ -55,7 +56,7 @@ namespace CustomPhysics {
         }
 
         private void Test2() {
-            int range = 140;
+            int range = 100;
             for (int i = 0; i < range; i++) {
                 // Vector3 spawnPos = new Vector3(
                     // Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
@@ -146,12 +147,12 @@ namespace CustomPhysics {
         #region Collision
 
         private void CollisionDetection(float timeSpan, CollisionObject independentTarget) {
-            // Profiler.BeginSample("[ViE] BroadPhase");
+            Profiler.BeginSample("[ViE] BroadPhase");
             BroadPhase();
-            // Profiler.EndSample();
-            // Profiler.BeginSample("[ViE] NarrowPhase");
+            Profiler.EndSample();
+            Profiler.BeginSample("[ViE] NarrowPhase");
             NarrowPhase(independentTarget);
-            // Profiler.EndSample();
+            Profiler.EndSample();
         }
 
         private void BroadPhase() {
@@ -559,7 +560,7 @@ namespace CustomPhysics {
 
             // Test0();
             // Test1();
-            // Test2();
+            Test2();
             // Test3();
             // Test4();
         }
@@ -567,18 +568,18 @@ namespace CustomPhysics {
         public void Tick(float timeSpan, CollisionObject independentTarget = null) {
             tickFrame++;
 
-            // Profiler.BeginSample("[ViE] CollisionDetection");
+            Profiler.BeginSample("[ViE] CollisionDetection");
             CollisionDetection(timeSpan, independentTarget);
-            // Profiler.EndSample();
-            // Profiler.BeginSample("[ViE] ApplyAcceleration");
+            Profiler.EndSample();
+            Profiler.BeginSample("[ViE] ApplyAcceleration");
             ApplyAcceleration(timeSpan, independentTarget);
-            // Profiler.EndSample();
-            // Profiler.BeginSample("[ViE] Resolve");
+            Profiler.EndSample();
+            Profiler.BeginSample("[ViE] Resolve");
             Resolve(timeSpan, independentTarget);
-            // Profiler.EndSample();
-            // Profiler.BeginSample("[ViE] ApplyVelocity");
+            Profiler.EndSample();
+            Profiler.BeginSample("[ViE] ApplyVelocity");
             ApplyVelocity(timeSpan, independentTarget);
-            // Profiler.EndSample();
+            Profiler.EndSample();
         }
 
         public void Destroy() {
