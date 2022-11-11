@@ -13,6 +13,11 @@ namespace CustomPhysics.Collision {
         NoContactResponse = 1 << 2,
     }
 
+    public struct CollisionShot {
+        public CollisionObject target;
+        public int count;
+    }
+
     public interface ICollisionObject {
         public void InitCollisionObject();
         public ProjectionPoint GetProjectionPoint(AABBProjectionType projectionType);
@@ -57,6 +62,15 @@ namespace CustomPhysics.Collision {
         public Vector3 inputMoveVelocity;
         public Vector3 resolveVelocity;
 
+        public Dictionary<int, CollisionShot> collisionShotsDic;
+        public delegate void CollisionEnter(CollisionObject co);
+        public delegate void CollisionStay(CollisionObject co);
+        public delegate void CollisionExit(CollisionObject co);
+
+        public CollisionEnter enterAction;
+        public CollisionStay stayAction;
+        public CollisionExit exitAction;
+
         // TODO: 添加一个脏标记
 
         public CollisionObject(CollisionShape shape, Object contextObject,
@@ -69,10 +83,44 @@ namespace CustomPhysics.Collision {
             this.contextObject = contextObject;
             this.level = level;
             accelerations = new List<Acceleration>();
+            collisionShotsDic = new Dictionary<int, CollisionShot>();
+
+            enterAction += TestEnter;
+            stayAction += TestStay;
+            exitAction += TestExit;
         }
 
         public static bool IsSameCollisionObject(CollisionObject obj1, CollisionObject obj2) {
             return obj1.id == obj2.id;
+        }
+
+        public void TryToCreateCollisionShot(CollisionObject target) {
+            int targetId = target?.id ?? -1;
+            int oriCount = -1;
+            if (collisionShotsDic.TryGetValue(targetId, out CollisionShot shotInDic)) {
+                oriCount = shotInDic.count;
+            }
+
+            collisionShotsDic[targetId] = new CollisionShot() {
+                target = target,
+                count = oriCount == -1 ? 2 : 1,
+            };
+
+            if (oriCount == -1) {
+                enterAction.Invoke(target);
+            }
+        }
+
+        public void TestEnter(CollisionObject co) {
+            Debug.Log("Enter");
+        }
+
+        public void TestStay(CollisionObject co) {
+            Debug.Log("Stay");
+        }
+
+        public void TestExit(CollisionObject co) {
+            Debug.Log("Exit");
         }
 
         #region Interface

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using CustomPhysics.Collision;
 using CustomPhysics.Collision.Model;
 using CustomPhysics.Collision.Shape;
@@ -24,7 +25,7 @@ namespace CustomPhysics {
         public int borderRadius = 15;
         public int maxIterCount = 10;
         public List<CollisionObject> collisionList;
-        private List<CollisionPair> collisionPairs;
+        public List<CollisionPair> collisionPairs;
 
         private List<ProjectionPoint> broadScanList;
         private Dictionary<int, ProjectionPoint> broadStartPoints;
@@ -35,7 +36,7 @@ namespace CustomPhysics {
         #region Test
 
         private void Test0() {
-            int range = 10;
+            int range = 2;
             for (int i = 0; i < range; i++) {
                 CreateATestRect(Vector3.zero);
             }
@@ -539,12 +540,44 @@ namespace CustomPhysics {
                 bool nextCoInRange = nextDis < borderRadius;
                 if (curCoInRange && !nextCoInRange) {
                     co.nextPosition = (borderRadius - 0.01f) * co.nextPosition.normalized;
+                    co.TryToCreateCollisionShot(null);
                 }
             }
 
             co.ApplyPosition();
 
             co.CleanVelocity();
+        }
+
+        private void ExternalPairHandle() {
+            for (int i = 0, count = collisionPairs.Count; i < count; i++) {
+                CollisionPair pair = collisionPairs[i];
+                CollisionObject fst = pair.first;
+                CollisionObject snd = pair.second;
+                fst.TryToCreateCollisionShot(snd);
+                snd.TryToCreateCollisionShot(fst);
+            }
+
+            for (int i = collisionList.Count - 1; i >= 0; i--) {
+                CollisionObject co = collisionList[i];
+                for (int j = co.collisionShotsDic.Count - 1; j >= 0; j--) {
+                    var curShot = co.collisionShotsDic.ElementAt(j);
+                    int curCount = curShot.Value.count;
+                    if (curCount < 0) {
+                        co.collisionShotsDic.Remove(curShot.Key);
+                        co.exitAction.Invoke(curShot.Value.target);
+                    } else {
+                        co.collisionShotsDic[curShot.Key] = new CollisionShot() {
+                            target = curShot.Value.target,
+                            count = curCount - 1,
+                        };
+
+                        if (curCount == 1) {
+                            co.stayAction.Invoke(curShot.Value.target);
+                        }
+                    }
+                }
+            }
         }
 
         #region Interface
@@ -558,9 +591,9 @@ namespace CustomPhysics {
             // horAABBProjList = new List<ProjectionPoint>();
             verAABBProjList = new List<ProjectionPoint>();
 
-            // Test0();
+            Test0();
             // Test1();
-            Test2();
+            // Test2();
             // Test3();
             // Test4();
         }
@@ -580,6 +613,7 @@ namespace CustomPhysics {
             Profiler.BeginSample("[ViE] ApplyVelocity");
             ApplyVelocity(timeSpan, independentTarget);
             Profiler.EndSample();
+            ExternalPairHandle();
         }
 
         public void Destroy() {
