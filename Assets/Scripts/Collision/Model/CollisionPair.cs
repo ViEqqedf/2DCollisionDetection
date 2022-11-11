@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using Unity.Burst;
+using UnityEngine;
 
 namespace CustomPhysics.Collision.Model {
-    public class CollisionPair {
+    [BurstCompile(CompileSynchronously = true)]
+    public struct CollisionPair {
         public CollisionObject first;
         public CollisionObject second;
         public Vector3 penetrateVec;

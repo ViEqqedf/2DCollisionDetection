@@ -43,7 +43,7 @@ namespace CustomPhysics.Collision.Shape {
 
         public void UpdateShape() {
             GetBound(out Vector3 lowerBound, out Vector3 upperBound);
-            this.aabb.Apply(lowerBound, upperBound);
+            this.aabb = new AABB(lowerBound, upperBound);
         }
 
         public void ApplyWorldVertices(Vector3 origin, Vector3 rotate, float scale) {
