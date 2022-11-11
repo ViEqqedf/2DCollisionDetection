@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Unity.Burst;
 using UnityEngine;
 
 namespace CustomPhysics.Collision.Model {
@@ -10,19 +11,14 @@ namespace CustomPhysics.Collision.Model {
         VerticalEnd,
     }
 
-    public class AABB {
-        public Vector3 lowerBound { get; private set; }
-        public Vector3 upperBound { get; private set; }
+    [BurstCompile(CompileSynchronously = true)]
+    public struct AABB {
+        public Vector3 lowerBound;
+        public Vector3 upperBound;
 
         public AABB(Vector3 lowerBound, Vector3 upperBound) {
-            this.lowerBound = new Vector3();
-            this.upperBound = new Vector3();
-            Apply(lowerBound, upperBound);
-        }
-
-        public void Apply(Vector3 lower, Vector3 upper) {
-            this.lowerBound = new Vector3(lower.x, lower.y, lower.z);
-            this.upperBound = new Vector3(upper.x, upper.y, upper.z);
+            this.lowerBound = lowerBound;
+            this.upperBound = upperBound;
         }
     }
 }

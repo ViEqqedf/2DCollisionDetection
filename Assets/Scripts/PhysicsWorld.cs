@@ -7,6 +7,7 @@ using CustomPhysics.Collision.Shape;
 using CustomPhysics.Test;
 using CustomPhysics.Tool;
 using UnityEngine;
+using UnityEngine.Profiling;
 using CollisionFlags = CustomPhysics.Collision.CollisionFlags;
 using Random = UnityEngine.Random;
 
@@ -35,7 +36,7 @@ namespace CustomPhysics {
         #region Test
 
         private void Test0() {
-            int range = 2;
+            int range = 44;
             for (int i = 0; i < range; i++) {
                 CreateATestRect(Vector3.zero);
             }
@@ -147,16 +148,17 @@ namespace CustomPhysics {
         #region Collision
 
         private void CollisionDetection(float timeSpan, CollisionObject independentTarget) {
-            // Profiler.BeginSample("[ViE] BroadPhase");
+            Profiler.BeginSample("[ViE] BroadPhase");
             BroadPhase();
-            // Profiler.EndSample();
-            // Profiler.BeginSample("[ViE] NarrowPhase");
+            Profiler.EndSample();
+            Profiler.BeginSample("[ViE] NarrowPhase");
             NarrowPhase(independentTarget);
-            // Profiler.EndSample();
+            Profiler.EndSample();
         }
 
         private void BroadPhase() {
-            PhysicsCachePool.RecycleCollisionPair(collisionPairs);
+            // PhysicsCachePool.RecycleCollisionPair(collisionPairs);
+            collisionPairs.Clear();
 
             SweepAndPrune();
             // DynamicBVH();
@@ -201,7 +203,8 @@ namespace CustomPhysics {
                     for (int j = 0, scanCount = broadScanList.Count; j < scanCount; j++) {
                         CollisionObject scanObj = broadScanList[j].collisionObject;
 
-                        CollisionPair pair = PhysicsCachePool.GetCollisionPairFromPool();
+                        // CollisionPair pair = PhysicsCachePool.GetCollisionPairFromPool();
+                        CollisionPair pair;
                         int jLevel = scanObj.level;
                         int iLevel = horProjObj.level;
 
@@ -209,11 +212,19 @@ namespace CustomPhysics {
                         if (jLevel == iLevel) {
                             int iIndex = collisionList.IndexOf(horProjObj);
                             int jIndex = collisionList.IndexOf(scanObj);
-                            pair.first = iIndex < jIndex ? horProjObj : scanObj;
-                            pair.second = iIndex > jIndex ? horProjObj : scanObj;
+                            pair = new CollisionPair() {
+                                first = iIndex < jIndex ? horProjObj : scanObj,
+                                second = iIndex > jIndex ? horProjObj : scanObj,
+                            };
+                            // pair.first = iIndex < jIndex ? horProjObj : scanObj;
+                            // pair.second = iIndex > jIndex ? horProjObj : scanObj;
                         } else {
-                            pair.first = jLevel > iLevel ? horProjObj : scanObj;
-                            pair.second = jLevel < iLevel ? horProjObj : scanObj;
+                            pair = new CollisionPair() {
+                                first = jLevel > iLevel ? horProjObj : scanObj,
+                                second = jLevel < iLevel ? horProjObj : scanObj,
+                            };
+                            // pair.first = jLevel > iLevel ? horProjObj : scanObj;
+                            // pair.second = jLevel < iLevel ? horProjObj : scanObj;
                         }
 
                         collisionPairs.Add(pair);
@@ -266,6 +277,7 @@ namespace CustomPhysics {
                 }
 
                 bool isCollided = false;
+                Vector3 penetrateVec = Vector3.zero;
                 if (!fst.isActive || !snd.isActive) {
                     isCollided = false;
                 } else {
@@ -291,21 +303,26 @@ namespace CustomPhysics {
                             } else {
                                 oriVec = oriVec.normalized;
                             }
-                            pair.penetrateVec = (radiusDis - oriDis) * oriVec;
+                            penetrateVec = (radiusDis - oriDis) * oriVec;
                         }
                     } else {
                         isCollided = GJK(fst, snd, simplexList);
                         if (isCollided && !fst.flags.HasFlag(CollisionFlags.NoContactResponse) &&
                             !snd.flags.HasFlag(CollisionFlags.NoContactResponse)) {
-                            pair.penetrateVec = EPA(fst, snd, simplexList);
+                            penetrateVec = EPA(fst, snd, simplexList);
                         }
                     }
                 }
 
                 if(!isCollided){
-                    PhysicsCachePool.RecycleCollisionPair(pair);
+                    // PhysicsCachePool.RecycleCollisionPair(pair);
                     collisionPairs.RemoveAt(i);
                 } else {
+                    collisionPairs[i] = new CollisionPair() {
+                        first = pair.first,
+                        second = pair.second,
+                        penetrateVec = penetrateVec,
+                    };
                     // Debug.Log($"{tickFrame} {fst.id}与{snd.id}窄检测碰撞，穿透向量为{pair.penetrateVec}，长度为{pair.penetrateVec.magnitude}");
                 }
             }
@@ -592,7 +609,7 @@ namespace CustomPhysics {
 
             Test0();
             // Test1();
-            // Test2();
+            Test2();
             // Test3();
             // Test4();
         }
