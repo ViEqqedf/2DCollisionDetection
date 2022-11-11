@@ -304,7 +304,7 @@ namespace CustomPhysics {
 
                 if(!isCollided){
                     PhysicsCachePool.RecycleCollisionPair(pair);
-                    collisionPairs.Remove(pair);
+                    collisionPairs.RemoveAt(i);
                 } else {
                     // Debug.Log($"{tickFrame} {fst.id}与{snd.id}窄检测碰撞，穿透向量为{pair.penetrateVec}，长度为{pair.penetrateVec.magnitude}");
                 }
