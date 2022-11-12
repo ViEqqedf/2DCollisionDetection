@@ -80,10 +80,6 @@ namespace CustomPhysics.Collision {
             this.level = level;
             accelerations = new List<Acceleration>();
             collisionShotsDic = new Dictionary<int, CollisionShot>();
-
-            enterAction += TestEnter;
-            stayAction += TestStay;
-            exitAction += TestExit;
         }
 
         public static bool IsSameCollisionObject(CollisionObject obj1, CollisionObject obj2) {
@@ -105,18 +101,6 @@ namespace CustomPhysics.Collision {
             if (oriCount == -1) {
                 enterAction.Invoke(target);
             }
-        }
-
-        public void TestEnter(CollisionObject co) {
-            Debug.Log("Enter");
-        }
-
-        public void TestStay(CollisionObject co) {
-            Debug.Log("Stay");
-        }
-
-        public void TestExit(CollisionObject co) {
-            Debug.Log("Exit");
         }
 
         #region Interface
