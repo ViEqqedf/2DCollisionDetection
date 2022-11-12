@@ -7,7 +7,6 @@ using CustomPhysics.Collision.Shape;
 using CustomPhysics.Test;
 using CustomPhysics.Tool;
 using UnityEngine;
-using UnityEngine.Profiling;
 using CollisionFlags = CustomPhysics.Collision.CollisionFlags;
 using Random = UnityEngine.Random;
 
@@ -148,12 +147,12 @@ namespace CustomPhysics {
         #region Collision
 
         private void CollisionDetection(float timeSpan, CollisionObject independentTarget) {
-            Profiler.BeginSample("[ViE] BroadPhase");
+            // Profiler.BeginSample("[ViE] BroadPhase");
             BroadPhase();
-            Profiler.EndSample();
-            Profiler.BeginSample("[ViE] NarrowPhase");
+            // Profiler.EndSample();
+            // Profiler.BeginSample("[ViE] NarrowPhase");
             NarrowPhase(independentTarget);
-            Profiler.EndSample();
+            // Profiler.EndSample();
         }
 
         private void BroadPhase() {
@@ -565,7 +564,7 @@ namespace CustomPhysics {
                     int curCount = curShot.Value.count;
                     if (curCount < 0) {
                         co.collisionShotsDic.Remove(curShot.Key);
-                        co.exitAction.Invoke(curShot.Value.target);
+                        co.exitAction?.Invoke(curShot.Value.target);
                     } else {
                         co.collisionShotsDic[curShot.Key] = new CollisionShot() {
                             target = curShot.Value.target,
@@ -573,7 +572,7 @@ namespace CustomPhysics {
                         };
 
                         if (curCount == 1) {
-                            co.stayAction.Invoke(curShot.Value.target);
+                            co.stayAction?.Invoke(curShot.Value.target);
                         }
                     }
                 }
@@ -601,18 +600,18 @@ namespace CustomPhysics {
         public void Tick(float timeSpan, CollisionObject independentTarget = null) {
             tickFrame++;
 
-            Profiler.BeginSample("[ViE] CollisionDetection");
+            // Profiler.BeginSample("[ViE] CollisionDetection");
             CollisionDetection(timeSpan, independentTarget);
-            Profiler.EndSample();
-            Profiler.BeginSample("[ViE] ApplyAcceleration");
+            // Profiler.EndSample();
+            // Profiler.BeginSample("[ViE] ApplyAcceleration");
             ApplyAcceleration(timeSpan, independentTarget);
-            Profiler.EndSample();
-            Profiler.BeginSample("[ViE] Resolve");
+            // Profiler.EndSample();
+            // Profiler.BeginSample("[ViE] Resolve");
             Resolve(timeSpan, independentTarget);
-            Profiler.EndSample();
-            Profiler.BeginSample("[ViE] ApplyVelocity");
+            // Profiler.EndSample();
+            // Profiler.BeginSample("[ViE] ApplyVelocity");
             ApplyVelocity(timeSpan, independentTarget);
-            Profiler.EndSample();
+            // Profiler.EndSample();
             ExternalPairHandle();
         }
 

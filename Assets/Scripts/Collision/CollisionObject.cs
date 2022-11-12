@@ -99,7 +99,7 @@ namespace CustomPhysics.Collision {
             };
 
             if (oriCount == -1) {
-                enterAction.Invoke(target);
+                enterAction?.Invoke(target);
             }
         }
 
