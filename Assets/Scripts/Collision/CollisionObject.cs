@@ -63,13 +63,9 @@ namespace CustomPhysics.Collision {
         public Vector3 resolveVelocity;
 
         public Dictionary<int, CollisionShot> collisionShotsDic;
-        public delegate void CollisionEnter(CollisionObject co);
-        public delegate void CollisionStay(CollisionObject co);
-        public delegate void CollisionExit(CollisionObject co);
-
-        public CollisionEnter enterAction;
-        public CollisionStay stayAction;
-        public CollisionExit exitAction;
+        public Action<CollisionObject> enterAction;
+        public Action<CollisionObject> stayAction;
+        public Action<CollisionObject> exitAction;
 
         // TODO: 添加一个脏标记
 
