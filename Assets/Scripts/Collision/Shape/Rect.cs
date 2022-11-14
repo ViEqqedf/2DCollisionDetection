@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace CustomPhysics.Collision.Shape {
@@ -10,14 +11,14 @@ namespace CustomPhysics.Collision.Shape {
             this.horizontalWidth = horizontalWidth;
             this.verticalWidth = verticalWidth;
 
-            localVertices = new List<Vector3>() {
-                new Vector3(-horizontalWidth / 2, 0, -verticalWidth / 2),
-                new Vector3(-horizontalWidth / 2, 0, verticalWidth / 2),
-                new Vector3(horizontalWidth / 2, 0, verticalWidth / 2),
-                new Vector3(horizontalWidth / 2, 0, -verticalWidth / 2),
+            localVertices = new List<float3>() {
+                new float3(-horizontalWidth / 2, 0, -verticalWidth / 2),
+                new float3(-horizontalWidth / 2, 0, verticalWidth / 2),
+                new float3(horizontalWidth / 2, 0, verticalWidth / 2),
+                new float3(horizontalWidth / 2, 0, -verticalWidth / 2),
             };
-            vertices = new List<Vector3>(
-                new Vector3[] {Vector3.zero, Vector3.zero, Vector3.zero, Vector3.zero,});
+            vertices = new List<float3>(
+                new float3[] {float3.zero, float3.zero, float3.zero, float3.zero,});
         }
 
         protected override void GetBound(out Vector3 lowerBound, out Vector3 upperBound) {

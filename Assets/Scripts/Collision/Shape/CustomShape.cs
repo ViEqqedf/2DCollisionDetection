@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace CustomPhysics.Collision.Shape {
     public class CustomShape : CollisionShape {
-        public CustomShape(Vector3[] localVertices) : base(ShapeType.Custom, localVertices) {
+        public CustomShape(float3[] localVertices) : base(ShapeType.Custom, localVertices) {
         }
 
         protected override void GetBound(out Vector3 lowerBound, out Vector3 upperBound) {

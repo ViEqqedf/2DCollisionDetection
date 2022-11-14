@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace CustomPhysics.Collision.Shape {
@@ -9,8 +10,8 @@ namespace CustomPhysics.Collision.Shape {
         public Circle(float radius) : base(ShapeType.Circle) {
             this.radius = radius;
 
-            localVertices = new List<Vector3>();
-            vertices = new List<Vector3>();
+            localVertices = new List<float3>();
+            vertices = new List<float3>();
             for (int i = -resolution; i < resolution; i++) {
                 localVertices.Add(CreateCirclePoint(i, resolution));
                 vertices.Add(Vector3.zero);
@@ -39,7 +40,7 @@ namespace CustomPhysics.Collision.Shape {
         }
 
         protected override void GetBound(out Vector3 lowerBound, out Vector3 upperBound) {
-            float realR = vertices[resolution].magnitude;
+            float realR = math.distance(vertices[resolution].x, vertices[resolution].z);
 
             lowerBound = new Vector3(-realR, 0, -realR);
             upperBound = new Vector3(realR, 0, realR);

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using CustomPhysics.Collision.Model;
 using CustomPhysics.Collision.Shape;
+using Unity.Burst;
+using Unity.Mathematics;
 using UnityEngine;
 using Object = System.Object;
 
@@ -109,7 +111,7 @@ namespace CustomPhysics.Collision {
             shape.UpdateShape();
 
             int count = shape.localVertices.Count;
-            Vector3 origin = (shape.aabb.upperBound + shape.aabb.lowerBound) / 2;
+            float3 origin = (shape.aabb.upperBound + shape.aabb.lowerBound) / 2;
             for (int i = 0; i < count; i++) {
                 shape.localVertices[i] -= origin;
             }
@@ -235,12 +237,13 @@ namespace CustomPhysics.Collision {
             this.resolveVelocity = this.inputMoveVelocity = Vector3.zero;
         }
 
-        public Vector3 GetFarthestPointInDir(Vector3 dir) {
+        [BurstCompile]
+        public float3 GetFarthestPointInDir(float3 dir) {
             float maxDis = float.MinValue;
-            Vector3 farthestPoint = Vector3.zero;
+            float3 farthestPoint = float3.zero;
             for (int i = 0, count = shape.vertices.Count; i < count; ++i) {
-                Vector3 curPoint = shape.vertices[i];
-                float dis = Vector3.Dot(curPoint, dir);
+                float3 curPoint = shape.vertices[i];
+                float dis = math.dot(curPoint, dir);
                 if (dis > maxDis) {
                     maxDis = dis;
                     farthestPoint = curPoint;
