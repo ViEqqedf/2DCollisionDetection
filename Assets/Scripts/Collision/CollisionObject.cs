@@ -237,7 +237,7 @@ namespace CustomPhysics.Collision {
             this.resolveVelocity = this.inputMoveVelocity = Vector3.zero;
         }
 
-        [BurstCompile]
+        // [BurstCompile]
         public float3 GetFarthestPointInDir(float3 dir) {
             float maxDis = float.MinValue;
             float3 farthestPoint = float3.zero;

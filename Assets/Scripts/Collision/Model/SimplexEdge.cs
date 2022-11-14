@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using CustomPhysics.Tool;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace CustomPhysics.Collision.Model {
@@ -58,7 +59,8 @@ namespace CustomPhysics.Collision.Model {
             e.a = a;
             e.b = b;
 
-            e.normal = PhysicsTool.GetPerpendicularToOrigin(a, b);
+            PhysicsWorld.perpenCalc(a, b, out float3 result);
+            e.normal = result;
             float lengthSq = e.normal.sqrMagnitude;
             // 单位化边
             if (lengthSq > float.Epsilon) {
@@ -80,8 +82,9 @@ namespace CustomPhysics.Collision.Model {
             e.b = b;
             e.distance = 0;
 
-            Vector3 perp = PhysicsTool.GetPerpendicularToOrigin(a, b);
-            e.distance = perp.magnitude;
+            PhysicsWorld.perpenCalc(a, b, out float3 result);
+            // Vector3 perp = PhysicsTool.GetPerpendicularToOrigin(a, b);
+            e.distance = math.distance(result.x, result.z);
 
             // 向量垂直定则
             Vector3 v = a - b;
