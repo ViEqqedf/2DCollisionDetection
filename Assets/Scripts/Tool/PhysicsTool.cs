@@ -107,6 +107,7 @@ namespace CustomPhysics.Tool {
             float sqrLength = math.distancesq(ab, float3.zero);
             if (sqrLength < float.Epsilon) {
                 result = float3.zero;
+                return;
             }
 
             float projection = math.dot(ab, ao) / sqrLength;
@@ -127,6 +128,7 @@ namespace CustomPhysics.Tool {
             // ab点重合了
             if(sqrLength < float.Epsilon) {
                 result = a;
+                return;
             }
 
             float projection = math.dot(ab, ao) / sqrLength;

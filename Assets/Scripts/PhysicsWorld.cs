@@ -41,7 +41,7 @@ namespace CustomPhysics {
         #region Test
 
         private void Test0() {
-            int range = 2;
+            int range = 44;
             for (int i = 0; i < range; i++) {
                 CreateATestRect(float3.zero);
             }
@@ -645,7 +645,7 @@ namespace CustomPhysics {
             ApplyAcceleration(timeSpan, independentTarget);
             // Profiler.EndSample();
             // Profiler.BeginSample("[ViE] Resolve");
-            Resolve(timeSpan, independentTarget);
+            // Resolve(timeSpan, independentTarget);
             // Profiler.EndSample();
             // Profiler.BeginSample("[ViE] ApplyVelocity");
             ApplyVelocity(timeSpan, independentTarget);
