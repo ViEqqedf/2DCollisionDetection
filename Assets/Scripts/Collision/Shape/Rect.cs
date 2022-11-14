@@ -21,7 +21,7 @@ namespace CustomPhysics.Collision.Shape {
                 new float3[] {float3.zero, float3.zero, float3.zero, float3.zero,});
         }
 
-        protected override void GetBound(out Vector3 lowerBound, out Vector3 upperBound) {
+        protected override void GetBound(out float3 lowerBound, out float3 upperBound) {
             float minX = float.MaxValue;
             float minZ = float.MaxValue;
             float maxX = float.MinValue;
@@ -42,8 +42,8 @@ namespace CustomPhysics.Collision.Shape {
                 }
             }
 
-            lowerBound = new Vector3(minX, 0, minZ);
-            upperBound = new Vector3(maxX, 0, maxZ);
+            lowerBound = new float3(minX, 0, minZ);
+            upperBound = new float3(maxX, 0, maxZ);
         }
     }
 }

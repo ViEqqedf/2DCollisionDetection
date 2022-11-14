@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace CustomPhysics.Collision {
@@ -8,12 +9,12 @@ namespace CustomPhysics.Collision {
 
     public abstract class Acceleration {
         public AccelerationType type;
-        public Vector3 acceleration;
-        public Vector3 curVelocity;
+        public float3 acceleration;
+        public float3 curVelocity;
         public bool isEnded = false;
 
-        public Acceleration(AccelerationType type, Vector3 acceleration,
-            Vector3 initVelocity = new Vector3()) {
+        public Acceleration(AccelerationType type, float3 acceleration,
+            float3 initVelocity = new float3()) {
             this.type = type;
             this.acceleration = acceleration;
             this.curVelocity = initVelocity;
@@ -25,10 +26,10 @@ namespace CustomPhysics.Collision {
     public class AccelerationForAWhile : Acceleration {
         public float remainingTime = 0;
 
-        public AccelerationForAWhile(float duration, Vector3 acceleration, float initVelocity) :
+        public AccelerationForAWhile(float duration, float3 acceleration, float initVelocity) :
             base(AccelerationType.ForAWhile, acceleration) {
             this.remainingTime = duration;
-            this.curVelocity = initVelocity * acceleration.normalized;
+            this.curVelocity = initVelocity * math.normalizesafe(acceleration);
         }
 
         public override void Tick(float timeSpan) {
@@ -43,14 +44,14 @@ namespace CustomPhysics.Collision {
     }
 
     public class AccelerationForTargetVelocity : Acceleration {
-        public Vector3 targetVelocity;
-        public Vector3 lastVelocity;
+        public float3 targetVelocity;
+        public float3 lastVelocity;
 
-        public AccelerationForTargetVelocity(Vector3 acceleration,
+        public AccelerationForTargetVelocity(float3 acceleration,
             float targetVelocityValue, float initVelocityValue) :
             base(AccelerationType.ReachTargetVelocity, acceleration) {
-            this.targetVelocity = targetVelocityValue * acceleration.normalized;
-            this.curVelocity = initVelocityValue * acceleration.normalized;
+            this.targetVelocity = targetVelocityValue * math.normalizesafe(acceleration);
+            this.curVelocity = initVelocityValue * math.normalizesafe(acceleration);
             this.lastVelocity = curVelocity;
         }
 

@@ -12,7 +12,7 @@ namespace CustomPhysics.Collision.Model {
             PhysicsCachePool.RecycleEdge(edges);
         }
 
-        public void InitEdges(List<Vector3> simplex) {
+        public void InitEdges(List<float3> simplex) {
             if (simplex.Count != 2) {
                 throw new Exception("边的数量错误");
             }
@@ -36,7 +36,7 @@ namespace CustomPhysics.Collision.Model {
             return result;
         }
 
-        public void InsertEdgePoint(Edge e, Vector3 point) {
+        public void InsertEdgePoint(Edge e, float3 point) {
             Edge e1 = CreateEdge(e.a, point);
             Edge oldEdge = edges[e.index];
             edges[e.index] = e1;
@@ -54,14 +54,14 @@ namespace CustomPhysics.Collision.Model {
             }
         }
 
-        public Edge CreateEdge(Vector3 a, Vector3 b) {
+        public Edge CreateEdge(float3 a, float3 b) {
             Edge e = PhysicsCachePool.GetEdgeFromPool();
             e.a = a;
             e.b = b;
 
             PhysicsWorld.perpenCalc(a, b, out float3 result);
             e.normal = result;
-            float lengthSq = e.normal.sqrMagnitude;
+            float lengthSq = math.distancesq(e.normal, float3.zero);
             // 单位化边
             if (lengthSq > float.Epsilon) {
                 e.distance = Mathf.Sqrt(lengthSq);
@@ -69,27 +69,27 @@ namespace CustomPhysics.Collision.Model {
             }
             else {
                 // 向量垂直定则
-                Vector3 v = a - b;
-                v.Normalize();
-                e.normal = new Vector3(v.z, 0, -v.x);
+                float3 v = a - b;
+                v = math.normalizesafe(v);
+                e.normal = new float3(v.z, 0, -v.x);
             }
             return e;
         }
 
-        private Edge CreateInitEdge(Vector3 a, Vector3 b) {
+        private Edge CreateInitEdge(float3 a, float3 b) {
             Edge e = PhysicsCachePool.GetEdgeFromPool();
             e.a = a;
             e.b = b;
             e.distance = 0;
 
             PhysicsWorld.perpenCalc(a, b, out float3 result);
-            // Vector3 perp = PhysicsTool.GetPerpendicularToOrigin(a, b);
-            e.distance = math.distance(result.x, result.z);
+            // float3 perp = PhysicsTool.GetPerpendicularToOrigin(a, b);
+            e.distance = math.distance(result, float3.zero);
 
             // 向量垂直定则
-            Vector3 v = a - b;
-            v.Normalize();
-            e.normal = new Vector3(v.z, 0, -v.x);
+            float3 v = a - b;
+            v = math.normalizesafe(v);
+            e.normal = new float3(v.z, 0, -v.x);
 
             return e;
         }

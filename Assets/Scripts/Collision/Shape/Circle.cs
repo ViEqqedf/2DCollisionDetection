@@ -14,36 +14,36 @@ namespace CustomPhysics.Collision.Shape {
             vertices = new List<float3>();
             for (int i = -resolution; i < resolution; i++) {
                 localVertices.Add(CreateCirclePoint(i, resolution));
-                vertices.Add(Vector3.zero);
+                vertices.Add(float3.zero);
             }
             for (int i = resolution; i > -resolution; i--) {
                 localVertices.Add(CreateCirclePoint(resolution, i));
-                vertices.Add(Vector3.zero);
+                vertices.Add(float3.zero);
             }
             for (int i = resolution; i > -resolution; i--) {
                 localVertices.Add(CreateCirclePoint(i, -resolution));
-                vertices.Add(Vector3.zero);
+                vertices.Add(float3.zero);
             }
             for (int i = -resolution; i < resolution; i++) {
                 localVertices.Add(CreateCirclePoint(-resolution, i));
-                vertices.Add(Vector3.zero);
+                vertices.Add(float3.zero);
             }
         }
 
-        private Vector3 CreateCirclePoint(int i, int j) {
+        private float3 CreateCirclePoint(int i, int j) {
             float squareX = i * 1.0f / resolution;
             float squareZ = j * 1.0f / resolution;
 
-            return new Vector3(
+            return new float3(
                 radius * squareX * Mathf.Sqrt(1 - squareZ * squareZ * 0.5f), 0,
                 radius * squareZ * Mathf.Sqrt(1 - squareX * squareX * 0.5f));
         }
 
-        protected override void GetBound(out Vector3 lowerBound, out Vector3 upperBound) {
-            float realR = math.distance(vertices[resolution].x, vertices[resolution].z);
+        protected override void GetBound(out float3 lowerBound, out float3 upperBound) {
+            float realR = math.distance(vertices[resolution], float3.zero);
 
-            lowerBound = new Vector3(-realR, 0, -realR);
-            upperBound = new Vector3(realR, 0, realR);
+            lowerBound = new float3(-realR, 0, -realR);
+            upperBound = new float3(realR, 0, realR);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Unity.Burst;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace CustomPhysics.Collision.Model {
@@ -6,6 +7,6 @@ namespace CustomPhysics.Collision.Model {
     public struct CollisionPair {
         public CollisionObject first;
         public CollisionObject second;
-        public Vector3 penetrateVec;
+        public float3 penetrateVec;
     }
 }

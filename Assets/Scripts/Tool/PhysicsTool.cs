@@ -74,16 +74,16 @@ namespace CustomPhysics.Tool {
         /// <param name="points">点集</param>
         /// <param name="point">要检查的点</param>
         /// <returns></returns>
-        public static bool IsPointInTriangle(List<Vector3> points, Vector3 point) {
-            Vector3 v0 = points[2] - points[0];
-            Vector3 v1 = points[1] - points[0];
-            Vector3 v2 = point - points[0];
+        public static bool IsPointInTriangle(List<float3> points, float3 point) {
+            float3 v0 = points[2] - points[0];
+            float3 v1 = points[1] - points[0];
+            float3 v2 = point - points[0];
 
-            float dot00 = Vector3.Dot(v0, v0);
-            float dot01 = Vector3.Dot(v0, v1);
-            float dot02 = Vector3.Dot(v0, v2);
-            float dot11 = Vector3.Dot(v1, v1);
-            float dot12 = Vector3.Dot(v1, v2);
+            float dot00 = math.dot(v0, v0);
+            float dot01 = math.dot(v0, v1);
+            float dot02 = math.dot(v0, v2);
+            float dot11 = math.dot(v1, v1);
+            float dot12 = math.dot(v1, v2);
             float denominator = 1 / (dot00 * dot11 - dot01 * dot01);
 
             // condition: u >= 0 && v >= 0 && u + v <= 1
@@ -104,7 +104,7 @@ namespace CustomPhysics.Tool {
             float3 ab = b - a;
             float3 ao = -a;
 
-            float sqrLength = math.distancesq(ab.x, ab.z);
+            float sqrLength = math.distancesq(ab, float3.zero);
             if (sqrLength < float.Epsilon) {
                 result = float3.zero;
             }
@@ -122,7 +122,7 @@ namespace CustomPhysics.Tool {
             float3 ab = b - a;
             float3 ao = -a;
 
-            float sqrLength = math.distancesq(ab.x, ab.z);
+            float sqrLength = math.distancesq(ab, float3.zero);
 
             // ab点重合了
             if(sqrLength < float.Epsilon) {
