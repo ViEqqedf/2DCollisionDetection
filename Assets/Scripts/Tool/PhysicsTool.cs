@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
+using AOT;
 using CustomPhysics.Collision;
 using Unity.Burst;
 using Unity.Mathematics;
 using UnityEngine;
 
 namespace CustomPhysics.Tool {
+    [BurstCompile(CompileSynchronously = true)]
     public static class PhysicsTool {
         #region Old
 
@@ -61,6 +63,11 @@ namespace CustomPhysics.Tool {
 
         #endregion
 
+        public delegate void GetClosestPointToOriginDelegate(
+            in float3 a, in float3 b, out float3 result);
+        public delegate void GetPerpendicularToOriginDelegate(
+            in float3 a, in float3 b, out float3 result);
+
         /// <summary>
         /// 检查点是否在三角形内
         /// </summary>
@@ -91,24 +98,27 @@ namespace CustomPhysics.Tool {
             return u + v <= 1;
         }
 
-        public static Vector3 GetPerpendicularToOrigin(Vector3 a, Vector3 b) {
-            Vector3 ab = b - a;
-            Vector3 ao = -a;
+        [BurstCompile(CompileSynchronously = true)]
+        [MonoPInvokeCallback(typeof(GetPerpendicularToOriginDelegate))]
+        public static void GetPerpendicularToOrigin(in float3 a, in float3 b, out float3 result) {
+            float3 ab = b - a;
+            float3 ao = -a;
 
-            float sqrLength = ab.sqrMagnitude;
+            float sqrLength = math.distancesq(ab.x, ab.z);
             if (sqrLength < float.Epsilon) {
-                return Vector3.zero;
+                result = float3.zero;
             }
 
-            float projection = Vector3.Dot(ab, ao) / sqrLength;
+            float projection = math.dot(ab, ao) / sqrLength;
 
             // return a + ab * projection;
-            return new Vector3(a.x + projection * ab.x, a.y + projection * ab.y,
+            result = new float3(a.x + projection * ab.x, a.y + projection * ab.y,
                 a.z + projection * ab.z);
         }
 
-        [BurstCompile]
-        public static float3 GetClosestPointToOrigin(float3 a, float3 b) {
+        [BurstCompile(CompileSynchronously = true)]
+        [MonoPInvokeCallback(typeof(GetClosestPointToOriginDelegate))]
+        public static void GetClosestPointToOrigin(in float3 a, in float3 b, out float3 result) {
             float3 ab = b - a;
             float3 ao = -a;
 
@@ -116,18 +126,18 @@ namespace CustomPhysics.Tool {
 
             // ab点重合了
             if(sqrLength < float.Epsilon) {
-                return a;
+                result = a;
             }
 
             float projection = math.dot(ab, ao) / sqrLength;
             if (projection < 0) {
-                return a;
+                result = a;
             }
             else if (projection > 1.0f) {
-                return b;
+                result = b;
             }
             else {
-                return new float3(a.x + projection * ab.x, a.y + projection * ab.y,
+                result = new float3(a.x + projection * ab.x, a.y + projection * ab.y,
                     a.z + projection * ab.z);
             }
         }

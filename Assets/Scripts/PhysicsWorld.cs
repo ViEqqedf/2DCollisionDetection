@@ -6,6 +6,7 @@ using CustomPhysics.Collision.Model;
 using CustomPhysics.Collision.Shape;
 using CustomPhysics.Test;
 using CustomPhysics.Tool;
+using Unity.Burst;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Profiling;
@@ -33,6 +34,9 @@ namespace CustomPhysics {
         // private List<ProjectionPoint> horAABBProjList;
         private List<ProjectionPoint> verAABBProjList;
         private List<Vector3> simplexList = new List<Vector3>();
+
+        public static PhysicsTool.GetClosestPointToOriginDelegate closeCalc;
+        public static PhysicsTool.GetPerpendicularToOriginDelegate perpenCalc;
 
         #region Test
 
@@ -349,7 +353,8 @@ namespace CustomPhysics {
             Vector3 fstVertex = simplex[0];
             Vector3 sndVertex = simplex[1];
 
-            supDir = -PhysicsTool.GetClosestPointToOrigin(fstVertex, sndVertex);
+            closeCalc(fstVertex, sndVertex, out float3 result);
+            supDir = -result;
             for (int i = 0; i < maxIterCount; ++i) {
                 if (supDir.sqrMagnitude < float.Epsilon) {
                     isCollision = true;
@@ -417,14 +422,13 @@ namespace CustomPhysics {
             int pointCount = simplex.Count;
 
             if (pointCount == 2) {
-                Vector3 crossPoint = PhysicsTool.GetClosestPointToOrigin(
-                    simplex[0], simplex[1]);
-                return -crossPoint;
+                closeCalc(simplex[0], simplex[1], out float3 result);
+                return -result;
             } else if (pointCount == 3) {
-                Vector3 crossOnCA = PhysicsTool.GetClosestPointToOrigin(
-                    simplex[2], simplex[0]);
-                Vector3 crossOnCB = PhysicsTool.GetClosestPointToOrigin(
-                    simplex[2], simplex[1]);
+                closeCalc(simplex[2], simplex[0], out float3 resultCA);
+                Vector3 crossOnCA = resultCA;
+                closeCalc(simplex[2], simplex[1], out float3 resultCB);
+                Vector3 crossOnCB = resultCB;
 
                 if (crossOnCA.sqrMagnitude < crossOnCB.sqrMagnitude) {
                     simplex.RemoveAt(1);
@@ -614,6 +618,13 @@ namespace CustomPhysics {
             // horAABBProjList = new List<ProjectionPoint>();
             verAABBProjList = new List<ProjectionPoint>();
 
+            closeCalc = BurstCompiler
+                .CompileFunctionPointer<PhysicsTool.GetClosestPointToOriginDelegate>(
+                    PhysicsTool.GetClosestPointToOrigin).Invoke;
+            perpenCalc = BurstCompiler
+                .CompileFunctionPointer<PhysicsTool.GetPerpendicularToOriginDelegate>(
+                    PhysicsTool.GetPerpendicularToOrigin).Invoke;
+
             Test0();
             // Test1();
             // Test2();
@@ -631,7 +642,7 @@ namespace CustomPhysics {
             ApplyAcceleration(timeSpan, independentTarget);
             // Profiler.EndSample();
             // Profiler.BeginSample("[ViE] Resolve");
-            Resolve(timeSpan, independentTarget);
+            // Resolve(timeSpan, independentTarget);
             // Profiler.EndSample();
             // Profiler.BeginSample("[ViE] ApplyVelocity");
             ApplyVelocity(timeSpan, independentTarget);
