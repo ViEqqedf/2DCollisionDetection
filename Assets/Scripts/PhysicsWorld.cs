@@ -6,6 +6,7 @@ using CustomPhysics.Collision.Model;
 using CustomPhysics.Collision.Shape;
 using CustomPhysics.Test;
 using CustomPhysics.Tool;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Profiling;
 using CollisionFlags = CustomPhysics.Collision.CollisionFlags;
@@ -50,9 +51,9 @@ namespace CustomPhysics {
 
                 CreateATestRect(new Vector3(
                     Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
-                CreateACustomShape(new Vector3[] {
-                    new Vector3(-2, 0, 0), new Vector3(0, 0, 1),
-                    new Vector3(2, 0, 0), new Vector3(0, 0, -1)}, spawnPos, i);
+                // CreateACustomShape(new Vector3[] {
+                //     new Vector3(-2, 0, 0), new Vector3(0, 0, 1),
+                //     new Vector3(2, 0, 0), new Vector3(0, 0, -1)}, spawnPos, i);
             }
         }
 
@@ -77,30 +78,30 @@ namespace CustomPhysics {
 
                 CreateATestRect(Vector3.zero);
                 CreateATestCircle(1, Vector3.zero);
-                CreateACustomShape(new Vector3[] {
-                    new Vector3(-2, 0, 0), new Vector3(0, 0, 1), new Vector3(1, 0, 1),
-                    new Vector3(2, 0, 0), new Vector3(2, 0, -2), new Vector3(-2, 0, -3)},
-                    Vector3.zero, 1);
-                spawnPos = new Vector3(
-                    Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
-                CreateACustomShape(new Vector3[] {
-                    new Vector3(-2, 0, 0), new Vector3(0, 0, 1), new Vector3(1, 0, 1),
-                    new Vector3(2, 0, 0), new Vector3(2, 0, -2), new Vector3(-2, 0, -3),
-                    new Vector3(-2, 0, 0)}, spawnPos, 1);
+                // CreateACustomShape(new Vector3[] {
+                //     new Vector3(-2, 0, 0), new Vector3(0, 0, 1), new Vector3(1, 0, 1),
+                //     new Vector3(2, 0, 0), new Vector3(2, 0, -2), new Vector3(-2, 0, -3)},
+                //     Vector3.zero, 1);
+                // spawnPos = new Vector3(
+                //     Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
+                // CreateACustomShape(new Vector3[] {
+                //     new Vector3(-2, 0, 0), new Vector3(0, 0, 1), new Vector3(1, 0, 1),
+                //     new Vector3(2, 0, 0), new Vector3(2, 0, -2), new Vector3(-2, 0, -3),
+                //     new Vector3(-2, 0, 0)}, spawnPos, 1);
             }
         }
 
         private void Test4() {
-            CreateACustomShape(new Vector3[] {Vector3.zero, new Vector3(-1.54f, 0, 4.75f),
-                new Vector3(2.5f, 0, 7.69f), new Vector3(6.54f, 0, 4.75f), new Vector3(5, 0, 0),},
-                Vector3.zero, 0);
-
-            CreateACustomShape(new Vector3[] {Vector3.zero, new Vector3(-1.54f, 0, 4.75f),
-                new Vector3(2.5f, 0, 7.69f), new Vector3(6.54f, 0, 4.75f), new Vector3(5, 0, 0),},
-                Vector3.zero, 0);
+            // CreateACustomShape(new Vector3[] {Vector3.zero, new Vector3(-1.54f, 0, 4.75f),
+            //     new Vector3(2.5f, 0, 7.69f), new Vector3(6.54f, 0, 4.75f), new Vector3(5, 0, 0),},
+            //     Vector3.zero, 0);
+            //
+            // CreateACustomShape(new Vector3[] {Vector3.zero, new Vector3(-1.54f, 0, 4.75f),
+            //     new Vector3(2.5f, 0, 7.69f), new Vector3(6.54f, 0, 4.75f), new Vector3(5, 0, 0),},
+            //     Vector3.zero, 0);
         }
 
-        public void CreateACustomShape(Vector3[] vertices, Vector3 pos, int level) {
+        public void CreateACustomShape(float3[] vertices, Vector3 pos, int level) {
             CollisionShape shape = new CustomPhysics.Collision.Shape.CustomShape(vertices);
             CollisionObject co = new CollisionObject(shape, null, pos, 0, level);
             AddCollisionObject(co);
@@ -112,7 +113,13 @@ namespace CustomPhysics {
             Mesh m;
             go.AddComponent<MeshFilter>().mesh = m = new Mesh();
             m.name = Guid.NewGuid().ToString();
-            m.vertices = co.shape.localVertices.ToArray();
+            int localVerticesCount = co.shape.localVertices.Count;
+            Vector3[] vertices = new Vector3[localVerticesCount];
+            for (int i = 0; i < localVerticesCount; i++) {
+                vertices[i] = new Vector3(co.shape.localVertices[i].x, co.shape.localVertices[i].y,
+                    co.shape.localVertices[i].z);
+            }
+            m.vertices = vertices;
 
             int vertexCount = co.shape.vertices.Count;
             int triCount = vertexCount - 2;
@@ -609,7 +616,7 @@ namespace CustomPhysics {
 
             Test0();
             // Test1();
-            Test2();
+            // Test2();
             // Test3();
             // Test4();
         }

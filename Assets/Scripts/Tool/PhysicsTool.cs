@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using CustomPhysics.Collision;
+using Unity.Burst;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace CustomPhysics.Tool {
@@ -105,18 +107,19 @@ namespace CustomPhysics.Tool {
                 a.z + projection * ab.z);
         }
 
-        public static Vector3 GetClosestPointToOrigin(Vector3 a, Vector3 b) {
-            Vector3 ab = b - a;
-            Vector3 ao = -a;
+        [BurstCompile]
+        public static float3 GetClosestPointToOrigin(float3 a, float3 b) {
+            float3 ab = b - a;
+            float3 ao = -a;
 
-            float sqrLength = ab.sqrMagnitude;
+            float sqrLength = math.distancesq(ab.x, ab.z);
 
             // ab点重合了
             if(sqrLength < float.Epsilon) {
                 return a;
             }
 
-            float projection = Vector3.Dot(ab, ao) / sqrLength;
+            float projection = math.dot(ab, ao) / sqrLength;
             if (projection < 0) {
                 return a;
             }
@@ -124,7 +127,7 @@ namespace CustomPhysics.Tool {
                 return b;
             }
             else {
-                return new Vector3(a.x + projection * ab.x, a.y + projection * ab.y,
+                return new float3(a.x + projection * ab.x, a.y + projection * ab.y,
                     a.z + projection * ab.z);
             }
         }
