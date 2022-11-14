@@ -27,21 +27,21 @@ namespace CustomPhysics.Collision {
         public bool HasFlag(CollisionFlags flag);
         public void AddFlag(CollisionFlags flag);
         public void RemoveFlag(CollisionFlags flag);
-        public Vector3 GetCurPosition();
-        public Vector3 GetNextPosition();
+        public float3 GetCurPosition();
+        public float3 GetNextPosition();
         public float GetCurRotation();
-        public void SetCurPos(Vector3 value);
-        public void Translate(Vector3 diff);
-        public void TranslateTo(Vector3 value);
-        public void Rotate(Vector3 diff);
-        public void RotateTo(Vector3 value);
+        public void SetCurPos(float3 value);
+        public void Translate(float3 diff);
+        public void TranslateTo(float3 value);
+        public void Rotate(float3 diff);
+        public void RotateTo(float3 value);
         public void Scale(float diff);
         public void ScaleTo(float value);
-        public Vector3 GetActiveVelocity();
-        public Vector3 GetInputMoveVelocity();
-        public void SetInputMoveVelocity(Vector3 value);
-        public void AddExternalVelocity(Vector3 diff);
-        public void SetExternalVelocity(Vector3 value);
+        public float3 GetActiveVelocity();
+        public float3 GetInputMoveVelocity();
+        public void SetInputMoveVelocity(float3 value);
+        public void AddExternalVelocity(float3 diff);
+        public void SetExternalVelocity(float3 value);
         public void AddAcceleration(Acceleration accelerationInfo);
         public void RemoveAcceleration(Acceleration accelerationInfo);
     }
@@ -53,16 +53,16 @@ namespace CustomPhysics.Collision {
         public bool isActive = true;
         public CollisionFlags flags = CollisionFlags.Default;
         public Object contextObject;
-        public Vector3 position;
-        public Vector3 nextPosition;
-        public Vector3 rotation;
+        public float3 position;
+        public float3 nextPosition;
+        public float3 rotation;
         public float scale = 1;
         public int level = 0;
 
         public List<Acceleration> accelerations;
-        public Vector3 velocity;
-        public Vector3 inputMoveVelocity;
-        public Vector3 resolveVelocity;
+        public float3 velocity;
+        public float3 inputMoveVelocity;
+        public float3 resolveVelocity;
 
         public Dictionary<int, CollisionShot> collisionShotsDic;
         public Action<CollisionObject> enterAction;
@@ -72,12 +72,12 @@ namespace CustomPhysics.Collision {
         // TODO: 添加一个脏标记
 
         public CollisionObject(CollisionShape shape, Object contextObject,
-            Vector3 startPos, float startRotation = 0, int level = 0) {
+            float3 startPos, float startRotation = 0, int level = 0) {
             this.id = publicId++;
             this.shape = shape;
             this.position = startPos;
             this.nextPosition = startPos;
-            this.rotation = new Vector3(0, startRotation, 0);
+            this.rotation = new float3(0, startRotation, 0);
             this.contextObject = contextObject;
             this.level = level;
             accelerations = new List<Acceleration>();
@@ -140,11 +140,11 @@ namespace CustomPhysics.Collision {
             this.flags &= ~flag;
         }
 
-        public Vector3 GetCurPosition() {
+        public float3 GetCurPosition() {
             return position;
         }
 
-        public Vector3 GetNextPosition() {
+        public float3 GetNextPosition() {
             return nextPosition;
         }
 
@@ -152,23 +152,23 @@ namespace CustomPhysics.Collision {
             return rotation.y;
         }
 
-        public void SetCurPos(Vector3 value) {
+        public void SetCurPos(float3 value) {
             position = nextPosition = value;
         }
 
-        public void Translate(Vector3 diff) {
+        public void Translate(float3 diff) {
             nextPosition += diff;
         }
 
-        public void TranslateTo(Vector3 value) {
+        public void TranslateTo(float3 value) {
             nextPosition = value;
         }
 
-        public void Rotate(Vector3 diff) {
+        public void Rotate(float3 diff) {
             ApplyRotation(rotation + diff);
         }
 
-        public void RotateTo(Vector3 value) {
+        public void RotateTo(float3 value) {
             ApplyRotation(value);
         }
 
@@ -180,8 +180,8 @@ namespace CustomPhysics.Collision {
             ApplyScale(value);
         }
 
-        public Vector3 GetActiveVelocity() {
-            Vector3 result = velocity + inputMoveVelocity;
+        public float3 GetActiveVelocity() {
+            float3 result = velocity + inputMoveVelocity;
             for (int i = 0, count = accelerations.Count; i < count; i++) {
                 result += accelerations[i].curVelocity;
             }
@@ -189,11 +189,11 @@ namespace CustomPhysics.Collision {
             return result;
         }
 
-        public Vector3 GetInputMoveVelocity() {
+        public float3 GetInputMoveVelocity() {
             return inputMoveVelocity;
         }
 
-        public void AddExternalVelocity(Vector3 diff) {
+        public void AddExternalVelocity(float3 diff) {
             this.velocity += diff;
         }
 
@@ -205,11 +205,11 @@ namespace CustomPhysics.Collision {
             accelerations.Remove(accelerationInfo);
         }
 
-        public void SetInputMoveVelocity(Vector3 value) {
+        public void SetInputMoveVelocity(float3 value) {
             this.inputMoveVelocity = value;
         }
 
-        public void SetExternalVelocity(Vector3 finalVelocity) {
+        public void SetExternalVelocity(float3 finalVelocity) {
             this.velocity = finalVelocity;
         }
 
@@ -222,22 +222,21 @@ namespace CustomPhysics.Collision {
             shape.ApplyWorldVertices(position, rotation, scale);
         }
 
-        public void ApplyRotation(Vector3 newRotation) {
+        public void ApplyRotation(float3 newRotation) {
             this.rotation = newRotation;
         }
 
         public void ApplyScale(float newScale) {
             this.scale = newScale;
         }
-        public void AddResolveVelocity(Vector3 diff) {
+        public void AddResolveVelocity(float3 diff) {
             this.resolveVelocity += diff;
         }
 
         public void CleanVelocity() {
-            this.resolveVelocity = this.inputMoveVelocity = Vector3.zero;
+            this.resolveVelocity = this.inputMoveVelocity = float3.zero;
         }
 
-        // [BurstCompile]
         public float3 GetFarthestPointInDir(float3 dir) {
             float maxDis = float.MinValue;
             float3 farthestPoint = float3.zero;
