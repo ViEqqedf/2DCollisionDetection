@@ -65,6 +65,7 @@ namespace CustomPhysics.Collision {
         public float3 resolveVelocity;
 
         public Dictionary<int, CollisionShot> collisionShotsDic;
+        public List<int> collisionShotList;
         public Action<CollisionObject> enterAction;
         public Action<CollisionObject> stayAction;
         public Action<CollisionObject> exitAction;
@@ -82,6 +83,7 @@ namespace CustomPhysics.Collision {
             this.level = level;
             accelerations = new List<Acceleration>();
             collisionShotsDic = new Dictionary<int, CollisionShot>();
+            collisionShotList = new List<int>();
         }
 
         public static bool IsSameCollisionObject(CollisionObject obj1, CollisionObject obj2) {
@@ -101,6 +103,7 @@ namespace CustomPhysics.Collision {
             };
 
             if (oriCount == -1) {
+                collisionShotList.Add(targetId);
                 enterAction?.Invoke(target);
             }
         }
