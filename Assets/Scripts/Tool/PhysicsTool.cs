@@ -67,6 +67,7 @@ namespace CustomPhysics.Tool {
             in float3 a, in float3 b, out float3 result);
         public delegate void GetPerpendicularToOriginDelegate(
             in float3 a, in float3 b, out float3 result);
+        public delegate float3 GetFarthestPointInDirDelegate(float3[] vertices, float3 dir);
 
         /// <summary>
         /// 检查点是否在三角形内
@@ -142,6 +143,21 @@ namespace CustomPhysics.Tool {
                 result = new float3(a.x + projection * ab.x, a.y + projection * ab.y,
                     a.z + projection * ab.z);
             }
+        }
+
+        [BurstCompile(CompileSynchronously = true)]
+        public static float3 GetFarthestPointInDir(float3[] vertices, float3 dir) {
+            float maxDis = float.MinValue;
+            float3 farthestPoint = float3.zero;
+            for (int i = 0, count = vertices.Length; i < count; ++i) {
+                float3 curPoint = vertices[i];
+                float dis = math.dot(curPoint, dir);
+                if (dis > maxDis) {
+                    maxDis = dis;
+                    farthestPoint = curPoint;
+                }
+            }
+            return farthestPoint;
         }
     }
 }

@@ -113,7 +113,7 @@ namespace CustomPhysics.Collision {
         public void InitCollisionObject() {
             shape.UpdateShape();
 
-            int count = shape.localVertices.Count;
+            int count = shape.localVertices.Length;
             float3 origin = (shape.aabb.upperBound + shape.aabb.lowerBound) / 2;
             for (int i = 0; i < count; i++) {
                 shape.localVertices[i] -= origin;
@@ -243,7 +243,7 @@ namespace CustomPhysics.Collision {
         public float3 GetFarthestPointInDir(float3 dir) {
             float maxDis = float.MinValue;
             float3 farthestPoint = float3.zero;
-            for (int i = 0, count = shape.vertices.Count; i < count; ++i) {
+            for (int i = 0, count = shape.vertices.Length; i < count; ++i) {
                 float3 curPoint = shape.vertices[i];
                 float dis = math.dot(curPoint, dir);
                 if (dis > maxDis) {

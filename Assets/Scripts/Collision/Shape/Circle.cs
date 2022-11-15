@@ -10,24 +10,30 @@ namespace CustomPhysics.Collision.Shape {
         public Circle(float radius) : base(ShapeType.Circle) {
             this.radius = radius;
 
-            localVertices = new List<float3>();
-            vertices = new List<float3>();
-            for (int i = -resolution; i < resolution; i++) {
-                localVertices.Add(CreateCirclePoint(i, resolution));
-                vertices.Add(float3.zero);
-            }
-            for (int i = resolution; i > -resolution; i--) {
-                localVertices.Add(CreateCirclePoint(resolution, i));
-                vertices.Add(float3.zero);
-            }
-            for (int i = resolution; i > -resolution; i--) {
-                localVertices.Add(CreateCirclePoint(i, -resolution));
-                vertices.Add(float3.zero);
-            }
-            for (int i = -resolution; i < resolution; i++) {
-                localVertices.Add(CreateCirclePoint(-resolution, i));
-                vertices.Add(float3.zero);
-            }
+            localVertices = new float3[16] {
+                CreateCirclePoint(-2, 2),
+                CreateCirclePoint(-1, 2),
+                CreateCirclePoint(0, 2),
+                CreateCirclePoint(1, 2),
+                CreateCirclePoint(2, 2),
+                CreateCirclePoint(2, 1),
+                CreateCirclePoint(2, 0),
+                CreateCirclePoint(2, -1),
+                CreateCirclePoint(2, -2),
+                CreateCirclePoint(1, -2),
+                CreateCirclePoint(0, -2),
+                CreateCirclePoint(-1, -2),
+                CreateCirclePoint(-2, -2),
+                CreateCirclePoint(-2, -1),
+                CreateCirclePoint(-2, 0),
+                CreateCirclePoint(-2, 1),
+            };
+
+            vertices = new float3[16] {
+                float3.zero, float3.zero, float3.zero, float3.zero, float3.zero, float3.zero,
+                float3.zero, float3.zero, float3.zero, float3.zero, float3.zero, float3.zero,
+                float3.zero, float3.zero, float3.zero, float3.zero,
+            };
         }
 
         private float3 CreateCirclePoint(int i, int j) {
