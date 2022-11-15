@@ -37,6 +37,7 @@ namespace CustomPhysics {
 
         public static PhysicsTool.GetClosestPointToOriginDelegate closestCalc;
         public static PhysicsTool.GetPerpendicularToOriginDelegate perpCalc;
+        public static PhysicsTool.CreateEdgeDelegate createEdgeCalc;
 
         #region Test
 
@@ -81,11 +82,11 @@ namespace CustomPhysics {
                     Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
 
                 CreateATestRect(float3.zero);
-                CreateATestCircle(1, float3.zero);
-                // CreateACustomShape(new float3[] {
-                //     new float3(-2, 0, 0), new float3(0, 0, 1), new float3(1, 0, 1),
-                //     new float3(2, 0, 0), new float3(2, 0, -2), new float3(-2, 0, -3)},
-                //     float3.zero, 1);
+                // CreateATestCircle(1, float3.zero);
+                CreateACustomShape(new float3[] {
+                    new float3(-2, 0, 0), new float3(0, 0, 1), new float3(1, 0, 1),
+                    new float3(2, 0, 0), new float3(2, 0, -2), new float3(-2, 0, -3)},
+                    float3.zero, 1);
                 // spawnPos = new float3(
                 //     Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
                 // CreateACustomShape(new float3[] {
@@ -629,6 +630,9 @@ namespace CustomPhysics {
             perpCalc = BurstCompiler
                 .CompileFunctionPointer<PhysicsTool.GetPerpendicularToOriginDelegate>(
                     PhysicsTool.GetPerpendicularToOrigin).Invoke;
+            createEdgeCalc = BurstCompiler
+                .CompileFunctionPointer<PhysicsTool.CreateEdgeDelegate>(
+                    PhysicsTool.CreateEdge).Invoke;
 
             Test0();
             // Test1();

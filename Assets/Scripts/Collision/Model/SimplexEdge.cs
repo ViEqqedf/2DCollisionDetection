@@ -37,12 +37,23 @@ namespace CustomPhysics.Collision.Model {
         }
 
         public void InsertEdgePoint(Edge e, float3 point) {
-            Edge e1 = CreateEdge(e.a, point);
+            PhysicsWorld.createEdgeCalc(e.a, point, out float distance1, out float3 normal1);
+            Edge e1 = PhysicsCachePool.GetEdgeFromPool();  // CreateEdge(e.a, point);
+            e1.a = e.a;
+            e1.b = point;
+            e1.distance = distance1;
+            e1.normal = normal1;
+
             Edge oldEdge = edges[e.index];
             edges[e.index] = e1;
             PhysicsCachePool.RecycleEdge(oldEdge);
 
-            Edge e2 = CreateEdge(point, e.b);
+            PhysicsWorld.createEdgeCalc(e.a, point, out float distance2, out float3 normal2);
+            Edge e2 = PhysicsCachePool.GetEdgeFromPool();
+            e2.a = point;
+            e2.b = e.b;
+            e2.distance = distance2;
+            e2.normal = normal2;
             edges.Insert(e.index + 1, e2);
 
             UpdateEdgeIndex();
