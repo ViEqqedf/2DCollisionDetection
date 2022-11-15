@@ -41,7 +41,7 @@ namespace CustomPhysics {
         #region Test
 
         private void Test0() {
-            int range = 44;
+            int range = 2;
             for (int i = 0; i < range; i++) {
                 CreateATestRect(float3.zero);
             }
@@ -590,20 +590,22 @@ namespace CustomPhysics {
 
             for (int i = collisionList.Count - 1; i >= 0; i--) {
                 CollisionObject co = collisionList[i];
-                for (int j = co.collisionShotsDic.Count - 1; j >= 0; j--) {
-                    var curShot = co.collisionShotsDic.ElementAt(j);
-                    int curCount = curShot.Value.count;
+                for (int j = co.collisionShotList.Count - 1; j >= 0; j--) {
+                    int id = co.collisionShotList[j];
+                    CollisionShot curShot = co.collisionShotsDic[id];
+                    int curCount = curShot.count;
                     if (curCount < 0) {
-                        co.collisionShotsDic.Remove(curShot.Key);
-                        co.exitAction?.Invoke(curShot.Value.target);
+                        co.collisionShotList.Remove(id);
+                        co.collisionShotsDic.Remove(id);
+                        co.exitAction?.Invoke(curShot.target);
                     } else {
-                        co.collisionShotsDic[curShot.Key] = new CollisionShot() {
-                            target = curShot.Value.target,
+                        co.collisionShotsDic[id] = new CollisionShot() {
+                            target = curShot.target,
                             count = curCount - 1,
                         };
 
                         if (curCount == 1) {
-                            co.stayAction?.Invoke(curShot.Value.target);
+                            co.stayAction?.Invoke(curShot.target);
                         }
                     }
                 }
@@ -645,12 +647,12 @@ namespace CustomPhysics {
             ApplyAcceleration(timeSpan, independentTarget);
             // Profiler.EndSample();
             // Profiler.BeginSample("[ViE] Resolve");
-            // Resolve(timeSpan, independentTarget);
+            Resolve(timeSpan, independentTarget);
             // Profiler.EndSample();
             // Profiler.BeginSample("[ViE] ApplyVelocity");
             ApplyVelocity(timeSpan, independentTarget);
             // Profiler.EndSample();
-            // ExternalPairHandle();
+            ExternalPairHandle();
         }
 
         public void Destroy() {
