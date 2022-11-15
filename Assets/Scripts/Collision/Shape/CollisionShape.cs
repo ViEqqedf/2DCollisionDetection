@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using CustomPhysics.Collision.Model;
+using Unity.Burst;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -21,14 +22,14 @@ namespace CustomPhysics.Collision.Shape {
 
     public abstract class CollisionShape {
         public ShapeType shapeType { get; protected set; }
-        public List<float3> localVertices { get; protected set; }
-        public List<float3> vertices { get; protected set; }
+        public float3[] localVertices { get; protected set; }
+        public float3[] vertices { get; protected set; }
         public AABB aabb { get; protected set; }
 
         public CollisionShape(ShapeType shapeType) {
             this.shapeType = shapeType;
-            this.localVertices = new List<float3>();
-            this.vertices = new List<float3>();
+            this.localVertices = Array.Empty<float3>();
+            this.vertices = Array.Empty<float3>();
             this.aabb = new AABB(float3.zero, float3.zero);
         }
 
@@ -37,8 +38,9 @@ namespace CustomPhysics.Collision.Shape {
                 throw new Exception("顶点数量<3，不足以构建凸多边形");
             }
             this.shapeType = shapeType;
-            this.localVertices = new List<float3>(localVertices);
-            this.vertices = new List<float3>(localVertices);
+            this.localVertices = localVertices;
+            this.vertices = localVertices;
+
             this.aabb = new AABB(float3.zero, float3.zero);
         }
 
@@ -48,7 +50,7 @@ namespace CustomPhysics.Collision.Shape {
         }
 
         public void ApplyWorldVertices(float3 origin, float3 rotate, float scale) {
-            for (int i = 0, count = this.vertices.Count; i < count; i++) {
+            for (int i = 0, count = this.vertices.Length; i < count; i++) {
                 float3 localPoint = scale * localVertices[i];
                 float3 rotateVec = Quaternion.Euler(rotate) * localPoint;
                 vertices[i] = new float3(rotateVec.x + origin.x,

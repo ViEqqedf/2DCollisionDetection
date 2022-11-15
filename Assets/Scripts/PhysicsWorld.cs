@@ -35,13 +35,13 @@ namespace CustomPhysics {
         private List<ProjectionPoint> verAABBProjList;
         private List<float3> simplexList = new List<float3>();
 
-        public static PhysicsTool.GetClosestPointToOriginDelegate closeCalc;
-        public static PhysicsTool.GetPerpendicularToOriginDelegate perpenCalc;
+        public static PhysicsTool.GetClosestPointToOriginDelegate closestCalc;
+        public static PhysicsTool.GetPerpendicularToOriginDelegate perpCalc;
 
         #region Test
 
         private void Test0() {
-            int range = 2;
+            int range = 44;
             for (int i = 0; i < range; i++) {
                 CreateATestRect(float3.zero);
             }
@@ -117,7 +117,7 @@ namespace CustomPhysics {
             Mesh m;
             go.AddComponent<MeshFilter>().mesh = m = new Mesh();
             m.name = Guid.NewGuid().ToString();
-            int localVerticesCount = co.shape.localVertices.Count;
+            int localVerticesCount = co.shape.localVertices.Length;
             Vector3[] vertices = new Vector3[localVerticesCount];
             for (int i = 0; i < localVerticesCount; i++) {
                 vertices[i] = new Vector3(co.shape.localVertices[i].x, co.shape.localVertices[i].y,
@@ -125,7 +125,7 @@ namespace CustomPhysics {
             }
             m.vertices = vertices;
 
-            int vertexCount = co.shape.vertices.Count;
+            int vertexCount = co.shape.vertices.Length;
             int triCount = vertexCount - 2;
             int[] triangles = new int[3 * triCount];
             for (int i = 0, triIndex = 0; i < triCount; triIndex = 3 * ++i) {
@@ -353,7 +353,7 @@ namespace CustomPhysics {
             float3 fstVertex = simplex[0];
             float3 sndVertex = simplex[1];
 
-            closeCalc(fstVertex, sndVertex, out float3 result);
+            closestCalc(fstVertex, sndVertex, out float3 result);
             supDir = -result;
             for (int i = 0; i < maxIterCount; ++i) {
                 if (math.distancesq(supDir, float3.zero) < epsilon) {
@@ -424,12 +424,12 @@ namespace CustomPhysics {
             int pointCount = simplex.Count;
 
             if (pointCount == 2) {
-                closeCalc(simplex[0], simplex[1], out float3 result);
+                closestCalc(simplex[0], simplex[1], out float3 result);
                 return -result;
             } else if (pointCount == 3) {
-                closeCalc(simplex[2], simplex[0], out float3 resultCA);
+                closestCalc(simplex[2], simplex[0], out float3 resultCA);
                 float3 crossOnCA = resultCA;
-                closeCalc(simplex[2], simplex[1], out float3 resultCB);
+                closestCalc(simplex[2], simplex[1], out float3 resultCB);
                 float3 crossOnCB = resultCB;
 
                 if (math.distancesq(crossOnCA, float3.zero) <
@@ -623,10 +623,10 @@ namespace CustomPhysics {
             // horAABBProjList = new List<ProjectionPoint>();
             verAABBProjList = new List<ProjectionPoint>();
 
-            closeCalc = BurstCompiler
+            closestCalc = BurstCompiler
                 .CompileFunctionPointer<PhysicsTool.GetClosestPointToOriginDelegate>(
                     PhysicsTool.GetClosestPointToOrigin).Invoke;
-            perpenCalc = BurstCompiler
+            perpCalc = BurstCompiler
                 .CompileFunctionPointer<PhysicsTool.GetPerpendicularToOriginDelegate>(
                     PhysicsTool.GetPerpendicularToOrigin).Invoke;
 
@@ -647,7 +647,7 @@ namespace CustomPhysics {
             ApplyAcceleration(timeSpan, independentTarget);
             // Profiler.EndSample();
             // Profiler.BeginSample("[ViE] Resolve");
-            Resolve(timeSpan, independentTarget);
+            // Resolve(timeSpan, independentTarget);
             // Profiler.EndSample();
             // Profiler.BeginSample("[ViE] ApplyVelocity");
             ApplyVelocity(timeSpan, independentTarget);

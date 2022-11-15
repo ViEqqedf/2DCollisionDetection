@@ -13,7 +13,7 @@ namespace CustomPhysics.Collision.Shape {
             float maxX = float.MinValue;
             float maxZ = float.MinValue;
 
-            for (int i = 0, count = vertices.Count; i < count; i++) {
+            for (int i = 0, count = vertices.Length; i < count; i++) {
                 if (vertices[i].x < minX) {
                     minX = vertices[i].x;
                 }

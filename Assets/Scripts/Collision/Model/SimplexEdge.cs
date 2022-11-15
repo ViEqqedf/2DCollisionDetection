@@ -59,12 +59,12 @@ namespace CustomPhysics.Collision.Model {
             e.a = a;
             e.b = b;
 
-            PhysicsWorld.perpenCalc(a, b, out float3 result);
+            PhysicsWorld.perpCalc(a, b, out float3 result);
             e.normal = result;
             float lengthSq = math.distancesq(e.normal, float3.zero);
             // 单位化边
             if (lengthSq > float.Epsilon) {
-                e.distance = Mathf.Sqrt(lengthSq);
+                e.distance = math.sqrt(lengthSq);
                 e.normal *= 1.0f / e.distance;
             }
             else {
@@ -82,7 +82,7 @@ namespace CustomPhysics.Collision.Model {
             e.b = b;
             e.distance = 0;
 
-            PhysicsWorld.perpenCalc(a, b, out float3 result);
+            PhysicsWorld.perpCalc(a, b, out float3 result);
             // float3 perp = PhysicsTool.GetPerpendicularToOrigin(a, b);
             e.distance = math.distance(result, float3.zero);
 

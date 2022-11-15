@@ -11,14 +11,15 @@ namespace CustomPhysics.Collision.Shape {
             this.horizontalWidth = horizontalWidth;
             this.verticalWidth = verticalWidth;
 
-            localVertices = new List<float3>() {
+            localVertices = new float3[4] {
                 new float3(-horizontalWidth / 2, 0, -verticalWidth / 2),
                 new float3(-horizontalWidth / 2, 0, verticalWidth / 2),
                 new float3(horizontalWidth / 2, 0, verticalWidth / 2),
                 new float3(horizontalWidth / 2, 0, -verticalWidth / 2),
             };
-            vertices = new List<float3>(
-                new float3[] {float3.zero, float3.zero, float3.zero, float3.zero,});
+            vertices = new float3[4] {
+                float3.zero, float3.zero, float3.zero, float3.zero,
+            };
         }
 
         protected override void GetBound(out float3 lowerBound, out float3 upperBound) {
@@ -27,7 +28,7 @@ namespace CustomPhysics.Collision.Shape {
             float maxX = float.MinValue;
             float maxZ = float.MinValue;
 
-            for (int i = 0, count = vertices.Count; i < count; i++) {
+            for (int i = 0, count = vertices.Length; i < count; i++) {
                 if (vertices[i].x < minX) {
                     minX = vertices[i].x;
                 }
