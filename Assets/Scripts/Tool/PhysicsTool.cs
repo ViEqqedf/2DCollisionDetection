@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using AOT;
 using CustomPhysics.Collision;
+using CustomPhysics.Collision.Model;
 using Unity.Burst;
 using Unity.Mathematics;
 using UnityEngine;
@@ -67,7 +68,8 @@ namespace CustomPhysics.Tool {
             in float3 a, in float3 b, out float3 result);
         public delegate void GetPerpendicularToOriginDelegate(
             in float3 a, in float3 b, out float3 result);
-        public delegate float3 GetFarthestPointInDirDelegate(float3[] vertices, float3 dir);
+        public delegate void CreateEdgeDelegate(
+            in float3 a, in float3 b, out float distance, out float3 normal);
 
         /// <summary>
         /// 检查点是否在三角形内
@@ -145,19 +147,24 @@ namespace CustomPhysics.Tool {
             }
         }
 
-        [BurstCompile(CompileSynchronously = true)]
-        public static float3 GetFarthestPointInDir(float3[] vertices, float3 dir) {
-            float maxDis = float.MinValue;
-            float3 farthestPoint = float3.zero;
-            for (int i = 0, count = vertices.Length; i < count; ++i) {
-                float3 curPoint = vertices[i];
-                float dis = math.dot(curPoint, dir);
-                if (dis > maxDis) {
-                    maxDis = dis;
-                    farthestPoint = curPoint;
-                }
+        [BurstCompile]
+        [MonoPInvokeCallback(typeof(CreateEdgeDelegate))]
+        public static void CreateEdge(in float3 a, in float3 b, out float distance, out float3 normal) {
+            GetPerpendicularToOrigin(a, b, out float3 result);
+            normal = result;
+            float lengthSq = math.distancesq(result, float3.zero);
+            // 单位化边
+            if (lengthSq > float.Epsilon) {
+                distance = math.sqrt(lengthSq);
+                normal *= 1.0f / distance;
             }
-            return farthestPoint;
+            else {
+                // 向量垂直定则
+                float3 v = a - b;
+                v = math.normalizesafe(v);
+                distance = 0;
+                normal = new float3(v.z, 0, -v.x);
+            }
         }
     }
 }
