@@ -356,16 +356,20 @@ namespace CustomPhysics {
                     float fstExternalRate = math.dot(fstActiveVelocity, penetrateDir) * timeSpan;
                     float sndExternalRate = math.dot(sndActiveVelocity, -penetrateDir) * timeSpan;
 
-                    bool fstMoving = fstExternalRate > epsilon;
-                    bool sndMoving = sndExternalRate > epsilon;
+                    bool fstMoving = math.abs(fstExternalRate) > epsilon;
+                    bool sndMoving = math.abs(sndExternalRate) > epsilon;
                     if (fstMoving != sndMoving) {
                         if (fstMoving) {
                             pair.first.AddResolveVelocity(-resolveVec);
-                            pair.first.AddResolveVelocity(-fstExternalRate * penetrateDir);
+                            if (fstExternalRate > epsilon) {
+                                pair.first.AddResolveVelocity(-fstExternalRate * penetrateDir);
+                            }
                         }
                         if (sndMoving) {
                             pair.second.AddResolveVelocity(resolveVec);
-                            pair.second.AddResolveVelocity(sndExternalRate * penetrateDir);
+                            if (sndExternalRate > epsilon) {
+                                pair.second.AddResolveVelocity(sndExternalRate * penetrateDir);
+                            }
                         }
                     } else {
                         pair.first.AddResolveVelocity(-resolveVec / 2f);
