@@ -233,6 +233,9 @@ namespace CustomPhysics.Collision {
             this.scale = newScale;
         }
         public void AddResolveVelocity(float3 diff) {
+            if (math.distancesq(diff, float3.zero) > 0.00001f) {
+                Debug.Log("?");
+            }
             this.resolveVelocity += diff;
         }
 

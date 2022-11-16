@@ -70,6 +70,10 @@ namespace CustomPhysics.Tool {
             in float3 a, in float3 b, out float3 result);
         public delegate void CreateEdgeDelegate(
             in float3 a, in float3 b, out float distance, out float3 normal);
+        public delegate void CheckCircleCollidedDelegate(
+            in float3 fstPos, in float fstRadius, in float fstScale,
+            in float3 sndPos, in float sndRadius, in float sndScale,
+            out bool isCollided, out float3 penetrateVec);
 
         /// <summary>
         /// 检查点是否在三角形内
@@ -164,6 +168,32 @@ namespace CustomPhysics.Tool {
                 v = math.normalizesafe(v);
                 distance = 0;
                 normal = new float3(v.z, 0, -v.x);
+            }
+        }
+
+        [BurstCompile]
+        [MonoPInvokeCallback(typeof(CheckCircleCollidedDelegate))]
+        public static void CheckCircleCollided(
+            in float3 fstPos, in float fstRadius, in float fstScale,
+            in float3 sndPos, in float sndRadius, in float sndScale,
+            out bool isCollided, out float3 penetrateVec) {
+            float fst = fstRadius * fstScale;
+            float snd = sndRadius * sndScale;
+            float radiusDis = fst + snd;
+            isCollided = math.distance(fstPos, sndPos) - radiusDis <= 0;
+            if (isCollided) {
+                float3 oriVec = sndPos - fstPos;
+                float oriDis = math.distance(oriVec, float3.zero);
+                if (oriDis < 0.00001f) {
+                    float separation = math.max(fst, snd);
+                    oriVec = separation * math.normalizesafe(new float3(
+                        fstRadius * fstRadius % 7, 0, sndRadius * sndScale % 17));
+                } else {
+                    oriVec = math.normalizesafe(oriVec);
+                }
+                penetrateVec = (radiusDis - oriDis) * oriVec;
+            } else {
+                penetrateVec = float3.zero;
             }
         }
     }
