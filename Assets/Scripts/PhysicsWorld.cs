@@ -31,131 +31,13 @@ namespace CustomPhysics {
 
         private List<ProjectionPoint> broadScanList;
         private Dictionary<int, ProjectionPoint> broadStartPoints;
-        // private List<ProjectionPoint> horAABBProjList;
         private List<ProjectionPoint> verAABBProjList;
         private List<float3> simplexList = new List<float3>();
 
         public static PhysicsTool.GetClosestPointToOriginDelegate closestCalc;
         public static PhysicsTool.GetPerpendicularToOriginDelegate perpCalc;
         public static PhysicsTool.CreateEdgeDelegate createEdgeCalc;
-
-        #region Test
-
-        private void Test0() {
-            int range = 44;
-            for (int i = 0; i < range; i++) {
-                CreateATestRect(float3.zero);
-            }
-        }
-
-        private void Test1() {
-            int range = 1;
-            for (int i = 0; i < range; i++) {
-                float3 spawnPos = new float3(
-                    Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
-
-                CreateATestRect(new float3(
-                    Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
-                // CreateACustomShape(new float3[] {
-                //     new float3(-2, 0, 0), new float3(0, 0, 1),
-                //     new float3(2, 0, 0), new float3(0, 0, -1)}, spawnPos, i);
-            }
-        }
-
-        private void Test2() {
-            int range = 100;
-            for (int i = 0; i < range; i++) {
-                // float3 spawnPos = new float3(
-                    // Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
-                // CreateATestCircle(1, spawnPos);
-                CreateATestCircle(1, float3.zero);
-            }
-
-            // CreateATestCircle(1, float3.zero);
-            // CreateATestCircle(1, float3.right);
-        }
-
-        private void Test3() {
-            int range = 1;
-            for (int i = 0; i < range; i++) {
-                float3 spawnPos = new float3(
-                    Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
-
-                CreateATestRect(float3.zero);
-                // CreateATestCircle(1, float3.zero);
-                CreateACustomShape(new float3[] {
-                    new float3(-2, 0, 0), new float3(0, 0, 1), new float3(1, 0, 1),
-                    new float3(2, 0, 0), new float3(2, 0, -2), new float3(-2, 0, -3)},
-                    float3.zero, 1);
-                // spawnPos = new float3(
-                //     Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
-                // CreateACustomShape(new float3[] {
-                //     new float3(-2, 0, 0), new float3(0, 0, 1), new float3(1, 0, 1),
-                //     new float3(2, 0, 0), new float3(2, 0, -2), new float3(-2, 0, -3),
-                //     new float3(-2, 0, 0)}, spawnPos, 1);
-            }
-        }
-
-        private void Test4() {
-            // CreateACustomShape(new float3[] {float3.zero, new float3(-1.54f, 0, 4.75f),
-            //     new float3(2.5f, 0, 7.69f), new float3(6.54f, 0, 4.75f), new float3(5, 0, 0),},
-            //     float3.zero, 0);
-            //
-            // CreateACustomShape(new float3[] {float3.zero, new float3(-1.54f, 0, 4.75f),
-            //     new float3(2.5f, 0, 7.69f), new float3(6.54f, 0, 4.75f), new float3(5, 0, 0),},
-            //     float3.zero, 0);
-        }
-
-        public void CreateACustomShape(float3[] vertices, float3 pos, int level) {
-            CollisionShape shape = new CustomPhysics.Collision.Shape.CustomShape(vertices);
-            CollisionObject co = new CollisionObject(shape, null, pos, 0, level);
-            AddCollisionObject(co);
-            GameObject go = CreateMesh(co);
-        }
-
-        public GameObject CreateMesh(CollisionObject co) {
-            GameObject go = new GameObject(co.shape.shapeType.ToString());
-            Mesh m;
-            go.AddComponent<MeshFilter>().mesh = m = new Mesh();
-            m.name = Guid.NewGuid().ToString();
-            int localVerticesCount = co.shape.localVertices.Length;
-            Vector3[] vertices = new Vector3[localVerticesCount];
-            for (int i = 0; i < localVerticesCount; i++) {
-                vertices[i] = new Vector3(co.shape.localVertices[i].x, co.shape.localVertices[i].y,
-                    co.shape.localVertices[i].z);
-            }
-            m.vertices = vertices;
-
-            int vertexCount = co.shape.vertices.Length;
-            int triCount = vertexCount - 2;
-            int[] triangles = new int[3 * triCount];
-            for (int i = 0, triIndex = 0; i < triCount; triIndex = 3 * ++i) {
-                triangles[triIndex] = 0;
-                triangles[triIndex + 1] = (i + 1) % vertexCount;
-                triangles[triIndex + 2] = (i + 2) % vertexCount;
-            }
-            m.triangles = triangles;
-            go.AddComponent<MeshRenderer>();
-            go.AddComponent<CollisionObjectProxy>().target = co;
-
-            return go;
-        }
-
-        public void CreateATestRect(float3 pos, int level = 0) {
-            CollisionShape shape = new CustomPhysics.Collision.Shape.Rect(1, 1);
-            CollisionObject co = new CollisionObject(shape, null, pos, 0, level);
-            AddCollisionObject(co);
-            GameObject go = CreateMesh(co);
-        }
-
-        public void CreateATestCircle(float radius, float3 pos) {
-            CollisionShape shape = new CustomPhysics.Collision.Shape.Circle(radius);
-            CollisionObject co = new CollisionObject(shape, null, pos);
-            AddCollisionObject(co);
-            GameObject go = CreateMesh(co);
-        }
-
-        #endregion
+        public static PhysicsTool.CheckCircleCollidedDelegate checkCircleCalc;
 
         #region Collision
 
@@ -169,7 +51,6 @@ namespace CustomPhysics {
         }
 
         private void BroadPhase() {
-            // PhysicsCachePool.RecycleCollisionPair(collisionPairs);
             collisionPairs.Clear();
 
             SweepAndPrune();
@@ -215,7 +96,6 @@ namespace CustomPhysics {
                     for (int j = 0, scanCount = broadScanList.Count; j < scanCount; j++) {
                         CollisionObject scanObj = broadScanList[j].collisionObject;
 
-                        // CollisionPair pair = PhysicsCachePool.GetCollisionPairFromPool();
                         CollisionPair pair;
                         int jLevel = scanObj.level;
                         int iLevel = horProjObj.level;
@@ -228,15 +108,11 @@ namespace CustomPhysics {
                                 first = iIndex < jIndex ? horProjObj : scanObj,
                                 second = iIndex > jIndex ? horProjObj : scanObj,
                             };
-                            // pair.first = iIndex < jIndex ? horProjObj : scanObj;
-                            // pair.second = iIndex > jIndex ? horProjObj : scanObj;
                         } else {
                             pair = new CollisionPair() {
                                 first = jLevel > iLevel ? horProjObj : scanObj,
                                 second = jLevel < iLevel ? horProjObj : scanObj,
                             };
-                            // pair.first = jLevel > iLevel ? horProjObj : scanObj;
-                            // pair.second = jLevel < iLevel ? horProjObj : scanObj;
                         }
 
                         collisionPairs.Add(pair);
@@ -246,24 +122,6 @@ namespace CustomPhysics {
                     broadStartPoints.Add(horProjObj.id, verAABBProjList[i]);
                 }
             }
-
-            // 在水平方向上检查已确定的对
-            // for (int i = collisionPairs.Count - 1; i >= 0; i--) {
-            //     CollisionPair pair = collisionPairs[i];
-            //     CollisionObject first = pair.first;
-            //     CollisionObject second = pair.second;
-            //     float fstStart = first.GetProjectionPoint(AABBProjectionType.HorizontalStart).value;
-            //     float fstEnd = first.GetProjectionPoint(AABBProjectionType.HorizontalEnd).value;
-            //     float sndStart = second.GetProjectionPoint(AABBProjectionType.HorizontalStart).value;
-            //     float sndEnd = second.GetProjectionPoint(AABBProjectionType.HorizontalEnd).value;
-            //     if (fstStart <= sndStart && sndStart <= fstEnd ||
-            //         sndStart <= fstStart && fstStart <= sndEnd) {
-            //        // 重叠
-            //         continue;
-            //     } else {
-            //         collisionPairs.Remove(pair);
-            //     }
-            // }
 
             // for (int i = 0, count = collisionPairs.Count; i < count; i++) {
                 // CollisionPair pair = collisionPairs[i];
@@ -275,8 +133,6 @@ namespace CustomPhysics {
         }
 
         private void NarrowPhase(CollisionObject independentTarget) {
-            // Stopwatch stopwatch = new Stopwatch();
-            // stopwatch.Restart();
             for (int i = collisionPairs.Count - 1; i >= 0; i--) {
                 CollisionPair pair = collisionPairs[i];
                 CollisionObject fst = pair.first;
@@ -300,23 +156,9 @@ namespace CustomPhysics {
 
                     if (isAllCircle) {
                         // 圆碰撞对的计算简单且常用，单独处理以加速
-                        float fstRadius = ((Circle) fst.shape).radius * fst.scale;
-                        float sndRadius = ((Circle) snd.shape).radius * snd.scale;
-                        float radiusDis = fstRadius + sndRadius;
-                        isCollided = math.distance(fst.position, snd.position) - radiusDis <= 0;
-                        if (isCollided && !fst.flags.HasFlag(CollisionFlags.NoContactResponse) &&
-                            !snd.flags.HasFlag(CollisionFlags.NoContactResponse)) {
-                            float3 oriVec = snd.position - fst.position;
-                            float oriDis = math.distance(oriVec, float3.zero);
-                            if (oriDis < epsilon) {
-                                float separation = Mathf.Max(fstRadius, sndRadius);
-                                oriVec = separation * math.normalizesafe(new float3(
-                                    i * tickFrame % 7, 0, i * tickFrame % 17));
-                            } else {
-                                oriVec = math.normalizesafe(oriVec);
-                            }
-                            penetrateVec = (radiusDis - oriDis) * oriVec;
-                        }
+                        checkCircleCalc(fst.position, ((Circle) fst.shape).radius, fst.scale,
+                            snd.position, ((Circle) snd.shape).radius, snd.scale,
+                            out isCollided, out penetrateVec);
                     } else {
                         isCollided = GJK(fst, snd, simplexList);
                         if (isCollided && !fst.flags.HasFlag(CollisionFlags.NoContactResponse) &&
@@ -327,7 +169,6 @@ namespace CustomPhysics {
                 }
 
                 if(!isCollided){
-                    // PhysicsCachePool.RecycleCollisionPair(pair);
                     collisionPairs.RemoveAt(i);
                 } else {
                     collisionPairs[i] = new CollisionPair() {
@@ -338,9 +179,6 @@ namespace CustomPhysics {
                     // Debug.Log($"{tickFrame} {fst.id}与{snd.id}窄检测碰撞，穿透向量为{pair.penetrateVec}，长度为{pair.penetrateVec.magnitude}");
                 }
             }
-
-            // stopwatch.Stop();
-            // UnityEngine.Debug.Log("times " + stopwatch.ElapsedMilliseconds);
         }
 
         private bool GJK(CollisionObject fst, CollisionObject snd, List<float3> simplex) {
@@ -504,44 +342,37 @@ namespace CustomPhysics {
 
                 if (pair.first.level > pair.second.level) {
                     pair.second.AddResolveVelocity(resolveVec);
-                    float externalRate = math.dot(sndActiveVelocity, -penetrateDir) * timeSpan;
-                    float resolveRate = math.dot(pair.second.resolveVelocity, penetrateDir);
-                    if (externalRate > resolveRate) {
-                        pair.second.AddResolveVelocity((externalRate - resolveRate) * penetrateDir);
+                    float externalRate = math.dot(sndActiveVelocity, penetrateDir) * timeSpan;
+                    if (externalRate > epsilon) {
+                        pair.second.AddResolveVelocity(externalRate * penetrateDir);
                     }
                 } else if(pair.first.level < pair.second.level) {
                     pair.first.AddResolveVelocity(-resolveVec);
-                    float externalRate = math.dot(fstActiveVelocity, penetrateDir) * timeSpan;
-                    float resolveRate = math.dot(pair.first.resolveVelocity, -penetrateDir);
-                    if (externalRate > resolveRate) {
-                        pair.first.AddResolveVelocity(-(externalRate - resolveRate) * penetrateDir);
+                    float externalRate = math.dot(fstActiveVelocity, -penetrateDir) * timeSpan;
+                    if (externalRate > epsilon) {
+                        pair.first.AddResolveVelocity(-externalRate * penetrateDir);
                     }
                 } else {
                     float fstExternalRate = math.dot(fstActiveVelocity, penetrateDir) * timeSpan;
-                    float fstResolveRate = math.dot(pair.first.resolveVelocity, -penetrateDir);
                     float sndExternalRate = math.dot(sndActiveVelocity, -penetrateDir) * timeSpan;
-                    float sndResolveRate = math.dot(pair.second.resolveVelocity, penetrateDir);
 
                     bool fstMoving = fstExternalRate > epsilon;
                     bool sndMoving = sndExternalRate > epsilon;
                     if (fstMoving != sndMoving) {
                         if (fstMoving) {
                             pair.first.AddResolveVelocity(-resolveVec);
-                            pair.first.AddResolveVelocity(-(fstExternalRate - fstResolveRate) * penetrateDir);
+                            pair.first.AddResolveVelocity(-fstExternalRate * penetrateDir);
                         }
                         if (sndMoving) {
                             pair.second.AddResolveVelocity(resolveVec);
-                            pair.second.AddResolveVelocity((sndExternalRate - sndResolveRate) * penetrateDir);
+                            pair.second.AddResolveVelocity(sndExternalRate * penetrateDir);
                         }
                     } else {
                         pair.first.AddResolveVelocity(-resolveVec / 2f);
                         pair.second.AddResolveVelocity(resolveVec / 2f);
 
-                        if (math.dot(fstActiveVelocity, penetrateDir) > 0 &&
-                            math.dot(sndActiveVelocity, -penetrateDir) > 0) {
-                            pair.first.AddResolveVelocity(-(fstExternalRate - fstResolveRate) * penetrateDir);
-                            pair.second.AddResolveVelocity((sndExternalRate - sndResolveRate) * penetrateDir);
-                        }
+                        pair.first.AddResolveVelocity(-fstExternalRate * penetrateDir);
+                        pair.second.AddResolveVelocity(sndExternalRate * penetrateDir);
                     }
                 }
             }
@@ -560,6 +391,10 @@ namespace CustomPhysics {
         }
 
         private void ApplyVelocityOnAObject(CollisionObject co, float timeSpan) {
+            if (math.distance(co.GetActiveVelocity(), float3.zero) > 0) {
+                Debug.Log("?");
+            }
+
             float3 resultantVelocity = co.GetActiveVelocity() * timeSpan + co.resolveVelocity;
             co.Translate(resultantVelocity);
 
@@ -621,7 +456,6 @@ namespace CustomPhysics {
 
             broadScanList = new List<ProjectionPoint>();
             broadStartPoints = new Dictionary<int, ProjectionPoint>();
-            // horAABBProjList = new List<ProjectionPoint>();
             verAABBProjList = new List<ProjectionPoint>();
 
             closestCalc = BurstCompiler
@@ -633,29 +467,18 @@ namespace CustomPhysics {
             createEdgeCalc = BurstCompiler
                 .CompileFunctionPointer<PhysicsTool.CreateEdgeDelegate>(
                     PhysicsTool.CreateEdge).Invoke;
-
-            Test0();
-            // Test1();
-            // Test2();
-            // Test3();
-            // Test4();
+            checkCircleCalc = BurstCompiler
+                .CompileFunctionPointer<PhysicsTool.CheckCircleCollidedDelegate>(
+                    PhysicsTool.CheckCircleCollided).Invoke;
         }
 
         public void Tick(float timeSpan, CollisionObject independentTarget = null) {
             tickFrame++;
 
-            // Profiler.BeginSample("[ViE] CollisionDetection");
             CollisionDetection(timeSpan, independentTarget);
-            // Profiler.EndSample();
-            // Profiler.BeginSample("[ViE] ApplyAcceleration");
             ApplyAcceleration(timeSpan, independentTarget);
-            // Profiler.EndSample();
-            // Profiler.BeginSample("[ViE] Resolve");
-            // Resolve(timeSpan, independentTarget);
-            // Profiler.EndSample();
-            // Profiler.BeginSample("[ViE] ApplyVelocity");
+            Resolve(timeSpan, independentTarget);
             ApplyVelocity(timeSpan, independentTarget);
-            // Profiler.EndSample();
             ExternalPairHandle();
         }
 
@@ -674,10 +497,6 @@ namespace CustomPhysics {
             collisionObject.InitCollisionObject();
             collisionList.Add(collisionObject);
 
-            // horAABBProjList.Add(
-                // collisionObject.GetProjectionPoint(AABBProjectionType.HorizontalStart));
-            // horAABBProjList.Add(
-                // collisionObject.GetProjectionPoint(AABBProjectionType.HorizontalEnd));
             verAABBProjList.Add(
                 collisionObject.GetProjectionPoint(AABBProjectionType.VerticalStart));
             verAABBProjList.Add(

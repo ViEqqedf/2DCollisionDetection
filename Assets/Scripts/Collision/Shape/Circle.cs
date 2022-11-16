@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace CustomPhysics.Collision.Shape {
     public class Circle : CollisionShape {
-        private int resolution = 2;
         public readonly float radius;
 
         public Circle(float radius) : base(ShapeType.Circle) {
@@ -37,8 +36,8 @@ namespace CustomPhysics.Collision.Shape {
         }
 
         private float3 CreateCirclePoint(int i, int j) {
-            float squareX = i * 1.0f / resolution;
-            float squareZ = j * 1.0f / resolution;
+            float squareX = i * 1.0f / 2;
+            float squareZ = j * 1.0f / 2;
 
             return new float3(
                 radius * squareX * Mathf.Sqrt(1 - squareZ * squareZ * 0.5f), 0,
@@ -46,10 +45,28 @@ namespace CustomPhysics.Collision.Shape {
         }
 
         protected override void GetBound(out float3 lowerBound, out float3 upperBound) {
-            float realR = math.distance(vertices[resolution], float3.zero);
+            float minX = float.MaxValue;
+            float minZ = float.MaxValue;
+            float maxX = float.MinValue;
+            float maxZ = float.MinValue;
 
-            lowerBound = new float3(-realR, 0, -realR);
-            upperBound = new float3(realR, 0, realR);
+            for (int i = 0, count = vertices.Length; i < count; i++) {
+                if (vertices[i].x < minX) {
+                    minX = vertices[i].x;
+                }
+                if (vertices[i].z < minZ) {
+                    minZ = vertices[i].z;
+                }
+                if (vertices[i].x > maxX) {
+                    maxX = vertices[i].x;
+                }
+                if (vertices[i].z > maxZ) {
+                    maxZ = vertices[i].z;
+                }
+            }
+
+            lowerBound = new float3(minX, 0, minZ);
+            upperBound = new float3(maxX, 0, maxZ);
         }
     }
 }

@@ -38,8 +38,10 @@ namespace CustomPhysics.Collision.Shape {
                 throw new Exception("顶点数量<3，不足以构建凸多边形");
             }
             this.shapeType = shapeType;
-            this.localVertices = localVertices;
-            this.vertices = localVertices;
+            int length = localVertices.Length;
+            this.localVertices = new float3[length];
+            localVertices.CopyTo(this.localVertices, 0);
+            this.vertices = new float3[length];
 
             this.aabb = new AABB(float3.zero, float3.zero);
         }
