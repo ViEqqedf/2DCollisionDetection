@@ -92,17 +92,17 @@ namespace CustomPhysics.Collision {
 
         public void TryToCreateCollisionShot(CollisionObject target) {
             int targetId = target?.id ?? -1;
-            int oriCount = -1;
+            int oriCount = -2;
             if (collisionShotsDic.TryGetValue(targetId, out CollisionShot shotInDic)) {
                 oriCount = shotInDic.count;
             }
 
             collisionShotsDic[targetId] = new CollisionShot() {
                 target = target,
-                count = oriCount == -1 ? 2 : 1,
+                count = oriCount == -2 ? 2 : 1,
             };
 
-            if (oriCount == -1) {
+            if (oriCount == -2) {
                 collisionShotList.Add(targetId);
                 enterAction?.Invoke(target);
             }
@@ -233,9 +233,6 @@ namespace CustomPhysics.Collision {
             this.scale = newScale;
         }
         public void AddResolveVelocity(float3 diff) {
-            if (math.distancesq(diff, float3.zero) > 0.00001f) {
-                Debug.Log("?");
-            }
             this.resolveVelocity += diff;
         }
 

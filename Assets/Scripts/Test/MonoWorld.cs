@@ -71,13 +71,13 @@ public class MonoWorld : MonoBehaviour {
     }
 
     private void Test3() {
-        int range = 1;
+        int range = 10;
         for (int i = 0; i < range; i++) {
             float3 spawnPos = new float3(
                 Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
 
-            CreateATestRect(float3.zero);
-            CreateATestCircle(1, float3.zero);
+            // CreateATestRect(float3.zero);
+            // CreateATestCircle(1, float3.zero);
             float3[] localVertices = new float3[] {
                 new float3(-2, 0, 0), new float3(0, 0, 1), new float3(1, 0, 1),
                 new float3(2, 0, 0), new float3(2, 0, -2), new float3(-2, 0, -3)
