@@ -395,10 +395,6 @@ namespace CustomPhysics {
         }
 
         private void ApplyVelocityOnAObject(CollisionObject co, float timeSpan) {
-            if (math.distance(co.GetActiveVelocity(), float3.zero) > 0) {
-                Debug.Log("?");
-            }
-
             float3 resultantVelocity = co.GetActiveVelocity() * timeSpan + co.resolveVelocity;
             co.Translate(resultantVelocity);
 
