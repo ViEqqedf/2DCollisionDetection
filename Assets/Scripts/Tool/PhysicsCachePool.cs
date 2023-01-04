@@ -1,46 +1,13 @@
 ﻿using System.Collections.Generic;
-using CustomPhysics.Collision;
 using CustomPhysics.Collision.Model;
-using UnityEngine;
 
 namespace CustomPhysics.Tool {
     public static class PhysicsCachePool {
-        public static Stack<CollisionPair> collisionPairPool = new Stack<CollisionPair>();
         public static Stack<SimplexEdge> simplexEdgePool = new Stack<SimplexEdge>();
         public static Stack<Edge> edgePool = new Stack<Edge>();
 
-        private static int collisionPairCacheCount = 0;
         private static int simplexEdgeCount = 0;
         private static int edgeCount = 0;
-
-        #region CollisionPair
-
-        // public static CollisionPair GetCollisionPairFromPool() {
-        //     if (collisionPairCacheCount > 0) {
-        //         collisionPairCacheCount--;
-        //         return collisionPairPool.Pop();
-        //     } else {
-        //         return new CollisionPair();
-        //     }
-        // }
-        //
-        // public static void RecycleCollisionPair(CollisionPair pair) {
-        //     collisionPairPool.Push(pair);
-        //     collisionPairCacheCount++;
-        // }
-        //
-        // public static void RecycleCollisionPair(List<CollisionPair> pairs) {
-        //     if (pairs != null) {
-        //         for (int i = 0, count = pairs.Count; i < count; i++) {
-        //             collisionPairPool.Push(pairs[i]);
-        //             collisionPairCacheCount++;
-        //         }
-        //
-        //         pairs.Clear();
-        //     }
-        // }
-
-        #endregion
 
         #region SimplexEdge
 
