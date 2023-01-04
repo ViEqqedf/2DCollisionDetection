@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using CustomPhysics.Collision.Model;
 using CustomPhysics.Collision.Shape;
-using Unity.Burst;
 using Unity.Mathematics;
-using UnityEngine;
-using Object = System.Object;
 
 namespace CustomPhysics.Collision {
     [Flags]
@@ -17,6 +15,7 @@ namespace CustomPhysics.Collision {
 
     public struct CollisionShot {
         public CollisionObject target;
+        public float3 penetrateVec;
         public int count;
     }
 
@@ -28,7 +27,6 @@ namespace CustomPhysics.Collision {
         public void AddFlag(CollisionFlags flag);
         public void RemoveFlag(CollisionFlags flag);
         public float3 GetCurPosition();
-        public float3 GetNextPosition();
         public float GetCurRotation();
         public void SetCurPos(float3 value);
         public void Translate(float3 diff);
@@ -38,12 +36,15 @@ namespace CustomPhysics.Collision {
         public void Scale(float diff);
         public void ScaleTo(float value);
         public float3 GetActiveVelocity();
-        public float3 GetInputMoveVelocity();
+        public float3 GetResultantVelocity();
+        public void RecordInputMoveVelocity(float3 value);
+        public bool AddInputMoveVelocity(float3 diff);
         public void SetInputMoveVelocity(float3 value);
         public void AddExternalVelocity(float3 diff);
-        public void SetExternalVelocity(float3 value);
         public void AddAcceleration(Acceleration accelerationInfo);
         public void RemoveAcceleration(Acceleration accelerationInfo);
+        public ReadOnlyCollection<int> GetAllShotsFromCo();
+        public CollisionShot GetShotByTargetCollisionId(int coId);
     }
 
     public class CollisionObject : ICollisionObject{
@@ -61,10 +62,12 @@ namespace CustomPhysics.Collision {
 
         public List<Acceleration> accelerations;
         public float3 velocity;
+        public float3 lastInputMoveVelocity;
         public float3 inputMoveVelocity;
         public float3 resolveVelocity;
 
         public Dictionary<int, CollisionShot> collisionShotsDic;
+        public ReadOnlyCollection<int> outerReadOnlyCollisionShotList;
         public List<int> collisionShotList;
         public Action<CollisionObject> enterAction;
         public Action<CollisionObject> stayAction;
@@ -84,13 +87,14 @@ namespace CustomPhysics.Collision {
             accelerations = new List<Acceleration>();
             collisionShotsDic = new Dictionary<int, CollisionShot>();
             collisionShotList = new List<int>();
+            outerReadOnlyCollisionShotList = new ReadOnlyCollection<int>(collisionShotList);
         }
 
         public static bool IsSameCollisionObject(CollisionObject obj1, CollisionObject obj2) {
             return obj1.id == obj2.id;
         }
 
-        public void TryToCreateCollisionShot(CollisionObject target) {
+        public void TryToCreateCollisionShot(CollisionObject target, float3 penetrateVec) {
             int targetId = target?.id ?? -1;
             int oriCount = -2;
             if (collisionShotsDic.TryGetValue(targetId, out CollisionShot shotInDic)) {
@@ -99,6 +103,7 @@ namespace CustomPhysics.Collision {
 
             collisionShotsDic[targetId] = new CollisionShot() {
                 target = target,
+                penetrateVec = penetrateVec,
                 count = oriCount == -2 ? 2 : 1,
             };
 
@@ -106,6 +111,10 @@ namespace CustomPhysics.Collision {
                 collisionShotList.Add(targetId);
                 enterAction?.Invoke(target);
             }
+        }
+
+        public bool HasForwardVelocity() {
+            return math.dot(GetActiveVelocity(), GetResultantVelocity()) > 0;
         }
 
         #region Interface
@@ -145,10 +154,6 @@ namespace CustomPhysics.Collision {
 
         public float3 GetCurPosition() {
             return position;
-        }
-
-        public float3 GetNextPosition() {
-            return nextPosition;
         }
 
         public float GetCurRotation() {
@@ -192,8 +197,11 @@ namespace CustomPhysics.Collision {
             return result;
         }
 
-        public float3 GetInputMoveVelocity() {
-            return inputMoveVelocity;
+        public float3 GetResultantVelocity() {
+            float3 result = GetActiveVelocity();
+            result += resolveVelocity;
+
+            return result;
         }
 
         public void AddExternalVelocity(float3 diff) {
@@ -208,12 +216,30 @@ namespace CustomPhysics.Collision {
             accelerations.Remove(accelerationInfo);
         }
 
-        public void SetInputMoveVelocity(float3 value) {
-            this.inputMoveVelocity = value;
+        public void RecordInputMoveVelocity(float3 value) {
+            if (math.distancesq(value, float3.zero) == 0) {
+                lastInputMoveVelocity = value;
+            }
         }
 
-        public void SetExternalVelocity(float3 finalVelocity) {
-            this.velocity = finalVelocity;
+        public bool AddInputMoveVelocity(float3 diff) {
+            this.inputMoveVelocity += diff;
+
+            return HasForwardVelocity();
+        }
+
+        public void SetInputMoveVelocity(float3 value) {
+            this.inputMoveVelocity = value;
+            RecordInputMoveVelocity(value);
+        }
+
+        public ReadOnlyCollection<int> GetAllShotsFromCo() {
+            return outerReadOnlyCollisionShotList;
+        }
+
+        public CollisionShot GetShotByTargetCollisionId(int coId) {
+            collisionShotsDic.TryGetValue(coId, out CollisionShot shot);
+            return shot;
         }
 
         #endregion
@@ -236,8 +262,15 @@ namespace CustomPhysics.Collision {
             this.resolveVelocity += diff;
         }
 
-        public void CleanVelocity() {
-            this.resolveVelocity = this.inputMoveVelocity = float3.zero;
+        public void SetResolveVelocity(float3 velocity) {
+            this.resolveVelocity = velocity;
+        }
+
+        public void CleanActiveVelocity() {
+            if (math.distance(this.inputMoveVelocity, float3.zero) > PhysicsWorld.epsilon) {
+                this.lastInputMoveVelocity = this.inputMoveVelocity;
+            }
+            this.inputMoveVelocity = float3.zero;
         }
 
         public float3 GetFarthestPointInDir(float3 dir) {
