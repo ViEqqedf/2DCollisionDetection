@@ -32,6 +32,7 @@ namespace CustomPhysics {
         private Dictionary<int, ProjectionPoint> broadStartPoints;
         private List<ProjectionPoint> verAABBProjList;
         private List<float3> simplexList = new List<float3>();
+        private int coCountInWorld = 0;
 
         public static PhysicsTool.GetClosestPointToOriginDelegate closestCalc;
         public static PhysicsTool.GetPerpendicularToOriginDelegate perpCalc;
@@ -101,8 +102,8 @@ namespace CustomPhysics {
 
                         // 让碰撞对内碰撞体的顺序规律一致
                         if (jLevel == iLevel) {
-                            int iIndex = collisionList.IndexOf(horProjObj);
-                            int jIndex = collisionList.IndexOf(scanObj);
+                            int iIndex = horProjObj.indexInWorld;
+                            int jIndex = scanObj.indexInWorld;
                             pair = new CollisionPair() {
                                 first = iIndex < jIndex ? horProjObj : scanObj,
                                 second = iIndex > jIndex ? horProjObj : scanObj,
@@ -202,11 +203,15 @@ namespace CustomPhysics {
                 float3 p = Support(supDir, fst, snd);
                 float3 supSubFst = p - fstVertex;
                 float3 supSubSnd = p - sndVertex;
-                if (math.distancesq(supSubFst, float3.zero) < epsilon ||
-                    math.distancesq(supSubSnd, float3.zero) < epsilon) {
+                if (math.dot(p, supDir) < 0) {
                     isCollision = false;
                     break;
                 }
+                // if (math.distancesq(supSubFst, float3.zero) < epsilon ||
+                    // math.distancesq(supSubSnd, float3.zero) < epsilon) {
+                    // isCollision = false;
+                    // break;
+                // }
 
                 simplex.Add(p);
 
@@ -521,7 +526,7 @@ namespace CustomPhysics {
 
             CollisionDetection(timeSpan, independentTarget);
             ApplyAcceleration(timeSpan, independentTarget);
-            Resolve(timeSpan, independentTarget);
+            // Resolve(timeSpan, independentTarget);
             ApplyVelocity(timeSpan, independentTarget);
             ExternalPairHandle();
         }
@@ -544,6 +549,8 @@ namespace CustomPhysics {
         public bool AddCollisionObject(CollisionObject collisionObject) {
             collisionObject.InitCollisionObject();
             collisionList.Add(collisionObject);
+            collisionObject.SetIndexInWorld(coCountInWorld);
+            coCountInWorld += 1;
 
             verAABBProjList.Add(
                 collisionObject.GetProjectionPoint(AABBProjectionType.VerticalStart));
@@ -562,7 +569,12 @@ namespace CustomPhysics {
                     collisionObject.GetProjectionPoint(AABBProjectionType.VerticalStart));
                 verAABBProjList.Remove(
                     collisionObject.GetProjectionPoint(AABBProjectionType.VerticalEnd));
-                collisionList.Remove(collisionObject);
+                int index = collisionObject.indexInWorld;
+                collisionList.RemoveAt(index);
+                coCountInWorld -= 1;
+                for (int i = index; i < coCountInWorld; i++) {
+                    collisionList[i].SetIndexInWorld(collisionList[i].indexInWorld - 1);
+                }
             }
             return true;
         }
