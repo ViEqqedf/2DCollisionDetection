@@ -42,12 +42,12 @@ namespace CustomPhysics {
         #region Collision
 
         private void CollisionDetection(float timeSpan, CollisionObject independentTarget) {
-            Profiler.BeginSample("[ViE] BroadPhase");
+            // Profiler.BeginSample("[ViE] BroadPhase");
             BroadPhase();
-            Profiler.EndSample();
-            Profiler.BeginSample("[ViE] NarrowPhase");
+            // Profiler.EndSample();
+            // Profiler.BeginSample("[ViE] NarrowPhase");
             NarrowPhase(independentTarget);
-            Profiler.EndSample();
+            // Profiler.EndSample();
         }
 
         private void BroadPhase() {

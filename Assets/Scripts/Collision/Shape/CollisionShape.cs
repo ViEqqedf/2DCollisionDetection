@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using CustomPhysics.Collision.Model;
-using Unity.Burst;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -12,13 +10,6 @@ namespace CustomPhysics.Collision.Shape {
         Rect = 1 << 1,
         Circle = 1 << 2,
         Custom = 1 << 3,
-    }
-
-    public struct TestShape {
-        public ShapeType shapeType;
-        public List<float3> localVertices;
-        public List<float3> vertices;
-        public AABB aabb;
     }
 
     public abstract class CollisionShape {
