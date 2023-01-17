@@ -19,9 +19,9 @@ public class MonoWorld : MonoBehaviour {
         world.Init();
 
         // Test0();
-        // Test1();
+        Test1();
         // Test2();
-        Test3();
+        // Test3();
         // Test4();
     }
 
@@ -42,13 +42,13 @@ public class MonoWorld : MonoBehaviour {
     }
 
     private void Test1() {
-        int range = 1;
+        int range = 50;
         for (int i = 0; i < range; i++) {
-            float3 spawnPos = new float3(
-                Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
+            float3 spawnPos = new float3(-3.848755f, 0, 0.6241739f);
 
-            CreateATestRect(new float3(
-                Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
+            CreateATestRect(spawnPos);
+            // CreateATestRect(new float3(
+                // Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
             // CreateACustomShape(new float3[] {
             //     new float3(-2, 0, 0), new float3(0, 0, 1),
             //     new float3(2, 0, 0), new float3(0, 0, -1)}, spawnPos, i);
@@ -64,14 +64,14 @@ public class MonoWorld : MonoBehaviour {
             CreateATestCircle(1, float3.zero);
         }
 
-        CreateATestRect(float3.zero);
+        // CreateATestRect(float3.zero);
 
         // CreateATestCircle(1, float3.zero);
         // CreateATestCircle(1, float3.right);
     }
 
     private void Test3() {
-        int range = 10;
+        int range = 2;
         for (int i = 0; i < range; i++) {
             float3 spawnPos = new float3(
                 Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
@@ -138,7 +138,7 @@ public class MonoWorld : MonoBehaviour {
     }
 
     public void CreateATestRect(float3 pos, int level = 0) {
-        CollisionShape shape = new CustomPhysics.Collision.Shape.Rect(1, 1);
+        CollisionShape shape = new CustomPhysics.Collision.Shape.Rect(2, 2);
         CollisionObject co = new CollisionObject(shape, null, pos, 0, level);
         world.AddCollisionObject(co);
         GameObject go = CreateMesh(co);
