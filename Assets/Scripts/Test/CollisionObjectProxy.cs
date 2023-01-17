@@ -9,12 +9,15 @@ namespace CustomPhysics.Test {
         public bool isInControl = false;
         public int nP = 1;
         public float velocity = 7;
+        public float scale = 1;
 
         private void Update() {
             transform.position = target.position;
             transform.rotation = Quaternion.Euler(target.rotation);
             transform.localScale = target.scale * Vector3.one;
             shape = target.shape.shapeType;
+
+            target.ScaleTo(scale);
 
             if (isInControl) {
                 if (nP == 1) {
