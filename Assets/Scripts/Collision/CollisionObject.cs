@@ -50,6 +50,7 @@ namespace CustomPhysics.Collision {
     public class CollisionObject : ICollisionObject{
         private static int publicId = 1;
         public int id;
+        public int indexInWorld { get; private set; }
         public CollisionShape shape;
         public bool isActive = true;
         public CollisionFlags flags = CollisionFlags.Default;
@@ -92,6 +93,10 @@ namespace CustomPhysics.Collision {
 
         public static bool IsSameCollisionObject(CollisionObject obj1, CollisionObject obj2) {
             return obj1.id == obj2.id;
+        }
+
+        public void SetIndexInWorld(int index) {
+            this.indexInWorld = index;
         }
 
         public void TryToCreateCollisionShot(CollisionObject target, float3 penetrateVec) {
