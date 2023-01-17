@@ -6,11 +6,12 @@ using Unity.Mathematics;
 using UnityEngine;
 
 namespace CustomPhysics.Collision.Shape {
+    [Flags]
     public enum ShapeType {
-        Undefined,
-        Rect,
-        Circle,
-        Custom,
+        Undefined = 1 << 0,
+        Rect = 1 << 1,
+        Circle = 1 << 2,
+        Custom = 1 << 3,
     }
 
     public struct TestShape {
