@@ -6,9 +6,8 @@ using UnityEngine;
 
 namespace CustomPhysics.Collision.Model {
     public class SimplexEdge {
-        public Edge[] edges = new Edge[PhysicsWorld.maxIterCount + 1];
+        private Edge[] edges = new Edge[PhysicsWorld.maxIterCount + 1];
         private int edgeCount = 0;
-        // public List<Edge> edges = new List<Edge>();
 
         public void Clear() {
             PhysicsCachePool.RecycleEdge(edges);
@@ -24,8 +23,6 @@ namespace CustomPhysics.Collision.Model {
             edgeCount++;
             edges[1] = CreateInitEdge(simplex[1], simplex[0]);
             edgeCount++;
-            // edges.Add(CreateInitEdge(simplex[0], simplex[1]));
-            // edges.Add(CreateInitEdge(simplex[1], simplex[0]));
 
             UpdateEdgeIndex();
         }
@@ -45,7 +42,7 @@ namespace CustomPhysics.Collision.Model {
 
         public void InsertEdgePoint(Edge e, float3 point) {
             PhysicsWorld.createEdgeCalc(e.a, point, out float distance1, out float3 normal1);
-            Edge e1 = PhysicsCachePool.GetEdgeFromPool();  // CreateEdge(e.a, point);
+            Edge e1 = PhysicsCachePool.GetEdgeFromPool();
             e1.a = e.a;
             e1.b = point;
             e1.distance = distance1;
@@ -74,28 +71,6 @@ namespace CustomPhysics.Collision.Model {
             for (int i = 0; i < edgeCount; ++i) {
                 edges[i].index = i;
             }
-        }
-
-        public Edge CreateEdge(float3 a, float3 b) {
-            Edge e = PhysicsCachePool.GetEdgeFromPool();
-            e.a = a;
-            e.b = b;
-
-            PhysicsWorld.perpCalc(a, b, out float3 result);
-            e.normal = result;
-            float lengthSq = math.distancesq(e.normal, float3.zero);
-            // 单位化边
-            if (lengthSq > float.Epsilon) {
-                e.distance = math.sqrt(lengthSq);
-                e.normal *= 1.0f / e.distance;
-            }
-            else {
-                // 向量垂直定则
-                float3 v = a - b;
-                v = math.normalizesafe(v);
-                e.normal = new float3(v.z, 0, -v.x);
-            }
-            return e;
         }
 
         private Edge CreateInitEdge(float3 a, float3 b) {
