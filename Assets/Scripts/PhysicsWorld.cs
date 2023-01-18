@@ -6,6 +6,7 @@ using CustomPhysics.Tool;
 using Unity.Burst;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Profiling;
 using CollisionFlags = CustomPhysics.Collision.CollisionFlags;
 
 namespace CustomPhysics {
@@ -21,9 +22,9 @@ namespace CustomPhysics {
 
     public class PhysicsWorld : IPhysicsWorld {
         public static float epsilon = 0.00001f;
+        public static int maxIterCount = 10;
         public int tickFrame = 0;
         public int borderRadius = 15;
-        public int maxIterCount = 10;
         public List<CollisionObject> collisionList;
         public List<CollisionPair> collisionPairs;
         private List<int> resolveLevelFilter;
@@ -44,12 +45,12 @@ namespace CustomPhysics {
         #region Collision
 
         private void CollisionDetection(float timeSpan, CollisionObject independentTarget) {
-            // Profiler.BeginSample("[ViE] BroadPhase");
+            Profiler.BeginSample("[ViE] BroadPhase");
             BroadPhase();
-            // Profiler.EndSample();
-            // Profiler.BeginSample("[ViE] NarrowPhase");
+            Profiler.EndSample();
+            Profiler.BeginSample("[ViE] NarrowPhase");
             NarrowPhase(independentTarget);
-            // Profiler.EndSample();
+            Profiler.EndSample();
         }
 
         private void BroadPhase() {
@@ -544,7 +545,7 @@ namespace CustomPhysics {
 
             CollisionDetection(timeSpan, independentTarget);
             ApplyAcceleration(timeSpan, independentTarget);
-            Resolve(timeSpan, independentTarget);
+            // Resolve(timeSpan, independentTarget);
             ApplyVelocity(timeSpan, independentTarget);
             ExternalPairHandle();
         }

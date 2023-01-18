@@ -60,6 +60,18 @@ namespace CustomPhysics.Tool {
             }
         }
 
+        public static void RecycleEdge(Edge[] edges) {
+            if (edges != null) {
+                for (int i = 0, count = edges.Length; i < count; i++) {
+                    if (edges[i] != null) {
+                        edgePool.Push(edges[i]);
+                        edgeCount++;
+                        edges[i] = null;
+                    }
+                }
+            }
+        }
+
         #endregion
     }
 }

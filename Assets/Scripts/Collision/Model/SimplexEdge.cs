@@ -6,10 +6,13 @@ using UnityEngine;
 
 namespace CustomPhysics.Collision.Model {
     public class SimplexEdge {
-        public List<Edge> edges = new List<Edge>();
+        public Edge[] edges = new Edge[PhysicsWorld.maxIterCount + 1];
+        private int edgeCount = 0;
+        // public List<Edge> edges = new List<Edge>();
 
         public void Clear() {
             PhysicsCachePool.RecycleEdge(edges);
+            edgeCount = 0;
         }
 
         public void InitEdges(List<float3> simplex) {
@@ -17,8 +20,12 @@ namespace CustomPhysics.Collision.Model {
                 throw new Exception("边的数量错误");
             }
 
-            edges.Add(CreateInitEdge(simplex[0], simplex[1]));
-            edges.Add(CreateInitEdge(simplex[1], simplex[0]));
+            edges[0] = CreateInitEdge(simplex[0], simplex[1]);
+            edgeCount++;
+            edges[1] = CreateInitEdge(simplex[1], simplex[0]);
+            edgeCount++;
+            // edges.Add(CreateInitEdge(simplex[0], simplex[1]));
+            // edges.Add(CreateInitEdge(simplex[1], simplex[0]));
 
             UpdateEdgeIndex();
         }
@@ -26,7 +33,7 @@ namespace CustomPhysics.Collision.Model {
         public Edge FindClosestEdge() {
             float minDis = float.MaxValue;
             Edge result = null;
-            for (int i = 0, count = edges.Count; i < count; i++) {
+            for (int i = 0; i < edgeCount; i++) {
                 Edge e = edges[i];
                 if (e.distance < minDis) {
                     result = e;
@@ -54,13 +61,17 @@ namespace CustomPhysics.Collision.Model {
             e2.b = e.b;
             e2.distance = distance2;
             e2.normal = normal2;
-            edges.Insert(e.index + 1, e2);
+            edgeCount++;
+            for (int i = edgeCount; i >= e.index + 1; i--) {
+                edges[i] = edges[i - 1];
+            }
+            edges[e.index + 1] = e2;
 
             UpdateEdgeIndex();
         }
 
         public void UpdateEdgeIndex() {
-            for (int i = 0, count = edges.Count; i < count; ++i) {
+            for (int i = 0; i < edgeCount; ++i) {
                 edges[i].index = i;
             }
         }
