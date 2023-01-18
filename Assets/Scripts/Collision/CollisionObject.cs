@@ -23,8 +23,10 @@ namespace CustomPhysics.Collision {
         public void InitCollisionObject();
         public ProjectionPoint GetProjectionPoint(AABBProjectionType projectionType);
         public void SetActive(bool value);
+        public CollisionFlags GetFlag();
         public bool HasFlag(CollisionFlags flag);
         public void AddFlag(CollisionFlags flag);
+        public void SetFlag(CollisionFlags flag);
         public void RemoveFlag(CollisionFlags flag);
         public float3 GetCurPosition();
         public float GetCurRotation();
@@ -36,7 +38,6 @@ namespace CustomPhysics.Collision {
         public void Scale(float diff);
         public void ScaleTo(float value);
         public float3 GetActiveVelocity();
-        public float3 GetResultantVelocity();
         public void RecordInputMoveVelocity(float3 value);
         public bool AddInputMoveVelocity(float3 diff);
         public void SetInputMoveVelocity(float3 value);
@@ -65,6 +66,7 @@ namespace CustomPhysics.Collision {
         public float3 velocity;
         public float3 lastInputMoveVelocity;
         public float3 inputMoveVelocity;
+        public float3 lastResolveVelocity;
         public float3 resolveVelocity;
 
         public Dictionary<int, CollisionShot> collisionShotsDic;
@@ -119,7 +121,8 @@ namespace CustomPhysics.Collision {
         }
 
         public bool HasForwardVelocity() {
-            return math.dot(GetActiveVelocity(), GetResultantVelocity()) > 0;
+            float3 activeVelocity = GetActiveVelocity();
+            return math.dot(activeVelocity, activeVelocity + lastResolveVelocity) > 0;
         }
 
         #region Interface
@@ -145,12 +148,20 @@ namespace CustomPhysics.Collision {
             this.isActive = value;
         }
 
+        public CollisionFlags GetFlag() {
+            return flags;
+        }
+
         public bool HasFlag(CollisionFlags flag) {
             return flags.HasFlag(flag);
         }
 
         public void AddFlag(CollisionFlags flag) {
             this.flags |= flag;
+        }
+
+        public void SetFlag(CollisionFlags flag) {
+            this.flags = flag;
         }
 
         public void RemoveFlag(CollisionFlags flag) {
@@ -198,13 +209,6 @@ namespace CustomPhysics.Collision {
             for (int i = 0, count = accelerations.Count; i < count; i++) {
                 result += accelerations[i].curVelocity;
             }
-
-            return result;
-        }
-
-        public float3 GetResultantVelocity() {
-            float3 result = GetActiveVelocity();
-            result += resolveVelocity;
 
             return result;
         }
@@ -272,10 +276,10 @@ namespace CustomPhysics.Collision {
         }
 
         public void CleanActiveVelocity() {
-            if (math.distance(this.inputMoveVelocity, float3.zero) > PhysicsWorld.epsilon) {
-                this.lastInputMoveVelocity = this.inputMoveVelocity;
-            }
-            this.inputMoveVelocity = float3.zero;
+            this.lastInputMoveVelocity = this.inputMoveVelocity;
+
+            this.lastResolveVelocity = this.resolveVelocity;
+            this.inputMoveVelocity = this.resolveVelocity = float3.zero;
         }
 
         public float3 GetFarthestPointInDir(float3 dir) {
