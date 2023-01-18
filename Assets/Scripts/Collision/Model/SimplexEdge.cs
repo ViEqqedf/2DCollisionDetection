@@ -50,10 +50,11 @@ namespace CustomPhysics.Collision.Model {
 
             Edge oldEdge = edges[e.index];
             edges[e.index] = e1;
-            PhysicsCachePool.RecycleEdge(oldEdge);
+            // PhysicsCachePool.RecycleEdge(oldEdge);
 
             PhysicsWorld.createEdgeCalc(point, e.b, out float distance2, out float3 normal2);
-            Edge e2 = PhysicsCachePool.GetEdgeFromPool();
+            // 使用oldEdge的目的是减少缓存池操作
+            Edge e2 = oldEdge;
             e2.a = point;
             e2.b = e.b;
             e2.distance = distance2;

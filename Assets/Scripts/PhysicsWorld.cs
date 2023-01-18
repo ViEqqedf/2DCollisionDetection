@@ -545,7 +545,7 @@ namespace CustomPhysics {
 
             CollisionDetection(timeSpan, independentTarget);
             ApplyAcceleration(timeSpan, independentTarget);
-            // Resolve(timeSpan, independentTarget);
+            Resolve(timeSpan, independentTarget);
             ApplyVelocity(timeSpan, independentTarget);
             ExternalPairHandle();
         }
