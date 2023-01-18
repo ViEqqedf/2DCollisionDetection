@@ -48,7 +48,7 @@ namespace CustomPhysics.Collision.Model {
             edges[e.index] = e1;
             PhysicsCachePool.RecycleEdge(oldEdge);
 
-            PhysicsWorld.createEdgeCalc(e.a, point, out float distance2, out float3 normal2);
+            PhysicsWorld.createEdgeCalc(point, e.b, out float distance2, out float3 normal2);
             Edge e2 = PhysicsCachePool.GetEdgeFromPool();
             e2.a = point;
             e2.b = e.b;
