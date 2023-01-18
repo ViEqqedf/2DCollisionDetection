@@ -6,7 +6,6 @@ using CustomPhysics.Tool;
 using Unity.Burst;
 using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.Profiling;
 using CollisionFlags = CustomPhysics.Collision.CollisionFlags;
 
 namespace CustomPhysics {
@@ -16,6 +15,8 @@ namespace CustomPhysics {
         public void Destroy();
         public bool AddCollisionObject(CollisionObject collisionObject);
         public bool RemoveCollisionObject(CollisionObject collisionObject);
+        public void AddResolveLevelFilter(int level);
+        public void RemoveResolveLevelFilter(int level);
     }
 
     public class PhysicsWorld : IPhysicsWorld {
@@ -25,6 +26,7 @@ namespace CustomPhysics {
         public int maxIterCount = 10;
         public List<CollisionObject> collisionList;
         public List<CollisionPair> collisionPairs;
+        private List<int> resolveLevelFilter;
 
         private bool isDead = false;
 
@@ -201,17 +203,10 @@ namespace CustomPhysics {
                 }
 
                 float3 p = Support(supDir, fst, snd);
-                float3 supSubFst = p - fstVertex;
-                float3 supSubSnd = p - sndVertex;
                 if (math.dot(p, supDir) < 0) {
                     isCollision = false;
                     break;
                 }
-                // if (math.distancesq(supSubFst, float3.zero) < epsilon ||
-                    // math.distancesq(supSubSnd, float3.zero) < epsilon) {
-                    // isCollision = false;
-                    // break;
-                // }
 
                 simplex.Add(p);
 
@@ -327,12 +322,21 @@ namespace CustomPhysics {
                 if (independentTarget != null &&
                     !(CollisionObject.IsSameCollisionObject(pair.first, independentTarget) ||
                       CollisionObject.IsSameCollisionObject(pair.second, independentTarget))) {
+                    // Independent Resolve
                     continue;
                 }
 
                 if (pair.first.HasFlag(CollisionFlags.NoContactResponse) ||
                     pair.second.HasFlag(CollisionFlags.NoContactResponse)) {
+                    // Resolve No Need
                     continue;
+                }
+
+                if (pair.first.level == pair.second.level) {
+                    if (resolveLevelFilter.Contains(pair.first.level)) {
+                        // In Same Level Filter
+                        continue;
+                    }
                 }
 
                 float3 fstActiveVelocity = pair.first.GetActiveVelocity();
@@ -383,7 +387,8 @@ namespace CustomPhysics {
                                 pair.first.AddResolveVelocity(-fstExternalRate * penetrateDir);
                             }
 
-                            if (!pair.first.HasForwardVelocity()) {
+                            if (!pair.first.HasForwardVelocity() &&
+                                math.distance(fstActiveVelocity, float3.zero) > float.Epsilon) {
                                 pair.first.AddResolveVelocity(cross);
                             }
                         }
@@ -393,7 +398,8 @@ namespace CustomPhysics {
                                 pair.second.AddResolveVelocity(sndExternalRate * penetrateDir);
                             }
 
-                            if (!pair.second.HasForwardVelocity()) {
+                            if (!pair.second.HasForwardVelocity() &&
+                                math.distance(sndActiveVelocity, float3.zero) > float.Epsilon) {
                                 pair.second.AddResolveVelocity(-cross);
                             }
                         }
@@ -405,10 +411,12 @@ namespace CustomPhysics {
                             pair.first.AddResolveVelocity(-fstExternalRate * penetrateDir);
                             pair.second.AddResolveVelocity(sndExternalRate * penetrateDir);
 
-                            if (!pair.first.HasForwardVelocity()) {
+                            if (!pair.first.HasForwardVelocity() &&
+                                math.distance(fstActiveVelocity, float3.zero) > float.Epsilon) {
                                 pair.first.AddResolveVelocity(fstExternalRate * cross / 2);
                             }
-                            if (!pair.second.HasForwardVelocity()) {
+                            if (!pair.second.HasForwardVelocity() &&
+                                math.distance(sndActiveVelocity, float3.zero) > float.Epsilon) {
                                 pair.second.AddResolveVelocity(-sndExternalRate * cross / 2);
                             }
                         }
@@ -440,9 +448,12 @@ namespace CustomPhysics {
                 bool curCoInRange = curDis <= borderRadius;
                 bool nextCoInRange = nextDis < borderRadius;
                 if (curCoInRange && !nextCoInRange) {
+                    float reverseSpeed = -1f / math.distance(co.nextPosition, float3.zero) *
+                                         math.dot(co.GetActiveVelocity() * timeSpan, co.nextPosition);
+                    float3 resolveVelocity = reverseSpeed * math.normalize(co.nextPosition);
+                    co.SetResolveVelocity(resolveVelocity);
                     co.nextPosition = (borderRadius - 0.01f) * math.normalizesafe(co.nextPosition);
-                    co.SetResolveVelocity(-co.GetActiveVelocity());
-                    co.TryToCreateCollisionShot(null, float3.zero);
+                    co.TryToCreateCollisionShot(null, resolveVelocity);
                 }
             }
 
@@ -490,6 +501,7 @@ namespace CustomPhysics {
         public void Init() {
             collisionList = new List<CollisionObject>();
             collisionPairs = new List<CollisionPair>();
+            resolveLevelFilter = new List<int>();
 
             broadScanList = new List<ProjectionPoint>();
             broadStartPoints = new Dictionary<int, ProjectionPoint>();
@@ -511,6 +523,18 @@ namespace CustomPhysics {
             isDead = false;
         }
 
+        public void AddResolveLevelFilter(int level) {
+            if (!resolveLevelFilter.Contains(level)) {
+                resolveLevelFilter.Add(level);
+            }
+        }
+
+        public void RemoveResolveLevelFilter(int level) {
+            if (resolveLevelFilter.Contains(level)) {
+                resolveLevelFilter.Remove(level);
+            }
+        }
+
         public void Tick(float timeSpan, CollisionObject independentTarget = null) {
             if (isDead) {
                 return;
@@ -518,15 +542,9 @@ namespace CustomPhysics {
 
             tickFrame++;
 
-            if (independentTarget == null) {
-                for (int i = 0, count = collisionList.Count; i < count; i++) {
-                    collisionList[i].SetResolveVelocity(float3.zero);
-                }
-            }
-
             CollisionDetection(timeSpan, independentTarget);
             ApplyAcceleration(timeSpan, independentTarget);
-            // Resolve(timeSpan, independentTarget);
+            Resolve(timeSpan, independentTarget);
             ApplyVelocity(timeSpan, independentTarget);
             ExternalPairHandle();
         }
