@@ -141,17 +141,15 @@ namespace CustomPhysics.Tool {
             float projection = math.dot(ab, ao) / sqrLength;
             if (projection < 0) {
                 result = a;
-            }
-            else if (projection > 1.0f) {
+            } else if (projection > 1.0f) {
                 result = b;
-            }
-            else {
+            } else {
                 result = new float3(a.x + projection * ab.x, a.y + projection * ab.y,
                     a.z + projection * ab.z);
             }
         }
 
-        [BurstCompile]
+        [BurstCompile(CompileSynchronously = true)]
         [MonoPInvokeCallback(typeof(CreateEdgeDelegate))]
         public static void CreateEdge(in float3 a, in float3 b, out float distance, out float3 normal) {
             GetPerpendicularToOrigin(a, b, out float3 result);
@@ -160,9 +158,8 @@ namespace CustomPhysics.Tool {
             // 单位化边
             if (lengthSq > float.Epsilon) {
                 distance = math.sqrt(lengthSq);
-                normal *= 1.0f / distance;
-            }
-            else {
+                normal /= distance;
+            } else {
                 // 向量垂直定则
                 float3 v = a - b;
                 v = math.normalizesafe(v);
@@ -171,7 +168,7 @@ namespace CustomPhysics.Tool {
             }
         }
 
-        [BurstCompile]
+        [BurstCompile(CompileSynchronously = true)]
         [MonoPInvokeCallback(typeof(CheckCircleCollidedDelegate))]
         public static void CheckCircleCollided(
             in float3 fstPos, in float fstRadius, in float fstScale,

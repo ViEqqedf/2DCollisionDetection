@@ -75,7 +75,9 @@ namespace CustomPhysics.Collision {
         public Action<CollisionObject> enterAction;
         public Action<CollisionObject> stayAction;
         public Action<CollisionObject> exitAction;
+
         public float3[] verticesRefer = null;
+        public int verticesCount = 0;
 
         // TODO: 添加一个脏标记
 
@@ -140,6 +142,7 @@ namespace CustomPhysics.Collision {
             shape.UpdateShape();
             shape.ApplyWorldVertices(position, rotation, scale);
             verticesRefer = shape.vertices;
+            verticesCount = verticesRefer.Length;
         }
 
         public ProjectionPoint GetProjectionPoint(AABBProjectionType projectionType) {
@@ -287,7 +290,7 @@ namespace CustomPhysics.Collision {
         public float3 GetFarthestPointInDir(float3 dir) {
             float maxDis = float.MinValue;
             float3 farthestPoint = float3.zero;
-            for (int i = 0, count = verticesRefer.Length; i < count; ++i) {
+            for (int i = 0; i < verticesCount; ++i) {
                 float3 curPoint = verticesRefer[i];
                 float dis = math.dot(curPoint, dir);
                 if (dis > maxDis) {
