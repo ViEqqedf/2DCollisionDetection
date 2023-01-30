@@ -23,12 +23,16 @@ namespace CustomPhysics {
     public class PhysicsWorld : IPhysicsWorld {
         public static float epsilon = 0.00001f;
         public static int maxIterCount = 10;
-        public int tickFrame = 0;
-        public int borderRadius = 15;
-        public List<CollisionObject> collisionList;
-        public List<CollisionPair> collisionPairs;
-        private List<int> resolveLevelFilter;
+        public static PhysicsTool.GetClosestPointToOriginDelegate closestCalc;
+        public static PhysicsTool.GetPerpendicularToOriginDelegate perpCalc;
+        public static PhysicsTool.CreateEdgeDelegate createEdgeCalc;
+        public static PhysicsTool.CheckCircleCollidedDelegate checkCircleCalc;
 
+        private int tickFrame = 0;
+        private int borderRadius = 15;
+        private List<CollisionObject> collisionList;
+        private List<CollisionPair> collisionPairs;
+        private List<int> resolveLevelFilter;
         private bool isDead = false;
 
         private List<ProjectionPoint> broadScanList;
@@ -36,11 +40,6 @@ namespace CustomPhysics {
         private List<ProjectionPoint> verAABBProjList;
         private List<float3> simplexList = new List<float3>();
         private int coCountInWorld = 0;
-
-        public static PhysicsTool.GetClosestPointToOriginDelegate closestCalc;
-        public static PhysicsTool.GetPerpendicularToOriginDelegate perpCalc;
-        public static PhysicsTool.CreateEdgeDelegate createEdgeCalc;
-        public static PhysicsTool.CheckCircleCollidedDelegate checkCircleCalc;
 
         #region Collision
 
