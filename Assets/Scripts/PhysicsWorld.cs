@@ -251,9 +251,12 @@ namespace CustomPhysics {
         }
 
         public float3 FindFirstDirection(CollisionObject a, CollisionObject b) {
-            float3 dir = a.shape.vertices[0] - b.shape.vertices[0];
+            float3[] aVertices = a.verticesRefer;
+            float3[] bVertices = b.verticesRefer;
+
+            float3 dir = aVertices[0] - bVertices[0];
             if (math.distancesq(dir, float3.zero) < epsilon) {
-                dir = a.shape.vertices[1] - b.shape.vertices[0];
+                dir = aVertices[1] - bVertices[0];
             }
             return dir;
         }
@@ -544,7 +547,7 @@ namespace CustomPhysics {
 
             CollisionDetection(timeSpan, independentTarget);
             ApplyAcceleration(timeSpan, independentTarget);
-            Resolve(timeSpan, independentTarget);
+            // Resolve(timeSpan, independentTarget);
             ApplyVelocity(timeSpan, independentTarget);
             ExternalPairHandle();
         }
