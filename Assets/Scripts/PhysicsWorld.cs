@@ -6,7 +6,6 @@ using CustomPhysics.Tool;
 using Unity.Burst;
 using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.Profiling;
 using CollisionFlags = CustomPhysics.Collision.CollisionFlags;
 
 namespace CustomPhysics {
@@ -44,19 +43,14 @@ namespace CustomPhysics {
         #region Collision
 
         private void CollisionDetection(float timeSpan, CollisionObject independentTarget) {
-            Profiler.BeginSample("[ViE] BroadPhase");
             BroadPhase();
-            Profiler.EndSample();
-            Profiler.BeginSample("[ViE] NarrowPhase");
             NarrowPhase(independentTarget);
-            Profiler.EndSample();
         }
 
         private void BroadPhase() {
             collisionPairs.Clear();
 
             SweepAndPrune();
-            // DynamicBVH();
         }
 
         private void SweepAndPrune() {
@@ -126,12 +120,9 @@ namespace CustomPhysics {
             }
 
             // for (int i = 0, count = collisionPairs.Count; i < count; i++) {
-                // CollisionPair pair = collisionPairs[i];
-                // Debug.Log($"{tickFrame} {pair.first.id}与{pair.second.id}粗检测碰撞");
+            // CollisionPair pair = collisionPairs[i];
+            // Debug.Log($"{tickFrame} {pair.first.id}与{pair.second.id}粗检测碰撞");
             // }
-        }
-
-        private void DynamicBVH() {
         }
 
         private void NarrowPhase(CollisionObject independentTarget) {
@@ -158,8 +149,8 @@ namespace CustomPhysics {
 
                     if (isAllCircle) {
                         // 圆碰撞对的计算简单且常用，单独处理以加速
-                        checkCircleCalc(fst.position, ((Circle) fst.shape).radius, fst.scale,
-                            snd.position, ((Circle) snd.shape).radius, snd.scale,
+                        checkCircleCalc(fst.position, ((Circle)fst.shape).radius, fst.scale,
+                            snd.position, ((Circle)snd.shape).radius, snd.scale,
                             out isCollided, out penetrateVec);
                     } else {
                         isCollided = GJK(fst, snd, simplexList);
@@ -170,7 +161,7 @@ namespace CustomPhysics {
                     }
                 }
 
-                if(!isCollided){
+                if (!isCollided) {
                     collisionPairs.RemoveAt(i);
                 } else {
                     collisionPairs[i] = new CollisionPair() {
@@ -362,16 +353,16 @@ namespace CustomPhysics {
                     float externalRate = math.dot(sndActiveVelocity, penetrateDir) * timeSpan;
                     if (externalRate > epsilon) {
                         pair.second.AddResolveVelocity(externalRate * penetrateDir);
-                        if (!pair.second.HasForwardVelocity()) {
+                        if (!pair.second.HasForwardVelocity(timeSpan)) {
                             pair.second.AddResolveVelocity(-cross);
                         }
                     }
                 } else if (pair.first.level < pair.second.level) {
                     pair.first.AddResolveVelocity(-resolveVec);
                     float externalRate = math.dot(fstActiveVelocity, -penetrateDir) * timeSpan;
-                    if (externalRate > epsilon) {
+                    if (externalRate < -epsilon) {
                         pair.first.AddResolveVelocity(-externalRate * penetrateDir);
-                        if (!pair.first.HasForwardVelocity()) {
+                        if (!pair.first.HasForwardVelocity(timeSpan)) {
                             pair.first.AddResolveVelocity(cross);
                         }
                     }
@@ -390,7 +381,7 @@ namespace CustomPhysics {
                                 pair.first.AddResolveVelocity(-fstExternalRate * penetrateDir);
                             }
 
-                            if (!pair.first.HasForwardVelocity() &&
+                            if (/* !pair.first.HasForwardVelocity(timeSpan) && */
                                 math.distance(fstActiveVelocity, float3.zero) > float.Epsilon) {
                                 pair.first.AddResolveVelocity(cross);
                             }
@@ -401,7 +392,7 @@ namespace CustomPhysics {
                                 pair.second.AddResolveVelocity(sndExternalRate * penetrateDir);
                             }
 
-                            if (!pair.second.HasForwardVelocity() &&
+                            if (/* !pair.second.HasForwardVelocity(timeSpan) && */
                                 math.distance(sndActiveVelocity, float3.zero) > float.Epsilon) {
                                 pair.second.AddResolveVelocity(-cross);
                             }
@@ -414,11 +405,11 @@ namespace CustomPhysics {
                             pair.first.AddResolveVelocity(-fstExternalRate * penetrateDir);
                             pair.second.AddResolveVelocity(sndExternalRate * penetrateDir);
 
-                            if (!pair.first.HasForwardVelocity() &&
+                            if (/* !pair.first.HasForwardVelocity(timeSpan) && */
                                 math.distance(fstActiveVelocity, float3.zero) > float.Epsilon) {
                                 pair.first.AddResolveVelocity(fstExternalRate * cross / 2);
                             }
-                            if (!pair.second.HasForwardVelocity() &&
+                            if (/* !pair.second.HasForwardVelocity(timeSpan) && */
                                 math.distance(sndActiveVelocity, float3.zero) > float.Epsilon) {
                                 pair.second.AddResolveVelocity(-sndExternalRate * cross / 2);
                             }
@@ -455,7 +446,7 @@ namespace CustomPhysics {
                                          math.dot(co.GetActiveVelocity() * timeSpan, co.nextPosition);
                     float3 resolveVelocity = reverseSpeed * math.normalize(co.nextPosition);
                     co.SetResolveVelocity(resolveVelocity);
-                    co.nextPosition = (borderRadius - 0.01f) * math.normalizesafe(co.nextPosition);
+                    co.SetNextPosition((borderRadius - 0.01f) * math.normalizesafe(co.nextPosition));
                     co.TryToCreateCollisionShot(null, resolveVelocity);
                 }
             }
@@ -547,7 +538,7 @@ namespace CustomPhysics {
 
             CollisionDetection(timeSpan, independentTarget);
             ApplyAcceleration(timeSpan, independentTarget);
-            // Resolve(timeSpan, independentTarget);
+            Resolve(timeSpan, independentTarget);
             ApplyVelocity(timeSpan, independentTarget);
             ExternalPairHandle();
         }

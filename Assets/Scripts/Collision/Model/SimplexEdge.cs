@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace CustomPhysics.Collision.Model {
     public class SimplexEdge {
-        private Edge[] edges = new Edge[PhysicsWorld.maxIterCount + 1];
+        private Edge[] edges = new Edge[PhysicsWorld.maxIterCount + 2];
         private int edgeCount = 0;
 
         public void Clear() {
@@ -60,7 +60,7 @@ namespace CustomPhysics.Collision.Model {
             e2.distance = distance2;
             e2.normal = normal2;
             edgeCount++;
-            for (int i = edgeCount; i >= e.index + 1; i--) {
+            for (int i = edgeCount - 1; i >= e.index + 1; i--) {
                 edges[i] = edges[i - 1];
             }
             edges[e.index + 1] = e2;

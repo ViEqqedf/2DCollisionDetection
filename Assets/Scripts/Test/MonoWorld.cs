@@ -19,9 +19,9 @@ public class MonoWorld : MonoBehaviour {
         world.Init();
 
         // Test0();
-        Test1();
+        // Test1();
         // Test2();
-        // Test3();
+        Test3();
         // Test4();
     }
 
@@ -71,7 +71,7 @@ public class MonoWorld : MonoBehaviour {
     }
 
     private void Test3() {
-        int range = 2;
+        int range = 1;
         for (int i = 0; i < range; i++) {
             float3 spawnPos = new float3(
                 Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
