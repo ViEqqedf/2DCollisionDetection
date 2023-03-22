@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using Unity.Mathematics;
-using UnityEngine;
+﻿using Unity.Mathematics;
 
 namespace CustomPhysics.Collision.Shape {
     public class CustomShape : CollisionShape {
         public CustomShape(float3[] localVertices) : base(ShapeType.Custom, localVertices) {
         }
 
-        protected override void GetBound(out float3 lowerBound, out float3 upperBound) {
+        protected override void GetBound(
+            bool isPositionDirty, bool isRotationDirty, bool isScaleDirty,
+            out float3 lowerBound, out float3 upperBound) {
             float minX = float.MaxValue;
             float minZ = float.MaxValue;
             float maxX = float.MinValue;

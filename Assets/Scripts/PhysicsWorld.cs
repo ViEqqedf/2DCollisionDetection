@@ -82,40 +82,41 @@ namespace CustomPhysics {
             broadScanList.Add(verAABBProjList[0]);
             broadStartPoints.Add(verAABBProjList[0].collisionObject.id, verAABBProjList[0]);
             for (int i = 1, count = verAABBProjList.Count; i < count; i++) {
-                CollisionObject horProjObj = verAABBProjList[i].collisionObject;
+                ProjectionPoint curPoint = verAABBProjList[i];
+                CollisionObject curCo = curPoint.collisionObject;
 
-                if (verAABBProjList[i].projectionType == AABBProjectionType.VerticalEnd) {
-                    ProjectionPoint startPoint = broadStartPoints[horProjObj.id];
-                    broadStartPoints.Remove(horProjObj.id);
+                if (curPoint.projectionType == AABBProjectionType.VerticalEnd) {
+                    ProjectionPoint startPoint = broadStartPoints[curCo.id];
+                    broadStartPoints.Remove(curCo.id);
                     broadScanList.Remove(startPoint);
-                } else if (verAABBProjList[i].projectionType == AABBProjectionType.VerticalStart) {
+                } else if (curPoint.projectionType == AABBProjectionType.VerticalStart) {
                     for (int j = 0, scanCount = broadScanList.Count; j < scanCount; j++) {
                         CollisionObject scanObj = broadScanList[j].collisionObject;
 
                         CollisionPair pair;
                         int jLevel = scanObj.level;
-                        int iLevel = horProjObj.level;
+                        int iLevel = curCo.level;
 
                         // 让碰撞对内碰撞体的顺序规律一致
                         if (jLevel == iLevel) {
-                            int iIndex = horProjObj.indexInWorld;
+                            int iIndex = curCo.indexInWorld;
                             int jIndex = scanObj.indexInWorld;
                             pair = new CollisionPair() {
-                                first = iIndex < jIndex ? horProjObj : scanObj,
-                                second = iIndex > jIndex ? horProjObj : scanObj,
+                                first = iIndex < jIndex ? curCo : scanObj,
+                                second = iIndex > jIndex ? curCo : scanObj,
                             };
                         } else {
                             pair = new CollisionPair() {
-                                first = jLevel > iLevel ? horProjObj : scanObj,
-                                second = jLevel < iLevel ? horProjObj : scanObj,
+                                first = jLevel > iLevel ? curCo : scanObj,
+                                second = jLevel < iLevel ? curCo : scanObj,
                             };
                         }
 
                         collisionPairs.Add(pair);
                     }
 
-                    broadScanList.Add(verAABBProjList[i]);
-                    broadStartPoints.Add(horProjObj.id, verAABBProjList[i]);
+                    broadScanList.Add(curPoint);
+                    broadStartPoints.Add(curCo.id, curPoint);
                 }
             }
 
@@ -337,7 +338,7 @@ namespace CustomPhysics {
                 float3 sndActiveVelocity = pair.second.GetActiveVelocity();
                 float depth = math.distance(pair.penetrateVec, float3.zero);
                 float coefficient = 0.8f;
-                float tolerance = 0f;
+                float tolerance = 0.02f;
                 float rate = coefficient * Mathf.Max(0, depth - tolerance);
                 float3 penetrateDir = math.normalizesafe(pair.penetrateVec);
                 float3 resolveVec = rate * penetrateDir;
@@ -350,19 +351,21 @@ namespace CustomPhysics {
 
                 if (pair.first.level > pair.second.level) {
                     pair.second.AddResolveVelocity(resolveVec);
-                    float externalRate = math.dot(sndActiveVelocity, penetrateDir) * timeSpan;
+                    float externalRate = math.dot(sndActiveVelocity, -penetrateDir) * timeSpan;
                     if (externalRate > epsilon) {
-                        pair.second.AddResolveVelocity(externalRate * penetrateDir);
-                        if (!pair.second.HasForwardVelocity(timeSpan)) {
+                        pair.second.AddResolveVelocity(
+                            -math.projectsafe(sndActiveVelocity * timeSpan, -penetrateDir));
+                        if (!pair.second.HasForwardVelocityImmediately(timeSpan, -penetrateDir)) {
                             pair.second.AddResolveVelocity(-cross);
                         }
                     }
                 } else if (pair.first.level < pair.second.level) {
                     pair.first.AddResolveVelocity(-resolveVec);
-                    float externalRate = math.dot(fstActiveVelocity, -penetrateDir) * timeSpan;
-                    if (externalRate < -epsilon) {
-                        pair.first.AddResolveVelocity(-externalRate * penetrateDir);
-                        if (!pair.first.HasForwardVelocity(timeSpan)) {
+                    float externalRate = math.dot(fstActiveVelocity, penetrateDir) * timeSpan;
+                    if (externalRate > epsilon) {
+                        pair.first.AddResolveVelocity(
+                            -math.projectsafe(fstActiveVelocity * timeSpan, penetrateDir));
+                        if (!pair.first.HasForwardVelocityImmediately(timeSpan, penetrateDir)) {
                             pair.first.AddResolveVelocity(cross);
                         }
                     }
@@ -377,40 +380,41 @@ namespace CustomPhysics {
                     if (fstMoving != sndMoving) {
                         if (fstMoving) {
                             pair.first.AddResolveVelocity(-resolveVec);
-                            if (fstExternalRate > epsilon) {
-                                pair.first.AddResolveVelocity(-fstExternalRate * penetrateDir);
+                            if (fstExternalRate > 0) {
+                                pair.first.AddResolveVelocity(
+                                    -math.projectsafe(fstActiveVelocity * timeSpan, penetrateDir));
                             }
 
-                            if (/* !pair.first.HasForwardVelocity(timeSpan) && */
-                                math.distance(fstActiveVelocity, float3.zero) > float.Epsilon) {
+                            if (!pair.first.HasForwardVelocityImmediately(timeSpan, penetrateDir)) {
                                 pair.first.AddResolveVelocity(cross);
                             }
                         }
                         if (sndMoving) {
                             pair.second.AddResolveVelocity(resolveVec);
-                            if (sndExternalRate > epsilon) {
-                                pair.second.AddResolveVelocity(sndExternalRate * penetrateDir);
+                            if (sndExternalRate > 0) {
+                                pair.second.AddResolveVelocity(
+                                    -math.projectsafe(sndActiveVelocity * timeSpan, -penetrateDir));
                             }
 
-                            if (/* !pair.second.HasForwardVelocity(timeSpan) && */
-                                math.distance(sndActiveVelocity, float3.zero) > float.Epsilon) {
+                            if (!pair.second.HasForwardVelocityImmediately(timeSpan, -penetrateDir)) {
                                 pair.second.AddResolveVelocity(-cross);
                             }
                         }
                     } else {
                         pair.first.AddResolveVelocity(-resolveVec / 2f);
                         pair.second.AddResolveVelocity(resolveVec / 2f);
+                        if (fstExternalRate > 0 && sndExternalRate > 0) {
+                            pair.first.AddResolveVelocity(
+                                -math.projectsafe(fstActiveVelocity * timeSpan, penetrateDir));
+                            pair.second.AddResolveVelocity(
+                                -math.projectsafe(sndActiveVelocity * timeSpan, -penetrateDir));
+                        }
 
                         if (fstExternalRate > 0 && sndExternalRate > 0) {
-                            pair.first.AddResolveVelocity(-fstExternalRate * penetrateDir);
-                            pair.second.AddResolveVelocity(sndExternalRate * penetrateDir);
-
-                            if (/* !pair.first.HasForwardVelocity(timeSpan) && */
-                                math.distance(fstActiveVelocity, float3.zero) > float.Epsilon) {
+                            if (!pair.first.HasForwardVelocityImmediately(timeSpan, penetrateDir)) {
                                 pair.first.AddResolveVelocity(fstExternalRate * cross / 2);
                             }
-                            if (/* !pair.second.HasForwardVelocity(timeSpan) && */
-                                math.distance(sndActiveVelocity, float3.zero) > float.Epsilon) {
+                            if (!pair.second.HasForwardVelocityImmediately(timeSpan, -penetrateDir)) {
                                 pair.second.AddResolveVelocity(-sndExternalRate * cross / 2);
                             }
                         }
@@ -452,8 +456,9 @@ namespace CustomPhysics {
             }
 
             co.ApplyPosition();
+            co.ApplyTransform();
 
-            co.CleanActiveVelocity();
+            co.FrameClean();
         }
 
         private void ExternalPairHandle() {

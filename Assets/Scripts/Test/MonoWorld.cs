@@ -20,15 +20,15 @@ public class MonoWorld : MonoBehaviour {
 
         // Test0();
         // Test1();
-        // Test2();
-        Test3();
+        Test2();
+        // Test3();
         // Test4();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Profiler.BeginSample("[ViE] Tick");
-        world.Tick(Time.deltaTime);
+        world.Tick(Time.fixedDeltaTime);
         Profiler.EndSample();
     }
 
@@ -56,17 +56,17 @@ public class MonoWorld : MonoBehaviour {
     }
 
     private void Test2() {
-        int range = 2;
+        int range = 1;
         for (int i = 0; i < range; i++) {
             // float3 spawnPos = new float3(
                 // Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
             // CreateATestCircle(1, spawnPos);
-            CreateATestCircle(1, float3.zero);
+            CreateATestCircle(1, new float3(0, 0, -7));
         }
 
         // CreateATestRect(float3.zero);
 
-        // CreateATestCircle(1, float3.zero);
+        CreateATestCircle(5, float3.zero);
         // CreateATestCircle(1, float3.right);
     }
 

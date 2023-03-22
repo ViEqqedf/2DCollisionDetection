@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using Unity.Mathematics;
+﻿using Unity.Mathematics;
 using UnityEngine;
-
 namespace CustomPhysics.Collision.Shape {
     public class Circle : CollisionShape {
         public readonly float radius;
+        private float3 lastLowerBound;
+        private float3 lastUpperBound;
 
         public Circle(float radius) : base(ShapeType.Circle) {
             this.radius = radius;
@@ -44,29 +44,41 @@ namespace CustomPhysics.Collision.Shape {
                 radius * squareZ * Mathf.Sqrt(1 - squareX * squareX * 0.5f));
         }
 
-        protected override void GetBound(out float3 lowerBound, out float3 upperBound) {
+        protected override void GetBound(
+            bool isPositionDirty, bool isRotationDirty, bool isScaleDirty,
+            out float3 lowerBound, out float3 upperBound) {
+            if (!isPositionDirty && !isScaleDirty) {
+                lowerBound = lastLowerBound;
+                upperBound = lastUpperBound;
+
+                return;
+            }
+
             float minX = float.MaxValue;
             float minZ = float.MaxValue;
             float maxX = float.MinValue;
             float maxZ = float.MinValue;
 
             for (int i = 0, count = vertices.Length; i < count; i++) {
-                if (vertices[i].x < minX) {
-                    minX = vertices[i].x;
+                float3 curVertex = vertices[i];
+                if (curVertex.x < minX) {
+                    minX = curVertex.x;
                 }
-                if (vertices[i].z < minZ) {
-                    minZ = vertices[i].z;
+                if (curVertex.z < minZ) {
+                    minZ = curVertex.z;
                 }
-                if (vertices[i].x > maxX) {
-                    maxX = vertices[i].x;
+                if (curVertex.x > maxX) {
+                    maxX = curVertex.x;
                 }
-                if (vertices[i].z > maxZ) {
-                    maxZ = vertices[i].z;
+                if (curVertex.z > maxZ) {
+                    maxZ = curVertex.z;
                 }
             }
 
             lowerBound = new float3(minX, 0, minZ);
             upperBound = new float3(maxX, 0, maxZ);
+            lastLowerBound = lowerBound;
+            lastUpperBound = upperBound;
         }
     }
 }

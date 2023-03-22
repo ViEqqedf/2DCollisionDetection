@@ -38,22 +38,30 @@ namespace CustomPhysics.Collision.Shape {
             this.aabb = new AABB(float3.zero, float3.zero);
         }
 
-        public void UpdateShape() {
-            GetBound(out float3 lowerBound, out float3 upperBound);
+        public void UpdateShape(bool isPositionDirty, bool isRotationDirty, bool isScaleDirty) {
+            GetBound(isPositionDirty, isRotationDirty, isScaleDirty,
+                out float3 lowerBound, out float3 upperBound);
             this.aabb = new AABB(lowerBound, upperBound);
         }
 
-        public void ApplyWorldVertices(float3 origin, float3 rotate, float scale) {
+        public void ApplyWorldVertices(bool isPositionDirty, bool isRotationDirty, bool isScaleDirty,
+            float3 origin, float3 rotate, float scale) {
+            if (!isPositionDirty && !isRotationDirty && !isScaleDirty) {
+                return;
+            }
+
+            Quaternion euler = Quaternion.Euler(rotate);
             for (int i = 0, count = this.vertices.Length; i < count; i++) {
-                float3 localPoint = scale * localVertices[i];
-                float3 rotateVec = Quaternion.Euler(rotate) * localPoint;
+                float3 rotateVec = euler * (scale * localVertices[i]);
                 vertices[i] = new float3(rotateVec.x + origin.x,
                     rotateVec.y + origin.y, rotateVec.z + origin.z);
             }
 
-            UpdateShape();
+            UpdateShape(isPositionDirty, isRotationDirty, isScaleDirty);
         }
 
-        protected abstract void GetBound(out float3 lowerBound, out float3 upperBound);
+        protected abstract void GetBound(
+            bool isPositionDirty, bool isRotationDirty, bool isScaleDirty,
+            out float3 lowerBound, out float3 upperBound);
     }
 }

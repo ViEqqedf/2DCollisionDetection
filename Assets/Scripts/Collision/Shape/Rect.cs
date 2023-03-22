@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using Unity.Mathematics;
-using UnityEngine;
+﻿using Unity.Mathematics;
 
 namespace CustomPhysics.Collision.Shape {
     public class Rect : CollisionShape {
@@ -22,7 +20,9 @@ namespace CustomPhysics.Collision.Shape {
             };
         }
 
-        protected override void GetBound(out float3 lowerBound, out float3 upperBound) {
+        protected override void GetBound(
+            bool isPositionDirty, bool isRotationDirty, bool isScaleDirty,
+            out float3 lowerBound, out float3 upperBound) {
             float minX = float.MaxValue;
             float minZ = float.MaxValue;
             float maxX = float.MinValue;
